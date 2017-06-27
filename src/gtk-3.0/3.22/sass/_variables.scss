@@ -21,13 +21,13 @@ $bar_size: 4px;
 $menuitem_size: 28px;
 
 // radiuses
-$material_radius: 2px;
+$material_radius: 4px;
 $circular_radius: 9999px;
 
 // durations
-$shorter_duration: 0.2s;
-$longer_duration: 0.3s;
-$ripple_duration: 0.5s;
+$shorter_duration: 0.1s;
+$longer_duration: 0.2s;
+$ripple_duration: 0.2s;
 
 // timing functions
 $standard_curve: cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -36,9 +36,9 @@ $acceleration_curve: cubic-bezier(0.4, 0.0, 1, 1);
 $sharp_curve: cubic-bezier(0.4, 0.0, 0.6, 1);
 
 // transition shorthands
-$shorter_transition: all $shorter_duration $deceleration_curve;
-$longer_transition: all $longer_duration $deceleration_curve;
-$shadow_transition: box-shadow $shorter_duration $deceleration_curve;
+$shorter_transition: all $shorter_duration $standard_curve;
+$longer_transition: all $longer_duration $standard_curve;
+$shadow_transition: box-shadow $shorter_duration $standard_curve;
 
 // shadows
 // based shadow values:

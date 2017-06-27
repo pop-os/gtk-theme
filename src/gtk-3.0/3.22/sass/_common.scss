@@ -30,7 +30,7 @@
   outline-offset: -4px;
   -gtk-outline-radius: 2px;
 
-  -gtk-secondary-caret-color: $primary_color;
+  -gtk-secondary-caret-color: $accent_color;
 }
 
 switch:focus slider,
@@ -941,7 +941,7 @@ combobox {
 
   &:checked {
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $primary_color 100%,
+                                  $accent_color 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
   }
@@ -1129,7 +1129,7 @@ headerbar {
 
       &:checked {
         border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                      currentColor 100%,
+                                      $accent_color 100%,
                                       transparent 0%)
                                       0 0 2 / 0 0 2px;
         color: $inverse_fg_color;
@@ -1281,14 +1281,14 @@ headerbar { // headerbar border rounding
     @extend %flat_button;
 
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $primary_color 0%,
+                                  $accent_color 0%,
                                   transparent 0%)
                                   0 0 0 / 0 0 0px;
     border-radius: 2px;
 
     &:checked {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                    $primary_color 100%,
+                                    $accent_color 100%,
                                     transparent 0%)
                                     0 0 2 / 0 0 2px;
 
@@ -1403,7 +1403,7 @@ treeview.view {
     box-shadow: none;
     background-color: $base_color;
     background-clip: border-box;
-    color: $primary_color;
+    color: $accent_color;
   }
 
   acceleditor > label { background-color: $primary_color; } // see tests/testaccel to test
@@ -1626,7 +1626,7 @@ notebook {
 
           &:hover { box-shadow: inset 0 -2px $track_color; }
 
-          &:checked { box-shadow: inset 0 -2px $primary_color; }
+          &:checked { box-shadow: inset 0 -2px $accent_color; }
         }
       }
     }
@@ -1639,7 +1639,7 @@ notebook {
 
           &:hover { box-shadow: inset 0 2px $track_color; }
 
-          &:checked { box-shadow: inset 0 2px $primary_color; }
+          &:checked { box-shadow: inset 0 2px $accent_color; }
         }
       }
     }
@@ -1652,7 +1652,7 @@ notebook {
 
           &:hover { box-shadow: inset -2px 0 $track_color; }
 
-          &:checked { box-shadow: inset -2px 0 $primary_color; }
+          &:checked { box-shadow: inset -2px 0 $accent_color; }
         }
       }
     }
@@ -1665,7 +1665,7 @@ notebook {
 
           &:hover { box-shadow: inset 2px 0 $track_color; }
 
-          &:checked { box-shadow: inset 2px 0 $primary_color; }
+          &:checked { box-shadow: inset 2px 0 $accent_color; }
         }
       }
     }
@@ -1746,7 +1746,7 @@ notebook {
       border-color: transparent; //
 
       background-image: radial-gradient(circle farthest-corner at center,
-                                        $primary_color 10%,
+                                        $accent_color 10%,
                                         transparent 0%);
       background-repeat: no-repeat;
       background-position: center;
@@ -2341,7 +2341,7 @@ scale {
   // the colored part of the backing bit
   highlight {
     transition: $longer_transition;
-    background-color: $accent_color;
+    background-color: $primary_color;
 
     &:disabled { background-color: transparent; }
   }
@@ -2358,7 +2358,7 @@ scale {
   slider {
     transition: all $shorter_duration $standard_curve;
     // border-radius: 100%;
-    // background-color: $accent_color;
+    // background-color: $primary_color;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -2997,17 +2997,17 @@ placessidebar {
     &.sidebar-placeholder-row {
       min-height: 2px;
       padding: 0 8px;
-      background-image: image($accent_color);
+      background-image: image($primary_color);
       background-clip: content-box;
     }
 
-    &.sidebar-new-bookmark-row { color: $accent_color; }
+    &.sidebar-new-bookmark-row { color: $primary_color; }
 
     &:drop(active):not(:disabled) {
-      box-shadow: inset 0 0 0 2px $accent_color;
+      box-shadow: inset 0 0 0 2px $primary_color;
 
       &:selected {
-        // background-color: $accent_color;
+        // background-color: $primary_color;
         // color: $inverse_fg_color;
       }
     }
@@ -3402,7 +3402,7 @@ button.titlebutton {
 // touch selection handlebars for the Popover.osd above
 cursor-handle {
   border-radius: $circular_radius;
-  background-color: $accent_color;
+  background-color: $primary_color;
   background-image: none;
 
   &.top:dir(ltr), &.bottom:dir(rtl) {

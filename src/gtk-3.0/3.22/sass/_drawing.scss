@@ -39,8 +39,12 @@
   }
 
   @if $t == focus {
-    border-image: none;
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                    $accent_color 100%,
+                                    transparent 0%)
+                                    0 0 2 / 0 0 2px;
     box-shadow: $shadow_2;
+    border-bottom: $accent_color
   }
 
   @if $t == disabled {
@@ -125,13 +129,13 @@
   }
 
   @if $t == checked {
-    background-color: $primary_color;
+    background-color: $accent_color;
     color: $inverse_fg_color;
   }
 
   @if $t == checked-disabled {
-    background-color: rgba($primary_color, $lower_opacity);
-    color: rgba($primary_color, $disabled_opacity);
+    background-color: rgba($accent_color, $lower_opacity);
+    color: rgba($accent_color, $disabled_opacity);
   }
 
   @if $t == flat-normal {
