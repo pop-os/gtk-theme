@@ -296,15 +296,15 @@ $deep_orange_A400: #FF3D00;
 $deep_orange_A700: #DD2C00;
 
 // Brown
-$brown_50: lighten($warm_gray, 82%);
-$brown_100: lighten($warm_gray, 75%);
-$brown_200: lighten($warm_gray, 60%);
-$brown_300: lighten( $warm_gray, 45%);
-$brown_400: lighten($warm_gray, 30%);
-$brown_500: lighten($warm_gray, 15%);
-$brown_600: $warm_gray;
-$brown_700: darken($warm_gray, 10%);
-$brown_800: darken($warm_gray, 20%);
+$brown_50: lighten($warm_gray, 97%);
+$brown_100: lighten($warm_gray, 90%);
+$brown_200: lighten($warm_gray, 75%);
+$brown_300: lighten( $warm_gray, 60%);
+$brown_400: lighten($warm_gray, 45%);
+$brown_500: lighten($warm_gray, 30%);
+$brown_600: lighten($warm_gray, 15%);
+$brown_700: $warm_gray;
+$brown_800: darken($warm_gray, 15%);
 $brown_900: darken($warm_gray, 30%);
 
 // Grey
