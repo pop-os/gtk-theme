@@ -8,16 +8,16 @@
 
   <defs>
     <filter id="1" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
-      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.12"/> -->
-      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.24"/> -->
+      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#574f4a" flood-opacity="0.12"/> -->
+      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#574f4a" flood-opacity="0.24"/> -->
 
-      <feFlood flood-color="#000000" flood-opacity="0.12" result="flood"/>
+      <feFlood flood-color="#574f4a" flood-opacity="0.12" result="flood"/>
       <feComposite operator="in" in="flood" in2="SourceGraphic" result="composite1"/>
       <feGaussianBlur stdDeviation="1.5" in="composite1" result="blur"/>
       <feOffset dx="0" dy="1" result="offset"/>
       <feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/>
 
-      <feFlood flood-color="#000000" flood-opacity="0.24" result="flood"/>
+      <feFlood flood-color="#574f4a" flood-opacity="0.24" result="flood"/>
       <feComposite operator="in" in="flood" in2="fbSourceGraphic" result="composite1"/>
       <feGaussianBlur stdDeviation="1" in="composite1" result="blur"/>
       <feOffset dx="0" dy="1" result="offset"/>
@@ -25,16 +25,16 @@
     </filter>
 
     <filter id="2" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
-      <!-- <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/> -->
-      <!-- <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.23"/> -->
+      <!-- <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#574f4a" flood-opacity="0.16"/> -->
+      <!-- <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#574f4a" flood-opacity="0.23"/> -->
 
-      <feFlood flood-color="#000000" flood-opacity="0.16" result="flood"/>
+      <feFlood flood-color="#574f4a" flood-opacity="0.16" result="flood"/>
       <feComposite operator="in" in="flood" in2="SourceGraphic" result="composite1"/>
       <feGaussianBlur stdDeviation="3" in="composite1" result="blur"/>
       <feOffset dx="0" dy="3" result="offset"/>
       <feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/>
 
-      <feFlood flood-color="#000000" flood-opacity="0.23" result="flood"/>
+      <feFlood flood-color="#574f4a" flood-opacity="0.23" result="flood"/>
       <feComposite operator="in" in="flood" in2="fbSourceGraphic" result="composite1"/>
       <feGaussianBlur stdDeviation="3" in="composite1" result="blur"/>
       <feOffset dx="0" dy="3" result="offset"/>
@@ -71,11 +71,11 @@
     <rect id="40x40" width="40" height="40" opacity="0"/>
     <rect id="48x48" width="48" height="48" opacity="0"/>
 
-    <!-- <solidColor id="color-dark" solid-color="#000000" solid-opacity="0.87"/> -->
+    <!-- <solidColor id="color-dark" solid-color="#574f4a" solid-opacity="0.87"/> -->
     <!-- <solidColor id="color-light" solid-color="#FFFFFF"/> -->
 
     <linearGradient id="color-dark">
-      <stop stop-color="#000000" stop-opacity="0.87"/>
+      <stop stop-color="#574f4a" stop-opacity="0.87"/>
     </linearGradient>
 
     <linearGradient id="color-light">
@@ -83,7 +83,7 @@
     </linearGradient>
 
     <linearGradient id="color-dark-secondary">
-      <stop stop-color="#000000" stop-opacity="0.54"/>
+      <stop stop-color="#574f4a" stop-opacity="0.54"/>
     </linearGradient>
 
     <linearGradient id="color-light-secondary">
@@ -91,7 +91,7 @@
     </linearGradient>
 
     <linearGradient id="color-dark-secondary-disabled">
-      <stop stop-color="#000000" stop-opacity="0.26"/>
+      <stop stop-color="#574f4a" stop-opacity="0.26"/>
     </linearGradient>
 
     <linearGradient id="color-light-secondary-disabled">
@@ -99,7 +99,7 @@
     </linearGradient>
 
     <linearGradient id="color-dark-trough-disabled">
-      <stop stop-color="#000000" stop-opacity="0.12"/>
+      <stop stop-color="#574f4a" stop-opacity="0.12"/>
     </linearGradient>
 
     <linearGradient id="color-light-trough-disabled">
@@ -107,11 +107,11 @@
     </linearGradient>
 
     <linearGradient id="color-accent">
-      <stop stop-color="#FF4081"/>
+      <stop stop-color="#faa41a"/>
     </linearGradient>
 
     <linearGradient id="color-accent-disabled">
-      <stop stop-color="#FF4081" stop-opacity="0.5"/>
+      <stop stop-color="#faa41a" stop-opacity="0.5"/>
     </linearGradient>
 
     <linearGradient id="color-bg">
@@ -119,7 +119,7 @@
     </linearGradient>
 
     <linearGradient id="color-bg-dark">
-      <stop stop-color="#44545c"/>
+      <stop stop-color="#49423e"/>
     </linearGradient>
 
     <linearGradient id="color-bg-lighter">
@@ -127,7 +127,7 @@
     </linearGradient>
 
     <linearGradient id="color-bg-lighter-dark">
-      <stop stop-color="#596e79"/>
+      <stop stop-color="#574f4a"/>
     </linearGradient>
 
     <linearGradient id="color-base">
@@ -135,7 +135,7 @@
     </linearGradient>
 
     <linearGradient id="color-base-dark">
-      <stop stop-color="#50636c"/>
+      <stop stop-color="#49423e"/>
     </linearGradient>
 
     <g id="base-checkbox-unchecked">
