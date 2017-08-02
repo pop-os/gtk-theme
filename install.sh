@@ -1,5 +1,7 @@
 #!/bin/bash
 
+destdir=$1
+
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 

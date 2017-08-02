@@ -2,7 +2,7 @@ all:
 	./parse-sass.sh
 
 install:
-	./install.sh
+	./install.sh $(DESTDIR)
 
 post-install:
 	-gtk-update-icon-cache -q $(DESTDIR)/usr/share/icons/Pop

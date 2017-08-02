@@ -8,12 +8,4 @@ export DEB_BUILD_OPTIONS = nocheck
 %:
 	dh $@
 
-override_dh_auto_configure:
-	./autogen.sh --prefix=/usr \
-		--disable-parallel \
-		--enable-gtk_next \
-		--disable-chrome \
-		--disable-plank \
-		--disable-telegram \
-		--enable-gnome \
-		--disable-gtk_legacy
+

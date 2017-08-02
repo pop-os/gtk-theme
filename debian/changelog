@@ -1,3 +1,9 @@
+pop-gtk-theme (1.99.0.0) zesty; urgency=medium
+
+  * Recreate the entire theme with a new upstream based on Flat-Plat.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 02 Aug 2017 11:57:01 -0600
+
 pop-gtk-theme (1.3.1.13) zesty; urgency=medium
 
   * Merge in changes from upstream.

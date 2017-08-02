@@ -1176,6 +1176,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.datemenu-today-button .day-label {
+  font-weight: 400;
+}
+
 .datemenu-today-button .date-label {
   font-size: 18pt;
   font-weight: 400;
