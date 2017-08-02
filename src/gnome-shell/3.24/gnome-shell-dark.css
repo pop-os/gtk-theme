@@ -161,7 +161,7 @@ StEntry {
 
 StEntry:focus {
   border-color: transparent;
-  box-shadow: inset 0 -2px #48b9c7;
+  box-shadow: inset 0 -2px #faa41a;
 }
 
 StEntry:insensitive {
@@ -1719,7 +1719,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .search-entry:focus {
   border-color: transparent;
-  box-shadow: inset 0 -2px #FFFFFF;
+  box-shadow: inset 0 -2px #faa41a;
   padding: 0 8px;
   border-width: 0;
   color: #FFFFFF;
@@ -1732,7 +1732,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .search-entry:hover .search-entry-icon, .search-entry:focus .search-entry-icon {
-  color: #FFFFFF;
+  color: #faa41a;
 }
 
 #searchResultsBin {
@@ -2490,7 +2490,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .login-dialog StEntry:focus {
   border-color: transparent;
-  box-shadow: inset 0 -2px #FFFFFF;
+  box-shadow: inset 0 -2px #faa41a;
 }
 
 .login-dialog StEntry:insensitive {
@@ -2875,7 +2875,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .lg-dialog StEntry {
-  selection-background-color: #48b9c7;
+  selection-background-color: #faa41a;
   selected-color: #FFFFFF;
 }
 
@@ -3196,7 +3196,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu .search-entry:focus {
   border-color: transparent;
-  box-shadow: inset 0 -2px #48b9c7;
+  box-shadow: inset 0 -2px #faa41a;
   color: #FFFFFF;
 }
 

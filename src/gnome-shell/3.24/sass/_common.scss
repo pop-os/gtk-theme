@@ -1383,7 +1383,7 @@ StScrollBar {
     selected-color: $inverse_fg_color;
     @include entry(normal,$fc:$inverse_track_color);
     &:focus {
-      @include entry(focus,$fc:$inverse_fg_color);
+      @include entry(focus,$fc:$accent_color);
       padding: 0 8px;
       border-width: 0;
       color: $inverse_fg_color;
@@ -1392,7 +1392,7 @@ StScrollBar {
     .search-entry-icon { icon-size: 16px; padding: 0 0; color: $inverse_hint_fg_color; }
 
     &:hover, &:focus {
-      .search-entry-icon { color: $inverse_fg_color; }
+      .search-entry-icon { color: $accent_color; }
     }
   }
 
@@ -1943,7 +1943,7 @@ $legacy_icon_size: 24px;
     selection-background-color: $inverse_track_color;
     selected-color: $inverse_fg_color;
     @include entry(normal, $fc:$inverse_track_color);
-    &:focus { @include entry(focus, $fc:$inverse_fg_color); }
+    &:focus { @include entry(focus, $fc:$accent_color); }
     &:insensitive {
       @include entry(insensitive, $fc:$inverse_divider_color);
       color: $inverse_disabled_fg_color;
@@ -2178,7 +2178,7 @@ $legacy_icon_size: 24px;
 
   .lg-dialog {
     StEntry {
-      selection-background-color: $primary_color;
+      selection-background-color: $accent_color;
       selected-color: $inverse_fg_color;
     }
     .shell-link {

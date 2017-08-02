@@ -161,7 +161,7 @@ StEntry {
 
 StEntry:focus {
   border-color: transparent;
-  box-shadow: inset 0 -2px #48b9c7;
+  box-shadow: inset 0 -2px #faa41a;
 }
 
 StEntry:insensitive {
@@ -3159,7 +3159,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu .search-entry:focus {
   border-color: transparent;
-  box-shadow: inset 0 -2px #48b9c7;
+  box-shadow: inset 0 -2px #faa41a;
   color: #FFFFFF;
 }
 
