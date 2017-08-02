@@ -44,15 +44,15 @@
     </linearGradient>
 
     <linearGradient id="color-primary">
-      <stop stop-color="#42A5F5"/>
+      <stop stop-color="#48b9c7"/>
     </linearGradient>
 
     <linearGradient id="color-accent">
-      <stop stop-color="#FF4081"/>
+      <stop stop-color="#faa41a"/>
     </linearGradient>
 
     <linearGradient id="color-accent-insensitive">
-      <stop stop-color="#FF4081" stop-opacity="0.5"/>
+      <stop stop-color="#faa41a" stop-opacity="0.5"/>
     </linearGradient>
 
     <linearGradient id="color-bg">

@@ -24,11 +24,19 @@
 accent1="faa41a"
 selection1="48b9c7"
 black="574f4a"
+bg1="49423e"
+bg2="574f4a"
+bg3="4a5c64"
+bg4="49423e"
 
 # List of stock colors to use:
 accentO="FF4081"
 selectionO="42A5F5"
 blackO="000000"
+bg1O="44545c"
+bg2O="596e79"
+bg3O="4a5c64"
+bg4O="50636c"
 
 # Color replacements happen here:
 
