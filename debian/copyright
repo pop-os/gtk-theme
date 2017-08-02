@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: pop-gtk-theme
+Source: https://github.com/system76/pop-gtk-theme
+
+Files: *
+Copyright: Copyright 2016-2017 System76
+License: GPL-2+ or CC-BY-SA-4.0+

@@ -1,0 +1,204 @@
+pop-gtk-theme (1.3.1.13) zesty; urgency=medium
+
+  * Merge in changes from upstream.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 27 Jun 2017 09:32:10 -0600
+
+pop-gtk-theme (1.3.1.12) zesty; urgency=medium
+
+  * Use White instead of Foreground Color for Ubiquity.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 23 Jun 2017 13:21:06 -0600
+
+pop-gtk-theme (1.3.1.11) zesty; urgency=medium
+
+  * Merge in lastest upstream.
+  * Correct Ubiquity invisible text issue.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 23 Jun 2017 11:53:06 -0600
+
+pop-gtk-theme (1.3.1.10) zesty; urgency=medium
+
+  * Lighten GNOME Shell Panel color.
+  * Mirror GNOME Shell panel color change in GTK-based panels.
+  * Fix blue-inderline bug in GNOME Weather.
+  * Ensure Firefox styling is correct.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 23 Jun 2017 10:13:03 -0600
+
+pop-gtk-theme (1.3.1.9) zesty; urgency=medium
+
+  * 3rd Party: Re-apply panel-grid for MATE taskbar.
+  * Shell: Make days with events blue in calendar popover
+  * Maintenance: Merge from upstream
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 21 Jun 2017 11:14:54 -0600
+
+pop-gtk-theme (1.3.1.8) zesty; urgency=medium
+
+  * Update conflicts
+
+ -- Jeremy Soller <jeremy@system76.com>  Tue, 20 Jun 2017 09:31:37 -0600
+
+pop-gtk-theme (1.3.1.7) zesty; urgency=medium
+
+  * Rename to pop-gtk-theme
+
+ -- Jeremy Soller <jeremy@system76.com>  Mon, 19 Jun 2017 11:34:06 -0600
+
+pop-gtk-theme (1.3.1.6) zesty; urgency=medium
+
+  * Ubiquity: Make page title text white so that it is readable.
+  * Ubiquity: Turn progress dots into circles.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 16 Jun 2017 13:17:58 -0600
+
+pop-gtk-theme (1.3.1.5) zesty; urgency=medium
+
+  * Fix issue with invisible flat text buttons.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 16 Jun 2017 11:01:36 -0600
+
+pop-gtk-theme (1.3.1.4) zesty; urgency=medium
+
+  * Darken GDM/GNOME Shell background color.
+  * Pull in changes from upstream Adapta.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 16 Jun 2017 09:39:36 -0600
+
+pop-gtk-theme (1.3.1.3) zesty; urgency=medium
+
+  * Make dialog buttons white instead of blue to improve reability.
+  * Disable building of theme for 16.04
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 13 Jun 2017 14:36:12 -0600
+
+pop-gtk-theme (1.3.1.2) zesty; urgency=medium
+
+  * Adjust LightDM GTK Greeter styling.
+  * Pull in latest changes from upstream Adapta.
+  * Tweak Firefox Button styling.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 05 Jun 2017 14:37:52 -0600
+
+pop-gtk-theme (1.3.1.1) zesty; urgency=medium
+
+  * Fix Dark theme.
+  * Fix Metathemes.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 02 Jun 2017 14:33:32 -0600
+
+pop-gtk-theme (1.3.1.0) zesty; urgency=medium
+
+  * Merge upstream Adapta.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 02 Jun 2017 11:21:31 -0600
+
+pop-gtk-theme (1.3.0.1) zesty; urgency=medium
+
+  * Fix errant GtkSwitch widget coloring.
+  * Correct build error with new gnome-shell build-dep.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 31 May 2017 09:01:35 -0600
+
+pop-gtk-theme (1.3.0) zesty; urgency=medium
+
+  * Fix building from upstream Adapta.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 30 May 2017 14:50:20 -0600
+
+pop-gtk-theme (1.2.2) zesty; urgency=medium
+
+  * Fix color migration problems from rebase.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 24 May 2017 16:22:58 -0600
+
+pop-gtk-theme (1.2.1) zesty; urgency=medium
+
+  * Re-write theme in more upstream-friendly way.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 17 May 2017 16:38:44 -0600
+
+pop-gtk-theme (1.2.0) zesty; urgency=medium
+
+  * Merge in upstream Adapta.
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 04 May 2017 17:34:23 -0600
+
+pop-gtk-theme (1.1.1) zesty; urgency=medium
+
+  * Darken Terminal Background.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 03 May 2017 17:21:04 -0600
+
+pop-gtk-theme (1.1.0) zesty; urgency=medium
+
+  * Color names refactored throughout the whole theme
+  * Subtle changes in colors to warm up the theme 
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 02 May 2017 21:19:58 -0600
+
+pop-gtk-theme (1.0.10) zesty; urgency=medium
+
+  * Fix backwards initial color definitions
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 01 May 2017 16:01:03 -0600
+
+pop-gtk-theme (1.0.9) zesty; urgency=medium
+
+  * Refactor most colors in the theme to easier-to-understand components
+  * Improve consistency between plans and implelentation
+  * Increase most border radii to lighten up and humanize the theme
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 01 May 2017 14:23:11 -0600
+
+pop-gtk-theme (1.0.8) zesty; urgency=medium
+
+  * GTK 2 Tweaks
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 27 Apr 2017 17:57:41 -0600
+
+pop-gtk-theme (1.0.7) zesty; urgency=medium
+
+  * Attempt to tweak color for "OFF" switches.
+  * Add slightly rounded top border
+  * Darken GtkEntry widgets to improve visibility.
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 27 Apr 2017 15:29:08 -0600
+
+pop-gtk-theme (1.0.6) zesty; urgency=medium
+
+  * Remove half-tiled effect on headerbars
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 27 Apr 2017 09:17:29 -0600
+
+pop-gtk-theme (1.0.5) zesty; urgency=medium
+
+  * Don't build unecessary extras
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 21 Apr 2017 17:20:10 -0600
+
+pop-gtk-theme (1.0.4) zesty; urgency=medium
+
+  * Fix build bug with Extras support
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 21 Apr 2017 16:58:03 -0600
+
+pop-gtk-theme (1.0.3) zesty; urgency=medium
+
+  * Disable building Nokto variants by default
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 21 Apr 2017 16:14:26 -0600
+
+pop-gtk-theme (1.0.1) zesty; urgency=medium
+
+  * Move to gnome section
+
+ -- Jeremy Soller <jeremy@system76.com>  Fri, 21 Apr 2017 13:52:13 -0600
+
+pop-gtk-theme (1.0.0) zesty; urgency=medium
+
+  * First release
+
+ -- Jeremy Soller <jeremy@system76.com>  Thu, 20 Apr 2017 11:07:01 -0600
+
