@@ -40,8 +40,13 @@ bg4O="50636c"
 
 # Color replacements happen here:
 
+files='assets.svg
+       assets-dark.svg
+       gtkrc
+       gtkrc-dark
+       gtkrc-light'
 
-for i in '' 'assets.svg' 'assets-dark.svg' ; do
+for i in $files; do
 	echo "Replacing colors in $i..."
 
 	sed -i "s/$accentO/$accent1/g" $i
@@ -50,7 +55,20 @@ for i in '' 'assets.svg' 'assets-dark.svg' ; do
 	sed -i "s/$selectionO/$selection1/g" $i
 	echo "Replaced $selectionO with $selection1 in $i"
 
-	sed -i "s/$blackO/$black/s" $i
+	sed -i "s/$blackO/$black/g" $i
 	echo "Replaced $blackO with $black in $i"
+
+	sed -i "s/$bg1O/$bg1/g" $i
+	echo "Replaced $bg10 with $bg1 in $i"
+
+	sed -i "s/$bg2O/$bg2/g" $i
+	echo "Replaced $bg2O with $bg2 in $i"
+
+	sed -i "s/$bg3O/$bg3/g" $i
+	echo "Replaced $bg3O with $bg3 in $i"
+
+	sed -i "s/$bg4O/$bg4/g" $i
+	echo "Replaced $bg4O with $bg4 in $i"
+
 done
 echo "Color Replacement complete."

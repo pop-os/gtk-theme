@@ -7,16 +7,16 @@
 
   <defs>
     <filter id="1" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
-      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.12"/> -->
-      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.24"/> -->
+      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#574f4a" flood-opacity="0.12"/> -->
+      <!-- <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#574f4a" flood-opacity="0.24"/> -->
 
-      <feFlood flood-color="#000000" flood-opacity="0.12" result="flood"/>
+      <feFlood flood-color="#574f4a" flood-opacity="0.12" result="flood"/>
       <feComposite operator="in" in="flood" in2="SourceGraphic" result="composite1"/>
       <feGaussianBlur stdDeviation="1.5" in="composite1" result="blur"/>
       <feOffset dx="0" dy="1" result="offset"/>
       <feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/>
 
-      <feFlood flood-color="#000000" flood-opacity="0.24" result="flood"/>
+      <feFlood flood-color="#574f4a" flood-opacity="0.24" result="flood"/>
       <feComposite operator="in" in="flood" in2="fbSourceGraphic" result="composite1"/>
       <feGaussianBlur stdDeviation="1" in="composite1" result="blur"/>
       <feOffset dx="0" dy="1" result="offset"/>
@@ -56,15 +56,15 @@
     </linearGradient>
 
     <linearGradient id="color-bg">
-      <stop stop-color="#44545c"/>
+      <stop stop-color="#49423e"/>
     </linearGradient>
 
     <linearGradient id="color-bg-lighter">
-      <stop stop-color="#596e79"/>
+      <stop stop-color="#574f4a"/>
     </linearGradient>
 
     <linearGradient id="color-base">
-      <stop stop-color="#50636c"/>
+      <stop stop-color="#49423e"/>
     </linearGradient>
 
     <linearGradient id="color-base-alt">
@@ -72,7 +72,7 @@
     </linearGradient>
 
     <linearGradient id="color-border">
-      <stop stop-color="#000000" stop-opacity="0.2"/>
+      <stop stop-color="#574f4a" stop-opacity="0.2"/>
     </linearGradient>
 
     <rect id="1x1" width="1" height="1"/>
