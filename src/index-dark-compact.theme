@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Flat-Plat-dark-compact
-Comment=A Material Design-like theme
+Name=Pop-Slim-Dark
+Comment=The Pop GTK Theme, based on Flat-Plat, Slim Dark variant
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Flat-Plat-dark-compact
-MetacityTheme=Flat-Plat-dark-compact
-IconTheme=Adwaita
-CursorTheme=Adwaita
+GtkTheme=Pop-Slim-Dark
+MetacityTheme=Pop-Slim-Dark
+IconTheme=Pop
+CursorTheme=Pop
 CursorSize=24
