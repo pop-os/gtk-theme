@@ -1179,6 +1179,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .datemenu-today-button .date-label {
   font-size: 18pt;
   font-weight: 400;
+  font-weight: 250;
 }
 
 .world-clocks-header,

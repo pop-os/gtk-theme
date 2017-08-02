@@ -976,10 +976,12 @@ StScrollBar {
     }
 
     .datemenu-today-button .day-label {
+      font-weight: 400;
     }
 
     .datemenu-today-button .date-label {
       @include font(headline);
+      font-weight: 250;
     }
 
     .world-clocks-header,
