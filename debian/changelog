@@ -1,3 +1,11 @@
+pop-gtk-theme (1.99.1.0) zesty; urgency=medium
+
+  * Tweaks to GNOME Shell theme for better Pop look and feel.
+  * GTK2 theme.
+  * Consistency fixes for some GTK3 assets.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 02 Aug 2017 16:43:16 -0600
+
 pop-gtk-theme (1.99.0.0) zesty; urgency=medium
 
   * Recreate the entire theme with a new upstream based on Flat-Plat.
