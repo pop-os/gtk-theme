@@ -40,20 +40,20 @@ for color in '' '-dark' '-light' ; do
       ${themedir}/index.theme
 
     # Install Chrome Theme/Extention
-    install -d ${themedir}/chrome
-    cd ${srcdir}/chrome
-    cp -ur \
-      "Pop${color} Theme.crx" \
-      ${themedir}/chrome
-    if [ "$color" != '-dark' ] ; then
-      cp -ur \
-        "Pop Scrollbars.crx" \
-        ${themedir}/chrome
-    else
-      cp -ur \
-        "Pop${color} Scrollbars.crx" \
-        ${themedir}/chrome
-    fi
+    #install -d ${themedir}/chrome
+    #cd ${srcdir}/chrome
+    #cp -ur \
+    #  "Pop${color} Theme.crx" \
+    #  ${themedir}/chrome
+    #if [ "$color" != '-dark' ] ; then
+    #  cp -ur \
+    #    "Pop Scrollbars.crx" \
+    #    ${themedir}/chrome
+    #else
+    #  cp -ur \
+    #    "Pop${color} Scrollbars.crx" \
+    #    ${themedir}/chrome
+    #fi
 
     # Install GNOME Shell Theme
     install -d ${themedir}/gnome-shell
