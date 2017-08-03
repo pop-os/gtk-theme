@@ -945,6 +945,7 @@ modelbutton.flat,
   padding: 0 8px;
   border-radius: 2px;
   color: inherit;
+  transition: none;
 }
 
 modelbutton.flat arrow {
@@ -2543,17 +2544,12 @@ radio:not(:checked):indeterminate:active {
 
 check:not(:checked),
 radio:not(:checked) {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-size 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0.4s cubic-bezier(0, 0, 0.2, 1), -gtk-icon-transform 0;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1), background-size 0.1s cubic-bezier(0, 0, 0.2, 1), background-image 0.2s cubic-bezier(0, 0, 0.2, 1), -gtk-icon-transform 0;
 }
 
 check:not(:checked):active,
 radio:not(:checked):active {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-size 0, background-image 0, -gtk-icon-transform 0;
-}
-
-menu menuitem check:not(:checked), menu menuitem
-radio:not(:checked) {
-  transition: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1), background-size 0, background-image 0, -gtk-icon-transform 0;
 }
 
 treeview.view check,

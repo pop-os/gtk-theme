@@ -698,7 +698,7 @@ modelbutton.flat,
   color: inherit;
 
   @extend %simple_flat_button;
-
+  transition: none;
   &:selected { @extend %selected_items; }
 }
 
@@ -2239,20 +2239,20 @@ radio:not(:checked):indeterminate:active { -gtk-icon-transform: scaleX(-1); } //
 check:not(:checked),
 radio:not(:checked) {
   & {
-    transition: $longer_transition,
-                background-size $ripple_duration $deceleration_curve,
-                background-image $ripple_duration * 2 $deceleration_curve,
+    transition: $shorter_transition,
+                background-size $shorter_duration $deceleration_curve,
+                background-image $shorter_duration * 2 $deceleration_curve,
                 -gtk-icon-transform 0;
   }
 
   &:active {
-    transition: $longer_transition,
+    transition: $shorter_transition,
                 background-size 0,
                 background-image 0,
                 -gtk-icon-transform 0;
   }
 
-  menu menuitem & { transition: none; }
+  //menu menuitem & { transition: none; }
 }
 
 treeview.view check,
