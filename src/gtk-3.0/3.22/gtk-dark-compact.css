@@ -4029,6 +4029,10 @@ frame.gedit-map-frame > border:dir(rtl) {
   background-image: image(#574f4a);
 }
 
+.tweak-categories .tweak-category:selected {
+  background-color: #faa41a;
+}
+
 .tweak {
   padding: 3px;
 }

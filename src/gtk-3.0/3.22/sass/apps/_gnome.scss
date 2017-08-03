@@ -287,6 +287,9 @@ frame.gedit-map-frame > border {
   // padding: 4px 0;
   // background-color: shade(@theme_bg_color, 0.99);
   background-image: image($lighter_bg_color);
+  .tweak-category:selected {
+    background-color: $accent_color;
+  }
 
   separator { @extend %hide_separators; }
 }
