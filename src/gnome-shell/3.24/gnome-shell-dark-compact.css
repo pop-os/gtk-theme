@@ -1265,7 +1265,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar-day-base:active, .calendar-day-base:selected {
   color: #FFFFFF;
-  background-color: #48b9c7 !important;
+  background-color: #faa41a !important;
   border-color: transparent;
 }
 
@@ -1305,8 +1305,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .calendar-day-with-events {
-  color: #faa41a;
-  font-weight: normal;
+  color: #48b9c7;
+  font-weight: 600;
   text-decoration: underline;
   background-image: none;
 }

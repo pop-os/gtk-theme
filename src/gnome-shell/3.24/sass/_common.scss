@@ -1041,7 +1041,7 @@ StScrollBar {
       // &:active { background-color: $track_color; }
       &:active, &:selected {
         color: $inverse_fg_color;
-        background-color: $primary_color !important;
+        background-color: $accent_color !important;
         border-color: transparent; //avoid jumparound due to today
       }
       &.calendar-day-heading {  //day of week heading
@@ -1070,12 +1070,12 @@ StScrollBar {
       .calendar-today {
         font-weight: bold !important;
         //color: $fg_color;
-        //background-color: transparent;
+        //background-color: $accent_color;
         border: none;
       }
       .calendar-day-with-events {
-        color: $link_color;
-        font-weight: normal;
+        color: $primary_color;
+        font-weight: 600;
         text-decoration: underline;
         background-image: none;
       }
