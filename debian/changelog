@@ -1,3 +1,10 @@
+pop-gtk-theme (2.0.0.0) zesty; urgency=medium
+
+  * New release based on Flat-Plat instead of Adapta.
+  * Reduced Memory Usage.
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 03 Aug 2017 11:52:45 -0600
+
 pop-gtk-theme (1.99.1.0) zesty; urgency=medium
 
   * Tweaks to GNOME Shell theme for better Pop look and feel.
