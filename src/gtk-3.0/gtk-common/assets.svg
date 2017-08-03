@@ -110,6 +110,10 @@
       <stop stop-color="#faa41a"/>
     </linearGradient>
 
+    <linearGradient id="color-primary">
+      <stop stop-color="#48b9c7"/>
+    </linearGradient>
+
     <linearGradient id="color-accent-disabled">
       <stop stop-color="#faa41a" stop-opacity="0.5"/>
     </linearGradient>
@@ -271,7 +275,7 @@
 
     <g id="base-scale-slider">
       <use xlink:href="#21x21"/>
-      <use xlink:href="#slider-fill" fill="url(#color-accent)"/>
+      <use xlink:href="#slider-fill" fill="url(#color-primary)"/>
     </g>
 
     <g id="base-scale-slider-disabled">
@@ -288,7 +292,7 @@
 
     <g id="base-scale-horz-marks-after-slider">
       <use xlink:href="#21x26"/>
-      <use xlink:href="#marks-slider-fill" transform="rotate(45 10.5 10.5)" fill="url(#color-accent)"/>
+      <use xlink:href="#marks-slider-fill" transform="rotate(45 10.5 10.5)" fill="url(#color-primary)"/>
     </g>
     <use xlink:href="#base-scale-horz-marks-after-slider" id="base-scale-vert-marks-before-slider" transform="rotate(90 10.5 10.5)"/>
     <use xlink:href="#base-scale-horz-marks-after-slider" id="base-scale-horz-marks-before-slider" transform="rotate(180 10.5 10.5)"/>
