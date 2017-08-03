@@ -4075,7 +4075,7 @@ layouttab {
   border-style: none solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 -2px #48b9c7;
+  box-shadow: none;
   background-color: #FFFFFF;
 }
 
@@ -4228,7 +4228,7 @@ docktab {
   outline-offset: -6px;
   border-width: 1px;
   border-color: transparent;
-  background-image: radial-gradient(circle farthest-corner at center, #48b9c7 10%, transparent 0%);
+  background-image: radial-gradient(circle farthest-corner at center, #faa41a 10%, transparent 0%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 0% 0%;
@@ -4243,7 +4243,7 @@ docktab:hover {
 
 docktab:checked {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-size 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0.4s cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 -2px #48b9c7;
+  box-shadow: inset 0 -2px #faa41a;
   background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
   background-size: 1000% 1000%;
   color: rgba(87, 79, 74, 0.87);
@@ -4263,7 +4263,7 @@ dockoverlayedge.left-edge docktab:hover {
 }
 
 dockoverlayedge.left-edge docktab:checked {
-  box-shadow: inset -2px 0 #48b9c7;
+  box-shadow: inset -2px 0 #faa41a;
 }
 
 dockoverlayedge.right-edge docktab:hover {
@@ -4271,7 +4271,7 @@ dockoverlayedge.right-edge docktab:hover {
 }
 
 dockoverlayedge.right-edge docktab:checked {
-  box-shadow: inset 2px 0 #48b9c7;
+  box-shadow: inset 2px 0 #faa41a;
 }
 
 pillbox {
