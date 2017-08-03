@@ -147,11 +147,11 @@ StScrollBar {
 
 .slider {
   height: 20px;
-  color: $accent_color;
+  color: $primary_color;
   -slider-height: 2px;
   -slider-background-color: $track_color; //background of the trough
   -slider-border-color: transparent; //trough border color
-  -slider-active-background-color: $accent_color; //active trough fill
+  -slider-active-background-color: $primary_color; //active trough fill
   -slider-active-border-color: transparent; //active trough border
   -slider-border-width: 0;
   -slider-handle-radius: 7px;
@@ -597,16 +597,16 @@ StScrollBar {
     &:ltr { padding: 0.4em 24px 0.4em 0; }
     &:rtl { padding: 0.4em 0 0.4em 24px; }
     &:checked {
-      background-color: $primary_color;
+      background-color: $accent_color;
       color: $inverse_fg_color;
       box-shadow: $shadow_0;
       font-weight: normal;
       &.selected {
-        background-color: mix($inverse_fg_color, $primary_color, percentage($lower_opacity / 2));
+        background-color: mix($inverse_fg_color, $accent_color, percentage($lower_opacity / 2));
         color: $inverse_fg_color;
       }
       &:active {
-        background-color: mix($inverse_fg_color, $primary_color, percentage($lower_opacity));
+        background-color: mix($inverse_fg_color, $accent_color, percentage($lower_opacity));
         color: $inverse_fg_color !important;
       }
       &:insensitive { color: $inverse_disabled_fg_color; }
@@ -849,12 +849,12 @@ StScrollBar {
 
   .panel-corner {
     -panel-corner-radius: $panel-corner-radius;
-    -panel-corner-background-color: $bg_color;
+    -panel-corner-background-color: $panel_bg_color;
     -panel-corner-border-width: 2px;
     -panel-corner-border-color: transparent;
 
     &:active, &:overview, &:focus {
-      -panel-corner-border-color: $inverse_fg_color;
+      -panel-corner-border-color: $accent_color;
     }
 
     &.lock-screen, &.login-screen, &.unlock-screen {
@@ -886,7 +886,7 @@ StScrollBar {
       // Trick due to St limitations. It needs a background to draw
       // a box-shadow
       background-color: rgba($bg_color, 0.01);
-      box-shadow: inset 0 -2px 0px $inverse_fg_color;
+      box-shadow: inset 0 -2px 0px $accent_color;
       color: $inverse_fg_color;
 
       & > .system-status-icon { icon-shadow: none; }
@@ -1371,7 +1371,7 @@ StScrollBar {
     selected-color: $inverse_fg_color;
     @include entry(normal,$fc:$inverse_track_color);
     &:focus {
-      @include entry(focus,$fc:$inverse_fg_color);
+      @include entry(focus,$fc:$accent_color);
       padding: 0 8px;
       border-width: 0;
       color: $inverse_fg_color;
@@ -1380,7 +1380,7 @@ StScrollBar {
     .search-entry-icon { icon-size: 16px; padding: 0 0; color: $inverse_hint_fg_color; }
 
     &:hover, &:focus {
-      .search-entry-icon { color: $inverse_fg_color; }
+      .search-entry-icon { color: $accent_color; }
     }
   }
 
@@ -1784,7 +1784,7 @@ StScrollBar {
 $legacy_icon_size: 24px;
 
 .legacy-tray {
-  background-color: $bg_color;
+  background-color: $dark_fg_color;
   color: $inverse_fg_color;
   border: none;
   border-bottom-width: 0;
@@ -1931,7 +1931,7 @@ $legacy_icon_size: 24px;
     selection-background-color: $inverse_track_color;
     selected-color: $inverse_fg_color;
     @include entry(normal, $fc:$inverse_track_color);
-    &:focus { @include entry(focus, $fc:$inverse_fg_color); }
+    &:focus { @include entry(focus, $fc:$accent_color); }
     &:insensitive {
       @include entry(insensitive, $fc:$inverse_divider_color);
       color: $inverse_disabled_fg_color;
@@ -2057,7 +2057,7 @@ $legacy_icon_size: 24px;
 .screen-shield-clock {
   color: white;
   text-shadow: $shadow_1;
-  font-weight: normal;
+  font-weight: 200;
   text-align: center;
   padding-bottom: 1.5em;
 }
@@ -2166,7 +2166,7 @@ $legacy_icon_size: 24px;
 
   .lg-dialog {
     StEntry {
-      selection-background-color: $primary_color;
+      selection-background-color: $accent_color;
       selected-color: $inverse_fg_color;
     }
     .shell-link {

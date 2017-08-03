@@ -228,6 +228,9 @@ frame.gedit-map-frame > border {
   // padding: 4px 0;
   // background-color: shade(@theme_bg_color, 0.99);
   background-image: image($lighter_bg_color);
+  .tweak-category:selected {
+    background-color: $accent_color;
+  }
 
   separator { @extend %hide_separators; }
 }
@@ -310,7 +313,7 @@ layouttab {
   border-style: none solid;
   border-width: 1px;
   border-color: $border_color;
-  box-shadow: inset 0 -2px $primary_color;
+  box-shadow: none;
   background-color: $base_color;
 
   separator.vertical { margin: 8px 4px; }
@@ -380,7 +383,7 @@ docktab {
   border-color: transparent; //
 
   background-image: radial-gradient(circle farthest-corner at center,
-                                    $primary_color 10%,
+                                    $accent_color 10%,
                                     transparent 0%);
   background-repeat: no-repeat;
   background-position: center;
@@ -398,7 +401,7 @@ docktab {
     transition: $longer_transition,
                 background-size $longer_duration $deceleration_curve,
                 background-image $longer_duration + $ripple_duration $deceleration_curve;
-    box-shadow: inset 0 -2px $primary_color;
+    box-shadow: inset 0 -2px $accent_color;
     background-image: radial-gradient(circle farthest-corner at center,
                                       transparent 10%,
                                       transparent 0%);
@@ -417,12 +420,12 @@ dockoverlayedge {
 
   &.left-edge docktab {
     &:hover { box-shadow: inset -2px 0 $track_color; }
-    &:checked { box-shadow: inset -2px 0 $primary_color; }
+    &:checked { box-shadow: inset -2px 0 $accent_color; }
   }
 
   &.right-edge docktab {
     &:hover { box-shadow: inset 2px 0 $track_color; }
-    &:checked { box-shadow: inset 2px 0 $primary_color; }
+    &:checked { box-shadow: inset 2px 0 $accent_color; }
   }
 }
 
