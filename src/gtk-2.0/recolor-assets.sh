@@ -3,7 +3,7 @@
 ## Asset Recoloring script for use in the Pop GTK Theme
 
 # This script is part of the Pop GTK theme
-# Copyright (C) 2017 by System76, Inc.
+# Copyright (C) 2017 by System76, Inc. and Ian Santopietro
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

@@ -2251,7 +2251,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Eeeky things */
 .legacy-tray {
-  background-color: #49423e;
+  background-color: rgba(87, 79, 74, 0.87);
   color: #FFFFFF;
   border: none;
   border-bottom-width: 0;
