@@ -1032,6 +1032,8 @@ headerbar {
   background-color: $titlebar_bg_color;
   color: $titlebar_fg_color;
 
+
+
   &:disabled :not(button) > label { color: $titlebar_disabled_fg_color; }
 
   &:backdrop {
@@ -2968,7 +2970,10 @@ placessidebar {
     // will make the animation of the new bookmark row jump
     > revealer { padding: 0 12px; }
 
-    &:selected { color: $inverse_fg_color; }
+    &:selected {
+      color: $inverse_fg_color;
+      background-color: $accent_color;
+    }
 
     &:disabled { color: $disabled_fg_color; }
 
@@ -2997,17 +3002,17 @@ placessidebar {
     &.sidebar-placeholder-row {
       min-height: 2px;
       padding: 0 8px;
-      background-image: image($primary_color);
+      background-image: image($accent_color);
       background-clip: content-box;
     }
 
     &.sidebar-new-bookmark-row { color: $primary_color; }
 
     &:drop(active):not(:disabled) {
-      box-shadow: inset 0 0 0 2px $primary_color;
+      box-shadow: inset 0 0 0 2px $accent_color;
 
       &:selected {
-        // background-color: $primary_color;
+        // background-color: $accent_color;
         // color: $inverse_fg_color;
       }
     }

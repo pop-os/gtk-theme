@@ -25,10 +25,10 @@ $track_color:                 if($variant == 'light', rgba($brown_700, 0.26), rg
 $divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
 
 $titlebar_fg_color:                    if($titlebar == 'light', rgba($brown_700, 0.87), $white);
-$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_700, 0.54), rgba($white, 0.7));
+$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_700, 0.54), rgba($white, 0.3));
 $titlebar_hint_fg_color:               if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.5));
-$titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.5));
-$titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_700, 0.26), rgba($white, 0.3));
+$titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.3));
+$titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_700, 0.26), rgba($white, 0.2));
 $titlebar_track_color:                 if($titlebar == 'light', rgba($brown_700, 0.26), rgba($white, 0.3));
 $titlebar_divider_color:               if($titlebar == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
 
@@ -48,7 +48,7 @@ $lighter_bg_color: if($variant == 'light', $grey_50,  $brown_700);
 $darker_bg_color:  if($variant == 'light', $grey_200, $brown_800);
 
 $titlebar_bg_color:          if($titlebar == 'dark', if($variant == 'light', $brown_700, lighten($brown_800, 5%)), $brown_300);
-$inactive_titlebar_bg_color: if($titlebar == 'dark', if($variant == 'light', fade($brown_700), fade(lighten($brown_800, 5%))), fade($brown_300));
+$inactive_titlebar_bg_color: if($titlebar == 'dark', if($variant == 'light', $brown_800, lighten($brown_900, 5%)), $brown_400);
 $alt_titlebar_bg_color:      if($titlebar == 'dark', $brown_800, mix($brown_300, $brown_400, 50%));
 $panel_bg_color:             if($titlebar == 'dark', $brown_900, rgba($black, $middle_opacity));
 $unity_panel_bg_color:       if($titlebar == 'dark', $brown_900, mix($grey_300, $grey_400, 50%));

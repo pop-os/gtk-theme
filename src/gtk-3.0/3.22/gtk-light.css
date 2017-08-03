@@ -3340,6 +3340,7 @@ placessidebar row > revealer {
 
 placessidebar row:selected {
   color: #FFFFFF;
+  background-color: #faa41a;
 }
 
 placessidebar row:disabled {
@@ -3373,7 +3374,7 @@ placessidebar row label.sidebar-label:dir(rtl) {
 placessidebar row.sidebar-placeholder-row {
   min-height: 2px;
   padding: 0 8px;
-  background-image: image(#48b9c7);
+  background-image: image(#faa41a);
   background-clip: content-box;
 }
 
@@ -3382,7 +3383,7 @@ placessidebar row.sidebar-new-bookmark-row {
 }
 
 placessidebar row:drop(active):not(:disabled) {
-  box-shadow: inset 0 0 0 2px #48b9c7;
+  box-shadow: inset 0 0 0 2px #faa41a;
 }
 
 placesview .server-list-button > image {
@@ -4576,7 +4577,7 @@ window.background:not(.csd) > widget > entry {
 }
 
 window.background:not(.csd) > widget > entry:focus {
-  border-color: #48b9c7;
+  border-color: #faa41a;
 }
 
 window.background:not(.csd) > widget > button > button {

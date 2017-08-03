@@ -962,7 +962,7 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
 
 .titlebar:backdrop,
 .header-bar:backdrop {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar .title,
@@ -1256,7 +1256,7 @@ column-header.button.dnd, column-header .button.dnd {
 .menubar > .menuitem {
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 4px 8px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .menubar > .menuitem:hover {
@@ -1266,7 +1266,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .menubar > .menuitem:insensitive {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
   box-shadow: none;
 }
 
@@ -3120,7 +3120,7 @@ GbTerminalView {
  * Firefox *
  ***********/
 .menubar {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .menubar:hover {
@@ -3156,7 +3156,7 @@ UnityDecoration.top {
 }
 
 UnityDecoration.top:backdrop {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 UnityDecoration.menuitem,
@@ -3189,7 +3189,7 @@ UnityPanelWidget,
 
 UnityPanelWidget:backdrop,
 .unity-panel:backdrop {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .unity-panel.menuitem,

@@ -59,7 +59,7 @@ window.background:not(.csd) {
     > entry {
       min-height: 32px - 2px;
 
-      &:focus { border-color: $primary_color; }
+      &:focus { border-color: $accent_color; }
     }
 
     > button > button {
