@@ -1032,8 +1032,6 @@ headerbar {
   background-color: $titlebar_bg_color;
   color: $titlebar_fg_color;
 
-
-
   &:disabled :not(button) > label { color: $titlebar_disabled_fg_color; }
 
   &:backdrop {
@@ -1455,7 +1453,7 @@ menu,
   }
 
   menuitem {
-    transition: $shorter_transition;
+    transition: none;
     min-height: 20px;
     min-width: 40px;
     padding: 4px 8px;

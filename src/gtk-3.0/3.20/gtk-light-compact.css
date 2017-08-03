@@ -1726,7 +1726,7 @@ menu,
 menu menuitem,
 .menu menuitem,
 .context-menu menuitem {
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: none;
   min-height: 20px;
   min-width: 40px;
   padding: 4px 8px;

@@ -25,7 +25,7 @@ $track_color:                 if($variant == 'light', rgba($brown_700, 0.26), rg
 $divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
 
 $titlebar_fg_color:                    if($titlebar == 'light', rgba($brown_700, 0.87), $white);
-$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_700, 0.54), rgba($white, 0.3));
+$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_700, 0.54), rgba($white, 0.6));
 $titlebar_hint_fg_color:               if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.5));
 $titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.3));
 $titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_700, 0.26), rgba($white, 0.2));

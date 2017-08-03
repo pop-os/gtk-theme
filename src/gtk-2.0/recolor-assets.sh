@@ -28,6 +28,7 @@ bg1="49423e"
 bg2="574f4a"
 bg3="4a5c64"
 bg4="49423e"
+menuBg="574f4a"
 
 # List of stock colors to use:
 accentO="FF4081"
@@ -37,6 +38,7 @@ bg1O="44545c"
 bg2O="596e79"
 bg3O="4a5c64"
 bg4O="50636c"
+menuBgO="455A64"
 
 # Color replacements happen here:
 
@@ -69,6 +71,9 @@ for i in $files; do
 
 	sed -i "s/$bg4O/$bg4/g" $i
 	echo "Replaced $bg4O with $bg4 in $i"
+
+	sed -i "s/$menuBgO/$menuBg/g" $i
+	echo "Replaced $menuBgO with $menuBg in $i"
 
 done
 echo "Color Replacement complete."

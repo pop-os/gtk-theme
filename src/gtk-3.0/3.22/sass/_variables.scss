@@ -40,6 +40,7 @@ $sharp_curve: cubic-bezier(0.4, 0.0, 0.6, 1);
 $shorter_transition: all $shorter_duration $standard_curve;
 $longer_transition: all $longer_duration $standard_curve;
 $shadow_transition: box-shadow $shorter_duration $standard_curve;
+$menu_transition: all 0.1s $sharp_curve;
 
 // shadows
 // based shadow values:
