@@ -1393,7 +1393,7 @@ StScrollBar {
     .search-entry-icon { icon-size: 16px; padding: 0 0; color: $inverse_hint_fg_color; }
 
     &:hover, &:focus {
-      .search-entry-icon { color: $accent_color; }
+      .search-entry-icon { color: $bg_color; }
     }
   }
 

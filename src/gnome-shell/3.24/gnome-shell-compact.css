@@ -1735,7 +1735,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .search-entry:hover .search-entry-icon, .search-entry:focus .search-entry-icon {
-  color: #faa41a;
+  color: #F5F5F5;
 }
 
 #searchResultsBin {
