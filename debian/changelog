@@ -1,3 +1,14 @@
+pop-gtk-theme (2.0.1.0) zesty; urgency=medium
+
+  * Improve workspace pager styling.
+  * GTK+ Dialogs now match the Shell dialogs.
+  * Rich Notifications styling.
+  * Fira is now loaded first in Shell.
+  * Shell corner radius is now 4 pixels instead of 2.
+  * Improved the shadows for the workspace/applications switers.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 04 Aug 2017 14:32:15 -0600
+
 pop-gtk-theme (2.0.0.0) zesty; urgency=medium
 
   * New release based on Flat-Plat instead of Adapta.
