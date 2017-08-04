@@ -3,13 +3,35 @@
 it is very likely an upstream issue.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+**Reporter info**
 
-If you report a bug or ask a question, please include the following information as required:
-- Flat-Plat version
-- GTK+ 3 version (You can check it with `pkg-config --modversion gtk+-3.0`)
-- Distribution (and version)
-- Desktop environment (and version)
-- Related application (and version)
-- Steps to reproduce
-- Screenshot(s)
+```
+ * Distribution - (run ```lsb_release -a```)
+ * Gtk+ 3.0 version - (run ```apt policy libgtk-3-0```)
+ * Desktop environment - 
+ * Pop version - (run ```apt policy pop-gtk-theme```)
+ ```
+
+**Related Application and/or Shell theming (or name of widget)**
+
+
+
+**Actual issue**
+
+
+
+**Steps to reproduce**
+
+
+
+**Expected behavior**
+
+
+
+**Behavior in Adwaita**
+
+
+
+**Other Note (feature-request, question, etc...)**
+
 
