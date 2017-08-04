@@ -1642,17 +1642,22 @@ StScrollBar {
     @extend %overview-panel;
     visible-width: 32px; //amount visible before hover
     spacing: 12px;
-    padding: 12px;
-    border-color: rgba($bg_color, 0.3);
-    border: 2px;
-    //border-width: 0; //fixme: can't have non unoform borders :(
+    padding: 6px;
+    border: 0 solid rgba($bg_color, 0.3);
+    border-radius: 0;
+    &:ltr {
+      border-left-width: 2px;
+      border-right-width: 2px;
+    }
     &:rtl {
-      border-right: 2px;
+      border-right-width: 2px;
+      border-left-width: 2px
     }
   }
   .workspace-thumbnail-indicator {
     border: 0 solid $accent_color;
     border-left-width: 2px;
+    border-right-width: 2px;
     padding: 6px;
     border-radius: 0;
   }

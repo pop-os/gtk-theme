@@ -2028,18 +2028,25 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .workspace-thumbnails {
   visible-width: 32px;
   spacing: 12px;
-  padding: 12px;
-  border-color: rgba(245, 245, 245, 0.3);
-  border: 2px;
+  padding: 6px;
+  border: 0 solid rgba(245, 245, 245, 0.3);
+  border-radius: 0;
+}
+
+.workspace-thumbnails:ltr {
+  border-left-width: 2px;
+  border-right-width: 2px;
 }
 
 .workspace-thumbnails:rtl {
-  border-right: 2px;
+  border-right-width: 2px;
+  border-left-width: 2px;
 }
 
 .workspace-thumbnail-indicator {
   border: 0 solid #faa41a;
   border-left-width: 2px;
+  border-right-width: 2px;
   padding: 6px;
   border-radius: 0;
 }
