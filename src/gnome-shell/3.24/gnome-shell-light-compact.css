@@ -750,19 +750,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-menu-item:checked {
-  background-color: #faa41a;
+  background-color: #faa318;
   color: #FFFFFF;
   box-shadow: 0 0 transparent;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .popup-menu .popup-menu-item:checked.selected {
-  background-color: #fbb23c;
+  background-color: #fbb13a;
   color: #FFFFFF;
 }
 
 .popup-menu .popup-menu-item:checked:active {
-  background-color: #fcbf5f;
+  background-color: #fbbf5d;
   color: #FFFFFF !important;
 }
 

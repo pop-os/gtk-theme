@@ -597,16 +597,16 @@ StScrollBar {
     &:ltr { padding: 0.4em 24px 0.4em 0; }
     &:rtl { padding: 0.4em 0 0.4em 24px; }
     &:checked {
-      background-color: $accent_color;
+      background-color: darken($accent_color, 0.5);
       color: $inverse_fg_color;
       box-shadow: $shadow_0;
-      font-weight: normal;
+      font-weight: 600;
       &.selected {
-        background-color: mix($inverse_fg_color, $accent_color, percentage($lower_opacity / 2));
+        background-color: mix($inverse_fg_color, darken($accent_color, 0.5), percentage($lower_opacity / 2));
         color: $inverse_fg_color;
       }
       &:active {
-        background-color: mix($inverse_fg_color, $accent_color, percentage($lower_opacity));
+        background-color: mix($inverse_fg_color, darken($accent_color, 0.5), percentage($lower_opacity));
         color: $inverse_fg_color !important;
       }
       &:insensitive { color: $inverse_disabled_fg_color; }
