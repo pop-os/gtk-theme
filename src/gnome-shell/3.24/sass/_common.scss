@@ -1642,7 +1642,7 @@ StScrollBar {
     @extend %overview-panel;
     visible-width: 32px; //amount visible before hover
     spacing: 12px;
-    padding: 6px;
+    padding: 12px;
     border: 0 solid rgba($bg_color, 0.3);
     border-radius: 0;
     &:ltr {
@@ -1658,7 +1658,7 @@ StScrollBar {
     border: 0 solid $accent_color;
     border-left-width: 2px;
     border-right-width: 2px;
-    padding: 6px;
+    padding: 12px;
     border-radius: 0;
   }
 

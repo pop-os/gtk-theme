@@ -2028,7 +2028,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .workspace-thumbnails {
   visible-width: 32px;
   spacing: 12px;
-  padding: 6px;
+  padding: 12px;
   border: 0 solid rgba(73, 66, 62, 0.3);
   border-radius: 0;
 }
@@ -2047,7 +2047,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 0 solid #faa41a;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 6px;
+  padding: 12px;
   border-radius: 0;
 }
 
