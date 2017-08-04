@@ -1543,7 +1543,7 @@ StScrollBar {
     &:hover .overview-icon,
     &:focus .overview-icon,
     &:selected .overview-icon {
-      background-color: $inverse_divider_color;
+      background-color: rgba($bg_color, 0.2);
       transition-duration: 0s;
       border-image: none;
       background-image: none;
@@ -1573,7 +1573,7 @@ StScrollBar {
   }
 
   .app-well-app.app-folder > .overview-icon {
-    background-color: $inverse_bg_color;
+    background-color: rgba($bg_color, 0.2);
   }
 
   .show-apps .show-apps-icon {
@@ -1592,7 +1592,7 @@ StScrollBar {
   // Collections
   .app-folder-popup { //expanded collection
     -arrow-border-radius: 2px;
-    -arrow-background-color: $inverse_bg_color;
+    -arrow-background-color: rgba($bg_color, 0.2);
     -arrow-base: 24px;
     -arrow-rise: 12px;
   }
@@ -1643,12 +1643,15 @@ StScrollBar {
     visible-width: 32px; //amount visible before hover
     spacing: 12px;
     padding: 12px;
-    border-radius: 2px 0 0 2px;
+    border-color: rgba($bg_color, 0.3);
+    border: 2px;
     //border-width: 0; //fixme: can't have non unoform borders :(
-    &:rtl { border-radius: 0 2px 2px 0;}
+    &:rtl {
+      border-right: 2px;
+    }
   }
   .workspace-thumbnail-indicator {
-    border: 0 solid $inverse_fg_color;
+    border: 0 solid $accent_color;
     border-left-width: 2px;
     padding: 6px;
     border-radius: 0;
@@ -1664,7 +1667,7 @@ StScrollBar {
 
 %overview-panel {
   color: $inverse_fg_color;
-  background-color: $inverse_bg_color;
+  background-color: transparent;
   border: none;
 }
 
