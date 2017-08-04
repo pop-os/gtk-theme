@@ -753,7 +753,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #faa318;
   color: #FFFFFF;
   box-shadow: 0 0 transparent;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .popup-menu .popup-menu-item:checked.selected {

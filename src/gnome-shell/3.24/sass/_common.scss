@@ -600,7 +600,7 @@ StScrollBar {
       background-color: darken($accent_color, 0.5);
       color: $inverse_fg_color;
       box-shadow: $shadow_0;
-      font-weight: 600;
+      font-weight: normal;
       &.selected {
         background-color: mix($inverse_fg_color, darken($accent_color, 0.5), percentage($lower_opacity / 2));
         color: $inverse_fg_color;
