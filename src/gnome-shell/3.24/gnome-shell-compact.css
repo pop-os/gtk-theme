@@ -75,6 +75,7 @@ stage {
 
 .button:focus {
   color: rgba(87, 79, 74, 0.87);
+  background-color: rgba(250, 164, 26, 0.3);
   text-shadow: none;
   icon-shadow: none;
   box-shadow: 0 0 transparent;
@@ -124,6 +125,7 @@ stage {
 
 .modal-dialog-linked-button:focus {
   color: rgba(87, 79, 74, 0.87);
+  background-color: rgba(250, 164, 26, 0.3);
   text-shadow: none;
   icon-shadow: none;
   box-shadow: 0 0 transparent;
@@ -1332,6 +1334,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Message list */
 .message-list {
   width: 420px;
+  padding-right: 15px;
 }
 
 .message-list-clear-button.button {
@@ -1418,7 +1421,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message-content {
   min-height: 40px;
   padding: 8px;
-  color: rgba(87, 79, 74, 0.54);
+  color: rgba(87, 79, 74, 0.8);
   font-size: 1em;
 }
 
@@ -2940,6 +2943,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .lg-obj-inspector-button:focus {
   color: rgba(87, 79, 74, 0.87);
+  background-color: rgba(250, 164, 26, 0.3);
   text-shadow: none;
   icon-shadow: none;
   box-shadow: 0 0 transparent;

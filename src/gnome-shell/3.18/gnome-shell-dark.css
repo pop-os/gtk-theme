@@ -75,6 +75,7 @@ stage {
 
 .button:focus {
   color: #FFFFFF;
+  background-color: rgba(250, 164, 26, 0.3);
   text-shadow: none;
   icon-shadow: none;
   box-shadow: 0 0 transparent;
@@ -124,6 +125,7 @@ stage {
 
 .modal-dialog-linked-button:focus {
   color: #FFFFFF;
+  background-color: rgba(250, 164, 26, 0.3);
   text-shadow: none;
   icon-shadow: none;
   box-shadow: 0 0 transparent;
@@ -2903,6 +2905,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .lg-obj-inspector-button:focus {
   color: #FFFFFF;
+  background-color: rgba(250, 164, 26, 0.3);
   text-shadow: none;
   icon-shadow: none;
   box-shadow: 0 0 transparent;

@@ -1098,6 +1098,7 @@ StScrollBar {
       /* Message list */
       .message-list {
         width: 420px;
+        padding-right: 15px;
       }
 
         .message-list-clear-button.button {
@@ -1166,7 +1167,7 @@ StScrollBar {
           .message-content {
             min-height: $menuitem_size * 2 - 8px * 2;
             padding: 8px;
-            color: $secondary_fg_color;
+            color: rgba($fg_color, 0.8);
             font-size: 1em;
           }
 

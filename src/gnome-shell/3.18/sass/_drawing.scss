@@ -181,6 +181,7 @@
 
   @if $t == flat-focus {
     color: if($tc != $inverse_fg_color, $fg_color, $inverse_fg_color);
+    background-color: rgba($accent_color, 0.3);
     text-shadow: none;
     icon-shadow: none;
     box-shadow: $shadow_0;
