@@ -3247,8 +3247,8 @@ messagedialog .titlebar:backdrop {
 }
 
 messagedialog.csd.background {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 messagedialog.csd .dialog-action-area button {
@@ -3263,6 +3263,10 @@ messagedialog.csd .dialog-action-area button:first-child {
 
 messagedialog.csd .dialog-action-area button:last-child {
   border-bottom-right-radius: 2px;
+}
+
+messagedialog.csd .dialog-action-area button:focus {
+  background-color: rgba(250, 164, 26, 0.3);
 }
 
 filechooser .dialog-action-box {
