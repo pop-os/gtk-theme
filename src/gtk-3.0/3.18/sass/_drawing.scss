@@ -289,9 +289,7 @@
 
   background-color: transparent; // shouldn't be needed, but better to be sure
 
-  background-image: linear-gradient(to $_gradient_dir, // this is the dashed line
-                                    $_undershoot_color_light 50%,
-                                    $_undershoot_color_dark 50%);
+  background-image: transparent;
 
   padding-#{$p}: 1px;
   background-size: $_dash_bg_size;
