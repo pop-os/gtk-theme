@@ -788,7 +788,7 @@
          cx="12"
          cy="12"
          r="7"
-         fill="url(#color-accent)"
+         fill="url(#color-primary)"
          id="circle295" />
     </g>
     <g
@@ -800,7 +800,7 @@
          cx="12"
          cy="12"
          r="8"
-         fill="url(#color-accent)"
+         fill="url(#color-primary)"
          id="circle300" />
     </g>
     <g
@@ -812,7 +812,7 @@
          cx="12"
          cy="12"
          r="9"
-         fill="url(#color-accent)"
+         fill="url(#color-primary)"
          id="circle305" />
     </g>
     <g
@@ -1593,7 +1593,7 @@
      x="40"
      y="332"
      xlink:href="#base-scale-horz-trough"
-     fill="url(#color-accent)"
+     fill="url(#color-primary)"
      id="scale-horz-trough-active" />
   <use
      x="40"
@@ -1611,7 +1611,7 @@
      x="72"
      y="332"
      xlink:href="#base-scale-vert-trough"
-     fill="url(#color-accent)"
+     fill="url(#color-primary)"
      id="scale-vert-trough-active" />
   <use
      x="72"
