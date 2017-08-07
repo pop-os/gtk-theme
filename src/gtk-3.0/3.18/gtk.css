@@ -2625,19 +2625,19 @@ GtkInfoBar {
 }
 
 .info {
-  background-color: #bbe2c8;
+  background-color: #73c48f;
 }
 
 .question {
-  background-color: #96d7df;
+  background-color: #48b9c7;
 }
 
 .warning {
-  background-color: #ffebb7;
+  background-color: #ffce51;
 }
 
 .error {
-  background-color: #f7a382;
+  background-color: #f15d22;
 }
 
 .info,
@@ -2762,7 +2762,7 @@ GtkColorSwatch.color-light {
 }
 
 GtkColorSwatch#add-color-button {
-  background-image: linear-gradient(to right, #f7a382 25%, #ffebb7 25%, #ffebb7 50%, #bbe2c8 50%, #bbe2c8 75%, #96d7df 75%);
+  background-image: linear-gradient(to right, #f15d22 25%, #ffce51 25%, #ffce51 50%, #73c48f 50%, #73c48f 75%, #48b9c7 75%);
   color: #FFFFFF;
 }
 

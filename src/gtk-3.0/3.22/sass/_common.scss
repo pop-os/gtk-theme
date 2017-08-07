@@ -3111,13 +3111,18 @@ infobar {
 
   &.error { background-color: $error_bg_color; }
 
-  &.info,
+  &.info
   &.question,
   &.warning,
   &.error {
-    > label, & { color: $inverse_fg_color; }
+    > label, & { color: $black; }
 
-    button { @extend %button_selected; }
+    button {
+      @extend %button_selected;
+
+      color: $black;
+      background-color: $white;
+    }
 
     selection {}
 

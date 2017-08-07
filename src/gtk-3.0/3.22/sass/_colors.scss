@@ -74,10 +74,10 @@ $success_color: $green_A700;
 $suggested_color:   $green_600;
 $destructive_color: $red_600;
 
-$info_bg_color:     $green_400;
-$question_bg_color: $blue_400;
-$warning_bg_color:  $yellow_400;
-$error_bg_color:    $red_400;
+$info_bg_color:     $green_500;
+$question_bg_color: $blue_500;
+$warning_bg_color:  $yellow_500;
+$error_bg_color:    $red_500;
 
 $border_color:             if($variant == 'light', rgba($black, 0.1),  rgba($black, 0.2));
 $highlight_color:          if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
