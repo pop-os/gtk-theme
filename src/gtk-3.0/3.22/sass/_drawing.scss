@@ -247,7 +247,7 @@
 
   background-color: transparent; // shouldn't be needed, but better to be sure
 
-  background-image: transparent;
+  background-image: none;
 
   padding-#{$p}: 1px;
   background-size: $_dash_bg_size;
