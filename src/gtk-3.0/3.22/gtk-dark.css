@@ -90,7 +90,7 @@ notebook:focus tab,
 }
 
 .view:hover, .view:active, .view:selected {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 textview text {
@@ -199,7 +199,7 @@ spinbutton:not(.vertical),
 entry {
   min-height: 36px;
   padding: 0 8px;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   border-image: none;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -278,7 +278,7 @@ entry image.right {
 spinbutton:not(.vertical) undershoot.left,
 entry undershoot.left {
   background-color: transparent;
-  background-image: transparent;
+  background-image: none;
   padding-left: 1px;
   background-size: 1px 12px;
   background-repeat: repeat-y;
@@ -289,7 +289,7 @@ entry undershoot.left {
 spinbutton:not(.vertical) undershoot.right,
 entry undershoot.right {
   background-color: transparent;
-  background-image: transparent;
+  background-image: none;
   padding-right: 1px;
   background-size: 1px 12px;
   background-repeat: repeat-y;
@@ -515,7 +515,7 @@ button {
   min-height: 24px;
   min-width: 16px;
   padding: 6px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1), background-size 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0.4s cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), inset 0 0 0 9999px transparent;
@@ -647,7 +647,7 @@ button.image-button {
 
 
 button.text-button.image-button {
-  border-radius: 2px;
+  border-radius: 4px;
   -gtk-outline-radius: 2px;
 }
 
@@ -677,7 +677,7 @@ headerbar
 button.flat,
 .linked.vertical >
 button.flat {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 toolbar .linked > button.text-button.image-button, .titlebar:not(headerbar) .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
@@ -691,7 +691,7 @@ headerbar
 button.flat.text-button.image-button,
 .linked.vertical >
 button.flat.text-button.image-button {
-  border-radius: 2px;
+  border-radius: 4px;
   -gtk-outline-radius: 2px;
 }
 
@@ -916,7 +916,7 @@ button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > labe
 }
 
 .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child, .linked > button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .linked.vertical > spinbutton:not(.vertical), .linked.vertical > entry, .linked.vertical > button, .linked.vertical > combobox > box > button.combo {
@@ -935,7 +935,7 @@ button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > labe
 }
 
 .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical > entry:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 /* menu buttons */
@@ -943,7 +943,7 @@ modelbutton.flat,
 .menuitem.button.flat {
   min-height: 28px;
   padding: 0 8px;
-  border-radius: 2px;
+  border-radius: 4px;
   color: inherit;
   transition: none;
 }
@@ -1056,11 +1056,11 @@ spinbutton.vertical button {
 }
 
 spinbutton.vertical button.up {
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 spinbutton.vertical button.down {
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 4px 4px;
 }
 
 treeview spinbutton:not(.vertical) {
@@ -1156,7 +1156,7 @@ toolbar {
 toolbar.osd, .app-notification, frame.documents-dropdown {
   transition: box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 6px;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #443d3a;
 }
@@ -1262,7 +1262,7 @@ headerbar .subtitle {
 
 .titlebar:not(headerbar) .linked:not(.vertical) > entry:not(.flat),
 headerbar .linked:not(.vertical) > entry:not(.flat) {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
@@ -1524,7 +1524,7 @@ window.csd > .titlebar:not(headerbar) {
 :not(headerbar) .caja-pathbar button, .caja-pathbar :not(headerbar) button, :not(headerbar)
 .path-bar button {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 0%, transparent 0%) 0 0 0/0 0 0px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 :not(headerbar) .caja-pathbar button:checked, .caja-pathbar :not(headerbar) button:checked, :not(headerbar)
@@ -1722,7 +1722,7 @@ menu,
 .menu, .csd
 .context-menu {
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 menu menuitem,
@@ -1793,7 +1793,7 @@ menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: -4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 2px 0 0;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
@@ -1802,7 +1802,7 @@ menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-bottom: -12px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 4px 2px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
@@ -1865,7 +1865,7 @@ popover.background, .csd popover.background {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 popover.background > stack {
@@ -1888,7 +1888,7 @@ popover.background.menu button,
 popover.background button.model {
   min-height: 32px;
   padding: 0 8px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 popover.background separator {
@@ -2502,7 +2502,7 @@ radio:checked:not(:indeterminate):disabled {
 
 window.background:not(.csd) > widget > checkbutton > check,
 menu menuitem check {
-  border-radius: 2px;
+  border-radius: 4px;
   -gtk-outline-radius: 2px;
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png")));
 }
@@ -2927,7 +2927,7 @@ levelbar.vertical block {
 
 levelbar trough {
   padding: 2px;
-  border-radius: 2px;
+  border-radius: 9999px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #443d3a;
 }
@@ -3047,7 +3047,7 @@ overshoot.right {
 
 undershoot.top {
   background-color: transparent;
-  background-image: transparent;
+  background-image: none;
   padding-top: 1px;
   background-size: 12px 1px;
   background-repeat: repeat-x;
@@ -3057,7 +3057,7 @@ undershoot.top {
 
 undershoot.bottom {
   background-color: transparent;
-  background-image: transparent;
+  background-image: none;
   padding-bottom: 1px;
   background-size: 12px 1px;
   background-repeat: repeat-x;
@@ -3067,7 +3067,7 @@ undershoot.bottom {
 
 undershoot.left {
   background-color: transparent;
-  background-image: transparent;
+  background-image: none;
   padding-left: 1px;
   background-size: 1px 12px;
   background-repeat: repeat-y;
@@ -3077,7 +3077,7 @@ undershoot.left {
 
 undershoot.right {
   background-color: transparent;
-  background-image: transparent;
+  background-image: none;
   padding-right: 1px;
   background-size: 1px 12px;
   background-repeat: repeat-y;
@@ -3210,7 +3210,7 @@ calendar:disabled {
 }
 
 calendar:selected {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 calendar.header {
@@ -3258,11 +3258,11 @@ messagedialog.csd .dialog-action-area button {
 }
 
 messagedialog.csd .dialog-action-area button:first-child {
-  border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 4px;
 }
 
 messagedialog.csd .dialog-action-area button:last-child {
-  border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 4px;
 }
 
 messagedialog.csd .dialog-action-area button:focus {
@@ -3489,7 +3489,7 @@ infobar.info > label, infobar.info, infobar.question > label, infobar.question, 
  * Tooltips *
  ************/
 tooltip {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: none;
 }
 
@@ -3500,7 +3500,7 @@ tooltip.background {
 
 tooltip:not(.csd):not(.unity-csd) {
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: border-box;
 }
 
@@ -3625,7 +3625,7 @@ colorswatch#editor-color-sample overlay {
 
 colorchooser .popover.osd {
   transition: box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #443d3a;
 }
@@ -3646,7 +3646,7 @@ colorchooser .popover.osd:backdrop {
  **********************/
 decoration {
   transition: box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
   box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22), 0 16px 16px transparent;
   margin: 8px;
 }
@@ -3670,17 +3670,17 @@ decoration:backdrop {
 }
 
 .csd.popup decoration {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
 tooltip.csd decoration {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
 messagedialog.csd decoration {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .solid-csd decoration {
@@ -3752,7 +3752,7 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
   padding-left: 8px;
   padding-right: 8px;
   border: solid 1px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
   background-color: #443d3a;
   color: #FFFFFF;
