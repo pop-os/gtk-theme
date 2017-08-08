@@ -1,3 +1,13 @@
+/**********
+ * Evince *
+ **********/
+// Need to reduce the size of some entries in order to keep the design nice.
+// Needed because entries need min-width of 80px to avoid cutting off letters.
+
+toolitem > box.raised > entry {
+  min-width: $small_size;
+}
+
 /************
  * Nautilus *
  ************/

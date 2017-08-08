@@ -3782,6 +3782,13 @@ stackswitcher button.text-button.circular {
   padding: 0;
 }
 
+/**********
+ * Evince *
+ **********/
+toolitem > box.raised > entry {
+  min-width: 20px;
+}
+
 /************
  * Nautilus *
  ************/
