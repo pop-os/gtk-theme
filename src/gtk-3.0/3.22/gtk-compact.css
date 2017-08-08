@@ -198,6 +198,7 @@ spinner:checked:disabled {
 spinbutton:not(.vertical),
 entry {
   min-height: 32px;
+  min-width: 80px;
   padding: 0 8px;
   border-radius: 4px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1009,7 +1010,7 @@ button:visited > label {
  * GtkSpinButton *
  *****************/
 spinbutton:not(.vertical) {
-  padding: 0;
+  padding: 4px;
 }
 
 notebook > stack:not(:only-child) spinbutton:not(.vertical) entry, notebook > stack:not(:only-child) spinbutton:not(.vertical) entry:focus, notebook > stack:not(:only-child) spinbutton:not(.vertical) entry:disabled,
@@ -1020,6 +1021,7 @@ spinbutton:not(.vertical) entry {
   border-radius: 0;
   box-shadow: none;
   background-color: transparent;
+  font-size: 52px;
 }
 
 spinbutton:not(.vertical) button {
@@ -1044,14 +1046,14 @@ spinbutton.vertical:drop(active) {
 
 spinbutton.vertical entry {
   min-height: 32px;
-  min-width: 44px;
-  padding: 0;
+  min-width: 80px;
+  padding: 4px 4px;
 }
 
 spinbutton.vertical button {
   min-height: 32px;
   min-width: 44px;
-  padding: 0;
+  padding: 4px;
 }
 
 spinbutton.vertical button.up {
@@ -1070,7 +1072,7 @@ treeview spinbutton:not(.vertical) {
 
 treeview spinbutton:not(.vertical) entry {
   min-height: 0;
-  padding: 1px 2px;
+  padding: 4px 4px;
 }
 
 /**************

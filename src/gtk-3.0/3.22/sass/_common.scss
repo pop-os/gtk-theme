@@ -214,6 +214,7 @@ spinner {
 entry {
   %entry_basic, & {
     min-height: $medium_size;
+    min-width: 80px;
     padding: 0 8px;
     border-radius: $other_radius;
 
@@ -755,7 +756,7 @@ spinbutton {
     // and nuke the style on the internal entry
     @extend %entry;
 
-    padding: 0;
+    padding: 4px;
 
     %spinbutton_entry,
     entry {
@@ -766,6 +767,7 @@ spinbutton {
       border-radius: 0;
       box-shadow: none;
       background-color: transparent;
+      font-size: 52px;
       //
       // This will help to simplify spinbutton's code, but unfortunatelly
       // doesn't work properly in :dir(rtl). It needs z-index property.
@@ -823,14 +825,14 @@ spinbutton {
 
     entry {
       min-height: $medium_size;
-      min-width: $large_size;
-      padding: 0;
+      min-width: 80px;
+      padding: 4px 4px;
     }
 
     button {
       min-height: $medium_size;
       min-width: $large_size;
-      padding: 0;
+      padding: 4px;
 
       @extend %simple_flat_button;
 
@@ -852,7 +854,7 @@ spinbutton {
 
     entry {
       min-height: 0;
-      padding: 1px 2px;
+      padding: 4px 4px;
     }
   }
 }
