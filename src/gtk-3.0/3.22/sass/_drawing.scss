@@ -44,6 +44,8 @@
                                     transparent 0%)
                                     0 0 2 / 0 0 2px;
     box-shadow: $shadow_2;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border-bottom: $accent_color
   }
 

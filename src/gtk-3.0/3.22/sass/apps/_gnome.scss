@@ -4,9 +4,26 @@
 // Need to reduce the size of some entries in order to keep the design nice.
 // Needed because entries need min-width of 80px to avoid cutting off letters.
 
-toolitem > box.raised > entry {
+window.csd > headerbar.toolbar > toolitem > box.raised > entry {
   min-width: $small_size;
+
+  &:first-child { // Current page number
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:focus { border-bottom-left-radius: 0;}
+
+  }
+
+  &:nth-child(2) { // Total page count
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:focus { border-bottom-right-radius: 0;}
+  }
 }
+
+
 
 /************
  * Nautilus *
@@ -338,6 +355,21 @@ frame.gedit-map-frame > border {
 // https://git.gnome.org/browse/gnome-builder/tree/data/theme
 // hard-coded css:
 // https://git.gnome.org/browse/gnome-builder/tree/data/theme/shared.css
+
+// View control buttons. Need to adjust radii
+window.workbench > popover.menu button.model {
+  border-radius: 0;
+
+  &:first-child {
+    border-top-left-radius: $material_radius;
+    border-bottom-left-radius: $material_radius;
+  }
+
+  &:last-child {
+    border-top-right-radius: $material_radius;
+    border-bottom-right-radius: $material_radius;
+  }
+}
 
 // Layout tab and tab bar tweaks
 // The following makes the layout stack header look similar to a tab bar.

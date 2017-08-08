@@ -212,6 +212,8 @@ spinbutton:focus:not(.vertical),
 entry:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: #faa41a;
 }
 
@@ -311,6 +313,8 @@ spinbutton.error:focus:not(.vertical),
 entry.error:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: #faa41a;
 }
 
@@ -375,6 +379,8 @@ spinbutton.warning:focus:not(.vertical),
 entry.warning:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: #faa41a;
 }
 

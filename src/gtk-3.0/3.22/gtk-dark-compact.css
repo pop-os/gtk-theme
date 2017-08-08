@@ -212,6 +212,8 @@ spinbutton:focus:not(.vertical),
 entry:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: #faa41a;
 }
 
@@ -311,6 +313,8 @@ spinbutton.error:focus:not(.vertical),
 entry.error:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: #faa41a;
 }
 
@@ -375,6 +379,8 @@ spinbutton.warning:focus:not(.vertical),
 entry.warning:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #faa41a 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: #faa41a;
 }
 
@@ -3785,8 +3791,26 @@ stackswitcher button.text-button.circular {
 /**********
  * Evince *
  **********/
-toolitem > box.raised > entry {
+window.csd > headerbar.toolbar > toolitem > box.raised > entry {
   min-width: 20px;
+}
+
+window.csd > headerbar.toolbar > toolitem > box.raised > entry:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+window.csd > headerbar.toolbar > toolitem > box.raised > entry:first-child:focus {
+  border-bottom-left-radius: 0;
+}
+
+window.csd > headerbar.toolbar > toolitem > box.raised > entry:nth-child(2) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+window.csd > headerbar.toolbar > toolitem > box.raised > entry:nth-child(2):focus {
+  border-bottom-right-radius: 0;
 }
 
 /************
@@ -4074,6 +4098,20 @@ frame.gedit-map-frame > border:dir(rtl) {
 /***********
  * Builder *
  ***********/
+window.workbench > popover.menu button.model {
+  border-radius: 0;
+}
+
+window.workbench > popover.menu button.model:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+window.workbench > popover.menu button.model:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 layouttabbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #49423e;
