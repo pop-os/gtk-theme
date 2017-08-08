@@ -1,3 +1,13 @@
+pop-gtk-theme (2.0.3.0) zesty; urgency=medium
+
+  * Entry Release. Much work focused on varius entry widgets.
+  * Make sure adjacent entries in Evince have no middle radius.
+  * Evince Entries are uniformly sized.
+  * Unfocused entries get lower Z-height
+  * Tweak minimum entry size to avoid clipping final characters.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 08 Aug 2017 15:07:33 -0600
+
 pop-gtk-theme (2.0.2.0) zesty; urgency=medium
 
   * GtkInfoBar: Increased Contrast and visibility
