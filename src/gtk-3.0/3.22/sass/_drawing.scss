@@ -33,7 +33,7 @@
   @if $t == normal {
     transition: $longer_transition, $shadow_transition;
     border-image: none;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_0;
     background-color: if($fc == $primary_color, $base_color, $fc);
     color: if($fc == $primary_color, $fg_color, $inverse_fg_color);
   }
@@ -48,7 +48,7 @@
   }
 
   @if $t == disabled {
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_0;
     background-color: $alt_base_color;
     color: $disabled_fg_color;
   }
