@@ -29,6 +29,7 @@ bg2="574f4a"
 bg3="4a5c64"
 bg4="49423e"
 bg5="3b3633"
+bg6="ebe9e8"
 menuBg="574f4a"
 radiusX='rx="4"'
 radiusY='ry="4"'
@@ -42,6 +43,7 @@ bg2O="596e79"
 bg3O="4a5c64"
 bg4O="50636c"
 bg5O="37474F"
+bg6O="E0E0E0"
 menuBgO="455A64"
 radiusXO='rx="2"'
 radiusYO='ry="2"'
@@ -80,6 +82,9 @@ for i in $files; do
 
 	sed -i "s/$bg5O/$bg5/g" $i
 	echo "Replaced $bg5O with $bg5 in $i"
+
+	sed -i "s/$bg6O/$bg6/g" $i
+	echo "Replaced $bg6O with $bg6 in $i"
 
 	sed -i "s/$menuBgO/$menuBg/g" $i
 	echo "Replaced $menuBgO with $menuBg in $i"
