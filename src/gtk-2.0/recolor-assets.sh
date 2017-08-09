@@ -29,6 +29,8 @@ bg2="574f4a"
 bg3="4a5c64"
 bg4="49423e"
 menuBg="574f4a"
+radiusX='rx="4"'
+radiusY='ry="4"'
 
 # List of stock colors to use:
 accentO="FF4081"
@@ -39,6 +41,8 @@ bg2O="596e79"
 bg3O="4a5c64"
 bg4O="50636c"
 menuBgO="455A64"
+radiusXO='rx="2"'
+radiusYO='ry="2"'
 
 # Color replacements happen here:
 
@@ -74,6 +78,12 @@ for i in $files; do
 
 	sed -i "s/$menuBgO/$menuBg/g" $i
 	echo "Replaced $menuBgO with $menuBg in $i"
+
+	sed -i "s/$radiusXO/$radiusX/g" $i
+	echo "Replaced $radiusXO with $radiusX in $i"
+
+	sed -i "s/$radiusYO/$radiusY/g" $i
+	echo "Replaced $radiusYO with $radiusY in $i"
 
 done
 echo "Color Replacement complete."

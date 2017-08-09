@@ -283,8 +283,8 @@
          y="2"
          width="16"
          height="16"
-         rx="2"
-         ry="2"
+         rx="4"
+         ry="4"
          id="rect94" />
     </g>
     <use
@@ -542,8 +542,8 @@
        id="button-fill"
        width="24"
        height="24"
-       rx="2"
-       ry="2" />
+       rx="4"
+       ry="4" />
     <g
        id="base-checkbox-unchecked">
       <use
