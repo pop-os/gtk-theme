@@ -1,3 +1,14 @@
+pop-gtk-theme (2.0.4.0) zesty; urgency=medium
+
+  * Add support for a limited selection of Granite Widgets.
+  * System Settings battery level is no longer black.
+  * Buttons in the Geary setup are no longer clipped on the bottom.
+  * Fixed Menubar colors in -dark and -light GTK2 variants.
+  * GTK2 and GTK3 widget radius consistency.
+  * Shell and GTK3 widget radius consistency.
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 10 Aug 2017 13:26:21 -0600
+
 pop-gtk-theme (2.0.3.0) zesty; urgency=medium
 
   * Entry Release. Much work focused on varius entry widgets.
