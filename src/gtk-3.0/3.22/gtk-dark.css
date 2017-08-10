@@ -5501,6 +5501,119 @@ headerbar .budgie-run-dialog list .subtitle, .budgie-run-dialog list .budgie-not
   margin-top: -1px;
 }
 
+/***************
+ * Text Styles *
+ ***************/
+.h1 {
+  font-size: 24px;
+}
+
+.h2 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.h3 {
+  font-size: 11px;
+}
+
+.h4,
+.category-label {
+  font-weight: bold;
+}
+
+.h4 {
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+list .h4,
+GtkListBox .h4 {
+  padding-left: 6px;
+}
+
+/***********
+ * Welcome *
+ **********/
+.welcome {
+  font-size: 10px;
+  text-shadow: none;
+}
+
+.welcome .dim-label, .welcome label.separator, .welcome .titlebar:not(headerbar) .subtitle, .titlebar:not(headerbar) .welcome .subtitle, .welcome
+headerbar .subtitle,
+headerbar .welcome .subtitle, .welcome .budgie-notification .notification-body, .budgie-notification .welcome .notification-body, .welcome .budgie-switcher .notification-body, .budgie-switcher .welcome .notification-body {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.welcome .h1,
+.welcome .h3 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/**************
+* Storage Bar *
+**************/
+.storage-bar .trough {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border: none;
+  background-image: none;
+  padding: 8px 6px;
+}
+
+.storage-bar .fill-block {
+  background-color: #383330;
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  border-bottom-color: black;
+  transition: all 200ms ease-in-out;
+  padding: 8px 6px;
+}
+
+.storage-bar .empty-block {
+  background-color: #040404;
+  border-bottom-width: 2px;
+  border-bottom-color: black;
+}
+
+.storage-bar .app {
+  background-color: #9C27B0;
+  border-bottom-width: 2px;
+  border-bottom-color: #52145d;
+}
+
+.storage-bar .audio {
+  background-color: #faa41a;
+  border-bottom-width: 2px;
+  border-bottom-color: #aa6a04;
+}
+
+.storage-bar .files {
+  background-color: #48b9c7;
+  border-bottom-width: 2px;
+  border-bottom-color: #287881;
+}
+
+.storage-bar .photo {
+  background-color: #73c48f;
+  border-bottom-width: 2px;
+  border-bottom-color: #3e935b;
+}
+
+.storage-bar .video {
+  background-color: #f15d22;
+  border-bottom-width: 2px;
+  border-bottom-color: #431604;
+}
+
+.storage-bar .legend {
+  padding: 7px;
+  border-radius: 50%;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */

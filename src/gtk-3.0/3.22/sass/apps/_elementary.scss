@@ -1,0 +1,113 @@
+/***************
+ * Text Styles *
+ ***************/
+
+.h1 {
+    font-size: 24px;
+}
+
+.h2 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.h3 {
+    font-size: 11px;
+}
+
+.h4,
+.category-label {
+    font-weight: bold;
+}
+
+.h4 {
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+list .h4,
+GtkListBox .h4 {
+    padding-left: 6px;
+}
+
+/***********
+ * Welcome *
+ **********/
+
+.welcome {
+    font-size: 10px;
+    text-shadow: none;
+}
+
+.welcome .dim-label {
+    color: $secondary_fg_color;
+}
+
+.welcome .h1,
+.welcome .h3 {
+    color: rgba($fg_color, 0.8);
+}
+
+/**************
+* Storage Bar *
+**************/
+
+.storage-bar .trough {
+    box-shadow: $shadow_2;
+    border: none;
+    background-image: none;
+    padding: 8px 6px;
+}
+
+.storage-bar .fill-block {
+    background-color: darken($alt_base_color, 5%);
+    border: 2px solid rgba($black, 0.35);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: darken($alt_base_color, 40%);
+    transition: all 200ms ease-in-out;
+    padding: 8px 6px;
+}
+
+.storage-bar .empty-block {
+    background-color: darken($darker_bg_color, 15%);
+    border-bottom-width: 2px;
+    border-bottom-color: darken($darker_bg_color, 35%);
+}
+
+.storage-bar .app {
+    background-color: $purple_500;
+    border-bottom-width: 2px;
+    border-bottom-color: darken($purple_500, 20%);
+}
+
+.storage-bar .audio {
+    background-color: $orange_500;
+    border-bottom-width: 2px;
+    border-bottom-color: darken($orange_500, 20%);
+}
+
+.storage-bar .files {
+    background-color: $blue_500;
+    border-bottom-width: 2px;
+    border-bottom-color: darken($blue_500, 20%);
+}
+
+.storage-bar .photo {
+    background-color: $green_500;
+    border-bottom-width: 2px;
+    border-bottom-color: darken($green_500, 20%);
+}
+
+.storage-bar .video {
+    background-color: $red_500;
+    border-bottom-width: 2px;
+    border-bottom-color: darken($red_500, 40%);
+}
+
+.storage-bar .legend {
+    padding: 7px;
+    border-radius: 50%;
+}
