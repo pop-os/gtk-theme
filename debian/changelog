@@ -1,3 +1,9 @@
+pop-gtk-theme (2.0.4.1) zesty; urgency=medium
+
+  * Fix Symbolic link to 3.20 elementary SCSS.
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 10 Aug 2017 13:36:42 -0600
+
 pop-gtk-theme (2.0.4.0) zesty; urgency=medium
 
   * Add support for a limited selection of Granite Widgets.
