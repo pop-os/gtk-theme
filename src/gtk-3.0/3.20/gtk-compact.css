@@ -5395,7 +5395,6 @@ headerbar .welcome .subtitle, .welcome .budgie-notification .notification-body, 
   border-top-width: 0;
   border-bottom-width: 2px;
   border-bottom-color: #949494;
-  transition: all 200ms ease-in-out;
   padding: 8px 6px;
 }
 
