@@ -4558,6 +4558,10 @@ button.title label {
   margin-right: -5px;
 }
 
+dialog.background > box.dialog-vbox > box.dialog-action-box > buttonbox.dialog-action-area {
+  padding: 12px;
+}
+
 /*********
  * Tilix *
  *********/
