@@ -2619,7 +2619,7 @@ levelbar {
     &.high,
     &:not(.empty) { background-color: $primary_color; }
 
-    &.full { background-color: $success_color; }
+    //&.full { background-color: $success_color; }
 
     &.empty { background-color: $divider_color; }
   }

@@ -2966,10 +2966,6 @@ levelbar block.high, levelbar block:not(.empty) {
   background-color: #48b9c7;
 }
 
-levelbar block.full {
-  background-color: black;
-}
-
 levelbar block.empty {
   background-color: rgba(87, 79, 74, 0.12);
 }
