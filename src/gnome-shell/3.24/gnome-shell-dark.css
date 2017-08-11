@@ -2785,21 +2785,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .screen-shield-notifications-container .summary-notification-stack-scrollview {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 12;
+  padding-bottom: 12;
 }
 
 .screen-shield-notifications-container .notification,
 .screen-shield-notifications-container .screen-shield-notification-source {
   padding: 8px;
   border: none;
-  background-color: #2e2927;
+  background-color: rgba(73, 66, 62, 0.7);
   color: #FFFFFF;
   border-radius: 4px;
 }
 
 .screen-shield-notifications-container .notification {
   margin-right: 16px;
+  color: #FFFFFF;
 }
 
 .screen-shield-notification-label {
@@ -2811,7 +2812,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .screen-shield-notification-count-text {
   min-height: 22px;
   padding: 2px 0px 0px 16px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #FFFFFF;
 }
 
 #panel.lock-screen {

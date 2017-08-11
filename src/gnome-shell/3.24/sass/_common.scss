@@ -2093,22 +2093,26 @@ $legacy_icon_size: 24px;
 .screen-shield-notifications-container {
   spacing: 6px;
   width: 30em;
+  //background-color: rgba($fg_color, 0.1); FIXME: This would be pretty.
   background-color: transparent;
   max-height: 500px;
   .summary-notification-stack-scrollview {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 12;
+    padding-bottom: 12;
   }
 
   .notification,
   .screen-shield-notification-source {
     padding: 8px;
     border: none;
-    background-color: $alt_bg_color;
-    color: $inverse_fg_color;
+    background-color: rgba($bg_color, 0.7);
+    color: $fg_color;
     border-radius: $material_radius;
   }
-  .notification { margin-right: 16px; } //compensate for space allocated to the scrollbar
+  .notification {
+    margin-right: 16px;
+    color: $fg_color;
+  } //compensate for space allocated to the scrollbar
 }
 
 
@@ -2121,7 +2125,7 @@ $legacy_icon_size: 24px;
 .screen-shield-notification-count-text {
   min-height: $small_size - 2px;
   padding: 2px 0px 0px 16px;
-  color: $inverse_secondary_fg_color;
+  color: $fg_color;
 }
 
 #panel.lock-screen { background-color: $alt_bg_color; }
