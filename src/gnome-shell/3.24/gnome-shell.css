@@ -750,7 +750,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-menu-item:checked {
-  background-color: #faa318;
+  background-color: #dc8a05;
   color: #FFFFFF;
   box-shadow: 0 0 transparent;
   font-weight: normal;
@@ -1517,7 +1517,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .system-menu-action {
-  color: rgba(87, 79, 74, 0.54);
+  color: rgba(87, 79, 74, 0.87);
   border-radius: 100px;
   /* wish we could do 50% */
   padding: 16px;

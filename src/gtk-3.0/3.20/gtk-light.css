@@ -4508,6 +4508,66 @@ box.vertical > widget > widget:selected {
   background-color: #48b9c7;
 }
 
+/****************
+ * Libre-Office *
+ ****************/
+window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal {
+  background-color: #ebe9e8;
+}
+
+window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button {
+  color: rgba(87, 79, 74, 0.87);
+}
+
+window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:hover, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:active, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:checked {
+  color: rgba(87, 79, 74, 0.87);
+}
+
+window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:disabled {
+  color: rgba(87, 79, 74, 0.8);
+}
+
+window.background:not(.solid-csd) > notebook:not(.frame) {
+  border: 0 none transparent;
+  background-color: #F5F5F5;
+}
+
+window.background:not(.solid-csd) > notebook:not(.frame) > stack {
+  border: none;
+  background-color: #F5F5F5;
+  box-shadow: none;
+}
+
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top {
+  border: 0 none transparent;
+  background-color: #F5F5F5;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs, window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab {
+  background-color: transparent;
+}
+
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs label,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs image, window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab label,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab image {
+  color: rgba(87, 79, 74, 0.54);
+}
+
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs:hover,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs:hover label,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs:hover image, window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs:checked,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs:checked label,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs:checked image, window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:hover,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:hover label,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:hover image, window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:checked,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:checked label,
+window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:checked image {
+  color: rgba(87, 79, 74, 0.87);
+}
+
 /*********
  * Unity *
  *********/
