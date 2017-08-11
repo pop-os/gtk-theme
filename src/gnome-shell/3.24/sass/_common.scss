@@ -2143,7 +2143,8 @@ $legacy_icon_size: 24px;
 
 // Looking Glass
 #LookingGlassDialog {
-  background-color: $base_color;
+  background-color: rgba($inverse_bg_color, 0.9);
+  color: rgba($inverse_fg_color, 0.85);
   spacing: 4px;
   padding: 0;
   border: none;
@@ -2156,12 +2157,15 @@ $legacy_icon_size: 24px;
     background-color: rgba($base_color, 0.01);
     box-shadow: inset 0 -1px 0 $border_color;
   }
-  .labels { spacing: 0; }
+  .labels {
+    spacing: 0;
+    color: $inverse_fg_color;
+  }
   .notebook-tab {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: $hint_fg_color;
+    color: rgba($inverse_fg_color, 0.87);
     transition-duration: $longer_duration;
     padding-left: 16px;
     padding-right: 16px;
@@ -2169,15 +2173,15 @@ $legacy_icon_size: 24px;
     padding: 0 16px * 2;
     &:hover {
       box-shadow: inset 0 -2px 0px $track_color;
-      color: $fg_color;
+      color: rgba($inverse_fg_color, 0.87);
       text-shadow: none;
     }
     &:selected {
       border-bottom-width: 0;
       border-color: transparent;
       background-color: rgba($base_color, 0.01);
-      box-shadow: inset 0 -2px 0px $primary_color;
-      color: $fg_color;
+      box-shadow: inset 0 -2px 0px $accent_color;
+      color: rgba($inverse_fg_color, 0.87);
       text-shadow: none;
     }
   }
@@ -2187,7 +2191,7 @@ $legacy_icon_size: 24px;
 
   .lg-dialog {
     StEntry {
-      selection-background-color: $accent_color;
+      selection-background-color: $primary_color;
       selected-color: $inverse_fg_color;
     }
     .shell-link {

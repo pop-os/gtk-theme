@@ -2829,7 +2829,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #LookingGlassDialog {
-  background-color: #FFFFFF;
+  background-color: rgba(46, 41, 39, 0.9);
+  color: rgba(255, 255, 255, 0.85);
   spacing: 4px;
   padding: 0;
   border: none;
@@ -2847,13 +2848,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #LookingGlassDialog .labels {
   spacing: 0;
+  color: #FFFFFF;
 }
 
 #LookingGlassDialog .notebook-tab {
   -natural-hpadding: 12px;
   -minimum-hpadding: 6px;
   font-weight: bold;
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(255, 255, 255, 0.87);
   transition-duration: 0.15s;
   padding-left: 16px;
   padding-right: 16px;
@@ -2863,7 +2865,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #LookingGlassDialog .notebook-tab:hover {
   box-shadow: inset 0 -2px 0px rgba(87, 79, 74, 0.26);
-  color: rgba(87, 79, 74, 0.87);
+  color: rgba(255, 255, 255, 0.87);
   text-shadow: none;
 }
 
@@ -2871,8 +2873,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-bottom-width: 0;
   border-color: transparent;
   background-color: rgba(255, 255, 255, 0.01);
-  box-shadow: inset 0 -2px 0px #48b9c7;
-  color: rgba(87, 79, 74, 0.87);
+  box-shadow: inset 0 -2px 0px #faa41a;
+  color: rgba(255, 255, 255, 0.87);
   text-shadow: none;
 }
 
@@ -2886,7 +2888,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .lg-dialog StEntry {
-  selection-background-color: #faa41a;
+  selection-background-color: #48b9c7;
   selected-color: #FFFFFF;
 }
 
