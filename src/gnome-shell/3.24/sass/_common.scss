@@ -628,7 +628,7 @@ StScrollBar {
   .popup-inactive-menu-item { //all icons and other graphical elements
     color: $fg_color;
 
-    &:insensitive { color: $hint_fg_color; }
+    &:insensitive { color: rgba($fg_color, 0.7); }
   }
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
