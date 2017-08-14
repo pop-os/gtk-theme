@@ -1,3 +1,13 @@
+/****************
+ * Eye of GNOME *
+ ****************/
+
+// Next/Previous button shadows are cut off. See issue #10.
+
+window > box > box > box > paned > overlay > grid > overlay > revealer {
+  padding: 10px;
+}
+
 /**********
  * Evince *
  **********/

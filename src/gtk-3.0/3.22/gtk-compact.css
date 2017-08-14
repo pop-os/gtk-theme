@@ -3790,6 +3790,13 @@ stackswitcher button.text-button.circular {
   padding: 0;
 }
 
+/****************
+ * Eye of GNOME *
+ ****************/
+window > box > box > box > paned > overlay > grid > overlay > revealer {
+  padding: 10px;
+}
+
 /**********
  * Evince *
  **********/
