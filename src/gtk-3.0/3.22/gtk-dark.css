@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes ripple_effect {
   to {
     background-size: 1000% 1000%;
@@ -5561,6 +5562,32 @@ headerbar .budgie-run-dialog list .subtitle, .budgie-run-dialog list .budgie-not
   margin-top: -1px;
 }
 
+/*
+ * Most of this is adapted directly from the elementaryOS stylesheet.
+ * https://github.com/elementary/stylesheet/blob/master/gtk-3.0/granite-widgets.css
+ * Original code copyright (c) 2016 elementary LLC. (http://launchpad.net/egtk)
+ *
+ * Modifications copyright (c) 2017 System76, Inc.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public
+ * License along with this program; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authored by:
+ *              Daniel Foré <daniel@elementary.io>
+ *              Ian Santopietro <ian@system76.com>
+ */
 /***************
  * Text Styles *
  ***************/
@@ -5673,6 +5700,37 @@ headerbar .welcome .subtitle, .welcome .budgie-notification .notification-body, 
   border-radius: 50%;
 }
 
+/*************
+* Round Apps *
+*************/
+window.rounded,
+window.rounded .action-bar {
+  border-radius: 0 0 4px 4px;
+}
+
+window.rounded.window-frame {
+  border-radius: 4px;
+}
+
+window.rounded decoration {
+  border-radius: 4px;
+}
+
+/**********
+ * Harvey *
+ **********/
+window.background.csd.rounded > grid.titlebar {
+  min-height: 0;
+}
+
+window.background.csd.rounded > grid.titlebar > headerbar.input-header {
+  border-top-right-radius: 0;
+}
+
+window.background.csd.rounded > grid.titlebar > headerbar.input-header > box.left > button.close {
+  color: #FFFFFF;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
@@ -5685,6 +5743,7 @@ text color for entries, views and content in general */
 /*
 widget base background color */
 @define-color theme_bg_color #49423e;
+@define-color bg_color #49423e;
 /*
 text widgets and the like base background color */
 @define-color theme_base_color #443d3a;

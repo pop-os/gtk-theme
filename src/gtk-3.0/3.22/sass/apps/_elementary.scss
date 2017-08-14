@@ -137,3 +137,39 @@ GtkListBox .h4 {
     padding: 7px;
     border-radius: 50%;
 }
+
+/*************
+* Round Apps *
+*************/
+
+window.rounded,
+window.rounded .action-bar {
+    border-radius: 0 0 $material_radius $material_radius;
+}
+
+window.rounded.window-frame {
+    border-radius: $material_radius;
+}
+
+window.rounded decoration {
+    border-radius: $material_radius;
+}
+
+/**********
+ * Harvey *
+ **********/
+
+ // Lots of custom styling in Harvey, for obvious reasons. Let's try and make it
+ // look good in Pop without destroying the original app design.
+
+window.background.csd.rounded {
+  > grid.titlebar {
+    min-height: 0;
+
+    > headerbar.input-header {
+      border-top-right-radius: 0;
+
+      > box.left > button.close { color: $fg_color; }
+    }
+  }
+}

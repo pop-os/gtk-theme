@@ -3228,6 +3228,7 @@ text color for entries, views and content in general */
 /*
 widget base background color */
 @define-color theme_bg_color #49423e;
+@define-color bg_color #49423e;
 /*
 text widgets and the like base background color */
 @define-color theme_base_color #443d3a;

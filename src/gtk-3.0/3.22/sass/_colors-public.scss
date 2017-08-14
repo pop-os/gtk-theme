@@ -16,6 +16,7 @@ text color for entries, views and content in general */
 /*
 widget base background color */
 @define-color theme_bg_color #{"" + $bg_color};
+@define-color bg_color #{"" + $bg_color};
 
 /*
 text widgets and the like base background color */
