@@ -53,7 +53,7 @@
 }
 
 list .h4,
-GtkListBox .h4 {
+listbox .h4 {
     padding-left: 6px;
 }
 
@@ -160,7 +160,7 @@ window.rounded decoration {
  **********/
 
  // Lots of custom styling in Harvey, for obvious reasons. Let's try and make it
- // look good in Pop without destroying the original app design.
+ // look good in Pop without modifying the original app design.
 
 window.background.csd.rounded {
   > grid.titlebar {

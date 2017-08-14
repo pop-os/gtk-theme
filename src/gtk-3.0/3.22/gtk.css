@@ -5615,7 +5615,7 @@ headerbar .budgie-run-dialog list .subtitle, .budgie-run-dialog list .budgie-not
 }
 
 list .h4,
-GtkListBox .h4 {
+listbox .h4 {
   padding-left: 6px;
 }
 
