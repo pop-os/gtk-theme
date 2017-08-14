@@ -1440,7 +1440,7 @@ StScrollBar {
   #dash {
     font-size: 1em;
     color: $inverse_fg_color;
-    background-color: $inverse_bg_color;
+    background-color: rgba($panel_bg_color, 0.5); // #262220
     padding: 3px 0;
     border: none;
     border-left: 0px;
@@ -1463,8 +1463,11 @@ StScrollBar {
 
   }
 
-  .dash-item-container > StWidget {
-    padding: 3px 6px;
+  .dash-item-container {
+    background-color: transparent;
+    > StWidget {
+      padding: 3px 6px;
+    }
   }
 
   .dash-label { //osd tooltip

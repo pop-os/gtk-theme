@@ -1797,7 +1797,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash {
   font-size: 1em;
   color: #FFFFFF;
-  background-color: #2e2927;
+  background-color: rgba(37, 34, 32, 0.5);
   padding: 3px 0;
   border: none;
   border-left: 0px;
@@ -1817,6 +1817,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash .empty-dash-drop-target {
   width: 24px;
   height: 24px;
+}
+
+.dash-item-container {
+  background-color: transparent;
 }
 
 .dash-item-container > StWidget {
