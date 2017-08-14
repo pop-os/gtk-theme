@@ -187,8 +187,8 @@ window.background.chromium {
     border-width: 1px;
     border-style: solid;
     border-color: if($variant == 'light',
-                     $solid_light_borders_color,
-                     mix($bg_color, $solid_dark_borders_color, 75%));
+                     rgba($dark_fg_color, 0.3),
+                     rgba($light_fg_color, 0.3));
   }
 
   *:backdrop button { // outdated? let's unset borders
@@ -198,13 +198,13 @@ window.background.chromium {
   entry.chromium {
     &, &:focus { // overrides standard borders
       border-image: none;
-      border: 1px solid $borders_color;
+      border: 1px solid rgba($dark_fg_color, 0.3);
     }
   }
 
   // internal region of toolbar's entry widget
   > textview.view {
-    background-color: $light_color;
+    background-color: rgba($inverse_fg_color, 0.5);
 
     text {
       color: if($variant == 'light', $secondary_fg_color, $fg_color);
@@ -222,12 +222,12 @@ window.background.chromium {
 
   // spinner colour
   > spinner {
-    color: $accent_label_color;
-    &:disabled { color: mix($accent_label_color, $bg_color, 30%); }
+    color: $dark_fg_color;
+    &:disabled { color: mix($dark_fg_color, $bg_color, 30%); }
   }
 
   menu menuitem:hover { // 61.0.3159 or higher
     // revive hovered backgrounds
-    background-color: mix($fg_color, $secondary_base_color, 10%);
+    background-color: mix($fg_color, $base_color, 10%);
   }
 }

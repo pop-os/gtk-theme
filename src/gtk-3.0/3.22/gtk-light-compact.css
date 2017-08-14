@@ -3702,21 +3702,26 @@ messagedialog.csd decoration {
 .view selection, .view:selected, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
 .menuitem.button.flat:selected, popover.background.menu button:checked,
-popover.background button.model:checked, row:selected, calendar:selected, text:selected, .budgie-menu button:checked {
+popover.background button.model:checked, row:selected, calendar:selected, text:selected, window.background.chromium > textview.view text:selected, window.background.chromium > textview.view text:selected:focus,
+window.background.chromium > textview.view text selection,
+window.background.chromium > textview.view text selection:focus, .budgie-menu button:checked {
   background-color: #48b9c7;
 }
 
 row:selected label, label:selected, .view selection, .view:selected, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
 .menuitem.button.flat:selected, popover.background.menu button:checked,
-popover.background button.model:checked, row:selected, calendar:selected, text:selected, .budgie-menu button:checked {
+popover.background button.model:checked, row:selected, calendar:selected, text:selected, window.background.chromium > textview.view text:selected, window.background.chromium > textview.view text:selected:focus,
+window.background.chromium > textview.view text selection,
+window.background.chromium > textview.view text selection:focus, .budgie-menu button:checked {
   color: #FFFFFF;
 }
 
 row:selected label:disabled, label:disabled:selected, .view selection:disabled, .view:disabled:selected, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled,
 entry selection:disabled, modelbutton.flat:disabled:selected,
 .menuitem.button.flat:disabled:selected, popover.background.menu button:disabled:checked,
-popover.background button.model:disabled:checked, row:disabled:selected, calendar:disabled:selected, text:disabled:selected, .budgie-menu button:disabled:checked {
+popover.background button.model:disabled:checked, row:disabled:selected, calendar:disabled:selected, text:disabled:selected, window.background.chromium > textview.view text:disabled:selected,
+window.background.chromium > textview.view text selection:disabled, .budgie-menu button:disabled:checked {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -4741,6 +4746,55 @@ window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab
 window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:checked label,
 window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab:checked image {
   color: rgba(87, 79, 74, 0.87);
+}
+
+/*********************
+ * Chrome / Chromium *
+ *********************/
+window.background.chromium {
+  background-color: #F5F5F5;
+  color: rgba(87, 79, 74, 0.54);
+}
+
+window.background.chromium button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(87, 79, 74, 0.3);
+}
+
+window.background.chromium *:backdrop button {
+  border-color: transparent;
+}
+
+window.background.chromium entry.chromium, window.background.chromium entry.chromium:focus {
+  border-image: none;
+  border: 1px solid rgba(87, 79, 74, 0.3);
+}
+
+window.background.chromium > textview.view {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+window.background.chromium > textview.view text {
+  color: rgba(87, 79, 74, 0.54);
+  caret-color: rgba(87, 79, 74, 0.54);
+}
+
+window.background.chromium > textview.view text:focus {
+  color: rgba(87, 79, 74, 0.87);
+  caret-color: rgba(87, 79, 74, 0.87);
+}
+
+window.background.chromium > spinner {
+  color: rgba(87, 79, 74, 0.87);
+}
+
+window.background.chromium > spinner:disabled {
+  color: rgba(206, 204, 203, 0.961);
+}
+
+window.background.chromium menu menuitem:hover {
+  background-color: rgba(242, 241, 241, 0.987);
 }
 
 /*********
