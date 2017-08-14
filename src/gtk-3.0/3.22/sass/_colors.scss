@@ -47,11 +47,25 @@ $alt_base_color:   if($variant == 'light', $grey_50,  mix($base_color, $bg_color
 $lighter_bg_color: if($variant == 'light', $grey_50,  $brown_700);
 $darker_bg_color:  if($variant == 'light', $grey_200, $brown_800);
 
-$titlebar_bg_color:          if($titlebar == 'dark', if($variant == 'light', $brown_700, lighten($brown_800, 5%)), $brown_300);
-$inactive_titlebar_bg_color: if($titlebar == 'dark', if($variant == 'light', $brown_800, lighten($brown_900, 5%)), $brown_400);
-$alt_titlebar_bg_color:      if($titlebar == 'dark', $brown_800, mix($brown_300, $brown_400, 50%));
-$panel_bg_color:             if($titlebar == 'dark', $brown_900, rgba($black, $middle_opacity));
-$unity_panel_bg_color:       if($titlebar == 'dark', $brown_900, mix($grey_300, $grey_400, 50%));
+$titlebar_bg_color:          if($titlebar == 'dark',
+                                if($variant == 'light',
+                                   $brown_700,
+                                   lighten($brown_800, 5%)),
+                                $brown_300);
+$inactive_titlebar_bg_color: if($titlebar == 'dark',
+                                if($variant == 'light',
+                                   $brown_800,
+                                   lighten($brown_900, 5%)),
+                                $brown_400);
+$alt_titlebar_bg_color:      if($titlebar == 'dark',
+                                $brown_800,
+                                mix($brown_300, $brown_400, 50%));
+$panel_bg_color:             if($titlebar == 'dark',
+                                $brown_900,
+                                rgba($black, $middle_opacity));
+$unity_panel_bg_color:       if($titlebar == 'dark',
+                                $brown_900,
+                                mix($grey_300, $grey_400, 50%));
 $alt_panel_bg_color:         rgba($black, $lower_opacity);
 
 $fill_color:      gtkalpha(currentColor, $lower_opacity);
