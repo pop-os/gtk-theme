@@ -1,3 +1,11 @@
+// Version Number
+
+$version: 2.0.5r0;
+
+/*****************************
+ * Pop!_GTK+ Version 2.0.5r0 *
+ *****************************/
+
 $asset_suffix: if($variant == 'dark', '-dark', '');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
 
