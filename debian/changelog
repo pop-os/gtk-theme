@@ -1,3 +1,9 @@
+pop-gtk-theme (2.0.5.1) zesty; urgency=medium
+
+  * Add internal version field to check installed version.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 15 Aug 2017 12:57:13 -0600
+
 pop-gtk-theme (2.0.5.0) zesty; urgency=medium
 
   * Support for a variety of Granite widgets (storage bar, text classes, etc).
