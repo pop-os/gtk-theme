@@ -1,3 +1,17 @@
+pop-gtk-theme (2.0.5.0) zesty; urgency=medium
+
+  * Support for a variety of Granite widgets (storage bar, text classes, etc).
+  * Dash background color adjusted to match the panel background.
+  * Fixes for ugly buttons in Chrome/ium. #8
+  * Fixes for Eye of Gnome next/previous button cutoff. #10
+  * Fixes for pixelated dash placeholder. #9
+  * Screenshield notifications now match the desktop counterparts.
+  * Overhauled appearance for Looking Glass.
+  * Contrast improvements for GNOME Shell.
+  * Various copyright notices corrected.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 15 Aug 2017 09:53:20 -0600
+
 pop-gtk-theme (2.0.4.1) zesty; urgency=medium
 
   * Fix Symbolic link to 3.20 elementary SCSS.
