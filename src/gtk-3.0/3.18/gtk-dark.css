@@ -3283,3 +3283,9 @@ these are pretty self explicative */
 FIXME this is really an API */
 @define-color content_view_bg #443d3a;
 @define-color placeholder_text_color #c7c5c4;
+/*
+These are for Spice-up Presentation maker*/
+@define-color SpicePrimaryBackground #2e2927;
+@define-color SpiceSlideBackground #3b3633;
+@define-color SpiceSlideBackgroundSelected #413b37;
+@define-color colorPrimary #48b9c7;

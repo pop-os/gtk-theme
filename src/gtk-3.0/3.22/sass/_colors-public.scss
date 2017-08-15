@@ -89,3 +89,13 @@ these are pretty self explicative */
 FIXME this is really an API */
 @define-color content_view_bg #{"" + $base_color};
 @define-color placeholder_text_color #{"" + $placeholder_text_color};
+
+$spice_slide_background: lighten($brown_800, 5%);
+$spice_selected_slide_background: lighten($brown_800, 7%);
+
+/*
+These are for Spice-up Presentation maker*/
+@define-color SpicePrimaryBackground #{"" + $brown_800};
+@define-color SpiceSlideBackground #{"" + $spice_slide_background};
+@define-color SpiceSlideBackgroundSelected #{"" + lighten($brown_800, 7%)};
+@define-color colorPrimary #{"" + $primary_color};

@@ -5611,6 +5611,20 @@ window.background.csd.rounded > grid.titlebar > headerbar.input-header > box.lef
   color: rgba(87, 79, 74, 0.87);
 }
 
+/************
+ * Spice-Up *
+ ************/
+window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame button.image-button,
+window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame button.entry,
+window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame entry {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+window.csd > overlay > stack > grid.app-back > revealer > box.toolbar button {
+  background-color: transparent;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
@@ -5678,3 +5692,9 @@ these are pretty self explicative */
 FIXME this is really an API */
 @define-color content_view_bg #FFFFFF;
 @define-color placeholder_text_color #757575;
+/*
+These are for Spice-up Presentation maker*/
+@define-color SpicePrimaryBackground #2e2927;
+@define-color SpiceSlideBackground #3b3633;
+@define-color SpiceSlideBackgroundSelected #413b37;
+@define-color colorPrimary #48b9c7;

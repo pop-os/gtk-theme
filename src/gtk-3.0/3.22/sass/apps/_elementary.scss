@@ -155,6 +155,7 @@ window.rounded decoration {
     border-radius: $material_radius;
 }
 
+
 /**********
  * Harvey *
  **********/
@@ -172,4 +173,22 @@ window.background.csd.rounded {
       > box.left > button.close { color: $fg_color; }
     }
   }
+}
+
+
+/************
+ * Spice-Up *
+ ************/
+
+window.csd > overlay > stack > grid.app-back > revealer > box.toolbar {
+  box.frame {
+    button.image-button,
+    button.entry,
+    entry {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  button { background-color: transparent; }
 }
