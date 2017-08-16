@@ -11,14 +11,13 @@
 }
 
 // let's start it
-#PanelPlug, // FIXME: this cannot be transparent
+#PanelPlug,
 PanelToplevel.background {
   background-color: $unity_panel_bg_color;
   color: $titlebar_fg_color;
   font-weight: 500;
 }
 
-// FIXME: this should really die if #PanelPlug can be transparent
 %mate_panel_button {
   color: $titlebar_secondary_fg_color;
 

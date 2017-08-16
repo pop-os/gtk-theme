@@ -100,8 +100,6 @@ $unity_highlight_color:    if($titlebar == 'dark', rgba($white, 0.1),  rgba($whi
 $alt_highlight_color:      rgba($white, 0.2);
 $titlebar_indicator_color: if($titlebar == 'dark', $accent_color, $accent_color);
 
-// FIXME: @placeholder_text_color should really use $tertiary_fg_color, but
-// doesn't work translucent colors here. So we use an opaque color instead.
 $placeholder_text_color: if($variant == 'light',
                             mix($black, $base_color, percentage(0.54)),
                             mix($white, $base_color, percentage(0.7)));

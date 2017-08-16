@@ -95,12 +95,11 @@ notebook:focus tab,
 }
 
 textview {
-  // FIXME: we need to override background-color to ensure text rendering
   text { background-color: $base_color; }
 
   border {
     background-color: $alt_base_color;
-    color: $hint_fg_color; // FIXME: not working
+    color: $hint_fg_color;
   }
 }
 
@@ -815,7 +814,6 @@ spinbutton {
     // as a box, and tweak the style of the entry in the middle
     // so that it's linked
 
-    // FIXME: this should not be set at all, but otherwise it gets the wrong
     // color
     &:disabled { color: $disabled_fg_color; }
 
@@ -901,7 +899,7 @@ combobox {
     }
   }
 
-  &:drop(active) { // FIXME: untested
+  &:drop(active) {
     box-shadow: none;
 
     // button.combo { @extend %button_basic:drop(active); }
@@ -1106,7 +1104,6 @@ headerbar {
   }
 
   &.selection-mode {
-    // FIXME: 0.00001s is workaround for transition bug of gtk+ 3.22
     // see https://bugzilla.gnome.org/show_bug.cgi?id=774064
     transition: background-color 0.00001s $longer_duration;
     animation: header_ripple_effect $longer_duration $deceleration_curve;
@@ -1532,7 +1529,7 @@ menuitem {
   accelerator { color: $secondary_fg_color; }
 }
 
-// FIXME: THIS IS A REALLY UGLY WORKAROUND!
+// THIS IS A REALLY UGLY WORKAROUND!
 // Electron/Atom render all translucent colors in opaque colors.
 // It's a very critical issue for this theme and should be fixed by upstream...
 .popup:not(.csd) menu {
@@ -1549,7 +1546,6 @@ menuitem {
     &:disabled { color: $opaque_disabled_fg_color; } // separator/border also use this color.
   }
 
-  // TODO: not working this, where/how i can set the accelerators?
   accelerator { color: $opaque_secondary_fg_color; }
 }
 
@@ -1560,7 +1556,7 @@ menuitem {
 popover.background {
   transition: $shadow_transition;
   padding: 2px;
-  box-shadow: $shadow_2; // TODO: this should really have a highlight
+  box-shadow: $shadow_2;
   background-color: $lighter_bg_color;
 
   &:backdrop { box-shadow: $shadow_1; }
@@ -2555,7 +2551,6 @@ progressbar {
     progress { min-width: $bar_size; }
   }
 
-  // FIXME: insensitive state missing and some other state should be set probably
   color: $hint_fg_color;
   font-size: smaller;
 
@@ -3156,7 +3151,6 @@ tooltip {
     background-clip: $extra_background_clip;
   }
 
-  // FIXME: we need a border or tooltips vanish on black background.
   decoration { background-color: transparent; }
 
   label {
@@ -3319,7 +3313,7 @@ colorchooser .popover.osd {
 .scale-popup {
   .osd & { @extend %osd; }
 
-  .osd & button.flat { // FIXME: quick hack, redo properly
+  .osd & button.flat {
   }
 
   button { // +/- buttons on GtkVolumeButton popup

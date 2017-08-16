@@ -155,7 +155,7 @@ window.background:not(.solid-csd) {
         &, > tab {
           background-color: transparent;
 
-          &, // FIXME: this does not work
+          &,
           label,
           image { color: $secondary_fg_color; }
 
@@ -181,8 +181,6 @@ window.background.chromium {
   background-color: if($variant == 'light', $bg_color, $base_color);
   color: if($variant == 'light', $secondary_fg_color, $fg_color);
 
-  // FIXME: not for actual button widgets but for toolbar's separators
-  // crazy: src/+/master/chrome/browser/ui/libgtkui/gtk_ui.cc#891
   button { // for active-tab borders
     border-width: 1px;
     border-style: solid;

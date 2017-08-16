@@ -1105,7 +1105,6 @@ StScrollBar {
           background-color: transparent;
         }
 
-        /* FIXME: how do you do this in sass? */
         .message-list-section-close:hover > StIcon,
         .message-list-section-close:focus > StIcon {
           color: $fg_color;
@@ -1169,7 +1168,6 @@ StScrollBar {
             color: $secondary_fg_color;
           }
 
-          /* FIXME: how do you do this in sass? */
           .message-content *:hover > StIcon,
           .message-content *:focus > StIcon {
             color: $fg_color;
@@ -1880,7 +1878,7 @@ $legacy_icon_size: 24px;
   }
 
   .candidate-box {
-    transition-duration: 0s; // FIXME: needs more natural transitions
+    transition-duration: 0s;
     min-height: $menuitem_size;
     padding: 0 8px;
     border-radius: $material_radius;

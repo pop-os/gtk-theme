@@ -28,8 +28,8 @@
   -GtkWidget-link-color: $link_color;
   -GtkWidget-visited-link-color: $visited_link_color;
 
-  -GtkWidget-focus-padding: 2;    // FIXME: do we still need these?
-  -GtkWidget-focus-line-width: 1; //
+  -GtkWidget-focus-padding: 2;
+  -GtkWidget-focus-line-width: 1;
 
   -GtkWidget-text-handle-width: 20;
   -GtkWidget-text-handle-height: 20;
@@ -548,7 +548,7 @@ GtkColorButton.button {
     .button {
     }
   }
-  &.vertical { //FIXME: try using linking templates for vertically linked stuff
+  &.vertical {
     .button {
       padding-top: 10px;    //  Same vertical padding as image-buttons
       padding-bottom: 10px; //
@@ -1014,7 +1014,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
   border-radius: 2px + 1px;
   background-color: $lighter_bg_color;
-  box-shadow:  $shadow_2; // TODO: this should really have a highlight
+  box-shadow:  $shadow_2;
   &:backdrop { box-shadow: $shadow_1; }
 
   > .list,
@@ -1079,8 +1079,6 @@ column-header.button.dnd { // for treeview-like derive widgets
     &.left { border-left-width: 0; }
   }
   &.header {
-    // FIXME: double borders in some case, can't fix it w/o a class tho
-    // FIXME: doesn't work on dark var
     background-color: $bg_color;
 
     // this is the shading of the header behind the tabs
@@ -1121,8 +1119,6 @@ column-header.button.dnd { // for treeview-like derive widgets
     $ht_vpadding: 8px;
     $ht_hpadding: 12px;
 
-    //FIXME: we get double border in some cases, not considering the broken
-    //notebook content frame...
     &.top, &.bottom { padding: $vt_vpadding $vt_hpadding; }
     &.left, &.right { padding: $ht_vpadding $ht_hpadding; }
 
@@ -1486,7 +1482,6 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 .scale,
 .scale.scale-has-marks-above.scale-has-marks-below,
 .scale.vertical.scale-has-marks-above.scale-has-marks-below {
-  // FIXME: rationalize
   -GtkScale-slider-length: 20;
   -GtkRange-slider-width: 20;
   -GtkRange-trough-border: 2;
@@ -1679,8 +1674,6 @@ GtkProgressBar {
     }
   }
   &.fill-block {
-    // FIXME: it would be nice to set make fill blocks bigger, but we'd need
-    // :nth-child working on discrete indicators
     background-color: $primary_color;
     border-radius: 0;
     box-shadow: none;
@@ -2061,7 +2054,6 @@ GtkInfoBar {
   padding: 4px; /* not working */
   border-radius: 2px;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
-  // FIXME: we need a border or tooltips vanish on black background.
   &.window-frame.csd {
     background-color: transparent;
   }
@@ -2184,7 +2176,7 @@ GtkColorSwatch {
 
    .osd & { @extend %osd; }
 
-   .osd & .button.flat {  //FIXME: quick hack, redo properly
+   .osd & .button.flat {
    }
 
   .button { // +/- buttons on GtkVolumeButton popup
