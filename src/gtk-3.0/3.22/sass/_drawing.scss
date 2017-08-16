@@ -32,7 +32,10 @@
 
   @if $t == normal {
     transition: $longer_transition, $shadow_transition;
-    border-image: none;
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                    $track_color 100%,
+                                    transparent 0%)
+                                    0 0 2 / 0 0 2px;;
     box-shadow: $shadow_0;
     background-color: if($fc == $primary_color, $base_color, $fc);
     color: if($fc == $primary_color, $fg_color, $inverse_fg_color);
