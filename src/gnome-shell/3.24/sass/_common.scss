@@ -1930,7 +1930,7 @@ $legacy_icon_size: 24px;
   background-size: contain;
   border: none;
   color: $inverse_fg_color;
-  border-radius: $material_radius;
+  border-radius: $circular_radius;
   &:hover {
     border-color: $inverse_fg_color;
     color: $inverse_fg_color;

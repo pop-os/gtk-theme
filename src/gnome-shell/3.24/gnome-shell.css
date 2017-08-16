@@ -2475,7 +2475,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-size: contain;
   border: none;
   color: #FFFFFF;
-  border-radius: 4px;
+  border-radius: 9999px;
 }
 
 .framed-user-icon:hover {
