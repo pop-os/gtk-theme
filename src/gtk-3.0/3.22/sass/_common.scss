@@ -643,6 +643,7 @@ toolbar.inline-toolbar toolbutton {
   // &:only-child > button.flat { @extend %linked:only-child; }
 }
 
+
 %linked_middle {
   border-radius: 0;
   -gtk-outline-radius: 2px;
@@ -652,13 +653,13 @@ toolbar.inline-toolbar toolbutton {
   @extend %linked_middle;
 
   &:first-child {
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: $material_radius;
+    border-bottom-left-radius: $material_radius;
   }
 
   &:last-child {
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: $material_radius;
+    border-bottom-right-radius: $material_radius;
   }
 
   &:only-child {
@@ -675,13 +676,13 @@ toolbar.inline-toolbar toolbutton {
   @extend %linked_vertical_middle;
 
   &:first-child {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: $material_radius;
+    border-top-right-radius: $material_radius;
   }
 
   &:last-child {
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: $material_radius;
+    border-bottom-right-radius: $material_radius;
   }
 
   &:only-child {
@@ -866,6 +867,14 @@ combobox {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     min-height: 16px;
     min-width: 16px;
+  }
+
+  button.combo {
+    @include entry(normal)
+
+    &:focus { @include entry(focus)}
+    &:disabled { @include entry(disabled)}
+
   }
 
   decoration,
