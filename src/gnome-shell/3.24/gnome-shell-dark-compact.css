@@ -2764,7 +2764,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .screen-shield-clock {
   color: white;
   text-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
-  font-weight: 800;
+  font-weight: 100;
   text-align: center;
   padding-bottom: 1.5em;
 }
@@ -2773,7 +2773,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-size: 112px;
   font-weight: 300;
   text-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
-  font-weight: 100;
 }
 
 .screen-shield-clock-date {
