@@ -10,6 +10,9 @@ post-install:
 gtk2:
 	cd ./src/gtk-2.0 && ./recolor-assets.sh
 
+gnome-shell:
+	cp $(DESTDIR)/usr/share/themes/Pop/gnome-shell/gnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
+
 assets:
 	cd ./src/gtk-3.0/gtk-common/ && find . -type f -name *.png -exec rm -v '{}' +
 	cd ./src/gtk-2.0/ && find . -type f -name *.png -exec rm -v '{}' +
