@@ -862,6 +862,7 @@ spinbutton {
 /**************
  * ComboBoxes *
  **************/
+
 combobox {
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
@@ -869,10 +870,10 @@ combobox {
     min-width: 16px;
   }
 
-  button.combo {
+  entry ~ button.combo {
     @include entry(normal)
 
-    &:focus { @include entry(focus)}
+    //&:focus { @include entry(focus)}
     &:disabled { @include entry(disabled)}
 
   }
@@ -884,6 +885,7 @@ combobox {
     &:dir(ltr) { margin-left: 8px - ($medium_size - 16px) / 2; }
     &:dir(rtl) { margin-right: 8px - ($medium_size - 16px) / 2; }
   }
+
 
   #gtk-combobox-popup-menu {
     padding: 2px 0;
@@ -913,6 +915,15 @@ combobox {
 
     // button.combo { @extend %button_basic:drop(active); }
   }
+}
+
+// This isn't an actual combobox, but it looks like one, so we should theme it
+// the same way.
+
+box.horizontal.linked > entry + button:not(.combo) {
+  @include entry(normal)
+
+  &:disabled { @include entry(disabled)}
 }
 
 // the combo is a composite widget so the way we do button linking doesn't
