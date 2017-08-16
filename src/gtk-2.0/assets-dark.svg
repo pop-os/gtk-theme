@@ -27,16 +27,16 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     showgrid="true"
+     showgrid="false"
      id="namedview4"
      inkscape:document-rotation="0"
-     inkscape:zoom="6.3286057"
-     inkscape:cx="125.5366"
-     inkscape:cy="393.31837"
+     inkscape:zoom="17.9"
+     inkscape:cx="98.128828"
+     inkscape:cy="439.74654"
      inkscape:window-width="2560"
      inkscape:window-height="1372"
      inkscape:window-x="0"
-     inkscape:window-y="33"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg571">
     <inkscape:grid
@@ -187,7 +187,7 @@
     <linearGradient
        id="color-base-alt">
       <stop
-         stop-color="#4a5c64"
+         stop-color="#49423e"
          id="stop62" />
     </linearGradient>
     <linearGradient
@@ -1102,6 +1102,24 @@
        xlink:href="#base-treeview-ltr-button-active"
        id="base-treeview-rtl-button-active"
        transform="scale(-1 1)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg"
+       id="linearGradient1374"
+       x1="104"
+       y1="28"
+       x2="124"
+       y2="28"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg"
+       id="linearGradient1404"
+       x1="124"
+       y1="78"
+       x2="134"
+       y2="78"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <use
      x="8"
@@ -1144,50 +1162,11 @@
      xlink:href="#base-button-insensitive"
      id="button-insensitive" />
   <use
-     x="52"
-     y="8"
-     xlink:href="#base-combo-rtl-button"
-     id="combo-rtl-button" />
-  <use
-     x="52"
-     y="28"
-     xlink:href="#base-combo-rtl-button-hover"
-     id="combo-rtl-button-hover" />
-  <use
-     x="52"
-     y="48"
-     xlink:href="#base-combo-rtl-button-active"
-     id="combo-rtl-button-active" />
-  <use
-     x="52"
-     y="68"
-     xlink:href="#base-combo-rtl-button-insensitive"
-     id="combo-rtl-button-insensitive" />
-  <use
-     x="56"
-     y="8"
-     xlink:href="#base-combo-ltr-button"
-     id="combo-ltr-button" />
-  <use
-     x="56"
-     y="28"
-     xlink:href="#base-combo-ltr-button-hover"
-     id="combo-ltr-button-hover" />
-  <use
-     x="56"
-     y="48"
-     xlink:href="#base-combo-ltr-button-active"
-     id="combo-ltr-button-active" />
-  <use
-     x="56"
-     y="68"
-     xlink:href="#base-combo-ltr-button-insensitive"
-     id="combo-ltr-button-insensitive" />
-  <use
      x="76"
      y="8"
      xlink:href="#base-spin-rtl-up"
-     id="spin-rtl-up" />
+     id="spin-rtl-up"
+     inkscape:label="#spin-rtl-up" />
   <use
      x="76"
      y="28"
@@ -1203,26 +1182,6 @@
      y="68"
      xlink:href="#base-spin-rtl-up-insensitive"
      id="spin-rtl-up-insensitive" />
-  <use
-     x="76"
-     y="8"
-     xlink:href="#base-spin-rtl-down"
-     id="spin-rtl-down" />
-  <use
-     x="76"
-     y="28"
-     xlink:href="#base-spin-rtl-down-hover"
-     id="spin-rtl-down-hover" />
-  <use
-     x="76"
-     y="48"
-     xlink:href="#base-spin-rtl-down-active"
-     id="spin-rtl-down-active" />
-  <use
-     x="76"
-     y="68"
-     xlink:href="#base-spin-rtl-down-insensitive"
-     id="spin-rtl-down-insensitive" />
   <use
      x="80"
      y="8"
@@ -1244,26 +1203,6 @@
      xlink:href="#base-spin-ltr-up-insensitive"
      id="spin-ltr-up-insensitive" />
   <use
-     x="80"
-     y="8"
-     xlink:href="#base-spin-ltr-down"
-     id="spin-ltr-down" />
-  <use
-     x="80"
-     y="28"
-     xlink:href="#base-spin-ltr-down-hover"
-     id="spin-ltr-down-hover" />
-  <use
-     x="80"
-     y="48"
-     xlink:href="#base-spin-ltr-down-active"
-     id="spin-ltr-down-active" />
-  <use
-     x="80"
-     y="68"
-     xlink:href="#base-spin-ltr-down-insensitive"
-     id="spin-ltr-down-insensitive" />
-  <use
      x="104"
      y="8"
      xlink:href="#base-entry-background"
@@ -1273,78 +1212,6 @@
      y="16"
      xlink:href="#base-entry-background-insensitive"
      id="entry-background-insensitive" />
-  <use
-     x="104"
-     y="28"
-     xlink:href="#base-entry"
-     fill="url(#color-bg)"
-     id="entry" />
-  <use
-     x="104"
-     y="68"
-     xlink:href="#base-entry-insensitive"
-     fill="url(#color-bg)"
-     id="entry-insensitive" />
-  <use
-     x="124"
-     y="28"
-     xlink:href="#base-combo-ltr-entry"
-     fill="url(#color-bg)"
-     id="combo-ltr-entry" />
-  <use
-     x="124"
-     y="68"
-     xlink:href="#base-combo-ltr-entry-insensitive"
-     fill="url(#color-bg)"
-     id="combo-ltr-entry-insensitive" />
-  <use
-     x="128"
-     y="28"
-     xlink:href="#base-combo-rtl-entry"
-     fill="url(#color-bg)"
-     id="combo-rtl-entry" />
-  <use
-     x="128"
-     y="68"
-     xlink:href="#base-combo-rtl-entry-insensitive"
-     fill="url(#color-bg)"
-     id="combo-rtl-entry-insensitive" />
-  <use
-     x="152"
-     y="28"
-     xlink:href="#base-entry"
-     fill="url(#color-base)"
-     id="notebook-entry" />
-  <use
-     x="152"
-     y="68"
-     xlink:href="#base-entry-insensitive"
-     fill="url(#color-base)"
-     id="notebook-entry-insensitive" />
-  <use
-     x="172"
-     y="28"
-     xlink:href="#base-combo-ltr-entry"
-     fill="url(#color-base)"
-     id="notebook-combo-ltr-entry" />
-  <use
-     x="172"
-     y="68"
-     xlink:href="#base-combo-ltr-entry-insensitive"
-     fill="url(#color-base)"
-     id="notebook-combo-ltr-entry-insensitive" />
-  <use
-     x="176"
-     y="28"
-     xlink:href="#base-combo-rtl-entry"
-     fill="url(#color-base)"
-     id="notebook-combo-rtl-entry" />
-  <use
-     x="176"
-     y="68"
-     xlink:href="#base-combo-rtl-entry-insensitive"
-     fill="url(#color-base)"
-     id="notebook-combo-rtl-entry-insensitive" />
   <use
      x="8"
      y="92"
@@ -2018,6 +1885,527 @@
        height="2"
        width="8"
        id="rect1390"
+       style="fill:#faa41a;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-rtl-button"
+     inkscape:label="#g1312">
+    <use
+       inkscape:label="#combo-rtl-button"
+       id="combo-rtl-button-box"
+       xlink:href="#base-combo-rtl-button"
+       y="8"
+       x="52" />
+    <rect
+       rx="1.16851e-14"
+       y="24"
+       x="54"
+       height="2"
+       width="8"
+       id="rect1254"
+       style="fill:#7d7976;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1" />
+  </g>
+  <g
+     id="combo-ltr-button"
+     inkscape:label="#g1316">
+    <use
+       inkscape:label="#combo-ltr-button"
+       id="combo-ltr-button-box"
+       xlink:href="#base-combo-ltr-button"
+       y="8"
+       x="56" />
+    <rect
+       rx="1.16851e-14"
+       y="24"
+       x="66"
+       height="2"
+       width="8"
+       id="rect1256"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-rtl-down"
+     inkscape:label="#g1320">
+    <use
+       inkscape:label="#spin-rtl-down"
+       id="spin-rtl-down-box"
+       xlink:href="#base-spin-rtl-down"
+       y="8"
+       x="76" />
+    <rect
+       rx="1.16851e-14"
+       y="24"
+       x="78"
+       height="2"
+       width="8"
+       id="rect1258"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-ltr-down"
+     inkscape:label="#g1324">
+    <use
+       inkscape:label="#spin-ltr-down"
+       id="spin-ltr-down-box"
+       xlink:href="#base-spin-ltr-down"
+       y="8"
+       x="80" />
+    <rect
+       rx="1.16851e-14"
+       y="24"
+       x="90"
+       height="2"
+       width="8"
+       id="rect1260"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-rtl-button-insensitive"
+     inkscape:label="#g1386">
+    <use
+       inkscape:label="#combo-rtl-button-insensitive"
+       id="combo-rtl-button-insensitive-box"
+       xlink:href="#base-combo-rtl-button-insensitive"
+       y="68"
+       x="52" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="54"
+       height="2"
+       width="8"
+       id="rect1262"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-ltr-button-insensitive"
+     inkscape:label="#g1390">
+    <use
+       inkscape:label="#combo-ltr-button-insensitive"
+       id="combo-ltr-button-insensitive-box"
+       xlink:href="#base-combo-ltr-button-insensitive"
+       y="68"
+       x="56" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="66"
+       height="2"
+       width="8"
+       id="rect1264"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-rtl-down-insensitive"
+     inkscape:label="#g1394">
+    <use
+       inkscape:label="#spin-rtl-down-insensitive"
+       id="spin-rtl-down-insensitive-box"
+       xlink:href="#base-spin-rtl-down-insensitive"
+       y="68"
+       x="76" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="78"
+       height="2"
+       width="8"
+       id="rect1266"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-ltr-down-insensitive"
+     inkscape:label="#g1398">
+    <use
+       inkscape:label="#spin-ltr-down-insensitive"
+       id="spin-ltr-down-insensitive-box"
+       xlink:href="#base-spin-ltr-down-insensitive"
+       y="68"
+       x="80" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="90"
+       height="2"
+       width="8"
+       id="rect1268"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="entry-insensitive"
+     inkscape:label="#g1402">
+    <use
+       inkscape:label="#entry-insensitive"
+       id="entry-insensitive-box"
+       fill="url(#color-bg)"
+       xlink:href="#base-entry-insensitive"
+       y="68"
+       x="104" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="106"
+       height="2"
+       width="16"
+       id="rect1270"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-ltr-entry-insensitive"
+     inkscape:label="#g1408">
+    <use
+       style="fill:url(#linearGradient1404)"
+       inkscape:label="#combo-ltr-entry-insensitive"
+       id="combo-ltr-entry-insensitive-box"
+       fill="url(#color-bg)"
+       xlink:href="#base-combo-ltr-entry-insensitive"
+       y="68"
+       x="124" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="126"
+       height="2"
+       width="8"
+       id="rect1272"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-rtl-entry-insensitive"
+     inkscape:label="#g1412">
+    <use
+       inkscape:label="#combo-rtl-entry-insensitive"
+       id="combo-rtl-entry-insensitive-box"
+       fill="url(#color-bg)"
+       xlink:href="#base-combo-rtl-entry-insensitive"
+       y="68"
+       x="128" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="138"
+       height="2"
+       width="8"
+       id="rect1274"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="notebook-entry-insensitive"
+     inkscape:label="#g1416">
+    <use
+       inkscape:label="#notebook-entry-insensitive"
+       id="notebook-entry-insensitive-box"
+       fill="url(#color-base)"
+       xlink:href="#base-entry-insensitive"
+       y="68"
+       x="152" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="154"
+       height="2"
+       width="16"
+       id="rect1276"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="notebook-combo-ltr-entry-insensitive"
+     inkscape:label="#g1420">
+    <use
+       inkscape:label="#notebook-combo-ltr-entry-insensitive"
+       id="notebook-combo-ltr-entry-insensitive-box"
+       fill="url(#color-base)"
+       xlink:href="#base-combo-ltr-entry-insensitive"
+       y="68"
+       x="172" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="174"
+       height="2"
+       width="8"
+       id="rect1278"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="notebook-combo-rtl-entry-insensitive"
+     inkscape:label="#g1424">
+    <use
+       inkscape:label="#notebook-combo-rtl-entry-insensitive"
+       id="notebook-combo-rtl-entry-insensitive-box"
+       fill="url(#color-base)"
+       xlink:href="#base-combo-rtl-entry-insensitive"
+       y="68"
+       x="176" />
+    <rect
+       rx="1.16851e-14"
+       y="84"
+       x="186"
+       height="2"
+       width="8"
+       id="rect1280"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="entry"
+     inkscape:label="#g1344"
+     transform="translate(0.26970378,0.07916157)">
+    <use
+       inkscape:label="#entry"
+       id="entry-box"
+       fill="url(#color-bg)"
+       xlink:href="#base-entry"
+       y="28"
+       x="104"
+       style="fill:url(#linearGradient1374)"
+       width="100%"
+       height="100%" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="106"
+       height="2"
+       width="16"
+       id="rect1282"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-ltr-entry"
+     inkscape:label="#g1348">
+    <use
+       inkscape:label="#combo-ltr-entry"
+       id="combo-ltr-entry-box"
+       fill="url(#color-bg)"
+       xlink:href="#base-combo-ltr-entry"
+       y="28"
+       x="124" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="126"
+       height="2"
+       width="8"
+       id="rect1284"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-rtl-entry"
+     inkscape:label="#g1352">
+    <use
+       inkscape:label="#combo-rtl-entry"
+       id="combo-rtl-entry-box"
+       fill="url(#color-bg)"
+       xlink:href="#base-combo-rtl-entry"
+       y="28"
+       x="128" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="138"
+       height="2"
+       width="8"
+       id="rect1286"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="notebook-entry"
+     inkscape:label="#g1356">
+    <use
+       inkscape:label="#notebook-entry"
+       id="notebook-entry-box"
+       fill="url(#color-base)"
+       xlink:href="#base-entry"
+       y="28"
+       x="152" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="154"
+       height="2"
+       width="16"
+       id="rect1288"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="notebook-combo-ltr-entry"
+     inkscape:label="#g1360">
+    <use
+       inkscape:label="#notebook-combo-ltr-entry"
+       id="notebook-combo-ltr-entry-box"
+       fill="url(#color-base)"
+       xlink:href="#base-combo-ltr-entry"
+       y="28"
+       x="172" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="174"
+       height="2"
+       width="8"
+       id="rect1290"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="notebook-combo-rtl-entry"
+     inkscape:label="#g1364">
+    <use
+       inkscape:label="#notebook-combo-rtl-entry"
+       id="notebook-combo-rtl-entry-box"
+       fill="url(#color-base)"
+       xlink:href="#base-combo-rtl-entry"
+       y="28"
+       x="176" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="186"
+       height="2"
+       width="8"
+       id="rect1292"
+       style="fill:#7d7976;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-rtl-button-hover"
+     inkscape:label="#g1328">
+    <use
+       inkscape:label="#combo-rtl-button-hover"
+       id="combo-rtl-button-hover-box"
+       xlink:href="#base-combo-rtl-button-hover"
+       y="28"
+       x="52" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="54"
+       height="2"
+       width="8"
+       id="rect1294"
+       style="fill:#aaaaa7;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-ltr-button-hover"
+     inkscape:label="#g1332">
+    <use
+       inkscape:label="#combo-ltr-button-hover"
+       id="combo-ltr-button-hover-box"
+       xlink:href="#base-combo-ltr-button-hover"
+       y="28"
+       x="56" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="66"
+       height="2"
+       width="8"
+       id="rect1296"
+       style="fill:#aaaaa7;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-rtl-down-hover"
+     inkscape:label="#g1336">
+    <use
+       inkscape:label="#spin-rtl-down-hover"
+       id="spin-rtl-down-hover-box"
+       xlink:href="#base-spin-rtl-down-hover"
+       y="28"
+       x="76" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="78"
+       height="2"
+       width="8"
+       id="rect1298"
+       style="fill:#aaaaa7;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-ltr-down-hover"
+     inkscape:label="#g1340">
+    <use
+       inkscape:label="#spin-ltr-down-hover"
+       id="spin-ltr-down-hover-box"
+       xlink:href="#base-spin-ltr-down-hover"
+       y="28"
+       x="80" />
+    <rect
+       rx="1.16851e-14"
+       y="44"
+       x="90"
+       height="2"
+       width="8"
+       id="rect1300"
+       style="fill:#aaaaa7;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-rtl-button-active"
+     inkscape:label="#g1368">
+    <use
+       inkscape:label="#combo-rtl-button-active"
+       id="combo-rtl-button-active-box"
+       xlink:href="#base-combo-rtl-button-active"
+       y="48"
+       x="52" />
+    <rect
+       rx="1.16851e-14"
+       y="64"
+       x="54"
+       height="2"
+       width="8"
+       id="rect1302"
+       style="fill:#faa41a;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="combo-ltr-button-active"
+     inkscape:label="#g1372">
+    <use
+       inkscape:label="#combo-ltr-button-active"
+       id="combo-ltr-button-active-box"
+       xlink:href="#base-combo-ltr-button-active"
+       y="48"
+       x="56" />
+    <rect
+       rx="1.16851e-14"
+       y="64"
+       x="66"
+       height="2"
+       width="8"
+       id="rect1304"
+       style="fill:#faa41a;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-rtl-down-active"
+     inkscape:label="#g1378">
+    <use
+       inkscape:label="#spin-rtl-down-active"
+       id="spin-rtl-down-active-box"
+       xlink:href="#base-spin-rtl-down-active"
+       y="48"
+       x="76" />
+    <rect
+       rx="1.16851e-14"
+       y="64"
+       x="78"
+       height="2"
+       width="8"
+       id="rect1306"
+       style="fill:#faa41a;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <g
+     id="spin-ltr-down-active"
+     inkscape:label="#g1382">
+    <use
+       inkscape:label="#spin-ltr-down-active"
+       id="spin-ltr-down-active-box"
+       xlink:href="#base-spin-ltr-down-active"
+       y="48"
+       x="80" />
+    <rect
+       rx="1.16851e-14"
+       y="64"
+       x="90"
+       height="2"
+       width="8"
+       id="rect1308"
        style="fill:#faa41a;fill-opacity:1;stroke-width:75.59055328;stroke-linecap:round;stroke-linejoin:round" />
   </g>
 </svg>
