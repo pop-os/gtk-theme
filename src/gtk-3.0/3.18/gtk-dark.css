@@ -3282,6 +3282,9 @@ these are pretty self explicative */
 @define-color warning_color black;
 @define-color error_color black;
 @define-color success_color black;
+@define-color destructive_color #a3360a;
+@define-color suggested_color #3e935b
+
 /*
 FIXME this is really an API */
 @define-color content_view_bg #443d3a;

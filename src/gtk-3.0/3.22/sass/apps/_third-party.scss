@@ -1,3 +1,24 @@
+/************
+ * Ubiquity *
+ ************/
+
+#live_installer > #wizard {
+
+  #page_mode #title_section label#page_title { //Page Title text
+    color: $almost_white;
+  }
+
+  #progress_eventbox #progress_mode { //Progress dots at the bottom
+    progressbar *{
+      border-radius: $circular_radius;
+    }
+
+    label { //Installation text
+      color: $almost_white;
+    }
+  }
+}
+
 /*********
  * Tilix *
  *********/

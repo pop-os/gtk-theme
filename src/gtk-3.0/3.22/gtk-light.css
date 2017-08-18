@@ -4602,6 +4602,21 @@ dialog.background > box.dialog-vbox > box.dialog-action-box > buttonbox.dialog-a
   padding: 12px;
 }
 
+/************
+ * Ubiquity *
+ ************/
+#live_installer > #wizard #page_mode #title_section label#page_title {
+  color: #f2f2f2;
+}
+
+#live_installer > #wizard #progress_eventbox #progress_mode progressbar * {
+  border-radius: 9999px;
+}
+
+#live_installer > #wizard #progress_eventbox #progress_mode label {
+  color: #f2f2f2;
+}
+
 /*********
  * Tilix *
  *********/
@@ -5833,10 +5848,13 @@ window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame 
   box-shadow: none;
 }
 
-window.csd > overlay > stack > grid.app-back > revealer > box.toolbar button {
-  background-color: transparent;
+window.csd headerbar.titlebar button.suggested-action {
+  background-color: blue;
 }
 
+/************
+ * Swatches *
+ ************/
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
@@ -5900,6 +5918,9 @@ these are pretty self explicative */
 @define-color warning_color black;
 @define-color error_color black;
 @define-color success_color black;
+@define-color destructive_color #a3360a;
+@define-color suggested_color #3e935b
+
 /*
 FIXME this is really an API */
 @define-color content_view_bg #FFFFFF;

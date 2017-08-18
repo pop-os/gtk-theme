@@ -180,15 +180,26 @@ window.background.csd.rounded {
  * Spice-Up *
  ************/
 
-window.csd > overlay > stack > grid.app-back > revealer > box.toolbar {
-  box.frame {
-    button.image-button,
-    button.entry,
-    entry {
-      background-color: transparent;
-      box-shadow: none;
+window.csd {
+  > overlay > stack > grid.app-back > revealer > box.toolbar {
+    box.frame {
+      button.image-button,
+      button.entry,
+      entry {
+        background-color: transparent;
+        box-shadow: none;
+      }
     }
   }
 
-  button { background-color: transparent; }
+  headerbar.titlebar {
+    button.suggested-action { background-color: rgba(0,0,255,1);}
+  }
 }
+
+
+/************
+ * Swatches *
+ ************/
+
+
