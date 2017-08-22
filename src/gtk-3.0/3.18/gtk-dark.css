@@ -1,6 +1,3 @@
-/*****************************
- * Pop!_GTK+ Version 2.0.5r1 *
- *****************************/
 @keyframes ripple_effect {
   from {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
@@ -3283,8 +3280,7 @@ these are pretty self explicative */
 @define-color error_color black;
 @define-color success_color black;
 @define-color destructive_color #a3360a;
-@define-color suggested_color #3e935b
-
+@define-color suggested_color #3e935b;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #443d3a;
