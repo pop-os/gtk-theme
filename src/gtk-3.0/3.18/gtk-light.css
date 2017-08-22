@@ -1,3 +1,6 @@
+/*****************************
+ * Pop!_GTK+ Version 2.0.5r1 *
+ *****************************/
 @keyframes ripple_effect {
   from {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));

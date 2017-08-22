@@ -1,3 +1,6 @@
+/*****************************
+ * Pop!_GTK+ Version 2.0.5r1 *
+ *****************************/
 @keyframes ripple_effect {
   to {
     background-size: 1000% 1000%;
@@ -5664,7 +5667,7 @@ window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame 
 }
 
 window.csd headerbar.titlebar button.suggested-action {
-  background-color: blue;
+  background-color: #3e935b;
 }
 
 /************
