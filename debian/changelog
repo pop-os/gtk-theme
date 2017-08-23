@@ -1,3 +1,9 @@
+pop-gtk-theme (2.0.6.3) zesty; urgency=medium
+
+  * 'Theme' not 'themes'.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 23 Aug 2017 11:13:05 -0600
+
 pop-gtk-theme (2.0.6.2) zesty; urgency=medium
 
   * Install a GNOME Shell theme for GDM Themeing.
