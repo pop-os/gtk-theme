@@ -1,3 +1,9 @@
+pop-gtk-theme (2.0.6.4) zesty; urgency=medium
+ 
+  * Use brown instead of blue for login dialog background
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 23 Aug 2017 11:24:47 -0600
+
 pop-gtk-theme (2.0.6.3) zesty; urgency=medium
 
   * 'Theme' not 'themes'.
