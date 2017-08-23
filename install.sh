@@ -81,6 +81,9 @@ for color in '' '-dark' '-light' ; do
     cp -ur \
       gnome-shell${color}${size}.css \
       ${themedir}/gnome-shell/gnome-shell.css
+    cp -ur \
+      ubuntu.css \
+      ${themedir}/gnome-shell/ubuntu.css
     glib-compile-resources \
       --sourcedir=${themedir}/gnome-shell \
       --target=${themedir}/gnome-shell/gnome-shell-theme.gresource \

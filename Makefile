@@ -1,5 +1,9 @@
 all:
 	./parse-sass.sh
+	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.24/ubuntu.css
+	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.22/ubuntu.css
+	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.20/ubuntu.css
+	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.18/ubuntu.css
 
 install:
 	./install.sh $(DESTDIR)
