@@ -5670,6 +5670,14 @@ window.csd headerbar.titlebar button.suggested-action {
   background-color: #3e935b;
 }
 
+/*************
+ * AppCenter *
+ *************/
+row.activatable > grid.horizontal > stack, .view > grid.horizontal > stack, treeview.view header button > grid.horizontal > stack, .budgie-menu button > grid.horizontal > stack {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
 /************
  * Swatches *
  ************/
