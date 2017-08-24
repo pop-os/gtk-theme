@@ -206,9 +206,38 @@ window.csd {
   padding-bottom: 10px;
 }
 
+/**********
+ * Photos *
+ **********/
+
+.checkerboard-layout {
+  background-color: $dark_neutral_gray;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba($literally_black, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba($literally_black, 0.1) 75%,
+      rgba($literally_black, 0.1)
+    ),
+    linear-gradient(
+      45deg,
+      rgba($literally_black, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba($literally_black, 0.1) 75%,
+      rgba($literally_black, 0.1)
+    );
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.checkboard-layout .item {
+  background-color: $grey_200;
+}
+
 
 /************
  * Swatches *
  ************/
-
-
