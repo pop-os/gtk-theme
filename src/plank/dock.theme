@@ -1,0 +1,35 @@
+# Loosely based on the Plank theme from the elementary Stylesheet
+# https://github.com/elementary/stylesheet
+
+[PlankTheme]
+TopRoundness=4
+BottomRoundness=0
+LineWidth=1
+OuterStrokeColor=87;;79;;74;;0
+FillStartColor=87;;79;;74;;255
+FillEndColor=87;;79;;74;;255
+InnerStrokeColor=138;;130;;125;;255
+
+[PlankDockTheme]
+HorizPadding=0
+TopPadding=-7
+BottomPadding=1.5
+ItemPadding=3
+IndicatorSize=5
+IconShadowSize=1.2
+UrgentBounceHeight=1.6666666666666667
+LaunchBounceHeight=0.625
+FadeOpacity=1
+ClickTime=300
+UrgentBounceTime=0
+LaunchBounceTime=600
+ActiveTime=300
+SlideTime=300
+FadeTime=250
+HideTime=200
+GlowSize=0
+GlowTime=0
+GlowPulseTime=0
+UrgentHueShift=150
+ItemMoveTime=200
+CascadeHide=true
