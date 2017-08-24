@@ -155,19 +155,6 @@ window.rounded decoration {
     border-radius: $material_radius;
 }
 
-/**************
-* Back Button *
-**************/
-
-.back-button,
-.titlebar .back-button {
-    border-image: -gtk-scaled(url("assets/button-back.svg"), url("assets/button-back@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
-    border-width: 1px 3px 3px 11px;
-    border-radius: 0 2.5px 2.5px 0;
-    box-shadow: none;
-    padding: 2px 0;
-}
-
 /**********
  * Harvey *
  **********/
