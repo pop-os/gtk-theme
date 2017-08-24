@@ -25,6 +25,7 @@ Depends: gtk2-engines-pixbuf (>= 2.24.30),
 	 gtk2-engines-murrine (>= 0.98.1),
 	 libgtk2.0-common (>= 2.24.30),
 	 libgtk-3-common (>= 3.18.9),
+	 gnome-themes-standard (>= 3.18.9),
 	 ${misc:Depends}
 Conflicts: system76-pop-gtk-theme
 Description: Pop GTK Theme
