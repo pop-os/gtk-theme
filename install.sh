@@ -116,12 +116,12 @@ for color in '' '-dark' '-light' ; do
     cp -ur \
       assets \
       ${themedir}/gtk-common
-      
+
     # Install Plank theme
     install -d ${themedir}/plank
     cd ${srcdir}/plank
     cp -ur \
-      dock.theme
+      dock.theme \
       ${themedir}/plank
 
     for version in '3.18' '3.20' '3.22' ; do
