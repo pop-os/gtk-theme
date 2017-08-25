@@ -1357,7 +1357,7 @@ StScrollBar {
 
   .window-clone-border {
     border: 4px solid $inverse_track_color;
-    border-radius: 2px;
+    border-radius: $material_radius;
     // For window decorations with round corners we can't match
     // the exact shape when the window is scaled. So apply a shadow
     // to fix that case
@@ -1983,12 +1983,14 @@ $legacy_icon_size: 24px;
   .login-dialog-button-box { spacing: 5px; }
   .login-dialog-message-warning { color: $error_color; }
   .login-dialog-message-hint { padding-top: 0; padding-bottom: 20px; }
-  .login-dialog-user-selection-box { padding: 100px 0px; }
-  .login-dialog-not-listed-label {
-    padding-left: $material_radius;
-    .login-dialog-not-listed-button:focus &,
-    .login-dialog-not-listed-button:hover & {
-      color: $inverse_fg_color;
+  .login-dialog-user-selection-box {
+    padding: 100px 0px;
+    .login-dialog-not-listed-label {
+      padding-left: $material_radius;
+      .login-dialog-not-listed-button:focus &,
+      .login-dialog-not-listed-button:hover & {
+        color: $inverse_fg_color;
+      }
     }
   }
   .login-dialog-not-listed-label {
@@ -2096,13 +2098,13 @@ $legacy_icon_size: 24px;
   background-color: transparent;
   max-height: 500px;
   .summary-notification-stack-scrollview {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .notification,
   .screen-shield-notification-source {
-    padding: 8px;
+    padding-right: 20px;
     border: none;
     background-color: rgba($bg_color, 0.7);
     color: $fg_color;
