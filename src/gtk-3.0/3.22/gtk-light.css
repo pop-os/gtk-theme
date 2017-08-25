@@ -5706,6 +5706,20 @@ headerbar .budgie-run-dialog list .subtitle, .budgie-run-dialog list .budgie-not
  *              Daniel Fore <daniel@elementary.io>
  *              Ian Santopietro <ian@system76.com>
  */
+/****************
+ * Back Buttons *
+ ****************/
+button.back-button,
+.titlebar .back-button {
+  background-image: -gtk-icontheme("go-previous-symbolic");
+  background-size: 16px;
+  background-position: 12px 50%;
+  background-color: transparent;
+  background-repeat: no-repeat no-repeat;
+  padding-left: 34px;
+  box-shadow: none;
+}
+
 /***************
  * Text Styles *
  ***************/
