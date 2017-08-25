@@ -244,6 +244,14 @@ UnityPanelWidget:backdrop,
   color: $primary_color;
 }
 
+// Pantheon Panel
+
+.panel {
+    background-color: $panel_bg_color;
+    transition: all 100ms ease-in-out;
+    font-weight: normal;
+}
+
 
 /*********************
  * elementary Photos *
