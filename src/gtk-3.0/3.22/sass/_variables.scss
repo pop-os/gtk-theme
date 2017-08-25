@@ -30,9 +30,9 @@ $circular_radius: 9999px;
 $other_radius: 4px;
 
 // durations
-$shorter_duration: 0.1s;
-$longer_duration: 0.2s;
-$ripple_duration: 0.2s;
+$shorter_duration: 180ms;
+$longer_duration: 270ms;
+$ripple_duration: 450ms;
 
 // timing functions
 $standard_curve: cubic-bezier(0.4, 0.0, 0.2, 1);
