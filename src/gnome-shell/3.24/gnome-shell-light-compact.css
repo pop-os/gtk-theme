@@ -2829,7 +2829,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #lockDialogGroup {
-  background: #3b3633 url("assets/noise-texture.svg");
+  background-color: #3b3633;
   background-size: cover;
 }
 
