@@ -3219,6 +3219,12 @@ UnityPanelWidget:backdrop,
   color: #48b9c7;
 }
 
+.panel {
+  background-color: #040404;
+  transition: all 100ms ease-in-out;
+  font-weight: normal;
+}
+
 /*********************
  * elementary Photos *
  ********************/

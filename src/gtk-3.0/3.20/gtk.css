@@ -5653,6 +5653,15 @@ window.rounded decoration {
   border-radius: 4px;
 }
 
+/******************
+ * Pantheon Panel *
+ ******************/
+.panel {
+  background-color: #040404;
+  transition: all 100ms ease-in-out;
+  font-weight: normal;
+}
+
 /**********
  * Harvey *
  **********/

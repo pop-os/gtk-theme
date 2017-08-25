@@ -155,6 +155,16 @@ window.rounded decoration {
     border-radius: $material_radius;
 }
 
+/******************
+ * Pantheon Panel *
+ ******************/
+
+.panel {
+    background-color: $panel_bg_color;
+    transition: all 100ms ease-in-out;
+    font-weight: normal;
+}
+
 /**********
  * Harvey *
  **********/
