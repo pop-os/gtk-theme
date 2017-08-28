@@ -511,15 +511,6 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 /***********
  * Buttons *
  ***********/
-@keyframes needs_attention {
-  from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(#faa41a), to(transparent));
-  }
-  to {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#faa41a), to(transparent));
-  }
-}
-
 
 button {
   min-height: 24px;
@@ -527,13 +518,9 @@ button {
   padding: 4px 8px;
   border-radius: 4px;
   font-weight: 500;
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1), background-size 450ms cubic-bezier(0, 0, 0.2, 1), background-image 900ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), inset 0 0 0 9999px transparent;
   background-color: #574f4a;
-  background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1000% 1000%;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -545,11 +532,8 @@ button:hover {
 
 
 button:active {
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0, background-image 0;
-  animation: ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 0 0 9999px alpha(currentColor, 0.15);
-  background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
-  background-size: 0% 0%;
   color: #FFFFFF;
 }
 
@@ -579,13 +563,9 @@ radio, calendar.button, messagedialog.csd .dialog-action-area button, button.sid
 .path-bar button, layouttabbar button, .mate-panel-menu-bar #PanelApplet button, .budgie-panel #tasklist-button, .raven stackswitcher.linked > button, toolbar button, .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
 headerbar button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button,
 button.flat {
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-size 450ms cubic-bezier(0, 0, 0.2, 1), background-image 900ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px transparent;
   background-color: transparent;
-  background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1000% 1000%;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -607,11 +587,8 @@ radio:active, calendar.button:active, messagedialog.csd .dialog-action-area butt
 .path-bar button:active, layouttabbar button:active, .mate-panel-menu-bar #PanelApplet button:active, .budgie-panel #tasklist-button:active, .raven stackswitcher.linked > button:active, toolbar button:active, .titlebar:not(headerbar) button:active:not(.suggested-action):not(.destructive-action),
 headerbar button:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active,
 button.flat:active {
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0, background-image 0;
-  animation: ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.15);
-  background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
-  background-size: 0% 0%;
   color: #FFFFFF;
 }
 
@@ -1378,7 +1355,6 @@ headerbar button.destructive-action:disabled {
 .selection-mode.titlebar:not(headerbar),
 headerbar.selection-mode {
   transition: background-color 0.00001s 270ms;
-  animation: header_ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), inset 0 1px rgba(255, 255, 255, 0.2);
   background-color: #48b9c7;
   color: #FFFFFF;
@@ -3176,8 +3152,7 @@ row.activatable:hover, .view:hover, treeview.view header button:hover, .budgie-m
 }
 
 row.activatable.has-open-popup, .has-open-popup.view, treeview.view header button.has-open-popup, .budgie-menu button.has-open-popup, row.activatable:active, .view:active, treeview.view header button:active, .budgie-menu button:active {
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0, color 0, background-size 0, background-image 0;
-  animation: ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0, color 0;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.15);
   background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
   background-size: 0% 0%;
