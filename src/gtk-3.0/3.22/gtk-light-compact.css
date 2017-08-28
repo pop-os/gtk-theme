@@ -756,7 +756,7 @@ button.osd:disabled {
 
 
 button.suggested-action {
-  background-color: #01967a;
+  background-color: #3e935b;
   color: #FFFFFF;
 }
 
@@ -769,13 +769,13 @@ button.suggested-action:disabled {
 
 
 button.suggested-action:checked {
-  background-color: #4db6a2;
+  background-color: #78b38c;
 }
 
 
 button.suggested-action.flat {
   background-color: transparent;
-  color: #01967a;
+  color: #3e935b;
 }
 
 
@@ -787,12 +787,12 @@ button.suggested-action.flat:disabled {
 
 
 button.suggested-action.flat:checked {
-  background-color: rgba(1, 150, 122, 0.3);
+  background-color: rgba(62, 147, 91, 0.3);
 }
 
 
 button.destructive-action {
-  background-color: #db3400;
+  background-color: #a3360a;
   color: #FFFFFF;
 }
 
@@ -805,13 +805,13 @@ button.destructive-action:disabled {
 
 
 button.destructive-action:checked {
-  background-color: #e6714d;
+  background-color: #be7254;
 }
 
 
 button.destructive-action.flat {
   background-color: transparent;
-  color: #db3400;
+  color: #a3360a;
 }
 
 
@@ -823,7 +823,7 @@ button.destructive-action.flat:disabled {
 
 
 button.destructive-action.flat:checked {
-  background-color: rgba(219, 52, 0, 0.3);
+  background-color: rgba(163, 54, 10, 0.3);
 }
 
 .stack-switcher >
@@ -5320,7 +5320,7 @@ popover.background.places-menu row {
 }
 
 .budgie-panel .alert {
-  color: #db3400;
+  color: #a3360a;
 }
 
 .budgie-panel #tasklist-button {
@@ -5597,7 +5597,7 @@ calendar.raven-calendar:selected {
 }
 
 .budgie-polkit-dialog .failure {
-  color: #db3400;
+  color: #a3360a;
 }
 
 .budgie-run-dialog {
@@ -5883,7 +5883,7 @@ window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame 
 }
 
 window.csd headerbar.titlebar button.suggested-action {
-  background-color: #01967a;
+  background-color: #3e935b;
 }
 
 /*************
@@ -5974,8 +5974,8 @@ these are pretty self explicative */
 @define-color warning_color black;
 @define-color error_color black;
 @define-color success_color black;
-@define-color destructive_color #db3400;
-@define-color suggested_color #01967a;
+@define-color destructive_color #a3360a;
+@define-color suggested_color #3e935b;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #FFFFFF;
