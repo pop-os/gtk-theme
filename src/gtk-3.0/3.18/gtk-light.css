@@ -498,7 +498,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 
 .button.suggested-action {
-  background-color: #3e935b;
+  background-color: #01967a;
   color: #FFFFFF;
 }
 
@@ -516,14 +516,14 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 
 .button.suggested-action:checked {
-  background-color: #78b38c;
+  background-color: #4db6a2;
 }
 
 .toolbar:not(.search-bar) .suggested-action.button, .titlebar .suggested-action.button:not(.suggested-action):not(.destructive-action),
 .header-bar .suggested-action.button:not(.suggested-action):not(.destructive-action), .frame.action-bar .suggested-action.button:not(.suggested-action):not(.destructive-action), .app-notification .suggested-action.button,
 .button.suggested-action.flat {
   background-color: transparent;
-  color: #3e935b;
+  color: #01967a;
 }
 
 .toolbar:not(.search-bar) .suggested-action.button:insensitive, .titlebar .suggested-action.button:insensitive:not(.suggested-action):not(.destructive-action),
@@ -548,7 +548,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 
 .button.destructive-action {
-  background-color: #a3360a;
+  background-color: #db3400;
   color: #FFFFFF;
 }
 
@@ -566,14 +566,14 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 
 .button.destructive-action:checked {
-  background-color: #be7254;
+  background-color: #e6714d;
 }
 
 .toolbar:not(.search-bar) .destructive-action.button, .titlebar .destructive-action.button:not(.suggested-action):not(.destructive-action),
 .header-bar .destructive-action.button:not(.suggested-action):not(.destructive-action), .frame.action-bar .destructive-action.button:not(.suggested-action):not(.destructive-action), .app-notification .destructive-action.button,
 .button.destructive-action.flat {
   background-color: transparent;
-  color: #a3360a;
+  color: #db3400;
 }
 
 .toolbar:not(.search-bar) .destructive-action.button:insensitive, .titlebar .destructive-action.button:insensitive:not(.suggested-action):not(.destructive-action),
@@ -3302,8 +3302,8 @@ these are pretty self explicative */
 @define-color warning_color black;
 @define-color error_color black;
 @define-color success_color black;
-@define-color destructive_color #a3360a;
-@define-color suggested_color #3e935b;
+@define-color destructive_color #db3400;
+@define-color suggested_color #01967a;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #FFFFFF;
