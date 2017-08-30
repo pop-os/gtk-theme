@@ -3002,11 +3002,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Dash to Dock */
 #dashtodockContainer #dash {
-  background-color: #2e2927;
+  background-color: rgba(37, 34, 32, 0.85);
 }
 
 #dashtodockContainer:overview #dash {
-  background-color: #2e2927;
+  background-color: rgba(37, 34, 32, 0.85);
 }
 
 #dashtodockContainer.extended:overview #dash {
@@ -3225,4 +3225,38 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu .search-entry:hover .search-entry-icon, .popup-menu .search-entry:focus .search-entry-icon {
   color: rgba(87, 79, 74, 0.87);
+}
+
+/*****************
+ * GNOME Classic *
+ *****************/
+#panel.bottom-panel, #panel.bottom-panel.solid {
+  height: 32px;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+  border-color: #252220;
+  background-color: #252220;
+  background-gradient-drection: vertical;
+  background-gradient-start: #252220;
+  background-gradient-end: #252220;
+  color: rgba(87, 79, 74, 0.87);
+}
+
+#panel {
+  height: 32px;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-color: #252220;
+  background-color: #252220;
+  background-gradient-drection: vertical;
+  background-gradient-start: #252220;
+  background-gradient-end: #252220;
+  color: rgba(87, 79, 74, 0.87);
+}
+
+#panel .panel-button:active, #panel .panel-button:focus {
+  background-color: #413b37;
+  background-gradient-drection: vertical;
+  background-gradient-start: #413b37;
+  background-gradient-end: #413b37;
 }
