@@ -175,7 +175,7 @@ assistant {
   .sidebar label {
     min-height: $medium_size;
     padding: 0 12px;
-    color: $hint_fg_color;
+    color: $fg_color;
     font-weight: 500;
 
     &.highlight { color: $fg_color; }
@@ -2967,6 +2967,7 @@ placessidebar {
     min-height: 32px;
     margin: -1px 0; // Remove unknown margins
     padding: 0;
+    color: $fg_color;
 
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
@@ -2980,7 +2981,7 @@ placessidebar {
     &:disabled { color: $disabled_fg_color; }
 
     image.sidebar-icon {
-      color: $secondary_fg_color; // dim the device icons
+      color: $fg_color; // dim the device icons
 
       &:dir(ltr) { padding-right: 8px; }
       &:dir(rtl) { padding-left: 8px; }

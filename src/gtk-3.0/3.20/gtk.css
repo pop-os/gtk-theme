@@ -159,7 +159,7 @@ assistant .sidebar {
 assistant .sidebar label {
   min-height: 36px;
   padding: 0 12px;
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(87, 79, 74, 0.87);
   font-weight: 500;
 }
 
@@ -3345,6 +3345,7 @@ placessidebar row {
   min-height: 32px;
   margin: -1px 0;
   padding: 0;
+  color: rgba(87, 79, 74, 0.87);
 }
 
 placessidebar row > revealer {
@@ -3361,7 +3362,7 @@ placessidebar row:disabled {
 }
 
 placessidebar row image.sidebar-icon {
-  color: rgba(87, 79, 74, 0.54);
+  color: rgba(87, 79, 74, 0.87);
 }
 
 placessidebar row image.sidebar-icon:dir(ltr) {
