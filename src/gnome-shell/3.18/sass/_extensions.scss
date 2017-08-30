@@ -1,11 +1,11 @@
 /* Dash to Dock */
 
 #dashtodockContainer #dash {
-  background-color: $inverse_bg_color;
+  background-color: rgba($panel_bg_color, 0.85);
 }
 
 #dashtodockContainer:overview #dash {
-  background-color: $inverse_bg_color;
+  background-color: rgba($panel_bg_color, 0.85);
 }
 
 #dashtodockContainer.extended:overview #dash {
@@ -112,6 +112,46 @@
 
     &:hover, &:focus {
       .search-entry-icon { color: $fg_color; }
+    }
+  }
+}
+
+/*****************
+ * GNOME Classic *
+ *****************/
+
+#panel.bottom-panel {
+  &, &.solid {
+    height: 32px; // = 1.875em
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    border-color: $panel_bg_color;
+    background-color: $panel_bg_color;
+    background-gradient-drection: vertical;
+    background-gradient-start: $panel_bg_color;
+    background-gradient-end: $panel_bg_color;
+    color: $fg_color;
+  }
+}
+
+#panel {
+  height: 32px; // = 1.875em
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-color: $panel_bg_color;
+  background-color: $panel_bg_color;
+  background-gradient-drection: vertical;
+  background-gradient-start: $panel_bg_color;
+  background-gradient-end: $panel_bg_color;
+  color: $fg_color;
+
+  .panel-button {
+    &:active,
+    &:focus {
+      background-color: lighten($panel_bg_color, 10%);
+      background-gradient-drection: vertical;
+      background-gradient-start: lighten($panel_bg_color, 10%);
+      background-gradient-end: lighten($panel_bg_color, 10%);
     }
   }
 }
