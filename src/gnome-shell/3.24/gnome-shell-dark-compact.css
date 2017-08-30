@@ -3255,8 +3255,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button:active, #panel .panel-button:focus {
-  background-color: #413b37;
+  background-color: #252220;
   background-gradient-drection: vertical;
-  background-gradient-start: #413b37;
-  background-gradient-end: #413b37;
+  background-gradient-start: #252220;
+  background-gradient-end: #252220;
 }

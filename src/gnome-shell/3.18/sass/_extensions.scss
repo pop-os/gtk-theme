@@ -148,10 +148,10 @@
   .panel-button {
     &:active,
     &:focus {
-      background-color: lighten($panel_bg_color, 10%);
+      background-color: $panel_bg_color;
       background-gradient-drection: vertical;
-      background-gradient-start: lighten($panel_bg_color, 10%);
-      background-gradient-end: lighten($panel_bg_color, 10%);
+      background-gradient-start: $panel_bg_color;
+      background-gradient-end: $panel_bg_color;
     }
   }
 }
