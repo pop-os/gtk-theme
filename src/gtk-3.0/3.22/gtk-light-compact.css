@@ -3266,6 +3266,7 @@ messagedialog.csd.background {
 }
 
 messagedialog.csd .dialog-action-area button {
+  color: rgba(87, 79, 74, 0.87);
   padding: 8px 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 0;
@@ -3280,7 +3281,8 @@ messagedialog.csd .dialog-action-area button:last-child {
 }
 
 messagedialog.csd .dialog-action-area button:focus {
-  background-color: rgba(250, 164, 26, 0.3);
+  background-color: #fbdc96;
+  color: rgba(87, 79, 74, 0.9);
 }
 
 filechooser .dialog-action-box {
@@ -5757,20 +5759,20 @@ headerbar .welcome .subtitle, .welcome .budgie-notification .notification-body, 
 }
 
 .storage-bar .fill-block {
-  background-color: #ededed;
+  background-color: #c8c8c8;
   border: 2px solid rgba(0, 0, 0, 0.35);
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
   border-bottom-width: 2px;
-  border-bottom-color: #949494;
+  border-bottom-color: #959595;
   padding: 8px 6px;
 }
 
 .storage-bar .empty-block {
-  background-color: #c8c8c8;
+  background-color: #ededed;
   border-bottom-width: 2px;
-  border-bottom-color: #959595;
+  border-bottom-color: #949494;
 }
 
 .storage-bar .app {

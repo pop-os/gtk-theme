@@ -2871,6 +2871,7 @@ messagedialog { // Message Dialog styling
     }
 
     .dialog-action-area button {
+      color: $fg_color;
       padding: 8px 16px;
       border-top: 1px solid $border_color;
       border-radius: 0;
@@ -2882,7 +2883,8 @@ messagedialog { // Message Dialog styling
       &:last-child { border-bottom-right-radius: $other_radius; }
 
       &:focus {
-      	background-color: rgba($accent_color, 0.3);
+      	background-color: $modal_button_color;
+      	color: rgba($fg_color, 0.9);
 	    }
     }
   }

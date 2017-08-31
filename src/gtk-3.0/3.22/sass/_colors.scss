@@ -72,10 +72,12 @@ $fill_color:      gtkalpha(currentColor, $lower_opacity);
 $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
 $row_fill_color:  gtkalpha(currentColor, 0.05);
 
+$modal_button_color: if($variant == 'light', #fbdc96, #cc7900);
+
 // Misc colors
-$primary_color:         $blue_500;
+$primary_color:         if($variant == 'light', $blue_500, #0a97a5);
 $alt_primary_color:     $blue_300;
-$accent_color:          $orange_A200;
+$accent_color:          if($variant == 'light', $orange_A200, #cc7900);
 $disabled_accent_color: rgba($accent_color, 0.5);
 
 $link_color:         $orange_500;

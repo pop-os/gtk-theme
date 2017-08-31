@@ -103,20 +103,20 @@ listbox .h4 {
 }
 
 .storage-bar .fill-block {
-    background-color: darken($alt_base_color, 5%);
+    background-color: darken($darker_bg_color, 15%);
     border: 2px solid rgba($black, 0.35);
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 2px;
-    border-bottom-color: darken($alt_base_color, 40%);
+    border-bottom-color: darken($darker_bg_color, 35%);
     padding: 8px 6px;
 }
 
 .storage-bar .empty-block {
-    background-color: darken($darker_bg_color, 15%);
+    background-color: darken($alt_base_color, 5%);
     border-bottom-width: 2px;
-    border-bottom-color: darken($darker_bg_color, 35%);
+    border-bottom-color: darken($alt_base_color, 40%);
 }
 
 .storage-bar .app {
