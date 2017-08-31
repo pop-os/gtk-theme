@@ -1,3 +1,10 @@
+pop-gtk-theme (2.1.1.0) artful; urgency=medium
+
+  * Darkened brand colors in dark themes for better usability.
+  * Revised color theory on certain widgets for better appearance.
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 31 Aug 2017 14:17:23 -0600
+
 pop-gtk-theme (2.1.0.0) artful; urgency=medium
 
   * Update for 17.10.
