@@ -1,14 +1,14 @@
-pop-gtk-theme (2.1.0.0) UNRELEASED; urgency=medium
+pop-gtk-theme (2.1.0.0) artful; urgency=medium
 
   * Update for 17.10.
   * Newly pulled from upstream codebase.
   * Added styling for Panthon Photos, Plank, and other elementary apps/widgets.
   * GDM Theming.
   * Fixed a bug that made syslog fill with GNOME Shell errors.
-  * Several typo fixes.
+  * Several typo fixes. 
   * Fixes for some clipped buttons in 17.10.
 
- -- Ian Santopietro <ian@system76.com>  Fri, 25 Aug 2017 12:02:46 -0600
+ -- Ian Santopietro <ian@system76.com>  Thu, 31 Aug 2017 11:08:02 -0600
 
 pop-gtk-theme (2.0.6.4) zesty; urgency=medium
  
