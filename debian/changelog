@@ -1,3 +1,9 @@
+pop-gtk-theme (2.1.1.2) artful; urgency=medium
+
+  * Move gnome-shell mode
+
+ -- Jeremy Soller <jeremy@system76.com>  Wed, 06 Sep 2017 15:32:31 -0600
+
 pop-gtk-theme (2.1.1.1) artful; urgency=medium
 
   * Add gnome shell mode
