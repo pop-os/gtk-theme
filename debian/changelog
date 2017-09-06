@@ -1,3 +1,9 @@
+pop-gtk-theme (2.1.1.1) artful; urgency=medium
+
+  * Add gnome shell mode
+
+ -- Jeremy Soller <jeremy@system76.com>  Wed, 06 Sep 2017 14:44:59 -0600
+
 pop-gtk-theme (2.1.1.0) artful; urgency=medium
 
   * Darkened brand colors in dark themes for better usability.
