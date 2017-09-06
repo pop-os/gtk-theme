@@ -82,9 +82,6 @@ for color in '' '-dark' '-light' ; do
       gnome-shell${color}${size}.css \
       ${themedir}/gnome-shell/gnome-shell.css
     cp -ur \
-      pop.json \
-      ${themedir}/gnome-shell/pop.json
-    cp -ur \
       ubuntu.css \
       ${themedir}/gnome-shell/ubuntu.css
     glib-compile-resources \
