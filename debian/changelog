@@ -1,3 +1,9 @@
+pop-gtk-theme (2.1.1.5) artful; urgency=medium
+
+  * Move gnome-shell theme to pop.css
+
+ -- Jeremy Soller <jeremy@system76.com>  Thu, 07 Sep 2017 13:02:44 -0600
+
 pop-gtk-theme (2.1.1.4) artful; urgency=medium
 
   * Add assets to gnome-shell theme
