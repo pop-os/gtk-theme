@@ -35,7 +35,4 @@ Description: Pop GTK Theme
 Package: pop-gnome-shell-theme
 Architecture: all
 Depends: gnome-shell-common
-Replaces: gnome-shell-common
 Description: The Pop GNOME Shell theme, installed for GDM.
-
-
