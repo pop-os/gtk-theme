@@ -1,3 +1,9 @@
+pop-gtk-theme (2.1.1.7) artful; urgency=medium
+
+  * Add alternative for gdm3
+
+ -- Jeremy Soller <jeremy@system76.com>  Fri, 08 Sep 2017 15:49:57 -0600
+
 pop-gtk-theme (2.1.1.6) artful; urgency=medium
 
   * pop-gnome-shell-theme no longer replaces gnome-shell-common
