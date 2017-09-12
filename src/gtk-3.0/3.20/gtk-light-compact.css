@@ -205,7 +205,7 @@ entry {
   padding: 0 8px;
   border-radius: 4px;
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(87, 79, 74, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: #FFFFFF;
   color: rgba(87, 79, 74, 0.87);
@@ -233,7 +233,7 @@ entry.flat {
   border-radius: 0;
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #48b9c7 0%, transparent 0%) 0 0 0/0 0 0px;
-  box-shadow: inset 0 -1px rgba(87, 79, 74, 0.26);
+  box-shadow: inset 0 -1px rgba(4, 4, 4, 0.26);
   background-color: transparent;
   color: rgba(87, 79, 74, 0.87);
 }
@@ -242,7 +242,7 @@ spinbutton.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry:fo
 notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), messagedialog entry:focus, colorchooser .popover.osd spinbutton:focus:not(.vertical), layoutpane entry.search:focus, editortweak entry.search:focus, .raven .raven-background spinbutton:focus:not(.vertical), #login_window entry:focus,
 entry.flat:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #48b9c7 100%, transparent 0%) 0 0 2/0 0 2px;
-  box-shadow: inset 0 -1px rgba(87, 79, 74, 0.26);
+  box-shadow: inset 0 -1px rgba(4, 4, 4, 0.26);
 }
 
 spinbutton.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry:disabled:not(.search),
@@ -306,7 +306,7 @@ entry undershoot.right {
 spinbutton.error:not(.vertical),
 entry.error {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(87, 79, 74, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: black;
   color: #FFFFFF;
@@ -372,7 +372,7 @@ entry.error image:disabled {
 spinbutton.warning:not(.vertical),
 entry.warning {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(87, 79, 74, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: black;
   color: #FFFFFF;
@@ -607,7 +607,7 @@ button.flat:disabled {
 .path-bar button:checked, layouttabbar button:checked, .mate-panel-menu-bar #PanelApplet button:checked, .budgie-panel #tasklist-button:checked, .raven stackswitcher.linked > button:checked, toolbar button:checked, .titlebar:not(headerbar) button:checked:not(.suggested-action):not(.destructive-action),
 headerbar button:checked:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked,
 button.flat:checked {
-  background-color: rgba(87, 79, 74, 0.26);
+  background-color: rgba(4, 4, 4, 0.26);
   color: rgba(87, 79, 74, 0.87);
 }
 
@@ -1071,7 +1071,7 @@ combobox arrow {
 
 combobox entry ~ button.combo {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(87, 79, 74, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: #FFFFFF;
   color: rgba(87, 79, 74, 0.87);
@@ -1119,7 +1119,7 @@ combobox:drop(active) {
 
 box.horizontal.linked > entry + button:not(.combo) {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(87, 79, 74, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: #FFFFFF;
   color: rgba(87, 79, 74, 0.87);
@@ -1137,7 +1137,7 @@ notebook > stack:not(:only-child) button.combo, .raven .raven-background button.
   font-weight: inherit;
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #48b9c7 0%, transparent 0%) 0 0 0/0 0 0px;
-  box-shadow: inset 0 -1px rgba(87, 79, 74, 0.26);
+  box-shadow: inset 0 -1px rgba(4, 4, 4, 0.26);
   background-color: transparent;
   color: rgba(87, 79, 74, 0.87);
 }
@@ -1560,7 +1560,7 @@ window.csd > .titlebar:not(headerbar) {
  * Tree Views *
  **************/
 treeview.view {
-  border-left-color: rgba(87, 79, 74, 0.26);
+  border-left-color: rgba(4, 4, 4, 0.26);
   border-top-color: rgba(0, 0, 0, 0.12);
 }
 
@@ -1936,7 +1936,7 @@ notebook > header.top > tabs {
 }
 
 notebook > header.top > tabs > tab:hover {
-  box-shadow: inset 0 -2px rgba(87, 79, 74, 0.26);
+  box-shadow: inset 0 -2px rgba(4, 4, 4, 0.26);
 }
 
 notebook > header.top > tabs > tab:checked {
@@ -1952,7 +1952,7 @@ notebook > header.bottom > tabs {
 }
 
 notebook > header.bottom > tabs > tab:hover {
-  box-shadow: inset 0 2px rgba(87, 79, 74, 0.26);
+  box-shadow: inset 0 2px rgba(4, 4, 4, 0.26);
 }
 
 notebook > header.bottom > tabs > tab:checked {
@@ -1968,7 +1968,7 @@ notebook > header.left > tabs {
 }
 
 notebook > header.left > tabs > tab:hover {
-  box-shadow: inset -2px 0 rgba(87, 79, 74, 0.26);
+  box-shadow: inset -2px 0 rgba(4, 4, 4, 0.26);
 }
 
 notebook > header.left > tabs > tab:checked {
@@ -1984,7 +1984,7 @@ notebook > header.right > tabs {
 }
 
 notebook > header.right > tabs > tab:hover {
-  box-shadow: inset 2px 0 rgba(87, 79, 74, 0.26);
+  box-shadow: inset 2px 0 rgba(4, 4, 4, 0.26);
 }
 
 notebook > header.right > tabs > tab:checked {
@@ -2291,7 +2291,7 @@ switch {
   padding: 0 2px;
   border: 5px solid transparent;
   border-radius: 9999px;
-  background-color: rgba(87, 79, 74, 0.26);
+  background-color: rgba(4, 4, 4, 0.26);
   background-clip: padding-box;
   font-size: 0;
 }
@@ -2669,7 +2669,7 @@ scale slider {
 scale trough {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   outline-offset: 2px;
-  background-color: rgba(87, 79, 74, 0.26);
+  background-color: rgba(4, 4, 4, 0.26);
 }
 
 scale trough:disabled {
@@ -2687,7 +2687,7 @@ scale highlight:disabled {
 
 scale fill {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: rgba(87, 79, 74, 0.26);
+  background-color: rgba(4, 4, 4, 0.26);
 }
 
 scale fill:disabled {
@@ -2727,7 +2727,7 @@ scale value {
 }
 
 scale marks {
-  color: rgba(87, 79, 74, 0.26);
+  color: rgba(4, 4, 4, 0.26);
 }
 
 scale marks.top {
@@ -4125,7 +4125,7 @@ docktab {
 }
 
 docktab:hover {
-  box-shadow: inset 0 -2px rgba(87, 79, 74, 0.26);
+  box-shadow: inset 0 -2px rgba(4, 4, 4, 0.26);
   color: rgba(87, 79, 74, 0.87);
 }
 
@@ -4147,7 +4147,7 @@ dockoverlayedge docktabstrip {
 }
 
 dockoverlayedge.left-edge docktab:hover {
-  box-shadow: inset -2px 0 rgba(87, 79, 74, 0.26);
+  box-shadow: inset -2px 0 rgba(4, 4, 4, 0.26);
 }
 
 dockoverlayedge.left-edge docktab:checked {
@@ -4155,7 +4155,7 @@ dockoverlayedge.left-edge docktab:checked {
 }
 
 dockoverlayedge.right-edge docktab:hover {
-  box-shadow: inset 2px 0 rgba(87, 79, 74, 0.26);
+  box-shadow: inset 2px 0 rgba(4, 4, 4, 0.26);
 }
 
 dockoverlayedge.right-edge docktab:checked {

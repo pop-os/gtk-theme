@@ -1,3 +1,9 @@
+pop-gtk-theme (2.1.1.8) artful; urgency=medium
+
+  * Change track_color to slightly darker color
+
+ -- Jeremy Soller <jeremy@system76.com>  Tue, 12 Sep 2017 16:13:18 -0600
+
 pop-gtk-theme (2.1.1.7) artful; urgency=medium
 
   * Add alternative for gdm3
