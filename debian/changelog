@@ -1,3 +1,9 @@
+pop-gtk-theme (2.1.1.10) artful; urgency=medium
+
+  * Bump version
+
+ -- Jeremy Soller <jeremy@system76.com>  Wed, 13 Sep 2017 15:21:05 -0600
+
 pop-gtk-theme (2.1.1.9) artful; urgency=medium
 
   * Add rule to set gnome-control-center sidebar to orange
