@@ -1,9 +1,5 @@
 all:
 	./parse-sass.sh
-	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.24/pop.css
-	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.22/pop.css
-	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.20/pop.css
-	cp ./src/gnome-shell/3.24/gnome-shell.css ./src/gnome-shell/3.18/pop.css
 
 install:
 	./install.sh $(DESTDIR)
