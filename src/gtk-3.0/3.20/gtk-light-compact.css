@@ -3332,6 +3332,14 @@ stacksidebar row > label {
   padding-right: 6px;
 }
 
+/******************
+ * Control center *
+ *****************/
+stack list row:selected {
+  color: #FFFFFF;
+  background-color: #faa41a;
+}
+
 /****************
  * File chooser *
  ****************/

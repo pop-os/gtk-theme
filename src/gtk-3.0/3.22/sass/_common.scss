@@ -2955,6 +2955,14 @@ stacksidebar {
   }
 }
 
+/******************
+ * Control center *
+ *****************/
+
+stack list row:selected {
+    color: $inverse_fg_color;
+    background-color: $accent_color;
+}
 
 /****************
  * File chooser *
