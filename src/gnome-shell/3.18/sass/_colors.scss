@@ -69,9 +69,9 @@ $disabled_accent_color: rgba($accent_color, 0.5);
 $link_color:         $orange_500;
 $visited_link_color: if($variant == 'dark', $orange_400, $orange_600);
 
-$warning_color: $yellow_A700;
-$error_color:   $red_A700;
-$success_color: $green_A700;
+$warning_color: $yellow_700;
+$error_color:   $red_700;
+$success_color: $green_700;
 
 $suggested_color:   $green_600;
 $destructive_color: $red_600;

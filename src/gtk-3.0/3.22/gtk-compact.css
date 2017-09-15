@@ -19,7 +19,7 @@
 * {
   background-clip: padding-box;
   -GtkToolButton-icon-spacing: 0;
-  -GtkTextView-error-underline-color: black;
+  -GtkTextView-error-underline-color: #431604;
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkToolItemGroup-expander-size: 11;
   -GtkWidget-text-handle-width: 24;
@@ -308,7 +308,7 @@ entry.error {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
-  background-color: black;
+  background-color: #431604;
   color: #FFFFFF;
 }
 
@@ -332,8 +332,8 @@ spinbutton.error.flat:not(.vertical), notebook > stack:not(:only-child) entry.er
 notebook > stack:not(:only-child) spinbutton.error:not(.vertical), messagedialog entry.error, colorchooser .popover.osd spinbutton.error:not(.vertical), entry.error.preferences-search, layoutpane entry.error.search, editortweak entry.error.search, .raven .raven-background spinbutton.error:not(.vertical), #login_window entry.error,
 entry.error.flat {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), black 0%, transparent 0%) 0 0 0/0 0 0px;
-  box-shadow: inset 0 -1px black;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #431604 0%, transparent 0%) 0 0 0/0 0 0px;
+  box-shadow: inset 0 -1px #431604;
   background-color: transparent;
   color: rgba(87, 79, 74, 0.87);
 }
@@ -341,8 +341,8 @@ entry.error.flat {
 spinbutton.error.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry.error:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), messagedialog entry.error:focus, colorchooser .popover.osd spinbutton.error:focus:not(.vertical), entry.error.preferences-search:focus, layoutpane entry.error.search:focus, editortweak entry.error.search:focus, .raven .raven-background spinbutton.error:focus:not(.vertical), #login_window entry.error:focus,
 entry.error.flat:focus {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), black 100%, transparent 0%) 0 0 2/0 0 2px;
-  box-shadow: inset 0 -1px black;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #431604 100%, transparent 0%) 0 0 2/0 0 2px;
+  box-shadow: inset 0 -1px #431604;
 }
 
 spinbutton.error.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry.error:disabled:not(.search),
@@ -374,7 +374,7 @@ entry.warning {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(4, 4, 4, 0.26) 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
-  background-color: black;
+  background-color: #845f00;
   color: #FFFFFF;
 }
 
@@ -398,8 +398,8 @@ spinbutton.warning.flat:not(.vertical), notebook > stack:not(:only-child) entry.
 notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), messagedialog entry.warning, colorchooser .popover.osd spinbutton.warning:not(.vertical), entry.warning.preferences-search, layoutpane entry.warning.search, editortweak entry.warning.search, .raven .raven-background spinbutton.warning:not(.vertical), #login_window entry.warning,
 entry.warning.flat {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), black 0%, transparent 0%) 0 0 0/0 0 0px;
-  box-shadow: inset 0 -1px black;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #845f00 0%, transparent 0%) 0 0 0/0 0 0px;
+  box-shadow: inset 0 -1px #845f00;
   background-color: transparent;
   color: rgba(87, 79, 74, 0.87);
 }
@@ -407,8 +407,8 @@ entry.warning.flat {
 spinbutton.warning.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry.warning:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), messagedialog entry.warning:focus, colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), entry.warning.preferences-search:focus, layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, .raven .raven-background spinbutton.warning:focus:not(.vertical), #login_window entry.warning:focus,
 entry.warning.flat:focus {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), black 100%, transparent 0%) 0 0 2/0 0 2px;
-  box-shadow: inset 0 -1px black;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #845f00 100%, transparent 0%) 0 0 2/0 0 2px;
+  box-shadow: inset 0 -1px #845f00;
 }
 
 spinbutton.warning.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry.warning:disabled:not(.search),
@@ -2972,7 +2972,7 @@ levelbar.vertical.discrete trough {
 }
 
 levelbar block.low {
-  background-color: black;
+  background-color: #845f00;
 }
 
 levelbar block.high, levelbar block:not(.empty) {
@@ -3900,7 +3900,7 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry:nth-child(2):focu
 }
 
 .disk-space-display.unknown {
-  background-color: black;
+  background-color: #845f00;
 }
 
 .disk-space-display.used {
@@ -3920,7 +3920,7 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry:nth-child(2):focu
 }
 
 .conflict-row:not(:selected) {
-  background-color: #b3b3b3;
+  background-color: #dacfb3;
 }
 
 .nautilus-window flowboxchild > widget > .icon-item-background {
@@ -4176,7 +4176,7 @@ layout {
 }
 
 entry.search-missing {
-  background-color: black;
+  background-color: #431604;
   color: #FFFFFF;
 }
 
@@ -5957,9 +5957,9 @@ widgets main borders color on backdrop windows */
 @define-color unfocused_borders rgba(0, 0, 0, 0.12);
 /*
 these are pretty self explicative */
-@define-color warning_color black;
-@define-color error_color black;
-@define-color success_color black;
+@define-color warning_color #845f00;
+@define-color error_color #431604;
+@define-color success_color #204b2f;
 @define-color destructive_color #db3400;
 @define-color suggested_color #01967a;
 /*

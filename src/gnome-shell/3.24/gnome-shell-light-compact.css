@@ -174,7 +174,7 @@ StEntry:insensitive {
 
 StEntry StIcon.capslock-warning {
   icon-size: 16px;
-  warning-color: black;
+  warning-color: #845f00;
   padding: 0 0;
 }
 
@@ -413,7 +413,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .end-session-dialog-warning {
   width: 28em;
-  color: black;
+  color: #845f00;
   padding-top: 6px;
 }
 
@@ -579,7 +579,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .prompt-dialog-error-label {
   font-size: 1em;
-  color: black;
+  color: #431604;
   padding-bottom: 8px;
 }
 
@@ -609,7 +609,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .polkit-dialog-user-root-label {
-  color: black;
+  color: #845f00;
 }
 
 .polkit-dialog-user-icon {
@@ -1096,7 +1096,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .screencast-indicator {
-  color: black;
+  color: #845f00;
 }
 
 #calendarArea {
@@ -2604,7 +2604,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .login-dialog-message-warning {
-  color: black;
+  color: #431604;
 }
 
 .login-dialog-message-hint {
