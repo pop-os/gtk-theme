@@ -53,8 +53,8 @@
 
   @if $t == disabled {
     box-shadow: $shadow_0;
-    background-color: $alt_base_color;
-    color: $disabled_fg_color;
+    background-color: rgba($alt_base_color, 0.5);
+    color: rgba($disabled_fg_color;
   }
 
   @if $t == flat-normal {
