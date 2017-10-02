@@ -224,7 +224,7 @@ spinbutton:disabled:not(.vertical),
 entry:disabled {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: rgba(250, 250, 250, 0.5);
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(87, 79, 74, 0.85);
 }
 
 spinbutton.flat:not(.vertical), notebook > stack:not(:only-child) entry:not(.search),
@@ -325,7 +325,7 @@ spinbutton.error:disabled:not(.vertical),
 entry.error:disabled {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: rgba(250, 250, 250, 0.5);
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(87, 79, 74, 0.85);
 }
 
 spinbutton.error.flat:not(.vertical), notebook > stack:not(:only-child) entry.error:not(.search),
@@ -391,7 +391,7 @@ spinbutton.warning:disabled:not(.vertical),
 entry.warning:disabled {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: rgba(250, 250, 250, 0.5);
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(87, 79, 74, 0.85);
 }
 
 spinbutton.warning.flat:not(.vertical), notebook > stack:not(:only-child) entry.warning:not(.search),
@@ -1080,7 +1080,7 @@ combobox entry ~ button.combo {
 combobox entry ~ button.combo:disabled {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: rgba(250, 250, 250, 0.5);
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(87, 79, 74, 0.85);
 }
 
 combobox decoration,
@@ -1128,7 +1128,7 @@ box.horizontal.linked > entry + button:not(.combo) {
 box.horizontal.linked > entry + button:not(.combo):disabled {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
   background-color: rgba(250, 250, 250, 0.5);
-  color: rgba(87, 79, 74, 0.38);
+  color: rgba(87, 79, 74, 0.85);
 }
 
 notebook > stack:not(:only-child) button.combo, .raven .raven-background button.combo, #login_window #user_combobox button {
