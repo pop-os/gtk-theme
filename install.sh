@@ -17,7 +17,7 @@ elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor + 1)) ]; then
 elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor - 1)) ]; then
   gnomever=$gnomever_major.$(($gnomever_minor - 1))
 else
-  gnomever=3.18
+  gnomever=3.24
 fi
 
 echo

@@ -11,7 +11,7 @@ gtk2:
 	cd ./src/gtk-2.0 && ./recolor-assets.sh
 
 gnome-shell:
-	cp -r $(DESTDIR)/usr/share/themes/Pop/gnome-shell/ /usr/share/gnome-shell/
+	cp -v /usr/share/themes/Pop-dark/gnome-shell/pop.css /usr/share/gnome-shell/theme
 
 assets:
 	cd ./src/gtk-3.0/gtk-common/ && find . -type f -name *.png -exec rm -v '{}' +
