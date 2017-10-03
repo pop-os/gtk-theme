@@ -3818,6 +3818,10 @@ window > box > box > box > paned > overlay > grid > overlay > revealer {
   padding: 10px;
 }
 
+window.csd > headerbar.titlebar > box.linked > button.image-button {
+  border-image: none;
+}
+
 /**********
  * Evince *
  **********/
