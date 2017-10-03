@@ -53,12 +53,6 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
 }
 
 
-/************
- * Chromium *
- ************/
-tooltip.chromium { background-color: $base_color; }
-
-
 /***********
  * Firefox *
  ***********/
@@ -203,6 +197,8 @@ window.background:not(.solid-csd) {
  * Chrome / Chromium *
  *********************/
 
+tooltip.chromium { background-color: $base_color; }
+
 window.background.chromium {
   // checked-tab & toolbar & button widgets
   background-color: if($variant == 'light', $bg_color, $base_color);
@@ -251,8 +247,11 @@ window.background.chromium {
     &:disabled { color: mix($dark_fg_color, $bg_color, 30%); }
   }
 
-  menu menuitem:hover { // 61.0.3159 or higher
-    // revive hovered backgrounds
-    background-color: mix($fg_color, $base_color, 10%);
+  menu menuitem {
+    color: $dark_fg_color;
+    &:hover { // 61.0.3159 or higher
+      // revive hovered backgrounds
+      background-color: mix($fg_color, $base_color, 10%);
+    }
   }
 }
