@@ -1,5 +1,5 @@
 /*****************************
- * Pop!_GTK+ Version 2.1.0r0 *
+ * Pop!_GTK+ Version 2.1.1r11 *
  *****************************/
 @keyframes ripple_effect {
   to {
@@ -4468,13 +4468,6 @@ window.background > box.vertical > scrolledwindow > widget toolbar button {
   border-radius: 2px;
 }
 
-/************
- * Chromium *
- ************/
-tooltip.chromium {
-  background-color: #443d3a;
-}
-
 /***********
  * Firefox *
  ***********/
@@ -4620,6 +4613,10 @@ window.background:not(.solid-csd) > notebook:not(.frame) > header.top tabs > tab
 /*********************
  * Chrome / Chromium *
  *********************/
+tooltip.chromium {
+  background-color: #443d3a;
+}
+
 window.background.chromium {
   background-color: #443d3a;
   color: #FFFFFF;
@@ -4660,6 +4657,10 @@ window.background.chromium > spinner {
 
 window.background.chromium > spinner:disabled {
   color: rgba(77, 70, 65, 0.961);
+}
+
+window.background.chromium menu menuitem {
+  color: rgba(87, 79, 74, 0.87);
 }
 
 window.background.chromium menu menuitem:hover {
