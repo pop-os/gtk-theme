@@ -1918,7 +1918,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grid-search-result:hover .overview-icon,
 .grid-search-result:focus .overview-icon,
 .grid-search-result:selected .overview-icon {
-  background-color: rgba(73, 66, 62, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   transition-duration: 0s;
   border-image: none;
   background-image: none;
