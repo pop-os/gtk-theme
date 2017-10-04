@@ -3396,10 +3396,6 @@ placessidebar row label.sidebar-label:dir(rtl) {
   padding-left: 2px;
 }
 
-row:selected button.sidebar-button {
-  color: #FFFFFF;
-}
-
 placessidebar row.sidebar-placeholder-row {
   min-height: 2px;
   padding: 0 8px;
