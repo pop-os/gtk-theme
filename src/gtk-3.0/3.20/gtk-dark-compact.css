@@ -5722,19 +5722,6 @@ row.activatable > grid.horizontal > stack, .view > grid.horizontal > stack, tree
 /************
  * Swatches *
  ************/
-/*************
- * Titlebars *
- *************/
-headerbar.titlebar {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-headerbar.titlebar button {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
