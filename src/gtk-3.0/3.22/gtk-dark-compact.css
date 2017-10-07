@@ -228,7 +228,7 @@ entry:disabled {
 }
 
 spinbutton.flat:not(.vertical), notebook > stack:not(:only-child) entry:not(.search),
-notebook > stack:not(:only-child) spinbutton:not(.vertical), messagedialog entry, colorchooser .popover.osd spinbutton:not(.vertical), entry.preferences-search, layoutpane entry.search, editortweak entry.search, .raven .raven-background spinbutton:not(.vertical), #login_window entry,
+notebook > stack:not(:only-child) spinbutton:not(.vertical), messagedialog entry, colorchooser .popover.osd spinbutton:not(.vertical), .raven .raven-background spinbutton:not(.vertical), #login_window entry,
 entry.flat {
   border-radius: 0;
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -239,14 +239,14 @@ entry.flat {
 }
 
 spinbutton.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry:focus:not(.search),
-notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), messagedialog entry:focus, colorchooser .popover.osd spinbutton:focus:not(.vertical), entry.preferences-search:focus, layoutpane entry.search:focus, editortweak entry.search:focus, .raven .raven-background spinbutton:focus:not(.vertical), #login_window entry:focus,
+notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), messagedialog entry:focus, colorchooser .popover.osd spinbutton:focus:not(.vertical), .raven .raven-background spinbutton:focus:not(.vertical), #login_window entry:focus,
 entry.flat:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #0a97a5 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
 }
 
 spinbutton.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry:disabled:not(.search),
-notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), messagedialog entry:disabled, colorchooser .popover.osd spinbutton:disabled:not(.vertical), entry.preferences-search:disabled, layoutpane entry.search:disabled, editortweak entry.search:disabled, .raven .raven-background spinbutton:disabled:not(.vertical), #login_window entry:disabled,
+notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), messagedialog entry:disabled, colorchooser .popover.osd spinbutton:disabled:not(.vertical), .raven .raven-background spinbutton:disabled:not(.vertical), #login_window entry:disabled,
 entry.flat:disabled {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   background-color: transparent;
@@ -329,7 +329,7 @@ entry.error:disabled {
 }
 
 spinbutton.error.flat:not(.vertical), notebook > stack:not(:only-child) entry.error:not(.search),
-notebook > stack:not(:only-child) spinbutton.error:not(.vertical), messagedialog entry.error, colorchooser .popover.osd spinbutton.error:not(.vertical), entry.error.preferences-search, layoutpane entry.error.search, editortweak entry.error.search, .raven .raven-background spinbutton.error:not(.vertical), #login_window entry.error,
+notebook > stack:not(:only-child) spinbutton.error:not(.vertical), messagedialog entry.error, colorchooser .popover.osd spinbutton.error:not(.vertical), .raven .raven-background spinbutton.error:not(.vertical), #login_window entry.error,
 entry.error.flat {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #431604 0%, transparent 0%) 0 0 0/0 0 0px;
@@ -339,14 +339,14 @@ entry.error.flat {
 }
 
 spinbutton.error.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry.error:focus:not(.search),
-notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), messagedialog entry.error:focus, colorchooser .popover.osd spinbutton.error:focus:not(.vertical), entry.error.preferences-search:focus, layoutpane entry.error.search:focus, editortweak entry.error.search:focus, .raven .raven-background spinbutton.error:focus:not(.vertical), #login_window entry.error:focus,
+notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), messagedialog entry.error:focus, colorchooser .popover.osd spinbutton.error:focus:not(.vertical), .raven .raven-background spinbutton.error:focus:not(.vertical), #login_window entry.error:focus,
 entry.error.flat:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #431604 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: inset 0 -1px #431604;
 }
 
 spinbutton.error.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry.error:disabled:not(.search),
-notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), messagedialog entry.error:disabled, colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), entry.error.preferences-search:disabled, layoutpane entry.error.search:disabled, editortweak entry.error.search:disabled, .raven .raven-background spinbutton.error:disabled:not(.vertical), #login_window entry.error:disabled,
+notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), messagedialog entry.error:disabled, colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), .raven .raven-background spinbutton.error:disabled:not(.vertical), #login_window entry.error:disabled,
 entry.error.flat:disabled {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   background-color: transparent;
@@ -395,7 +395,7 @@ entry.warning:disabled {
 }
 
 spinbutton.warning.flat:not(.vertical), notebook > stack:not(:only-child) entry.warning:not(.search),
-notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), messagedialog entry.warning, colorchooser .popover.osd spinbutton.warning:not(.vertical), entry.warning.preferences-search, layoutpane entry.warning.search, editortweak entry.warning.search, .raven .raven-background spinbutton.warning:not(.vertical), #login_window entry.warning,
+notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), messagedialog entry.warning, colorchooser .popover.osd spinbutton.warning:not(.vertical), .raven .raven-background spinbutton.warning:not(.vertical), #login_window entry.warning,
 entry.warning.flat {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #845f00 0%, transparent 0%) 0 0 0/0 0 0px;
@@ -405,14 +405,14 @@ entry.warning.flat {
 }
 
 spinbutton.warning.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry.warning:focus:not(.search),
-notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), messagedialog entry.warning:focus, colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), entry.warning.preferences-search:focus, layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, .raven .raven-background spinbutton.warning:focus:not(.vertical), #login_window entry.warning:focus,
+notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), messagedialog entry.warning:focus, colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), .raven .raven-background spinbutton.warning:focus:not(.vertical), #login_window entry.warning:focus,
 entry.warning.flat:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #845f00 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: inset 0 -1px #845f00;
 }
 
 spinbutton.warning.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry.warning:disabled:not(.search),
-notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), messagedialog entry.warning:disabled, colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), entry.warning.preferences-search:disabled, layoutpane entry.warning.search:disabled, editortweak entry.warning.search:disabled, .raven .raven-background spinbutton.warning:disabled:not(.vertical), #login_window entry.warning:disabled,
+notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), messagedialog entry.warning:disabled, colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), .raven .raven-background spinbutton.warning:disabled:not(.vertical), #login_window entry.warning:disabled,
 entry.warning.flat:disabled {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   background-color: transparent;
@@ -443,16 +443,13 @@ entry progress {
 }
 
 .linked:not(.vertical) > spinbutton.flat:not(.vertical), notebook > stack:not(:only-child) .linked:not(.vertical) > entry:not(.search),
-notebook > stack:not(:only-child) .linked:not(.vertical) > spinbutton:not(.vertical), messagedialog .linked:not(.vertical) > entry, colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry.preferences-search, layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, .raven .raven-background .linked:not(.vertical) > spinbutton:not(.vertical), #login_window .linked:not(.vertical) > entry,
+notebook > stack:not(:only-child) .linked:not(.vertical) > spinbutton:not(.vertical), messagedialog .linked:not(.vertical) > entry, colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), .raven .raven-background .linked:not(.vertical) > spinbutton:not(.vertical), #login_window .linked:not(.vertical) > entry,
 .linked.vertical > spinbutton.flat:not(.vertical), notebook > stack:not(:only-child)
 .linked.vertical > entry:not(.search),
 notebook > stack:not(:only-child)
 .linked.vertical > spinbutton:not(.vertical), messagedialog
 .linked.vertical > entry, colorchooser .popover.osd
-.linked.vertical > spinbutton:not(.vertical),
-.linked.vertical > entry.preferences-search, layoutpane
-.linked.vertical > entry.search, editortweak
-.linked.vertical > entry.search, .raven .raven-background
+.linked.vertical > spinbutton:not(.vertical), .raven .raven-background
 .linked.vertical > spinbutton:not(.vertical), #login_window
 .linked.vertical > entry, .linked:not(.vertical) >
 entry.flat,
@@ -559,8 +556,8 @@ button:checked:disabled {
 modelbutton.flat,
 .menuitem.button.flat, spinbutton:not(.vertical) button, spinbutton.vertical button, popover.background.menu button,
 popover.background button.model, notebook > header > tabs > arrow, scrollbar button, check,
-radio, calendar.button, messagedialog.csd .dialog-action-area button, button.sidebar-button, .gedit-search-slider button, popover.messagepopover .popover-action-area button, PanelToplevel > grid > button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, :not(headerbar) .caja-pathbar button, .caja-pathbar :not(headerbar) button, :not(headerbar)
-.path-bar button, layouttabbar button, .mate-panel-menu-bar #PanelApplet button, .budgie-panel #tasklist-button, .raven stackswitcher.linked > button, toolbar button, .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
+radio, calendar.button, messagedialog.csd .dialog-action-area button, button.sidebar-button, .gedit-search-slider button, PanelToplevel > grid > button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, :not(headerbar) .caja-pathbar button, .caja-pathbar :not(headerbar) button, :not(headerbar)
+.path-bar button, .mate-panel-menu-bar #PanelApplet button, .budgie-panel #tasklist-button, .raven stackswitcher.linked > button, toolbar button, .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
 headerbar button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button,
 button.flat {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -572,8 +569,8 @@ button.flat {
 modelbutton.flat:hover,
 .menuitem.button.flat:hover, spinbutton:not(.vertical) button:hover, spinbutton.vertical button:hover, popover.background.menu button:hover,
 popover.background button.model:hover, notebook > header > tabs > arrow:hover, scrollbar button:hover, check:hover,
-radio:hover, calendar.button:hover, messagedialog.csd .dialog-action-area button:hover, button.sidebar-button:hover, .gedit-search-slider button:hover, popover.messagepopover .popover-action-area button:hover, PanelToplevel > grid > button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, :not(headerbar) .caja-pathbar button:hover, .caja-pathbar :not(headerbar) button:hover, :not(headerbar)
-.path-bar button:hover, layouttabbar button:hover, .mate-panel-menu-bar #PanelApplet button:hover, .budgie-panel #tasklist-button:hover, .raven stackswitcher.linked > button:hover, toolbar button:hover, .titlebar:not(headerbar) button:hover:not(.suggested-action):not(.destructive-action),
+radio:hover, calendar.button:hover, messagedialog.csd .dialog-action-area button:hover, button.sidebar-button:hover, .gedit-search-slider button:hover, PanelToplevel > grid > button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, :not(headerbar) .caja-pathbar button:hover, .caja-pathbar :not(headerbar) button:hover, :not(headerbar)
+.path-bar button:hover, .mate-panel-menu-bar #PanelApplet button:hover, .budgie-panel #tasklist-button:hover, .raven stackswitcher.linked > button:hover, toolbar button:hover, .titlebar:not(headerbar) button:hover:not(.suggested-action):not(.destructive-action),
 headerbar button:hover:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover,
 button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.15);
@@ -583,8 +580,8 @@ button.flat:hover {
 modelbutton.flat:active,
 .menuitem.button.flat:active, spinbutton:not(.vertical) button:active, spinbutton.vertical button:active, popover.background.menu button:active,
 popover.background button.model:active, notebook > header > tabs > arrow:active, scrollbar button:active, check:active,
-radio:active, calendar.button:active, messagedialog.csd .dialog-action-area button:active, button.sidebar-button:active, .gedit-search-slider button:active, popover.messagepopover .popover-action-area button:active, PanelToplevel > grid > button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, :not(headerbar) .caja-pathbar button:active, .caja-pathbar :not(headerbar) button:active, :not(headerbar)
-.path-bar button:active, layouttabbar button:active, .mate-panel-menu-bar #PanelApplet button:active, .budgie-panel #tasklist-button:active, .raven stackswitcher.linked > button:active, toolbar button:active, .titlebar:not(headerbar) button:active:not(.suggested-action):not(.destructive-action),
+radio:active, calendar.button:active, messagedialog.csd .dialog-action-area button:active, button.sidebar-button:active, .gedit-search-slider button:active, PanelToplevel > grid > button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, :not(headerbar) .caja-pathbar button:active, .caja-pathbar :not(headerbar) button:active, :not(headerbar)
+.path-bar button:active, .mate-panel-menu-bar #PanelApplet button:active, .budgie-panel #tasklist-button:active, .raven stackswitcher.linked > button:active, toolbar button:active, .titlebar:not(headerbar) button:active:not(.suggested-action):not(.destructive-action),
 headerbar button:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active,
 button.flat:active {
   transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -595,8 +592,8 @@ button.flat:active {
 modelbutton.flat:disabled,
 .menuitem.button.flat:disabled, spinbutton:not(.vertical) button:disabled, spinbutton.vertical button:disabled, popover.background.menu button:disabled,
 popover.background button.model:disabled, notebook > header > tabs > arrow:disabled, scrollbar button:disabled, check:disabled,
-radio:disabled, calendar.button:disabled, messagedialog.csd .dialog-action-area button:disabled, button.sidebar-button:disabled, .gedit-search-slider button:disabled, popover.messagepopover .popover-action-area button:disabled, PanelToplevel > grid > button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, :not(headerbar) .caja-pathbar button:disabled, .caja-pathbar :not(headerbar) button:disabled, :not(headerbar)
-.path-bar button:disabled, layouttabbar button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled, .budgie-panel #tasklist-button:disabled, .raven stackswitcher.linked > button:disabled, toolbar button:disabled, .titlebar:not(headerbar) button:disabled:not(.suggested-action):not(.destructive-action),
+radio:disabled, calendar.button:disabled, messagedialog.csd .dialog-action-area button:disabled, button.sidebar-button:disabled, .gedit-search-slider button:disabled, PanelToplevel > grid > button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, :not(headerbar) .caja-pathbar button:disabled, .caja-pathbar :not(headerbar) button:disabled, :not(headerbar)
+.path-bar button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled, .budgie-panel #tasklist-button:disabled, .raven stackswitcher.linked > button:disabled, toolbar button:disabled, .titlebar:not(headerbar) button:disabled:not(.suggested-action):not(.destructive-action),
 headerbar button:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled,
 button.flat:disabled {
   box-shadow: none;
@@ -605,7 +602,7 @@ button.flat:disabled {
 }
 
 :not(headerbar) .caja-pathbar button:checked, .caja-pathbar :not(headerbar) button:checked, :not(headerbar)
-.path-bar button:checked, layouttabbar button:checked, .mate-panel-menu-bar #PanelApplet button:checked, .budgie-panel #tasklist-button:checked, .raven stackswitcher.linked > button:checked, toolbar button:checked, .titlebar:not(headerbar) button:checked:not(.suggested-action):not(.destructive-action),
+.path-bar button:checked, .mate-panel-menu-bar #PanelApplet button:checked, .budgie-panel #tasklist-button:checked, .raven stackswitcher.linked > button:checked, toolbar button:checked, .titlebar:not(headerbar) button:checked:not(.suggested-action):not(.destructive-action),
 headerbar button:checked:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked,
 button.flat:checked {
   background-color: rgba(255, 255, 255, 0.3);
@@ -613,7 +610,7 @@ button.flat:checked {
 }
 
 :not(headerbar) .caja-pathbar button:checked:disabled, .caja-pathbar :not(headerbar) button:checked:disabled, :not(headerbar)
-.path-bar button:checked:disabled, layouttabbar button:checked:disabled, .mate-panel-menu-bar #PanelApplet button:checked:disabled, .budgie-panel #tasklist-button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, toolbar button:checked:disabled, .titlebar:not(headerbar) button:checked:disabled:not(.suggested-action):not(.destructive-action),
+.path-bar button:checked:disabled, .mate-panel-menu-bar #PanelApplet button:checked:disabled, .budgie-panel #tasklist-button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, toolbar button:checked:disabled, .titlebar:not(headerbar) button:checked:disabled:not(.suggested-action):not(.destructive-action),
 headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked:disabled,
 button.flat:checked:disabled {
   background-color: rgba(255, 255, 255, 0.12);
@@ -887,22 +884,22 @@ button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > labe
   background-position: left 3px;
 }
 
-.linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry, .linked > button, .linked:not(.vertical) > combobox > box > button.combo {
+.linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry, .linked > button, omnibar.linked > *, .linked:not(.vertical) > combobox > box > button.combo {
   border-radius: 0;
   -gtk-outline-radius: 2px;
 }
 
-.linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child, .linked > button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo {
+.linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child, .linked > button:first-child, omnibar.linked > :first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child, .linked > button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo {
+.linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child, .linked > button:last-child, omnibar.linked > :last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-.linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child, .linked > button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo {
+.linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child, .linked > button:only-child, omnibar.linked > :only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo {
   border-radius: 4px;
 }
 
@@ -3119,7 +3116,7 @@ separator {
 
 
 button.font separator,
-button.file separator, .tweak-categories separator, preferences stacksidebar.sidebar list separator {
+button.file separator, .tweak-categories separator {
   min-width: 0;
   min-height: 0;
   background-color: transparent;
@@ -4136,268 +4133,248 @@ frame.gedit-map-frame > border:dir(rtl) {
 
 /***********
  * Builder *
- ***********/
+ ***********
+// based css:
+// https://git.gnome.org/browse/gnome-builder/tree/data/theme
+// hard-coded css:
+// https://git.gnome.org/browse/gnome-builder/tree/data/theme/shared.css
+
+// View control buttons. Need to adjust radii
 window.workbench > popover.menu button.model {
   border-radius: 0;
+
+  &:first-child {
+    border-top-left-radius: $material_radius;
+    border-bottom-left-radius: $material_radius;
+  }
+
+  &:last-child {
+    border-top-right-radius: $material_radius;
+    border-bottom-right-radius: $material_radius;
+  }
 }
 
-window.workbench > popover.menu button.model:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-window.workbench > popover.menu button.model:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-layouttabbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-  background-color: #49423e;
-}
-
-layouttabbar > box > button {
-  margin: 4px 0;
-}
-
-layouttab {
-  margin: 0 8px;
-  border-style: none solid;
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.26);
-  box-shadow: none;
-  background-color: #443d3a;
-}
-
-layouttab separator.vertical {
-  margin: 8px 4px;
-}
-
-layouttab button.text-button, layouttab button.image-button, layouttab button {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding: 0 4px;
-}
-
-layout {
-  border: 1px solid rgba(0, 0, 0, 0.26);
-  -PnlDockBin-handle-size: 1;
-}
+// Layout tab and tab bar tweaks
+// The following makes the layout stack header look similar to a tab bar.
 
 entry.search-missing {
-  background-color: #431604;
-  color: #FFFFFF;
+  background-color: $error_color;
+  color: $inverse_fg_color;
 }
 
+// tweak icons for treeviews
 window.workbench treeview.image {
-  color: rgba(255, 255, 255, 0.7);
-}
+  color: $secondary_fg_color;
 
-window.workbench treeview.image:selected {
-  color: rgba(255, 255, 255, 0.7);
+  &:selected { color: $inverse_secondary_fg_color; }
 }
 
 popover.popover-selector list {
-  padding: 6px;
+  padding: 8px - 2px;
+
+  row {
+    border-radius: 2px;
+
+    image {
+      &:dir(ltr) { margin-right: 6px; }
+      &:dir(rtl) { margin-left: 6px; }
+    }
+
+    .accel {
+      &:dir(ltr) { margin-left: 6px; }
+      &:dir(rtl) { margin-right: 6px; }
+    }
+  }
 }
 
-popover.popover-selector list row {
-  border-radius: 2px;
-}
+omnibar {
+  &.linked:not(.vertical) entry { border-radius: 2px; }
 
-popover.popover-selector list row image:dir(ltr) {
-  margin-right: 6px;
-}
-
-popover.popover-selector list row image:dir(rtl) {
-  margin-left: 6px;
-}
-
-popover.popover-selector list row .accel:dir(ltr) {
-  margin-left: 6px;
-}
-
-popover.popover-selector list row .accel:dir(rtl) {
-  margin-right: 6px;
-}
-
-omnibar.linked:not(.vertical) entry {
-  border-radius: 2px;
-}
-
-omnibar:not(:hover):not(:active) entry {
-  color: rgba(255, 255, 255, 0.7);
+  &:not(:hover):not(:active) entry { color: $secondary_fg_color; }
 }
 
 popover.omnibar list row:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  border-bottom: 1px solid $border_color;
 }
 
 entry.preferences-search {
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.26);
-  background-color: #443d3a;
+  @extend %entry.flat;
+
+  box-shadow: inset 0 -1px $border_color;
+  background-color: $base_color;
+
+  // doesn't work properly
+  // &:dir(ltr) { border-right: 1px solid $border_color; }
+  // &:dir(rtl) { border-left: 1px solid $border_color; }
 }
 
-preferences stacksidebar.sidebar list {
-  background-color: #574f4a;
+preferences stacksidebar.sidebar {
+  list { background-color: $lighter_bg_color; }
+
+  &:dir(ltr),
+  &:dir(rtl) { list { border-style: none; }}
+
+  list separator { @extend %hide_separators; }
 }
 
-preferences stacksidebar.sidebar:dir(ltr) list, preferences stacksidebar.sidebar:dir(rtl) list {
-  border-style: none;
+preferences > box > box {
+  &:dir(ltr) { border-right: 1px solid $border_color; }
+  &:dir(rtl) { border-left: 1px solid $border_color; }
 }
 
-preferences > box > box:dir(ltr) {
-  border-right: 1px solid rgba(0, 0, 0, 0.26);
-}
+popover.messagepopover {
+  &.background { padding: 0; }
 
-preferences > box > box:dir(rtl) {
-  border-left: 1px solid rgba(0, 0, 0, 0.26);
-}
+  .popover-action-area button {
+    @extend %simple_flat_button;
 
-popover.messagepopover.background {
-  padding: 0;
-}
+    padding: 8px 16px;
+    border-top: 1px solid $border_color;
+    border-radius: 0;
 
-popover.messagepopover .popover-action-area button {
-  padding: 8px 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.26);
-  border-radius: 0;
-}
+    &:first-child { border-bottom-left-radius: 2px; }
 
-popover.messagepopover .popover-action-area button:first-child {
-  border-bottom-left-radius: 2px;
-}
+    &:last-child { border-bottom-right-radius: 2px; }
+  }
 
-popover.messagepopover .popover-action-area button:last-child {
-  border-bottom-right-radius: 2px;
-}
-
-popover.messagepopover .popover-content-area {
-  margin: 16px;
+  .popover-content-area { margin: 16px; }
 }
 
 popover.transfers list {
   background-color: transparent;
-}
 
-popover.transfers list row:not(:first-child) {
-  border-top: 1px solid rgba(0, 0, 0, 0.26);
-}
+  row:not(:first-child) { border-top: 1px solid $border_color; }
 
-popover.transfers list row > box {
-  padding: 10px;
+  row > box { padding: 10px; }
 }
 
 dockbin {
-  border: 1px solid rgba(0, 0, 0, 0.26);
+  border: 1px solid $border_color;
   -PnlDockBin-handle-size: 1;
 }
 
 dockpaned {
-  border: 1px solid rgba(0, 0, 0, 0.26);
+  border: 1px solid $border_color;
 }
 
 eggsearchbar box.search-bar {
   padding: 0 8px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-  background-color: #49423e;
+  border-bottom: 1px solid $border_color;
+  background-color: $bg_color;
 }
 
 docktabstrip {
   padding: 0 8px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-  background-color: #49423e;
+  border-bottom: 1px solid $border_color;
+  background-color: $bg_color;
 }
 
 docktab {
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0, background-image 0;
-  min-height: 20px;
-  min-width: 20px;
+  transition: $longer_transition,
+              background-size 0,
+              background-image 0;
+  min-height: $small_size;
+  min-width: $small_size;
   margin-bottom: -1px;
-  padding: 6px 6px;
+  padding: $container_padding 6px;
+
   outline-offset: -6px;
-  border-width: 1px;
-  border-color: transparent;
-  background-image: radial-gradient(circle farthest-corner at center, #cc7900 10%, transparent 0%);
+
+  border-width: 1px;         // for reorderable tabs
+  border-color: transparent; //
+
+  background-image: radial-gradient(circle farthest-corner at center,
+                                    $accent_color 10%,
+                                    transparent 0%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 0% 0%;
-  color: rgba(255, 255, 255, 0.7);
+
+  color: $secondary_fg_color;
   font-weight: 500;
-}
 
-docktab:hover {
-  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.3);
-  color: #FFFFFF;
-}
+  &:hover {
+    box-shadow: inset 0 -2px $track_color;
+    color: $fg_color;
+  }
 
-docktab:checked {
-  transition: all 270ms cubic-bezier(0.4, 0, 0.2, 1), background-size 270ms cubic-bezier(0, 0, 0.2, 1), background-image 720ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 -2px #cc7900;
-  background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
-  background-size: 1000% 1000%;
-  color: #FFFFFF;
+  &:checked {
+    transition: $longer_transition,
+                background-size $longer_duration $deceleration_curve,
+                background-image $longer_duration + $ripple_duration $deceleration_curve;
+    box-shadow: inset 0 -2px $accent_color;
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      transparent 10%,
+                                      transparent 0%);
+    background-size: 1000% 1000%;
+    color: $fg_color;
+  }
 }
 
 dockoverlayedge {
-  background-color: #49423e;
-}
+  background-color: $bg_color;
 
-dockoverlayedge docktabstrip {
-  padding: 0;
-  border: none;
-}
+  docktabstrip {
+    padding: 0;
+    border: none;
+  }
 
-dockoverlayedge.left-edge docktab:hover {
-  box-shadow: inset -2px 0 rgba(255, 255, 255, 0.3);
-}
+  &.left-edge docktab {
+    &:hover { box-shadow: inset -2px 0 $track_color; }
+    &:checked { box-shadow: inset -2px 0 $accent_color; }
+  }
 
-dockoverlayedge.left-edge docktab:checked {
-  box-shadow: inset -2px 0 #cc7900;
-}
-
-dockoverlayedge.right-edge docktab:hover {
-  box-shadow: inset 2px 0 rgba(255, 255, 255, 0.3);
-}
-
-dockoverlayedge.right-edge docktab:checked {
-  box-shadow: inset 2px 0 #cc7900;
+  &.right-edge docktab {
+    &:hover { box-shadow: inset 2px 0 $track_color; }
+    &:checked { box-shadow: inset 2px 0 $accent_color; }
+  }
 }
 
 pillbox {
-  background-color: #49423e;
+  background-color: $bg_color;
   border-radius: 2px;
 }
 
+buildperspective row {
+  // padding: 10px;
+}
+
 layoutpane entry.search {
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.26);
-  background-color: #443d3a;
+  @extend %entry.flat;
+
+  box-shadow: inset 0 -1px $border_color;
+  background-color: $base_color;
 }
 
 editortweak entry.search {
+  @extend %entry.flat;
+
   margin-bottom: -1px;
   box-shadow: none;
 }
+
+//
+// let's tweak hard-coded elements
+//
 
 .gb-search-entry-occurrences-tag {
   box-shadow: none;
   background-color: transparent;
 }
 
-docktabstrip {
-  min-height: 39px;
-}
-
-window.workbench preferences preferencesgroup list entry {
+window.workbench dzlpreferences dzlpreferencesgroup list entry {
+  // background: none;
+  // min-height: 0px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
 button.run-arrow-button {
-  padding-left: 8px;
-  padding-right: 8px;
+  // min-width: 12px;
+  padding-left: ($medium_size - 16px) / 2;
+  padding-right: ($medium_size - 16px) / 2;
 }
-
+*/
 /**********
  * Photos *
  **********/
