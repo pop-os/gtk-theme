@@ -631,18 +631,7 @@ editortweak entry.search {
   background-color: transparent;
 }
 
-// Keep search bar and layouttab height in sync.
-// layouttabbar > box,
-// eggsearchbar > revealer > box,
-docktabstrip {
-  min-height: 39px;
-}
-
-eggsearchbar entry {
-  // min-height: 24px;
-}
-
-window.workbench preferences preferencesgroup list entry {
+window.workbench dzlpreferences dzlpreferencesgroup list entry {
   // background: none;
   // min-height: 0px;
   padding-top: 8px;
