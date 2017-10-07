@@ -267,3 +267,23 @@ window.csd {
 /************
  * Swatches *
  ************/
+
+/*************
+ * Titlebars *
+ *************/
+
+.csd .default-decoration {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .title {
+    min-height: 24px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
