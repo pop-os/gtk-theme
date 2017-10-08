@@ -126,9 +126,9 @@ listbox .h4 {
 }
 
 .storage-bar .audio {
-    background-color: $orange_500;
+    background-color: $red_500;
     border-bottom-width: 2px;
-    border-bottom-color: darken($orange_500, 20%);
+    border-bottom-color: darken($red_500, 20%);
 }
 
 .storage-bar .files {
