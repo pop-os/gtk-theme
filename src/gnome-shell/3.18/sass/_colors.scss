@@ -61,13 +61,13 @@ $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
 $row_fill_color:  gtkalpha(currentColor, 0.05);
 
 // Misc colors
-$primary_color:         $blue_500;
-$alt_primary_color:     $blue_300;
-$accent_color:          $orange_A200;
+$primary_color:         $red_500;
+$alt_primary_color:     $red_300;
+$accent_color:          $red_A200;
 $disabled_accent_color: rgba($accent_color, 0.5);
 
-$link_color:         $orange_500;
-$visited_link_color: if($variant == 'dark', $orange_400, $orange_600);
+$link_color:         $red_500;
+$visited_link_color: if($variant == 'dark', $red_400, $red_600);
 
 $warning_color: $yellow_700;
 $error_color:   $red_700;

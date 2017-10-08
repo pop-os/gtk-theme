@@ -14,7 +14,7 @@
 // Foreground colors
 $dark_fg_color:   rgba($brown_700, 0.87);
 $light_fg_color:  $white;
-$button_fg_color: if($variant == 'light', rgba($brown_700, 0.62), rgba($white, 0.8)); // extra fg color for raised buttons
+$button_fg_color: if($variant == 'light', rgba($red_700, 0.62), rgba($white, 0.8)); // extra fg color for raised buttons
 
 $fg_color:                    if($variant == 'light', rgba($brown_700, 0.87), $white);
 $secondary_fg_color:          if($variant == 'light', rgba($brown_700, 0.54), rgba($white, 0.7));
@@ -72,16 +72,16 @@ $fill_color:      gtkalpha(currentColor, $lower_opacity);
 $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
 $row_fill_color:  gtkalpha(currentColor, 0.05);
 
-$modal_button_color: if($variant == 'light', #fbdc96, #cc7900);
+$modal_button_color: if($variant == 'light', #fbac97, #cc3700);
 
 // Misc colors
-$primary_color:         if($variant == 'light', $blue_500, #0a97a5);
-$alt_primary_color:     $blue_300;
-$accent_color:          if($variant == 'light', $orange_A200, #cc7900);
+$primary_color:         if($variant == 'light', $red_500, $red);
+$alt_primary_color:     $red_300;
+$accent_color:          if($variant == 'light', $red_500, $red);
 $disabled_accent_color: rgba($accent_color, 0.5);
 
-$link_color:         $orange_500;
-$visited_link_color: if($variant == 'dark', $orange_400, $orange_600);
+$link_color:         $red_500;
+$visited_link_color: if($variant == 'dark', $red_400, $red_600);
 
 $warning_color: $yellow_700;
 $error_color:   $red_700;
