@@ -5730,25 +5730,6 @@ row.activatable > grid.horizontal > stack, .view > grid.horizontal > stack, tree
 /************
  * Swatches *
  ************/
-/*************
- * Titlebars *
- *************/
-.csd .default-decoration {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.csd .default-decoration button {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.csd .default-decoration .title {
-  min-height: 24px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
