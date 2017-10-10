@@ -31,13 +31,13 @@
 
 button.back-button,
 .titlebar .back-button {
-    background-image: -gtk-icontheme("go-previous-symbolic");
-    background-size: 16px;
-    background-position: 12px 50%;
-    background-color: transparent;
-    background-repeat: no-repeat no-repeat;
-    padding-left: 34px;
-    box-shadow: none;
+  background-image: -gtk-icontheme("go-previous-symbolic");
+  background-size: 16px;
+  background-position: 12px 50%;
+  background-color: transparent;
+  background-repeat: no-repeat no-repeat;
+  padding-left: 34px;
+  box-shadow: none;
 }
 
 
@@ -46,31 +46,31 @@ button.back-button,
  ***************/
 
 .h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .h2 {
-    font-weight: 300;
-    font-size: 18px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .h3 {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .h4,
 .category-label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .h4 {
-    padding-bottom: 6px;
-    padding-top: 6px;
+  padding-bottom: 6px;
+  padding-top: 6px;
 }
 
 list .h4,
 listbox .h4 {
-    padding-left: 6px;
+  padding-left: 6px;
 }
 
 /***********
@@ -78,17 +78,17 @@ listbox .h4 {
  **********/
 
 .welcome {
-    font-size: 10px;
-    text-shadow: none;
+  font-size: 10px;
+  text-shadow: none;
 }
 
 .welcome .dim-label {
-    color: $secondary_fg_color;
+  color: $secondary_fg_color;
 }
 
 .welcome .h1,
 .welcome .h3 {
-    color: rgba($fg_color, 0.8);
+  color: rgba($fg_color, 0.8);
 }
 
 /**************
@@ -96,62 +96,62 @@ listbox .h4 {
 **************/
 
 .storage-bar .trough {
-    box-shadow: $shadow_2;
-    border: none;
-    background-image: none;
-    padding: 8px 6px;
+  box-shadow: $shadow_2;
+  border: none;
+  background-image: none;
+  padding: 8px 6px;
 }
 
 .storage-bar .fill-block {
-    background-color: darken($darker_bg_color, 15%);
-    border: 2px solid rgba($black, 0.35);
-    border-left-width: 0;
-    border-right-width: 0;
-    border-top-width: 0;
-    border-bottom-width: 2px;
-    border-bottom-color: darken($darker_bg_color, 35%);
-    padding: 8px 6px;
+  background-color: darken($darker_bg_color, 15%);
+  border: 2px solid rgba($black, 0.35);
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  border-bottom-color: darken($darker_bg_color, 35%);
+  padding: 8px 6px;
 }
 
 .storage-bar .empty-block {
-    background-color: darken($alt_base_color, 5%);
-    border-bottom-width: 2px;
-    border-bottom-color: darken($alt_base_color, 40%);
+  background-color: darken($alt_base_color, 5%);
+  border-bottom-width: 2px;
+  border-bottom-color: darken($alt_base_color, 40%);
 }
 
 .storage-bar .app {
-    background-color: $purple_500;
-    border-bottom-width: 2px;
-    border-bottom-color: darken($purple_500, 20%);
+  background-color: $purple_500;
+  border-bottom-width: 2px;
+  border-bottom-color: darken($purple_500, 20%);
 }
 
 .storage-bar .audio {
-    background-color: $orange_500;
-    border-bottom-width: 2px;
-    border-bottom-color: darken($orange_500, 20%);
+  background-color: $orange_500;
+  border-bottom-width: 2px;
+  border-bottom-color: darken($orange_500, 20%);
 }
 
 .storage-bar .files {
-    background-color: $blue_500;
-    border-bottom-width: 2px;
-    border-bottom-color: darken($blue_500, 20%);
+  background-color: $blue_500;
+  border-bottom-width: 2px;
+  border-bottom-color: darken($blue_500, 20%);
 }
 
 .storage-bar .photo {
-    background-color: $green_500;
-    border-bottom-width: 2px;
-    border-bottom-color: darken($green_500, 20%);
+  background-color: $green_500;
+  border-bottom-width: 2px;
+  border-bottom-color: darken($green_500, 20%);
 }
 
 .storage-bar .video {
-    background-color: $red_500;
-    border-bottom-width: 2px;
-    border-bottom-color: darken($red_500, 40%);
+  background-color: $red_500;
+  border-bottom-width: 2px;
+  border-bottom-color: darken($red_500, 40%);
 }
 
 .storage-bar .legend {
-    padding: 7px;
-    border-radius: 50%;
+  padding: 7px;
+  border-radius: 50%;
 }
 
 /*************
@@ -160,66 +160,66 @@ listbox .h4 {
 
 window.rounded,
 window.rounded .action-bar {
-    border-radius: 0 0 $material_radius $material_radius;
+  border-radius: 0 0 $material_radius $material_radius;
 }
 
 window.rounded.window-frame {
-    border-radius: $material_radius;
+  border-radius: $material_radius;
 }
 
 window.rounded decoration {
-    border-radius: $material_radius;
+  border-radius: $material_radius;
 }
 
 /******************
- * Pantheon Panel *
- ******************/
+* Pantheon Panel *
+******************/
 
 .panel {
-    background-color: $panel_bg_color;
-    transition: all 100ms ease-in-out;
-    font-weight: normal;
+  background-color: $panel_bg_color;
+  transition: all 100ms ease-in-out;
+  font-weight: normal;
 }
 
 /**********
- * Harvey *
- **********/
+* Harvey *
+**********/
 
- // Lots of custom styling in Harvey, for obvious reasons. Let's try and make it
- // look good in Pop without modifying the original app design.
+// Lots of custom styling in Harvey, for obvious reasons. Let's try and make it
+// look good in Pop without modifying the original app design.
 
 window.background.csd.rounded {
-  > grid.titlebar {
-    min-height: 0;
+> grid.titlebar {
+  min-height: 0;
 
-    > headerbar.input-header {
-      border-top-right-radius: 0;
+  > headerbar.input-header {
+    border-top-right-radius: 0;
 
-      > box.left > button.close { color: $fg_color; }
-    }
+    > box.left > button.close { color: $fg_color; }
   }
+}
 }
 
 
 /************
- * Spice-Up *
- ************/
+* Spice-Up *
+************/
 
 window.csd {
-  > overlay > stack > grid.app-back > revealer > box.toolbar {
-    box.frame {
-      button.image-button,
-      button.entry,
-      entry {
-        background-color: transparent;
-        box-shadow: none;
-      }
+> overlay > stack > grid.app-back > revealer > box.toolbar {
+  box.frame {
+    button.image-button,
+    button.entry,
+    entry {
+      background-color: transparent;
+      box-shadow: none;
     }
   }
+}
 
-  headerbar.titlebar {
-    button.suggested-action { background-color: $suggested_color;}
-  }
+headerbar.titlebar {
+  button.suggested-action { background-color: $suggested_color;}
+}
 }
 
 
