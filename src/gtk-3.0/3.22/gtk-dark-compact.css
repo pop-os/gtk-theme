@@ -4850,11 +4850,15 @@ window.background.chromium > spinner:disabled {
 }
 
 window.background.chromium menu menuitem {
-  color: rgba(87, 79, 74, 0.87);
+  color: #FFFFFF;
 }
 
 window.background.chromium menu menuitem:hover {
   background-color: #56514d;
+}
+
+window.background.chromium menu menuitem:disabled {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /*********

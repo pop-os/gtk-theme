@@ -4672,6 +4672,10 @@ window.background.chromium menu menuitem:hover {
   background-color: rgba(242, 241, 241, 0.987);
 }
 
+window.background.chromium menu menuitem:disabled {
+  color: rgba(87, 79, 74, 0.38);
+}
+
 /*********
  * Unity *
  *********/

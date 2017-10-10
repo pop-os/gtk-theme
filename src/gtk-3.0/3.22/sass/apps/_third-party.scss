@@ -248,10 +248,11 @@ window.background.chromium {
   }
 
   menu menuitem {
-    color: $dark_fg_color;
+    color: $fg_color;
     &:hover { // 61.0.3159 or higher
       // revive hovered backgrounds
       background-color: mix($fg_color, $base_color, 10%);
     }
+    &:disabled { color: $disabled_fg_color; }
   }
 }
