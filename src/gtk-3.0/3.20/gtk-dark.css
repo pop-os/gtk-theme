@@ -5572,7 +5572,7 @@ listbox .h4 {
 
 /***********
  * Welcome *
- **********/
+ ***********/
 .welcome {
   font-size: 10px;
   text-shadow: none;
@@ -5589,9 +5589,9 @@ headerbar .welcome .subtitle, .welcome .budgie-notification .notification-body, 
   color: rgba(255, 255, 255, 0.8);
 }
 
-/**************
-* Storage Bar *
-**************/
+/***************
+ * Storage Bar *
+ ***************/
 .storage-bar .trough {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
   border: none;
@@ -5651,9 +5651,9 @@ headerbar .welcome .subtitle, .welcome .budgie-notification .notification-body, 
   border-radius: 50%;
 }
 
-/*************
-* Round Apps *
-*************/
+/**************
+ * Round Apps *
+ **************/
 window.rounded,
 window.rounded .action-bar {
   border-radius: 0 0 4px 4px;
@@ -5668,8 +5668,8 @@ window.rounded decoration {
 }
 
 /******************
-* Pantheon Panel *
-******************/
+ * Pantheon Panel *
+ ******************/
 .panel {
   background-color: #040404;
   transition: all 100ms ease-in-out;
@@ -5677,8 +5677,8 @@ window.rounded decoration {
 }
 
 /**********
-* Harvey *
-**********/
+ * Harvey *
+ **********/
 window.background.csd.rounded > grid.titlebar {
   min-height: 0;
 }
@@ -5692,8 +5692,8 @@ window.background.csd.rounded > grid.titlebar > headerbar.input-header > box.lef
 }
 
 /************
-* Spice-Up *
-************/
+ * Spice-Up *
+ ************/
 window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame button.image-button,
 window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame button.entry,
 window.csd > overlay > stack > grid.app-back > revealer > box.toolbar box.frame entry {

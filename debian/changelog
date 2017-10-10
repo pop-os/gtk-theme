@@ -1,3 +1,16 @@
+pop-gtk-theme (2.1.2.0) artful; urgency=medium
+
+  * Internal code cosmetics
+  * Chrome/ium fixes
+  * Removal of outdated styling
+  * Support for headerbar.titlebar
+  * Firefox button text contrast improvements
+  * Fixes for Eye of GNOME
+  * Fixed bug with GNOME Shell builds
+  * Changed App-Wall tile :hover background color
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 10 Oct 2017 11:12:25 -0600
+
 pop-gtk-theme (2.1.1.10) artful; urgency=medium
 
   * Bump version
