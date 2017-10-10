@@ -75,7 +75,7 @@ listbox .h4 {
 
 /***********
  * Welcome *
- **********/
+ ***********/
 
 .welcome {
   font-size: 10px;
@@ -91,9 +91,9 @@ listbox .h4 {
   color: rgba($fg_color, 0.8);
 }
 
-/**************
-* Storage Bar *
-**************/
+/***************
+ * Storage Bar *
+ ***************/
 
 .storage-bar .trough {
   box-shadow: $shadow_2;
@@ -154,9 +154,9 @@ listbox .h4 {
   border-radius: 50%;
 }
 
-/*************
-* Round Apps *
-*************/
+/**************
+ * Round Apps *
+ **************/
 
 window.rounded,
 window.rounded .action-bar {
@@ -172,8 +172,8 @@ window.rounded decoration {
 }
 
 /******************
-* Pantheon Panel *
-******************/
+ * Pantheon Panel *
+ ******************/
 
 .panel {
   background-color: $panel_bg_color;
@@ -182,8 +182,8 @@ window.rounded decoration {
 }
 
 /**********
-* Harvey *
-**********/
+ * Harvey *
+ **********/
 
 // Lots of custom styling in Harvey, for obvious reasons. Let's try and make it
 // look good in Pop without modifying the original app design.
@@ -202,8 +202,8 @@ window.background.csd.rounded {
 
 
 /************
-* Spice-Up *
-************/
+ * Spice-Up *
+ ************/
 
 window.csd {
 > overlay > stack > grid.app-back > revealer > box.toolbar {
