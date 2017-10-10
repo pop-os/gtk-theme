@@ -1873,14 +1873,14 @@ scrollbar {
   }
 
   transition: $longer_transition;
-  background-color: $base_color;
+  background-color: rgba($bg_color, 0.5);
   background-clip: $extra_background_clip;
 
   // scrollbar border
-  &.top { border-bottom: 1px solid $border_color; }
-  &.bottom { border-top: 1px solid $border_color; }
-  &.left { border-right: 1px solid $border_color; }
-  &.right { border-left: 1px solid $border_color; }
+  &.top { border-bottom: transparent; }
+  &.bottom { border-top: transparent; }
+  &.left { border-right: transparent; }
+  &.right { border-left: transparent; }
 
   // slider
   slider {
@@ -1890,9 +1890,9 @@ scrollbar {
     border: 4px solid transparent;
     border-radius: $circular_radius;
     background-clip: padding-box;
-    background-color: $hint_fg_color;
+    background-color: $scrollbar_color;
 
-    &:hover { background-color: $secondary_fg_color; }
+    &:hover { background-color: $fg_color; }
 
     &:active { background-color: $fg_color; }
 
