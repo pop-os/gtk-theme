@@ -102,6 +102,10 @@ window.background:not(.csd) {
   // remove ugly border around the menus
   > window > menu,
   > menu > menu { border: none; }
+
+  button {
+    color: $fg_color;
+  }
 }
 
 // Firefox now uses this for selected items

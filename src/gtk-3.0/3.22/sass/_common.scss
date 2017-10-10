@@ -625,6 +625,8 @@ toolbar.inline-toolbar toolbutton {
   // &:only-child > button.flat { @extend %linked:only-child; }
 }
 
+omnibar.linked > * { @extend %linked; }
+
 
 %linked_middle {
   border-radius: 0;

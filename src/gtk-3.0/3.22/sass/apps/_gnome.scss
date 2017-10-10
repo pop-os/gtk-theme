@@ -364,7 +364,7 @@ frame.gedit-map-frame > border {
 
 /***********
  * Builder *
- ***********/
+ ***********
 // based css:
 // https://git.gnome.org/browse/gnome-builder/tree/data/theme
 // hard-coded css:
@@ -387,44 +387,6 @@ window.workbench > popover.menu button.model {
 
 // Layout tab and tab bar tweaks
 // The following makes the layout stack header look similar to a tab bar.
-layouttabbar {
-  border-bottom: 1px solid $border_color;
-  background-color: $bg_color;
-
-  button { @extend %flat_button; }
-
-  > box > button {
-    margin: (40px - $medium_size) / 2 0;
-    // border-radius: 0;
-  }
-}
-
-layouttab {
-  margin: 0 8px; // not working
-  border-style: none solid;
-  border-width: 1px;
-  border-color: $border_color;
-  box-shadow: none;
-  background-color: $base_color;
-
-  separator.vertical { margin: 8px 4px; }
-
-  button {
-    &.text-button, &.image-button, & {
-      margin-top: 8px;
-      margin-bottom: 8px;
-      padding: 0 4px;
-    }
-  }
-
-  // Close button styling for layouttab.
-  // > box > button.close { @extend %circular_button; }
-}
-
-layout {
-  border: 1px solid $border_color;
-  -PnlDockBin-handle-size: 1;
-}
 
 entry.search-missing {
   background-color: $error_color;
@@ -631,18 +593,7 @@ editortweak entry.search {
   background-color: transparent;
 }
 
-// Keep search bar and layouttab height in sync.
-// layouttabbar > box,
-// eggsearchbar > revealer > box,
-docktabstrip {
-  min-height: 39px;
-}
-
-eggsearchbar entry {
-  // min-height: 24px;
-}
-
-window.workbench preferences preferencesgroup list entry {
+window.workbench dzlpreferences dzlpreferencesgroup list entry {
   // background: none;
   // min-height: 0px;
   padding-top: 8px;
@@ -654,7 +605,7 @@ button.run-arrow-button {
   padding-left: ($medium_size - 16px) / 2;
   padding-right: ($medium_size - 16px) / 2;
 }
-
+*/
 
 /**********
  * Photos *
