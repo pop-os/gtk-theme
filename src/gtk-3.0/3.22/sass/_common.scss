@@ -1873,7 +1873,7 @@ scrollbar {
   }
 
   transition: $longer_transition;
-  background-color: rgba($bg_color, 0.5);
+  background-color: rgba($bg_color, 0.4);
   background-clip: $extra_background_clip;
 
   // scrollbar border
