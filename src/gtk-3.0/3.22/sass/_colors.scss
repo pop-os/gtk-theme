@@ -23,6 +23,7 @@ $disabled_fg_color:           if($variant == 'light', rgba($brown_700, 0.38), rg
 $disabled_secondary_fg_color: if($variant == 'light', rgba($brown_700, 0.26), rgba($white, 0.3));
 $track_color:                 if($variant == 'light', rgba($brown_900, 0.26), rgba($white, 0.3));
 $divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
+$scrollbar_color:             if($variant == 'light', rgba($brown_800, 0.87), rgba($white, 0.7));
 
 $titlebar_fg_color:                    if($titlebar == 'light', rgba($brown_700, 0.87), $white);
 $titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_700, 0.54), rgba($white, 0.6));
