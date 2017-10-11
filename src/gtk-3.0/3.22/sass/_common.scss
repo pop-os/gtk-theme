@@ -95,11 +95,12 @@ notebook:focus tab,
 }
 
 textview {
+  // FIXME: we need to override background-color to ensure text rendering
   text { background-color: $base_color; }
 
   border {
     background-color: $alt_base_color;
-    color: $hint_fg_color;
+    color: $hint_fg_color; // FIXME: not working
   }
 }
 
@@ -625,9 +626,6 @@ toolbar.inline-toolbar toolbutton {
   // &:only-child > button.flat { @extend %linked:only-child; }
 }
 
-omnibar.linked > * { @extend %linked; }
-
-
 %linked_middle {
   border-radius: 0;
   -gtk-outline-radius: 2px;
@@ -799,6 +797,7 @@ spinbutton {
     // as a box, and tweak the style of the entry in the middle
     // so that it's linked
 
+    // FIXME: this should not be set at all, but otherwise it gets the wrong
     // color
     &:disabled { color: $disabled_fg_color; }
 
@@ -846,7 +845,6 @@ spinbutton {
 /**************
  * ComboBoxes *
  **************/
-
 combobox {
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
@@ -869,7 +867,6 @@ combobox {
     &:dir(ltr) { margin-left: 8px - ($medium_size - 16px) / 2; }
     &:dir(rtl) { margin-right: 8px - ($medium_size - 16px) / 2; }
   }
-
 
   #gtk-combobox-popup-menu {
     padding: 2px 0;
@@ -894,7 +891,7 @@ combobox {
     }
   }
 
-  &:drop(active) {
+  &:drop(active) { // FIXME: untested
     box-shadow: none;
 
     // button.combo { @extend %button_basic:drop(active); }
@@ -1034,7 +1031,7 @@ searchbar,
  ***************/
 %titlebar,
 headerbar {
-  transition: background-color $shorter_duration $deceleration_curve;
+  transition: background-color $shorter_duration $deceleration_curve, color $longer_duration $deceleration_curve;
   min-height: $large_size;
   padding: 0 $container_padding;
   box-shadow: $shadow_1, inset 0 1px $titlebar_highlight_color;
@@ -1050,13 +1047,11 @@ headerbar {
   }
 
   .title {
-    transition: $longer_transition;
     padding: 0 12px;
     font-weight: bold;
   }
 
   .subtitle {
-    transition: $longer_transition;
     padding: 0 12px;
     font-size: smaller;
 
@@ -1113,8 +1108,10 @@ headerbar {
   }
 
   &.selection-mode {
+    // FIXME: 0.00001s is workaround for transition bug of gtk+ 3.22
     // see https://bugzilla.gnome.org/show_bug.cgi?id=774064
-    transition: background-color 0.00001s $longer_duration;
+    transition: background-color 0.00001s $longer_duration, color $longer_duration $deceleration_curve;
+    animation: header_ripple_effect $longer_duration $deceleration_curve;
     box-shadow: $shadow_1, inset 0 1px $alt_highlight_color;
     background-color: $primary_color;
     color: $inverse_fg_color;
@@ -1161,7 +1158,7 @@ headerbar {
       padding-left: 16px;
       padding-right: 16px;
 
-      GtkArrow { -GtkArrow-arrow-scaling: 1; }
+      arrow { -GtkArrow-arrow-scaling: 1; }
 
       .arrow { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
     }
@@ -1440,6 +1437,8 @@ menubar,
     }
 
     &:disabled { color: $titlebar_disabled_secondary_fg_color; }
+
+    label:disabled { color: inherit; } // to inherit the above color
   }
 }
 
@@ -1537,7 +1536,7 @@ menuitem {
   accelerator { color: $secondary_fg_color; }
 }
 
-// THIS IS A REALLY UGLY WORKAROUND!
+// FIXME: THIS IS A REALLY UGLY WORKAROUND!
 // Electron/Atom render all translucent colors in opaque colors.
 // It's a very critical issue for this theme and should be fixed by upstream...
 .popup:not(.csd) menu {
@@ -1554,6 +1553,7 @@ menuitem {
     &:disabled { color: $opaque_disabled_fg_color; } // separator/border also use this color.
   }
 
+  // TODO: not working this, where/how i can set the accelerators?
   accelerator { color: $opaque_secondary_fg_color; }
 }
 
@@ -1564,7 +1564,7 @@ menuitem {
 popover.background {
   transition: $shadow_transition;
   padding: 2px;
-  box-shadow: $shadow_2;
+  box-shadow: $shadow_2; // TODO: this should really have a highlight
   background-color: $lighter_bg_color;
 
   &:backdrop { box-shadow: $shadow_1; }
@@ -2559,6 +2559,7 @@ progressbar {
     progress { min-width: $bar_size; }
   }
 
+  // FIXME: insensitive state missing and some other state should be set probably
   color: $hint_fg_color;
   font-size: smaller;
 
@@ -2584,14 +2585,24 @@ progressbar {
  * Level Bar *
  *************/
 levelbar {
-  block {
-    min-width: $medium_size;
-    min-height: $bar_size;
+  &.horizontal {
+    block { min-height: $bar_size; }
+
+    &.discrete block {
+      min-width: $medium_size;
+
+      &:not(:last-child) { margin-right: 2px; }
+    }
   }
 
-  &.vertical block {
-    min-width: $bar_size;
-    min-height: $medium_size;
+  &.vertical {
+    block { min-width: $bar_size; }
+
+    &.discrete block {
+      min-height: $medium_size;
+
+      &:not(:last-child) { margin-bottom: 2px; }
+    }
   }
 
   // imitate the entry style
@@ -2604,25 +2615,13 @@ levelbar {
     &:disabled { background-color: $alt_base_color; }
   }
 
-  &.horizontal.discrete {
-    block { margin: 0 1px; }
-
-    trough { padding: 2px 1px; }
-  }
-
-  &.vertical.discrete {
-    block { margin: 1px 0; }
-
-    trough { padding: 1px 2px; }
-  }
-
   block {
     &.low { background-color: $warning_color; }
 
     &.high,
     &:not(.empty) { background-color: $primary_color; }
 
-    //&.full { background-color: $success_color; }
+    &.full { background-color: $success_color; }
 
     &.empty { background-color: $divider_color; }
   }
@@ -2755,7 +2754,10 @@ row {
 
     &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
     &:active {
-      transition: $row_transition;
+      transition: $row_transition,
+                  background-size 0,
+                  background-image 0;
+      animation: ripple_effect $longer_duration $deceleration_curve forwards;
       box-shadow: inset 0 0 0 9999px $semi_fill_color;
       background-image: radial-gradient(circle farthest-corner at center,
                                         $semi_fill_color 10%,
@@ -2957,14 +2959,6 @@ stacksidebar {
   }
 }
 
-/******************
- * Control center *
- *****************/
-
-stack list row:selected {
-    color: $inverse_fg_color;
-    background-color: $accent_color;
-}
 
 /****************
  * File chooser *
@@ -3124,7 +3118,7 @@ infobar {
 
   &.error { background-color: $error_bg_color; }
 
-  &.info
+  &.info,
   &.question,
   &.warning,
   &.error {
@@ -3167,6 +3161,7 @@ tooltip {
     background-clip: $extra_background_clip;
   }
 
+  // FIXME: we need a border or tooltips vanish on black background.
   decoration { background-color: transparent; }
 
   label {
@@ -3240,9 +3235,9 @@ colorswatch {
     }
   }
 
-  &.dark overlay { color: $light_fg_color; }
+  &.dark { color: $light_fg_color; }
 
-  &.light overlay { color: $dark_fg_color; }
+  &.light { color: $dark_fg_color; }
 
   &.dark { color: $light_fg_color; } // for focus ring
 
@@ -3251,13 +3246,9 @@ colorswatch {
   &:drop(active) {
     box-shadow: none;
 
-    &.light overlay {
-      box-shadow: $shadow_1, 0 0 0 2px $accent_color;
-    }
+    &.light overlay { box-shadow: $shadow_1, 0 0 0 2px $accent_color; }
 
-    &.dark overlay {
-      box-shadow: $shadow_1, 0 0 0 2px $accent_color;
-    }
+    &.dark overlay { box-shadow: $shadow_1, 0 0 0 2px $accent_color; }
   }
 
   overlay {
@@ -3269,7 +3260,7 @@ colorswatch {
 
   &#add-color-button {
     border-radius: $material_radius $material_radius 0 0;
-    color: $light_fg_color; // for focus ring
+    color: $light_fg_color;
 
     &:only-child { border-radius: $material_radius; }
 
@@ -3279,7 +3270,6 @@ colorswatch {
                                         $warning_bg_color 25%, $warning_bg_color 50%,
                                         $info_bg_color 50%, $info_bg_color 75%,
                                         $question_bg_color 75%);
-      color: $light_fg_color;
     }
   }
 
@@ -3329,7 +3319,7 @@ colorchooser .popover.osd {
 .scale-popup {
   .osd & { @extend %osd; }
 
-  .osd & button.flat {
+  .osd & button.flat { // FIXME: quick hack, redo properly
   }
 
   button { // +/- buttons on GtkVolumeButton popup
@@ -3481,4 +3471,63 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
   min-width: $medium_size;
   min-height: $medium_size;
   padding: 0;
+}
+
+
+/*********
+ * Emoji *
+ *********/
+popover.emoji-picker {
+  padding: 0;
+
+  entry {
+    border-bottom: 1px solid $border_color;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+
+  scrolledwindow { border-bottom: 1px solid $border_color; }
+}
+
+// mimic tab style
+button.emoji-section {
+  margin-top: -1px;
+  padding: 0 8px;
+  min-width: 24px;
+  min-height: $medium_size;
+  border-radius: 0;
+  outline-offset: -6px;
+  box-shadow: none;
+
+  &:hover { box-shadow: inset 0 2px $track_color; }
+
+  &:active {
+    box-shadow: inset 0 2px $primary_color;
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      rgba($primary_color, 0.7) 10%,
+                                      transparent 0%);
+  }
+
+  &:checked {
+    box-shadow: inset 0 2px $primary_color;
+    background-color: transparent;
+  }
+
+  &:first-child { margin-left: 4px; }
+
+  &:last-child { margin-right: 4px; }
+}
+
+.emoji {
+  min-width: 3em;
+  min-height: 3em;
+  padding: 0;
+  // font-size: large;
+
+  widget {
+    transition: $shorter_transition;
+
+    &:hover { font-size: larger; }
+  }
 }

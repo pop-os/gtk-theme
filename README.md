@@ -4,7 +4,7 @@
 
 -------------------
 
-An adaptive Gtk+ theme based on the Flat-Plat GTK+ theme.
+An adaptive Gtk+ theme based on the Materia GTK+ theme.
 
 
 ## Screenshots
@@ -133,6 +133,6 @@ Public License
 
 Special Thanks to
 --------------
- Nana-4, the developer of Flat-Plat.
+ Nana-4, the developer of Materia.
  tista500 and the Adapta Theme Project: https://github.com/adapta-project/
 

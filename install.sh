@@ -1,32 +1,57 @@
 #!/bin/bash
-
-destdir=$1
+set -ueo pipefail
+#set -x
 
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-gnomever_major=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 1)
-gnomever_minor=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 2)
+themedir_base_fallback=${destdir:-}/usr/share/themes/Pop
+themedir_base=${THEME_DIR_BASE:-$themedir_base_fallback}
 
-if [ -z $gnomever_minor ]; then
-  gnomever=3.18
-elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$gnomever_minor ]; then
-  gnomever=$gnomever_major.$gnomever_minor
-elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor + 1)) ]; then
-  gnomever=$gnomever_major.$(($gnomever_minor + 1))
-elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor - 1)) ]; then
-  gnomever=$gnomever_major.$(($gnomever_minor - 1))
+if [[ $(which gnome-shell 2> /dev/null) ]]; then
+  gnomever_major=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 1)
+  gnomever_minor=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 2)
+
+  if [ -e ${srcdir}/gnome-shell/$gnomever_major.$gnomever_minor ]; then
+    gnomever=$gnomever_major.$gnomever_minor
+  elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor + 1)) ]; then
+    gnomever=$gnomever_major.$(($gnomever_minor + 1))
+  elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor - 1)) ]; then
+    gnomever=$gnomever_major.$(($gnomever_minor - 1))
+  else
+    gnomever=3.24
+  fi
 else
   gnomever=3.24
 fi
 
+_COLOR_VARIANTS=(
+  ''
+  '-dark'
+  '-light'
+)
+if [ ! -z "${COLOR_VARIANTS:-}" ]; then
+  IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
+fi
+
+_SIZE_VARIANTS=(
+  ''
+  '-compact'
+)
+if [ ! -z "${SIZE_VARIANTS:-}" ]; then
+  IFS=', ' read -r -a _SIZE_VARIANTS <<< "${SIZE_VARIANTS:-}"
+fi
+
 echo
 
-for color in '' '-dark' '-light' ; do
-  for size in '' '-compact' ; do
+for color in "${_COLOR_VARIANTS[@]}"; do
+  for size in "${_SIZE_VARIANTS[@]}"; do
     echo Installing Pop${color}${size} ...
 
-    themedir=${destdir}/usr/share/themes/Pop${color}${size}
+    themedir=${themedir_base}${color}${size}
+    if [[ -d ${themedir} ]]; then
+      rm -r ${themedir}
+    fi
     install -d ${themedir}
 
     # Copy COPYING
@@ -42,34 +67,32 @@ for color in '' '-dark' '-light' ; do
       ${themedir}/index.theme
 
     # Install Chrome Theme/Extention
-    #install -d ${themedir}/chrome
-    #cd ${srcdir}/chrome
-    #cp -ur \
-    #  "Pop${color} Theme.crx" \
-    #  ${themedir}/chrome
-    #if [ "$color" != '-dark' ] ; then
-    #  cp -ur \
-    #    "Pop Scrollbars.crx" \
-    #    ${themedir}/chrome
-    #else
-    #  cp -ur \
-    #    "Pop${color} Scrollbars.crx" \
-    #    ${themedir}/chrome
-    #fi
+    install -d ${themedir}/chrome
+    cd ${srcdir}/chrome
+    cp -ur \
+      "Materia${color} Theme.crx" \
+      ${themedir}/chrome
+    if [ "$color" != '-dark' ]; then
+      cp -ur \
+        "Materia Scrollbars.crx" \
+        ${themedir}/chrome
+    else
+      cp -ur \
+        "Materia${color} Scrollbars.crx" \
+        ${themedir}/chrome
+    fi
 
     # Install GNOME Shell Theme
     install -d ${themedir}/gnome-shell
     cd ${srcdir}/gnome-shell/${gnomever}
     cp -ur \
-      no-events.svg \
-      no-notifications.svg \
-      process-working.svg \
+      *.svg \
       ${themedir}/gnome-shell
     cp -urL \
       extensions \
       pad-osd.css \
       ${themedir}/gnome-shell
-    if [ "$color" != '-dark' ] ; then
+    if [ "$color" != '-dark' ]; then
       cp -urL \
         assets \
         ${themedir}/gnome-shell
@@ -81,9 +104,6 @@ for color in '' '-dark' '-light' ; do
     cp -ur \
       gnome-shell${color}${size}.css \
       ${themedir}/gnome-shell/gnome-shell.css
-    cp -urL \
-      pop.css \
-      ${themedir}/gnome-shell/pop.css
     glib-compile-resources \
       --sourcedir=${themedir}/gnome-shell \
       --target=${themedir}/gnome-shell/gnome-shell-theme.gresource \
@@ -97,7 +117,7 @@ for color in '' '-dark' '-light' ; do
       hacks.rc \
       main.rc \
       ${themedir}/gtk-2.0
-    if [ "$color" != '-dark' ] ; then
+    if [ "$color" != '-dark' ]; then
       cp -ur \
         assets \
         ${themedir}/gtk-2.0
@@ -117,15 +137,8 @@ for color in '' '-dark' '-light' ; do
       assets \
       ${themedir}/gtk-common
 
-    # Install Plank theme
-    install -d ${themedir}/plank
-    cd ${srcdir}/plank
-    cp -ur \
-      dock.theme \
-      ${themedir}/plank
-
-    for version in '3.18' '3.20' '3.22' ; do
-      if [ "$version" == '3.18' ] ; then
+    for version in '3.18' '3.20' '3.22'; do
+      if [ "$version" == '3.18' ]; then
         install -d ${themedir}/gtk-3.0
         cd ${srcdir}/gtk-3.0/${version}
         cp -ur \
@@ -134,7 +147,7 @@ for color in '' '-dark' '-light' ; do
         cp -ur \
           gtk${color}.css \
           ${themedir}/gtk-3.0/gtk.css
-        if [ "$color" != '-dark' ] ; then
+        if [ "$color" != '-dark' ] && [ -f gtk-dark.css ]; then
           cp -ur \
             gtk-dark.css \
             ${themedir}/gtk-3.0
@@ -148,7 +161,7 @@ for color in '' '-dark' '-light' ; do
         cp -ur \
           gtk${color}${size}.css \
           ${themedir}/gtk-${version}/gtk.css
-        if [ "$color" != '-dark' ] ; then
+        if [ "$color" != '-dark' ] && [ -f gtk-dark.css ]; then
           cp -ur \
             gtk-dark${size}.css \
             ${themedir}/gtk-${version}/gtk-dark.css
@@ -162,7 +175,7 @@ for color in '' '-dark' '-light' ; do
     cp -ur \
       *.svg \
       ${themedir}/metacity-1
-    if [ "$color" != '-light' ] ; then
+    if [ "$color" != '-light' ]; then
       cp -ur \
         metacity-theme-2.xml \
         metacity-theme-3.xml \
@@ -184,7 +197,7 @@ for color in '' '-dark' '-light' ; do
       *.png \
       *.json \
       ${themedir}/unity
-    if [ "$color" != '-light' ] ; then
+    if [ "$color" != '-light' ]; then
       cp -ur \
         buttons \
         ${themedir}/unity
@@ -201,7 +214,7 @@ for color in '' '-dark' '-light' ; do
       *.svg \
       themerc \
       ${themedir}/xfwm4
-    if [ "$color" != '-light' ] ; then
+    if [ "$color" != '-light' ]; then
       cp -ur \
         assets \
         ${themedir}/xfwm4
