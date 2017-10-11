@@ -1,3 +1,10 @@
+pop-gtk-theme (2.2.0.0) artful; urgency=medium
+
+  * New upstream sync.
+  * Emoji picker support
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 11 Oct 2017 11:43:35 -0600
+
 pop-gtk-theme (2.1.2.0) artful; urgency=medium
 
   * Internal code cosmetics
