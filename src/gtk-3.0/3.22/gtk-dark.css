@@ -4684,6 +4684,10 @@ window.background:not(.csd) > menu > menu {
   border: none;
 }
 
+window.background:not(.csd) button label {
+  color: white;
+}
+
 window.background:not(.csd) > widget > menubar {
   color: rgba(255, 255, 255, 0.6);
 }
