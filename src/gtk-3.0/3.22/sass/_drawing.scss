@@ -131,7 +131,7 @@
     transition: $longer_transition;
     box-shadow: inset 0 0 0 9999px transparent;
     background-color: transparent;
-    color: $fg_color;
+    color: $secondary_fg_color;
   }
 
   @if $t == flat-hover {
