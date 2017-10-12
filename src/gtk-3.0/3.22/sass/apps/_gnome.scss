@@ -396,13 +396,20 @@ row#PrimaryWorkspaceTweak {
 // based css for 3.26:
 // https://git.gnome.org/browse/gnome-builder/tree/data/themes?h=gnome-builder-3-26
 
-window.workbench > stack.titlebar headerbar omnibar.linked.horizontal :first-child {
+window.workbench > stack.titlebar headerbar omnibar.linked.horizontal entry:first-child {
   border-top-right-radius: 0;
   padding-right: 3px;
+  //background-color: $base_color;
+  background-color: transparent;
+
+  & > widget box {
+    background-color: transparent;
+  }
 }
 
 window.workbench > stack.titlebar headerbar omnibar.linked.horizontal button:last-child {
   @include entry(normal);
+  background-color: $base_color;
   padding-left: 1em;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
