@@ -104,8 +104,11 @@ for color in "${_COLOR_VARIANTS[@]}"; do
     cp -ur \
       gnome-shell${color}${size}.css \
       ${themedir}/gnome-shell/gnome-shell.css
+    ##cp -urL \
+    ##  pop.css \
+    ##  ${themedir}/gnome-shell/pop.css
     cp -urL \
-      pop.css \
+      gnome-shell${color}${size}.css \
       ${themedir}/gnome-shell/pop.css
     glib-compile-resources \
       --sourcedir=${themedir}/gnome-shell \
