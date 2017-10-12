@@ -411,6 +411,10 @@ window.workbench > stack.titlebar headerbar omnibar.linked.horizontal {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: 0 transparent;
+
+    &:hover {
+      background-color: $base_color;
+    }
   }
 }
 
