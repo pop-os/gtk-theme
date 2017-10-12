@@ -411,7 +411,7 @@ window.workbench > stack.titlebar headerbar omnibar.linked.horizontal entry:firs
 
 window.workbench > stack.titlebar headerbar omnibar.linked.horizontal button:last-child {
   @include entry(normal);
-  background-color: $builder_omni_button_color;
+  background-color: $bg_color;
   padding-left: 1em;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
