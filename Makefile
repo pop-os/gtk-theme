@@ -1,11 +1,10 @@
-all:
+all: sass assets
+
+sass:
 	./parse-sass.sh
 
 install:
 	./install.sh $(DESTDIR)
-
-post-install:
-	-gtk-update-icon-cache -q $(DESTDIR)/usr/share/icons/Pop
 
 gtk2:
 	cd ./src/gtk-2.0 && ./recolor-assets.sh
