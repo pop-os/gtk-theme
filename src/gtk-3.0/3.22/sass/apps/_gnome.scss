@@ -398,9 +398,11 @@ row#PrimaryWorkspaceTweak {
 
 window.workbench > stack.titlebar headerbar omnibar.linked.horizontal entry:first-child {
   border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   padding-right: 3px;
   //background-color: $base_color;
   background-color: transparent;
+  border-right: 0 transparent;
 
   & > widget box {
     background-color: transparent;
@@ -409,10 +411,11 @@ window.workbench > stack.titlebar headerbar omnibar.linked.horizontal entry:firs
 
 window.workbench > stack.titlebar headerbar omnibar.linked.horizontal button:last-child {
   @include entry(normal);
-  background-color: $base_color;
+  background-color: $builder_omni_button_color;
   padding-left: 1em;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border-left: 0 transparent;
 }
 
 button.dzlmenubutton image {
