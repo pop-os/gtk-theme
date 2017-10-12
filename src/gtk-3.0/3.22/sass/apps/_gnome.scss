@@ -396,6 +396,18 @@ row#PrimaryWorkspaceTweak {
 // based css for 3.26:
 // https://git.gnome.org/browse/gnome-builder/tree/data/themes?h=gnome-builder-3-26
 
+window.workbench > stack.titlebar headerbar omnibar.linked.horizontal :first-child {
+  border-top-right-radius: 0;
+  padding-right: 3px;
+}
+
+window.workbench > stack.titlebar headerbar omnibar.linked.horizontal button:last-child {
+  @include entry(normal);
+  padding-left: 1em;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 button.dzlmenubutton image {
   min-width: $medium_size - 6px;
 
