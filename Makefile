@@ -22,14 +22,11 @@ assets:
 	cd ./src/gtk-2.0/ && ./render-assets-dark.sh
 
 clean:
-	-mv ./src/gnome-shell/3.18/pad-osd.css
-	-mv ./src/gnome/shell/3.24/pad-osd.css
-	-mv ./src/gnome/shell/3.26/pad-osd.css
-	-mv ./src/gnome/shell/3.18/**/workspaces
 	-rm -rf ./src/gtk-2.0/assets/*.png
 	-rm -rf ./src/gtk-2.0/assets-dark/*.png
 	-rm -rf ./src/gtk-3.0/gtk-common/assets/*.png
 	-rm -rf ./src/gtk-3.0/**/*.css
+	-rm -rf ./src/gnome-shell/**/*.css
 
 
 uninstall:
