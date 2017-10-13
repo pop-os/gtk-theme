@@ -442,7 +442,7 @@ StScrollBar {
 
   .prompt-dialog-error-label {
     font-size: 1em;
-    color: $error_color;
+    color: $warning_color;
     padding-bottom: 8px;
   }
 
@@ -808,17 +808,20 @@ StScrollBar {
 /* TOP BAR */
 
 #panel {
-  background-color: $bg_color;
+  background-color: $panel_bg_color;
   /* transition from solid to transparent */
   transition-duration: 250ms;
   font-weight: bold;
   height: $menuitem_size;
+  box-shadow: none;
 
   &:overview,
   &.unlock-screen,
   &.login-screen,
   &.lock-screen {
-    background-color: transparent;
+    background-color: rgba($panel_bg_color, 0.5);
+    border: none;
+    box-shadow: none;
   }
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
@@ -826,13 +829,13 @@ StScrollBar {
   }
 
   .panel-corner {
-    -panel-corner-radius: $panel-corner-radius;
-    -panel-corner-background-color: $bg_color;
-    -panel-corner-border-width: 2px;
+    -panel-corner-radius: $panel_corner_radius + 2px; //FIXME: Corner radius is
+    -panel-corner-background-color: $panel_bg_color;  //       really broken.
+    -panel-corner-border-width: 0;
     -panel-corner-border-color: transparent;
 
     &:active, &:overview, &:focus {
-      -panel-corner-border-color: $inverse_fg_color;
+      -panel-corner-border-color: $accent_color;
     }
 
     &.lock-screen, &.login-screen, &.unlock-screen {
@@ -878,7 +881,7 @@ StScrollBar {
       // Trick due to St limitations. It needs a background to draw
       // a box-shadow
       background-color: rgba($bg_color, 0.01);
-      box-shadow: inset 0 -2px 0px $inverse_fg_color;
+      box-shadow: inset 0 -2px 0px $accent_color;
       color: $inverse_fg_color;
 
       & > .system-status-icon { icon-shadow: none; }
@@ -1401,13 +1404,18 @@ StScrollBar {
     selected-color: $inverse_fg_color;
     @include entry(normal,$fc:$inverse_track_color);
     &:focus {
-      @include entry(focus,$fc:$inverse_fg_color);
+      @include entry(focus,$fc:$accent_color);
       padding: 0 8px;
       border-width: 0;
       color: $inverse_fg_color;
     }
 
-    .search-entry-icon { icon-size: 16px; padding: 0 0; color: $inverse_hint_fg_color; }
+    .search-entry-icon {
+      icon-size: 16px;
+      padding: 0 0;
+      color: $inverse_hint_fg_color;
+      transition: $longer_transition;
+    }
 
     &:hover, &:focus {
       .search-entry-icon { color: $inverse_fg_color; }
@@ -1448,14 +1456,14 @@ StScrollBar {
   #dash {
     font-size: 1em;
     color: $inverse_fg_color;
-    background-color: $inverse_bg_color;
+    background-color: rgba($panel_bg_color, 0.5);
     padding: 3px 0;
     border: none;
     border-left: 0px;
-    border-radius: 0px 2px 2px 0px;
+    border-radius: 0px $material_radius $material_radius 0px;
 
     &:rtl {
-      border-radius: 2px 0 0 2px;
+      border-radius: $material_radius 0 0 $material_radius;
     }
 
     .placeholder {
@@ -1934,7 +1942,7 @@ StScrollBar {
     selection-background-color: $inverse_track_color;
     selected-color: $inverse_fg_color;
     @include entry(normal, $fc:$inverse_track_color);
-    &:focus { @include entry(focus, $fc:$inverse_fg_color); }
+    &:focus { @include entry(focus, $fc:$accent_color); }
     &:insensitive {
       @include entry(insensitive, $fc:$inverse_divider_color);
       color: $inverse_disabled_fg_color;
