@@ -49,9 +49,6 @@ for color in "${_COLOR_VARIANTS[@]}"; do
     echo Installing Pop${color}${size} ...
 
     themedir=${themedir_base}${color}${size}
-    if [[ -d ${themedir} ]]; then
-      rm -r ${themedir}
-    fi
     install -d ${themedir}
 
     # Copy COPYING

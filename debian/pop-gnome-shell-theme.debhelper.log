@@ -1,4 +1,2 @@
 dh_update_autotools_config
 dh_auto_configure
-dh_auto_build
-dh_prep
