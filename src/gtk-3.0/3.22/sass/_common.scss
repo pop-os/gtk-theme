@@ -2725,7 +2725,11 @@ list {
   border-color: $border_color;
   background-color: $base_color;
 
-  row { padding: 2px; }
+  row {
+    padding: 2px;
+
+    &:selected { background-color: $primary_color; }
+  }
 }
 
 // FIXME

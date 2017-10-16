@@ -147,11 +147,11 @@ StScrollBar {
 
 .slider {
   height: 20px;
-  color: $accent_color;
+  color: $primary_color;
   -slider-height: 2px;
   -slider-background-color: $track_color; //background of the trough
   -slider-border-color: transparent; //trough border color
-  -slider-active-background-color: $accent_color; //active trough fill
+  -slider-active-background-color: $primary_color; //active trough fill
   -slider-active-border-color: transparent; //active trough border
   -slider-border-width: 0;
   -slider-handle-radius: 7px;
@@ -575,7 +575,7 @@ StScrollBar {
       box-shadow: $shadow_0;
       font-weight: normal;
       &.selected {
-        background-color: mix($inverse_fg_color, $primary_color, percentage($lower_opacity / 2));
+        background-color: mix($inverse_fg_color, $accent_color, percentage($lower_opacity / 2));
         color: $inverse_fg_color;
       }
       &:active {

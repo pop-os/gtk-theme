@@ -2,9 +2,11 @@
  * Control center *
  *****************/
 
-stack list row:selected {
+window.csd > box.horizontal > box.vertical > scrolledwindow.view {
+  & > viewport.frame > stack > list > row:selected {
     color: $inverse_fg_color;
     background-color: $accent_color;
+  }
 }
 
 /****************

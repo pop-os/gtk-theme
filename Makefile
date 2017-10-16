@@ -21,7 +21,7 @@ assets:
 	cd ./src/gtk-2.0/ && ./render-assets.sh
 	cd ./src/gtk-2.0/ && ./render-assets-dark.sh
 
-clean:
+cleanup:
 	-rm -rf ./src/gtk-2.0/assets/*.png
 	-rm -rf ./src/gtk-2.0/assets-dark/*.png
 	-rm -rf ./src/gtk-3.0/gtk-common/assets/*.png
