@@ -1,7 +1,7 @@
 $asset_suffix: if($variant == 'dark', '-dark', '');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
 
-$panel-corner-radius: 4px;
+$panel_corner_radius: 4px;
 
 // font families
 $font-family: Fira Sans, Cantarell, Sans-Serif;

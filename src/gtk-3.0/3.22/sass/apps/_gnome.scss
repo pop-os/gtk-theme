@@ -1,3 +1,14 @@
+/******************
+ * Control center *
+ *****************/
+
+window.csd > box.horizontal > box.vertical > scrolledwindow.view {
+  & > viewport.frame > stack > list > row:selected {
+    color: $inverse_fg_color;
+    background-color: $accent_color;
+  }
+}
+
 /****************
  * Eye of GNOME *
  ****************/
@@ -43,9 +54,9 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry {
  * Nautilus *
  ************/
 // based css:
-// https://git.gnome.org/browse/nautilus/tree/src/resources/css/Adwaita.css
+// https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/Adwaita.css
 // hard-coded css:
-// https://git.gnome.org/browse/nautilus/tree/src/resources/css/nautilus.css
+// https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/nautilus.css
 
 .nautilus-window,
 .nautilus-window notebook,
@@ -221,7 +232,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 
 // Only normal state is handle
 .open-document-selector-name-label {
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 // Only normal state is handle
@@ -361,251 +372,103 @@ frame.gedit-map-frame > border {
   border: 1px solid $border_color;
 }
 
+//
+// Workaround for 3.26
+//
+
+row#Focus,
+row#StaticWorkspaceTweak,
+row#PrimaryWorkspaceTweak {
+  padding: 0;
+  border: 1px solid $border_color;
+
+  row:not(:last-child) { border-bottom: 1px solid $border_color; }
+}
+
+// Add more spaces between title and list
+row#Focus,
+row#PrimaryWorkspaceTweak {
+  margin-top: 4px;
+}
+
 
 /***********
  * Builder *
- ***********
-// based css:
-// https://git.gnome.org/browse/gnome-builder/tree/data/theme
-// hard-coded css:
-// https://git.gnome.org/browse/gnome-builder/tree/data/theme/shared.css
+ ***********/
+// based css for 3.26:
+// https://git.gnome.org/browse/gnome-builder/tree/data/themes?h=gnome-builder-3-26
 
-// View control buttons. Need to adjust radii
-window.workbench > popover.menu button.model {
-  border-radius: 0;
-
-  &:first-child {
-    border-top-left-radius: $material_radius;
-    border-bottom-left-radius: $material_radius;
+window.workbench > stack.titlebar headerbar omnibar.linked.horizontal {
+  & entry:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 3px;
+    border-right: 0 transparent;
   }
 
-  &:last-child {
-    border-top-right-radius: $material_radius;
-    border-bottom-right-radius: $material_radius;
-  }
-}
+  & button:last-child {
+    @include entry(normal);
+    background-color: $bg_color;
+    padding-left: 1em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0 transparent;
 
-// Layout tab and tab bar tweaks
-// The following makes the layout stack header look similar to a tab bar.
-
-entry.search-missing {
-  background-color: $error_color;
-  color: $inverse_fg_color;
-}
-
-// tweak icons for treeviews
-window.workbench treeview.image {
-  color: $secondary_fg_color;
-
-  &:selected { color: $inverse_secondary_fg_color; }
-}
-
-popover.popover-selector list {
-  padding: 8px - 2px;
-
-  row {
-    border-radius: 2px;
-
-    image {
-      &:dir(ltr) { margin-right: 6px; }
-      &:dir(rtl) { margin-left: 6px; }
-    }
-
-    .accel {
-      &:dir(ltr) { margin-left: 6px; }
-      &:dir(rtl) { margin-right: 6px; }
+    &:hover {
+      background-color: $base_color;
     }
   }
 }
 
-omnibar {
-  &.linked:not(.vertical) entry { border-radius: 2px; }
+button.dzlmenubutton image {
+  min-width: $medium_size - 6px;
 
-  &:not(:hover):not(:active) entry { color: $secondary_fg_color; }
+  &.arrow { min-width: $medium_size - 9px; }
 }
 
-popover.omnibar list row:not(:last-child) {
+button.dzlmenubuttonitem {
+  color: $fg_color;
+  font-weight: normal;
+
+  &:disabled { color: $disabled_fg_color; }
+}
+
+idelayoutstackheader {
   border-bottom: 1px solid $border_color;
+
+  button:checked { color: $fg_color; }
 }
 
-entry.preferences-search {
-  @extend %entry.flat;
+// utilities stack switcher
+ideeditorutilities > dzldockpaned > box > stackswitcher {
+  background-color: $bg_color;
 
-  box-shadow: inset 0 -1px $border_color;
-  background-color: $base_color;
-
-  // doesn't work properly
-  // &:dir(ltr) { border-right: 1px solid $border_color; }
-  // &:dir(rtl) { border-left: 1px solid $border_color; }
-}
-
-preferences stacksidebar.sidebar {
-  list { background-color: $lighter_bg_color; }
-
-  &:dir(ltr),
-  &:dir(rtl) { list { border-style: none; }}
-
-  list separator { @extend %hide_separators; }
-}
-
-preferences > box > box {
   &:dir(ltr) { border-right: 1px solid $border_color; }
   &:dir(rtl) { border-left: 1px solid $border_color; }
+
+  button {
+    background-color: transparent;
+
+    &:active { background-color: $accent_color; }
+  }
+}
+
+
+// buildui panel
+ideeditorsidebar notebook header {
+  background: transparent;
 }
 
 popover.messagepopover {
-  &.background { padding: 0; }
+  // padding: 0;
 
-  .popover-action-area button {
-    @extend %simple_flat_button;
+  list {
+    border: 1px solid $border_color;
 
-    padding: 8px 16px;
-    border-top: 1px solid $border_color;
-    border-radius: 0;
-
-    &:first-child { border-bottom-left-radius: 2px; }
-
-    &:last-child { border-bottom-right-radius: 2px; }
-  }
-
-  .popover-content-area { margin: 16px; }
-}
-
-popover.transfers list {
-  background-color: transparent;
-
-  row:not(:first-child) { border-top: 1px solid $border_color; }
-
-  row > box { padding: 10px; }
-}
-
-dockbin {
-  border: 1px solid $border_color;
-  -PnlDockBin-handle-size: 1;
-}
-
-dockpaned {
-  border: 1px solid $border_color;
-}
-
-eggsearchbar box.search-bar {
-  padding: 0 8px;
-  border-bottom: 1px solid $border_color;
-  background-color: $bg_color;
-}
-
-docktabstrip {
-  padding: 0 8px;
-  border-bottom: 1px solid $border_color;
-  background-color: $bg_color;
-}
-
-docktab {
-  transition: $longer_transition,
-              background-size 0,
-              background-image 0;
-  min-height: $small_size;
-  min-width: $small_size;
-  margin-bottom: -1px;
-  padding: $container_padding 6px;
-
-  outline-offset: -6px;
-
-  border-width: 1px;         // for reorderable tabs
-  border-color: transparent; //
-
-  background-image: radial-gradient(circle farthest-corner at center,
-                                    $accent_color 10%,
-                                    transparent 0%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 0% 0%;
-
-  color: $secondary_fg_color;
-  font-weight: 500;
-
-  &:hover {
-    box-shadow: inset 0 -2px $track_color;
-    color: $fg_color;
-  }
-
-  &:checked {
-    transition: $longer_transition,
-                background-size $longer_duration $deceleration_curve,
-                background-image $longer_duration + $ripple_duration $deceleration_curve;
-    box-shadow: inset 0 -2px $accent_color;
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      transparent 10%,
-                                      transparent 0%);
-    background-size: 1000% 1000%;
-    color: $fg_color;
+    row:not(:last-child) { border-bottom: 1px solid $border_color; }
   }
 }
 
-dockoverlayedge {
-  background-color: $bg_color;
-
-  docktabstrip {
-    padding: 0;
-    border: none;
-  }
-
-  &.left-edge docktab {
-    &:hover { box-shadow: inset -2px 0 $track_color; }
-    &:checked { box-shadow: inset -2px 0 $accent_color; }
-  }
-
-  &.right-edge docktab {
-    &:hover { box-shadow: inset 2px 0 $track_color; }
-    &:checked { box-shadow: inset 2px 0 $accent_color; }
-  }
-}
-
-pillbox {
-  background-color: $bg_color;
-  border-radius: 2px;
-}
-
-buildperspective row {
-  // padding: 10px;
-}
-
-layoutpane entry.search {
-  @extend %entry.flat;
-
-  box-shadow: inset 0 -1px $border_color;
-  background-color: $base_color;
-}
-
-editortweak entry.search {
-  @extend %entry.flat;
-
-  margin-bottom: -1px;
-  box-shadow: none;
-}
-
-//
-// let's tweak hard-coded elements
-//
-
-.gb-search-entry-occurrences-tag {
-  box-shadow: none;
-  background-color: transparent;
-}
-
-window.workbench dzlpreferences dzlpreferencesgroup list entry {
-  // background: none;
-  // min-height: 0px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-button.run-arrow-button {
-  // min-width: 12px;
-  padding-left: ($medium_size - 16px) / 2;
-  padding-right: ($medium_size - 16px) / 2;
-}
-*/
 
 /**********
  * Photos *

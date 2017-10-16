@@ -1,12 +1,10 @@
-Summary
--------
+## Summary
 
 - Do not edit the CSS directly, edit the source SCSS files and run `./parse-sass.sh`
 - To be able to use the latest/adequate version of Sass, install `sassc`
 - To change the SVG assets color, use a text editor instead of a image editor
 
-How to tweak the theme
-----------------------
+## How to tweak the theme
 
 Like the upstream Adwaita, this theme is written and processed in Sass.
 
@@ -28,8 +26,7 @@ Here's a rundown of the _supporting_ stylesheets:
 - `_colors.scss`
 
   global color definitions. We keep the number of defined colors to a necessary
-  minimum, most colors are derived from a handful of basics. It covers both the
-  light variant and the dark variant.
+  minimum. It covers both the light variant and the dark variant.
 
 - `_colors-public.scss`
 
@@ -49,8 +46,7 @@ Here's a rundown of the _supporting_ stylesheets:
 
   app/extension specific stylings.
 
-How to change the assets color
-------------------------------
+## How to change the assets color
 
 To keep it maintainable, SVG files are basically edited on text-based.
 
@@ -74,39 +70,16 @@ Here's an example to change the _accent color_:
 
 2. Search `#FF4081` (default accent color) and replace with your favorite color.
 
-  - The recommended color palette is: https://material.io/guidelines/style/color.html#color-color-palette
+  > The recommended color palette is: https://material.io/guidelines/style/color.html#color-color-palette
 
-3. For gtk2 and gtk3, delete all PNG assets before redrawing them.
+3. Run `./render-assets.sh` to render the PNG assets for gtk2 and gtk3.
 
-  ```sh
-  rm ./src/gtk-2.0/assets/*.png
-  rm ./src/gtk-2.0/assets-dark/*.png
-  rm ./src/gtk-3.0/gtk-common/assets/*.png
-  ```
+  > Note: `inkscape` and `optipng` must be installed to run the script.
 
-4. Run `./render-assets.sh` or `./render-assets-dark.sh` to render the PNG assets.
+## Useful Links
 
-  > Note: Inkscape must be installed to run the scripts.
+#### Upstream theme sources
 
-  - for gtk2:
-
-    ```sh
-    cd ./src/gtk-2.0
-    ./render-assets.sh
-    ./render-assets-dark.sh
-    ```
-
-  - for gtk3:
-
-    ```sh
-    cd ./src/gtk-3.0/gtk-common
-    ./render-assets.sh
-    ```
-
-Useful Links
-------------
-
-Upstream theme sources:
 - [GTK+ 4.0](https://github.com/GNOME/gtk/tree/master/gtk/theme/Adwaita)
   - [3.22](https://github.com/GNOME/gtk/tree/gtk-3-22/gtk/theme/Adwaita)
   - [3.20](https://github.com/GNOME/gtk/tree/gtk-3-20/gtk/theme/Adwaita)
@@ -115,8 +88,9 @@ Upstream theme sources:
 - [GNOME Shell](https://github.com/GNOME/gnome-shell/tree/master/data/theme)
   - [Sass sources](https://github.com/GNOME/gnome-shell-sass)
 
-Tips:
+#### Tips
+
 - [Unity/Theming](https://wiki.ubuntu.com/Unity/Theming)
 - [Material Design Guidelines](https://www.material.io/guidelines/)
-- [Personal CSS Guidelines](https://github.com/nana-4/Flat-Plat/wiki/CSS-Guidelines)
+- [Personal CSS Guidelines](https://github.com/nana-4/materia-theme/wiki/CSS-Guidelines)
 - [The GTK+ Inspector](https://blog.gtk.org/2017/04/05/the-gtk-inspector/)

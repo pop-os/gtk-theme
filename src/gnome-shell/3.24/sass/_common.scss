@@ -353,7 +353,7 @@ StScrollBar {
   }
 
   .mount-question-dialog-subject {
-      max-width: 500px;
+      max-width: 34em;
   }
 
   .show-processes-dialog-subject:rtl,
@@ -406,7 +406,7 @@ StScrollBar {
 
 .prompt-dialog {
   //this is the width of the entire modal popup
-  width: 500px;
+  width: 34em;
   border: none;
 }
 
@@ -614,7 +614,7 @@ StScrollBar {
     &.selected {
       background-color: $divider_color;
       color: $fg_color;
-      transition-duration: 0s;
+      transition-duration: 0ms;
     }
     &:active {
       background-color: $track_color;
@@ -1038,10 +1038,14 @@ StScrollBar {
       margin: 2px;
       border-radius: 100px;
       &:hover,&:focus { background-color: $divider_color; }
-      // &:active { background-color: $track_color; }
-      &:active, &:selected {
+      &:active {
+        color: inherit;
+        background-color: $track_color;
+        border-color: transparent; //avoid jumparound due to today
+      }
+      &:selected {
         color: $inverse_fg_color;
-        background-color: $accent_color !important;
+        background-color: $accent_color;
         border-color: transparent; //avoid jumparound due to today
       }
       &.calendar-day-heading {  //day of week heading
@@ -1204,7 +1208,8 @@ StScrollBar {
 
           .media-message-cover-icon {
             icon-size: 32px !important;
-            margin: 8px 0;
+            margin: 8px 0px 8px 4px !important;
+            &:rtl { margin: 8px 4px 8px 0px !important; }
             &.fallback {
               icon-size: 16px !important;
               padding: 8px;
@@ -1275,6 +1280,7 @@ StScrollBar {
 //close buttons
 
 .window-close {
+  transition-duration: 0ms; // FIXME: unless disable the transition, button will distort when hovering
   height: $medium_size;
   width: $medium_size;
   -st-background-image-shadow: $shadow_1;
@@ -1292,9 +1298,9 @@ StScrollBar {
 /* NETWORK DIALOGS */
 
 .nm-dialog {
-  max-height: 500px;
-  min-height: 450px;
-  min-width: 470px;
+  max-height: 34em;
+  min-height: 31em;
+  min-width: 32em;
 }
 
   .nm-dialog-content {
@@ -1462,11 +1468,8 @@ StScrollBar {
 
   }
 
-  .dash-item-container {
-    background-color: transparent;
-    > StWidget {
-      padding: 3px 6px;
-    }
+  .dash-item-container > StWidget {
+    padding: 3px 6px;
   }
 
   .dash-label { //osd tooltip
@@ -1528,7 +1531,7 @@ StScrollBar {
     @extend %icon_tile;
     &:focus, &:selected, &:hover {
       background-color: $inverse_divider_color;
-      transition-duration: 0s;
+      transition-duration: 0ms;
     }
     &:active, &:checked {
       background-color: $inverse_track_color;
@@ -1546,7 +1549,7 @@ StScrollBar {
     &:focus .overview-icon,
     &:selected .overview-icon {
       background-color: rgba($inverse_fg_color, 0.2);
-      transition-duration: 0s;
+      transition-duration: 0ms;
       border-image: none;
       background-image: none;
     }
@@ -1626,7 +1629,7 @@ StScrollBar {
     &:checked .page-indicator-icon {
       background-image: none;
       background-color: $inverse_fg_color;
-      transition-duration: 0s;
+      transition-duration: 0ms;
     }
     &:checked:active { background-image: none; }
   }
@@ -1645,22 +1648,14 @@ StScrollBar {
     visible-width: 32px; //amount visible before hover
     spacing: 12px;
     padding: 12px;
-    border: 0 solid rgba($bg_color, 0.3);
-    border-radius: 0;
-    &:ltr {
-      border-left-width: 2px;
-      border-right-width: 2px;
-    }
-    &:rtl {
-      border-right-width: 2px;
-      border-left-width: 2px
-    }
+    border-radius: 2px 0 0 2px;
+    //border-width: 0; //fixme: can't have non unoform borders :(
+    &:rtl { border-radius: 0 2px 2px 0;}
   }
   .workspace-thumbnail-indicator {
     border: 0 solid $accent_color;
     border-left-width: 2px;
-    border-right-width: 2px;
-    padding: 12px;
+    padding: 6px;
     border-radius: 0;
   }
 
@@ -1899,7 +1894,7 @@ $legacy_icon_size: 24px;
   }
 
   .candidate-box {
-    transition-duration: 0s;
+    transition-duration: 0ms; // FIXME: needs more natural transitions
     min-height: $menuitem_size;
     padding: 0 8px;
     border-radius: $material_radius;
@@ -2098,13 +2093,13 @@ $legacy_icon_size: 24px;
   background-color: transparent;
   max-height: 500px;
   .summary-notification-stack-scrollview {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .notification,
   .screen-shield-notification-source {
-    padding-right: 20px;
+    padding: 8px;
     border: none;
     background-color: rgba($bg_color, 0.7);
     color: $fg_color;

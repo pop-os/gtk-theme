@@ -1,0 +1,6 @@
+src/chrome/**/*.css
+src/gnome-shell/3.18/extensions/workspaces-to-dock/workspaces-to-dock.css
+src/gnome-shell/3.18/pop.css
+src/gnome-shell/3.18/pad-osd.css
+src/gnome-shell/3.24/pad-osd.css
+src/gnome-shell/3.24/pop.css

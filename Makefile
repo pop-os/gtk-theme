@@ -1,17 +1,16 @@
-all:
+all: sass assets
+
+sass:
 	./parse-sass.sh
 
 install:
 	./install.sh $(DESTDIR)
 
-post-install:
-	-gtk-update-icon-cache -q $(DESTDIR)/usr/share/icons/Pop
-
 gtk2:
 	cd ./src/gtk-2.0 && ./recolor-assets.sh
 
 gnome-shell:
-	cp -v /usr/share/themes/Pop-dark/gnome-shell/pop.css /usr/share/gnome-shell/theme
+	cp -v /usr/share/themes/Pop/gnome-shell/pop.css /usr/share/gnome-shell/theme
 
 assets:
 	cd ./src/gtk-3.0/gtk-common/ && find . -type f -name *.png -exec rm -v '{}' +
@@ -21,6 +20,14 @@ assets:
 	cd ./src/gtk-3.0/gtk-common/ && ./render-assets.sh
 	cd ./src/gtk-2.0/ && ./render-assets.sh
 	cd ./src/gtk-2.0/ && ./render-assets-dark.sh
+
+clean:
+	-rm -rf ./src/gtk-2.0/assets/*.png
+	-rm -rf ./src/gtk-2.0/assets-dark/*.png
+	-rm -rf ./src/gtk-3.0/gtk-common/assets/*.png
+	-rm -rf ./src/gtk-3.0/**/*.css
+	-rm -rf ./src/gnome-shell/**/*.css
+
 
 uninstall:
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop
