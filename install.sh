@@ -5,8 +5,10 @@ set -ueo pipefail
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-themedir_base_fallback=${destdir:-}/usr/share/themes/Pop
-themedir_base=${THEME_DIR_BASE:-$themedir_base_fallback}
+prefix=$1;
+
+themedir_base=$1/usr/share/themes/Pop
+#themedir_base=$1${THEME_DIR_BASE:-$themedir_base_fallback}
 
 if [[ $(which gnome-shell 2> /dev/null) ]]; then
   gnomever_major=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 1)
