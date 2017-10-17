@@ -9,7 +9,7 @@ it is very likely an upstream issue.
  * Distribution - (run ```lsb_release -a```)
  * Gtk+ 3.0 version - (run ```apt policy libgtk-3-0```)
  * Desktop environment - 
- * Pop version - (run ```apt policy pop-gtk-theme```)
+ * Pop version - (run ```head -n 3 /usr/share/themes/Pop/gtk-3.22/gtk.css```)
  ```
 
 **Related Application and/or Shell theming (or name of widget)**
