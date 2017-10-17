@@ -1617,7 +1617,7 @@ StScrollBar {
   // Collections
   .app-folder-popup { //expanded collection
     -arrow-border-radius: 2px;
-    -arrow-background-color: rgba($fg_color, 0.4);
+    -arrow-background-color: rgba($inverse_fg_color, 0.2);
     -arrow-base: 24px;
     -arrow-rise: 12px;
   }

@@ -1,3 +1,9 @@
+pop-gtk-theme (2.2.1.0) artful; urgency=medium
+
+  * Improve look of GNOME Shell App Folders.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 17 Oct 2017 10:04:28 -0600
+
 pop-gtk-theme (2.2.0.1) artful; urgency=medium
 
   * Make App Folder backgrounds translucent.
