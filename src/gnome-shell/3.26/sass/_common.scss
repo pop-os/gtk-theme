@@ -1060,7 +1060,7 @@ StScrollBar {
       }
       &:selected {
         color: $inverse_fg_color;
-        background-color: $primary_color;
+        background-color: $accent_color;
         border-color: transparent; //avoid jumparound due to today
       }
       &.calendar-day-heading {  //day of week heading
@@ -1093,7 +1093,7 @@ StScrollBar {
         border: none;
       }
       .calendar-day-with-events {
-        color: $link_color;
+        color: $primary_color;
         font-weight: normal;
         text-decoration: underline;
         background-image: none;
@@ -1531,7 +1531,7 @@ StScrollBar {
     &:checked {
       color: $inverse_fg_color;
       background-color: rgba($bg_color, 0.01) !important;
-      box-shadow: inset 0 2px 0 $inverse_fg_color;
+      box-shadow: inset 0 2px 0 $accent_color;
     }
     &:first-child {
       border-right-width: 0;
@@ -1549,11 +1549,11 @@ StScrollBar {
   .list-search-result {
     @extend %icon_tile;
     &:focus, &:selected, &:hover {
-      background-color: $inverse_divider_color;
+      background-color: rgba($inverse_fg_color, 0.2);
       transition-duration: 0ms;
     }
     &:active, &:checked {
-      background-color: $inverse_track_color;
+      background-color: rgba($inverse_fg_color, 0.2);
       transition-duration: $longer_duration;
     }
   }
@@ -1567,14 +1567,14 @@ StScrollBar {
     &:hover .overview-icon,
     &:focus .overview-icon,
     &:selected .overview-icon {
-      background-color: rgba($fg_color, 0.4);
+      background-color: rgba($inverse_fg_color, 0.2);
       transition-duration: 0ms;
       border-image: none;
       background-image: none;
     }
     &:active .overview-icon,
     &:checked .overview-icon {
-      background-color: rgba($fg_color, 0.4);
+      background-color: rgba($inverse_fg_color, 0.2);
       box-shadow: $shadow_0;
       transition-duration: $longer_duration;
     }
@@ -1583,7 +1583,7 @@ StScrollBar {
 
   .app-well-app-running-dot { //running apps indicator
     width: 32px; height: 2px;
-    background-color: $inverse_fg_color;
+    background-color: $accent_color;
     margin-bottom: 0;
   }
 
@@ -1598,7 +1598,7 @@ StScrollBar {
   }
 
   .app-well-app.app-folder > .overview-icon {
-    background-color: rgba($fg_color, 0.4);
+    background-color: rgba($inverse_fg_color, 0.2);
   }
 
   .show-apps .show-apps-icon {

@@ -5,9 +5,9 @@ set -ueo pipefail
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-prefix=$1;
+prefix=${1:-};
 
-themedir_base=$1/usr/share/themes/Pop
+themedir_base=${prefix}/usr/share/themes/Pop
 #themedir_base=$1${THEME_DIR_BASE:-$themedir_base_fallback}
 
 if [[ $(which gnome-shell 2> /dev/null) ]]; then
@@ -64,22 +64,6 @@ for color in "${_COLOR_VARIANTS[@]}"; do
     cp -ur \
       index${color}${size}.theme \
       ${themedir}/index.theme
-
-    # Install Chrome Theme/Extention
-    install -d ${themedir}/chrome
-    cd ${srcdir}/chrome
-    cp -ur \
-      "Materia${color} Theme.crx" \
-      ${themedir}/chrome
-    if [ "$color" != '-dark' ]; then
-      cp -ur \
-        "Materia Scrollbars.crx" \
-        ${themedir}/chrome
-    else
-      cp -ur \
-        "Materia${color} Scrollbars.crx" \
-        ${themedir}/chrome
-    fi
 
     # Install GNOME Shell Theme
     install -d ${themedir}/gnome-shell

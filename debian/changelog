@@ -1,3 +1,9 @@
+pop-gtk-theme (2.2.0.1) artful; urgency=medium
+
+  * Make App Folder backgrounds translucent.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 16 Oct 2017 17:10:11 -0600
+
 pop-gtk-theme (2.2.0.0) artful; urgency=medium
 
   * New upstream sync.
