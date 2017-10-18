@@ -570,7 +570,7 @@ StScrollBar {
     &:ltr { padding: 0.4em 24px 0.4em 0; }
     &:rtl { padding: 0.4em 0 0.4em 24px; }
     &:checked {
-      background-color: $primary_color;
+      background-color: $accent_color;
       color: $inverse_fg_color;
       box-shadow: $shadow_0;
       font-weight: normal;
@@ -579,7 +579,7 @@ StScrollBar {
         color: $inverse_fg_color;
       }
       &:active {
-        background-color: mix($inverse_fg_color, $primary_color, percentage($lower_opacity));
+        background-color: mix($inverse_fg_color, $accent_color, percentage($lower_opacity));
         color: $inverse_fg_color !important;
       }
       &:insensitive { color: $inverse_disabled_fg_color; }
