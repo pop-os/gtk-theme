@@ -1,3 +1,9 @@
+pop-gtk-theme (2.2.2.0) UNRELEASED; urgency=medium
+
+  * Titlebars and header bars can now be inactive
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 18 Oct 2017 11:05:25 -0600
+
 pop-gtk-theme (2.2.1.0) artful; urgency=medium
 
   * Improve look of GNOME Shell App Folders.
