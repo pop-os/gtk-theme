@@ -264,17 +264,13 @@ headerbar.titlebar {
 }
 
 
-/************
- * Swatches *
- ************/
-
 /*************
  * Titlebars *
  *************/
 
 .csd .default-decoration {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 6px;
 
   button {
     margin-top: 0;
