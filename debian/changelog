@@ -1,3 +1,10 @@
+pop-gtk-theme (2.2.1.1) artful; urgency=medium
+
+  * Fix color-changing GNOME Shell menu popups.
+  * Fix missing padding in non CSD apps in Wayland.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 18 Oct 2017 11:20:57 -0600
+
 pop-gtk-theme (2.2.1.0) artful; urgency=medium
 
   * Improve look of GNOME Shell App Folders.
