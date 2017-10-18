@@ -270,7 +270,8 @@ headerbar.titlebar {
 
 .csd .default-decoration {
   padding-top: 0;
-  padding-bottom: 6px;
+  padding-bottom: 0;
+  min-height: 24px;
 
   button {
     margin-top: 0;
