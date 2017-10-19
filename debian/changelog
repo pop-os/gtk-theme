@@ -1,8 +1,14 @@
-pop-gtk-theme (2.2.2.0) UNRELEASED; urgency=medium
+pop-gtk-theme (2.2.2.1) UNRELEASED; urgency=medium
 
-  * Titlebars and header bars can now be inactive
+  * Fix inactive titlebars
 
- -- Ian Santopietro <ian@system76.com>  Wed, 18 Oct 2017 11:05:25 -0600
+ -- Ian Santopietro <ian@system76.com>  Thu, 19 Oct 2017 10:38:21 -0600
+
+pop-gtk-theme (2.2.2.0) artful; urgency=medium
+
+  * Titlebars and header bars can now be inactive.
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 18 Oct 2017 12:19:52 -0600
 
 pop-gtk-theme (2.2.1.1) artful; urgency=medium
 

@@ -1171,7 +1171,7 @@ headerbar {
   .tiled-bottom &,
   .tiled-top &,
   .tiled-left &,
-  .tiled-right {
+  .tiled-right & {
     border-radius: 0; // squared corners when the window is maximized, tiled, or fullscreen
     box-shadow: $shadow_1;
   }
