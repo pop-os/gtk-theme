@@ -1,8 +1,8 @@
-pop-gtk-theme (2.2.2.1) UNRELEASED; urgency=medium
+pop-gtk-theme (2.2.2.1) artful; urgency=medium
 
-  * Fix inactive titlebars
+  * Fix inactive titlebars.
 
- -- Ian Santopietro <ian@system76.com>  Thu, 19 Oct 2017 10:38:21 -0600
+ -- Ian Santopietro <ian@system76.com>  Thu, 19 Oct 2017 10:44:34 -0600
 
 pop-gtk-theme (2.2.2.0) artful; urgency=medium
 
