@@ -2066,7 +2066,7 @@ switch {
   &:hover, &:active { -gtk-icon-shadow: $shadow_2; }
 
   @each $s, $as in ('', '-unchecked'),
-                   (' :checked', '-checked') {
+                   ( ':checked', '-checked') {
     &#{$s} {
       -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}.png"),
                                     url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}@2.png"));
