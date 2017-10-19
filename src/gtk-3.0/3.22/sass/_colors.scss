@@ -14,24 +14,24 @@
 // Foreground colors
 $dark_fg_color:   rgba($brown_700, 0.87);
 $light_fg_color:  $white;
-$button_fg_color: if($variant == 'light', rgba($brown_700, 0.62), rgba($white, 0.8)); // extra fg color for raised buttons
+$button_fg_color: if($variant == 'light', rgba($brown_800, 0.75), rgba($white, 0.8)); // extra fg color for raised buttons
 
-$fg_color:                    if($variant == 'light', rgba($brown_700, 0.87), $white);
-$secondary_fg_color:          if($variant == 'light', rgba($brown_700, 0.54), rgba($white, 0.7));
-$hint_fg_color:               if($variant == 'light', rgba($brown_700, 0.38), rgba($white, 0.5));
-$disabled_fg_color:           if($variant == 'light', rgba($brown_700, 0.38), rgba($white, 0.5));
-$disabled_secondary_fg_color: if($variant == 'light', rgba($brown_700, 0.26), rgba($white, 0.3));
+$fg_color:                    if($variant == 'light', rgba($brown_800, 0.87), $white);
+$secondary_fg_color:          if($variant == 'light', rgba($brown_800, 0.54), rgba($white, 0.7));
+$hint_fg_color:               if($variant == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
+$disabled_fg_color:           if($variant == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
+$disabled_secondary_fg_color: if($variant == 'light', rgba($brown_800, 0.26), rgba($white, 0.3));
 $track_color:                 if($variant == 'light', rgba($brown_900, 0.26), rgba($white, 0.3));
 $divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
 $scrollbar_color:             if($variant == 'light', rgba($brown_800, 0.87), rgba($white, 0.7));
 
-$titlebar_fg_color:                    if($titlebar == 'light', rgba($brown_700, 0.87), $white);
-$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_700, 0.54), rgba($white, 0.6));
-$titlebar_hint_fg_color:               if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.5));
-$titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_700, 0.38), rgba($white, 0.3));
-$titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_700, 0.26), rgba($white, 0.2));
-$titlebar_track_color:                 if($titlebar == 'light', rgba($brown_700, 0.26), rgba($white, 0.3));
-$titlebar_divider_color:               if($titlebar == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
+$titlebar_fg_color:                    if($titlebar == 'light', rgba($brown_800, 0.87), $white);
+$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_800, 0.54), rgba($white, 0.6));
+$titlebar_hint_fg_color:               if($titlebar == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
+$titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_800, 0.38), rgba($white, 0.3));
+$titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_800, 0.26), rgba($white, 0.2));
+$titlebar_track_color:                 if($titlebar == 'light', rgba($brown_800, 0.26), rgba($white, 0.3));
+$titlebar_divider_color:               if($titlebar == 'light', rgba($brown_800, 0.12), rgba($white, 0.12));
 
 $inverse_fg_color:                    $white;
 $inverse_secondary_fg_color:          rgba($white, 0.7);
