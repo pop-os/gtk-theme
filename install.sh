@@ -125,6 +125,13 @@ for color in "${_COLOR_VARIANTS[@]}"; do
     cp -ur \
       assets \
       ${themedir}/gtk-common
+      
+    # Install Plank theme
+    install -d ${themedir}/plank
+    cd ${srcdir}/plank
+    cp -ur \
+      dock.theme \
+      ${themedir}/plank
 
     for version in '3.18' '3.20' '3.22'; do
       if [ "$version" == '3.18' ]; then
