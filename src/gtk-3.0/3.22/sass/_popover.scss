@@ -1,0 +1,49 @@
+/************
+ * Popovers *
+ ************/
+popover.background {
+  transition: $shadow_transition;
+  padding: 2px;
+  box-shadow: $shadow_2; // TODO: this should really have a highlight
+  background-color: $lighter_bg_color;
+
+  &:backdrop { box-shadow: $shadow_1; }
+
+  &, .csd & {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+    border-radius: $other_radius + 1px;
+  }
+
+  > stack { margin: -4px; } // remove extra padding from menu style popovers
+
+  > toolbar { margin: -2px; }
+
+  > list,
+  > .view,
+  > toolbar {
+    border-style: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &.touch-selection,
+  &.magnifier,
+  &.osd { @extend %osd; }
+
+  &.menu button,
+  button.model {
+    @extend %simple_flat_button;
+
+    min-height: 32px;
+    padding: 0 8px;
+    border-radius: $other_radius;
+
+    &:checked { @extend %selected_items; }
+  }
+
+  separator { margin: 4px 0; }
+
+  list separator { margin: 0; }
+}

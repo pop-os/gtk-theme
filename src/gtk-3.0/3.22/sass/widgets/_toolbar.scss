@@ -1,0 +1,70 @@
+/************
+ * Toolbars *
+ ************/
+toolbar {
+  -GtkWidget-window-dragging: true;
+  padding: 2px;
+  background-color: $bg_color;
+
+  button { @extend %button_basic.flat; }
+
+  // on OSD
+  .osd & { background-color: transparent; }
+
+  // stand-alone OSD toolbars
+  &.osd {
+    transition: $shadow_transition;
+    padding: $container_padding;
+    border-radius: $other_radius;
+    box-shadow: $shadow_2, inset 0 1px $highlight_color;
+    background-color: $base_color;
+
+    &:backdrop { box-shadow: $shadow_1, inset 0 1px $highlight_color; }
+
+    &.left,
+    &.right,
+    &.top,
+    &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
+  }
+
+  // toolbar separators
+  &.horizontal > separator { margin: 2px; }
+  &.vertical > separator { margin: 2px; }
+
+  &:not(.inline-toolbar):not(.osd) {
+    scale,
+    spinbutton,
+    button { margin: 2px; }
+
+    .linked spinbutton,
+    .linked button {
+      &:not(:first-child) { margin-left: 0; }
+      &:not(:last-child) { margin-right: 0; }
+    }
+
+    spinbutton {
+      button { margin: 0; }
+    }
+
+    switch { margin: 2px + $container_padding 2px; }
+  }
+}
+
+// searchbar, location-bar & inline-toolbar
+.inline-toolbar {
+  padding: $container_padding;
+  border-style: solid;
+  border-width: 0 1px 1px;
+  border-color: $border_color;
+  background-color: $alt_base_color;
+}
+
+searchbar,
+.location-bar {
+  padding: $container_padding;
+  border-style: solid;
+  border-width: 0 0 1px;
+  border-color: $border_color;
+  background-color: $bg_color;
+  background-clip: border-box;
+}

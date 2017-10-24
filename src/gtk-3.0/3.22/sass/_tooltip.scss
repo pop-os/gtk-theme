@@ -1,0 +1,40 @@
+/************
+ * Tooltips *
+ ************/
+tooltip {
+  &.background {
+    // background-color needs to be set this way otherwise it gets drawn twice
+    // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
+    box-shadow: inset 0 1px $highlight_color;
+    background-color: rgba($base_color, $higher_opacity);
+  }
+
+  // @extend %osd;
+
+  // padding: 4px; /* not working */
+  border-radius: $other_radius;
+  box-shadow: none; // otherwise it gets inherited by windowframe.csd
+
+  &:not(.csd):not(.unity-csd) {
+    border: 1px solid $border_color;
+    border-radius: $other_radius + 1px;
+    background-clip: $extra_background_clip;
+  }
+
+  // FIXME: we need a border or tooltips vanish on black background.
+  decoration { background-color: transparent; }
+
+  label {
+    // tooltip label already seems to have 6px margins
+    min-height: 32px - 6px * 2;
+    padding: 0 8px - 6px;
+  }
+
+  * {
+    // workaround for Eclipse.
+    // do not include any declaration here.
+    // padding: 0;
+    // background-color: transparent;
+    // color: inherit;
+  }
+}

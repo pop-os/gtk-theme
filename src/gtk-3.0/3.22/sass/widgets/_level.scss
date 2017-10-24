@@ -1,0 +1,45 @@
+/*************
+ * Level Bar *
+ *************/
+levelbar {
+  &.horizontal {
+    block { min-height: $bar_size; }
+
+    &.discrete block {
+      min-width: $medium_size;
+
+      &:not(:last-child) { margin-right: 2px; }
+    }
+  }
+
+  &.vertical {
+    block { min-width: $bar_size; }
+
+    &.discrete block {
+      min-height: $medium_size;
+
+      &:not(:last-child) { margin-bottom: 2px; }
+    }
+  }
+
+  // imitate the entry style
+  trough {
+    padding: 2px;
+    border-radius: $circular_radius;
+    box-shadow: $shadow_1;
+    background-color: $base_color;
+
+    &:disabled { background-color: $alt_base_color; }
+  }
+
+  block {
+    &.low { background-color: $warning_color; }
+
+    &.high,
+    &:not(.empty) { background-color: $primary_color; }
+
+    &.full { background-color: $success_color; }
+
+    &.empty { background-color: $divider_color; }
+  }
+}

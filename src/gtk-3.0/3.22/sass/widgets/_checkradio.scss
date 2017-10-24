@@ -1,0 +1,267 @@
+/*************************
+ * Check and Radio items *
+ *************************/
+// draw regular check and radio items using our PNG assets
+// all assets are rendered from assets.svg. never add pngs directly
+
+// selection-mode
+.view.content-view.check:not(list),
+.content-view .tile check:not(list) {
+  min-height: 40px;
+  min-width: 40px;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -gtk-icon-shadow: $shadow_1;
+
+  &:hover, &:active { -gtk-icon-shadow: $shadow_2; }
+
+  @each $s, $as in ('', '-unchecked'),
+                   ( ':checked', '-checked') {
+    &#{$s} {
+      -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}.png"),
+                                    url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}@2.png"));
+    }
+  }
+}
+
+checkbutton.text-button,
+radiobutton.text-button {
+  // this is for a nice focus on check and radios text
+  padding: 2px;
+  outline-offset: 0;
+
+  label:not(:only-child) { margin: 0 4px; }
+}
+
+check,
+radio {
+  min-height: 24px;
+  min-width: 24px;
+  margin: -($large_size - 24px) / 2;
+  padding: ($large_size - 24px) / 2;
+
+  @extend %simple_flat_button;
+
+  @extend %circular_button;
+
+  &:checked, &:indeterminate {
+    color: $accent_color;
+
+    &:disabled { color: $disabled_accent_color; }
+  }
+
+  // &:only-child { margin: -12px; }
+
+  row:selected &:not(:checked):not(:indeterminate) {
+    color: $inverse_secondary_fg_color;
+
+    &:hover, &:active { color: $inverse_fg_color; }
+
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+  }
+
+  popover & {
+    &, &:hover, &:disabled {
+      box-shadow: none;
+      background-image: none;
+    }
+
+    &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
+
+    &.left:dir(rtl) {
+      margin-left: -16px;
+      margin-right: -8px;
+    }
+
+    &.right:dir(ltr) {
+      margin-left: -8px;
+      margin-right: -16px;
+    }
+  }
+
+  menu menuitem & {
+    transition: none;
+    min-height: 16px;
+    min-width: 16px;
+    margin: 0; // this is a workaround for a menu check/radio size allocation issue
+    padding: 0;
+
+    &:dir(ltr) { margin-right: 8px; }
+
+    &:dir(rtl) { margin-left: 8px; }
+
+    &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
+
+    &, &:hover, &:disabled {
+      box-shadow: none;
+      // color: inherit;
+    }
+  }
+}
+
+%check,
+check {
+  & { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.svg")),
+                              -gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.png"))); }
+
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.svg")),
+                                      -gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.png"))); }
+
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-mixed-symbolic.svg")),
+                                            -gtk-recolor(url("assets/scalable/checkbox-mixed-symbolic.png"))); }
+}
+
+%radio,
+radio {
+  & { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.svg")),
+                              -gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.png"))); }
+
+  // &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")),
+  //                                     -gtk-recolor(url("assets/scalable/radio-checked-symbolic.png"))); }
+
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-mixed-symbolic.svg")),
+                                            -gtk-recolor(url("assets/scalable/radio-mixed-symbolic.png"))); }
+
+  border-image-slice: $large_size / 2px;
+  border-image-width: $large_size / 2;
+
+  $radio_indicator: 10px / $large_size / 2;
+
+  & {
+    border-image-source: -gtk-gradient(radial,
+                                       center center, 0,
+                                       center center, 0.001,
+                                       to($accent_color),
+                                       to(transparent));
+  }
+
+  &:checked:not(:indeterminate) {
+    border-image-source: -gtk-gradient(radial,
+                                       center center, 0,
+                                       center center, $radio_indicator,
+                                       to($accent_color),
+                                       to(transparent));
+  }
+
+  &:checked:not(:indeterminate):disabled {
+    border-image-source: -gtk-gradient(radial,
+                                       center center, 0,
+                                       center center, $radio_indicator,
+                                       to($disabled_accent_color),
+                                       to(transparent));
+  }
+}
+
+%small_check,
+menu menuitem check {
+  & {
+    border-radius: $other_radius;
+    -gtk-outline-radius: 2px;
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.png")));
+  }
+
+  &:checked {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.png")));
+  }
+
+  &:indeterminate {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.png")));
+  }
+}
+
+%small_radio,
+menu menuitem radio {
+  & {
+    border-image: none;
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.png")));
+  }
+
+  &:checked {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.png")));
+  }
+
+  &:indeterminate {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.png")));
+  }
+}
+
+// ANIMATION:
+// this is made with those pretty convoluted transitions, since checks and radios have to animate only on state changes,
+// the transformation is set on the active state and it get reset on the checked state.
+check:not(:checked):active { -gtk-icon-transform: rotate(90deg); }
+
+// radio:not(:checked):active { -gtk-icon-transform: scale(0); }
+
+check:not(:checked):indeterminate:active,
+radio:not(:checked):indeterminate:active { -gtk-icon-transform: scaleX(-1); } // instead of rotateY(180deg)
+
+check:not(:checked),
+radio:not(:checked) {
+  & {
+    transition: $shorter_transition,
+                background-size $shorter_duration $deceleration_curve,
+                background-image $shorter_duration * 2 $deceleration_curve,
+                -gtk-icon-transform 0;
+  }
+
+  &:active {
+    transition: $shorter_transition,
+                background-size 0,
+                background-image 0,
+                -gtk-icon-transform 0;
+  }
+
+  //menu menuitem & { transition: none; }
+}
+
+treeview.view check,
+treeview.view radio {
+  padding: 0;
+
+  &:hover {
+    box-shadow: inset 0 0 0 9999px gtkalpha($fg_color, 0.05);
+
+    &:disabled { box-shadow: none; }
+
+    &:selected { box-shadow: inset 0 0 0 9999px gtkalpha($inverse_fg_color, 0.05); }
+  }
+
+  & {
+    color: $secondary_fg_color;
+
+    &:hover, &:active { color: $fg_color; }
+
+    &:disabled { color: $disabled_secondary_fg_color; }
+
+    &:checked, &:indeterminate { color: $accent_color; }
+
+    &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
+  }
+
+  &:selected {
+    color: $inverse_secondary_fg_color;
+
+    &:hover, &:active { color: $inverse_fg_color; }
+
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+
+    &:checked, &:indeterminate { color: $accent_color; }
+
+    &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
+  }
+}
+
+treeview.view radio:checked {
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")),
+                          -gtk-recolor(url("assets/scalable/radio-checked-symbolic.png")));
+  border-image: none;
+}

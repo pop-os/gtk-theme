@@ -1,0 +1,35 @@
+/*****************
+ * Progress bars *
+ *****************/
+progressbar {
+  // sizing
+  &.horizontal {
+    trough,
+    progress { min-height: $bar_size; }
+  }
+
+  &.vertical {
+    trough,
+    progress { min-width: $bar_size; }
+  }
+
+  // FIXME: insensitive state missing and some other state should be set probably
+  color: $hint_fg_color;
+  font-size: smaller;
+
+  trough { background-color: rgba($primary_color, $lower_opacity); }
+
+  progress { background-color: $primary_color; }
+
+  &.osd { // progressbar.osd used for epiphany page loading progress
+    // min-width: $bar_size;
+    // min-height: $bar_size;
+    // background-color: transparent;
+
+    // trough { background-color: transparent; }
+
+    // progress { background-color: $primary_color; }
+  }
+
+  trough.empty progress { all: unset; } // makes the progress indicator disappear, when the fraction is 0
+}

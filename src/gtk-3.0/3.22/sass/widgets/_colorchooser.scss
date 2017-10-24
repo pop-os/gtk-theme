@@ -1,0 +1,121 @@
+/*****************
+ * Color Chooser *
+ *****************/
+colorswatch {
+  // This widget is made of two boxes one on top of the other, the lower box is colorswatch {} the other one
+  // is colorswatch overlay {}, colorswatch has the programmatically set background, so most of the style is
+  // applied to the overlay box.
+
+  // base color corners rounding
+  // to avoid the artifacts caused by rounded corner anti-aliasing the base color
+  // sports a bigger radius.
+  // nth-child is needed by the custom color strip.
+
+  &.top {
+    border-top-left-radius: $material_radius + 0.5px;
+    border-top-right-radius: $material_radius + 0.5px;
+
+    overlay {
+      border-top-left-radius: $material_radius;
+      border-top-right-radius: $material_radius;
+    }
+  }
+
+  &.bottom {
+    border-bottom-left-radius: $material_radius + 0.5px;
+    border-bottom-right-radius: $material_radius + 0.5px;
+
+    overlay {
+      border-bottom-left-radius: $material_radius;
+      border-bottom-right-radius: $material_radius;
+    }
+  }
+
+  &.left,
+  &:first-child:not(.top) {
+    border-top-left-radius: $material_radius + 0.5px;
+    border-bottom-left-radius: $material_radius + 0.5px;
+
+    overlay {
+      border-top-left-radius: $material_radius;
+      border-bottom-left-radius: $material_radius;
+    }
+  }
+
+  &.right,
+  &:last-child:not(.bottom) {
+    border-top-right-radius: $material_radius + 0.5px;
+    border-bottom-right-radius: $material_radius + 0.5px;
+
+    overlay {
+      border-top-right-radius: $material_radius;
+      border-bottom-right-radius: $material_radius;
+    }
+  }
+
+  &.dark { color: $light_fg_color; }
+
+  &.light { color: $dark_fg_color; }
+
+  &.dark { color: $light_fg_color; } // for focus ring
+
+  &.light { color: $dark_fg_color; } // for focus ring
+
+  &:drop(active) {
+    box-shadow: none;
+
+    &.light overlay { box-shadow: $shadow_1, 0 0 0 2px $accent_color; }
+
+    &.dark overlay { box-shadow: $shadow_1, 0 0 0 2px $accent_color; }
+  }
+
+  overlay {
+    transition: $shadow_transition;
+    box-shadow: $shadow_1;
+
+    &:hover { box-shadow: $shadow_2; }
+  }
+
+  &#add-color-button {
+    border-radius: $material_radius $material_radius 0 0;
+    color: $light_fg_color;
+
+    &:only-child { border-radius: $material_radius; }
+
+    overlay {
+      background-image: linear-gradient(to right,
+                                        $error_bg_color 25%,
+                                        $warning_bg_color 25%, $warning_bg_color 50%,
+                                        $info_bg_color 50%, $info_bg_color 75%,
+                                        $question_bg_color 75%);
+    }
+  }
+
+  &:disabled {
+    opacity: $disabled_opacity;
+
+    overlay { box-shadow: none; }
+  }
+
+  row:selected & {
+  }
+
+  &#editor-color-sample {
+    border-radius: $material_radius + 0.5px;
+
+    overlay { border-radius: $material_radius; }
+
+    // overlay:hover { box-shadow: $shadow_1; }
+  }
+}
+
+// colorscale popup
+colorchooser .popover.osd {
+  transition: $shadow_transition;
+  border-radius: $other_radius;
+  box-shadow: $shadow_2, inset 0 1px $highlight_color;
+  background-color: $base_color;
+
+  &:backdrop { box-shadow: $shadow_1, inset 0 1px $highlight_color; }
+
+}
