@@ -1236,7 +1236,7 @@ headerbar {
 }
 
 headerbar { // headerbar border rounding
-  window:not([class^="tiled"]):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + &, // tackles the paned container case
+  window:not(.tiled):not(.tiled-bottom):not(.tiled-top):not(.tiled-left):not(.tiled-right):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + &, // tackles the paned container case
   window:not(.tiled):not(.tiled-bottom):not(.tiled-top):not(.tiled-left):not(.tiled-right):not(.fullscreen):not(.solid-csd) &:first-child { border-top-left-radius: $other_radius; }
 
   window:not(.tiled):not(.tiled-bottom):not(.tiled-top):not(.tiled-left):not(.tiled-right):not(.fullscreen):not(.solid-csd) &:last-child { border-top-right-radius: $other_radius; }
