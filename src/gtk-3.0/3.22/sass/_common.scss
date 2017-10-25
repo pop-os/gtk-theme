@@ -3135,13 +3135,17 @@ infobar {
   &.question,
   &.warning,
   &.error {
-    > label, & { color: $black; }
+    > label, & { color: $fg_color; }
 
     button {
       @extend %button_selected;
 
-      color: $black;
-      background-color: $white;
+      color: $fg_color;
+      background-color: $bg_color;
+      
+      > label,
+      > image { color: $fg_color; }
+      
     }
 
     selection {}
