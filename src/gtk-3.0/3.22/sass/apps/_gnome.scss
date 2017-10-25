@@ -2,16 +2,11 @@
  * Control center *
  *****************/
 
-window.csd > box.horizontal {
-  box.vertical > scrolledwindow.view > viewport.frame > stack > list > row:selected {
+window.csd > box.horizontal > box.vertical > scrolledwindow.view {
+  & > viewport.frame > stack > list > row:selected {
     color: $inverse_fg_color;
     background-color: $accent_color;
   }
-
-  widget > overlay > box.vertical > grid.horizontal > stack > button.toggle {
-    margin: 6px;
-  }
-
 }
 
 /****************
@@ -20,13 +15,7 @@ window.csd > box.horizontal {
 
 // Next/Previous button shadows are cut off. See issue #10.
 window > box > box > box > paned > overlay > grid > overlay > revealer {
-  > button {
-    margin: 6px;
-  }
-
-  > box.linked {
-    padding: 6px;
-  }
+  padding: 10px;
 }
 
 // Zoom in button is using the styling of the adjacent entry, which looks odd

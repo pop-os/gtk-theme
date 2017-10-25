@@ -227,8 +227,9 @@ headerbar.titlebar {
  * AppCenter *
  *************/
 
- row.activatable > grid.horizontal > stack button {
-  margin: 6px;
+ row.activatable > grid.horizontal > stack {
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 /**********
