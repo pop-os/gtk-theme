@@ -23,7 +23,7 @@
 # List of Current Color definitions:
 accent1="faa41a"
 selection1="48b9c7"
-black="574f4a"
+black="484442"
 bg1="49423e"
 bg2="574f4a"
 bg3="49423e"
