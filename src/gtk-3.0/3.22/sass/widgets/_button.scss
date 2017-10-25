@@ -19,9 +19,17 @@ button {
 
     &:disabled { @include button(disabled); }
 
-    &:checked { @include button(checked); }
+    &:checked { 
+      @include button(checked);
+      /*
+      &:backdrop { 
+        background-color: lighten(desaturate($accent_color, 35%), 15%);
+        color: 
+      }*/
+    }
 
     &:checked:disabled { @include button(checked-disabled); }
+    
 
     @at-root %flat_button, &.flat {
       @at-root %simple_flat_button, & {

@@ -15,8 +15,10 @@ switch {
 
   &:checked {
     background-color: rgba($accent_color, 0.5);
+    
 
-    &:disabled { background-color: rgba($accent_color, 0.3); }
+    &:disabled,
+    &:backdrop { background-color: rgba($accent_color, 0.3); }
   }
 
   slider {
@@ -38,6 +40,8 @@ switch {
     background-color: $accent_color;
     color: $inverse_fg_color;
   }
+  
+  &:backdrop:checked slider{ background-color: backdrop($accent_color); }
 
   &:disabled slider { background-color: $alt_base_color; }
 
