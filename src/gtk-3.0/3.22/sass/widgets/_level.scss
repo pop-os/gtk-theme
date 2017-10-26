@@ -36,7 +36,11 @@ levelbar {
     &.low { background-color: $warning_color; }
 
     &.high,
-    &:not(.empty) { background-color: $primary_color; }
+    &:not(.empty) { 
+      background-color: $primary_color;
+      
+      &:backdrop { background-color: backdrop($primary_color); }
+    }
 
     &.full { background-color: $success_color; }
 

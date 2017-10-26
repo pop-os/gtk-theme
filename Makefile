@@ -28,7 +28,6 @@ clean:
 	-rm -rf ./src/gtk-3.0/**/*.css
 	-rm -rf ./src/gnome-shell/**/*.css
 
-
 uninstall:
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop-dark
