@@ -5,7 +5,9 @@
   /* transition from solid to transparent */
   transition-duration: 250ms;
   font-weight: bold;
-  height: $menuitem_size;
+  height: em($menuitem_size);
+  min-height: $small_size;
+  max-height: $menuitem_size;
   box-shadow: none;
 
   &:overview,
