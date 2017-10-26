@@ -42,7 +42,9 @@ scale {
     transition: $longer_transition;
     background-color: $primary_color;
 
-    &:disabled { background-color: transparent; }
+    &:disabled,
+    &:disabled:backdrop { background-color: transparent; }
+    &:backdrop { background-color: lighten(backdrop($primary_color), 25%); }
   }
 
   // this is another differently styled part of the backing bit, the most relevant use case is for example
@@ -62,13 +64,16 @@ scale {
     background-position: center;
 
     @each $s, $as in ('', ''),
-                     ( ':disabled', '-disabled') {
+                     ( ':disabled', '-disabled'),
+                     ( ':backdrop', '-backdrop') {
       &#{$s} {
         $_url: 'assets/scale-slider#{$as}#{$asset_suffix}';
 
         background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
       }
     }
+    
+    &:backdrop { opacity: 0.5; }
 
     background-size: calc(100% - 10px);
 
@@ -123,7 +128,8 @@ scale {
       &.#{$dir_class}.#{$marks_class} {
         slider {
           @each $state, $state_infix in ('', ''),
-                                        ( ':disabled', '-disabled') {
+                                        ( ':disabled', '-disabled'),
+                                        ( ':backdrop', '-backdrop') {
             &#{$state} {
               $_scale_asset: 'assets/scale-#{$dir_infix}-#{$marks_infix}-slider#{$state_infix}#{$asset_suffix}';
 

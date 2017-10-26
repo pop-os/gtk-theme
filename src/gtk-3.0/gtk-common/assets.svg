@@ -32,8 +32,8 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
      inkscape:zoom="2.85"
-     inkscape:cx="194.46359"
-     inkscape:cy="136.72936"
+     inkscape:cx="182.00745"
+     inkscape:cy="145.15041"
      inkscape:current-layer="svg413">
     <inkscape:grid
        empspacing="4"
@@ -1417,86 +1417,88 @@
      xlink:href="#base-scale-slider"
      y="240"
      x="16"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1360"
+     id="scale-horz-marks-before-slider-backdrop"
      xlink:href="#base-scale-horz-marks-before-slider"
      y="240"
      x="52"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1362"
+     id="scale-horz-marks-after-slider-backdrop"
      xlink:href="#base-scale-horz-marks-after-slider"
      y="240"
      x="88"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1364"
+     id="scale-vert-marks-before-slider-backdrop"
      xlink:href="#base-scale-vert-marks-before-slider"
      y="240"
      x="124"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1366"
+     id="scale-vert-marks-after-slider-backdrop"
      xlink:href="#base-scale-vert-marks-after-slider"
      y="240"
      x="160"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1368"
+     id="scale-slider-backdrop-dark"
      xlink:href="#base-scale-slider"
      y="240"
      x="216"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1370"
+     id="scale-horz-marks-before-slider-backdrop-dark"
      xlink:href="#base-scale-horz-marks-before-slider"
      y="240"
      x="252"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1372"
+     id="scale-horz-marks-after-slider-backdrop-dark"
      xlink:href="#base-scale-horz-marks-after-slider"
      y="240"
      x="288"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1374"
+     id="scale-vert-marks-before-slider-backdrop-dark"
      xlink:href="#base-scale-vert-marks-before-slider"
      y="240"
      x="324"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5"
+     inkscape:label="#scale-vert-marks-before-slider-backdrop-dark" />
   <use
      height="100%"
      width="100%"
      transform="translate(0,24)"
-     id="use1376"
+     id="scale-vert-marks-after-slider-backdrop-dark"
      xlink:href="#base-scale-vert-marks-after-slider"
      y="240"
      x="360"
-     style="fill:#000000;fill-opacity:1;opacity:0.5" />
+     style="fill:#484442;fill-opacity:1;opacity:0.5"
+     inkscape:label="scale-vert-marks-after-slider-backdrop-dark" />
 </svg>
