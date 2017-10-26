@@ -19,7 +19,11 @@ progressbar {
 
   trough { background-color: rgba($primary_color, $lower_opacity); }
 
-  progress { background-color: $primary_color; }
+  progress { 
+    background-color: $primary_color; 
+    
+    &:backdrop { background-color: backdrop($primary_color); }
+  }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
     // min-width: $bar_size;
