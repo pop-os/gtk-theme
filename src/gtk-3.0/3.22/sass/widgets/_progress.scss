@@ -22,7 +22,10 @@ progressbar {
   progress { 
     background-color: $primary_color; 
     
-    &:backdrop { background-color: backdrop($primary_color); }
+    &:backdrop { 
+      background-color: backdrop($primary_color);
+      opacity: 0.2;
+    }
   }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
