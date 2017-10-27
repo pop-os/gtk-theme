@@ -8,7 +8,7 @@ list {
   row {
     padding: 2px;
 
-    &:selected { background-color: $primary_color; }
+    &:selected { background-color: $accent_color; }
   }
 }
 
@@ -50,5 +50,8 @@ row {
     }
   }
 
-  &:selected { @extend %selected_items; }
+  &:selected { 
+    @extend %selected_items;
+    background-color: $accent_color;
+  }
 }
