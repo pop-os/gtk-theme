@@ -6,11 +6,13 @@ pop-gtk-theme (3.0.0) UNRELEASED; urgency=medium
 
  -- Ian Santopietro <ian@system76.com>  Thu, 26 Oct 2017 11:49:05 -0600
 
-pop-gtk-theme (2.2.3.0) bionic; urgency=medium
+pop-gtk-theme (2.2.3.0) artful; urgency=medium
 
-  * Contrast Improvements
+  * Contrast Improvements.
+  * Make buttons on InfoBars visible.
+  * Tiled windows no longer have rounded corners.
 
- -- Ian Santopietro <ian@system76.com>  Wed, 25 Oct 2017 10:20:12 -0600
+ -- Ian Santopietro <ian@system76.com>  Wed, 25 Oct 2017 15:11:45 -0600
 
 pop-gtk-theme (2.2.2.1) artful; urgency=medium
 
