@@ -69,6 +69,12 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry {
 // hard-coded css:
 // https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/nautilus.css
 
+.nautilus-window row:selected {
+  background-color: $accent_color;
+  
+  &:backdrop { background-color: backdrop($accent_color); }
+}
+
 .nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
