@@ -20,6 +20,7 @@ Things to look at:
  *Blue:*
  - Selected/highlighted content
  - variable controls - progress bars, scales, level bars
+ - General Content-relevant controls
  
  *Orange:*
  - Binary on/off actions
@@ -28,14 +29,19 @@ Things to look at:
  - toggle switches
  - checkboxes
  - switches
+ - Pathbars
+ - General context-display controls
   
  *Green:*
  - Save buttons once they can be clicked
+ - Affirmative/progressive action buttons/controls
  
  *Header and title bars:* 
  - brown in normal theme
  - dark theme - darker brown
  - light theme - grey
+ 
+ *Window Backgrounds:*
  - light grey/white background in normal theme
  - dark brown in dark theme
  
@@ -64,14 +70,14 @@ Things to look at:
  - Everything has a shadow
  - Everything needs to be legible/high contrast
  - Bright colors and title bars all have an inactive shade (when window is not selected)
+ - Compact variants need to shrink most padding and sizes.
 
  **If something visibly looks off, check the color hex values.**
  
  *Color hex values: *
- - Text and monocromatic images: #4b4645
- - Window background: #f5f5f5
- - Green selection:#01967a
- - Orange: #faa41a
- - Dark theme orange: #CC7900
- - Blue: #48b9c7
- - Dark theme blue: #0a97a5
+ - Text and monocromatic images: #4B4645
+ - Header/Title Bars: #574F4A / Dark Theme: #3E3936 / Light Theme: #C8C0BD
+ - Window background: #F5F5F5
+ - Green selection:#01967A
+ - Orange: #FAA41A / Dark theme: #CC7900
+ - Blue: #48B9C7 / Dark theme: #0A97A5
