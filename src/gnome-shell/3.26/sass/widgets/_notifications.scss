@@ -10,11 +10,11 @@
   margin: 5px;
   border-radius: 2px;
   color: $fg_color;
-  background-color: $base_color;
+  background-color: $bg_color;
   border: none;
   box-shadow: $shadow_2;
-  &:hover { background-color: $base_color; }
-  &:focus { background-color: $base_color; }
+  &:hover { background-color: $bg_color; }
+  &:focus { background-color: $bg_color; }
 
   .notification-icon { padding: 5px; }
   .notification-content { padding: 5px; spacing: 5px; }
