@@ -20,7 +20,7 @@
   .notification-content { padding: 5px; spacing: 5px; }
   .secondary-icon { icon-size: em(16px); }
   .notification-actions {
-    background-color: transparent;
+    background-color: $bg_color;
     padding-top: 0;
     border-top: 1px solid $border_color;
     spacing: 1px;
@@ -28,7 +28,7 @@
   .notification-button {
     min-height: 40px;
     padding: 0 16px;
-    background-color: transparent;
+    background-color: $bg_color;
     color: $secondary_fg_color;
     font-weight: 500;
     &:first-child { border-radius: 0 0 0 2px; }

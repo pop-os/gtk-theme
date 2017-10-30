@@ -20,6 +20,8 @@ placessidebar {
     &:selected {
       color: $inverse_fg_color;
       background-color: $accent_color;
+      
+      &:backdrop { background-color: backdrop($accent_color); }
     }
 
     &:disabled { color: $disabled_fg_color; }
@@ -53,7 +55,7 @@ placessidebar {
       background-clip: content-box;
     }
 
-    &.sidebar-new-bookmark-row { color: $primary_color; }
+    &.sidebar-new-bookmark-row { color: $accent_color; }
 
     &:drop(active):not(:disabled) {
       box-shadow: inset 0 0 0 2px $accent_color;
