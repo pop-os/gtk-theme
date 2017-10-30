@@ -39,6 +39,7 @@ stage {
 /* WIDGETS */
 
 @import 'widgets/buttons';
+@import 'widgets/notifications';
 @import 'widgets/checkbox';
 @import 'widgets/entries';
 @import 'widgets/ibuspopup';
@@ -48,7 +49,6 @@ stage {
 @import 'widgets/menu-popover';
 @import 'widgets/misc';
 @import 'widgets/modal';
-@import 'widgets/notifications';
 @import 'widgets/osd';
 @import 'widgets/overview';
 @import 'widgets/scrollbars';
