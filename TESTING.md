@@ -74,7 +74,7 @@ Things to look at:
 
  **If something visibly looks off, check the color hex values.**
  
- *Color hex values: *
+ *Color hex values:*
  - Text and monocromatic images: #4B4645
  - Header/Title Bars: #574F4A / Dark Theme: #3E3936 / Light Theme: #C8C0BD
  - Window background: #F5F5F5
