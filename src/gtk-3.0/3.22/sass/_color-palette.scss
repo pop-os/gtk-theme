@@ -142,10 +142,10 @@ $grey_300: lighten($grey_400, 9%);
 $grey_200: lighten($grey_300, 9%);
 $grey_100: lighten($grey_200, 9%);
 $grey_50:  lighten($grey_100, 9%);
-$grey_600: darken($grey_500, 9%);
-$grey_700: darken($grey_600, 9%);
-$grey_800: darken($grey_700, 9%);
-$grey_900: darken($grey_800, 9%);
+$grey_600: darken($grey_500, 15%);
+$grey_700: darken($grey_600, 15%);
+$grey_800: darken($grey_700, 15%);
+$grey_900: darken($grey_800, 15%);
 
 // Black
 $black: #000000;
