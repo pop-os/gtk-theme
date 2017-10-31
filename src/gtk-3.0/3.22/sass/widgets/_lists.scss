@@ -31,6 +31,15 @@ row {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1000% 1000%;
+    
+    // Buttons on rows have invisible text. pop-os/gtk-theme#31
+    button {
+      color: $fg_color;
+      
+      > label {
+        color: $fg_color;
+      }
+    }
 
     &:hover {
       transition: $row_transition,

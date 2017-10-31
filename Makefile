@@ -1,6 +1,6 @@
 SHELL = /bin/bash
 COLOR_VARIANTS = '' '-dark' '-light'
-SIZE_VARIANTS = '' '-compact'
+SIZE_VARIANTS = '' '-slim'
 SASSC_OPT=-M -t expanded
 BASE_DIR=/usr/share/themes
 REPODIR=$(CURDIR)
@@ -35,6 +35,9 @@ uninstall:
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop-compact
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop-light-compact
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop-dark-compact
+	-rm -rf $(DESTDIR)/usr/share/themes/Pop-slim
+	-rm -rf $(DESTDIR)/usr/share/themes/Pop-dark-slim
+	-rm -rf $(DESTDIR)/usr/share/themes/Pop-light-slim
 
 install:
 	@echo "** Installing the theme..."
