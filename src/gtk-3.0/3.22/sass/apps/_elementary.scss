@@ -194,6 +194,8 @@ window.background.csd.rounded {
 
   > headerbar.input-header {
     border-top-right-radius: 0;
+    
+    background-color: $bg_color;
 
     > box.left > button.close { color: $fg_color; }
   }
