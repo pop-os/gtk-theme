@@ -122,35 +122,19 @@ install:
 	    cp -ur \
 	      assets \
 	      $$themedir/gtk-common; \
-	    for version in '3.18' '3.20' '3.22'; do \
-	      if [ "$$version" == '3.18' ]; then \
-	        install -d $$themedir/gtk-3.0; \
-	        cd $(SRCDIR)/gtk-3.0/$$version; \
+	    for version in '3.20' '3.22'; do \
+	      install -d $$themedir/gtk-$$version; \
+	      cd $(SRCDIR)/gtk-3.0/$$version; \
+	      cp -ur \
+	        assets \
+	        $$themedir/gtk-$$version; \
+	      cp -ur \
+	        gtk$$color$$size.css \
+	        $$themedir/gtk-$$version/gtk.css; \
+	      if [ "$$color" != '-dark' ]; then \
 	        cp -ur \
-	          assets \
-	          $$themedir/gtk-3.0; \
-	        cp -ur \
-	          gtk$$color.css \
-	          $$themedir/gtk-3.0/gtk.css; \
-	        if [ "$$color" != '-dark' ]; then \
-	          cp -ur \
-	            gtk-dark.css \
-	            $$themedir/gtk-3.0; \
-	        fi; \
-	      else \
-	        install -d $$themedir/gtk-$$version; \
-	        cd $(SRCDIR)/gtk-3.0/$$version; \
-	        cp -ur \
-	          assets \
-	          $$themedir/gtk-$$version; \
-	        cp -ur \
-	          gtk$$color$$size.css \
-	          $$themedir/gtk-$$version/gtk.css; \
-	        if [ "$$color" != '-dark' ]; then \
-	          cp -ur \
-	            gtk-dark$$size.css \
-	            $$themedir/gtk-$$version/gtk-dark.css; \
-	        fi; \
+	          gtk-dark$$size.css \
+	          $$themedir/gtk-$$version/gtk-dark.css; \
 	      fi; \
 	    done; \
 	  done; \
@@ -245,7 +229,7 @@ gnome-shell:
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
 	    # Skip gnome-shell 3.20 and 3.22 \
-	    for version in '3.18' '3.24' '3.26'; do \
+	    for version in '3.24' '3.26'; do \
 	      sassc $(SASSC_OPT) src/gnome-shell/$$version/gnome-shell$$color$$size.{scss,css}; \
 	      sassc $(SASSC_OPT) src/gnome-shell/$$version/extensions/workspaces-to-dock/workspaces-to-dock.{scss,css}; \
 	      sassc $(SASSC_OPT) src/gnome-shell/$$version/pad-osd.{scss,css}; \
