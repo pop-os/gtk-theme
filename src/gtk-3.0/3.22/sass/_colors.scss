@@ -12,8 +12,8 @@
 }
 
 // Foreground colors
-$dark_fg_color:   rgba($brown_700, 0.87);
-$light_fg_color:  $white;
+$dark_fg_color:   rgba($brown_700, 0.85);
+$light_fg_color:  rgba($white, 0.85);
 $button_fg_color: if($variant == 'light', rgba($brown_800, 0.75), rgba($white, 0.8)); // extra fg color for raised buttons
 
 $fg_color:                    if($variant == 'light', rgba($brown_800, 0.87), $white);
