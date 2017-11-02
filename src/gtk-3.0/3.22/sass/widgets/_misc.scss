@@ -204,7 +204,7 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
 %selected_items {
   background-color: $primary_color;
   
-  &:backdrop {backroud-color: backdrop($primary_color); }
+  &:backdrop {background-color: backdrop($primary_color); }
 
   @at-root %nobg_selected_items, & {
     color: $inverse_fg_color;
