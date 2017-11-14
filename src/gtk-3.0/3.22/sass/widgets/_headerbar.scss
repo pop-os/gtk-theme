@@ -35,6 +35,22 @@ headerbar {
 
   button:not(.suggested-action):not(.destructive-action) {
     @extend %button_basic.flat;
+    
+    &.close {
+      margin: 6px;
+      padding: 4px;
+      min-width: 2px;
+      min-height: 2px;
+      //background-color: darken($destructive_color, 10%);
+      //background-color: darken($accent_color, 10%);
+      background-color: mix($destructive_color, $accent_color, 50%);
+      color: $white;
+      
+      &:backdrop {
+        background-color: $inverse_divider_color;
+        color: $titlebar_fg_color;
+      }
+    }
 
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                   $titlebar_indicator_color 0%,
