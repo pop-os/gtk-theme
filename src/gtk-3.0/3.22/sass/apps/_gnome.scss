@@ -4,8 +4,10 @@
 
 window.csd > box.horizontal {
   box.vertical > scrolledwindow.view > viewport.frame > stack > list > row:selected {
-    color: $inverse_fg_color;
     background-color: $accent_color;
+    color: $inverse_fg_color;
+    
+    &:backdrop { background-color: backdrop($accent_color); }
   }
 
   widget > overlay > box.vertical > grid.horizontal > stack > button.toggle {
@@ -358,6 +360,8 @@ frame.gedit-map-frame > border {
   background-image: image($lighter_bg_color);
   .tweak-category:selected {
     background-color: $accent_color;
+    
+    &:backdrop { background-color: backdrop($accent_color); }
   }
 
   separator { @extend %hide_separators; }
