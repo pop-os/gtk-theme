@@ -263,7 +263,7 @@ window.tiled-right {
   }
 
   @extend %titlebar;
-
+  
   &:backdrop {
     background-color: $inactive_titlebar_bg_color;
   }
