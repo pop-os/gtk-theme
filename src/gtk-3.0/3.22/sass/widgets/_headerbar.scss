@@ -37,10 +37,10 @@ headerbar {
     @extend %button_basic.flat;
     
     &.close {
-      margin: 6px;
-      padding: 4px;
-      min-width: 2px;
-      min-height: 2px;
+      //margin: 6px;
+      padding: 6px;
+      min-width: 6px;
+      min-height: 6px;
       //background-color: darken($destructive_color, 10%);
       //background-color: darken($accent_color, 10%);
       background-color: mix($destructive_color, $accent_color, 50%);
