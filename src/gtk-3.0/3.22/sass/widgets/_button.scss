@@ -5,10 +5,11 @@
 %button,
 button {
   @at-root %button_basic, & {
-    min-height: 24px;
-    min-width: 16px;
-    padding: ($medium_size - 24px) / 2 ($medium_size - 16px) / 2;
-    border-radius: $other_radius;
+    min-height: $button_size;
+    min-width: $button_size;
+    padding: ($button_size - $smaller_size) / 2 ($button_size - $tiny_size) / 2;
+    //margin-bottom: 
+    border-radius: $pop_radius;
     font-weight: 500;
 
     @include button(normal);
@@ -48,28 +49,29 @@ button {
     }
 
     &.text-button {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: $smaller_size;
+      padding-right: $smaller_size;
     }
 
     &.image-button {
-      min-width: 24px;
-      padding: ($medium_size - 24px) / 2;
+      min-width: $small_size;
+      min-height: $small_size;
+      padding: ($medium_size - $small_size) / 2;
 
       @extend %circular_button;
     }
 
     &.text-button.image-button {
-      border-radius: $other_radius;
-      -gtk-outline-radius: 2px;
+      border-radius: $pop_radius;
+      -gtk-outline-radius: $pop_radius;
 
       label {
-        &:first-child { margin-left: 16px - ($medium_size - 24px) / 2; }
+        &:first-child { margin-left: $tiny_size / 2; }
 
-        &:last-child { margin-right: 16px - ($medium_size - 24px) / 2; }
+        &:last-child { margin-right: $tiny_size / 2; }
       }
 
-      image:not(:only-child) { margin: 0 (24px - 16px) / 2; }
+      image:not(:only-child) { margin: 0 $tiny_size / 2; }
     }
 
     .linked > & { @extend %linked; }
@@ -78,13 +80,13 @@ button {
 
     .linked > &.flat,
     .linked.vertical > &.flat {
-      border-radius: $other_radius;
+      border-radius: $pop_radius;
 
       &.image-button { @extend %circular_button; }
 
       &.text-button.image-button {
-        border-radius: $other_radius;
-        -gtk-outline-radius: 2px;
+        border-radius: $pop_radius;
+        -gtk-outline-radius: $pop_radius;
       }
     }
 
@@ -120,9 +122,9 @@ button {
 
   // big standalone buttons like in Documents pager
   &.osd {
-    padding: ($large_size - 24px) / 2 ($large_size - 16px) / 2;
+    padding: $small_size / 2 $medium_size / 2;
 
-    &.image-button { padding: ($large_size - 24px) / 2; }
+    &.image-button { padding: $small_size / 2; }
 
     &:disabled { opacity: 0; }
   }
@@ -165,21 +167,21 @@ button {
     outline-offset: -4px; // needs to be set or it gets overriden by GtkRadioButton outline-offset
 
     > label {
-      padding-left: 6px;  // label padding
-      padding-right: 6px; //
+      padding-left: $tiny_padding;  // label padding
+      padding-right: $tiny_padding; //
     }
 
     > image {
-      padding-left: 6px;   // image padding
-      padding-right: 6px;  //
-      padding-top: 3px;    //
-      padding-bottom: 3px; //
+      padding-left: $tiny_padding;   // image padding
+      padding-right: $tiny_padding;  //
+      padding-top: $tiny_padding / 2;    //
+      padding-bottom: $tiny_padding / 2; //
     }
 
     &.text-button {
       // compensate text-button paddings
-      padding-left: 16px - 6px;
-      padding-right: 16px - 6px;
+      padding-left: $standard_padding;
+      padding-right: $standard_padding;
     }
 
     &.image-button {
@@ -264,47 +266,47 @@ toolbar.inline-toolbar toolbutton {
 
 %linked_middle {
   border-radius: 0;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: $pop_radius;
 }
 
 %linked {
   @extend %linked_middle;
 
   &:first-child {
-    border-top-left-radius: $material_radius;
-    border-bottom-left-radius: $material_radius;
+    border-top-left-radius: $pop_radius;
+    border-bottom-left-radius: $pop_radius;
   }
 
   &:last-child {
-    border-top-right-radius: $material_radius;
-    border-bottom-right-radius: $material_radius;
+    border-top-right-radius: $pop_radius;
+    border-bottom-right-radius: $pop_radius;
   }
 
   &:only-child {
-    border-radius: $other_radius;
+    border-radius: $pop_radius;
   }
 }
 
 %linked_vertical_middle {
   border-radius: 0;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: $pop_radius;
 }
 
 %linked_vertical {
   @extend %linked_vertical_middle;
 
   &:first-child {
-    border-top-left-radius: $material_radius;
-    border-top-right-radius: $material_radius;
+    border-top-left-radius: $pop_radius;
+    border-top-right-radius: $pop_radius;
   }
 
   &:last-child {
-    border-bottom-left-radius: $material_radius;
-    border-bottom-right-radius: $material_radius;
+    border-bottom-left-radius: $pop_radius;
+    border-bottom-right-radius: $pop_radius;
   }
 
   &:only-child {
-    border-radius: $other_radius;
+    border-radius: $pop_radius;
   }
 }
 
@@ -312,8 +314,8 @@ toolbar.inline-toolbar toolbutton {
 modelbutton.flat,
 .menuitem.button.flat {
   min-height: $menuitem_size;
-  padding: 0 8px;
-  border-radius: $other_radius;
+  padding: 0 $small_padding;
+  border-radius: $pop_radius;
   color: inherit;
 
   @extend %simple_flat_button;
