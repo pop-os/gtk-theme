@@ -1,6 +1,35 @@
 /***************************
  * Pop!_GTK+ Version 3.0.0 *
  ***************************/
+ 
+// Base-sizes
+$tiny_size: if($compact == 'false', 8px, 4px);
+$smaller_size: if($compact == 'false', 12px, 8px);
+$small_size: if($compact == 'false', 24px, 20px);
+$medium_size: if($compact == 'false', 36px, 32px);
+$large_size: if($compact == 'false', 48px, 44px);
+
+// Padding
+$mini-padding: 2px;
+$tiny_padding: if($compact == 'false', 6px, 4px);
+$small_padding: if($compact == 'false', 8px, 6px);
+$standard_padding: if($compact == 'false', 12px, 10px);
+$large_padding: if($compact == 'false', 16px, 12px);
+
+
+// Widgets
+$button_size: $small_size;
+
+// Headerbar button sizes.
+$headerbar_button_size: if($compact == 'false', 8px, 6px);
+$close_button_size: if($compact == 'false', 6px, 4px);
+
+// Radii and other curves
+$pop_radius: 4px;
+
+
+// Everything below here is an old variable. 
+// They shouldn't be used for new development.
 
 $asset_suffix: if($variant == 'dark', '-dark', '');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
@@ -13,11 +42,6 @@ $lower_opacity: 0.3;
 $secondary_opacity: 0.75;
 $hint_opacity: 0.6;
 $disabled_opacity: 0.5;
-
-// sizes
-$small_size: if($compact == 'false', 24px, 20px);
-$medium_size: if($compact == 'false', 36px, 32px);
-$large_size: if($compact == 'false', 48px, 44px);
 
 $container_padding: 6px;
 
