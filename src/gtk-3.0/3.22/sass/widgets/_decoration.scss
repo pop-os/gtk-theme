@@ -29,17 +29,17 @@ decoration {
   .ssd & { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16); } // just doing borders, wm draws actual shadows
 
   .csd.popup & {
-    border-radius: $other_radius;
+    border-radius: $pop_radius;
     box-shadow: $shadow_2;
   }
 
   tooltip.csd & {
-    border-radius: $other_radius;
+    border-radius: $pop_radius;
     box-shadow: $shadow_2;
   }
 
   messagedialog.csd & {
-    border-radius: $other_radius;
+    border-radius: $pop_radius;
     // box-shadow: $shadow_4, 0 16px 16px transparent;
 
     // &:backdrop { box-shadow: $shadow_2, 0 16px 16px transparent; }
