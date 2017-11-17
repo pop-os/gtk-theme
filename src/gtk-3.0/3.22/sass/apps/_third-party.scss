@@ -221,6 +221,47 @@ box.vertical > widget > widget:selected { background-color: $primary_color; }
  ****************/
 
 window.background:not(.csd):not(.solid-csd) {
+  
+  radio {
+    border-image-slice: $smaller_size / 2px;
+    border-image-width: $smaller_size / 2;
+
+    $radio_indicator: 10px / $smaller_size / 2;
+
+    & {
+      border-image-source: -gtk-gradient(radial,
+                                         center center, 0,
+                                         center center, 0.001,
+                                         to($accent_color),
+                                         to(transparent));
+    }
+
+    &:checked:not(:indeterminate) {
+      border-image-source: -gtk-gradient(radial,
+                                         center center, 0,
+                                         center center, $radio_indicator,
+                                         to($accent_color),
+                                         to(transparent));
+    }
+
+    &:checked:not(:indeterminate):disabled
+    &:checked:not(:indeterminate):disabled:backdrop, {
+      border-image-source: -gtk-gradient(radial,
+                                         center center, 0,
+                                         center center, $radio_indicator,
+                                         to($disabled_accent_color),
+                                         to(transparent));
+    }
+    
+    &:checked:not(:indeterminate):backdrop {
+      border-image-source: -gtk-gradient(radial,
+                                         center center, 0,
+                                         center center, $radio_indicator,
+                                         to(backdrop($accent_color)),
+                                         to(transparent));
+    }
+  }
+  
   > grid.horizontal > grid.horizontal {
     background-color: $titlebar_bg_color;
 

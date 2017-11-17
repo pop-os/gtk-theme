@@ -7,8 +7,8 @@
 // selection-mode
 .view.content-view.check:not(list),
 .content-view .tile check:not(list) {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: $small_size;
+  min-width: $small_size;
   margin: 0;
   padding: 0;
   box-shadow: none;
@@ -30,18 +30,18 @@
 checkbutton.text-button,
 radiobutton.text-button {
   // this is for a nice focus on check and radios text
-  padding: 2px;
+  padding: $mini_padding;
   outline-offset: 0;
 
-  label:not(:only-child) { margin: 0 4px; }
+  label:not(:only-child) { margin: 0 $tiny_padding; }
 }
 
 check,
 radio {
-  min-height: 24px;
-  min-width: 24px;
-  margin: -($large_size - 24px) / 2;
-  padding: ($large_size - 24px) / 2;
+  min-height: $small_size;
+  min-width: $small_size;
+  //margin: -$standard_padding;
+  //padding: -$standard_padding;
 
   @extend %simple_flat_button;
 
@@ -75,26 +75,26 @@ radio {
     &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
 
     &.left:dir(rtl) {
-      margin-left: -16px;
-      margin-right: -8px;
+      margin-left: -$large_padding;
+      margin-right: -$small_padding;
     }
 
     &.right:dir(ltr) {
-      margin-left: -8px;
-      margin-right: -16px;
+      margin-left: -$small_padding;
+      margin-right: -$large_padding;
     }
   }
 
   menu menuitem & {
     transition: none;
-    min-height: 16px;
-    min-width: 16px;
+    min-height: $smaller_size + 2;
+    min-width: $smaller_size + 2;
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
     padding: 0;
 
-    &:dir(ltr) { margin-right: 8px; }
+    &:dir(ltr) { margin-right: $small_padding; }
 
-    &:dir(rtl) { margin-left: 8px; }
+    &:dir(rtl) { margin-left: $small_padding; }
 
     &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
 
@@ -128,10 +128,10 @@ radio {
   &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-mixed-symbolic.svg")),
                                             -gtk-recolor(url("assets/scalable/radio-mixed-symbolic.png"))); }
 
-  border-image-slice: $large_size / 2px;
-  border-image-width: $large_size / 2;
+  border-image-slice: $small_size / 2px;
+  border-image-width: $small_size / 2;
 
-  $radio_indicator: 10px / $large_size / 2;
+  $radio_indicator: 10px / $small_size / 2;
 
   & {
     border-image-source: -gtk-gradient(radial,
@@ -170,8 +170,8 @@ radio {
 %small_check,
 menu menuitem check {
   & {
-    border-radius: $other_radius;
-    -gtk-outline-radius: 2px;
+    border-radius: $pop_radius;
+    -gtk-outline-radius: $pop_radius;
     -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")),
                             -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.png")));
   }
@@ -211,7 +211,7 @@ menu menuitem radio {
 // the transformation is set on the active state and it get reset on the checked state.
 check:not(:checked):active { -gtk-icon-transform: rotate(90deg); }
 
-// radio:not(:checked):active { -gtk-icon-transform: scale(0); }
+radio:not(:checked):active { -gtk-icon-transform: scale(0); }
 
 check:not(:checked):indeterminate:active,
 radio:not(:checked):indeterminate:active { -gtk-icon-transform: scaleX(-1); } // instead of rotateY(180deg)
@@ -271,9 +271,7 @@ treeview.view radio {
     &:disabled { color: $inverse_disabled_secondary_fg_color; }
 
     &:checked, &:indeterminate { 
-      color: $accent_color; 
-      
-      &:backdrop { color: backdrop($accent_color); }
+      color: $inverse_fg_color; 
     }
 
     &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }

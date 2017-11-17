@@ -37,10 +37,10 @@ headerbar {
     @extend %button_basic.flat;
     
     &.close {
-      //margin: 6px;
-      padding: 6px;
-      min-width: 6px;
-      min-height: 6px;
+      margin: $close_button_size;
+      padding: $close_button_size;
+      min-width: $close_button_size;
+      min-height: $close_button_size;
       //background-color: darken($destructive_color, 10%);
       //background-color: darken($accent_color, 10%);
       background-color: mix($destructive_color, $accent_color, 50%);
@@ -258,11 +258,17 @@ window.tiled-right {
   }
 
   > separator {
-    background-color: $titlebar_bg_color;
-    background-image: image($border_color);
+    background-color: transparent;
+    color: transparent;
   }
 
   @extend %titlebar;
+  
+  button.close{
+    padding: $close_button_size - 2px;
+    min-width: $close_button_size - 2px;
+    min-height: $close_button_size - 2px;
+  }
   
   &:backdrop {
     background-color: $inactive_titlebar_bg_color;

@@ -1,4 +1,12 @@
 /******************
+ * GNOME Calendar *
+ ******************/
+
+window > overlay > box > stack {
+  calendar-view > calendar-view > box > label.start-header
+}
+
+/******************
  * Control center *
  *****************/
 
