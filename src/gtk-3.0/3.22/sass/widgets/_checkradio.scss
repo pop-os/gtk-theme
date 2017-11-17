@@ -7,8 +7,8 @@
 // selection-mode
 .view.content-view.check:not(list),
 .content-view .tile check:not(list) {
-  min-height: $small_size;
-  min-width: $small_size;
+  min-height: $check_size;
+  min-width: $check_size;
   margin: 0;
   padding: 0;
   box-shadow: none;
@@ -38,8 +38,8 @@ radiobutton.text-button {
 
 check,
 radio {
-  min-height: $small_size;
-  min-width: $small_size;
+  min-height: $check_size;
+  min-width: $check_size;
   //margin: -$standard_padding;
   //padding: -$standard_padding;
 
@@ -87,8 +87,8 @@ radio {
 
   menu menuitem & {
     transition: none;
-    min-height: $smaller_size + 2;
-    min-width: $smaller_size + 2;
+    min-height: $check_size - 4px;
+    min-width: $check_size - 4px;
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
     padding: 0;
 
@@ -128,10 +128,10 @@ radio {
   &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-mixed-symbolic.svg")),
                                             -gtk-recolor(url("assets/scalable/radio-mixed-symbolic.png"))); }
 
-  border-image-slice: $small_size / 2px;
-  border-image-width: $small_size / 2;
+  border-image-slice: $check_size / 2px;
+  border-image-width: $check_size / 2;
 
-  $radio_indicator: 10px / $small_size / 2;
+  $radio_indicator: 10px / $check_size / 2;
 
   & {
     border-image-source: -gtk-gradient(radial,

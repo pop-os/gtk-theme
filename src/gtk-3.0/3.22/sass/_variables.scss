@@ -3,22 +3,28 @@
  ***************************/
  
 // Base-sizes
-$tiny_size: if($compact == 'false', 8px, 4px);
-$smaller_size: if($compact == 'false', 12px, 8px);
-$small_size: if($compact == 'false', 24px, 20px);
-$medium_size: if($compact == 'false', 36px, 32px);
-$large_size: if($compact == 'false', 48px, 40px);
+$tiny_size: if($compact == 'false', 2px, 1px);
+$smaller_size: if($compact == 'false', 6px, 4px);
+$small_size: if($compact == 'false', 8px, 6px);
+$medium_size: if($compact == 'false', 10px, 8px);
+$large_size: if($compact == 'false', 24px, 20px);
+
+// Widgets
+$button_size: $large_size;
+$check_size: $large_size;
+$titlebar_size: $large_size;
 
 // Padding
-$mini-padding: 2px;
+$mini_padding: 2px;
 $tiny_padding: if($compact == 'false', 6px, 4px);
 $small_padding: if($compact == 'false', 8px, 6px);
 $standard_padding: if($compact == 'false', 12px, 10px);
 $large_padding: if($compact == 'false', 16px, 12px);
 
+// Widget paddings
+$container_padding: 6px;
 
-// Widgets
-$button_size: $small_size;
+$image_button_padding: if($compact == 'false', 4px, 2px);
 
 // Headerbar button sizes.
 $headerbar_button_size: if($compact == 'false', 8px, 6px);
@@ -31,6 +37,14 @@ $pop_radius: 4px;
 // Everything below here is an old variable. 
 // They shouldn't be used for new development.
 
+/*
+$tiny_size: if($compact == 'false', 8px, 4px);
+$smaller_size: if($compact == 'false', 12px, 8px);
+$small_size: if($compact == 'false', 24px, 20px);
+$medium_size: if($compact == 'false', 36px, 32px);
+$large_size: if($compact == 'false', 48px, 40px);
+*/
+
 $asset_suffix: if($variant == 'dark', '-dark', '');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
 
@@ -42,8 +56,6 @@ $lower_opacity: 0.3;
 $secondary_opacity: 0.75;
 $hint_opacity: 0.6;
 $disabled_opacity: 0.5;
-
-$container_padding: 6px;
 
 $bar_size: 4px;
 $menuitem_size: 28px;

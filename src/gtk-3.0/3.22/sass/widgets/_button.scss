@@ -7,7 +7,7 @@ button {
   @at-root %button_basic, & {
     min-height: $button_size;
     min-width: $button_size;
-    padding: ($button_size - $smaller_size) / 2 ($button_size - $tiny_size) / 2;
+    padding: $tiny_padding $small_padding;
     //margin-bottom: 
     border-radius: $pop_radius;
     font-weight: 500;
@@ -49,14 +49,14 @@ button {
     }
 
     &.text-button {
-      padding-left: $smaller_size;
-      padding-right: $smaller_size;
+      padding-left: $standard_padding;
+      padding-right: $standard_padding;
     }
 
     &.image-button {
-      min-width: $small_size;
-      min-height: $small_size;
-      padding: ($medium_size - $small_size) / 2;
+      min-width: $button_size;
+      min-height: $button_size;
+      padding: $tiny_padding;
 
       @extend %circular_button;
     }
@@ -66,12 +66,12 @@ button {
       -gtk-outline-radius: $pop_radius;
 
       label {
-        &:first-child { margin-left: $tiny_size / 2; }
+        &:first-child { margin-left: $tiny_padding; }
 
-        &:last-child { margin-right: $tiny_size / 2; }
+        &:last-child { margin-right: $tiny_padding; }
       }
 
-      image:not(:only-child) { margin: 0 $tiny_size / 2; }
+      image:not(:only-child) { margin: 0 $tiny_padding; }
     }
 
     .linked > & { @extend %linked; }
@@ -91,7 +91,7 @@ button {
     }
 
     &:drop(active) {
-      // box-shadow: inset 0 0 0 2px $accent_color;
+      box-shadow: inset 0 0 0 2px $accent_color;
     }
   }
 
@@ -122,9 +122,9 @@ button {
 
   // big standalone buttons like in Documents pager
   &.osd {
-    padding: $small_size / 2 $medium_size / 2;
+    padding: $standard_padding $large_padding;
 
-    &.image-button { padding: $small_size / 2; }
+    &.image-button { padding: $standard_padding; }
 
     &:disabled { opacity: 0; }
   }
@@ -187,8 +187,8 @@ button {
     &.image-button {
       // we want image buttons to have a 1:1 aspect ratio, so compensation
       // of the padding added to the GtkImage is needed
-      padding-left: ($medium_size - 16px) / 2 - 6px;
-      padding-right: ($medium_size - 16px) / 2 - 6px;
+      padding-left: $image_button_padding;
+      padding-right: $image_button_padding;
     }
 
     &.needs-attention {
@@ -230,8 +230,8 @@ button {
   }
 
   @at-root %small_button {
-    min-height: $small_size;
-    min-width: $small_size;
+    min-height: $button_size - 4px;
+    min-width: $button_size - 4px;
     padding: 0;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
@@ -313,7 +313,7 @@ toolbar.inline-toolbar toolbutton {
 /* menu buttons */
 modelbutton.flat,
 .menuitem.button.flat {
-  min-height: $menuitem_size;
+  min-height: $button_size;
   padding: 0 $small_padding;
   border-radius: $pop_radius;
   color: inherit;
@@ -334,8 +334,8 @@ modelbutton.flat arrow {
 }
 
 button.color {
-  min-height: $small_size;
-  min-width: $small_size;
-  padding: $container_padding;
+  min-height: $button_size;
+  min-width: $button_size;
+  padding: $tiny_padding;
 }
 

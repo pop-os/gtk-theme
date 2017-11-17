@@ -5,9 +5,12 @@
 entry {
   %entry_basic, & {
     min-height: $medium_size;
-    min-width: 80px;
-    padding: 0 8px;
-    border-radius: $other_radius;
+    min-width: $medium_size * 2;
+    padding: 0 $small_padding;
+    border-top-left-radius: $pop_radius;
+    border-top-right-radius: $pop_radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
     @include entry(normal);
 
@@ -16,7 +19,10 @@ entry {
     &:disabled { @include entry(disabled); }
 
     &.flat {
-      border-radius: 0;
+      border-top-left-radius: $pop_radius;
+      border-top-right-radius: $pop_radius;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
 
       @include entry(flat-normal);
 
@@ -39,13 +45,13 @@ entry {
       &:disabled { color: $hint_fg_color; }
 
       &.left {
-        margin-left: ($medium_size - 16px) / 2 - 8px;
-        margin-right: 6px;
+        margin-left: $tiny_padding;
+        margin-right: $tiny_padding;
       }
 
       &.right {
-        margin-left: 6px;
-        margin-right: ($medium_size - 16px) / 2 - 8px;
+        margin-left: $tiny_padding;
+        margin-right: $tiny_padding;
       }
     }
 
@@ -94,8 +100,8 @@ entry {
   }
 
   progress {
-    margin: 2px (2px - 8px);
-    border-bottom: 2px solid $primary_color;
+    margin: $mini_padding -$tiny_padding;
+    border-bottom: ($tiny_size / 2) solid $primary_color;
     background-color: transparent;
   }
 
@@ -112,7 +118,7 @@ entry {
 treeview entry {
   &.flat, & {
     min-height: 0;
-    padding: 2px;
+    padding: $mini_padding;
     border-radius: 0;
     background-color: $base_color;
 
@@ -124,7 +130,7 @@ treeview entry {
 }
 
 .entry-tag {
-  $tag_height: 24px;
+  $tag_height: $small_size;
   $tag_margin: ($medium_size - $tag_height) / 2;
 
   margin: $tag_margin; // instead of min-height: $tag_height;
@@ -170,7 +176,7 @@ spinbutton {
     // and nuke the style on the internal entry
     @extend %entry;
 
-    padding: 4px;
+    padding: $tiny_padding;
 
     %spinbutton_entry,
     entry {
@@ -239,20 +245,20 @@ spinbutton {
 
     entry {
       min-height: $medium_size;
-      min-width: 80px;
-      padding: 4px 4px;
+      min-width: $medium_size * 2;
+      padding: $tiny_padding;
     }
 
     button {
       min-height: $medium_size;
       min-width: $large_size;
-      padding: 4px;
+      padding: $tiny_padding;
 
       @extend %simple_flat_button;
 
-      &.up { border-radius: $other_radius $other_radius 0 0; }
+      &.up { border-radius: $pop_radius $pop_radius 0 0; }
 
-      &.down { border-radius: 0 0 $other_radius $other_radius; }
+      &.down { border-radius: 0 0 $pop_radius $pop_radius; }
     }
   }
 
@@ -275,7 +281,7 @@ spinbutton {
 
 toolbar {
   &:not(.inline-toolbar):not(.osd) {
-    spinbutton { margin: $small_space; }
+    spinbutton { margin: $mini_padding; }
     .linked spinbutton {
       &:not(:first-child) { margin-left: 0; }
       &:not(:last-child) { margin-right: 0; }
