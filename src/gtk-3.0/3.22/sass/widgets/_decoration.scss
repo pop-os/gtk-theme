@@ -3,13 +3,13 @@
  **********************/
 decoration {
   transition: $shadow_transition;
-  border-radius: $other_radius $other_radius 0 0;
+  border-radius: $pop_radius $pop_radius 0 0;
   box-shadow: $shadow_4, 0 16px 16px transparent;
 
   // FIXME rationalize shadows
 
   // this is used for the resize cursor area
-  margin: 8px;
+  margin: 6px;
 
   &:backdrop {
     // the transparent shadow here is to enforce that the shadow extents don't
