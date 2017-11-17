@@ -12,44 +12,44 @@ colorswatch {
   // nth-child is needed by the custom color strip.
 
   &.top {
-    border-top-left-radius: $material_radius + 0.5px;
-    border-top-right-radius: $material_radius + 0.5px;
+    border-top-left-radius: $pop_radius + 0.5px;
+    border-top-right-radius: $pop_radius + 0.5px;
 
     overlay {
-      border-top-left-radius: $material_radius;
-      border-top-right-radius: $material_radius;
+      border-top-left-radius: $pop_radius;
+      border-top-right-radius: $pop_radius;
     }
   }
 
   &.bottom {
-    border-bottom-left-radius: $material_radius + 0.5px;
-    border-bottom-right-radius: $material_radius + 0.5px;
+    border-bottom-left-radius: $pop_radius + 0.5px;
+    border-bottom-right-radius: $pop_radius + 0.5px;
 
     overlay {
-      border-bottom-left-radius: $material_radius;
-      border-bottom-right-radius: $material_radius;
+      border-bottom-left-radius: $pop_radius;
+      border-bottom-right-radius: $pop_radius;
     }
   }
 
   &.left,
   &:first-child:not(.top) {
-    border-top-left-radius: $material_radius + 0.5px;
-    border-bottom-left-radius: $material_radius + 0.5px;
+    border-top-left-radius: $pop_radius + 0.5px;
+    border-bottom-left-radius: $pop_radius + 0.5px;
 
     overlay {
-      border-top-left-radius: $material_radius;
-      border-bottom-left-radius: $material_radius;
+      border-top-left-radius: $pop_radius;
+      border-bottom-left-radius: $pop_radius;
     }
   }
 
   &.right,
   &:last-child:not(.bottom) {
-    border-top-right-radius: $material_radius + 0.5px;
-    border-bottom-right-radius: $material_radius + 0.5px;
+    border-top-right-radius: $pop_radius + 0.5px;
+    border-bottom-right-radius: $pop_radius + 0.5px;
 
     overlay {
-      border-top-right-radius: $material_radius;
-      border-bottom-right-radius: $material_radius;
+      border-top-right-radius: $pop_radius;
+      border-bottom-right-radius: $pop_radius;
     }
   }
 
@@ -77,10 +77,10 @@ colorswatch {
   }
 
   &#add-color-button {
-    border-radius: $material_radius $material_radius 0 0;
+    border-radius: $pop_radius $pop_radius 0 0;
     color: $light_fg_color;
 
-    &:only-child { border-radius: $material_radius; }
+    &:only-child { border-radius: $pop_radius; }
 
     overlay {
       background-image: linear-gradient(to right,
@@ -101,9 +101,9 @@ colorswatch {
   }
 
   &#editor-color-sample {
-    border-radius: $material_radius + 0.5px;
+    border-radius: $pop_radius + 0.5px;
 
-    overlay { border-radius: $material_radius; }
+    overlay { border-radius: $pop_radius; }
 
     // overlay:hover { box-shadow: $shadow_1; }
   }
@@ -112,7 +112,7 @@ colorswatch {
 // colorscale popup
 colorchooser .popover.osd {
   transition: $shadow_transition;
-  border-radius: $other_radius;
+  border-radius: $pop_radius;
   box-shadow: $shadow_2, inset 0 1px $highlight_color;
   background-color: $base_color;
 
