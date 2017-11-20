@@ -5,12 +5,18 @@ progressbar {
   // sizing
   &.horizontal {
     trough,
-    progress { min-height: $bar_size; }
+    progress { 
+      min-height: $bar_size;
+      border-radius: $pop_radius;
+    }
   }
 
   &.vertical {
     trough,
-    progress { min-width: $bar_size; }
+    progress { 
+      min-width: $bar_size;
+      border-radius: $pop_radius;
+    }
   }
 
   // FIXME: insensitive state missing and some other state should be set probably

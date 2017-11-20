@@ -6,32 +6,27 @@ scale {
   $_marks_length: 8px;
   $_marks_distance: 8px;
 
-  $trough_size: 2px;
+  $slider_margin: -($scale_slider_size - $scale_trough_size) / 2;
+  $marks_slider_margin: -($scale_marks_slider_size - $scale_trough_size) - $slider_margin;
 
-  $slider_size: 24px;
-  $marks_slider_size: 30px;
+  $color_slider_margin: -($scale_slider_size) / 2;
+  $color_marks_slider_margin: -($scale_marks_slider_size - 16px) - $color_slider_margin;
 
-  $slider_margin: -($slider_size - $trough_size) / 2;
-  $marks_slider_margin: -($marks_slider_size - $trough_size) - $slider_margin;
-
-  $color_slider_margin: -($slider_size) / 2;
-  $color_marks_slider_margin: -($marks_slider_size - 16px) - $color_slider_margin;
-
-  min-height: $medium_size - $slider_size;
-  min-width: $medium_size - $slider_size;
-  padding: ($slider_size / 2);
+  min-height: $large_size - $scale_slider_size;
+  min-width: $large_size - $scale_slider_size;
+  padding: ($scale_slider_size / 2);
 
   // the slider is inside the trough, so to have make it bigger there's a negative margin
   slider {
-    min-height: $slider_size;
-    min-width: $slider_size;
+    min-height: $scale_slider_size;
+    min-width: $scale_slider_size;
     margin: $slider_margin;
   }
 
   // the backing bit
   trough {
     transition: $longer_transition;
-    outline-offset: 2px;
+    outline-offset: $mini_padding;
     background-color: $track_color;
 
     &:disabled { background-color: $divider_color; }
@@ -139,8 +134,8 @@ scale {
           }
 
           @if $dir_class == 'horizontal' {
-            min-height: $marks_slider_size;
-            min-width: $slider_size;
+            min-height: $scale_marks_slider_size;
+            min-width: $scale_slider_size;
 
             @if $marks_infix == 'marks-before' {
               margin-top: $marks_slider_margin;
@@ -164,8 +159,8 @@ scale {
           }
 
           @if $dir_class == 'vertical' {
-            min-height: $slider_size;
-            min-width: $marks_slider_size;
+            min-height: $scale_slider_size;
+            min-width: $scale_marks_slider_size;
 
             @if $marks_infix == 'marks-before' {
               margin-left: $marks_slider_margin;
@@ -211,7 +206,7 @@ scale {
     min-width: 0;
 
     &.horizontal {
-      padding: 0 0 12px 0;
+      padding: 0 0 $standard_padding 0;
 
       slider {
         &:dir(ltr), &:dir(rtl) { // specificity bump
@@ -223,7 +218,7 @@ scale {
 
     &.vertical {
       &:dir(ltr) {
-        padding: 0 0 0 12px;
+        padding: 0 0 0 $standard_padding;
 
         slider {
           margin-left: $color_slider_margin;
@@ -232,7 +227,7 @@ scale {
       }
 
       &:dir(rtl) {
-        padding: 0 12px 0 0;
+        padding: 0 $standard_padding 0 0;
 
         slider {
           margin-right: $color_slider_margin;

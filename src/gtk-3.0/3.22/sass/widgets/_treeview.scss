@@ -21,13 +21,13 @@ treeview.view {
   &:hover, &:active, &:selected { border-radius: 0; }
 
   &.separator {
-    min-height: 1px + 2px * 2;
+    min-height: $mini_size;
     color: $border_color;
   }
 
   &:drop(active) {
     border-style: solid none;
-    border-width: 1px;
+    border-width: $border_size;
     border-color: $accent_color;
 
     &.after { border-top-style: none; }
@@ -78,9 +78,9 @@ treeview.view {
     button {
       @extend row.activatable;
 
-      padding: 2px 6px;
+      padding: $mini_padding $tiny_padding;
       border-style: none solid solid none;
-      border-width: 1px;
+      border-width: $border_size;
       border-color: $border_color;
       border-radius: 0;
       background-clip: border-box;
@@ -95,9 +95,9 @@ treeview.view {
 
   button.dnd,
   header.button.dnd { // for treeview-like derive widgets
-    padding: 2px 6px;
+    padding: $mini_padding $tiny_padding;
     border-style: none solid solid;
-    border-width: 1px;
+    border-width: $border_size;
     border-color: $border_color;
     border-radius: 0;
     box-shadow: none;

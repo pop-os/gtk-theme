@@ -5,7 +5,7 @@ frame > border,
 .frame {
   margin: 0;
   padding: 0;
-  border: 1px solid $border_color;
+  border: $border_size solid $border_color;
   border-radius: 0;
   box-shadow: none;
 
@@ -16,7 +16,7 @@ frame.flat > border { @extend .frame.flat; } // for backporting
 
 actionbar > revealer > box {
   padding: $container_padding;
-  border-top: 1px solid $border_color;
+  border-top: $border_size solid $border_color;
 
   button:not(.suggested-action):not(.destructive-action):not(.server-list-button) { @extend %button_basic.flat; }
 }
@@ -51,7 +51,7 @@ scrolledwindow {
 
   @at-root junction { // the small square between two scrollbars
     border-style: solid none none solid;
-    border-width: 1px;
+    border-width: $border_size;
     border-color: $border_color;
     background-color: $base_color;
 
@@ -61,8 +61,8 @@ scrolledwindow {
 
 // vbox and hbox separators
 separator {
-  min-width: 1px;
-  min-height: 1px;
+  min-width: $separator_size;
+  min-height: $separator_size;
   background-color: transparent;
 }
 

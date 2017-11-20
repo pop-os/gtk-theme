@@ -6,7 +6,7 @@ entry {
   %entry_basic, & {
     min-height: $entry_size;
     min-width: $entry_size * 2;
-    padding: 0 $small_padding;
+    padding: $tiny_padding;
     border-top-left-radius: $pop_radius;
     border-top-right-radius: $pop_radius;
     border-bottom-left-radius: 0;
@@ -32,12 +32,7 @@ entry {
     }
 
     image { // icons inside the entry
-      // @extend %simple_flat_button;
 
-      // min-height: $small_size;
-      // min-width: $small_size;
-      // border-radius: $circular_radius;
-      // -gtk-outline-radius: $circular_radius;
       color: $secondary_fg_color;
 
       &:hover, &:active { color: $fg_color; }
@@ -100,9 +95,10 @@ entry {
   }
 
   progress {
-    margin: $mini_padding -$tiny_padding;
-    border-bottom: $smaller_size solid $primary_color;
-    background-color: rgba($primary_color, $lower_opacity);
+    margin: -$tiny_padding;
+    border-bottom: $mini_size solid $primary_color;
+    background-color: rgba($primary_color, 0.1);
+    border-radius: $pop_radius $pop_radius 0 0;
   }
 
    // linked entries
@@ -131,7 +127,7 @@ treeview entry {
 
 .entry-tag {
   $tag_height: $entry_size;
-  $tag_margin: ($large_size + 12px - $tag_height) / 2;
+  $tag_margin: ($large_size - $tag_height) / 2;
 
   margin: $tag_margin; // instead of min-height: $tag_height;
   border-radius: $circular_radius;
@@ -314,15 +310,15 @@ combobox {
   button.combo:checked { transition: none; } // workaround for menuitem selection
 
   button.combo cellview {
-    &:dir(ltr) { margin-left: 8px - ($medium_size - 16px) / 2; }
-    &:dir(rtl) { margin-right: 8px - ($medium_size - 16px) / 2; }
+    &:dir(ltr) { margin-left: 8px - ($standard_padding - 16px) / 2; }
+    &:dir(rtl) { margin-right: 8px - ($standard_padding - 16px) / 2; }
   }
 
   #gtk-combobox-popup-menu {
     padding: 2px 0;
 
     menuitem {
-      min-height: $medium_size - 2px * 2;
+      min-height: $small_size - 2px * 2;
       padding: 0 8px;
     }
 

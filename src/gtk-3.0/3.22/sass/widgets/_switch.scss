@@ -4,8 +4,8 @@
 switch {
   transition: $longer_transition;
   margin: $container_padding 0;
-  padding: 0 2px;
-  border: 5px solid transparent;
+  padding: 0 $mini_padding;
+  border: $container_padding solid transparent;
   border-radius: $circular_radius;
   background-color: $track_color;
   background-clip: padding-box;
@@ -23,8 +23,8 @@ switch {
 
   slider {
     transition: $longer_transition, $shadow_transition;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: $switch_size;
+    min-height: $switch_size;
     margin: -3px -2px;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;

@@ -6,7 +6,7 @@ list {
   background-color: $base_color;
 
   row {
-    padding: 2px;
+    padding: $mini_padding;
 
     &:selected { 
       background-color: $primary_color;

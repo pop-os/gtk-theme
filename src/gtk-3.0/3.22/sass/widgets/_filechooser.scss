@@ -4,18 +4,18 @@
 placessidebar {
   > viewport.frame { border-style: none; }
 
-  list { padding: (4px - 3px) 0 4px; }
+  list { padding: $mini_padding 0 $tiny_padding; }
 
   row {
     // Needs overriding of the GtkListBoxRow padding
-    min-height: 32px;
+    min-height: $large_size;
     margin: -1px 0; // Remove unknown margins
     padding: 0;
     color: $fg_color;
 
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
-    > revealer { padding: 0 12px; }
+    > revealer { padding: 0 $standard_padding; }
 
     &:selected {
       color: $inverse_fg_color;
@@ -29,15 +29,15 @@ placessidebar {
     image.sidebar-icon {
       color: $fg_color; // dim the device icons
 
-      &:dir(ltr) { padding-right: 8px; }
-      &:dir(rtl) { padding-left: 8px; }
+      &:dir(ltr) { padding-right: $small_padding; }
+      &:dir(rtl) { padding-left: $small_padding; }
     }
 
     &:selected image.sidebar-icon { color: $inverse_fg_color; }
 
     label.sidebar-label {
-      &:dir(ltr) { padding-right: 2px; }
-      &:dir(rtl) { padding-left: 2px; }
+      &:dir(ltr) { padding-right: $mini_padding; }
+      &:dir(rtl) { padding-left: $mini_padding; }
     }
 
     @at-root button.sidebar-button {
@@ -49,8 +49,8 @@ placessidebar {
     }
 
     &.sidebar-placeholder-row {
-      min-height: 2px;
-      padding: 0 8px;
+      min-height: $sidebar_placeholder_size;
+      padding: 0 $small_padding;
       background-image: image($accent_color);
       background-clip: content-box;
     }
@@ -75,7 +75,7 @@ placesview {
 
   // this selects the "connect to server" label
   > actionbar > revealer > box > label {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: $small_padding;
+    padding-right: $small_padding;
   }
 }

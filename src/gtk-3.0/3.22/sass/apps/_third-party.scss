@@ -37,7 +37,7 @@ overlay > revealer {
 .terminix-session-sidebar, // for backwards compatibility
 .tilix-session-sidebar { background-image: image($lighter_bg_color); }
 
-button.image-button.session-new-button { min-width: $medium_size - 4px; }
+button.image-button.session-new-button { min-width: $large_size - 4px; }
 
 
 /***********
@@ -223,10 +223,11 @@ box.vertical > widget > widget:selected { background-color: $primary_color; }
 window.background:not(.csd):not(.solid-csd) {
   
   radio {
-    border-image-slice: $smaller_size / 2px;
-    border-image-width: $smaller_size / 2;
+    border-image-slice: $check_size / 2px;
+    border-image-width: $check_size / 2;
 
-    $radio_indicator: 10px / $smaller_size / 2;
+    $radio_indicator: 10px / $check_size / 2;
+    
 
     & {
       border-image-source: -gtk-gradient(radial,

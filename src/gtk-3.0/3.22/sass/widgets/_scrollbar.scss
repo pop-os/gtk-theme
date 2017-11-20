@@ -23,9 +23,9 @@ scrollbar {
   // slider
   slider {
     transition: $shorter_transition, margin 0, border-width 0;
-    min-width: 8px;
-    min-height: 8px;
-    border: 4px solid transparent;
+    min-width: $scrollbar_size;
+    min-height: $scrollbar_size;
+    border: 1px solid $bg_color;
     border-radius: $circular_radius;
     background-clip: padding-box;
     background-color: $scrollbar_color;
@@ -40,13 +40,13 @@ scrollbar {
   &.fine-tune {
     slider {
       transition: $shorter_transition, margin 0, border-width 0, min-width 0, min-height 0;
-      min-width: 4px;
-      min-height: 4px;
+      min-width: $scrollbar_size / 2;
+      min-height: $scrollbar_size / 2;
     }
 
-    &.horizontal slider { margin: 2px 0; }
+    &.horizontal slider { margin: $mini_padding 0; }
 
-    &.vertical slider { margin: 0 2px; }
+    &.vertical slider { margin: 0 $mini_padding; }
   }
 
   &.overlay-indicator {
@@ -55,17 +55,17 @@ scrollbar {
       background-color: transparent;
 
       slider {
-        min-width: 4px;
-        min-height: 4px;
-        margin: 4px - 1px;
-        border: 1px solid rgba($base_color, $lower_opacity);
+        min-width: $scrollbar_size / 2;
+        min-height: $scrollbar_size / 2;
+        margin: $mini_padding;
+        border: $border_size solid rgba($base_color, $lower_opacity);
       }
 
       button {
-        min-width: 4px;
-        min-height: 4px;
-        margin: 4px - 1px;
-        border: 1px solid rgba($base_color, $lower_opacity);
+        min-width: $scrollbar_size / 2;
+        min-height: $scrollbar_size / 2;
+        margin: $mini_padding;
+        border: $border_size solid rgba($base_color, $lower_opacity);
         border-radius: $circular_radius;
         background-color: $hint_fg_color;
         background-clip: padding-box;
@@ -77,13 +77,13 @@ scrollbar {
       &.horizontal {
         slider { min-width: $_slider_min_length; }
 
-        button { min-width: 8px; }
+        button { min-width: $scrollbar_size; }
       }
 
       &.vertical {
         slider { min-height: $_slider_min_length; }
 
-        button { min-height: 8px; }
+        button { min-height: $scrollbar_size; }
       }
     }
 
@@ -99,8 +99,8 @@ scrollbar {
   button {
     @extend %simple_flat_button;
 
-    min-width: 16px;
-    min-height: 16px;
+    min-width: $scrollbar_size * 2;
+    min-height: $scrollbar_size * 2;
     padding: 0;
     border-radius: 0;
   }

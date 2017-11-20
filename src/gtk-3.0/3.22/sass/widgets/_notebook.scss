@@ -3,7 +3,7 @@
  *************/
 notebook {
   > header {
-    border-width: 1px;
+    border-width: $border_size;
     border-color: $border_color;
     background-color: $bg_color;
     background-clip: border-box;
@@ -73,16 +73,16 @@ notebook {
     }
 
     @at-root %notebook_vert_arrows {
-      padding-left: 4px;
-      padding-right: 4px;
+      padding-left: $tiny_padding;
+      padding-right: $tiny_padding;
 
       &.down {
-        margin-left: -8px;
+        margin-left: -$small_padding;
         -gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
       }
 
       &.up {
-        margin-right: -8px;
+        margin-right: -$small_padding;
         -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
       }
     }
@@ -100,16 +100,16 @@ notebook {
     }
 
     @at-root %notebook_horz_arrows {
-      padding-top: 4px;
-      padding-bottom: 4px;
+      padding-top: $tiny_padding;
+      padding-bottom: $tiny_padding;
 
       &.down {
-        margin-top: -8px;
+        margin-top: -$small_padding;
         -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
       }
 
       &.up {
-        margin-bottom: -8px;
+        margin-bottom: -$small_padding;
         -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
       }
     }
@@ -117,8 +117,8 @@ notebook {
     > tabs > arrow {
       @extend %simple_flat_button;
 
-      min-height: 16px;
-      min-width: 16px;
+      min-height: $small_size;
+      min-width: $small_size;
       border-radius: 0;
     }
 
@@ -128,11 +128,11 @@ notebook {
                   background-image 0;
       min-height: $small_size;
       min-width: $small_size;
-      padding: $container_padding 12px;
+      padding: $container_padding $tiny_padding;
 
       outline-offset: -6px;
 
-      border-width: 1px;         // for reorderable tabs
+      border-width: $border_size;         // for reorderable tabs
       border-color: transparent; //
 
       background-image: radial-gradient(circle farthest-corner at center,
@@ -179,13 +179,13 @@ notebook {
         @extend %small_button;
 
         &:last-child {
-          margin-left: $container_padding;
-          margin-right: $container_padding - 12px;
+          margin-left: $tiny_padding;
+          margin-right: -$tiny_padding;
         }
 
         &:first-child {
-          margin-left: $container_padding - 12px;
-          margin-right: $container_padding;
+          margin-left: -$tiny_padding;
+          margin-right: $tiny_padding;
         }
       }
     }
@@ -193,8 +193,8 @@ notebook {
     &.top,
     &.bottom {
       tabs {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: $small_padding;
+        padding-right: $small_padding;
 
         &:not(:only-child) {
           &:first-child { margin-left: 0; }
@@ -213,8 +213,8 @@ notebook {
     &.left,
     &.right {
       tabs {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: $small_padding;
+        padding-bottom: $small_padding;
 
         &:not(:only-child) {
           &:first-child { margin-top: 0; }

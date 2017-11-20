@@ -33,15 +33,13 @@ radiobutton.text-button {
   padding: $mini_padding;
   outline-offset: 0;
 
-  label:not(:only-child) { margin: 0 $tiny_padding; }
+  label:not(:only-child) { margin: 0 $standard_padding; }
 }
 
 check,
 radio {
   min-height: $check_size;
   min-width: $check_size;
-  //margin: -$standard_padding;
-  //padding: -$standard_padding;
 
   @extend %simple_flat_button;
 
@@ -75,13 +73,13 @@ radio {
     &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
 
     &.left:dir(rtl) {
-      margin-left: -$large_padding;
-      margin-right: -$small_padding;
+      margin-left: -$small_padding;
+      margin-right: $small_padding;
     }
 
     &.right:dir(ltr) {
-      margin-left: -$small_padding;
-      margin-right: -$large_padding;
+      margin-left: $small_padding;
+      margin-right: -$small_padding;
     }
   }
 

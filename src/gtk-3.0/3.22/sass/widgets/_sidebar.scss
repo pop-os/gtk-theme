@@ -9,14 +9,14 @@
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: 1px solid $border_color;
+    border-right: $border_size solid $border_color;
     border-left-style: none;
   }
 
   @at-root %sidebar_right,
   &:dir(rtl),
   &.right {
-    border-left: 1px solid $border_color;
+    border-left: $border_size solid $border_color;
     border-right-style: none;
   }
 
@@ -36,11 +36,11 @@ stacksidebar {
   }
 
   row {
-    padding: 10px 4px;
+    padding: $tiny_padding;
 
     > label {
-      padding-left: 6px;
-      padding-right: 6px;
+      padding-left: $tiny_padding;
+      padding-right: $tiny_padding;
     }
 
     &.needs-attention > label { @extend %needs_attention; }

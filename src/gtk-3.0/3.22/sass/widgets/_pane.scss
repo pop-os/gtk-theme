@@ -3,22 +3,22 @@
  *********/
 paned {
   > separator {
-    min-width: 1px;
-    min-height: 1px;
+    min-width: $separator_size;
+    min-height: $separator_size;
     -gtk-icon-source: none; // defeats the ugly default handle decoration
     border-style: none; // just to be sure
     background-color: transparent;
     // workaround, using background istead of a border since the border will get rendered twice (?)
     background-image: image($border_color);
-    background-size: 1px 1px;
+    background-size: $border_size $border_size;
     background-clip: content-box; // avoids borders image being rendered twice (?)
 
     &.wide {
-      min-width: 6px;
-      min-height: 6px;
+      min-width: $mini_size;
+      min-height: $mini_size;
       background-color: $bg_color;
       background-image: image($border_color), image($border_color);
-      background-size: 1px 1px, 1px 1px;
+      background-size: $border_size $border_size, $border_size $border_size;
     }
   }
 
@@ -26,14 +26,14 @@ paned {
     background-repeat: repeat-y;
 
     &:dir(ltr) {
-      margin: 0 -8px 0 0;
-      padding: 0 8px 0 0;
+      margin: 0 -$small_padding 0 0;
+      padding: 0 $small_padding 0 0;
       background-position: left;
     }
 
     &:dir(rtl) {
-      margin: 0 0 0 -8px;
-      padding: 0 0 0 8px;
+      margin: 0 0 0 -$small_padding;
+      padding: 0 0 0 $small_padding;
       background-position: right;
     }
 
@@ -46,8 +46,8 @@ paned {
   }
 
   &.vertical > separator {
-    margin: 0 0 -8px 0;
-    padding: 0 0 8px 0;
+    margin: 0 0 -$small_padding 0;
+    padding: 0 0 $small_padding 0;
     background-repeat: repeat-x;
     background-position: top;
 

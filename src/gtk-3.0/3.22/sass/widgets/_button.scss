@@ -275,11 +275,13 @@ toolbar.inline-toolbar toolbutton {
   &:first-child {
     border-top-left-radius: $pop_radius;
     border-bottom-left-radius: $pop_radius;
+    margin-right: 0;
   }
 
   &:last-child {
     border-top-right-radius: $pop_radius;
     border-bottom-right-radius: $pop_radius;
+    margin-left: 0;
   }
 
   &:only-child {

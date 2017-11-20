@@ -3,21 +3,34 @@
  ***************************/
  
 // Base-sizes
-$tiny_size: if($compact == 'false', 2px, 1px);
-$smaller_size: if($compact == 'false', 6px, 4px);
-$small_size: if($compact == 'false', 8px, 6px);
-$medium_size: if($compact == 'false', 10px, 8px);
-$large_size: if($compact == 'false', 24px, 20px);
+$mini_size: if($compact == 'false',4px, 2px);
+$tiny_size: if($compact == 'false', 12px, 10px);
+$small_size: if($compact == 'false', 16px, 14px);
+$medium_size: if($compact == 'false', 24px, 20px);
+$large_size: if($compact == 'false', 32px, 28px);
 
-// Widgets - Define widget sizes here, and define custom sizes as derivative of these
-$button_size: $large_size;
-$check_size: $large_size;
-$titlebar_size: $large_size;
-$entry_size: $large_size;
+// Widgets - Define widget sizes here, and 
+// define custom sizes as derivative of these
+$border_size: 1px;
+$button_size: $medium_size;
+$check_size: $medium_size;
+$titlebar_size: $medium_size;
+$entry_size: $medium_size;
+$sidebar_placeholder_size: 4px;
+$separator_size: 1px;
 $headerbar_button_size: if($compact == 'false', 8px, 6px);
 $close_button_size: if($compact == 'false', 6px, 4px);
+$bar_size: 4px;
+$menuitem_size: $medium_size;
+$shortcut_key_size: 20px;
+$scale_trough_size: 2px;
+$scale_slider_size: 24px;
+$scale_marks_slider_size: 30px;
+$scrollbar_size: 8px;
+$switch_size: $small_size + 4;
 
 // Padding
+$no_padding: 1px;
 $mini_padding: 2px;
 $tiny_padding: if($compact == 'false', 6px, 4px);
 $small_padding: if($compact == 'false', 8px, 6px);
@@ -27,6 +40,7 @@ $large_padding: if($compact == 'false', 16px, 12px);
 // Widget paddings - Try to use Sparingly.
 $container_padding: 6px;
 $image_button_padding: if($compact == 'false', 4px, 2px);
+$menu_padding: if($compact == 'false', 6px, 4px);
 
 
 // Radii and other curves
@@ -62,8 +76,7 @@ $secondary_opacity: 0.75;
 $hint_opacity: 0.6;
 $disabled_opacity: 0.5;
 
-$bar_size: 4px;
-$menuitem_size: 28px;
+
 
 // radiuses
 $material_radius: 4px;

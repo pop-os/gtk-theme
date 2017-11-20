@@ -3,8 +3,8 @@
  ************/
 %pathbar_button,
 .path-bar button {
-  padding-left: ($medium_size - 24px) / 2;
-  padding-right: ($medium_size - 24px) / 2;
+  padding-left: $tiny_padding;
+  padding-right: $tiny_padding;
 
   label:not(:only-child) {
     &:first-child { margin-left: 4px; }
@@ -13,8 +13,8 @@
   }
 
   &.slider-button {
-    padding-left: (24px - 16px) / 2;
-    padding-right: (24px - 16px) / 2;
+    padding-left: $tiny_padding;
+    padding-right: $tiny_padding;
   }
 
   :not(headerbar) & {
@@ -24,7 +24,7 @@
                                   $accent_color 0%,
                                   transparent 0%)
                                   0 0 0 / 0 0 0px;
-    border-radius: $other_radius;
+    border-radius: $pop_radius;
 
     &:checked {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
