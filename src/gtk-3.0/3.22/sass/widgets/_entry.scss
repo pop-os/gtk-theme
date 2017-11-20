@@ -4,8 +4,8 @@
 %entry,
 entry {
   %entry_basic, & {
-    min-height: $medium_size;
-    min-width: $medium_size * 2;
+    min-height: $entry_size;
+    min-width: $entry_size * 2;
     padding: 0 $small_padding;
     border-top-left-radius: $pop_radius;
     border-top-right-radius: $pop_radius;
@@ -101,8 +101,8 @@ entry {
 
   progress {
     margin: $mini_padding -$tiny_padding;
-    border-bottom: ($tiny_size / 2) solid $primary_color;
-    background-color: transparent;
+    border-bottom: $smaller_size solid $primary_color;
+    background-color: rgba($primary_color, $lower_opacity);
   }
 
    // linked entries
@@ -130,8 +130,8 @@ treeview entry {
 }
 
 .entry-tag {
-  $tag_height: $small_size;
-  $tag_margin: ($medium_size - $tag_height) / 2;
+  $tag_height: $entry_size;
+  $tag_margin: ($large_size + 12px - $tag_height) / 2;
 
   margin: $tag_margin; // instead of min-height: $tag_height;
   border-radius: $circular_radius;
@@ -180,7 +180,7 @@ spinbutton {
 
     %spinbutton_entry,
     entry {
-      min-width: $large_size - 8px * 2;
+      min-width: $entry_size * 2;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
       border-image: none;
@@ -244,14 +244,14 @@ spinbutton {
     }
 
     entry {
-      min-height: $medium_size;
-      min-width: $medium_size * 2;
+      min-height: $entry_size;
+      min-width: $entry_size * 2;
       padding: $tiny_padding;
     }
 
     button {
-      min-height: $medium_size;
-      min-width: $large_size;
+      min-height: $entry_size;
+      min-width: $entry_size;
       padding: $tiny_padding;
 
       @extend %simple_flat_button;

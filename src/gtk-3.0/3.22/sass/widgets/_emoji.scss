@@ -11,8 +11,8 @@ popover.emoji-picker {
 button.emoji-section {
   margin-top: -1px;
   padding: 0 $small_padding;
-  min-width: $small_size;
-  min-height: $medium_size;
+  min-width: $button_size;
+  min-height: $button_size + $standard_padding;
   border-radius: 0;
   outline-offset: -6px;
   box-shadow: none;

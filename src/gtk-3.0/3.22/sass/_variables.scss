@@ -9,10 +9,13 @@ $small_size: if($compact == 'false', 8px, 6px);
 $medium_size: if($compact == 'false', 10px, 8px);
 $large_size: if($compact == 'false', 24px, 20px);
 
-// Widgets
+// Widgets - Define widget sizes here, and define custom sizes as derivative of these
 $button_size: $large_size;
 $check_size: $large_size;
 $titlebar_size: $large_size;
+$entry_size: $large_size;
+$headerbar_button_size: if($compact == 'false', 8px, 6px);
+$close_button_size: if($compact == 'false', 6px, 4px);
 
 // Padding
 $mini_padding: 2px;
@@ -21,17 +24,19 @@ $small_padding: if($compact == 'false', 8px, 6px);
 $standard_padding: if($compact == 'false', 12px, 10px);
 $large_padding: if($compact == 'false', 16px, 12px);
 
-// Widget paddings
+// Widget paddings - Try to use Sparingly.
 $container_padding: 6px;
-
 $image_button_padding: if($compact == 'false', 4px, 2px);
 
-// Headerbar button sizes.
-$headerbar_button_size: if($compact == 'false', 8px, 6px);
-$close_button_size: if($compact == 'false', 6px, 4px);
 
 // Radii and other curves
 $pop_radius: 4px;
+
+
+// opacities
+$higher_opacity: 0.9;
+$middle_opacity: 0.6;
+$lower_opacity: 0.3;
 
 
 // Everything below here is an old variable. 
