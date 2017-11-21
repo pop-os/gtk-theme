@@ -257,8 +257,17 @@ window.tiled-right {
   }
 
   > separator {
-    background-color: transparent;
-    color: transparent;
+    background-color: $titlebar_bg_color;
+    color: $titlebar_bg_color;
+    border-color: $titlebar_bg_color;
+    padding: 0;
+    margin: 0;
+    
+    &:backdrop {
+      background-color: $inactive_titlebar_bg_color;
+      color: $inactive_titlebar_bg_color;
+      border-color: $inactive_titlebar_bg_color;
+    }
   }
 
   @extend %titlebar;
