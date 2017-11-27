@@ -8,7 +8,11 @@
   height: em($menuitem_size);
   min-height: $small_size;
   max-height: $menuitem_size;
-  box-shadow: none;
+  box-shadow: $shadow_3;
+  
+  &.solid {
+    box-shadow: none;
+  }
 
   &:overview,
   &.unlock-screen,
