@@ -22,7 +22,7 @@ $headerbar_button_size: if($compact == 'false', 8px, 6px);
 $close_button_size: if($compact == 'false', 6px, 4px);
 $bar_size: 4px;
 $menuitem_size: $small_size;
-$shortcut_key_size: 20px;
+$shortcut_key_size: $medium_size;
 $scale_trough_size: 2px;
 $scale_slider_size: 24px;
 $scale_marks_slider_size: 30px;
@@ -45,6 +45,8 @@ $menu_padding: if($compact == 'false', 4px, 2px);
 
 // Radii and other curves
 $pop_radius: 4px;
+$shortcut_key_radius: 3px;
+
 
 
 // opacities
