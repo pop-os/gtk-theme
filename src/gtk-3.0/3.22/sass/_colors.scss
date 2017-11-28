@@ -101,7 +101,7 @@ $unity_highlight_color:    if($titlebar == 'dark', rgba($white, 0.1),  rgba($whi
 $alt_highlight_color:      rgba($white, 0.2);
 $titlebar_indicator_color: if($titlebar == 'dark', $accent_color, $accent_color);
 
-// FIXME: gtk's @placeholder_text_color API really should use $secondary_fg_color,
+// gtk's @placeholder_text_color API really should use $secondary_fg_color,
 // but it doesn't work with translucent colors. So we use opaque colors instead.
 $placeholder_text_color: if($variant == 'light',
                             mix($black, $base_color, percentage(0.54)),

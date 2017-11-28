@@ -4,7 +4,7 @@
 popover.background {
   transition: $shadow_transition;
   padding: $mini_padding;
-  box-shadow: $shadow_2; // TODO: this should really have a highlight
+  box-shadow: $shadow_2; // this should really have a highlight
   background-color: $lighter_bg_color;
 
   &:backdrop { box-shadow: $shadow_1; }

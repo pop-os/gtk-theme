@@ -1265,7 +1265,7 @@ StScrollBar {
 //close buttons
 
 .window-close {
-  transition-duration: 0ms; // FIXME: unless disable the transition, button will distort when hovering
+  transition-duration: 0ms; // Needs to be disabled to prevent distortion
   height: $medium_size;
   width: $medium_size;
   -st-background-image-shadow: $shadow_1;
@@ -1879,7 +1879,7 @@ $legacy_icon_size: 24px;
   }
 
   .candidate-box {
-    transition-duration: 0ms; // FIXME: needs more natural transitions
+    transition-duration: 0ms;
     min-height: $menuitem_size;
     padding: 0 8px;
     border-radius: $material_radius;

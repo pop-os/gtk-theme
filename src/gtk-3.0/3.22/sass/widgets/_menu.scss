@@ -122,7 +122,6 @@ menuitem {
   accelerator { color: $secondary_fg_color; }
 }
 
-// FIXME: THIS IS A REALLY UGLY WORKAROUND!
 // Electron/Atom render all translucent colors in opaque colors.
 // It's a very critical issue for this theme and should be fixed by upstream...
 .popup:not(.csd) menu {
@@ -139,6 +138,5 @@ menuitem {
     &:disabled { color: $opaque_disabled_fg_color; } // separator/border also use this color.
   }
 
-  // TODO: not working this, where/how i can set the accelerators?
   accelerator { color: $opaque_secondary_fg_color; }
 }

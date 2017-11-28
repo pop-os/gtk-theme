@@ -230,9 +230,6 @@ spinbutton {
     // in the vertical configuration, we treat the spinbutton
     // as a box, and tweak the style of the entry in the middle
     // so that it's linked
-
-    // FIXME: this should not be set at all, but otherwise it gets the wrong
-    // color
     &:disabled { color: $disabled_fg_color; }
 
     &:drop(active) {
@@ -337,7 +334,7 @@ combobox {
     }
   }
 
-  &:drop(active) { // FIXME: untested
+  &:drop(active) { 
     box-shadow: none;
 
     // button.combo { @extend %button_basic:drop(active); }

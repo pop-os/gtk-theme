@@ -21,8 +21,11 @@ tooltip {
     background-clip: $extra_background_clip;
   }
 
-  // FIXME: we need a border or tooltips vanish on black background.
-  decoration { background-color: transparent; }
+  // we need a border or tooltips vanish on black background.
+  decoration { 
+    border-radius: $pop_radius;
+    background-color: $border_color; 
+  }
 
   label {
     // tooltip label already seems to have 6px margins

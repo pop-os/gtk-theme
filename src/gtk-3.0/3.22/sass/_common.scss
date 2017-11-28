@@ -102,12 +102,11 @@ notebook:focus tab,
 }
 
 textview {
-  // FIXME: we need to override background-color to ensure text rendering
   text { background-color: $base_color; }
 
   border {
     background-color: $alt_base_color;
-    color: $hint_fg_color; // FIXME: not working
+    color: $hint_fg_color; // not working
   }
 }
 

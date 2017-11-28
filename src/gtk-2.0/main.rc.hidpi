@@ -77,7 +77,6 @@ style "default" {
   GtkSpinButton::shadow_type   = GTK_SHADOW_NONE
   GtkMenuBar::shadow-type      = GTK_SHADOW_NONE
   GtkToolbar::shadow-type      = GTK_SHADOW_NONE
-  # TODO: find out what this comment means:
   # ( every window is misaligned for the sake of menus ):
   GtkMenuBar::internal-padding = 0
   GtkMenu::horizontal-padding  = 0

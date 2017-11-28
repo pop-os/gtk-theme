@@ -364,8 +364,6 @@
           padding-top: 2px;
           color: $secondary_fg_color;
           font-size: 1em;
-          /* HACK: the label should be baseline-aligned with a 1em label,
-                   fake this with some bottom padding */
           padding-bottom: 0;
         }
 
@@ -395,7 +393,6 @@
           color: $secondary_fg_color;
         }
 
-        /* FIXME: how do you do this in sass? */
         .message-content *:hover > StIcon,
         .message-content *:focus > StIcon {
           color: $fg_color;
