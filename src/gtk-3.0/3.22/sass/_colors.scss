@@ -16,7 +16,7 @@ $dark_fg_color:   rgba($brown_700, 0.85);
 $light_fg_color:  rgba($white, 0.85);
 $button_fg_color: if($variant == 'light', rgba($brown_800, 0.75), rgba($white, 0.8)); // extra fg color for raised buttons
 
-$fg_color:                    if($variant == 'light', rgba($brown_800, 0.87), $white);
+$fg_color:                    if($variant == 'light', rgba($brown_800, 0.85), $white);
 $secondary_fg_color:          if($variant == 'light', rgba($brown_800, 0.54), rgba($white, 0.7));
 $hint_fg_color:               if($variant == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
 $disabled_fg_color:           if($variant == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));

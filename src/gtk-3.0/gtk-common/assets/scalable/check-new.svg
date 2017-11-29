@@ -12,7 +12,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="svg4"
-   sodipodi:docname="checkbox-checked-symbolic.svg"
+   sodipodi:docname="check-new.svg"
    inkscape:version="0.92+devel (unknown)">
   <metadata
      id="metadata10">
@@ -42,11 +42,20 @@
      inkscape:window-height="480"
      id="namedview6"
      showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
      inkscape:zoom="33.175093"
      inkscape:cx="10.686584"
      inkscape:cy="12.636203"
-     inkscape:current-layer="svg4" />
+     inkscape:current-layer="svg4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid817" />
+  </sodipodi:namedview>
   <path
-     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-     id="path2" />
+     d="M 9,20 1,12 4,9 9,14 21,2 24,5 Z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccc"
+     style="fill:#ffffff;fill-opacity:0.89999998;stroke-width:1.5" />
 </svg>
