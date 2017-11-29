@@ -13,7 +13,7 @@ $large_size: if($compact == 'false', 32px, 28px);
 // define custom sizes as derivative of these
 $border_size: 1px;
 $button_size: $medium_size;
-$check_size: $medium_size;
+$check_size: $small_size - 4px;
 $titlebar_size: $medium_size;
 $entry_size: $medium_size;
 $sidebar_placeholder_size: 4px;
@@ -46,6 +46,7 @@ $menu_padding: if($compact == 'false', 4px, 2px);
 // Radii and other curves
 $pop_radius: 4px;
 $shortcut_key_radius: 3px;
+$circular_radius: 9999px;
 
 
 
@@ -82,7 +83,6 @@ $disabled_opacity: 0.5;
 
 // radiuses
 $material_radius: 4px;
-$circular_radius: 9999px;
 $other_radius: 4px;
 $small_radius: 4px;
 

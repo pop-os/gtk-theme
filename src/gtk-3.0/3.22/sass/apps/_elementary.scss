@@ -188,8 +188,7 @@ window.rounded decoration {
 // Lots of custom styling in Harvey, for obvious reasons. Let's try and make it
 // look good in Pop without modifying the original app design.
 
-window.background.csd.rounded {
-> grid.titlebar {
+window.background.csd.rounded > grid.titlebar {
   min-height: 0;
 
   > headerbar.input-header {
@@ -197,9 +196,13 @@ window.background.csd.rounded {
     
     background-color: $bg_color;
 
-    > box.left > button.close { color: $fg_color; }
+    > box.left > button.close { 
+      color: $fg_color;
+      &:backdrop {
+        background-color: $divider_color;
+      }
+    }
   }
-}
 }
 
 
