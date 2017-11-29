@@ -10,11 +10,13 @@ scale {
     min-height: $scale_trough_size;
     border-radius: $circular_radius;
     outline-color: transparent;
+    transition: $shorter_transition;
   }
 
   & highlight {
     background-color: $primary_color;
     border-radius: $circular_radius;
+    transition: $shorter_transition;
   }
 
   & fill {
@@ -22,6 +24,7 @@ scale {
     min-height: $scale_trough_size;
     background-color: rgba($primary_color, 0.5);
     border-radius: $circular_radius;
+    transition: $shorter_transition;
   }
 
   & slider {
@@ -38,12 +41,22 @@ scale {
     }
   }
   
-  & marks indicator {
-    color: $track_color;
-    min-width: $scale_marks_size;
-    min-height: $scale_marks_size;
-    margin: -4px;
-    padding: 8px;
+  value {
+    color: $hint_fg_color;
+  }
+  
+  & marks {
+    indicator {
+      color: $track_color;
+      min-width: $scale_marks_size;
+      min-height: $scale_marks_size;
+      margin: -4px;
+      padding: 8px;
+    }
+    
+    label {
+      color: $hint_fg_color;
+    }
   }
 
   &:disabled {
