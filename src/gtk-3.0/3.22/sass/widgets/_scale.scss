@@ -33,7 +33,7 @@ scale {
     background-color: $primary_color;
     
     border-radius: $circular_radius;
-    margin: -8px;
+    margin: $scale_trough_size - $scale_slider_size; // allows slider to be bigger than the trough
     transition: $shorter_transition;
     
     &:active {
@@ -50,8 +50,8 @@ scale {
       color: $track_color;
       min-width: $scale_marks_size;
       min-height: $scale_marks_size;
-      margin: -4px;
-      padding: 8px;
+      margin: -($mini_padding * 4);
+      padding: $small_padding;
     }
     
     label {
