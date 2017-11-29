@@ -45,7 +45,7 @@ radio {
 
   row:selected {
     background-color: $fg_color;
-    border-color: $fg_color
+    border-color: $fg_color;
 
     &:hover, &:active { color: $inverse_fg_color; }
 
@@ -73,6 +73,7 @@ radio {
 
   menu menuitem & {
     transition: none;
+    border: 2px solid $fg_color;
     margin: $mini_padding; // this is a workaround for a menu check/radio size allocation issue
     padding: 0;
 
@@ -90,7 +91,6 @@ radio {
 }
 
 %check,
-%radio,
 check,
 radio {
   margin: $mini_padding;
@@ -143,6 +143,8 @@ radio {
     -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-indeterminate.svg"), url("assets/scalable/check-indeterminate@2.svg"));
   }
 }
+
+%radio { @extend %check;}
 
 radio {
   border-radius: $circular_radius;
