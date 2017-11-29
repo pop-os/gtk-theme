@@ -99,7 +99,7 @@ radio {
   min-height: $check_size;
   
   background-color: transparent;
-  border: 2px solid $fg_color;
+  border: 2px solid $secondary_fg_color;
   transition: 300ms;
   
   -gtk-icon-source: none;
@@ -155,7 +155,7 @@ menu menuitem check {
   min-height: $check_size - 2px;
   
   background-color: transparent;
-  border: 2px solid $fg_color;
+  border: 2px solid $secondary_fg_color;
   border-radius: $pop_radius;
   transition: 300ms;
   
@@ -202,7 +202,7 @@ menu menuitem radio {
   min-height: $check_size - 2px;
   
   background-color: transparent;
-  border: 2px solid $fg_color;
+  border: 2px solid $secondary_fg_color;
   border-radius: $circular_radius;
   transition: 300ms;
   

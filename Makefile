@@ -105,7 +105,7 @@ install:
 	    else \
 	      cp -ur \
 	       assets-dark \
-	       $$themedir/gtk-2.0; \
+	       $$themedir/gtk-2.0/assets; \
 	    fi; \
 	    cp -ur \
 	      gtkrc$$color \
