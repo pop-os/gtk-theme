@@ -1,8 +1,8 @@
 @function backdrop($color) {
   $desaturate: desaturate($color, 15%);
   $lighten: lighten($desaturate, 10%);
-  $alpha: rgba($lighten, 0.7);
-  @return $alpha;
+  $bg: mix($lighten, $bg_color, 70%);
+  @return $bg;
 }
 
 * {

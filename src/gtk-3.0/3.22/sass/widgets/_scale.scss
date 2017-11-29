@@ -2,238 +2,79 @@
  * GtkScale *
  ************/
 scale {
-  // sizing
-  $_marks_length: 8px;
-  $_marks_distance: 8px;
+  padding: $small_padding;
 
-  $slider_margin: -($scale_slider_size - $scale_trough_size) / 2;
-  $marks_slider_margin: -($scale_marks_slider_size - $scale_trough_size) - $slider_margin;
-
-  $color_slider_margin: -($scale_slider_size) / 2;
-  $color_marks_slider_margin: -($scale_marks_slider_size - 16px) - $color_slider_margin;
-
-  min-height: $large_size - $scale_slider_size;
-  min-width: $large_size - $scale_slider_size;
-  padding: ($scale_slider_size / 2);
-
-  // the slider is inside the trough, so to have make it bigger there's a negative margin
-  slider {
-    min-height: $scale_slider_size;
-    min-width: $scale_slider_size;
-    margin: $slider_margin;
-  }
-
-  // the backing bit
-  trough {
-    transition: $longer_transition;
-    outline-offset: $mini_padding;
+  & trough {
     background-color: $track_color;
-
-    &:disabled { background-color: $divider_color; }
-    &:backdrop { opacity: 0.3; }
+    min-width: $scale_trough_size;
+    min-height: $scale_trough_size;
+    border-radius: $circular_radius;
+    outline-color: transparent;
   }
 
-  // the colored part of the backing bit
-  highlight {
-    transition: $longer_transition;
+  & highlight {
     background-color: $primary_color;
-
-    &:disabled,
-    &:disabled:backdrop { background-color: transparent; }
-    &:backdrop { background-color: lighten(backdrop($primary_color), 25%); }
+    border-radius: $circular_radius;
   }
 
-  // this is another differently styled part of the backing bit, the most relevant use case is for example
-  // in media player to indicate how much video stream as been cached
-  fill {
-    transition: $longer_transition;
-    background-color: $track_color;
-
-    &:disabled { background-color: transparent; }
+  & fill {
+    min-width: $scale_trough_size;
+    min-height: $scale_trough_size;
+    background-color: rgba($primary_color, 0.5);
+    border-radius: $circular_radius;
   }
 
-  slider {
-    transition: all $shorter_duration $standard_curve;
-    // border-radius: 100%;
-    // background-color: $primary_color;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @each $s, $as in ('', ''),
-                     ( ':disabled', '-disabled'),
-                     ( ':backdrop', '-backdrop'),
-                     ( ':backdrop:disabled', '-disabled') {
-      &#{$s} {
-        $_url: 'assets/scale-slider#{$as}#{$asset_suffix}';
-
-        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
-      }
+  & slider {
+    min-width: $scale_slider_size;
+    min-height: $scale_slider_size;
+    background-color: $primary_color;
+    
+    border-radius: $circular_radius;
+    margin: -8px;
+    transition: $shorter_transition;
+    
+    &:active {
+      box-shadow: $shadow_2;
     }
-
-    background-size: calc(100% - 10px);
-
-    &:hover { background-size: calc(100% - 8px); }
-
-    &:active { background-size: calc(100% - 6px); }
   }
-
-  // click-and-hold the slider to activate
-  &.fine-tune {
-    // to make the slider shrink in fine-tune mode
-    slider { background-size: calc(100% - 12px); }
-  }
-
-  marks label,
-  value { color: $hint_fg_color; }
-
-  marks {
+  
+  & marks indicator {
     color: $track_color;
-
-    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
-                                                     (bottom, bottom, top),
-                                                     (top, left, right),
-                                                     (bottom, right, left) {
-      &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_length);
-      }
-    }
+    min-width: $scale_marks_size;
+    min-height: $scale_marks_size;
+    margin: -4px;
+    padding: 8px;
   }
 
-  &.horizontal {
-    indicator {
-      min-height: $_marks_length;
-      min-width: 1px;
+  &:disabled {
+    trough {
+      background-color: $divider_color;
+    }
+    
+    slider {
+      background-color: $bg_color;
+      border: $mini_padding solid $disabled_secondary_fg_color;
+      
+      &:backdrop { 
+        border: $mini_padding solid backdrop($disabled_secondary_fg_color);
+        background-color: $bg_color;
+      }
+    }
+    
+    highlight {
+      background-color: $disabled_secondary_fg_color;
+      
+      &:backdrop { background-color: backdrop($disabled_secondary_fg_color); }
     }
   }
+  
+  &:backdrop {
+    & trough { background-color: backdrop($track_color); }
 
-  &.vertical {
-    indicator {
-      min-height: 1px;
-      min-width: $_marks_length;
-    }
-  }
+    & highlight { background-color: backdrop($primary_color); }
 
-  // *WARNING* scale with marks madness following
+    & fill { background-color: backdrop($primary_color); }
 
-  @each $dir_class, $dir_infix in ('horizontal', 'horz'),
-                                  ('vertical', 'vert') {
-    @each $marks_infix, $marks_class in ('marks-before', 'marks-before:not(.marks-after)'),
-                                        ('marks-after', 'marks-after:not(.marks-before)') {
-      &.#{$dir_class}.#{$marks_class} {
-        slider {
-          @each $state, $state_infix in ('', ''),
-                                        ( ':disabled', '-disabled'),
-                                        ( ':backdrop', '-backdrop'),
-                                        ( ':backdrop:disabled', '-disabled') {
-            &#{$state} {
-              $_scale_asset: 'assets/scale-#{$dir_infix}-#{$marks_infix}-slider#{$state_infix}#{$asset_suffix}';
-
-              background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
-            }
-          }
-
-          @if $dir_class == 'horizontal' {
-            min-height: $scale_marks_slider_size;
-            min-width: $scale_slider_size;
-
-            @if $marks_infix == 'marks-before' {
-              margin-top: $marks_slider_margin;
-
-              background-position: center calc(100% - 5px);
-
-              &:hover { background-position: center calc(100% - 4px); }
-
-              &:active { background-position: center calc(100% - 3px); }
-            }
-
-            @if $marks_infix == 'marks-after' {
-              margin-bottom: $marks_slider_margin;
-
-              background-position: center calc(5px);
-
-              &:hover { background-position: center calc(4px); }
-
-              &:active { background-position: center calc(3px); }
-            }
-          }
-
-          @if $dir_class == 'vertical' {
-            min-height: $scale_slider_size;
-            min-width: $scale_marks_slider_size;
-
-            @if $marks_infix == 'marks-before' {
-              margin-left: $marks_slider_margin;
-
-              background-position: calc(5px) center;
-
-              &:hover { background-position: calc(4px) center; }
-
-              &:active { background-position: calc(3px) center; }
-            }
-
-            @if $marks_infix == 'marks-after' {
-              margin-right: $marks_slider_margin;
-
-              background-position: calc(100% - 5px) center;
-
-              &:hover { background-position: calc(100% - 4px) center; }
-
-              &:active { background-position: calc(100% - 3px) center; }
-            }
-          }
-        }
-
-        &.fine-tune slider {
-          @if $dir_class == 'horizontal' {
-            @if $marks_infix == 'marks-before' { background-position: center calc(100% - 6px); }
-
-            @if $marks_infix == 'marks-after' { background-position: center calc(6px); }
-          }
-
-          @if $dir_class == 'vertical' {
-            @if $marks_infix == 'marks-before' { background-position: calc(6px) center; }
-
-            @if $marks_infix == 'marks-after' { background-position: calc(100% - 6px) center; }
-          }
-        }
-      }
-    }
-  }
-
-  &.color {
-    min-height: 0;
-    min-width: 0;
-
-    &.horizontal {
-      padding: 0 0 $standard_padding 0;
-
-      slider {
-        &:dir(ltr), &:dir(rtl) { // specificity bump
-          margin-bottom: $color_slider_margin;
-          margin-top: $color_marks_slider_margin;
-        }
-      }
-    }
-
-    &.vertical {
-      &:dir(ltr) {
-        padding: 0 0 0 $standard_padding;
-
-        slider {
-          margin-left: $color_slider_margin;
-          margin-right: $color_marks_slider_margin;
-        }
-      }
-
-      &:dir(rtl) {
-        padding: 0 $standard_padding 0 0;
-
-        slider {
-          margin-right: $color_slider_margin;
-          margin-left: $color_marks_slider_margin;
-        }
-      }
-    }
+    & slider { background-color: backdrop($primary_color); }
   }
 }
