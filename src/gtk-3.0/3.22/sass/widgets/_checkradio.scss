@@ -90,7 +90,9 @@ radio {
 }
 
 %check,
-check {
+%radio,
+check,
+radio {
   margin: $mini_padding;
   padding: $mini_padding;
   
@@ -101,7 +103,6 @@ check {
   
   background-color: transparent;
   border: 2px solid $fg_color;
-  border-radius: $pop_radius;
   
   cursor: pointer;
   transition: 300ms;
@@ -135,63 +136,28 @@ check {
   }
   
   &:checked { 
-    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-active.svg"), url("assets/scalable/check-active@2.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-active.svg"), url("assets/scalable/check-active@2.svg"));
   }
   
-  &:indeterminate { -gtk-icon-source: -gtk-scaled(url("assets/scalable/indeterminate-new.svg")); }
+  &:indeterminate { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-indeterminate.svg"), url("assets/scalable/check-indeterminate@2.svg"));
+  }
 }
 
-%radio,
 radio {
-  min-width: $check_size + 4px;
-  min-height: $check_size + 4px;
-  
-  background-color: transparent;
-  border: 2px solid $fg_color;
   border-radius: $circular_radius;
-  
-  cursor: pointer;
-  transition: 300ms;
-  
-  -gtk-icon-source: none;
-  
-  &:checked,
-  &:indeterminate {
-    background-color: $accent_color;
-    border-color: $accent_color;
-    color: $white;
-    
-    &:backdrop {
-      background-color: backdrop($accent_color);
-      border-color: backdrop($accent_color);
-    }
-    
-    &:disabled {
-      background-color: $disabled_accent_color;
-      border-color: $disabled_accent_color;
-    }
-    
-    &:disabled:backdrop {
-      background-color: $divider_color;
-      border-color: $divider_color;
-    }
-  }
-  
-  &:disabled {
-    border-color: $disabled_fg_color;
-  }
-  
-  &:checked { -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-new.svg")); }
-  
-  &:indeterminate { -gtk-icon-source: -gtk-scaled(url("assets/scalable/indeterminate-new.svg")); }
+}
+
+check {
+  border-radius: $pop_radius;
 }
 
 %small_check,
 menu menuitem check {
   color: $white;
   
-  min-width: $check_size - 4px;
-  min-height: $check_size - 4px;
+  min-width: $check_size - 2px;
+  min-height: $check_size - 2px;
   
   background-color: transparent;
   border: 2px solid $fg_color;
