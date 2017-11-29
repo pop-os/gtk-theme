@@ -30,10 +30,12 @@
      showgrid="false"
      id="namedview4"
      inkscape:document-rotation="0"
-     inkscape:zoom="11.667262"
-     inkscape:cx="127.41013"
-     inkscape:cy="430.67941"
-     inkscape:current-layer="svg571">
+     inkscape:zoom="8.25"
+     inkscape:cx="42.226601"
+     inkscape:cy="322.76501"
+     inkscape:current-layer="svg571"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        empspacing="4"
        id="grid2" />
@@ -89,13 +91,13 @@
     <linearGradient
        id="color-accent">
       <stop
-         stop-color="#faa41a"
+         stop-color="#bd7805"
          id="stop26" />
     </linearGradient>
     <linearGradient
        id="color-accent-insensitive">
       <stop
-         stop-color="#faa41a"
+         stop-color="#bd7805"
          stop-opacity="0.5"
          id="stop29" />
     </linearGradient>
@@ -1259,222 +1261,6 @@
      id="entry-background-insensitive" />
   <use
      x="8"
-     y="92"
-     xlink:href="#base-checkbox-unchecked"
-     fill="url(#color-fg-secondary)"
-     id="checkbox-unchecked" />
-  <use
-     x="8"
-     y="124"
-     xlink:href="#base-checkbox-unchecked-hover"
-     fill="url(#color-fg)"
-     id="checkbox-unchecked-hover" />
-  <use
-     x="8"
-     y="156"
-     xlink:href="#base-checkbox-unchecked-active"
-     fill="url(#color-fg)"
-     id="checkbox-unchecked-active" />
-  <use
-     x="8"
-     y="188"
-     xlink:href="#base-checkbox-unchecked"
-     fill="url(#color-fg-secondary-disabled)"
-     id="checkbox-unchecked-insensitive" />
-  <use
-     x="40"
-     y="92"
-     xlink:href="#base-checkbox-checked"
-     fill="url(#color-accent)"
-     id="checkbox-checked" />
-  <use
-     x="40"
-     y="124"
-     xlink:href="#base-checkbox-checked-hover"
-     fill="url(#color-accent)"
-     id="checkbox-checked-hover" />
-  <use
-     x="40"
-     y="156"
-     xlink:href="#base-checkbox-checked-active"
-     fill="url(#color-accent)"
-     id="checkbox-checked-active" />
-  <use
-     x="40"
-     y="188"
-     xlink:href="#base-checkbox-checked"
-     fill="url(#color-accent-insensitive)"
-     id="checkbox-checked-insensitive" />
-  <use
-     x="72"
-     y="92"
-     xlink:href="#base-checkbox-mixed"
-     fill="url(#color-accent)"
-     id="checkbox-mixed" />
-  <use
-     x="72"
-     y="124"
-     xlink:href="#base-checkbox-mixed-hover"
-     fill="url(#color-accent)"
-     id="checkbox-mixed-hover" />
-  <use
-     x="72"
-     y="156"
-     xlink:href="#base-checkbox-mixed-active"
-     fill="url(#color-accent)"
-     id="checkbox-mixed-active" />
-  <use
-     x="72"
-     y="188"
-     xlink:href="#base-checkbox-mixed"
-     fill="url(#color-accent-insensitive)"
-     id="checkbox-mixed-insensitive" />
-  <use
-     x="104"
-     y="92"
-     xlink:href="#base-radio-unchecked"
-     fill="url(#color-fg-secondary)"
-     id="radio-unchecked" />
-  <use
-     x="104"
-     y="124"
-     xlink:href="#base-radio-unchecked-hover"
-     fill="url(#color-fg)"
-     id="radio-unchecked-hover" />
-  <use
-     x="104"
-     y="156"
-     xlink:href="#base-radio-unchecked-active"
-     fill="url(#color-fg)"
-     id="radio-unchecked-active" />
-  <use
-     x="104"
-     y="188"
-     xlink:href="#base-radio-unchecked"
-     fill="url(#color-fg-secondary-disabled)"
-     id="radio-unchecked-insensitive" />
-  <use
-     x="136"
-     y="92"
-     xlink:href="#base-radio-checked"
-     fill="url(#color-accent)"
-     id="radio-checked" />
-  <use
-     x="136"
-     y="124"
-     xlink:href="#base-radio-checked-hover"
-     fill="url(#color-accent)"
-     id="radio-checked-hover" />
-  <use
-     x="136"
-     y="156"
-     xlink:href="#base-radio-checked-active"
-     fill="url(#color-accent)"
-     id="radio-checked-active" />
-  <use
-     x="136"
-     y="188"
-     xlink:href="#base-radio-checked"
-     fill="url(#color-accent-insensitive)"
-     id="radio-checked-insensitive" />
-  <use
-     x="168"
-     y="92"
-     xlink:href="#base-radio-mixed"
-     fill="url(#color-accent)"
-     id="radio-mixed" />
-  <use
-     x="168"
-     y="124"
-     xlink:href="#base-radio-mixed-hover"
-     fill="url(#color-accent)"
-     id="radio-mixed-hover" />
-  <use
-     x="168"
-     y="156"
-     xlink:href="#base-radio-mixed-active"
-     fill="url(#color-accent)"
-     id="radio-mixed-active" />
-  <use
-     x="168"
-     y="188"
-     xlink:href="#base-radio-mixed"
-     fill="url(#color-accent-insensitive)"
-     id="radio-mixed-insensitive" />
-  <use
-     x="12"
-     y="220"
-     xlink:href="#base-menu-checkbox-unchecked"
-     fill="url(#color-fg-secondary)"
-     id="menu-checkbox-unchecked" />
-  <use
-     x="12"
-     y="244"
-     xlink:href="#base-menu-checkbox-unchecked"
-     fill="url(#color-fg-secondary-disabled)"
-     id="menu-checkbox-unchecked-insensitive" />
-  <use
-     x="44"
-     y="220"
-     xlink:href="#base-menu-checkbox-checked"
-     fill="url(#color-accent)"
-     id="menu-checkbox-checked" />
-  <use
-     x="44"
-     y="244"
-     xlink:href="#base-menu-checkbox-checked"
-     fill="url(#color-accent-insensitive)"
-     id="menu-checkbox-checked-insensitive" />
-  <use
-     x="76"
-     y="220"
-     xlink:href="#base-menu-checkbox-mixed"
-     fill="url(#color-accent)"
-     id="menu-checkbox-mixed" />
-  <use
-     x="76"
-     y="244"
-     xlink:href="#base-menu-checkbox-mixed"
-     fill="url(#color-accent-insensitive)"
-     id="menu-checkbox-mixed-insensitive" />
-  <use
-     x="108"
-     y="220"
-     xlink:href="#base-menu-radio-unchecked"
-     fill="url(#color-fg-secondary)"
-     id="menu-radio-unchecked" />
-  <use
-     x="108"
-     y="244"
-     xlink:href="#base-menu-radio-unchecked"
-     fill="url(#color-fg-secondary-disabled)"
-     id="menu-radio-unchecked-insensitive" />
-  <use
-     x="140"
-     y="220"
-     xlink:href="#base-menu-radio-checked"
-     fill="url(#color-accent)"
-     id="menu-radio-checked" />
-  <use
-     x="140"
-     y="244"
-     xlink:href="#base-menu-radio-checked"
-     fill="url(#color-accent-insensitive)"
-     id="menu-radio-checked-insensitive" />
-  <use
-     x="172"
-     y="220"
-     xlink:href="#base-menu-radio-mixed"
-     fill="url(#color-accent)"
-     id="menu-radio-mixed" />
-  <use
-     x="172"
-     y="244"
-     xlink:href="#base-menu-radio-mixed"
-     fill="url(#color-accent-insensitive)"
-     id="menu-radio-mixed-insensitive" />
-  <use
-     x="8"
      y="268"
      xlink:href="#base-scale-slider"
      id="scale-slider" />
@@ -1845,7 +1631,7 @@
        height="2"
        width="8"
        id="rect1380"
-       style="fill:#faa41a;stroke-width:2;fill-opacity:1" />
+       style="fill:#bd7805;stroke-width:2;fill-opacity:1" />
   </g>
   <g
      id="combo-rtl-button-hover"
@@ -1862,7 +1648,7 @@
        height="2"
        width="8"
        id="rect1380-3"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="combo-ltr-button-hover"
@@ -1879,7 +1665,7 @@
        height="2"
        width="8"
        id="rect1380-3-6"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="spin-rtl-down-hover"
@@ -1896,7 +1682,7 @@
        height="2"
        width="8"
        id="rect1380-3-7"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="spin-ltr-down-hover"
@@ -1913,7 +1699,7 @@
        height="2"
        width="8"
        id="rect1380-3-5"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="combo-ltr-button-active"
@@ -1930,7 +1716,7 @@
        height="2"
        width="8"
        id="rect1380-3-3"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="spin-rtl-down-active"
@@ -1947,7 +1733,7 @@
        height="2"
        width="8"
        id="rect1380-3-56"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="spin-ltr-down-active"
@@ -1964,7 +1750,7 @@
        height="2"
        width="8"
        id="rect1380-3-2"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="combo-ltr-entry-active"
@@ -1985,7 +1771,7 @@
        height="2"
        width="8"
        id="rect1380-3-9"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="combo-rtl-entry-active"
@@ -2006,7 +1792,7 @@
        height="2"
        width="8"
        id="rect1380-3-1"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="notebook-combo-ltr-entry-active"
@@ -2024,7 +1810,7 @@
        height="2"
        width="8"
        id="rect1380-3-27"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="notebook-combo-rtl-entry-active"
@@ -2042,7 +1828,7 @@
        height="2"
        width="8"
        id="rect1380-3-0"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="notebook-combo-rtl-entry"
@@ -2171,7 +1957,7 @@
        height="2"
        width="16"
        id="rect1380-3-1-2"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="entry-active"
@@ -2189,7 +1975,7 @@
        height="2"
        width="16"
        id="rect1380-3-1-2-3"
-       style="fill:#faa41a;fill-opacity:1;stroke-width:2" />
+       style="fill:#bd7805;fill-opacity:1;stroke-width:2" />
   </g>
   <g
      id="entry-insensitive"
@@ -2298,5 +2084,595 @@
        width="8"
        id="rect1380-3-61-7-97"
        style="fill:#7c7775;fill-opacity:1;stroke-width:2" />
+  </g>
+  <rect
+     style="opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54000005"
+     id="checkbox-unchecked"
+     width="16"
+     height="16"
+     x="13"
+     y="93"
+     rx="4"
+     inkscape:label="#checkbox-checked" />
+  <g
+     transform="translate(1.4844426,-2.999994)"
+     id="checkbox-checked">
+    <rect
+       rx="4"
+       y="96"
+       x="44"
+       height="16"
+       width="16"
+       id="rect1304"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:#bd7805;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 55.98658,98.187906 58,100 51.23489,108.93959 46,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,-2.999994)"
+     id="checkbox-mixed">
+    <rect
+       rx="4"
+       y="95"
+       x="75"
+       height="18"
+       width="18"
+       id="rect1316"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833"
+       width="12"
+       height="3"
+       x="78"
+       y="102" />
+  </g>
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54117647"
+     id="radio-unchecked"
+     width="18"
+     height="18"
+     x="107.99998"
+     y="92"
+     ry="9" />
+  <g
+     transform="translate(1.4844426,-2.999994)"
+     id="radio-checked">
+    <rect
+       ry="9"
+       y="95"
+       x="139"
+       height="18"
+       width="18"
+       id="rect1331"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:#bd7805;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 151.98658,98.187911 154,100 147.23489,108.93959 142,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-3"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,-2.999994)"
+     id="radio-mixed">
+    <rect
+       ry="10"
+       y="94"
+       x="170"
+       height="20"
+       width="20"
+       id="rect1343"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-6"
+       width="12"
+       height="3"
+       x="174"
+       y="102" />
+  </g>
+  <g
+     id="checkbox-unchecked-hover"
+     inkscape:label="#checkbox-checked-hover">
+    <rect
+       rx="5"
+       y="124"
+       x="12"
+       height="18"
+       width="18"
+       id="rect1367"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.3;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.30196078" />
+    <rect
+       inkscape:label="#checkbox-checked"
+       rx="4"
+       y="125"
+       x="13"
+       height="16"
+       width="16"
+       id="checkbox-unchecked-7"
+       style="opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54000005" />
+  </g>
+  <g
+     transform="translate(1.4844426,29.000006)"
+     id="checkbox-checked-hover">
+    <rect
+       rx="4"
+       y="96"
+       x="44"
+       height="16"
+       width="16"
+       id="rect1304-3"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:#bd7805;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 55.98658,98.187906 58,100 51.23489,108.93959 46,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-5"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,29.000006)"
+     id="checkbox-unchecked-active">
+    <rect
+       rx="5"
+       y="127"
+       x="11"
+       height="18"
+       width="18"
+       id="rect1367-2"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.3;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.30196078" />
+    <rect
+       inkscape:label="#checkbox-checked"
+       rx="4"
+       y="128"
+       x="12"
+       height="16"
+       width="16"
+       id="checkbox-unchecked-7-9"
+       style="opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54000005" />
+  </g>
+  <rect
+     style="opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.38000034"
+     id="checkbox-unchecked-insensitive"
+     width="16"
+     height="16"
+     x="13"
+     y="189.00002"
+     rx="4"
+     inkscape:label="#checkbox-unchecked-insensitive" />
+  <rect
+     style="opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54000005"
+     id="menu-checkbox-unchecked"
+     width="14"
+     height="14"
+     x="14"
+     y="218.00002"
+     rx="4"
+     inkscape:label="#menu-checkbox-unchecked" />
+  <rect
+     style="opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.38000039"
+     id="menu-checkbox-unchecked-insensitive"
+     width="14"
+     height="14"
+     x="14"
+     y="242.00002"
+     rx="4"
+     inkscape:label="#menu-checkbox-unchecked-insensitive" />
+  <g
+     transform="translate(1.4844426,61.000006)"
+     id="checkbox-checked-active">
+    <rect
+       rx="4"
+       y="96"
+       x="44"
+       height="16"
+       width="16"
+       id="rect1304-3-9"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:#bd7805;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 55.98658,98.187906 58,100 51.23489,108.93959 46,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-5-3"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,93.000006)"
+     id="checkbox-checked-insensitive">
+    <rect
+       rx="4"
+       y="95"
+       x="43"
+       height="18"
+       width="18"
+       id="rect1304-3-9-0"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5" />
+    <path
+       d="M 55.98658,98.187906 58,100 51.23489,108.93959 46,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-5-3-6"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="matrix(0.88888889,0,0,0.88888889,6.7777788,132.55557)"
+     id="menu-checkbox-checked">
+    <rect
+       rx="4"
+       y="96"
+       x="44"
+       height="16"
+       width="16"
+       id="rect1304-3-9-7"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:#bd7805;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 55.98658,98.187906 58,100 51.23489,108.93959 46,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-5-3-9"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="matrix(0.88888889,0,0,0.88888889,6.7777788,156.55557)"
+     id="menu-checkbox-checked-insensitive">
+    <rect
+       rx="4"
+       y="94.999992"
+       x="43"
+       height="18.000002"
+       width="18"
+       id="rect1304-3-9-7-0"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 55.98658,98.187906 58,100 51.23489,108.93959 46,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-5-3-9-2"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,29.000006)"
+     id="checkbox-mixed-hover">
+    <rect
+       rx="4"
+       y="95"
+       x="75"
+       height="18"
+       width="18"
+       id="rect1316-7"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-5"
+       width="12"
+       height="3"
+       x="78"
+       y="102" />
+  </g>
+  <g
+     transform="translate(1.4844426,61.000006)"
+     id="checkbox-mixed-active">
+    <rect
+       rx="4"
+       y="95"
+       x="75"
+       height="18"
+       width="18"
+       id="rect1316-7-2"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-5-2"
+       width="12"
+       height="3"
+       x="78"
+       y="102" />
+  </g>
+  <g
+     transform="translate(1.4844426,93.000006)"
+     id="checkbox-mixed-insensitive">
+    <rect
+       rx="4"
+       y="95"
+       x="75"
+       height="18"
+       width="18"
+       id="rect1316-7-2-9"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-5-2-7"
+       width="12"
+       height="3"
+       x="78"
+       y="102" />
+  </g>
+  <g
+     transform="translate(2.4844426,122.00001)"
+     id="menu-checkbox-mixed">
+    <rect
+       rx="4"
+       y="95"
+       x="75"
+       height="16"
+       width="16"
+       id="rect1316-7-2-6"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-5-2-1"
+       width="12"
+       height="3"
+       x="77"
+       y="101" />
+  </g>
+  <g
+     transform="translate(2.4844426,146.00001)"
+     id="menu-checkbox-mixed-insensitive">
+    <rect
+       rx="4"
+       y="95"
+       x="75"
+       height="16"
+       width="16"
+       id="rect1316-7-2-6-9"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-5-2-1-3"
+       width="12"
+       height="3"
+       x="77"
+       y="101" />
+  </g>
+  <g
+     transform="translate(1.4844426,-2.999994)"
+     id="radio-unchecked-hover"
+     inkscape:label="#radio-unchecked-hover">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:0.30196078;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5"
+       id="rect1731"
+       width="20"
+       height="20"
+       x="106"
+       y="126"
+       rx="10"
+       inkscape:label="#radio-unchecked-hover" />
+    <rect
+       ry="9"
+       y="127"
+       x="107"
+       height="18"
+       width="18"
+       id="asd"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54117647"
+       inkscape:label="#radio-unchecked-hover" />
+  </g>
+  <g
+     transform="translate(1.4844426,29.000006)"
+     id="radio-unchecked-active"
+     inkscape:label="#radio-unchecked-active">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:0.30196078;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5"
+       id="rect1731-4"
+       width="20"
+       height="20"
+       x="106"
+       y="126"
+       rx="10"
+       inkscape:label="#radio-unchecked-hover" />
+    <rect
+       ry="9"
+       y="127"
+       x="107"
+       height="18"
+       width="18"
+       id="radio-unchecked-hover-7"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54117647" />
+  </g>
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.38039216"
+     id="radio-unchecked-insensitive"
+     width="18"
+     height="18"
+     x="107.99998"
+     y="188.00002"
+     ry="9" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54117647"
+     id="menu-radio-unchecked"
+     width="14"
+     height="14"
+     x="109.99998"
+     y="218.00002"
+     ry="6.9549217" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.38039216"
+     id="menu-radio-unchecked-insensitive"
+     width="14"
+     height="14"
+     x="109.99998"
+     y="242.00002"
+     ry="7"
+     inkscape:label="menu-radio-unchecked-insensitive" />
+  <g
+     transform="translate(1.4844426,29.000006)"
+     id="radio-checked-hover">
+    <rect
+       ry="9"
+       y="95"
+       x="139"
+       height="18"
+       width="18"
+       id="rect1331-3"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:#bd7805;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 151.98658,98.187911 154,100 147.23489,108.93959 142,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-3-6"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,61.000006)"
+     id="radio-checked-active">
+    <rect
+       ry="10"
+       y="94"
+       x="138"
+       height="20"
+       width="20"
+       id="rect1331-3-0"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 151.98658,98.187911 154,100 147.23489,108.93959 142,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-3-6-6"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,93.000006)"
+     id="radio-checked-insensitive">
+    <rect
+       ry="10"
+       y="94"
+       x="138"
+       height="20"
+       width="20"
+       id="rect1331-3-0-2"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5" />
+    <path
+       d="M 151.98658,98.187911 154,100 147.23489,108.93959 142,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-3-6-6-0"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="matrix(0.8,0,0,0.8,30.6,141.80001)"
+     id="menu-radio-checked">
+    <rect
+       ry="10"
+       y="94"
+       x="138"
+       height="20"
+       width="20"
+       id="rect1331-3-0-1"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 151.98658,98.187911 154,100 147.23489,108.93959 142,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-3-6-6-5"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="matrix(0.8,0,0,0.8,30.6,165.80001)"
+     id="menu-radio-checked-insensitive"
+     inkscape:label="menu-radio-checked-insensitive">
+    <rect
+       ry="10"
+       y="94"
+       x="138"
+       height="20"
+       width="20"
+       id="rect1331-3-0-1-4"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 151.98658,98.187911 154,100 147.23489,108.93959 142,104.42953 l 1.73154,-2.29531 3.0604,2.65772 z"
+       id="path2922-6-6-0-9-3-6-6-5-7"
+       style="color:#484442;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(1.4844426,29.000006)"
+     id="radio-mixed-hover">
+    <rect
+       ry="10"
+       y="94"
+       x="170"
+       height="20"
+       width="20"
+       id="rect1343-5"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-6-6"
+       width="12"
+       height="3"
+       x="174"
+       y="102" />
+  </g>
+  <g
+     transform="translate(1.4844426,61.000006)"
+     id="radio-mixed-active">
+    <rect
+       ry="10"
+       y="94"
+       x="170"
+       height="20"
+       width="20"
+       id="rect1343-5-3"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-6-6-7"
+       width="12"
+       height="3"
+       x="174"
+       y="102" />
+  </g>
+  <g
+     transform="translate(1.4844426,93.000006)"
+     id="radio-mixed-insensitive">
+    <rect
+       ry="10"
+       y="94"
+       x="170"
+       height="20"
+       width="20"
+       id="rect1343-5-3-5"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.75590551"
+       id="rect833-6-6-7-2"
+       width="12"
+       height="3"
+       x="174"
+       y="102" />
+  </g>
+  <g
+     transform="matrix(0.8,0,0,0.8,37,141.80001)"
+     id="menu-radio-mixed">
+    <rect
+       ry="10"
+       y="94"
+       x="170"
+       height="20"
+       width="20"
+       id="rect1343-5-3-4"
+       style="opacity:1;fill:#bd7805;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.86255521"
+       id="rect833-6-6-7-7"
+       width="12.5"
+       height="3.75"
+       x="173.75"
+       y="101.5" />
+  </g>
+  <g
+     transform="matrix(0.8,0,0,0.8,37,165.80001)"
+     id="menu-radio-mixed-insensitive">
+    <rect
+       ry="10"
+       y="94"
+       x="170"
+       height="20"
+       width="20"
+       id="menu-radio-mixed-insensitive-"
+       style="opacity:1;fill:#bd7805;fill-opacity:0.5;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#menu-radio-mixed-insensitive" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.86255521"
+       id="rect833-6-6-7-7-3"
+       width="12.5"
+       height="3.75"
+       x="173.75"
+       y="101.5" />
   </g>
 </svg>

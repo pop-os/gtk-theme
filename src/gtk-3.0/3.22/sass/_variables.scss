@@ -23,9 +23,9 @@ $close_button_size: if($compact == 'false', 6px, 4px);
 $bar_size: 4px;
 $menuitem_size: $small_size;
 $shortcut_key_size: $medium_size;
-$scale_trough_size: 2px;
-$scale_slider_size: 24px;
-$scale_marks_slider_size: 30px;
+$scale_trough_size: $bar_size;
+$scale_slider_size: $tiny_size;
+$scale_marks_size: 6px;
 $scrollbar_size: 8px;
 $switch_size: $small_size + 4;
 
