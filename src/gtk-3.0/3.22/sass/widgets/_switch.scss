@@ -22,7 +22,7 @@ switch {
   }
 
   slider {
-    transition: $longer_transition, $shadow_transition;
+    transition: $longer_transition;
     min-width: $switch_size;
     min-height: $switch_size;
     margin: -3px -2px;

@@ -90,7 +90,6 @@ radio {
   }
 }
 
-%check,
 check,
 radio {
   margin: $mini_padding;
@@ -138,8 +137,6 @@ radio {
     -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-indeterminate.svg"), url("assets/scalable/check-indeterminate@2.svg"));
   }
 }
-
-%radio { @extend %check;}
 
 radio {
   border-radius: $circular_radius;
