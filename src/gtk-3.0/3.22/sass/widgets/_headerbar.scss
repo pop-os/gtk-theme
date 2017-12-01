@@ -271,9 +271,9 @@ window.tiled-right {
   @extend %titlebar;
   
   button.close{
-    padding: $close_button_size - 2px;
-    min-width: $close_button_size - 2px;
-    min-height: $close_button_size - 2px;
+    padding: $close_button_size;
+    min-width: $close_button_size;
+    min-height: $close_button_size;
   }
   
   &:backdrop {

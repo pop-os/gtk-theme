@@ -8,7 +8,7 @@ messagedialog { // Message Dialog styling
     min-height: $titlebar_size;
     border-style: none;
     box-shadow: inset 0 1px $highlight_color;
-    background-color: $bg_color;
+    background-color: $lighter_bg_color;
     color: $fg_color;
 
     &:backdrop { color: $lighter_bg_color; }
