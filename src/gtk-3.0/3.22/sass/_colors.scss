@@ -44,8 +44,8 @@ $inverse_divider_color:               rgba($white, 0.12);
 // Background colors
 $bg_color:         if($variant == 'light', $grey_50, darken($brown_700, 5%));
 $base_color:       if($variant == 'light', $white,   darken($brown_700, 7%));
-$alt_base_color:   if($variant == 'light', lighten($grey_50, 10%),  mix($base_color, $bg_color, 50%));
-$lighter_bg_color: if($variant == 'light', lighten($grey_50, 15%),  $brown_700);
+$alt_base_color:   if($variant == 'light', lighten($grey_50, 0%),  mix($base_color, $bg_color, 50%));
+$lighter_bg_color: if($variant == 'light', lighten($grey_50, 0%),  $brown_700); //FIXME: lol
 $darker_bg_color:  if($variant == 'light', $grey_200, $brown_800);
 
 $titlebar_bg_color:          if($titlebar == 'dark',

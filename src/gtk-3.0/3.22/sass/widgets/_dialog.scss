@@ -11,7 +11,7 @@ messagedialog { // Message Dialog styling
     background-color: $lighter_bg_color;
     color: $fg_color;
 
-    &:backdrop { color: $lighter_bg_color; }
+    &:backdrop { background-color: $lighter_bg_color; }
   }
 
   &.csd { // rounded bottom border styling for csd version
