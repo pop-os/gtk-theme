@@ -282,8 +282,7 @@ row.activatable > grid.horizontal > stack {
 
 .color-button {
   border: 1px solid $border_color;
-  -gtk-outline-color: transparent;
-  -gtk-outline-offset: 6px;
+  -gtk-outline-radius: 50%;
 }
 
 /*************
