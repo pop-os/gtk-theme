@@ -39,6 +39,7 @@ popover.background {
     min-height: $large_size;
     padding: 0 $small_padding;
     border-radius: $other_radius;
+    -gtk-outline-offset: 4px;
 
     &:checked { @extend %selected_items; }
   }
