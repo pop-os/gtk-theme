@@ -30,6 +30,18 @@ headerbar {
 
     @extend .dim-label;
   }
+  
+  separator {
+    background: none;
+    margin: 0 $standard_padding;
+    
+    &:first-child,
+    &:last-child {
+      margin: 0;
+      min-width: 0;
+      padding: 0;
+    }
+  }
 
   .linked:not(.vertical) > entry:not(.flat) { border-radius: $other_radius; }
 
@@ -255,9 +267,9 @@ window.tiled-right {
   }
 
   > separator {
-    background-color: $titlebar_bg_color;
+    background: none;
     color: $titlebar_bg_color;
-    border-color: $titlebar_bg_color;
+    border: none;
     padding: 0;
     margin: 0;
     
