@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Pop-Slim
+Comment=The Pop GTK theme, based on Flat-Plat. Slim Variant
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Pop-Slim
+MetacityTheme=Pop-Slim
+IconTheme=Pop
+CursorTheme=Pop
+CursorSize=24
