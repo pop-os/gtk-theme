@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Pop-Dark
+Comment=The Pop GTK Theme, based on Flat-Plat
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Pop-Dark
+MetacityTheme=Pop-Dark
+IconTheme=Pop
+CursorTheme=Pop
+CursorSize=24

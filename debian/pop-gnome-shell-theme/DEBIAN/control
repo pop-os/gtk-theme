@@ -1,0 +1,11 @@
+Package: pop-gnome-shell-theme
+Source: pop-gtk-theme
+Version: 2.99.3
+Architecture: all
+Maintainer: Jeremy Soller <jeremy@system76.com>
+Installed-Size: 143
+Depends: gnome-shell-common
+Section: gnome
+Priority: optional
+Homepage: https://github.com/system76/pop-gtk-theme
+Description: The Pop GNOME Shell theme, installed for GDM.
