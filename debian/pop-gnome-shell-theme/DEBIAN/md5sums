@@ -1,4 +1,4 @@
-730eb62da2419d8ff2a01f00f3e511fa  usr/share/doc/pop-gnome-shell-theme/changelog.gz
+d00cbeea5c06504c2de6700a6a2b5a7c  usr/share/doc/pop-gnome-shell-theme/changelog.gz
 43fde223d772a504b0db35cdcaeee098  usr/share/doc/pop-gnome-shell-theme/copyright
 d3f0a8fc8a773ff9e875d7ca016b0fb5  usr/share/gnome-shell/theme/assets/calendar-arrow-left.svg
 1b92d4157da841844ceead0de3f10ecc  usr/share/gnome-shell/theme/assets/calendar-arrow-right.svg
@@ -47,6 +47,6 @@ c6ef771beba9974eb2ba06b13bae6623  usr/share/gnome-shell/theme/assets/noise-textu
 f0ec3a023eb8543a08995a4684fa07e5  usr/share/gnome-shell/theme/assets/process-working.svg
 c208993cba68100cecad11859d11e745  usr/share/gnome-shell/theme/assets/toggle-off.svg
 83efc300ee1f2aabe4119a9c67892099  usr/share/gnome-shell/theme/assets/toggle-on.svg
-27dbf2678324d2bad5b54e8f11ab11da  usr/share/gnome-shell/theme/assets/window-close-active.svg
-5bcd64457923a638e9e018cf1d7abf6d  usr/share/gnome-shell/theme/assets/window-close.svg
+43d354b31ad6d43371e1d8b55ff0ee73  usr/share/gnome-shell/theme/assets/window-close-active.svg
+393e889a3bd7fc98873a5707402230e1  usr/share/gnome-shell/theme/assets/window-close.svg
 c704a1ced405de8ebf9b226e0a014e71  usr/share/gnome-shell/theme/pop.css

@@ -710,3 +710,14 @@ button.title label { min-height: $large_size; }
 dialog.background > box.dialog-vbox > box.dialog-action-box > buttonbox.dialog-action-area {
   padding: 12px;
 }
+
+// dark text in embedded composer
+$geary_composer_color:  if($titlebar == 'dark',
+                          $light_fg_color,
+                          $dark_fg_color);
+
+// We need a specific selector to override some styling for buttons in lists 
+.geary-expanded > .geary-composer-embed > widget headerbar image,
+.geary-expanded > .geary-composer-embed > widget headerbar label {
+  color: $geary_composer_color;
+}
