@@ -1,3 +1,12 @@
+/************
+ * Terminal *
+ ************/
+terminal-window > headerbar.titlebar > box.right > .close {
+  margin-right: -2px;
+  margin-left: -2px;
+}
+
+
 /******************
  * Control center *
  *****************/

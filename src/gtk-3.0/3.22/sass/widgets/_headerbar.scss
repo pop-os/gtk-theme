@@ -183,8 +183,8 @@ headerbar {
     .fullscreen & { box-shadow: none; }
 
     button.titlebutton {
-      min-height: $headerbar_button_size;
-      min-width: $headerbar_button_size;
+      min-height: $medium_size;
+      min-width: $medium_size;
       margin: 0;
       padding: 0;
     }
