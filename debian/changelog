@@ -1,6 +1,7 @@
-pop-gtk-theme (2.99.4) artful; urgency=medium
+pop-gtk-theme (2.99.4) UNRELEASED; urgency=medium
 
   * Correct bug with Close buttons in shell.
+  * Fix Geary embeded composer recipient label
 
  -- Ian Santopietro <ian@system76.com>  Mon, 11 Dec 2017 11:49:06 -0700
 
