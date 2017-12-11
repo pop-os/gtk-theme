@@ -1,3 +1,9 @@
+pop-gtk-theme (2.99.3) UNRELEASED; urgency=medium
+
+  * Close buttons are now identically sized.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 11 Dec 2017 10:08:16 -0700
+
 pop-gtk-theme (2.99.2) artful; urgency=medium
 
   * Re-structure of the entire theme
