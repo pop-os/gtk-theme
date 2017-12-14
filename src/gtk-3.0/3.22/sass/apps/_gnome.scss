@@ -6,6 +6,14 @@ terminal-window > headerbar.titlebar > box.right > .close {
   margin-left: -2px;
 }
 
+// Terminal needs a border to help with the case of overlapping windows.
+terminal-window > box {
+  border: 2px solid $titlebar_bg_color;
+  
+  &:backdrop {
+    border: 2px solid $inactive_titlebar_bg_color;
+  }
+}
 
 /******************
  * Control center *
