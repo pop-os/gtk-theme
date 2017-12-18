@@ -5,6 +5,18 @@ sass:
 
 install:
 	./install.sh $(DESTDIR)
+	mkdir $(DESTDIR)/usr/share/themes/Pop/plank/
+	mkdir $(DESTDIR)/usr/share/themes/Pop-dark/plank/
+	mkdir $(DESTDIR)/usr/share/themes/Pop-light/plank/
+	mkdir $(DESTDIR)/usr/share/themes/Pop-compact/plank/
+	mkdir $(DESTDIR)/usr/share/themes/Pop-light-compact/plank/
+	mkdir $(DESTDIR)/usr/share/themes/Pop-dark-compact/plank/
+	cp -vur ./src/plank/dock.theme $(DESTDIR)/usr/share/themes/Pop/plank/dock.theme
+	cp -vur ./src/plank/dock.theme $(DESTDIR)/usr/share/themes/Pop-dark/plank/dock.theme
+	cp -vur ./src/plank/dock.theme $(DESTDIR)/usr/share/themes/Pop-light/plank/dock.theme
+	cp -vur ./src/plank/dock.theme $(DESTDIR)/usr/share/themes/Pop-compact/plank/dock.theme
+	cp -vur ./src/plank/dock.theme $(DESTDIR)/usr/share/themes/Pop-light-compact/plank/dock.theme
+	cp -vur ./src/plank/dock.theme $(DESTDIR)/usr/share/themes/Pop-dark-compact/plank/dock.theme
 
 gtk2:
 	cd ./src/gtk-2.0 && ./recolor-assets.sh
