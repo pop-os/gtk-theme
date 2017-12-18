@@ -87,7 +87,7 @@ r
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can install it using:
 
 ```
-sudo apt install libsass0 sassc
+sudo apt install libsass0 sassc inkscape optipng
 ```
 
 1. If previous versions were installed/existed, remove them first.
