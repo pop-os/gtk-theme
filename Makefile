@@ -14,7 +14,7 @@ install-gnome-shell:
 
 assets: recolor
 	@echo "** Generating the Assets..."
-	
+
 	cd ./src/gtk-3.0/gtk-common/ && find . -type f -name *.png -exec rm -v '{}' + > /dev/null
 	cd ./src/gtk-2.0/ && find . -type f -name *.png -exec rm -v '{}' + > /dev/null
 	cd ./src/gtk-3.0/gtk-common/ && ./render-assets.sh > /dev/null
@@ -41,7 +41,7 @@ uninstall:
 
 install:
 	@echo "** Installing the theme..."
-	
+
 	# Setup
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -51,7 +51,7 @@ install:
 	    cp -ur src/index$$color$$size.theme $$themedir/index.theme; \
 	  done; \
 	done
-	
+
 	# Install GNOME Shell Theme
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -86,7 +86,7 @@ install:
 	      gnome-shell-theme.gresource.xml; \
 	  done; \
 	done
-	
+
 	# Install GTK2 Theme \
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -112,7 +112,7 @@ install:
 	      $$themedir/gtk-2.0/gtkrc; \
 	  done; \
 	done
-	
+
 	# Install GTK3 Theme \
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -139,7 +139,19 @@ install:
 	    done; \
 	  done; \
 	done
-	
+
+	# Install Plank Theme
+	for color in $(COLOR_VARIANTS); do \
+		for size in $(SIZE_VARIANTS); do \
+			export themedir=$(DESTDIR)$(BASE_DIR)/Pop$$color$$size; \
+			install -d $$themedir/plank; \
+			cd $(SRCDIR)/plank; \
+			cp -ur \
+				dock.theme \
+				$$themedir/plank; \
+		done; \
+	done
+
 	# Install Metacity Theme
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -164,7 +176,7 @@ install:
 	    fi; \
 	  done; \
 	done
-	
+
 	# Install Xfwm Theme
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -186,34 +198,34 @@ install:
 	    fi; \
 	  done; \
 	done
-	
+
 	@echo
 	@echo Done.
 
 assets-gtk2:
-	
+
 
 assets-gtk3:
-	
 
-recolor: 
+
+recolor:
 	@echo "** Matching Colors"
-	
+
 	cd ./src/gtk-3.0/gtk-common/ && ./recolor-assets.sh > /dev/null
 	cd ./src/gtk-2.0/ && ./recolor-assets.sh > /dev/null
-	
+
 sass: gtk2 gtk3 gnome-shell
 	@echo "** Generating the CSS..."
-	
+
 
 gtk2: recolor
 	@echo "** Generating GTK2..."
-	
-	#cd ./src/gtk-2.0 && ./recolor-assets.sh 
+
+	#cd ./src/gtk-2.0 && ./recolor-assets.sh
 
 gtk3:
 	@echo "** Generating GTK3..."
-	
+
 	for color in $(COLOR_VARIANTS); do \
 	  sassc $(SASSC_OPT) src/gtk-3.0/3.18/gtk$$color.{scss,css}; \
 	  for size in $(SIZE_VARIANTS); do \
@@ -225,7 +237,7 @@ gtk3:
 
 gnome-shell:
 	@echo "** Generating GNOME Shell..."
-	
+
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
 	    # Skip gnome-shell 3.20 and 3.22 \
