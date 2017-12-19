@@ -1,0 +1,45 @@
+/************
+ * Pathbars *
+ ************/
+%pathbar_button,
+.path-bar button {
+  padding-left: $tiny_padding;
+  padding-right: $tiny_padding;
+
+  label:not(:only-child) {
+    &:first-child { margin-left: 4px; }
+
+    &:last-child { margin-right: 4px; }
+  }
+
+  &.slider-button {
+    padding-left: $tiny_padding;
+    padding-right: $tiny_padding;
+  }
+
+  :not(headerbar) & {
+    @extend %flat_button;
+
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  $accent_color 0%,
+                                  transparent 0%)
+                                  0 0 0 / 0 0 0px;
+    border-radius: $pop_radius;
+
+    &:checked {
+      border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                    $accent_color 100%,
+                                    transparent 0%)
+                                    0 0 2 / 0 0 2px;
+
+      &, &:disabled { background-color: transparent; }
+      
+      &:backdrop {
+        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                      backdrop($accent_color) 100%,
+                                      transparent 0%)
+                                      0 0 2 / 0 0 2px;
+      }
+    }
+  }
+}

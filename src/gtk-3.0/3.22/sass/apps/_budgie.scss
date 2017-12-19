@@ -258,11 +258,11 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
   }
 
   .raven-header {
-    min-height: $medium_size;
-    padding: 3px;
+    min-height: $large_size;
+    padding: $mini_padding;
 
     &:not(.top) {
-      margin-top: -6px; // remove extra spaces, but not perfect :(
+      margin-top: -$tiny_padding; // remove extra spaces, but not perfect :(
 
       button {
         @extend %simple_flat_button;
@@ -272,38 +272,38 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
     }
 
     &.top {
-      padding: 2px 0;
+      padding: $mini_padding 0;
       background-color: $primary_color;
       color: $inverse_fg_color;
 
       stackswitcher button {
         margin: -$container_padding 0;
-        min-height: $medium_size;
+        min-height: $large_size;
       }
 
       button.image-button {
-        &:dir(ltr) { margin-right: 2px; }
-        &:dir(rtl) { margin-left: 2px; }
+        &:dir(ltr) { margin-right: $mini_padding; }
+        &:dir(rtl) { margin-left: $mini_padding; }
       }
 
-      > image { margin: 0 8px; }
+      > image { margin: 0 $small_padding; }
 
       > label {
-        margin: 0 -8px;
+        margin: 0 -$small_padding;
         font-weight: bold;
       }
     }
 
-    &.bottom { border-top: 1px solid $border_color; }
+    &.bottom { border-top: $border_size solid $border_color; }
   }
 
-  viewport.frame .raven-header { margin-top: -8px; }
+  viewport.frame .raven-header { margin-top: -$small_padding; }
 
   .expander-button { @extend %circular_button; }
 
   .raven-background {
     border-style: solid none;
-    border-width: 1px;
+    border-width: $border_size;
     border-color: $border_color;
     background-color: $base_color;
 
@@ -313,7 +313,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
     > overlay > widget > image { color: $divider_color; }
 
-    grid > label:first-child { min-height: $medium_size; } // workaround to fix vertical-align
+    grid > label:first-child { min-height: $large_size; } // workaround to fix vertical-align
 
     spinbutton:not(.vertical) { @extend %entry.flat; }
 
@@ -327,12 +327,12 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
     background-color: $primary_color;
     color: $inverse_fg_color;
 
-    stackswitcher button { margin: -4px 0; }
+    stackswitcher button { margin: -$tiny_padding 0; }
   }
 
   .powerstrip button {
-    margin: 2px 0 1px;
-    padding: ($large_size - 24px) / 2;
+    margin: $mini_padding 0 $no_padding;
+    padding: $standard_padding;
   }
 
   .option-subtitle { font-size: smaller; }
@@ -345,7 +345,7 @@ calendar.raven-calendar {
   background-color: transparent;
 
   &:selected {
-    border-radius: 2px;
+    border-radius: $pop_radius;
     background-color: $primary_color;
   }
 }
@@ -355,10 +355,10 @@ calendar.raven-calendar {
   background-color: rgba($black, $middle_opacity);
   color: $inverse_fg_color;
 
-  label { min-height: 24px; }
+  label { min-height: $large_size; }
 
   button.image-button {
-    padding: ($large_size - 24px) / 2;
+    padding: $standard_padding;
 
     @extend %button_selected.flat;
   }

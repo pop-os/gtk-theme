@@ -1,6 +1,71 @@
-/*****************************
- * Pop!_GTK+ Version 2.2.3r0 *
- *****************************/
+/***************************
+ * Pop!_GTK+ Version 3.0.0 *
+ ***************************/
+ 
+// Base-sizes
+$mini_size: if($compact == 'false',4px, 2px);
+$tiny_size: if($compact == 'false', 12px, 10px);
+$small_size: if($compact == 'false', 16px, 14px);
+$medium_size: if($compact == 'false', 24px, 20px);
+$large_size: if($compact == 'false', 32px, 28px);
+
+// Widgets - Define widget sizes here, and 
+// define custom sizes as derivative of these
+$border_size: 1px;
+$button_size: $medium_size;
+$check_size: $small_size - 4px;
+$titlebar_size: $medium_size;
+$entry_size: $medium_size;
+$sidebar_placeholder_size: 4px;
+$separator_size: 1px;
+$headerbar_button_size: if($compact == 'false', 8px, 6px);
+$close_button_size: if($compact == 'false', 4px, 4px);
+$bar_size: 4px;
+$menuitem_size: $small_size;
+$shortcut_key_size: $medium_size;
+$scale_trough_size: $bar_size;
+$scale_slider_size: $tiny_size;
+$scale_marks_size: 6px;
+$scrollbar_size: 8px;
+$switch_size: $small_size + 4;
+
+// Padding
+$no_padding: 1px;
+$mini_padding: 2px;
+$tiny_padding: if($compact == 'false', 6px, 4px);
+$small_padding: if($compact == 'false', 8px, 6px);
+$standard_padding: if($compact == 'false', 12px, 10px);
+$large_padding: if($compact == 'false', 16px, 12px);
+
+// Widget paddings - Try to use Sparingly.
+$container_padding: 6px;
+$image_button_padding: if($compact == 'false', 4px, 2px);
+$menu_padding: if($compact == 'false', 4px, 2px);
+
+
+// Radii and other curves
+$pop_radius: 4px;
+$shortcut_key_radius: 3px;
+$circular_radius: 9999px;
+
+
+
+// opacities
+$higher_opacity: 0.9;
+$middle_opacity: 0.6;
+$lower_opacity: 0.3;
+
+
+// Everything below here is an old variable. 
+// They shouldn't be used for new development.
+
+/*
+$tiny_size: if($compact == 'false', 8px, 4px);
+$smaller_size: if($compact == 'false', 12px, 8px);
+$small_size: if($compact == 'false', 24px, 20px);
+$medium_size: if($compact == 'false', 36px, 32px);
+$large_size: if($compact == 'false', 48px, 40px);
+*/
 
 $asset_suffix: if($variant == 'dark', '-dark', '');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
@@ -14,20 +79,17 @@ $secondary_opacity: 0.75;
 $hint_opacity: 0.6;
 $disabled_opacity: 0.5;
 
-// sizes
-$small_size: if($compact == 'false', 24px, 20px);
-$medium_size: if($compact == 'false', 36px, 32px);
-$large_size: if($compact == 'false', 48px, 44px);
 
-$container_padding: 6px;
-
-$bar_size: 4px;
-$menuitem_size: 28px;
 
 // radiuses
 $material_radius: 4px;
-$circular_radius: 9999px;
 $other_radius: 4px;
+$small_radius: 4px;
+
+//margins-padding
+$large_space: 12px;
+$normal_space: 6px;
+$small_space: 2px;
 
 // durations
 $shorter_duration: 180ms;

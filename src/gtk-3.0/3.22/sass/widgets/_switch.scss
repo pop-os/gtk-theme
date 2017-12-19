@@ -1,0 +1,52 @@
+/**********
+ * Switch *
+ **********/
+switch {
+  transition: $longer_transition;
+  margin: $container_padding 0;
+  padding: 0 $mini_padding;
+  border: $container_padding solid transparent;
+  border-radius: $circular_radius;
+  background-color: $track_color;
+  background-clip: padding-box;
+  font-size: 0;
+
+  &:disabled { background-color: $divider_color; }
+
+  &:checked {
+    background-color: rgba($accent_color, 0.5);
+    
+
+    &:disabled,
+    &:backdrop { background-color: rgba($accent_color, 0.3); }
+  }
+
+  slider {
+    transition: $longer_transition;
+    min-width: $switch_size;
+    min-height: $switch_size;
+    margin: -3px -2px;
+    border-radius: $circular_radius;
+    -gtk-outline-radius: $circular_radius;
+    box-shadow: $shadow_1;
+    background-color: $base_color;
+  }
+
+  &:hover slider { box-shadow: $shadow_2; }
+
+  &:checked slider {
+    transition: $longer_transition, $shadow_transition, background-image 0, background-color 0.00001s $longer_duration;
+    animation: needs_attention $longer_duration $deceleration_curve;
+    background-color: $accent_color;
+    color: $inverse_fg_color;
+  }
+  
+  &:backdrop:checked slider{ background-color: backdrop($accent_color); }
+
+  &:disabled slider { background-color: $alt_base_color; }
+
+  &:checked:disabled slider { animation: none; }
+
+  row:selected & {
+  }
+}

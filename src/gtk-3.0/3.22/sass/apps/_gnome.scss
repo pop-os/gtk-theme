@@ -1,15 +1,34 @@
+/************
+ * Terminal *
+ ************/
+terminal-window > headerbar.titlebar > box.right > .close {
+  margin-right: -2px;
+  margin-left: -2px;
+}
+
+// Terminal needs a border to help with the case of overlapping windows.
+terminal-window > box {
+  border: 2px solid $titlebar_bg_color;
+  
+  &:backdrop {
+    border: 2px solid $inactive_titlebar_bg_color;
+  }
+}
+
 /******************
  * Control center *
  *****************/
 
 window.csd > box.horizontal {
   box.vertical > scrolledwindow.view > viewport.frame > stack > list > row:selected {
-    color: $inverse_fg_color;
     background-color: $accent_color;
+    color: $inverse_fg_color;
+    
+    &:backdrop { background-color: backdrop($accent_color); }
   }
 
   widget > overlay > box.vertical > grid.horizontal > stack > button.toggle {
-    margin: 6px;
+    margin: $tiny_padding;
   }
 
 }
@@ -21,11 +40,11 @@ window.csd > box.horizontal {
 // Next/Previous button shadows are cut off. See issue #10.
 window > box > box > box > paned > overlay > grid > overlay > revealer {
   > button {
-    margin: 6px;
+    margin: $tiny_padding;
   }
 
   > box.linked {
-    padding: 6px;
+    padding: $tiny_padding;
   }
 }
 
@@ -41,7 +60,7 @@ window.csd > headerbar.titlebar > box.linked > button.image-button {
 // Needed because entries need min-width of 80px to avoid cutting off letters.
 
 window.csd > headerbar.toolbar > toolitem > box.raised > entry {
-  min-width: $small_size;
+  min-width: $medium_size;
 
   &:first-child { // Current page number
     border-top-right-radius: 0;
@@ -68,6 +87,12 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry {
 // https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/Adwaita.css
 // hard-coded css:
 // https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/nautilus.css
+
+.nautilus-window row:selected {
+  background-color: $accent_color;
+  
+  &:backdrop { background-color: backdrop($accent_color); }
+}
 
 .nautilus-window,
 .nautilus-window notebook,
@@ -109,10 +134,10 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry {
 
   // @extend .toolbar.osd;
 
-  min-height: 32px;
+  min-height: $large_size;
   padding: 0;
   border-style: solid solid none;
-  border-width: 1px;
+  border-width: $border_size;
   border-color: $border_color;
   border-radius: (2px + 1px) (2px + 1px) 0 0;
   background-color: $base_color;
@@ -132,7 +157,7 @@ window.csd > headerbar.toolbar > toolitem > box.raised > entry {
   }
 
   button {
-    margin: (32px - $small_size) / 2;
+    margin: $tiny_padding;
 
     @extend %small_button;
   }
@@ -288,7 +313,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
       }
     }
 
-    $buttons_width: $small_size * 2 + $container_padding * 3;
+    $buttons_width: $medium_size * 2 + $container_padding * 3;
 
     &:dir(ltr) {
       margin-right: -$buttons_width;
@@ -352,6 +377,8 @@ frame.gedit-map-frame > border {
   background-image: image($lighter_bg_color);
   .tweak-category:selected {
     background-color: $accent_color;
+    
+    &:backdrop { background-color: backdrop($accent_color); }
   }
 
   separator { @extend %hide_separators; }
@@ -432,9 +459,9 @@ window.workbench > stack.titlebar headerbar omnibar.linked.horizontal {
 }
 
 button.dzlmenubutton image {
-  min-width: $medium_size - 6px;
+  min-width: $large_size - 6px;
 
-  &.arrow { min-width: $medium_size - 9px; }
+  &.arrow { min-width: $large_size - 9px; }
 }
 
 button.dzlmenubuttonitem {
@@ -609,7 +636,7 @@ taskrow {
 }
 
 task-list-view > box > revealer > box > button {
-  margin: (12px * 2 - $medium_size) / 2;
+  margin: (12px * 2 - $large_size) / 2;
 }
 
 
@@ -660,7 +687,7 @@ list.categories { background-image: image($lighter_bg_color); }
 /**************
  * Calculator *
  **************/
-button.title label { min-height: $medium_size; }
+button.title label { min-height: $large_size; }
 
 
 /*********
@@ -690,4 +717,15 @@ button.title label { min-height: $medium_size; }
 // fix clipped dialog buttons
 dialog.background > box.dialog-vbox > box.dialog-action-box > buttonbox.dialog-action-area {
   padding: 12px;
+}
+
+// dark text in embedded composer
+$geary_composer_color:  if($titlebar == 'dark',
+                          $light_fg_color,
+                          $dark_fg_color);
+
+// We need a specific selector to override some styling for buttons in lists 
+.geary-expanded > .geary-composer-embed > widget headerbar image,
+.geary-expanded > .geary-composer-embed > widget headerbar label {
+  color: $geary_composer_color;
 }
