@@ -1,9 +1,38 @@
-pop-gtk-theme (2.99.4) UNRELEASED; urgency=medium
+pop-gtk-theme (3.0.0) artful; urgency=medium
+
+  * Correct bug with Close buttons in shell. 
+  * Fix Geary embeded composer recipient label.
+  * Close buttons are now identically sized.
+  * Re-structure of the entire theme
+  * Individual Components now carried in separate, imported scss files
+  * Build system ported (mostly) to native make
+  * Reworked backend and build files for more organized layout and easier modification.
+  * More expansive support for the backdrop style class for background windows.
+  * Red close buttons for enhanced usability.
+  * Contrast Improvements.
+  * Squared-off corners when windows are tiled.
+  * Programmatic generation of expansive color palettes.
+  * Slim theme size and padding reductions.
+  * Better Window margins for easier window resizing.
+  * Removal of headerbar separators for cleaner appearance
+  * Re-worked checkbox and radio button styling to erase some wonky issues.
+  * Re-written scale styling to improve appearance and animations.
+  * Shadow for the panel.
+  * Animation Improvements.
+  * InfoBar button text color is now visible.
+  * Color corrections to various widgets.
+  * Code Cosmetic improvements.
+  * Fix for Harvey titlebar
+  * Improved warning text contrast for Authentication dialogs.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 18 Dec 2017 17:37:07 -0700
+
+pop-gtk-theme (2.99.4) artful; urgency=medium
 
   * Correct bug with Close buttons in shell.
-  * Fix Geary embeded composer recipient label
+  * Fix Geary embeded composer recipient label.
 
- -- Ian Santopietro <ian@system76.com>  Mon, 11 Dec 2017 11:49:06 -0700
+ -- Ian Santopietro <ian@system76.com>  Mon, 18 Dec 2017 17:36:23 -0700
 
 pop-gtk-theme (2.99.3) artful; urgency=medium
 
