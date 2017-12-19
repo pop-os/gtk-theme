@@ -1,3 +1,9 @@
+pop-gtk-theme (3.0.1) artful; urgency=medium
+
+  * Make login dialog wider to prevent long names from being cut off.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 19 Dec 2017 11:28:51 -0700
+
 pop-gtk-theme (3.0.0) artful; urgency=medium
 
   * Correct bug with Close buttons in shell. 
