@@ -67,9 +67,9 @@ Things to look at:
 **Gnome-Tweak-Tool**<a name="gtt"></a>
  
  *6 themes:*
-  - Pop{,-compact}
-  - Pop-Dark{,-compact}
-  - Pop-Light{,-compact}
+  - Pop{,-slim}
+  - Pop-Dark{,-slim}
+  - Pop-Light{,-slim}
  
  **Other things to note:**
  
