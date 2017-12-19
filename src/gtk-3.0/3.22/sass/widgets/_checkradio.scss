@@ -1,0 +1,321 @@
+/*************************
+ * Check and Radio items *
+ *************************/
+// draw regular check and radio items using our PNG assets
+// all assets are rendered from assets.svg. never add pngs directly
+
+// selection-mode
+.view.content-view.check:not(list),
+.content-view .tile check:not(list) {
+  min-height: $check_size;
+  min-width: $check_size;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -gtk-icon-shadow: $shadow_1;
+
+  &:hover, &:active { -gtk-icon-shadow: $shadow_2; }
+
+  @each $s, $as in ('', '-unchecked'),
+                   ( ':checked', '-checked') {
+    &#{$s} {
+      -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}.png"),
+                                    url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}@2.png"));
+    }
+  }
+}
+
+checkbutton.text-button,
+radiobutton.text-button {
+  // this is for a nice focus on check and radios text
+  padding: $mini_padding;
+  outline-offset: 0;
+
+  label:not(:only-child) { 
+    margin: 0 $small_padding;
+    padding-right: $small_padding
+  }
+}
+
+check,
+radio {
+  @extend %simple_flat_button;
+
+  row:selected {
+    background-color: $fg_color;
+    border-color: $fg_color;
+
+    &:hover, &:active { color: $inverse_fg_color; }
+
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+  }
+
+  popover & {
+    &, &:hover, &:disabled {
+      box-shadow: none;
+      background-image: none;
+    }
+
+    &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
+
+    &.left:dir(rtl) {
+      margin-left: -$small_padding;
+      margin-right: $small_padding;
+    }
+
+    &.right:dir(ltr) {
+      margin-left: $small_padding;
+      margin-right: -$small_padding;
+    }
+  }
+
+  menu menuitem & {
+    transition: none;
+    border: 2px solid $fg_color;
+    margin: $mini_padding; // this is a workaround for a menu check/radio size allocation issue
+    padding: 0;
+
+    &:dir(ltr) { margin-right: $small_padding; }
+
+    &:dir(rtl) { margin-left: $small_padding; }
+
+    &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
+
+    &, &:hover, &:disabled {
+      box-shadow: none;
+      // color: inherit;
+    }
+  }
+}
+
+check,
+radio {
+  margin: $mini_padding;
+  padding: $mini_padding;
+  min-width: $check_size;
+  min-height: $check_size;
+  
+  background-color: transparent;
+  border: 2px solid $secondary_fg_color;
+  transition: 300ms;
+  
+  -gtk-icon-source: none;
+  
+  &:checked,
+  &:indeterminate {
+    background-color: $accent_color;
+    border-color: $accent_color;
+    color: $white;
+    
+    &:backdrop {
+      background-color: backdrop($accent_color);
+      border-color: backdrop($accent_color);
+    }
+    
+    &:disabled {
+      background-color: $disabled_accent_color;
+      border-color: $disabled_accent_color;
+    }
+    
+    &:disabled:backdrop {
+      background-color: $divider_color;
+      border-color: $divider_color;
+    }
+  }
+  
+  &:disabled {
+    border-color: $disabled_fg_color;
+  }
+  
+  &:checked { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-active.svg"), url("assets/scalable/check-active@2.svg"));
+  }
+  
+  &:indeterminate { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-indeterminate.svg"), url("assets/scalable/check-indeterminate@2.svg"));
+  }
+}
+
+radio {
+  border-radius: $circular_radius;
+}
+
+check {
+  border-radius: $pop_radius;
+}
+
+%small_check,
+menu menuitem check {
+  min-width: $check_size - 2px;
+  min-height: $check_size - 2px;
+  
+  background-color: transparent;
+  border: 2px solid $secondary_fg_color;
+  border-radius: $pop_radius;
+  transition: 300ms;
+  
+  -gtk-icon-source: none;
+  
+  &:checked,
+  &:indeterminate {
+    background-color: $accent_color;
+    border-color: $accent_color;
+    color: $white;
+    
+    &:backdrop {
+      background-color: backdrop($accent_color);
+      border-color: backdrop($accent_color);
+    }
+    
+    &:disabled {
+      background-color: $disabled_accent_color;
+      border-color: $disabled_accent_color;
+    }
+    
+    &:disabled:backdrop {
+      background-color: $divider_color;
+      border-color: $divider_color;
+    }
+  }
+  
+  &:disabled {
+    border-color: $disabled_fg_color;
+  }
+  
+  &:checked { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-active.svg"), url("assets/scalable/check-active@2.svg"));
+  }
+  
+  &:indeterminate { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-indeterminate.svg"), url("assets/scalable/check-indeterminate@2.svg"));
+  }
+}
+
+%small_radio,
+menu menuitem radio {
+  min-width: $check_size - 2px;
+  min-height: $check_size - 2px;
+  
+  background-color: transparent;
+  border: 2px solid $secondary_fg_color;
+  border-radius: $circular_radius;
+  transition: 300ms;
+  
+  -gtk-icon-source: none;
+  
+  &:checked,
+  &:indeterminate {
+    background-color: $accent_color;
+    border-color: $accent_color;
+    color: $white;
+    
+    &:backdrop {
+      background-color: backdrop($accent_color);
+      border-color: backdrop($accent_color);
+    }
+    
+    &:disabled {
+      background-color: $disabled_accent_color;
+      border-color: $disabled_accent_color;
+    }
+    
+    &:disabled:backdrop {
+      background-color: $divider_color;
+      border-color: $divider_color;
+    }
+  }
+  
+  &:disabled {
+    border-color: $disabled_fg_color;
+  }
+  
+  &:checked { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-active.svg"), url("assets/scalable/check-active@2.svg"));
+  }
+  
+  &:indeterminate { 
+    -gtk-icon-source: -gtk-scaled(url("assets/scalable/check-indeterminate.svg"), url("assets/scalable/check-indeterminate@2.svg"));
+  }
+}
+
+// ANIMATION:
+// this is made with those pretty convoluted transitions, since checks and radios have to animate only on state changes,
+// the transformation is set on the active state and it get reset on the checked state.
+check:not(:checked):active { -gtk-icon-transform: rotate(90deg); }
+
+radio:not(:checked):active { -gtk-icon-transform: scale(0); }
+
+check:not(:checked):indeterminate:active,
+radio:not(:checked):indeterminate:active { -gtk-icon-transform: scaleX(-1); } // instead of rotateY(180deg)
+
+check:not(:checked),
+radio:not(:checked) {
+  & {
+    transition: $shorter_transition,
+                background-size $shorter_duration $deceleration_curve,
+                background-image $shorter_duration * 2 $deceleration_curve,
+                -gtk-icon-transform 0;
+  }
+
+  &:active {
+    transition: $shorter_transition,
+                background-size 0,
+                background-image 0,
+                -gtk-icon-transform 0;
+  }
+
+  //menu menuitem & { transition: none; }
+}
+
+treeview.view check,
+treeview.view radio {
+  padding: 0;
+
+  &:hover {
+    box-shadow: inset 0 0 0 9999px gtkalpha($fg_color, 0.05);
+
+    &:disabled { box-shadow: none; }
+
+    &:selected { box-shadow: inset 0 0 0 9999px gtkalpha($inverse_fg_color, 0.05); }
+  }
+
+  & {
+    color: $secondary_fg_color;
+
+    &:hover, &:active { color: $fg_color; }
+
+    &:disabled { color: $disabled_secondary_fg_color; }
+
+    &:checked, &:indeterminate { 
+      color: $accent_color;
+      
+      &:backdrop { color: backdrop($accent_color); }
+    }
+
+    &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
+  }
+
+  &:selected {
+    border-color: $inverse_fg_color;
+
+    &:hover, &:active { color: $dark_fg_color; }
+
+    &:disabled { color: $disabled_fg_color; }
+
+    &:checked, &:indeterminate { 
+      background-color: $accent_color;
+      border-color: $inverse_fg_color;
+    }
+
+    &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
+  }
+}
+
+treeview.view radio:checked {
+  min-width: $check_size - 2px;
+  min-height: $check_size - 2px;
+  
+  border-radius: $circular_radius;
+}

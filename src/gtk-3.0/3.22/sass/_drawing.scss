@@ -38,6 +38,8 @@
     box-shadow: $shadow_0;
     background-color: if($fc == $primary_color, $base_color, $fc);
     color: if($fc == $primary_color, $fg_color, $inverse_fg_color);
+    
+    &:backdrop { color: backdrop($fg_color); }
   }
 
   @if $t == focus {
@@ -55,6 +57,8 @@
     box-shadow: $shadow_0;
     background-color: rgba($alt_base_color, 0.5);
     color: rgba($disabled_fg_color, 0.85);
+    
+    &:backdrop { color: rgba(backdrop($disabled_fg_color), 0.85); }
   }
 
   @if $t == flat-normal {
@@ -98,6 +102,8 @@
     box-shadow: $shadow_1, inset 0 0 0 9999px transparent;
     background-color: $c;
     color: $button_fg_color;
+    
+    &:backdrop { color: backdrop($button_fg_color); }
   }
 
   @if $t == hover {
@@ -120,11 +126,19 @@
   @if $t == checked {
     background-color: $accent_color;
     color: $inverse_fg_color;
+    &:backdrop { 
+      background-color: backdrop($accent_color);
+      color: backdrop($inverse_fg_color); 
+    }
   }
 
   @if $t == checked-disabled {
     background-color: rgba($accent_color, $lower_opacity);
     color: rgba($accent_color, $disabled_opacity);
+    
+    &:backdrop { 
+      opacity: 0.5;
+    }
   }
 
   @if $t == flat-normal {

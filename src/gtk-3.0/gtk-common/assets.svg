@@ -1,463 +1,1504 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="400" height="400" viewBox="0 0 400 400">
-  <sodipodi:namedview showgrid="true">
-    <inkscape:grid empspacing="4"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="400"
+   viewBox="0 0 400 400"
+   version="1.1"
+   id="svg413"
+   sodipodi:docname="assets.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata415">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     showgrid="false"
+     id="namedview4"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:zoom="2.85"
+     inkscape:cx="182.00745"
+     inkscape:cy="145.15041"
+     inkscape:current-layer="svg413">
+    <inkscape:grid
+       empspacing="4"
+       id="grid2" />
   </sodipodi:namedview>
-
-  <rect sodipodi:insensitive="true" width="200" height="400" fill="url(#color-bg)"/>
-  <rect sodipodi:insensitive="true" width="200" height="400" fill="url(#color-bg-dark)" x="200"/>
-
-  <defs>
+  <rect
+     sodipodi:insensitive="true"
+     width="200"
+     height="400"
+     fill="url(#color-bg)"
+     id="rect6" />
+  <rect
+     sodipodi:insensitive="true"
+     width="200"
+     height="400"
+     fill="url(#color-bg-dark)"
+     x="200"
+     id="rect8" />
+  <defs
+     id="defs311">
     <!-- <solidColor id="color-fg" solid-color="#574f4a" solid-opacity="0.87"/> -->
     <!-- <solidColor id="color-fg-dark" solid-color="#FFFFFF"/> -->
-
-    <linearGradient id="color-fg">
-      <stop stop-color="#574f4a" stop-opacity="0.87"/>
+    <linearGradient
+       id="color-fg">
+      <stop
+         stop-color="#574f4a"
+         stop-opacity="0.87"
+         id="stop10" />
     </linearGradient>
-
-    <linearGradient id="color-fg-dark">
-      <stop stop-color="#FFFFFF"/>
+    <linearGradient
+       id="color-fg-dark">
+      <stop
+         stop-color="#FFFFFF"
+         id="stop13" />
     </linearGradient>
-
-    <linearGradient id="color-fg-secondary">
-      <stop stop-color="#574f4a" stop-opacity="0.54"/>
+    <linearGradient
+       id="color-fg-secondary">
+      <stop
+         stop-color="#574f4a"
+         stop-opacity="0.54"
+         id="stop16" />
     </linearGradient>
-
-    <linearGradient id="color-fg-secondary-dark">
-      <stop stop-color="#FFFFFF" stop-opacity="0.7"/>
+    <linearGradient
+       id="color-fg-secondary-dark">
+      <stop
+         stop-color="#FFFFFF"
+         stop-opacity="0.7"
+         id="stop19" />
     </linearGradient>
-
-    <linearGradient id="color-fg-secondary-disabled">
-      <stop stop-color="#574f4a" stop-opacity="0.26"/>
+    <linearGradient
+       id="color-fg-secondary-disabled">
+      <stop
+         stop-color="#574f4a"
+         stop-opacity="0.26"
+         id="stop22" />
     </linearGradient>
-
-    <linearGradient id="color-fg-secondary-disabled-dark">
-      <stop stop-color="#FFFFFF" stop-opacity="0.3"/>
+    <linearGradient
+       id="color-fg-secondary-disabled-dark">
+      <stop
+         stop-color="#FFFFFF"
+         stop-opacity="0.3"
+         id="stop25" />
     </linearGradient>
-
-    <linearGradient id="color-divider">
-      <stop stop-color="#574f4a" stop-opacity="0.12"/>
+    <linearGradient
+       id="color-divider">
+      <stop
+         stop-color="#574f4a"
+         stop-opacity="0.12"
+         id="stop28" />
     </linearGradient>
-
-    <linearGradient id="color-divider-dark">
-      <stop stop-color="#FFFFFF" stop-opacity="0.12"/>
+    <linearGradient
+       id="color-divider-dark">
+      <stop
+         stop-color="#FFFFFF"
+         stop-opacity="0.12"
+         id="stop31" />
     </linearGradient>
-
-    <linearGradient id="color-accent">
-      <stop stop-color="#faa41a"/>
+    <linearGradient
+       id="color-accent">
+      <stop
+         stop-color="#faa41a"
+         id="stop34" />
     </linearGradient>
-
-    <linearGradient id="color-primary">
-      <stop stop-color="#48b9c7"/>
+    <linearGradient
+       id="color-primary">
+      <stop
+         stop-color="#48b9c7"
+         id="stop37" />
     </linearGradient>
-
-    <linearGradient id="color-accent-disabled">
-      <stop stop-color="#faa41a" stop-opacity="0.5"/>
+    <linearGradient
+       id="color-accent-disabled">
+      <stop
+         stop-color="#faa41a"
+         stop-opacity="0.5"
+         id="stop40" />
     </linearGradient>
-
-    <linearGradient id="color-bg">
-      <stop stop-color="#F5F5F5"/>
+    <linearGradient
+       id="color-bg">
+      <stop
+         stop-color="#F5F5F5"
+         id="stop43" />
     </linearGradient>
-
-    <linearGradient id="color-bg-dark">
-      <stop stop-color="#49423e"/>
+    <linearGradient
+       id="color-bg-dark">
+      <stop
+         stop-color="#49423e"
+         id="stop46" />
     </linearGradient>
-
-    <linearGradient id="color-bg-lighter">
-      <stop stop-color="#FAFAFA"/>
+    <linearGradient
+       id="color-bg-lighter">
+      <stop
+         stop-color="#FAFAFA"
+         id="stop49" />
     </linearGradient>
-
-    <linearGradient id="color-bg-lighter-dark">
-      <stop stop-color="#574f4a"/>
+    <linearGradient
+       id="color-bg-lighter-dark">
+      <stop
+         stop-color="#574f4a"
+         id="stop52" />
     </linearGradient>
-
-    <linearGradient id="color-base">
-      <stop stop-color="#FFFFFF"/>
+    <linearGradient
+       id="color-base">
+      <stop
+         stop-color="#FFFFFF"
+         id="stop55" />
     </linearGradient>
-
-    <linearGradient id="color-base-dark">
-      <stop stop-color="#4a5c64"/>
+    <linearGradient
+       id="color-base-dark">
+      <stop
+         stop-color="#4a5c64"
+         id="stop58" />
     </linearGradient>
-
-    <filter id="1" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
+    <filter
+       id="1"
+       color-interpolation-filters="sRGB"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
       <!-- <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#574f4a" flood-opacity="0.12"/> -->
       <!-- <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#574f4a" flood-opacity="0.24"/> -->
-
-      <feFlood flood-color="#574f4a" flood-opacity="0.12" result="flood"/>
-      <feComposite operator="in" in="flood" in2="SourceGraphic" result="composite1"/>
-      <feGaussianBlur stdDeviation="1.5" in="composite1" result="blur"/>
-      <feOffset dx="0" dy="1" result="offset"/>
-      <feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/>
-
-      <feFlood flood-color="#574f4a" flood-opacity="0.24" result="flood"/>
-      <feComposite operator="in" in="flood" in2="fbSourceGraphic" result="composite1"/>
-      <feGaussianBlur stdDeviation="1" in="composite1" result="blur"/>
-      <feOffset dx="0" dy="1" result="offset"/>
-      <feComposite in="fbSourceGraphic" in2="offset" result="composite2"/>
+      <feFlood
+         flood-color="#574f4a"
+         flood-opacity="0.12"
+         result="flood"
+         id="feFlood61" />
+      <feComposite
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         result="composite1"
+         id="feComposite63" />
+      <feGaussianBlur
+         stdDeviation="1.5"
+         in="composite1"
+         result="blur"
+         id="feGaussianBlur65" />
+      <feOffset
+         dx="0"
+         dy="1"
+         result="offset"
+         id="feOffset67" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         result="fbSourceGraphic"
+         id="feComposite69" />
+      <feFlood
+         flood-color="#574f4a"
+         flood-opacity="0.24"
+         result="flood"
+         id="feFlood71" />
+      <feComposite
+         operator="in"
+         in="flood"
+         in2="fbSourceGraphic"
+         result="composite1"
+         id="feComposite73" />
+      <feGaussianBlur
+         stdDeviation="1"
+         in="composite1"
+         result="blur"
+         id="feGaussianBlur75" />
+      <feOffset
+         dx="0"
+         dy="1"
+         result="offset"
+         id="feOffset77" />
+      <feComposite
+         in="fbSourceGraphic"
+         in2="offset"
+         result="composite2"
+         id="feComposite79" />
     </filter>
-
-    <filter id="2" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
+    <filter
+       id="2"
+       color-interpolation-filters="sRGB"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
       <!-- <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#574f4a" flood-opacity="0.16"/> -->
       <!-- <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#574f4a" flood-opacity="0.23"/> -->
-
-      <feFlood flood-color="#574f4a" flood-opacity="0.16" result="flood"/>
-      <feComposite operator="in" in="flood" in2="SourceGraphic" result="composite1"/>
-      <feGaussianBlur stdDeviation="3" in="composite1" result="blur"/>
-      <feOffset dx="0" dy="3" result="offset"/>
-      <feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/>
-
-      <feFlood flood-color="#574f4a" flood-opacity="0.23" result="flood"/>
-      <feComposite operator="in" in="flood" in2="fbSourceGraphic" result="composite1"/>
-      <feGaussianBlur stdDeviation="3" in="composite1" result="blur"/>
-      <feOffset dx="0" dy="3" result="offset"/>
-      <feComposite in="fbSourceGraphic" in2="offset" result="composite2"/>
+      <feFlood
+         flood-color="#574f4a"
+         flood-opacity="0.16"
+         result="flood"
+         id="feFlood82" />
+      <feComposite
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         result="composite1"
+         id="feComposite84" />
+      <feGaussianBlur
+         stdDeviation="3"
+         in="composite1"
+         result="blur"
+         id="feGaussianBlur86" />
+      <feOffset
+         dx="0"
+         dy="3"
+         result="offset"
+         id="feOffset88" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         result="fbSourceGraphic"
+         id="feComposite90" />
+      <feFlood
+         flood-color="#574f4a"
+         flood-opacity="0.23"
+         result="flood"
+         id="feFlood92" />
+      <feComposite
+         operator="in"
+         in="flood"
+         in2="fbSourceGraphic"
+         result="composite1"
+         id="feComposite94" />
+      <feGaussianBlur
+         stdDeviation="3"
+         in="composite1"
+         result="blur"
+         id="feGaussianBlur96" />
+      <feOffset
+         dx="0"
+         dy="3"
+         result="offset"
+         id="feOffset98" />
+      <feComposite
+         in="fbSourceGraphic"
+         in2="offset"
+         result="composite2"
+         id="feComposite100" />
     </filter>
-
-    <path id="checkbox-unchecked-path" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-    <path id="checkbox-checked-path" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-    <path id="checkbox-mixed-path" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/>
-    <path id="radio-unchecked-path" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-    <path id="radio-checked-path" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-    <path id="radio-mixed-path" d="m12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 2c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm-5 7v2h10v-2h-10z"/>
-
-    <path id="menu-checkbox-unchecked-path" d="m2 0a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-12zm0 2h12v12h-12v-12z"/>
-    <path id="menu-checkbox-checked-path" d="m2 0a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-12zm10.6 3.59l1.41 1.41-8 8-4-4 1.41-1.41 2.59 2.59 6.59-6.59z"/>
-    <path id="menu-checkbox-mixed-path" d="m2 0a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-12zm2 7h8v2h-8v-2z"/>
-    <path id="menu-radio-unchecked-path" d="m8 0a8 8 0 0 0 -8 8 8 8 0 0 0 8 8 8 8 0 0 0 8 -8 8 8 0 0 0 -8 -8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1 -6 6 6 6 0 0 1 -6 -6 6 6 0 0 1 6 -6z"/>
-    <path id="menu-radio-checked-path" d="m8 0a8 8 0 0 0 -8 8 8 8 0 0 0 8 8 8 8 0 0 0 8 -8 8 8 0 0 0 -8 -8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1 -6 6 6 6 0 0 1 -6 -6 6 6 0 0 1 6 -6zm0 2a4 4 0 0 0 -4 4 4 4 0 0 0 4 4 4 4 0 0 0 4 -4 4 4 0 0 0 -4 -4z"/>
-    <path id="menu-radio-mixed-path" d="m8 0a8 8 0 0 0 -8 8 8 8 0 0 0 8 8 8 8 0 0 0 8 -8 8 8 0 0 0 -8 -8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1 -6 6 6 6 0 0 1 -6 -6 6 6 0 0 1 6 -6zm-4 5v2h8v-2h-8z"/>
-
-    <rect id="button-fill" width="24" height="24" rx="2" ry="2"/>
-    <path id="check-path" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-
-    <path id="slider-fill" d="M 21,10.5 A 10.5,10.5 0 0 1 10.5,21 10.5,10.5 0 0 1 0,10.5 10.5,10.5 0 0 1 10.5,0 10.5,10.5 0 0 1 21,10.5 Z"/>
-    <path id="slider-stroke" d="m10.5 0a10.5 10.5 0 0 0 -10.5 10.5 10.5 10.5 0 0 0 10.5 10.5 10.5 10.5 0 0 0 10.5 -10.5 10.5 10.5 0 0 0 -10.5 -10.5zm0 3a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1 -7.5 7.5 7.5 7.5 0 0 1 -7.5 -7.5 7.5 7.5 0 0 1 7.5 -7.5z"/>
-    <path id="marks-slider-fill" d="m10.5 0a10.5 10.5 0 0 0 -10.5 10.5 10.5 10.5 0 0 0 10.5 10.5h10.5v-10.5a10.5 10.5 0 0 0 -10.5 -10.5z"/>
-    <path id="marks-slider-stroke" d="m10.5 0a10.5 10.5 0 0 0 -10.5 10.5 10.5 10.5 0 0 0 10.5 10.5h10.5v-10.5a10.5 10.5 0 0 0 -10.5 -10.5zm0 3a7.5 7.5 0 0 1 7.5 7.5v7.5h-7.5a7.5 7.5 0 0 1 -7.5 -7.5 7.5 7.5 0 0 1 7.5 -7.5z"/>
-
-    <rect id="box-fill" width="32" height="32" rx="2" ry="2"/>
-
-    <rect id="16x16" width="16" height="16" opacity="0"/>
-    <rect id="21x21" width="21" height="21" opacity="0"/>
-    <rect id="21x26" width="21" height="26" opacity="0"/>
-    <rect id="40x40" width="40" height="40" opacity="0"/>
-    <rect id="48x48" width="48" height="48" opacity="0"/>
-
-    <g id="base-checkbox-unchecked">
-      <use xlink:href="#button-fill" opacity="0"/>
-      <use xlink:href="#checkbox-unchecked-path"/>
+    <path
+       id="checkbox-unchecked-path"
+       d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+    <path
+       id="checkbox-checked-path"
+       d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+    <path
+       id="checkbox-mixed-path"
+       d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z" />
+    <path
+       id="radio-unchecked-path"
+       d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+    <path
+       id="radio-checked-path"
+       d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+    <path
+       id="radio-mixed-path"
+       d="m12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 2c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm-5 7v2h10v-2h-10z" />
+    <path
+       id="menu-checkbox-unchecked-path"
+       d="m2 0a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-12zm0 2h12v12h-12v-12z" />
+    <path
+       id="menu-checkbox-checked-path"
+       d="m2 0a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-12zm10.6 3.59l1.41 1.41-8 8-4-4 1.41-1.41 2.59 2.59 6.59-6.59z" />
+    <path
+       id="menu-checkbox-mixed-path"
+       d="m2 0a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-12zm2 7h8v2h-8v-2z" />
+    <path
+       id="menu-radio-unchecked-path"
+       d="m8 0a8 8 0 0 0 -8 8 8 8 0 0 0 8 8 8 8 0 0 0 8 -8 8 8 0 0 0 -8 -8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1 -6 6 6 6 0 0 1 -6 -6 6 6 0 0 1 6 -6z" />
+    <path
+       id="menu-radio-checked-path"
+       d="m8 0a8 8 0 0 0 -8 8 8 8 0 0 0 8 8 8 8 0 0 0 8 -8 8 8 0 0 0 -8 -8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1 -6 6 6 6 0 0 1 -6 -6 6 6 0 0 1 6 -6zm0 2a4 4 0 0 0 -4 4 4 4 0 0 0 4 4 4 4 0 0 0 4 -4 4 4 0 0 0 -4 -4z" />
+    <path
+       id="menu-radio-mixed-path"
+       d="m8 0a8 8 0 0 0 -8 8 8 8 0 0 0 8 8 8 8 0 0 0 8 -8 8 8 0 0 0 -8 -8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1 -6 6 6 6 0 0 1 -6 -6 6 6 0 0 1 6 -6zm-4 5v2h8v-2h-8z" />
+    <rect
+       id="button-fill"
+       width="24"
+       height="24"
+       rx="2"
+       ry="2" />
+    <path
+       id="check-path"
+       d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+    <path
+       id="slider-fill"
+       d="M 21,10.5 A 10.5,10.5 0 0 1 10.5,21 10.5,10.5 0 0 1 0,10.5 10.5,10.5 0 0 1 10.5,0 10.5,10.5 0 0 1 21,10.5 Z" />
+    <path
+       id="slider-stroke"
+       d="m10.5 0a10.5 10.5 0 0 0 -10.5 10.5 10.5 10.5 0 0 0 10.5 10.5 10.5 10.5 0 0 0 10.5 -10.5 10.5 10.5 0 0 0 -10.5 -10.5zm0 3a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1 -7.5 7.5 7.5 7.5 0 0 1 -7.5 -7.5 7.5 7.5 0 0 1 7.5 -7.5z" />
+    <path
+       id="marks-slider-fill"
+       d="m10.5 0a10.5 10.5 0 0 0 -10.5 10.5 10.5 10.5 0 0 0 10.5 10.5h10.5v-10.5a10.5 10.5 0 0 0 -10.5 -10.5z" />
+    <path
+       id="marks-slider-stroke"
+       d="m10.5 0a10.5 10.5 0 0 0 -10.5 10.5 10.5 10.5 0 0 0 10.5 10.5h10.5v-10.5a10.5 10.5 0 0 0 -10.5 -10.5zm0 3a7.5 7.5 0 0 1 7.5 7.5v7.5h-7.5a7.5 7.5 0 0 1 -7.5 -7.5 7.5 7.5 0 0 1 7.5 -7.5z" />
+    <rect
+       id="box-fill"
+       width="32"
+       height="32"
+       rx="2"
+       ry="2" />
+    <rect
+       id="16x16"
+       width="16"
+       height="16"
+       opacity="0" />
+    <rect
+       id="21x21"
+       width="21"
+       height="21"
+       opacity="0" />
+    <rect
+       id="21x26"
+       width="21"
+       height="26"
+       opacity="0" />
+    <rect
+       id="40x40"
+       width="40"
+       height="40"
+       opacity="0" />
+    <rect
+       id="48x48"
+       width="48"
+       height="48"
+       opacity="0" />
+    <g
+       id="base-checkbox-unchecked">
+      <use
+         xlink:href="#button-fill"
+         opacity="0"
+         id="use127" />
+      <use
+         xlink:href="#checkbox-unchecked-path"
+         id="use129" />
     </g>
-
-    <g id="base-checkbox-unchecked-hover">
-      <use xlink:href="#button-fill" opacity="0.15"/>
-      <use xlink:href="#checkbox-unchecked-path"/>
+    <g
+       id="base-checkbox-unchecked-hover">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.15"
+         id="use132" />
+      <use
+         xlink:href="#checkbox-unchecked-path"
+         id="use134" />
     </g>
-
-    <g id="base-checkbox-unchecked-active">
-      <use xlink:href="#button-fill" opacity="0.3"/>
-      <use xlink:href="#checkbox-unchecked-path"/>
+    <g
+       id="base-checkbox-unchecked-active">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.3"
+         id="use137" />
+      <use
+         xlink:href="#checkbox-unchecked-path"
+         id="use139" />
     </g>
-
-    <g id="base-checkbox-checked">
-      <use xlink:href="#button-fill" opacity="0"/>
-      <use xlink:href="#checkbox-checked-path"/>
+    <g
+       id="base-checkbox-checked">
+      <use
+         xlink:href="#button-fill"
+         opacity="0"
+         id="use142" />
+      <use
+         xlink:href="#checkbox-checked-path"
+         id="use144" />
     </g>
-
-    <g id="base-checkbox-checked-hover">
-      <use xlink:href="#button-fill" opacity="0.15"/>
-      <use xlink:href="#checkbox-checked-path"/>
+    <g
+       id="base-checkbox-checked-hover">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.15"
+         id="use147" />
+      <use
+         xlink:href="#checkbox-checked-path"
+         id="use149" />
     </g>
-
-    <g id="base-checkbox-checked-active">
-      <use xlink:href="#button-fill" opacity="0.3"/>
-      <use xlink:href="#checkbox-checked-path"/>
+    <g
+       id="base-checkbox-checked-active">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.3"
+         id="use152" />
+      <use
+         xlink:href="#checkbox-checked-path"
+         id="use154" />
     </g>
-
-    <g id="base-checkbox-mixed">
-      <use xlink:href="#button-fill" opacity="0"/>
-      <use xlink:href="#checkbox-mixed-path"/>
+    <g
+       id="base-checkbox-mixed">
+      <use
+         xlink:href="#button-fill"
+         opacity="0"
+         id="use157" />
+      <use
+         xlink:href="#checkbox-mixed-path"
+         id="use159" />
     </g>
-
-    <g id="base-checkbox-mixed-hover">
-      <use xlink:href="#button-fill" opacity="0.15"/>
-      <use xlink:href="#checkbox-mixed-path"/>
+    <g
+       id="base-checkbox-mixed-hover">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.15"
+         id="use162" />
+      <use
+         xlink:href="#checkbox-mixed-path"
+         id="use164" />
     </g>
-
-    <g id="base-checkbox-mixed-active">
-      <use xlink:href="#button-fill" opacity="0.3"/>
-      <use xlink:href="#checkbox-mixed-path"/>
+    <g
+       id="base-checkbox-mixed-active">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.3"
+         id="use167" />
+      <use
+         xlink:href="#checkbox-mixed-path"
+         id="use169" />
     </g>
-
-    <g id="base-radio-unchecked">
-      <use xlink:href="#button-fill" opacity="0"/>
-      <use xlink:href="#radio-unchecked-path"/>
+    <g
+       id="base-radio-unchecked">
+      <use
+         xlink:href="#button-fill"
+         opacity="0"
+         id="use172" />
+      <use
+         xlink:href="#radio-unchecked-path"
+         id="use174" />
     </g>
-
-    <g id="base-radio-unchecked-hover">
-      <use xlink:href="#button-fill" opacity="0.15"/>
-      <use xlink:href="#radio-unchecked-path"/>
+    <g
+       id="base-radio-unchecked-hover">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.15"
+         id="use177" />
+      <use
+         xlink:href="#radio-unchecked-path"
+         id="use179" />
     </g>
-
-    <g id="base-radio-unchecked-active">
-      <use xlink:href="#button-fill" opacity="0.3"/>
-      <use xlink:href="#radio-unchecked-path"/>
+    <g
+       id="base-radio-unchecked-active">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.3"
+         id="use182" />
+      <use
+         xlink:href="#radio-unchecked-path"
+         id="use184" />
     </g>
-
-    <g id="base-radio-checked">
-      <use xlink:href="#button-fill" opacity="0"/>
-      <use xlink:href="#radio-checked-path"/>
+    <g
+       id="base-radio-checked">
+      <use
+         xlink:href="#button-fill"
+         opacity="0"
+         id="use187" />
+      <use
+         xlink:href="#radio-checked-path"
+         id="use189" />
     </g>
-
-    <g id="base-radio-checked-hover">
-      <use xlink:href="#button-fill" opacity="0.15"/>
-      <use xlink:href="#radio-checked-path"/>
+    <g
+       id="base-radio-checked-hover">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.15"
+         id="use192" />
+      <use
+         xlink:href="#radio-checked-path"
+         id="use194" />
     </g>
-
-    <g id="base-radio-checked-active">
-      <use xlink:href="#button-fill" opacity="0.3"/>
-      <use xlink:href="#radio-checked-path"/>
+    <g
+       id="base-radio-checked-active">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.3"
+         id="use197" />
+      <use
+         xlink:href="#radio-checked-path"
+         id="use199" />
     </g>
-
-    <g id="base-radio-mixed">
-      <use xlink:href="#button-fill" opacity="0"/>
-      <use xlink:href="#radio-mixed-path"/>
+    <g
+       id="base-radio-mixed">
+      <use
+         xlink:href="#button-fill"
+         opacity="0"
+         id="use202" />
+      <use
+         xlink:href="#radio-mixed-path"
+         id="use204" />
     </g>
-
-    <g id="base-radio-mixed-hover">
-      <use xlink:href="#button-fill" opacity="0.15"/>
-      <use xlink:href="#radio-mixed-path"/>
+    <g
+       id="base-radio-mixed-hover">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.15"
+         id="use207" />
+      <use
+         xlink:href="#radio-mixed-path"
+         id="use209" />
     </g>
-
-    <g id="base-radio-mixed-active">
-      <use xlink:href="#button-fill" opacity="0.3"/>
-      <use xlink:href="#radio-mixed-path"/>
+    <g
+       id="base-radio-mixed-active">
+      <use
+         xlink:href="#button-fill"
+         opacity="0.3"
+         id="use212" />
+      <use
+         xlink:href="#radio-mixed-path"
+         id="use214" />
     </g>
-
-    <g id="base-menu-checkbox-unchecked">
-      <use xlink:href="#16x16"/>
-      <use xlink:href="#menu-checkbox-unchecked-path"/>
+    <g
+       id="base-menu-checkbox-unchecked">
+      <use
+         xlink:href="#16x16"
+         id="use217" />
+      <use
+         xlink:href="#menu-checkbox-unchecked-path"
+         id="use219" />
     </g>
-
-    <g id="base-menu-checkbox-checked">
-      <use xlink:href="#16x16"/>
-      <use xlink:href="#menu-checkbox-checked-path"/>
+    <g
+       id="base-menu-checkbox-checked">
+      <use
+         xlink:href="#16x16"
+         id="use222" />
+      <use
+         xlink:href="#menu-checkbox-checked-path"
+         id="use224" />
     </g>
-
-    <g id="base-menu-checkbox-mixed">
-      <use xlink:href="#16x16"/>
-      <use xlink:href="#menu-checkbox-mixed-path"/>
+    <g
+       id="base-menu-checkbox-mixed">
+      <use
+         xlink:href="#16x16"
+         id="use227" />
+      <use
+         xlink:href="#menu-checkbox-mixed-path"
+         id="use229" />
     </g>
-
-    <g id="base-menu-radio-unchecked">
-      <use xlink:href="#16x16"/>
-      <use xlink:href="#menu-radio-unchecked-path"/>
+    <g
+       id="base-menu-radio-unchecked">
+      <use
+         xlink:href="#16x16"
+         id="use232" />
+      <use
+         xlink:href="#menu-radio-unchecked-path"
+         id="use234" />
     </g>
-
-    <g id="base-menu-radio-checked">
-      <use xlink:href="#16x16"/>
-      <use xlink:href="#menu-radio-checked-path"/>
+    <g
+       id="base-menu-radio-checked">
+      <use
+         xlink:href="#16x16"
+         id="use237" />
+      <use
+         xlink:href="#menu-radio-checked-path"
+         id="use239" />
     </g>
-
-    <g id="base-menu-radio-mixed">
-      <use xlink:href="#16x16"/>
-      <use xlink:href="#menu-radio-mixed-path"/>
+    <g
+       id="base-menu-radio-mixed">
+      <use
+         xlink:href="#16x16"
+         id="use242" />
+      <use
+         xlink:href="#menu-radio-mixed-path"
+         id="use244" />
     </g>
-
-    <g id="base-selectionmode-checkbox-unchecked">
-      <use xlink:href="#40x40"/>
-      <use xlink:href="#button-fill" transform="matrix(1.5 0 0 1.5 2 2)"/>
+    <g
+       id="base-selectionmode-checkbox-unchecked">
+      <use
+         xlink:href="#40x40"
+         id="use247" />
+      <use
+         xlink:href="#button-fill"
+         transform="matrix(1.5 0 0 1.5 2 2)"
+         id="use249" />
     </g>
-
-    <g id="base-selectionmode-checkbox-checked">
-      <use xlink:href="#40x40"/>
-      <use xlink:href="#button-fill" transform="matrix(1.5 0 0 1.5 2 2)" fill="url(#color-accent)"/>
-      <use xlink:href="#check-path" transform="matrix(1.5 0 0 1.5 2 2)" fill="url(#color-fg-dark)"/>
+    <g
+       id="base-selectionmode-checkbox-checked">
+      <use
+         xlink:href="#40x40"
+         id="use252" />
+      <use
+         xlink:href="#button-fill"
+         transform="matrix(1.5 0 0 1.5 2 2)"
+         fill="url(#color-accent)"
+         id="use254" />
+      <use
+         xlink:href="#check-path"
+         transform="matrix(1.5 0 0 1.5 2 2)"
+         fill="url(#color-fg-dark)"
+         id="use256" />
     </g>
-
-    <g id="base-scale-slider">
-      <use xlink:href="#21x21"/>
-      <use xlink:href="#slider-fill" fill="url(#color-primary)"/>
+    <g
+       id="base-scale-slider">
+      <use
+         xlink:href="#21x21"
+         id="use259" />
+      <use
+         xlink:href="#slider-fill"
+         fill="url(#color-primary)"
+         id="use261" />
     </g>
-
-    <g id="base-scale-slider-disabled">
-      <use xlink:href="#21x21"/>
-      <use xlink:href="#slider-fill" fill="url(#color-bg)"/>
-      <use xlink:href="#slider-stroke" fill="url(#color-divider)"/>
+    <g
+       id="base-scale-slider-disabled">
+      <use
+         xlink:href="#21x21"
+         id="use264" />
+      <use
+         xlink:href="#slider-fill"
+         fill="url(#color-bg)"
+         id="use266" />
+      <use
+         xlink:href="#slider-stroke"
+         fill="url(#color-divider)"
+         id="use268" />
     </g>
-
-    <g id="base-scale-slider-disabled-dark">
-      <use xlink:href="#21x21"/>
-      <use xlink:href="#slider-fill" fill="url(#color-bg-dark)"/>
-      <use xlink:href="#slider-stroke" fill="url(#color-divider-dark)"/>
+    <g
+       id="base-scale-slider-disabled-dark">
+      <use
+         xlink:href="#21x21"
+         id="use271" />
+      <use
+         xlink:href="#slider-fill"
+         fill="url(#color-bg-dark)"
+         id="use273" />
+      <use
+         xlink:href="#slider-stroke"
+         fill="url(#color-divider-dark)"
+         id="use275" />
     </g>
-
-    <g id="base-scale-horz-marks-after-slider">
-      <use xlink:href="#21x26"/>
-      <use xlink:href="#marks-slider-fill" transform="rotate(45 10.5 10.5)" fill="url(#color-primary)"/>
+    <g
+       id="base-scale-horz-marks-after-slider">
+      <use
+         xlink:href="#21x26"
+         id="use278" />
+      <use
+         xlink:href="#marks-slider-fill"
+         transform="rotate(45 10.5 10.5)"
+         fill="url(#color-primary)"
+         id="use280" />
     </g>
-    <use xlink:href="#base-scale-horz-marks-after-slider" id="base-scale-vert-marks-before-slider" transform="rotate(90 10.5 10.5)"/>
-    <use xlink:href="#base-scale-horz-marks-after-slider" id="base-scale-horz-marks-before-slider" transform="rotate(180 10.5 10.5)"/>
-    <use xlink:href="#base-scale-horz-marks-after-slider" id="base-scale-vert-marks-after-slider" transform="rotate(270 10.5 10.5)"/>
-
-    <g id="base-scale-horz-marks-after-slider-disabled">
-      <use xlink:href="#21x26"/>
-      <use xlink:href="#marks-slider-fill" transform="rotate(45 10.5 10.5)" fill="url(#color-bg)"/>
-      <use xlink:href="#marks-slider-stroke" transform="rotate(45 10.5 10.5)" fill="url(#color-divider)"/>
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider"
+       id="base-scale-vert-marks-before-slider"
+       transform="rotate(90 10.5 10.5)" />
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider"
+       id="base-scale-horz-marks-before-slider"
+       transform="rotate(180 10.5 10.5)" />
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider"
+       id="base-scale-vert-marks-after-slider"
+       transform="rotate(270 10.5 10.5)" />
+    <g
+       id="base-scale-horz-marks-after-slider-disabled">
+      <use
+         xlink:href="#21x26"
+         id="use286" />
+      <use
+         xlink:href="#marks-slider-fill"
+         transform="rotate(45 10.5 10.5)"
+         fill="url(#color-bg)"
+         id="use288" />
+      <use
+         xlink:href="#marks-slider-stroke"
+         transform="rotate(45 10.5 10.5)"
+         fill="url(#color-divider)"
+         id="use290" />
     </g>
-    <use xlink:href="#base-scale-horz-marks-after-slider-disabled" id="base-scale-vert-marks-before-slider-disabled" transform="rotate(90 10.5 10.5)"/>
-    <use xlink:href="#base-scale-horz-marks-after-slider-disabled" id="base-scale-horz-marks-before-slider-disabled" transform="rotate(180 10.5 10.5)"/>
-    <use xlink:href="#base-scale-horz-marks-after-slider-disabled" id="base-scale-vert-marks-after-slider-disabled" transform="rotate(270 10.5 10.5)"/>
-
-    <g id="base-scale-horz-marks-after-slider-disabled-dark">
-      <use xlink:href="#21x26"/>
-      <use xlink:href="#marks-slider-fill" transform="rotate(45 10.5 10.5)" fill="url(#color-bg-dark)"/>
-      <use xlink:href="#marks-slider-stroke" transform="rotate(45 10.5 10.5)" fill="url(#color-divider-dark)"/>
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider-disabled"
+       id="base-scale-vert-marks-before-slider-disabled"
+       transform="rotate(90 10.5 10.5)" />
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider-disabled"
+       id="base-scale-horz-marks-before-slider-disabled"
+       transform="rotate(180 10.5 10.5)" />
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider-disabled"
+       id="base-scale-vert-marks-after-slider-disabled"
+       transform="rotate(270 10.5 10.5)" />
+    <g
+       id="base-scale-horz-marks-after-slider-disabled-dark">
+      <use
+         xlink:href="#21x26"
+         id="use296" />
+      <use
+         xlink:href="#marks-slider-fill"
+         transform="rotate(45 10.5 10.5)"
+         fill="url(#color-bg-dark)"
+         id="use298" />
+      <use
+         xlink:href="#marks-slider-stroke"
+         transform="rotate(45 10.5 10.5)"
+         fill="url(#color-divider-dark)"
+         id="use300" />
     </g>
-    <use xlink:href="#base-scale-horz-marks-after-slider-disabled-dark" id="base-scale-vert-marks-before-slider-disabled-dark" transform="rotate(90 10.5 10.5)"/>
-    <use xlink:href="#base-scale-horz-marks-after-slider-disabled-dark" id="base-scale-horz-marks-before-slider-disabled-dark" transform="rotate(180 10.5 10.5)"/>
-    <use xlink:href="#base-scale-horz-marks-after-slider-disabled-dark" id="base-scale-vert-marks-after-slider-disabled-dark" transform="rotate(270 10.5 10.5)"/>
-
-    <g id="base-box">
-      <use xlink:href="#48x48"/>
-      <use xlink:href="#box-fill" x="8" y="8"/>
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider-disabled-dark"
+       id="base-scale-vert-marks-before-slider-disabled-dark"
+       transform="rotate(90 10.5 10.5)" />
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider-disabled-dark"
+       id="base-scale-horz-marks-before-slider-disabled-dark"
+       transform="rotate(180 10.5 10.5)" />
+    <use
+       xlink:href="#base-scale-horz-marks-after-slider-disabled-dark"
+       id="base-scale-vert-marks-after-slider-disabled-dark"
+       transform="rotate(270 10.5 10.5)" />
+    <g
+       id="base-box">
+      <use
+         xlink:href="#48x48"
+         id="use306" />
+      <use
+         xlink:href="#box-fill"
+         x="8"
+         y="8"
+         id="use308" />
     </g>
   </defs>
-
-  <use x="8"   y="8"   xlink:href="#base-checkbox-unchecked" fill="url(#color-fg-secondary)" id="checkbox-unchecked"/>
-  <use x="8"   y="40"  xlink:href="#base-checkbox-unchecked-hover" fill="url(#color-fg)" id="checkbox-unchecked-hover"/>
-  <use x="8"   y="72"  xlink:href="#base-checkbox-unchecked-active" fill="url(#color-fg)" id="checkbox-unchecked-active"/>
-  <use x="8"   y="104" xlink:href="#base-checkbox-unchecked" fill="url(#color-fg-secondary-disabled)" id="checkbox-unchecked-disabled"/>
-
-  <use x="40"  y="8"   xlink:href="#base-checkbox-checked" fill="url(#color-accent)" id="checkbox-checked"/>
-  <use x="40"  y="40"  xlink:href="#base-checkbox-checked-hover" fill="url(#color-accent)" id="checkbox-checked-hover"/>
-  <use x="40"  y="72"  xlink:href="#base-checkbox-checked-active" fill="url(#color-accent)" id="checkbox-checked-active"/>
-  <use x="40"  y="104" xlink:href="#base-checkbox-checked" fill="url(#color-accent-disabled)" id="checkbox-checked-disabled"/>
-
-  <use x="72"  y="8"   xlink:href="#base-checkbox-mixed" fill="url(#color-accent)" id="checkbox-mixed"/>
-  <use x="72"  y="40"  xlink:href="#base-checkbox-mixed-hover" fill="url(#color-accent)" id="checkbox-mixed-hover"/>
-  <use x="72"  y="72"  xlink:href="#base-checkbox-mixed-active" fill="url(#color-accent)" id="checkbox-mixed-active"/>
-  <use x="72"  y="104" xlink:href="#base-checkbox-mixed" fill="url(#color-accent-disabled)" id="checkbox-mixed-disabled"/>
-
-  <use x="104" y="8"   xlink:href="#base-radio-unchecked" fill="url(#color-fg-secondary)" id="radio-unchecked"/>
-  <use x="104" y="40"  xlink:href="#base-radio-unchecked-hover" fill="url(#color-fg)" id="radio-unchecked-hover"/>
-  <use x="104" y="72"  xlink:href="#base-radio-unchecked-active" fill="url(#color-fg)" id="radio-unchecked-active"/>
-  <use x="104" y="104" xlink:href="#base-radio-unchecked" fill="url(#color-fg-secondary-disabled)" id="radio-unchecked-disabled"/>
-
-  <use x="136" y="8"   xlink:href="#base-radio-checked" fill="url(#color-accent)" id="radio-checked"/>
-  <use x="136" y="40"  xlink:href="#base-radio-checked-hover" fill="url(#color-accent)" id="radio-checked-hover"/>
-  <use x="136" y="72"  xlink:href="#base-radio-checked-active" fill="url(#color-accent)" id="radio-checked-active"/>
-  <use x="136" y="104" xlink:href="#base-radio-checked" fill="url(#color-accent-disabled)" id="radio-checked-disabled"/>
-
-  <use x="168" y="8"   xlink:href="#base-radio-mixed" fill="url(#color-accent)" id="radio-mixed"/>
-  <use x="168" y="40"  xlink:href="#base-radio-mixed-hover" fill="url(#color-accent)" id="radio-mixed-hover"/>
-  <use x="168" y="72"  xlink:href="#base-radio-mixed-active" fill="url(#color-accent)" id="radio-mixed-active"/>
-  <use x="168" y="104" xlink:href="#base-radio-mixed" fill="url(#color-accent-disabled)" id="radio-mixed-disabled"/>
-
-  <use x="12"  y="136" xlink:href="#base-menu-checkbox-unchecked" fill="url(#color-fg-secondary)" id="menu-checkbox-unchecked"/>
-  <use x="12"  y="160" xlink:href="#base-menu-checkbox-unchecked" fill="url(#color-fg-secondary-disabled)" id="menu-checkbox-unchecked-disabled"/>
-
-  <use x="44"  y="136" xlink:href="#base-menu-checkbox-checked" fill="url(#color-accent)" id="menu-checkbox-checked"/>
-  <use x="44"  y="160" xlink:href="#base-menu-checkbox-checked" fill="url(#color-accent-disabled)" id="menu-checkbox-checked-disabled"/>
-
-  <use x="76"  y="136" xlink:href="#base-menu-checkbox-mixed" fill="url(#color-accent)" id="menu-checkbox-mixed"/>
-  <use x="76"  y="160" xlink:href="#base-menu-checkbox-mixed" fill="url(#color-accent-disabled)" id="menu-checkbox-mixed-disabled"/>
-
-  <use x="108" y="136" xlink:href="#base-menu-radio-unchecked" fill="url(#color-fg-secondary)" id="menu-radio-unchecked"/>
-  <use x="108" y="160" xlink:href="#base-menu-radio-unchecked" fill="url(#color-fg-secondary-disabled)" id="menu-radio-unchecked-disabled"/>
-
-  <use x="140" y="136" xlink:href="#base-menu-radio-checked" fill="url(#color-accent)" id="menu-radio-checked"/>
-  <use x="140" y="160" xlink:href="#base-menu-radio-checked" fill="url(#color-accent-disabled)" id="menu-radio-checked-disabled"/>
-
-  <use x="172" y="136" xlink:href="#base-menu-radio-mixed" fill="url(#color-accent)" id="menu-radio-mixed"/>
-  <use x="172" y="160" xlink:href="#base-menu-radio-mixed" fill="url(#color-accent-disabled)" id="menu-radio-mixed-disabled"/>
-
-  <use x="8"   y="184" xlink:href="#base-selectionmode-checkbox-unchecked" fill="url(#color-bg-lighter)" id="selectionmode-checkbox-unchecked"/>
-  <use x="56"  y="184" xlink:href="#base-selectionmode-checkbox-checked" id="selectionmode-checkbox-checked"/>
-
-  <use x="16"  y="240" xlink:href="#base-scale-slider" id="scale-slider"/>
-  <use x="16"  y="280" xlink:href="#base-scale-slider-disabled" id="scale-slider-disabled"/>
-
-  <use x="52"  y="240" xlink:href="#base-scale-horz-marks-before-slider" id="scale-horz-marks-before-slider"/>
-  <use x="52"  y="280" xlink:href="#base-scale-horz-marks-before-slider-disabled" id="scale-horz-marks-before-slider-disabled"/>
-
-  <use x="88"  y="240" xlink:href="#base-scale-horz-marks-after-slider" id="scale-horz-marks-after-slider"/>
-  <use x="88"  y="280" xlink:href="#base-scale-horz-marks-after-slider-disabled" id="scale-horz-marks-after-slider-disabled"/>
-
-  <use x="124" y="240" xlink:href="#base-scale-vert-marks-before-slider" id="scale-vert-marks-before-slider"/>
-  <use x="124" y="280" xlink:href="#base-scale-vert-marks-before-slider-disabled" id="scale-vert-marks-before-slider-disabled"/>
-
-  <use x="160" y="240" xlink:href="#base-scale-vert-marks-after-slider" id="scale-vert-marks-after-slider"/>
-  <use x="160" y="280" xlink:href="#base-scale-vert-marks-after-slider-disabled" id="scale-vert-marks-after-slider-disabled"/>
-
-  <use x="8"   y="320" xlink:href="#base-box" fill="url(#color-base)" filter="url(#2)" id="box-shadow"/>
-  <use x="64"  y="320" xlink:href="#base-box" fill="url(#color-base)" filter="url(#1)" id="box-shadow-backdrop"/>
-
-
-  <use x="208" y="8"   xlink:href="#base-checkbox-unchecked" fill="url(#color-fg-secondary-dark)" id="checkbox-unchecked-dark"/>
-  <use x="208" y="40"  xlink:href="#base-checkbox-unchecked-hover" fill="url(#color-fg-dark)" id="checkbox-unchecked-hover-dark"/>
-  <use x="208" y="72"  xlink:href="#base-checkbox-unchecked-active" fill="url(#color-fg-dark)" id="checkbox-unchecked-active-dark"/>
-  <use x="208" y="104" xlink:href="#base-checkbox-unchecked" fill="url(#color-fg-secondary-disabled-dark)" id="checkbox-unchecked-disabled-dark"/>
-
-  <use x="240" y="8"   xlink:href="#base-checkbox-checked" fill="url(#color-accent)" id="checkbox-checked-dark"/>
-  <use x="240" y="40"  xlink:href="#base-checkbox-checked-hover" fill="url(#color-accent)" id="checkbox-checked-hover-dark"/>
-  <use x="240" y="72"  xlink:href="#base-checkbox-checked-active" fill="url(#color-accent)" id="checkbox-checked-active-dark"/>
-  <use x="240" y="104" xlink:href="#base-checkbox-checked" fill="url(#color-accent-disabled)" id="checkbox-checked-disabled-dark"/>
-
-  <use x="272" y="8"   xlink:href="#base-checkbox-mixed" fill="url(#color-accent)" id="checkbox-mixed-dark"/>
-  <use x="272" y="40"  xlink:href="#base-checkbox-mixed-hover" fill="url(#color-accent)" id="checkbox-mixed-hover-dark"/>
-  <use x="272" y="72"  xlink:href="#base-checkbox-mixed-active" fill="url(#color-accent)" id="checkbox-mixed-active-dark"/>
-  <use x="272" y="104" xlink:href="#base-checkbox-mixed" fill="url(#color-accent-disabled)" id="checkbox-mixed-disabled-dark"/>
-
-  <use x="304" y="8"   xlink:href="#base-radio-unchecked" fill="url(#color-fg-secondary-dark)" id="radio-unchecked-dark"/>
-  <use x="304" y="40"  xlink:href="#base-radio-unchecked-hover" fill="url(#color-fg-dark)" id="radio-unchecked-hover-dark"/>
-  <use x="304" y="72"  xlink:href="#base-radio-unchecked-active" fill="url(#color-fg-dark)" id="radio-unchecked-active-dark"/>
-  <use x="304" y="104" xlink:href="#base-radio-unchecked" fill="url(#color-fg-secondary-disabled-dark)" id="radio-unchecked-disabled-dark"/>
-
-  <use x="336" y="8"   xlink:href="#base-radio-checked" fill="url(#color-accent)" id="radio-checked-dark"/>
-  <use x="336" y="40"  xlink:href="#base-radio-checked-hover" fill="url(#color-accent)" id="radio-checked-hover-dark"/>
-  <use x="336" y="72"  xlink:href="#base-radio-checked-active" fill="url(#color-accent)" id="radio-checked-active-dark"/>
-  <use x="336" y="104" xlink:href="#base-radio-checked" fill="url(#color-accent-disabled)" id="radio-checked-disabled-dark"/>
-
-  <use x="368" y="8"   xlink:href="#base-radio-mixed" fill="url(#color-accent)" id="radio-mixed-dark"/>
-  <use x="368" y="40"  xlink:href="#base-radio-mixed-hover" fill="url(#color-accent)" id="radio-mixed-hover-dark"/>
-  <use x="368" y="72"  xlink:href="#base-radio-mixed-active" fill="url(#color-accent)" id="radio-mixed-active-dark"/>
-  <use x="368" y="104" xlink:href="#base-radio-mixed" fill="url(#color-accent-disabled)" id="radio-mixed-disabled-dark"/>
-
-  <use x="212" y="136" xlink:href="#base-menu-checkbox-unchecked" fill="url(#color-fg-secondary-dark)" id="menu-checkbox-unchecked-dark"/>
-  <use x="212" y="160" xlink:href="#base-menu-checkbox-unchecked" fill="url(#color-fg-secondary-disabled-dark)" id="menu-checkbox-unchecked-disabled-dark"/>
-
-  <use x="244" y="136" xlink:href="#base-menu-checkbox-checked" fill="url(#color-accent)" id="menu-checkbox-checked-dark"/>
-  <use x="244" y="160" xlink:href="#base-menu-checkbox-checked" fill="url(#color-accent-disabled)" id="menu-checkbox-checked-disabled-dark"/>
-
-  <use x="276" y="136" xlink:href="#base-menu-checkbox-mixed" fill="url(#color-accent)" id="menu-checkbox-mixed-dark"/>
-  <use x="276" y="160" xlink:href="#base-menu-checkbox-mixed" fill="url(#color-accent-disabled)" id="menu-checkbox-mixed-disabled-dark"/>
-
-  <use x="308" y="136" xlink:href="#base-menu-radio-unchecked" fill="url(#color-fg-secondary-dark)" id="menu-radio-unchecked-dark"/>
-  <use x="308" y="160" xlink:href="#base-menu-radio-unchecked" fill="url(#color-fg-secondary-disabled-dark)" id="menu-radio-unchecked-disabled-dark"/>
-
-  <use x="340" y="136" xlink:href="#base-menu-radio-checked" fill="url(#color-accent)" id="menu-radio-checked-dark"/>
-  <use x="340" y="160" xlink:href="#base-menu-radio-checked" fill="url(#color-accent-disabled)" id="menu-radio-checked-disabled-dark"/>
-
-  <use x="372" y="136" xlink:href="#base-menu-radio-mixed" fill="url(#color-accent)" id="menu-radio-mixed-dark"/>
-  <use x="372" y="160" xlink:href="#base-menu-radio-mixed" fill="url(#color-accent-disabled)" id="menu-radio-mixed-disabled-dark"/>
-
-  <use x="208" y="184" xlink:href="#base-selectionmode-checkbox-unchecked" fill="url(#color-bg-lighter-dark)" id="selectionmode-checkbox-unchecked-dark"/>
-  <use x="256" y="184" xlink:href="#base-selectionmode-checkbox-checked" id="selectionmode-checkbox-checked-dark"/>
-
-  <use x="216" y="240" xlink:href="#base-scale-slider" id="scale-slider-dark"/>
-  <use x="216" y="280" xlink:href="#base-scale-slider-disabled-dark" id="scale-slider-disabled-dark"/>
-
-  <use x="252" y="240" xlink:href="#base-scale-horz-marks-before-slider" id="scale-horz-marks-before-slider-dark"/>
-  <use x="252" y="280" xlink:href="#base-scale-horz-marks-before-slider-disabled-dark" id="scale-horz-marks-before-slider-disabled-dark"/>
-
-  <use x="288" y="240" xlink:href="#base-scale-horz-marks-after-slider" id="scale-horz-marks-after-slider-dark"/>
-  <use x="288" y="280" xlink:href="#base-scale-horz-marks-after-slider-disabled-dark" id="scale-horz-marks-after-slider-disabled-dark"/>
-
-  <use x="324" y="240" xlink:href="#base-scale-vert-marks-before-slider" id="scale-vert-marks-before-slider-dark"/>
-  <use x="324" y="280" xlink:href="#base-scale-vert-marks-before-slider-disabled-dark" id="scale-vert-marks-before-slider-disabled-dark"/>
-
-  <use x="360" y="240" xlink:href="#base-scale-vert-marks-after-slider" id="scale-vert-marks-after-slider-dark"/>
-  <use x="360" y="280" xlink:href="#base-scale-vert-marks-after-slider-disabled-dark" id="scale-vert-marks-after-slider-disabled-dark"/>
-
-  <use x="208" y="320" xlink:href="#base-box" fill="url(#color-base-dark)" filter="url(#2)" id="box-shadow-dark"/>
-  <use x="264" y="320" xlink:href="#base-box" fill="url(#color-base-dark)" filter="url(#1)" id="box-shadow-backdrop-dark"/>
+  <use
+     x="8"
+     y="8"
+     xlink:href="#base-checkbox-unchecked"
+     fill="url(#color-fg-secondary)"
+     id="checkbox-unchecked" />
+  <use
+     x="8"
+     y="40"
+     xlink:href="#base-checkbox-unchecked-hover"
+     fill="url(#color-fg)"
+     id="checkbox-unchecked-hover" />
+  <use
+     x="8"
+     y="72"
+     xlink:href="#base-checkbox-unchecked-active"
+     fill="url(#color-fg)"
+     id="checkbox-unchecked-active" />
+  <use
+     x="8"
+     y="104"
+     xlink:href="#base-checkbox-unchecked"
+     fill="url(#color-fg-secondary-disabled)"
+     id="checkbox-unchecked-disabled" />
+  <use
+     x="40"
+     y="8"
+     xlink:href="#base-checkbox-checked"
+     fill="url(#color-accent)"
+     id="checkbox-checked" />
+  <use
+     x="40"
+     y="40"
+     xlink:href="#base-checkbox-checked-hover"
+     fill="url(#color-accent)"
+     id="checkbox-checked-hover" />
+  <use
+     x="40"
+     y="72"
+     xlink:href="#base-checkbox-checked-active"
+     fill="url(#color-accent)"
+     id="checkbox-checked-active" />
+  <use
+     x="40"
+     y="104"
+     xlink:href="#base-checkbox-checked"
+     fill="url(#color-accent-disabled)"
+     id="checkbox-checked-disabled" />
+  <use
+     x="72"
+     y="8"
+     xlink:href="#base-checkbox-mixed"
+     fill="url(#color-accent)"
+     id="checkbox-mixed" />
+  <use
+     x="72"
+     y="40"
+     xlink:href="#base-checkbox-mixed-hover"
+     fill="url(#color-accent)"
+     id="checkbox-mixed-hover" />
+  <use
+     x="72"
+     y="72"
+     xlink:href="#base-checkbox-mixed-active"
+     fill="url(#color-accent)"
+     id="checkbox-mixed-active" />
+  <use
+     x="72"
+     y="104"
+     xlink:href="#base-checkbox-mixed"
+     fill="url(#color-accent-disabled)"
+     id="checkbox-mixed-disabled" />
+  <use
+     x="104"
+     y="8"
+     xlink:href="#base-radio-unchecked"
+     fill="url(#color-fg-secondary)"
+     id="radio-unchecked" />
+  <use
+     x="104"
+     y="40"
+     xlink:href="#base-radio-unchecked-hover"
+     fill="url(#color-fg)"
+     id="radio-unchecked-hover" />
+  <use
+     x="104"
+     y="72"
+     xlink:href="#base-radio-unchecked-active"
+     fill="url(#color-fg)"
+     id="radio-unchecked-active" />
+  <use
+     x="104"
+     y="104"
+     xlink:href="#base-radio-unchecked"
+     fill="url(#color-fg-secondary-disabled)"
+     id="radio-unchecked-disabled" />
+  <use
+     x="136"
+     y="8"
+     xlink:href="#base-radio-checked"
+     fill="url(#color-accent)"
+     id="radio-checked" />
+  <use
+     x="136"
+     y="40"
+     xlink:href="#base-radio-checked-hover"
+     fill="url(#color-accent)"
+     id="radio-checked-hover" />
+  <use
+     x="136"
+     y="72"
+     xlink:href="#base-radio-checked-active"
+     fill="url(#color-accent)"
+     id="radio-checked-active" />
+  <use
+     x="136"
+     y="104"
+     xlink:href="#base-radio-checked"
+     fill="url(#color-accent-disabled)"
+     id="radio-checked-disabled" />
+  <use
+     x="168"
+     y="8"
+     xlink:href="#base-radio-mixed"
+     fill="url(#color-accent)"
+     id="radio-mixed" />
+  <use
+     x="168"
+     y="40"
+     xlink:href="#base-radio-mixed-hover"
+     fill="url(#color-accent)"
+     id="radio-mixed-hover" />
+  <use
+     x="168"
+     y="72"
+     xlink:href="#base-radio-mixed-active"
+     fill="url(#color-accent)"
+     id="radio-mixed-active" />
+  <use
+     x="168"
+     y="104"
+     xlink:href="#base-radio-mixed"
+     fill="url(#color-accent-disabled)"
+     id="radio-mixed-disabled" />
+  <use
+     x="12"
+     y="136"
+     xlink:href="#base-menu-checkbox-unchecked"
+     fill="url(#color-fg-secondary)"
+     id="menu-checkbox-unchecked" />
+  <use
+     x="12"
+     y="160"
+     xlink:href="#base-menu-checkbox-unchecked"
+     fill="url(#color-fg-secondary-disabled)"
+     id="menu-checkbox-unchecked-disabled" />
+  <use
+     x="44"
+     y="136"
+     xlink:href="#base-menu-checkbox-checked"
+     fill="url(#color-accent)"
+     id="menu-checkbox-checked" />
+  <use
+     x="44"
+     y="160"
+     xlink:href="#base-menu-checkbox-checked"
+     fill="url(#color-accent-disabled)"
+     id="menu-checkbox-checked-disabled" />
+  <use
+     x="76"
+     y="136"
+     xlink:href="#base-menu-checkbox-mixed"
+     fill="url(#color-accent)"
+     id="menu-checkbox-mixed" />
+  <use
+     x="76"
+     y="160"
+     xlink:href="#base-menu-checkbox-mixed"
+     fill="url(#color-accent-disabled)"
+     id="menu-checkbox-mixed-disabled" />
+  <use
+     x="108"
+     y="136"
+     xlink:href="#base-menu-radio-unchecked"
+     fill="url(#color-fg-secondary)"
+     id="menu-radio-unchecked" />
+  <use
+     x="108"
+     y="160"
+     xlink:href="#base-menu-radio-unchecked"
+     fill="url(#color-fg-secondary-disabled)"
+     id="menu-radio-unchecked-disabled" />
+  <use
+     x="140"
+     y="136"
+     xlink:href="#base-menu-radio-checked"
+     fill="url(#color-accent)"
+     id="menu-radio-checked" />
+  <use
+     x="140"
+     y="160"
+     xlink:href="#base-menu-radio-checked"
+     fill="url(#color-accent-disabled)"
+     id="menu-radio-checked-disabled" />
+  <use
+     x="172"
+     y="136"
+     xlink:href="#base-menu-radio-mixed"
+     fill="url(#color-accent)"
+     id="menu-radio-mixed" />
+  <use
+     x="172"
+     y="160"
+     xlink:href="#base-menu-radio-mixed"
+     fill="url(#color-accent-disabled)"
+     id="menu-radio-mixed-disabled" />
+  <use
+     x="8"
+     y="184"
+     xlink:href="#base-selectionmode-checkbox-unchecked"
+     fill="url(#color-bg-lighter)"
+     id="selectionmode-checkbox-unchecked" />
+  <use
+     x="56"
+     y="184"
+     xlink:href="#base-selectionmode-checkbox-checked"
+     id="selectionmode-checkbox-checked" />
+  <use
+     x="16"
+     y="240"
+     xlink:href="#base-scale-slider"
+     id="scale-slider"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="16"
+     y="280"
+     xlink:href="#base-scale-slider-disabled"
+     id="scale-slider-disabled"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="52"
+     y="240"
+     xlink:href="#base-scale-horz-marks-before-slider"
+     id="scale-horz-marks-before-slider"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="52"
+     y="280"
+     xlink:href="#base-scale-horz-marks-before-slider-disabled"
+     id="scale-horz-marks-before-slider-disabled"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="88"
+     y="240"
+     xlink:href="#base-scale-horz-marks-after-slider"
+     id="scale-horz-marks-after-slider"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="88"
+     y="280"
+     xlink:href="#base-scale-horz-marks-after-slider-disabled"
+     id="scale-horz-marks-after-slider-disabled"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="124"
+     y="240"
+     xlink:href="#base-scale-vert-marks-before-slider"
+     id="scale-vert-marks-before-slider"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="124"
+     y="280"
+     xlink:href="#base-scale-vert-marks-before-slider-disabled"
+     id="scale-vert-marks-before-slider-disabled"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="160"
+     y="240"
+     xlink:href="#base-scale-vert-marks-after-slider"
+     id="scale-vert-marks-after-slider"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="160"
+     y="280"
+     xlink:href="#base-scale-vert-marks-after-slider-disabled"
+     id="scale-vert-marks-after-slider-disabled"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="8"
+     y="320"
+     xlink:href="#base-box"
+     fill="url(#color-base)"
+     filter="url(#2)"
+     id="box-shadow" />
+  <use
+     x="64"
+     y="320"
+     xlink:href="#base-box"
+     fill="url(#color-base)"
+     filter="url(#1)"
+     id="box-shadow-backdrop" />
+  <use
+     x="208"
+     y="8"
+     xlink:href="#base-checkbox-unchecked"
+     fill="url(#color-fg-secondary-dark)"
+     id="checkbox-unchecked-dark" />
+  <use
+     x="208"
+     y="40"
+     xlink:href="#base-checkbox-unchecked-hover"
+     fill="url(#color-fg-dark)"
+     id="checkbox-unchecked-hover-dark" />
+  <use
+     x="208"
+     y="72"
+     xlink:href="#base-checkbox-unchecked-active"
+     fill="url(#color-fg-dark)"
+     id="checkbox-unchecked-active-dark" />
+  <use
+     x="208"
+     y="104"
+     xlink:href="#base-checkbox-unchecked"
+     fill="url(#color-fg-secondary-disabled-dark)"
+     id="checkbox-unchecked-disabled-dark" />
+  <use
+     x="240"
+     y="8"
+     xlink:href="#base-checkbox-checked"
+     fill="url(#color-accent)"
+     id="checkbox-checked-dark" />
+  <use
+     x="240"
+     y="40"
+     xlink:href="#base-checkbox-checked-hover"
+     fill="url(#color-accent)"
+     id="checkbox-checked-hover-dark" />
+  <use
+     x="240"
+     y="72"
+     xlink:href="#base-checkbox-checked-active"
+     fill="url(#color-accent)"
+     id="checkbox-checked-active-dark" />
+  <use
+     x="240"
+     y="104"
+     xlink:href="#base-checkbox-checked"
+     fill="url(#color-accent-disabled)"
+     id="checkbox-checked-disabled-dark" />
+  <use
+     x="272"
+     y="8"
+     xlink:href="#base-checkbox-mixed"
+     fill="url(#color-accent)"
+     id="checkbox-mixed-dark" />
+  <use
+     x="272"
+     y="40"
+     xlink:href="#base-checkbox-mixed-hover"
+     fill="url(#color-accent)"
+     id="checkbox-mixed-hover-dark" />
+  <use
+     x="272"
+     y="72"
+     xlink:href="#base-checkbox-mixed-active"
+     fill="url(#color-accent)"
+     id="checkbox-mixed-active-dark" />
+  <use
+     x="272"
+     y="104"
+     xlink:href="#base-checkbox-mixed"
+     fill="url(#color-accent-disabled)"
+     id="checkbox-mixed-disabled-dark" />
+  <use
+     x="304"
+     y="8"
+     xlink:href="#base-radio-unchecked"
+     fill="url(#color-fg-secondary-dark)"
+     id="radio-unchecked-dark" />
+  <use
+     x="304"
+     y="40"
+     xlink:href="#base-radio-unchecked-hover"
+     fill="url(#color-fg-dark)"
+     id="radio-unchecked-hover-dark" />
+  <use
+     x="304"
+     y="72"
+     xlink:href="#base-radio-unchecked-active"
+     fill="url(#color-fg-dark)"
+     id="radio-unchecked-active-dark" />
+  <use
+     x="304"
+     y="104"
+     xlink:href="#base-radio-unchecked"
+     fill="url(#color-fg-secondary-disabled-dark)"
+     id="radio-unchecked-disabled-dark" />
+  <use
+     x="336"
+     y="8"
+     xlink:href="#base-radio-checked"
+     fill="url(#color-accent)"
+     id="radio-checked-dark" />
+  <use
+     x="336"
+     y="40"
+     xlink:href="#base-radio-checked-hover"
+     fill="url(#color-accent)"
+     id="radio-checked-hover-dark" />
+  <use
+     x="336"
+     y="72"
+     xlink:href="#base-radio-checked-active"
+     fill="url(#color-accent)"
+     id="radio-checked-active-dark" />
+  <use
+     x="336"
+     y="104"
+     xlink:href="#base-radio-checked"
+     fill="url(#color-accent-disabled)"
+     id="radio-checked-disabled-dark" />
+  <use
+     x="368"
+     y="8"
+     xlink:href="#base-radio-mixed"
+     fill="url(#color-accent)"
+     id="radio-mixed-dark" />
+  <use
+     x="368"
+     y="40"
+     xlink:href="#base-radio-mixed-hover"
+     fill="url(#color-accent)"
+     id="radio-mixed-hover-dark" />
+  <use
+     x="368"
+     y="72"
+     xlink:href="#base-radio-mixed-active"
+     fill="url(#color-accent)"
+     id="radio-mixed-active-dark" />
+  <use
+     x="368"
+     y="104"
+     xlink:href="#base-radio-mixed"
+     fill="url(#color-accent-disabled)"
+     id="radio-mixed-disabled-dark" />
+  <use
+     x="212"
+     y="136"
+     xlink:href="#base-menu-checkbox-unchecked"
+     fill="url(#color-fg-secondary-dark)"
+     id="menu-checkbox-unchecked-dark" />
+  <use
+     x="212"
+     y="160"
+     xlink:href="#base-menu-checkbox-unchecked"
+     fill="url(#color-fg-secondary-disabled-dark)"
+     id="menu-checkbox-unchecked-disabled-dark" />
+  <use
+     x="244"
+     y="136"
+     xlink:href="#base-menu-checkbox-checked"
+     fill="url(#color-accent)"
+     id="menu-checkbox-checked-dark" />
+  <use
+     x="244"
+     y="160"
+     xlink:href="#base-menu-checkbox-checked"
+     fill="url(#color-accent-disabled)"
+     id="menu-checkbox-checked-disabled-dark" />
+  <use
+     x="276"
+     y="136"
+     xlink:href="#base-menu-checkbox-mixed"
+     fill="url(#color-accent)"
+     id="menu-checkbox-mixed-dark" />
+  <use
+     x="276"
+     y="160"
+     xlink:href="#base-menu-checkbox-mixed"
+     fill="url(#color-accent-disabled)"
+     id="menu-checkbox-mixed-disabled-dark" />
+  <use
+     x="308"
+     y="136"
+     xlink:href="#base-menu-radio-unchecked"
+     fill="url(#color-fg-secondary-dark)"
+     id="menu-radio-unchecked-dark" />
+  <use
+     x="308"
+     y="160"
+     xlink:href="#base-menu-radio-unchecked"
+     fill="url(#color-fg-secondary-disabled-dark)"
+     id="menu-radio-unchecked-disabled-dark" />
+  <use
+     x="340"
+     y="136"
+     xlink:href="#base-menu-radio-checked"
+     fill="url(#color-accent)"
+     id="menu-radio-checked-dark" />
+  <use
+     x="340"
+     y="160"
+     xlink:href="#base-menu-radio-checked"
+     fill="url(#color-accent-disabled)"
+     id="menu-radio-checked-disabled-dark" />
+  <use
+     x="372"
+     y="136"
+     xlink:href="#base-menu-radio-mixed"
+     fill="url(#color-accent)"
+     id="menu-radio-mixed-dark" />
+  <use
+     x="372"
+     y="160"
+     xlink:href="#base-menu-radio-mixed"
+     fill="url(#color-accent-disabled)"
+     id="menu-radio-mixed-disabled-dark" />
+  <use
+     x="208"
+     y="184"
+     xlink:href="#base-selectionmode-checkbox-unchecked"
+     fill="url(#color-bg-lighter-dark)"
+     id="selectionmode-checkbox-unchecked-dark" />
+  <use
+     x="256"
+     y="184"
+     xlink:href="#base-selectionmode-checkbox-checked"
+     id="selectionmode-checkbox-checked-dark" />
+  <use
+     x="216"
+     y="240"
+     xlink:href="#base-scale-slider"
+     id="scale-slider-dark"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="216"
+     y="280"
+     xlink:href="#base-scale-slider-disabled-dark"
+     id="scale-slider-disabled-dark"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="252"
+     y="240"
+     xlink:href="#base-scale-horz-marks-before-slider"
+     id="scale-horz-marks-before-slider-dark"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="252"
+     y="280"
+     xlink:href="#base-scale-horz-marks-before-slider-disabled-dark"
+     id="scale-horz-marks-before-slider-disabled-dark"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="288"
+     y="240"
+     xlink:href="#base-scale-horz-marks-after-slider"
+     id="scale-horz-marks-after-slider-dark"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="288"
+     y="280"
+     xlink:href="#base-scale-horz-marks-after-slider-disabled-dark"
+     id="scale-horz-marks-after-slider-disabled-dark"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="324"
+     y="240"
+     xlink:href="#base-scale-vert-marks-before-slider"
+     id="scale-vert-marks-before-slider-dark"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="324"
+     y="280"
+     xlink:href="#base-scale-vert-marks-before-slider-disabled-dark"
+     id="scale-vert-marks-before-slider-disabled-dark"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="360"
+     y="240"
+     xlink:href="#base-scale-vert-marks-after-slider"
+     id="scale-vert-marks-after-slider-dark"
+     transform="translate(0,-11)"
+     width="100%"
+     height="100%" />
+  <use
+     x="360"
+     y="280"
+     xlink:href="#base-scale-vert-marks-after-slider-disabled-dark"
+     id="scale-vert-marks-after-slider-disabled-dark"
+     transform="translate(0,20)"
+     width="100%"
+     height="100%" />
+  <use
+     x="208"
+     y="320"
+     xlink:href="#base-box"
+     fill="url(#color-base-dark)"
+     filter="url(#2)"
+     id="box-shadow-dark" />
+  <use
+     x="264"
+     y="320"
+     xlink:href="#base-box"
+     fill="url(#color-base-dark)"
+     filter="url(#1)"
+     id="box-shadow-backdrop-dark" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-slider-backdrop"
+     xlink:href="#base-scale-slider"
+     y="240"
+     x="16"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-horz-marks-before-slider-backdrop"
+     xlink:href="#base-scale-horz-marks-before-slider"
+     y="240"
+     x="52"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-horz-marks-after-slider-backdrop"
+     xlink:href="#base-scale-horz-marks-after-slider"
+     y="240"
+     x="88"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-vert-marks-before-slider-backdrop"
+     xlink:href="#base-scale-vert-marks-before-slider"
+     y="240"
+     x="124"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-vert-marks-after-slider-backdrop"
+     xlink:href="#base-scale-vert-marks-after-slider"
+     y="240"
+     x="160"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-slider-backdrop-dark"
+     xlink:href="#base-scale-slider"
+     y="240"
+     x="216"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-horz-marks-before-slider-backdrop-dark"
+     xlink:href="#base-scale-horz-marks-before-slider"
+     y="240"
+     x="252"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-horz-marks-after-slider-backdrop-dark"
+     xlink:href="#base-scale-horz-marks-after-slider"
+     y="240"
+     x="288"
+     style="fill:#484442;fill-opacity:1;opacity:0.5" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-vert-marks-before-slider-backdrop-dark"
+     xlink:href="#base-scale-vert-marks-before-slider"
+     y="240"
+     x="324"
+     style="fill:#484442;fill-opacity:1;opacity:0.5"
+     inkscape:label="#scale-vert-marks-before-slider-backdrop-dark" />
+  <use
+     height="100%"
+     width="100%"
+     transform="translate(0,24)"
+     id="scale-vert-marks-after-slider-backdrop-dark"
+     xlink:href="#base-scale-vert-marks-after-slider"
+     y="240"
+     x="360"
+     style="fill:#484442;fill-opacity:1;opacity:0.5"
+     inkscape:label="scale-vert-marks-after-slider-backdrop-dark" />
 </svg>

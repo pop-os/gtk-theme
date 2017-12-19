@@ -1,0 +1,53 @@
+/*************
+ * Level Bar *
+ *************/
+levelbar {
+  &.horizontal {
+    border-radius: $pop_radius;
+    block { min-height: $bar_size; }
+
+    &.discrete block {
+      min-width: $medium_size;
+
+      &:not(:last-child) { margin-right: $mini_padding; }
+    }
+  }
+
+  &.vertical {
+    border-radius: $pop_radius;
+    block { min-width: $bar_size; }
+
+    &.discrete block {
+      min-height: $medium_size;
+
+      &:not(:last-child) { margin-bottom: $mini_padding; }
+    }
+  }
+
+  // imitate the entry style
+  trough {
+    padding: $mini_padding;
+    border-radius: $circular_radius;
+    box-shadow: $shadow_1;
+    background-color: $base_color;
+    border-radius: $pop_radius;
+
+    &:disabled { background-color: $alt_base_color; }
+  }
+
+  block {
+    border-radius: $pop_radius;
+    &.low { background-color: $warning_color; }
+
+    &.high,
+    &:not(.empty) { 
+      background-color: $primary_color;
+      
+      &:backdrop { background-color: backdrop($primary_color); }
+    }
+
+    &.full { background-color: $success_color; }
+
+    &.empty { background-color: $divider_color; }
+  }
+}

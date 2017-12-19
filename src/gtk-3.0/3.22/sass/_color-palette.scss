@@ -1,7 +1,3 @@
-// based color palette:
-// https://material.io/guidelines/style/color.html#color-color-palette
-
-
 //
 // A Color palette
 //
@@ -28,308 +24,128 @@ $green:  #73c48f; // Confirmation/success
 // Extra Colors that need to be set according to the themes
 $pink: #E91E63;
 $purple: #9C27B0;
-$deep_purple: #673AB7;
 $indigo: #3F51B5;
-$light_blue: #03A9F4;
-$cyan: #00BCD4;
-$teal: #009688;
-$light_green: #8BC34A;
-$lime: #CDDC39;
-$amber: #FFC107;
-$deep_orange: #FF5722;
-$blue_grey: #607D8B;
+$grey: #9E9E9E;
 
 // Red
-$red_50: lighten($red, 90%);
-$red_100: lighten($red, 80%);
-$red_200: lighten($red, 60%);
-$red_300: lighten( $red, 40%);
-$red_400: lighten($red, 20%);
 $red_500: $red;
-$red_600: #db3400;
-$red_700: darken($red, 40%);
-$red_800: darken($red, 60%);
-$red_900: darken($red, 80%);
-$red_A100: lighten($red, 50%);
-$red_A200: $red;
-$red_A400: darken($red, 15%);
-$red_A700: darken($red, 75%);
+$red_400: lighten($red_500, 11%);
+$red_300: lighten($red_400, 11%);
+$red_200: lighten($red_300, 11%);
+$red_100: lighten($red_200, 11%);
+$red_50:  lighten($red_100, 11%);
+$red_600: darken($red_500, 11%); //#db3400;
+$red_700: darken($red_600, 11%);
+$red_800: darken($red_700, 11%);
+$red_900: darken($red_800, 11%);
 
 // Pink
-$pink_50: #FCE4EC;
-$pink_100: #F8BBD0;
-$pink_200: #F48FB1;
-$pink_300: #F06292;
-$pink_400: #EC407A;
-$pink_500: #E91E63;
-$pink_600: #D81B60;
-$pink_700: #C2185B;
-$pink_800: #AD1457;
-$pink_900: #880E4F;
-$pink_A100: #FF80AB;
-$pink_A200: #FF4081;
-$pink_A400: #F50057;
-$pink_A700: #C51162;
+$pink_500: $pink;
+$pink_400: lighten($pink_500, 16%);
+$pink_300: lighten($pink_400, 16%);
+$pink_200: lighten($pink_300, 16%);
+$pink_100: lighten($pink_200, 16%);
+$pink_50:  lighten($pink_100, 16%);
+$pink_600: darken($pink_500, 16%);
+$pink_700: darken($pink_600, 16%);
+$pink_800: darken($pink_700, 16%);
+$pink_900: darken($pink_800, 16%);
 
 // Purple
-$purple_50: #F3E5F5;
-$purple_100: #E1BEE7;
-$purple_200: #CE93D8;
-$purple_300: #BA68C8;
-$purple_400: #AB47BC;
-$purple_500: #9C27B0;
-$purple_600: #8E24AA;
-$purple_700: #7B1FA2;
-$purple_800: #6A1B9A;
-$purple_900: #4A148C;
-$purple_A100: #EA80FC;
-$purple_A200: #E040FB;
-$purple_A400: #D500F9;
-$purple_A700: #AA00FF;
-
-// Deep Purple
-$deep_purple_50: #EDE7F6;
-$deep_purple_100: #D1C4E9;
-$deep_purple_200: #B39DDB;
-$deep_purple_300: #9575CD;
-$deep_purple_400: #7E57C2;
-$deep_purple_500: #673AB7;
-$deep_purple_600: #5E35B1;
-$deep_purple_700: #512DA8;
-$deep_purple_800: #4527A0;
-$deep_purple_900: #311B92;
-$deep_purple_A100: #B388FF;
-$deep_purple_A200: #7C4DFF;
-$deep_purple_A400: #651FFF;
-$deep_purple_A700: #6200EA;
+$purple_500: $purple;
+$purple_400: lighten($purple_500, 16%);
+$purple_300: lighten($purple_400, 16%);
+$purple_200: lighten($purple_300, 16%);
+$purple_100: lighten($purple_200, 16%);
+$purple_50:  lighten($purple_100, 16%);
+$purple_600: darken($purple_500, 16%);
+$purple_700: darken($purple_600, 16%);
+$purple_800: darken($purple_700, 16%);
+$purple_900: darken($purple_800, 16%);
 
 // Indigo
-$indigo_50: #E8EAF6;
-$indigo_100: #C5CAE9;
-$indigo_200: #9FA8DA;
-$indigo_300: #7986CB;
-$indigo_400: #5C6BC0;
-$indigo_500: #3F51B5;
-$indigo_600: #3949AB;
-$indigo_700: #303F9F;
-$indigo_800: #283593;
-$indigo_900: #1A237E;
-$indigo_A100: #8C9EFF;
-$indigo_A200: #536DFE;
-$indigo_A400: #3D5AFE;
-$indigo_A700: #304FFE;
+$indigo_500: $indigo;
+$indigo_400: lighten($indigo_500, 16%);
+$indigo_300: lighten($indigo_400, 16%);
+$indigo_200: lighten($indigo_300, 16%);
+$indigo_100: lighten($indigo_200, 16%);
+$indigo_50:  lighten($indigo_100, 16%);
+$indigo_600: darken($indigo_500, 16%);
+$indigo_700: darken($indigo_600, 16%);
+$indigo_800: darken($indigo_700, 16%);
+$indigo_900: darken($indigo_800, 16%);
 
 // Blue
-$blue_50: lighten($blue, 90%);
-$blue_100: lighten($blue, 80%);
-$blue_200: lighten($blue, 60%);
-$blue_300: lighten( $blue, 40%);
-$blue_400: lighten($blue, 20%);
 $blue_500: $blue;
-$blue_600: darken($blue, 20%);
-$blue_700: darken($blue, 40%);
-$blue_800: darken($blue, 60%);
-$blue_900: darken($blue, 80%);
-$blue_A100: lighten($blue, 50%);
-$blue_A200: $blue;
-$blue_A400: darken($blue, 15%);
-$blue_A700: darken($blue, 75%);
-
-// Light Blue
-$light_blue_50: #E1F5FE;
-$light_blue_100: #B3E5FC;
-$light_blue_200: #81D4FA;
-$light_blue_300: #4FC3F7;
-$light_blue_400: #29B6F6;
-$light_blue_500: #03A9F4;
-$light_blue_600: #039BE5;
-$light_blue_700: #0288D1;
-$light_blue_800: #0277BD;
-$light_blue_900: #01579B;
-$light_blue_A100: #80D8FF;
-$light_blue_A200: #40C4FF;
-$light_blue_A400: #00B0FF;
-$light_blue_A700: #0091EA;
-
-// Cyan
-$cyan_50: #E0F7FA;
-$cyan_100: #B2EBF2;
-$cyan_200: #80DEEA;
-$cyan_300: #4DD0E1;
-$cyan_400: #26C6DA;
-$cyan_500: #00BCD4;
-$cyan_600: #00ACC1;
-$cyan_700: #0097A7;
-$cyan_800: #00838F;
-$cyan_900: #006064;
-$cyan_A100: #84FFFF;
-$cyan_A200: #18FFFF;
-$cyan_A400: #00E5FF;
-$cyan_A700: #00B8D4;
-
-// Teal
-$teal_50: #E0F2F1;
-$teal_100: #B2DFDB;
-$teal_200: #80CBC4;
-$teal_300: #4DB6AC;
-$teal_400: #26A69A;
-$teal_500: #009688;
-$teal_600: #00897B;
-$teal_700: #00796B;
-$teal_800: #00695C;
-$teal_900: #004D40;
-$teal_A100: #A7FFEB;
-$teal_A200: #64FFDA;
-$teal_A400: #1DE9B6;
-$teal_A700: #00BFA5;
+$blue_400: lighten($blue_500, 16%);
+$blue_300: lighten($blue_400, 16%);
+$blue_200: lighten($blue_300, 16%);
+$blue_100: lighten($blue_200, 16%);
+$blue_50:  lighten($blue_100, 16%);
+$blue_600: darken($blue_500, 16%);
+$blue_700: darken($blue_600, 16%);
+$blue_800: darken($blue_700, 16%);
+$blue_900: darken($blue_800, 16%);
 
 // Green
-$green_50: lighten($green, 90%);
-$green_100: lighten($green, 80%);
-$green_200: lighten($green, 60%);
-$green_300: lighten( $green, 40%);
-$green_400: lighten($green, 20%);
 $green_500: $green;
-$green_600: #01967a;
-$green_700: darken($green, 40%);
-$green_800: darken($green, 60%);
-$green_900: darken($green, 80%);
-$green_A100: lighten($green, 50%);
-$green_A200: $green;
-$green_A400: darken($green, 15%);
-$green_A700: darken($green, 75%);
-
-// Light Green
-$light_green_50: #F1F8E9;
-$light_green_100: #DCEDC8;
-$light_green_200: #C5E1A5;
-$light_green_300: #AED581;
-$light_green_400: #9CCC65;
-$light_green_500: #8BC34A;
-$light_green_600: #7CB342;
-$light_green_700: #689F38;
-$light_green_800: #558B2F;
-$light_green_900: #33691E;
-$light_green_A100: #CCFF90;
-$light_green_A200: #B2FF59;
-$light_green_A400: #76FF03;
-$light_green_A700: #64DD17;
-
-// Lime
-$lime_50: #F9FBE7;
-$lime_100: #F0F4C3;
-$lime_200: #E6EE9C;
-$lime_300: #DCE775;
-$lime_400: #D4E157;
-$lime_500: #CDDC39;
-$lime_600: #C0CA33;
-$lime_700: #AFB42B;
-$lime_800: #9E9D24;
-$lime_900: #827717;
-$lime_A100: #F4FF81;
-$lime_A200: #EEFF41;
-$lime_A400: #C6FF00;
-$lime_A700: #AEEA00;
+$green_400: lighten($green_500, 19%);
+$green_300: lighten($green_400, 19%);
+$green_200: lighten($green_300, 19%);
+$green_100: lighten($green_200, 19%);
+$green_50:  lighten($green_100, 19%);
+$green_600: darken($green_500, 19%); //#01967a;
+$green_700: darken($green_600, 19%);
+$green_800: darken($green_700, 19%);
+$green_900: darken($green_800, 19%);
 
 // Yellow
-$yellow_50: lighten($yellow, 90%);
-$yellow_100: lighten($yellow, 80%);
-$yellow_200: lighten($yellow, 60%);
-$yellow_300: lighten( $yellow, 40%);
-$yellow_400: lighten($yellow, 20%);
 $yellow_500: $yellow;
-$yellow_600: darken($yellow, 20%);
-$yellow_700: darken($yellow, 40%);
-$yellow_800: darken($yellow, 60%);
-$yellow_900: darken($yellow, 80%);
-$yellow_A100: lighten($yellow, 50%);
-$yellow_A200: $yellow;
-$yellow_A400: darken($yellow, 15%);
-$yellow_A700: darken($yellow, 75%);
-
-// Amber
-$amber_50: #FFF8E1;
-$amber_100: #FFECB3;
-$amber_200: #FFE082;
-$amber_300: #FFD54F;
-$amber_400: #FFCA28;
-$amber_500: #FFC107;
-$amber_600: #FFB300;
-$amber_700: #FFA000;
-$amber_800: #FF8F00;
-$amber_900: #FF6F00;
-$amber_A100: #FFE57F;
-$amber_A200: #FFD740;
-$amber_A400: #FFC400;
-$amber_A700: #FFAB00;
+$yellow_400: lighten($yellow_500, 11%);
+$yellow_300: lighten($yellow_400, 11%);
+$yellow_200: lighten($yellow_300, 11%);
+$yellow_100: lighten($yellow_200, 11%);
+$yellow_50:  lighten($yellow_100, 11%);
+$yellow_600: darken($yellow_500, 11%);
+$yellow_700: darken($yellow_600, 11%);
+$yellow_800: darken($yellow_700, 11%);
+$yellow_900: darken($yellow_800, 11%);
 
 // Orange
-$orange_50: lighten($orange, 90%);
-$orange_100: lighten($orange, 80%);
-$orange_200: #fcdc97;
-$orange_300: lighten( $orange, 40%);
-$orange_400: lighten($orange, 20%);
 $orange_500: $orange;
-$orange_600: darken($orange, 20%);
-$orange_700: darken($orange, 40%);
-$orange_800: darken($orange, 60%);
-$orange_900: darken($orange, 80%);
-$orange_A100: lighten($orange, 50%);
-$orange_A200: $orange;
-$orange_A400: darken($orange, 15%);
-$orange_A700: darken($orange, 75%);
-
-// Deep Orange
-$deep_orange_50: #FBE9E7;
-$deep_orange_100: #FFCCBC;
-$deep_orange_200: #FFAB91;
-$deep_orange_300: #FF8A65;
-$deep_orange_400: #FF7043;
-$deep_orange_500: #FF5722;
-$deep_orange_600: #F4511E;
-$deep_orange_700: #E64A19;
-$deep_orange_800: #D84315;
-$deep_orange_900: #BF360C;
-$deep_orange_A100: #FF9E80;
-$deep_orange_A200: #FF6E40;
-$deep_orange_A400: #FF3D00;
-$deep_orange_A700: #DD2C00;
+$orange_400: lighten($orange_500, 16%);
+$orange_300: lighten($orange_400, 16%);
+$orange_200: lighten($orange_300, 16%);
+$orange_100: lighten($orange_200, 16%);
+$orange_50: lighten($orange_100, 16%);
+$orange_600: darken($orange_500, 16%);
+$orange_700: darken($orange_600, 16%);
+$orange_800: darken($orange_700, 16%);
+$orange_900: darken($orange_800, 16%);
 
 // Brown
-$brown_50: lighten($warm_gray, 97%);
-$brown_100: lighten($warm_gray, 90%);
-$brown_200: lighten($warm_gray, 75%);
-$brown_300: lighten( $warm_gray, 60%);
-$brown_400: lighten($warm_gray, 45%);
-$brown_500: lighten($warm_gray, 30%);
-$brown_600: lighten($warm_gray, 15%);
 $brown_700: $warm_gray;
-$brown_800: darken($warm_gray, 15%);
-$brown_900: darken($warm_gray, 30%);
+$brown_600: lighten($brown_700, 16%);
+$brown_500: lighten($brown_600, 16%);
+$brown_400: lighten($brown_500, 16%);
+$brown_300: lighten($brown_400, 16%);
+$brown_200: lighten($brown_300, 16%);
+$brown_100: lighten($brown_200, 16%);
+$brown_50:  lighten($brown_100, 16%);
+$brown_800: darken($brown_700, 16%);
+$brown_900: darken($brown_800, 16%);
 
 // Grey
-$grey_50: #FAFAFA;
-$grey_100: #F5F5F5;
-$grey_200: #EEEEEE;
-$grey_300: #E0E0E0;
-$grey_400: #BDBDBD;
-$grey_500: #9E9E9E;
-$grey_600: #757575;
-$grey_700: #616161;
-$grey_800: #424242;
-$grey_900: #212121;
-
-// Blue Grey
-$blue_grey_50: #ECEFF1;
-$blue_grey_100: #CFD8DC;
-$blue_grey_200: #B0BEC5;
-$blue_grey_300: #90A4AE;
-$blue_grey_400: #78909C;
-$blue_grey_500: #607D8B;
-$blue_grey_600: #546E7A;
-$blue_grey_700: #455A64;
-$blue_grey_800: #37474F;
-$blue_grey_900: #263238;
+$grey_500: $medium_gray;
+$grey_400: lighten($grey_500, 9%);
+$grey_300: lighten($grey_400, 9%);
+$grey_200: lighten($grey_300, 9%);
+$grey_100: lighten($grey_200, 9%);
+$grey_50:  lighten($grey_100, 9%);
+$grey_600: darken($grey_500, 14%);
+$grey_700: darken($grey_600, 14%);
+$grey_800: darken($grey_700, 14%);
+$grey_900: darken($grey_800, 14%);
 
 // Black
 $black: #000000;

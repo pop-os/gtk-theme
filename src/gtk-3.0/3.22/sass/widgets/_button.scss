@@ -1,0 +1,343 @@
+/***********
+ * Buttons *
+ ***********/
+
+%button,
+button {
+  @at-root %button_basic, & {
+    min-height: $button_size;
+    min-width: $button_size;
+    padding: $tiny_padding $small_padding;
+    //margin-bottom: 
+    border-radius: $pop_radius;
+    font-weight: 500;
+
+    @include button(normal);
+
+    &:hover { @include button(hover); }
+
+    &:active { @include button(active); }
+
+    &:disabled { @include button(disabled); }
+
+    &:checked { 
+      @include button(checked);
+      /*
+      &:backdrop { 
+        background-color: lighten(desaturate($accent_color, 35%), 15%);
+        color: 
+      }*/
+    }
+
+    &:checked:disabled { @include button(checked-disabled); }
+    
+
+    @at-root %flat_button, &.flat {
+      @at-root %simple_flat_button, & {
+        @include button(flat-normal);
+
+        &:hover { @include button(flat-hover); }
+
+        &:active { @include button(flat-active); }
+
+        &:disabled { @include button(flat-disabled); }
+      }
+
+      &:checked { @include button(flat-checked); }
+
+      &:checked:disabled { @include button(flat-checked-disabled); }
+    }
+
+    &.text-button {
+      padding-left: $standard_padding;
+      padding-right: $standard_padding;
+    }
+
+    &.image-button {
+      min-width: $button_size;
+      min-height: $button_size;
+      padding: $tiny_padding;
+
+      @extend %circular_button;
+    }
+
+    &.text-button.image-button {
+      border-radius: $pop_radius;
+      -gtk-outline-radius: $pop_radius;
+
+      label {
+        &:first-child { margin-left: $tiny_padding; }
+
+        &:last-child { margin-right: $tiny_padding; }
+      }
+
+      image:not(:only-child) { margin: 0 $tiny_padding; }
+    }
+
+    .linked > & { @extend %linked; }
+
+    .linked.vertical > & { @extend %linked_vertical; }
+
+    .linked > &.flat,
+    .linked.vertical > &.flat {
+      border-radius: $pop_radius;
+
+      &.image-button { @extend %circular_button; }
+
+      &.text-button.image-button {
+        border-radius: $pop_radius;
+        -gtk-outline-radius: $pop_radius;
+      }
+    }
+
+    &:drop(active) {
+      box-shadow: inset 0 0 0 2px $accent_color;
+    }
+  }
+
+  @at-root %button_selected, row:selected & {
+    &:disabled {
+      background-color: $inverse_divider_color;
+      color: $inverse_disabled_secondary_fg_color;
+    }
+
+    &.flat {
+      color: $inverse_secondary_fg_color;
+
+      &:hover, &:active { color: $inverse_fg_color; }
+
+      &:disabled { color: $inverse_disabled_secondary_fg_color; }
+
+      &:checked {
+        background-color: $inverse_track_color;
+        color: $inverse_fg_color;
+      }
+
+      &:checked:disabled {
+        background-color: $inverse_divider_color;
+        color: $inverse_disabled_fg_color;
+      }
+    }
+  }
+
+  // big standalone buttons like in Documents pager
+  &.osd {
+    padding: $standard_padding $large_padding;
+
+    &.image-button { padding: $standard_padding; }
+
+    &:disabled { opacity: 0; }
+  }
+
+  // overlay / OSD style
+  @at-root %osd_button,
+  .osd & {
+  }
+
+  // Suggested and Destructive Action buttons
+  @each $b_type, $b_color in (suggested-action, $suggested_color),
+                             (destructive-action, $destructive_color) {
+    &.#{$b_type} {
+      background-color: $b_color;
+      color: $inverse_fg_color;
+
+      &:disabled { @include button(disabled, $b_color); }
+
+      &:checked { background-color: mix($inverse_fg_color, $b_color, percentage($lower_opacity)); }
+
+      &.flat {
+        background-color: transparent;
+        color: $b_color;
+
+        &:disabled { @include button(flat-disabled, $b_color); }
+
+        &:checked { background-color: rgba($b_color, 0.3); }
+      }
+
+      .osd & {
+      }
+    }
+  }
+
+  .stack-switcher > & {
+    // to position the needs attention dot, padding is added to the button
+    // child, a label needs just lateral padding while an icon needs vertical
+    // padding added too.
+
+    outline-offset: -4px; // needs to be set or it gets overriden by GtkRadioButton outline-offset
+
+    > label {
+      padding-left: $tiny_padding;  // label padding
+      padding-right: $tiny_padding; //
+    }
+
+    > image {
+      padding-left: $tiny_padding;   // image padding
+      padding-right: $tiny_padding;  //
+      padding-top: $tiny_padding / 2;    //
+      padding-bottom: $tiny_padding / 2; //
+    }
+
+    &.text-button {
+      // compensate text-button paddings
+      padding-left: $standard_padding;
+      padding-right: $standard_padding;
+    }
+
+    &.image-button {
+      // we want image buttons to have a 1:1 aspect ratio, so compensation
+      // of the padding added to the GtkImage is needed
+      padding-left: $image_button_padding;
+      padding-right: $image_button_padding;
+    }
+
+    &.needs-attention {
+      > label,
+      > image { @extend %needs_attention; }
+
+      &:checked {
+        > label,
+        > image {
+          animation: none;
+          background-image: none;
+        }
+      }
+    }
+  }
+
+  // hide separators
+  &.font,
+  &.file { separator { @extend %hide_separators; }}
+
+  // &.font { > box > box > label { font-weight: bold; }}
+
+  // inline-toolbar buttons
+  .inline-toolbar & {
+    // @extend %button_basic.flat;
+
+    &:not(.text-button) { @extend %circular_button; }
+  }
+
+  .primary-toolbar & { -gtk-icon-shadow: none; } // tango icons don't need shadows
+
+  @at-root %circular_button,
+  &.close,
+  &.circular { // The Bloody Circul Button
+    border-radius: $circular_radius;
+    -gtk-outline-radius: $circular_radius;
+
+    // label { padding: 0; }
+  }
+
+  @at-root %small_button {
+    min-height: $button_size - 4px;
+    min-width: $button_size - 4px;
+    padding: 0;
+    border-radius: $circular_radius;
+    -gtk-outline-radius: $circular_radius;
+  }
+}
+
+%needs_attention {
+  animation: needs_attention $longer_duration $deceleration_curve forwards;
+  background-repeat: no-repeat;
+  background-position: right 3px;
+  background-size: 6px 6px;
+
+  &:dir(rtl) { background-position: left 3px; }
+}
+
+// all the following is for the +|- buttons on inline toolbars, that way
+// should really be deprecated...
+.inline-toolbar toolbutton > button { // redefining the button look is
+                                      // needed since those are flat...
+}
+
+// More inline toolbar buttons
+toolbar.inline-toolbar toolbutton {
+  // > button.flat { @extend %linked_middle; }
+
+  // &:first-child > button.flat { @extend %linked:first-child; }
+
+  // &:last-child > button.flat { @extend %linked:last-child; }
+
+  // &:only-child > button.flat { @extend %linked:only-child; }
+}
+
+%linked_middle {
+  border-radius: 0;
+  -gtk-outline-radius: $pop_radius;
+}
+
+%linked {
+  @extend %linked_middle;
+
+  &:first-child {
+    border-top-left-radius: $pop_radius;
+    border-bottom-left-radius: $pop_radius;
+    margin-right: 0;
+  }
+
+  &:last-child {
+    border-top-right-radius: $pop_radius;
+    border-bottom-right-radius: $pop_radius;
+    margin-left: 0;
+  }
+
+  &:only-child {
+    border-radius: $pop_radius;
+  }
+}
+
+%linked_vertical_middle {
+  border-radius: 0;
+  -gtk-outline-radius: $pop_radius;
+}
+
+%linked_vertical {
+  @extend %linked_vertical_middle;
+
+  &:first-child {
+    border-top-left-radius: $pop_radius;
+    border-top-right-radius: $pop_radius;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $pop_radius;
+    border-bottom-right-radius: $pop_radius;
+  }
+
+  &:only-child {
+    border-radius: $pop_radius;
+  }
+}
+
+/* menu buttons */
+modelbutton.flat,
+.menuitem.button.flat {
+  min-height: $button_size;
+  padding: 0 $small_padding;
+  border-radius: $pop_radius;
+  color: inherit;
+
+  @extend %simple_flat_button;
+  transition: none;
+  &:selected { @extend %selected_items; }
+}
+
+modelbutton.flat arrow {
+  background: none;
+
+  &:hover { background: none; }
+
+  &.left { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+
+  &.right { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+}
+
+button.color {
+  min-height: $button_size;
+  min-width: $button_size;
+  padding: $tiny_padding;
+}
+

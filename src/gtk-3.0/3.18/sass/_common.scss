@@ -1072,7 +1072,6 @@ column-header.button.dnd { // for treeview-like derive widgets
   -GtkWidget-focus-line-width: 0;
   &.frame {
     border: 1px solid $border_color;
-    // FIXME doesn't work
     &.top { border-top-width: 0; }
     &.bottom { border-bottom-width: 0; }
     &.right { border-right-width: 0; }
@@ -2202,9 +2201,7 @@ GtkVolumeButton.button {
   border-radius: 2px 2px 0 0;
   box-shadow: $shadow_4;
 
-  // FIXME rationalize window-frame shadows
-
-  /* this is used for the resize cursor area */
+/* this is used for the resize cursor area */
   margin: 8px;
 
   &:backdrop {
