@@ -48,18 +48,26 @@ headerbar {
   button:not(.suggested-action):not(.destructive-action) {
     @extend %button_basic.flat;
     
-    &.close {
-      margin: $close_button_size;
-      padding: $close_button_size;
+    &.titlebutton {
+      padding: $mini_padding * 2;
       min-width: $close_button_size;
       min-height: $close_button_size;
-      background-color: mix($destructive_color, $accent_color, 50%);
       
-      color: $white;
+      &.close {
+        background-color: mix($destructive_color, $accent_color, 50%);
+        
+        color: $white;
+        
+        &:backdrop {
+          background-color: $inverse_divider_color;
+          color: $titlebar_fg_color;
+        }
+      }
       
-      &:backdrop {
-        background-color: $inverse_divider_color;
-        color: $titlebar_fg_color;
+      &.appmenu > image {
+        padding: $tiny_padding;
+        min-width: $small_size;
+        min-height: $small_size;
       }
     }
 
@@ -282,8 +290,8 @@ window.tiled-right {
 
   @extend %titlebar;
   
-  button.close{
-    padding: $close_button_size;
+  button.titlebutton { 
+    padding: $mini_padding * 2;
     min-width: $close_button_size;
     min-height: $close_button_size;
   }

@@ -20,7 +20,7 @@ $sidebar_placeholder_size: 4px;
 $separator_size: 1px;
 $headerbar-size: 40px;
 $headerbar_button_size: if($compact == 'false', 8px, 6px);
-$close_button_size: if($compact == 'false', 4px, 4px);
+$close_button_size: $small_size;
 $bar_size: 4px;
 $menuitem_size: $small_size;
 $shortcut_key_size: $medium_size;
