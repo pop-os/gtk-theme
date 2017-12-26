@@ -2,7 +2,7 @@
 
 .login-dialog-banner-view {
   padding-top: 24px;
-  max-width: 23em;
+  max-width: 27em;
 }
 
 .login-dialog {
@@ -65,7 +65,7 @@
 .login-dialog-user-list {
   spacing: 12px;
   padding: .2em;
-  width: 23em;
+  width: 27em;
   &:expanded .login-dialog-user-list-item:selected { background-color: $inverse_divider_color; color: $inverse_fg_color; }
   &:expanded .login-dialog-user-list-item:hover { background-color: $inverse_divider_color; color: $inverse_fg_color; }
   &:expanded .login-dialog-user-list-item:active { background-color: $inverse_track_color; color: $inverse_fg_color; }
@@ -103,7 +103,7 @@
     padding-top: 24px;
     padding-bottom: 12px;
     spacing: 8px;
-    width: 23em;
+    width: 27em;
 }
 
 .login-dialog-prompt-label {
