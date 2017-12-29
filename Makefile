@@ -72,7 +72,7 @@ install:
 	    else \
 	      cp -urL \
 	        assets-dark \
-	        $$themedir/gnome-shell; \
+	        $$themedir/gnome-shell/assets; \
 	    fi; \
 	    cp -ur \
 	      gnome-shell$$color$$size.css \
