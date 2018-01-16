@@ -14,7 +14,7 @@
     box-shadow: none;
   }
 
-  &:overview,
+  //&:overview, // <- this breaks the overview transition on the primary display. See https://github.com/pop-os/gtk-theme/issues/93
   &.unlock-screen,
   &.login-screen,
   &.lock-screen {
