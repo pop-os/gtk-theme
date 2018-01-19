@@ -4,7 +4,7 @@
 %titlebar,
 headerbar {
   transition: background-color $shorter_duration $deceleration_curve, color $longer_duration $deceleration_curve;
-  min-height: $medium_size;
+  min-height: $headerbar_size;
   padding: 0 $tiny_padding;
   box-shadow: $shadow_1, inset 0 1px $titlebar_highlight_color;
   background-color: $titlebar_bg_color;
