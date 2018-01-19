@@ -1,9 +1,15 @@
-pop-gtk-theme (3.0.2) UNRELEASED; urgency=medium
+pop-gtk-theme (3.0.3) artful; urgency=medium
+
+  * Fix bug with animating Overview. GH:pop-os/gtk-theme#93
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 16 Jan 2018 11:52:04 -0700
+
+pop-gtk-theme (3.0.2) artful; urgency=medium
 
   * Ensure better headerbar size in -slim. 
-  * Make sure titlebuttons are all round.
+  * Make sure titlebuttons are all round. 
 
- -- Ian Santopietro <ian@system76.com>  Tue, 26 Dec 2017 14:46:40 -0700
+ -- Ian Santopietro <ian@system76.com>  Tue, 16 Jan 2018 11:51:15 -0700
 
 pop-gtk-theme (3.0.1) artful; urgency=medium
 
