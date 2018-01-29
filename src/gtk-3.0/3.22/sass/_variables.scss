@@ -18,6 +18,7 @@ $titlebar_size: $medium_size;
 $entry_size: $medium_size;
 $sidebar_placeholder_size: 4px;
 $separator_size: 1px;
+$headerbar-size: 40px;
 $headerbar_button_size: if($compact == 'false', 8px, 6px);
 $close_button_size: if($compact == 'false', 4px, 4px);
 $bar_size: 4px;
