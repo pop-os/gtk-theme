@@ -32,8 +32,12 @@ headerbar {
   }
   
   separator {
-    background: none;
+    background-color: $titlebar_bg_color;
     margin: 0 $standard_padding;
+    
+    &:backdrop {
+      background-color: $inactive_titlebar_bg_color;
+    }
     
     &:first-child,
     &:last-child {
@@ -267,7 +271,7 @@ window.tiled-right {
   }
 
   > separator {
-    background: none;
+    background: $titlebar_bg_color;
     color: $titlebar_bg_color;
     border: none;
     padding: 0;
