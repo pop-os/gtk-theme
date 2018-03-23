@@ -45,7 +45,7 @@ $inverse_divider_color:               rgba($white, 0.12);
 $bg_color:         if($variant == 'light', $grey_100, darken( mix($grey_700, $brown_700, 50%), 5%));
 $base_color:       if($variant == 'light', lighten($grey_100, 2%),   darken( mix($grey_700, $brown_700, 50%), 7%));
 $alt_base_color:   if($variant == 'light', $grey_200,  mix($base_color, $bg_color, 50%));
-$lighter_bg_color: if($variant == 'light', $grey_50,  mix($grey_700, $brown_700, 50%); //FIXME: lol
+$lighter_bg_color: if($variant == 'light', $grey_50,  mix($grey_700, $brown_700, 50%)); //FIXME: lol
 $darker_bg_color:  if($variant == 'light', $grey_300, mix($grey_700, $brown_700, 50%));
 
 $titlebar_bg_color:          if($titlebar == 'dark',
