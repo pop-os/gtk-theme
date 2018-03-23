@@ -74,10 +74,16 @@ $row_fill_color:  gtkalpha(currentColor, 0.05);
 $modal_button_color: if($variant == 'light', $orange_300, $orange_600);
 
 // Misc colors
-$primary_color:         if($variant == 'light', $blue_500, $blue_600);
-$alt_primary_color:     $blue_300;
-$accent_color:          if($variant == 'light', $orange_500, $orange_600);
-$disabled_accent_color: rgba($accent_color, 0.5);
+$primary_color:         if($titlebar == 'dark',
+                          if($variant == 'light', 
+                              $blue_500, $blue_600),
+                          darken($blue_500, 7%));
+$alt_primary_color:     rgba($primary_color, 0.7);
+$accent_color:          if($titlebar == 'dark',
+                          if($variant == 'light', 
+                              $orange_500, $orange_600),
+                          darken($orange_500, 7%));
+$disabled_accent_color: rgba($accent_color, 0.7);
 
 $link_color:         $orange_500;
 $visited_link_color: if($variant == 'dark', $orange_400, $orange_600);
