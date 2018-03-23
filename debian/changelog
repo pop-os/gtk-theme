@@ -1,4 +1,4 @@
-pop-gtk-theme (3.1.0) UNRELEASED; urgency=medium
+pop-gtk-theme (3.1.0) bionic; urgency=medium
 
   * Fix black separators on split headerbars
   * Tweak background colors on light themes
@@ -7,7 +7,7 @@ pop-gtk-theme (3.1.0) UNRELEASED; urgency=medium
   * Ensure that titlebar buttons are all the same size
   * Ensure that round titlebar button are all actually round
 
- -- Ian Santopietro <ian@system76.com>  Fri, 23 Mar 2018 13:11:15 -0600
+ -- Ian Santopietro <ian@system76.com>  Fri, 23 Mar 2018 13:19:58 -0600
 
 pop-gtk-theme (3.0.3) artful; urgency=medium
 
