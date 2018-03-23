@@ -137,11 +137,11 @@ $brown_900: darken($brown_800, 16%);
 
 // Grey
 $grey_500: $medium_gray;
-$grey_400: lighten($grey_500, 9%);
-$grey_300: lighten($grey_400, 9%);
-$grey_200: lighten($grey_300, 9%);
-$grey_100: lighten($grey_200, 9%);
-$grey_50:  lighten($grey_100, 9%);
+$grey_400: #DEDEDE;
+$grey_300: #E6E6E6;
+$grey_200: #EDEDED;
+$grey_100: #F5F5F5;
+$grey_50:  #FBFBFB;
 $grey_600: darken($grey_500, 14%);
 $grey_700: darken($grey_600, 14%);
 $grey_800: darken($grey_700, 14%);
