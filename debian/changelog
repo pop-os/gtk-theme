@@ -1,3 +1,14 @@
+pop-gtk-theme (3.1.0) UNRELEASED; urgency=medium
+
+  * Fix black separators on split headerbars
+  * Tweak background colors on light themes
+  * Make the dark theme more neutral
+  * Improve contrast in -light variant
+  * Ensure that titlebar buttons are all the same size
+  * Ensure that round titlebar button are all actually round
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 23 Mar 2018 13:11:15 -0600
+
 pop-gtk-theme (3.0.3) artful; urgency=medium
 
   * Fix bug with animating Overview. GH:pop-os/gtk-theme#93
