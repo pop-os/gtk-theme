@@ -14,7 +14,7 @@
    version="1.1"
    id="svg413"
    sodipodi:docname="assets.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+   inkscape:version="0.92+devel (unknown)">
   <metadata
      id="metadata415">
     <rdf:RDF>
@@ -31,10 +31,11 @@
      id="namedview4"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     inkscape:zoom="2.85"
-     inkscape:cx="182.00745"
-     inkscape:cy="145.15041"
-     inkscape:current-layer="svg413">
+     inkscape:zoom="2.0152543"
+     inkscape:cx="67.03427"
+     inkscape:cy="265.33123"
+     inkscape:current-layer="svg413"
+     inkscape:document-rotation="0">
     <inkscape:grid
        empspacing="4"
        id="grid2" />
@@ -54,6 +55,18 @@
      id="rect8" />
   <defs
      id="defs311">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1207">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1203" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop1205" />
+    </linearGradient>
     <!-- <solidColor id="color-fg" solid-color="#574f4a" solid-opacity="0.87"/> -->
     <!-- <solidColor id="color-fg-dark" solid-color="#FFFFFF"/> -->
     <linearGradient
@@ -66,7 +79,7 @@
     <linearGradient
        id="color-fg-dark">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#f6f6f6"
          id="stop13" />
     </linearGradient>
     <linearGradient
@@ -79,7 +92,7 @@
     <linearGradient
        id="color-fg-secondary-dark">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#f6f6f6"
          stop-opacity="0.7"
          id="stop19" />
     </linearGradient>
@@ -107,7 +120,7 @@
     <linearGradient
        id="color-divider-dark">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#f6f6f6"
          stop-opacity="0.12"
          id="stop31" />
     </linearGradient>
@@ -118,10 +131,22 @@
          id="stop34" />
     </linearGradient>
     <linearGradient
+       id="color-accent-dark">
+      <stop
+         stop-color="#BE7704"
+         id="stop26" />
+    </linearGradient>
+    <linearGradient
        id="color-primary">
       <stop
          stop-color="#48b9c7"
          id="stop37" />
+    </linearGradient>
+    <linearGradient
+       id="color-primary-dark">
+      <stop
+         stop-color="#2C8691"
+         id="stop32" />
     </linearGradient>
     <linearGradient
        id="color-accent-disabled">
@@ -129,6 +154,13 @@
          stop-color="#faa41a"
          stop-opacity="0.5"
          id="stop40" />
+    </linearGradient>
+    <linearGradient
+       id="color-accent-disabled-dark">
+      <stop
+         stop-color="#BE7704"
+         stop-opacity="0.5"
+         id="stop38" />
     </linearGradient>
     <linearGradient
        id="color-bg">
@@ -139,7 +171,7 @@
     <linearGradient
        id="color-bg-dark">
       <stop
-         stop-color="#49423e"
+         stop-color="#3F3B39"
          id="stop46" />
     </linearGradient>
     <linearGradient
@@ -151,7 +183,7 @@
     <linearGradient
        id="color-bg-lighter-dark">
       <stop
-         stop-color="#574f4a"
+         stop-color="#4C4845"
          id="stop52" />
     </linearGradient>
     <linearGradient
@@ -163,7 +195,7 @@
     <linearGradient
        id="color-base-dark">
       <stop
-         stop-color="#4a5c64"
+         stop-color="#4C4845"
          id="stop58" />
     </linearGradient>
     <filter
@@ -766,6 +798,290 @@
          y="8"
          id="use308" />
     </g>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1155" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1157" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1159" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1161" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1163" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1165" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1167" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1169" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1171" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1173" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1175" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1177" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1179" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1181" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1183" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-dark"
+       id="linearGradient1185" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1187" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1189" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1191" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1193" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1195" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1197" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1199" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-accent-disabled-dark"
+       id="linearGradient1201" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1209"
+       x1="216"
+       y1="250.5"
+       x2="237"
+       y2="250.5"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1211"
+       x1="252"
+       y1="248"
+       x2="273"
+       y2="248"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1213"
+       x1="288"
+       y1="253"
+       x2="309"
+       y2="253"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary"
+       id="linearGradient1215"
+       x1="319"
+       y1="250.5"
+       x2="345"
+       y2="250.5"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg-lighter-dark"
+       id="linearGradient1217"
+       x1="360"
+       y1="250.5"
+       x2="386"
+       y2="250.5"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1225"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1229"
+       gradientUnits="userSpaceOnUse"
+       x1="216"
+       y1="250.5"
+       x2="237"
+       y2="250.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1239"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1243"
+       gradientUnits="userSpaceOnUse"
+       x1="252"
+       y1="248"
+       x2="273"
+       y2="248" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1253"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1257"
+       gradientUnits="userSpaceOnUse"
+       x1="288"
+       y1="253"
+       x2="309"
+       y2="253" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1267"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1207"
+       id="linearGradient1271"
+       gradientUnits="userSpaceOnUse"
+       x1="319"
+       y1="250.5"
+       x2="345"
+       y2="250.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1281"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg-lighter-dark"
+       id="linearGradient1285"
+       gradientUnits="userSpaceOnUse"
+       x1="360"
+       y1="250.5"
+       x2="386"
+       y2="250.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1295"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1307"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1319"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1331"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1343"
+       x1="0"
+       y1="0"
+       x2="21"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,10.5,10.5)" />
   </defs>
   <use
      x="8"
@@ -1117,49 +1433,57 @@
      y="8"
      xlink:href="#base-checkbox-checked"
      fill="url(#color-accent)"
-     id="checkbox-checked-dark" />
+     id="checkbox-checked-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1157)" />
   <use
      x="240"
      y="40"
      xlink:href="#base-checkbox-checked-hover"
      fill="url(#color-accent)"
-     id="checkbox-checked-hover-dark" />
+     id="checkbox-checked-hover-dark"
+     style="fill-opacity:1.0;fill:url(#linearGradient1155)" />
   <use
      x="240"
      y="72"
      xlink:href="#base-checkbox-checked-active"
      fill="url(#color-accent)"
-     id="checkbox-checked-active-dark" />
+     id="checkbox-checked-active-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1159)" />
   <use
      x="240"
      y="104"
      xlink:href="#base-checkbox-checked"
      fill="url(#color-accent-disabled)"
-     id="checkbox-checked-disabled-dark" />
+     id="checkbox-checked-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1187)" />
   <use
      x="272"
      y="8"
      xlink:href="#base-checkbox-mixed"
      fill="url(#color-accent)"
-     id="checkbox-mixed-dark" />
+     id="checkbox-mixed-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1161)" />
   <use
      x="272"
      y="40"
      xlink:href="#base-checkbox-mixed-hover"
      fill="url(#color-accent)"
-     id="checkbox-mixed-hover-dark" />
+     id="checkbox-mixed-hover-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1163)" />
   <use
      x="272"
      y="72"
      xlink:href="#base-checkbox-mixed-active"
      fill="url(#color-accent)"
-     id="checkbox-mixed-active-dark" />
+     id="checkbox-mixed-active-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1165)" />
   <use
      x="272"
      y="104"
      xlink:href="#base-checkbox-mixed"
      fill="url(#color-accent-disabled)"
-     id="checkbox-mixed-disabled-dark" />
+     id="checkbox-mixed-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1189)" />
   <use
      x="304"
      y="8"
@@ -1189,49 +1513,57 @@
      y="8"
      xlink:href="#base-radio-checked"
      fill="url(#color-accent)"
-     id="radio-checked-dark" />
+     id="radio-checked-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1167)" />
   <use
      x="336"
      y="40"
      xlink:href="#base-radio-checked-hover"
      fill="url(#color-accent)"
-     id="radio-checked-hover-dark" />
+     id="radio-checked-hover-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1169)" />
   <use
      x="336"
      y="72"
      xlink:href="#base-radio-checked-active"
      fill="url(#color-accent)"
-     id="radio-checked-active-dark" />
+     id="radio-checked-active-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1171)" />
   <use
      x="336"
      y="104"
      xlink:href="#base-radio-checked"
      fill="url(#color-accent-disabled)"
-     id="radio-checked-disabled-dark" />
+     id="radio-checked-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1191)" />
   <use
      x="368"
      y="8"
      xlink:href="#base-radio-mixed"
      fill="url(#color-accent)"
-     id="radio-mixed-dark" />
+     id="radio-mixed-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1173)" />
   <use
      x="368"
      y="40"
      xlink:href="#base-radio-mixed-hover"
      fill="url(#color-accent)"
-     id="radio-mixed-hover-dark" />
+     id="radio-mixed-hover-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1175)" />
   <use
      x="368"
      y="72"
      xlink:href="#base-radio-mixed-active"
      fill="url(#color-accent)"
-     id="radio-mixed-active-dark" />
+     id="radio-mixed-active-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1177)" />
   <use
      x="368"
      y="104"
      xlink:href="#base-radio-mixed"
      fill="url(#color-accent-disabled)"
-     id="radio-mixed-disabled-dark" />
+     id="radio-mixed-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1193)" />
   <use
      x="212"
      y="136"
@@ -1249,25 +1581,29 @@
      y="136"
      xlink:href="#base-menu-checkbox-checked"
      fill="url(#color-accent)"
-     id="menu-checkbox-checked-dark" />
+     id="menu-checkbox-checked-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1179)" />
   <use
      x="244"
      y="160"
      xlink:href="#base-menu-checkbox-checked"
      fill="url(#color-accent-disabled)"
-     id="menu-checkbox-checked-disabled-dark" />
+     id="menu-checkbox-checked-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1195)" />
   <use
      x="276"
      y="136"
      xlink:href="#base-menu-checkbox-mixed"
      fill="url(#color-accent)"
-     id="menu-checkbox-mixed-dark" />
+     id="menu-checkbox-mixed-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1181)" />
   <use
      x="276"
      y="160"
      xlink:href="#base-menu-checkbox-mixed"
      fill="url(#color-accent-disabled)"
-     id="menu-checkbox-mixed-disabled-dark" />
+     id="menu-checkbox-mixed-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1197)" />
   <use
      x="308"
      y="136"
@@ -1285,25 +1621,29 @@
      y="136"
      xlink:href="#base-menu-radio-checked"
      fill="url(#color-accent)"
-     id="menu-radio-checked-dark" />
+     id="menu-radio-checked-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1183)" />
   <use
      x="340"
      y="160"
      xlink:href="#base-menu-radio-checked"
      fill="url(#color-accent-disabled)"
-     id="menu-radio-checked-disabled-dark" />
+     id="menu-radio-checked-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1199)" />
   <use
      x="372"
      y="136"
      xlink:href="#base-menu-radio-mixed"
      fill="url(#color-accent)"
-     id="menu-radio-mixed-dark" />
+     id="menu-radio-mixed-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1185)" />
   <use
      x="372"
      y="160"
      xlink:href="#base-menu-radio-mixed"
      fill="url(#color-accent-disabled)"
-     id="menu-radio-mixed-disabled-dark" />
+     id="menu-radio-mixed-disabled-dark"
+     style="fill-opacity:1;fill:url(#linearGradient1201)" />
   <use
      x="208"
      y="184"
@@ -1315,14 +1655,20 @@
      y="184"
      xlink:href="#base-selectionmode-checkbox-checked"
      id="selectionmode-checkbox-checked-dark" />
-  <use
-     x="216"
-     y="240"
-     xlink:href="#base-scale-slider"
+  <g
      id="scale-slider-dark"
-     transform="translate(0,-11)"
-     width="100%"
-     height="100%" />
+     style="opacity:1;fill:url(#linearGradient1209);fill-opacity:1"
+     transform="translate(216,229)">
+    <path
+       style="opacity:0;fill:url(#linearGradient1229)"
+       d="M 0,0 H 21 V 21 H 0 Z"
+       id="use1219" />
+    <path
+       d="M 21,10.5 A 10.5,10.5 0 0 1 10.5,21 10.5,10.5 0 0 1 0,10.5 10.5,10.5 0 0 1 10.5,0 10.5,10.5 0 0 1 21,10.5 Z"
+       id="use1221"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1225);fill-opacity:1.0" />
+  </g>
   <use
      x="216"
      y="280"
@@ -1331,14 +1677,20 @@
      transform="translate(0,20)"
      width="100%"
      height="100%" />
-  <use
-     x="252"
-     y="240"
-     xlink:href="#base-scale-horz-marks-before-slider"
+  <g
      id="scale-horz-marks-before-slider-dark"
-     transform="translate(0,-11)"
-     width="100%"
-     height="100%" />
+     style="opacity:1;fill:url(#linearGradient1211);fill-opacity:1"
+     transform="rotate(180,136.5,125)">
+    <path
+       style="opacity:0;fill:url(#linearGradient1243)"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1233" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1235"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1239);fill-opacity:1.0" />
+  </g>
   <use
      x="252"
      y="280"
@@ -1347,14 +1699,20 @@
      transform="translate(0,20)"
      width="100%"
      height="100%" />
-  <use
-     x="288"
-     y="240"
-     xlink:href="#base-scale-horz-marks-after-slider"
+  <g
      id="scale-horz-marks-after-slider-dark"
-     transform="translate(0,-11)"
-     width="100%"
-     height="100%" />
+     style="opacity:1;fill:url(#linearGradient1213);fill-opacity:1"
+     transform="translate(288,229)">
+    <path
+       style="opacity:0;fill:url(#linearGradient1257)"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1247" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1249"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1253);fill-opacity:1.0" />
+  </g>
   <use
      x="288"
      y="280"
@@ -1363,14 +1721,20 @@
      transform="translate(0,20)"
      width="100%"
      height="100%" />
-  <use
-     x="324"
-     y="240"
-     xlink:href="#base-scale-vert-marks-before-slider"
+  <g
      id="scale-vert-marks-before-slider-dark"
-     transform="translate(0,-11)"
-     width="100%"
-     height="100%" />
+     style="opacity:1;fill:url(#linearGradient1215);fill-opacity:1.0"
+     transform="rotate(90,58,287)">
+    <path
+       style="opacity:0;fill:url(#linearGradient1271);fill-opacity:1.0"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1261" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1263"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1267);fill-opacity:1.0" />
+  </g>
   <use
      x="324"
      y="280"
@@ -1379,14 +1743,20 @@
      transform="translate(0,20)"
      width="100%"
      height="100%" />
-  <use
-     x="360"
-     y="240"
-     xlink:href="#base-scale-vert-marks-after-slider"
+  <g
      id="scale-vert-marks-after-slider-dark"
-     transform="translate(0,-11)"
-     width="100%"
-     height="100%" />
+     style="opacity:1;fill:url(#linearGradient1217);fill-opacity:1"
+     transform="rotate(-90,305,-55)">
+    <path
+       style="opacity:0;fill:url(#linearGradient1285)"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1275" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1277"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1281);fill-opacity:1.0" />
+  </g>
   <use
      x="360"
      y="280"
@@ -1454,51 +1824,74 @@
      y="240"
      x="160"
      style="fill:#484442;fill-opacity:1;opacity:0.5" />
-  <use
-     height="100%"
-     width="100%"
-     transform="translate(0,24)"
+  <g
      id="scale-slider-backdrop-dark"
-     xlink:href="#base-scale-slider"
-     y="240"
-     x="216"
-     style="fill:#484442;fill-opacity:1;opacity:0.5" />
-  <use
-     height="100%"
-     width="100%"
-     transform="translate(0,24)"
+     style="opacity:0.5;fill:#484442;fill-opacity:1"
+     transform="translate(216,264)">
+    <path
+       style="opacity:0"
+       d="M 0,0 H 21 V 21 H 0 Z"
+       id="use1289" />
+    <path
+       d="M 21,10.5 A 10.5,10.5 0 0 1 10.5,21 10.5,10.5 0 0 1 0,10.5 10.5,10.5 0 0 1 10.5,0 10.5,10.5 0 0 1 21,10.5 Z"
+       id="use1291"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1295);fill-opacity:1.0" />
+  </g>
+  <g
      id="scale-horz-marks-before-slider-backdrop-dark"
-     xlink:href="#base-scale-horz-marks-before-slider"
-     y="240"
-     x="252"
-     style="fill:#484442;fill-opacity:1;opacity:0.5" />
-  <use
-     height="100%"
-     width="100%"
-     transform="translate(0,24)"
+     style="opacity:0.5;fill:#484442;fill-opacity:1"
+     transform="rotate(180,136.5,142.5)">
+    <path
+       style="opacity:0"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1301" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1303"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1307);fill-opacity:1.0" />
+  </g>
+  <g
      id="scale-horz-marks-after-slider-backdrop-dark"
-     xlink:href="#base-scale-horz-marks-after-slider"
-     y="240"
-     x="288"
-     style="fill:#484442;fill-opacity:1;opacity:0.5" />
-  <use
-     height="100%"
-     width="100%"
-     transform="translate(0,24)"
+     style="opacity:0.5;fill:#484442;fill-opacity:1"
+     transform="translate(288,264)">
+    <path
+       style="opacity:0"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1313" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1315"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1319);fill-opacity:1.0" />
+  </g>
+  <g
      id="scale-vert-marks-before-slider-backdrop-dark"
-     xlink:href="#base-scale-vert-marks-before-slider"
-     y="240"
-     x="324"
-     style="fill:#484442;fill-opacity:1;opacity:0.5"
-     inkscape:label="#scale-vert-marks-before-slider-backdrop-dark" />
-  <use
-     height="100%"
-     width="100%"
-     transform="translate(0,24)"
+     style="opacity:0.5;fill:#484442;fill-opacity:1"
+     transform="rotate(90,40.5,304.5)">
+    <path
+       style="opacity:0"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1325" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1327"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1331);fill-opacity:1.0" />
+  </g>
+  <g
      id="scale-vert-marks-after-slider-backdrop-dark"
-     xlink:href="#base-scale-vert-marks-after-slider"
-     y="240"
-     x="360"
-     style="fill:#484442;fill-opacity:1;opacity:0.5"
-     inkscape:label="scale-vert-marks-after-slider-backdrop-dark" />
+     style="opacity:0.5;fill:#484442;fill-opacity:1"
+     transform="rotate(-90,322.5,-37.5)">
+    <path
+       style="opacity:0"
+       d="M 0,0 H 21 V 26 H 0 Z"
+       id="use1337" />
+    <path
+       d="m 17.924621,3.0753788 a 10.5,10.5 0 0 0 -14.8492422,0 10.5,10.5 0 0 0 0,14.8492422 L 10.5,25.349242 17.924621,17.924621 a 10.5,10.5 0 0 0 0,-14.8492422 z"
+       id="use1339"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:url(#linearGradient1343);fill-opacity:1.0" />
+  </g>
 </svg>
