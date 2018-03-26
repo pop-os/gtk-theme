@@ -52,10 +52,10 @@ $titlebar_bg_color:          if($titlebar == 'dark',
                                 if($variant == 'light',
                                    $brown_700,
                                    lighten($brown_800, 5%)),
-                                lighten($grey_200, 7%));
+                                darken($grey_400, 5%));
 $inactive_titlebar_bg_color: if($titlebar == 'dark',
                                 mix($titlebar_bg_color, $brown_400, 90%),
-                                lighten($grey_200, 12%));
+                                darken($grey_200, 0%));
 $alt_titlebar_bg_color:      if($titlebar == 'dark',
                                 $brown_800,
                                 mix($brown_300, $brown_400, 50%));
