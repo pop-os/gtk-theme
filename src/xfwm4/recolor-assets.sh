@@ -115,5 +115,6 @@ done
 for i in $files; do
 	f="${i}.tmp"
 	mv "$f" "${f%.in.tmp}"
+done
 
 echo "Color Replacement complete."

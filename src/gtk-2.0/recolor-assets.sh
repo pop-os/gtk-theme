@@ -58,11 +58,11 @@ radiusYO='ry="4"'
 
 # List of Files to replace in. Should be .in to be non-destructive
 
-files='assets.svg
-       assets-dark.svg
-       gtkrc
-       gtkrc-dark
-       gtkrc-light'
+files='assets.svg.in
+       assets-dark.svg.in
+       gtkrc.in
+       gtkrc-dark.in
+       gtkrc-light.in'
 
 # Color replacements happen here:
 
@@ -118,5 +118,6 @@ done
 for i in $files; do
 	f="${i}.tmp"
 	mv "$f" "${f%.in.tmp}"
+done
 
 echo "Color Replacement complete."
