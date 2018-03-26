@@ -4,3 +4,11 @@ src/**/*.css
 src/gtk-*/**/assets/*.png
 src/gtk-2.0/**/assets/*.png
 debian/tmp
+
+# Build artefacts
+src/gtk-2.0/assets-dark.svg
+src/gtk-2.0/assets.svg
+src/gtk-2.0/gtkrc
+src/gtk-2.0/gtkrc-dark
+src/gtk-2.0/gtkrc-light
+src/gtk-3.0/gtk-common/assets.svg
