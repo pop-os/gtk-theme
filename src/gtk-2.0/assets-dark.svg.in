@@ -51,72 +51,72 @@
     <linearGradient
        id="color-fg">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#F6F6F6"
          id="stop8" />
     </linearGradient>
     <linearGradient
        id="color-fg-disabled">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#F6F6F6"
          stop-opacity="0.5"
          id="stop11" />
     </linearGradient>
     <linearGradient
        id="color-fg-secondary">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#F6F6F6"
          stop-opacity="0.7"
          id="stop14" />
     </linearGradient>
     <linearGradient
        id="color-fg-secondary-disabled">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#F6F6F6"
          stop-opacity="0.3"
          id="stop17" />
     </linearGradient>
     <linearGradient
        id="color-divider">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#F6F6F6"
          stop-opacity="0.12"
          id="stop20" />
     </linearGradient>
     <linearGradient
        id="color-primary">
       <stop
-         stop-color="#48b9c7"
+         stop-color="#2C8691"
          id="stop23" />
     </linearGradient>
     <linearGradient
        id="color-accent">
       <stop
-         stop-color="#bd7805"
+         stop-color="#BE7704"
          id="stop26" />
     </linearGradient>
     <linearGradient
        id="color-accent-insensitive">
       <stop
-         stop-color="#bd7805"
+         stop-color="#BE7704"
          stop-opacity="0.5"
          id="stop29" />
     </linearGradient>
     <linearGradient
        id="color-bg">
       <stop
-         stop-color="#49423e"
+         stop-color="#3F3B39"
          id="stop32" />
     </linearGradient>
     <linearGradient
        id="color-bg-lighter">
       <stop
-         stop-color="#574f4a"
+         stop-color="#4C4845"
          id="stop35" />
     </linearGradient>
     <linearGradient
        id="color-base">
       <stop
-         stop-color="#49423e"
+         stop-color="#4C4845"
          id="stop38" />
     </linearGradient>
     <linearGradient

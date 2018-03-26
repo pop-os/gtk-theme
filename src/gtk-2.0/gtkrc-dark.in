@@ -12,15 +12,15 @@
 # order to not mess up the dark theme.
 
 # Text/base
-gtk-color-scheme = "text_color:#FFFFFF\nbase_color:#49423e"
+gtk-color-scheme = "text_color:#F6F6F6\nbase_color:#4C4845"
 # Foreground/background
-gtk-color-scheme = "fg_color:#FFFFFF\nbg_color:#49423e"
+gtk-color-scheme = "fg_color:#F6F6F6\nbg_color:#3F3B39"
 # Selected foreground/background
-gtk-color-scheme = "selected_fg_color:#FFFFFF\nselected_bg_color:#48b9c7"
+gtk-color-scheme = "selected_fg_color:#FFFFFF\nselected_bg_color:#2C8691"
 # Titlebar foreground/background
-gtk-color-scheme = "titlebar_fg_color:#FFFFFF\ntitlebar_bg_color:#3b3633"
+gtk-color-scheme = "titlebar_fg_color:#F6F6F6\ntitlebar_bg_color:#3b3633"
 # Links
-gtk-color-scheme = "link_color:#48b9c7\nvisited_link_color:#E040FB"
+gtk-color-scheme = "link_color:#2C8691\nvisited_link_color:#E040FB"
 
 # Set GTK settings
 gtk-auto-mnemonics              = 1
