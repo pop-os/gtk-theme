@@ -100,9 +100,10 @@ sudo apt install libsass0 sassc inkscape optipng
  rm -rf ~/.themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
  ```
 
-2. Generate the CSS using SASS.
+2. Generate the theme files.
 
 ```
+make clean
 make
 ```
 
