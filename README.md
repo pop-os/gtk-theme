@@ -106,11 +106,6 @@ sudo apt install libsass0 sassc inkscape optipng
 make
 ```
 
-* Optional: If you made changes to the art assest, you need to regenerate them as well:
-```
-make assets
-```
-
 3. Install the theme.
 
 ```
