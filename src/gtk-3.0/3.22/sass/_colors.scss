@@ -14,23 +14,23 @@
 // Foreground colors
 $dark_fg_color:   rgba($brown_700, 0.85);
 $light_fg_color:  rgba($white, 0.85);
-$button_fg_color: if($variant == 'light', rgba($brown_800, 0.75), rgba($white, 0.8)); // extra fg color for raised buttons
+$button_fg_color: if($variant == 'light', rgba($brown_800, 0.8), rgba($white, 0.8)); // extra fg color for raised buttons
 
-$fg_color:                    if($variant == 'light', rgba($brown_800, 0.85), $white);
-$secondary_fg_color:          if($variant == 'light', rgba($brown_800, 0.54), rgba($white, 0.7));
-$hint_fg_color:               if($variant == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
-$disabled_fg_color:           if($variant == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
-$disabled_secondary_fg_color: if($variant == 'light', rgba($brown_800, 0.26), rgba($white, 0.3));
-$track_color:                 if($variant == 'light', rgba($brown_900, 0.26), rgba($white, 0.3));
+$fg_color:                    if($variant == 'light', $brown_800, $white);
+$secondary_fg_color:          if($variant == 'light', rgba($brown_800, 0.7), rgba($white, 0.7));
+$hint_fg_color:               if($variant == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
+$disabled_fg_color:           if($variant == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
+$disabled_secondary_fg_color: if($variant == 'light', rgba($brown_800, 0.3), rgba($white, 0.3));
+$track_color:                 if($variant == 'light', rgba($brown_900, 0.3), rgba($white, 0.3));
 $divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));
-$scrollbar_color:             if($variant == 'light', rgba($brown_700, 0.75), rgba($white, 0.7));
+$scrollbar_color:             if($variant == 'light', rgba($brown_700, 0.7), rgba($white, 0.7));
 
-$titlebar_fg_color:                    if($titlebar == 'light', rgba($brown_800, 0.87), $white);
-$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_800, 0.54), rgba($white, 0.6));
-$titlebar_hint_fg_color:               if($titlebar == 'light', rgba($brown_800, 0.38), rgba($white, 0.5));
-$titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_800, 0.38), rgba($white, 0.3));
-$titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_800, 0.26), rgba($white, 0.2));
-$titlebar_track_color:                 if($titlebar == 'light', rgba($brown_800, 0.26), rgba($white, 0.3));
+$titlebar_fg_color:                    if($titlebar == 'light', $brown_800, $white);
+$titlebar_secondary_fg_color:          if($titlebar == 'light', rgba($brown_800, 0.9), rgba($white, 0.6));
+$titlebar_hint_fg_color:               if($titlebar == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
+$titlebar_disabled_fg_color:           if($titlebar == 'light', rgba($brown_800, 0.5), rgba($white, 0.3));
+$titlebar_disabled_secondary_fg_color: if($titlebar == 'light', rgba($brown_800, 0.2), rgba($white, 0.2));
+$titlebar_track_color:                 if($titlebar == 'light', rgba($brown_800, 0.3), rgba($white, 0.3));
 $titlebar_divider_color:               if($titlebar == 'light', rgba($brown_800, 0.12), rgba($white, 0.12));
 
 $inverse_fg_color:                    $white;
@@ -42,20 +42,20 @@ $inverse_track_color:                 rgba($white, 0.3);
 $inverse_divider_color:               rgba($white, 0.12);
 
 // Background colors
-$bg_color:         if($variant == 'light', $grey_50, darken($brown_700, 5%));
-$base_color:       if($variant == 'light', $white,   darken($brown_700, 7%));
-$alt_base_color:   if($variant == 'light', lighten($grey_50, 0%),  mix($base_color, $bg_color, 50%));
-$lighter_bg_color: if($variant == 'light', lighten($grey_50, 0%),  $brown_700); //FIXME: lol
-$darker_bg_color:  if($variant == 'light', $grey_200, $brown_800);
+$bg_color:         if($variant == 'light', $grey_100, darken( mix($grey_700, $brown_700, 50%), 5%));
+$base_color:       if($variant == 'light', lighten($grey_100, 2%),   darken( mix($grey_700, $brown_700, 50%), 7%));
+$alt_base_color:   if($variant == 'light', $grey_200,  mix($base_color, $bg_color, 50%));
+$lighter_bg_color: if($variant == 'light', $grey_50,  mix($grey_700, $brown_700, 50%)); //FIXME: lol
+$darker_bg_color:  if($variant == 'light', $grey_300, mix($grey_700, $brown_700, 50%));
 
 $titlebar_bg_color:          if($titlebar == 'dark',
                                 if($variant == 'light',
                                    $brown_700,
                                    lighten($brown_800, 5%)),
-                                mix($brown_300, $black, 90%));
+                                darken($grey_400, 5%));
 $inactive_titlebar_bg_color: if($titlebar == 'dark',
                                 mix($titlebar_bg_color, $brown_400, 90%),
-                                darken($brown_300, 5%));
+                                darken($grey_200, 0%));
 $alt_titlebar_bg_color:      if($titlebar == 'dark',
                                 $brown_800,
                                 mix($brown_300, $brown_400, 50%));
@@ -74,10 +74,16 @@ $row_fill_color:  gtkalpha(currentColor, 0.05);
 $modal_button_color: if($variant == 'light', $orange_300, $orange_600);
 
 // Misc colors
-$primary_color:         if($variant == 'light', $blue_500, $blue_600);
-$alt_primary_color:     $blue_300;
-$accent_color:          if($variant == 'light', $orange_500, $orange_600);
-$disabled_accent_color: rgba($accent_color, 0.5);
+$primary_color:         if($titlebar == 'dark',
+                          if($variant == 'light', 
+                              $blue_500, $blue_600),
+                          darken($blue_500, 7%));
+$alt_primary_color:     rgba($primary_color, 0.7);
+$accent_color:          if($titlebar == 'dark',
+                          if($variant == 'light', 
+                              $orange_500, $orange_600),
+                          darken($orange_500, 7%));
+$disabled_accent_color: rgba($accent_color, 0.7);
 
 $link_color:         $orange_500;
 $visited_link_color: if($variant == 'dark', $orange_400, $orange_600);

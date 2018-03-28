@@ -58,8 +58,9 @@ button.titlebutton {
   // @extend %simple_flat_button;
 
   @extend %circular_button;
-  min-width: $small_size;
-  min-height: $small_size;
+  padding: $mini_padding * 2;
+  min-width: $close_button_size;
+  min-height: $close_button_size;
 
   .selection-mode & {
   }

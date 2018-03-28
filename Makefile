@@ -24,9 +24,15 @@ assets: recolor
 clean:
 	-rm -rf ./src/gtk-2.0/assets/*.png
 	-rm -rf ./src/gtk-2.0/assets-dark/*.png
+	-rm -rf ./src/gtk-2.0/*.svg
+	-rm -rf ./src/gtk-2.0/gtkrc
+	-rm -rf ./src/gtk-2.0/gtkrc-dark
+	-rm -rf ./src/gtk-2.0/gtkrc-light
 	-rm -rf ./src/gtk-3.0/gtk-common/assets/*.png
+	-rm -rf ./src/gtk-3.0/gtk-common/*.svg
 	-rm -rf ./src/gtk-3.0/**/*.css
 	-rm -rf ./src/gnome-shell/**/*.css
+	-rm -rf ./src/**/*.tmp
 
 uninstall:
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop

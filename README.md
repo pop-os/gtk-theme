@@ -87,7 +87,7 @@ r
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can install it using:
 
 ```
-sudo apt install libsass0 sassc inkscape optipng
+sudo apt install libsass0 sassc inkscape optipng libglib2.0-dev-bin
 ```
 
 1. If previous versions were installed/existed, remove them first.
@@ -100,15 +100,11 @@ sudo apt install libsass0 sassc inkscape optipng
  rm -rf ~/.themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
  ```
 
-2. Generate the CSS using SASS.
+2. Generate the theme files.
 
 ```
+make clean
 make
-```
-
-* Optional: If you made changes to the art assest, you need to regenerate them as well:
-```
-make assets
 ```
 
 3. Install the theme.
