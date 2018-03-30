@@ -1,3 +1,12 @@
+/* GSConnect */
+// Need to remvoe padding on GSconnect's first child. Otherwise the icons appear
+// stretched. See https://github.com/andyholmes/gnome-shell-extension-gsconnect/issues/44
+
+.aggregate-menu .popup-sub-menu .gsconnect-device-box :first-child {
+  padding: 0;
+  margin: 0;
+}
+
 /* Dash to Dock */
 
 #dashtodockContainer #dash {
