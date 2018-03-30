@@ -98,3 +98,12 @@
 - odd thing for styling App menu when apparently not running under shell. Light Adwaita styled
   app menu inside the main app window itself rather than the top bar
 */
+
+.aggregate-menu {
+  .popup-sub-menu .popup-menu-item {
+    &:ltr { 
+            padding-left: 20px; margin-left: 1.09em; }
+    &:rtl { 
+            padding-right: 20px; margin-right: 1.09em; }
+  }
+}
