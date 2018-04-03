@@ -43,6 +43,22 @@ button:visited {
 }
 
 /*********************
+ * Embedded Terminal *
+ *********************/
+ // These are not libvte terminals, these are small embedded terminal widgets
+ // for error dialogs.
+
+.terminal text {
+    background-color: $neutral_dark_bg_color;
+    color: $light_fg_color;
+}
+
+.terminal selection {
+    background-color: $primary_color;
+    color: $light_fg_color;
+}
+
+/*********************
  * Spinner Animation *
  *********************/
 @keyframes spin {
