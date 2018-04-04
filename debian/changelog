@@ -1,3 +1,10 @@
+pop-gtk-theme (3.1.1) bionic; urgency=medium
+
+  * Embedded Terminal styling
+  * Indented GNOME Shell submenus
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 03 Apr 2018 11:32:47 -0600
+
 pop-gtk-theme (3.1.0) bionic; urgency=medium
 
   * Fix black separators on split headerbars

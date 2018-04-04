@@ -67,6 +67,8 @@ $unity_panel_bg_color:       if($titlebar == 'dark',
                                 mix($grey_300, $grey_400, 50%));
 $alt_panel_bg_color:         rgba($black, $lower_opacity);
 
+$neutral_dark_bg_color: $dark_neutral_gray;
+
 $fill_color:      gtkalpha(currentColor, $lower_opacity);
 $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
 $row_fill_color:  gtkalpha(currentColor, 0.05);
