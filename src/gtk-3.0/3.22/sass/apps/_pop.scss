@@ -1,0 +1,40 @@
+/*
+ * Installer *
+ */
+
+.disk-bar {
+  padding: 0;
+  border-radius: 4px; 
+
+  .ext2, .ext3, .ext4, .fat16, .fat32, .btrfs, 
+  .xfs,  .ntfs, .luks, .lvm,   .none,  .swap {
+    border-width: 0 $border_size $border_size $border_size;
+    border-style: solid;
+    border-color: $border_color; 
+  }
+
+  .swap { background-color: $red_600; }
+
+  .ext4 { background-color: $green_500; }
+
+  .ext3 { background-color: $green_600; }
+
+  .ext2 { background-color: $green_700; }
+
+  .fat16, 
+  .fat32 { background-color: $yellow_600; }
+
+  .btrfs { background-color: $orange_500; }
+
+  .xfs { background-color: $indigo_500; }
+
+  .ntfs { background-color: $blue_600; }
+
+  .luks { background-color: $red_400; }
+
+  .lvm { background-color: $purple_500; }
+
+  .none { background-color: $dark_neutral_gray; }
+
+  .unused { background-color: $light_gray; }
+}
