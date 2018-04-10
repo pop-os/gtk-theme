@@ -132,6 +132,11 @@ listbox .h4 {
     border-color: darken($darker_bg_color, 25%);
     padding: $small_padding $tiny_padding;
   }
+  
+  .legend {
+    padding: $small_padding;
+    border-radius: 50%;
+  }
 
   /* Types of files */
 
@@ -216,11 +221,6 @@ listbox .h4 {
   .none {
     background-color: $blue_500;
     border-color: darken($blue_500, 10%);
-  }
-
-  .legend {
-    padding: $small_padding;
-    border-radius: 50%;
   }
 }
 
