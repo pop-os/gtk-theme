@@ -120,7 +120,8 @@ listbox .h4 {
       border-bottom-width: 2px;
     }
     
-    .empty-block {
+    .empty-block,
+    .unused {
       background-color: darken($alt_base_color, 5%);
       border-color: darken($alt_base_color, 15%);
     }
@@ -280,21 +281,22 @@ window.background.csd.rounded > grid.titlebar {
  ************/
 
 window.csd {
-> overlay > stack > grid.app-back > revealer > box.toolbar {
-  box.frame {
-    button.image-button,
-    button.entry,
-    entry {
-      background-color: transparent;
-      box-shadow: none;
+  > overlay > stack > grid.app-back > revealer > box.toolbar {
+    box.frame {
+      button.image-button,
+      button.entry,
+      entry {
+        background-color: transparent;
+        box-shadow: none;
+      }
     }
   }
-}
 
-headerbar.titlebar {
-  button.suggested-action {
-    background-color: $suggested_color;}
-}
+  headerbar.titlebar {
+    button.suggested-action {
+      background-color: $suggested_color;
+    }
+  }
 }
 
 
