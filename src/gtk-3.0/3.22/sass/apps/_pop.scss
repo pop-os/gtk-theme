@@ -5,13 +5,13 @@
 .storage-bar {
   
   .disk-bar {
-    background-color: transparent;
+    background-color: $brown_500;
     padding: 0;
     border-radius: $pop_radius;
     
-    .fill-block:first-child { border-radius: $pop_radius 0 0 $pop-radius; }
-    .fill-block:last-child { border-radius: 0 $pop_radius $pop-radius 0; }
-    .fill-block:only-child { border-radius: $pop-radius; }
+    > .fill-block:first-child { border-radius: $pop_radius 0 0 $pop-radius; }
+    > .fill-block:last-child { border-radius: 0 $pop_radius $pop-radius 0; }
+    > .fill-block:only-child { border-radius: $pop-radius; }
     
   } 
 
@@ -46,7 +46,7 @@
 
   .none { background-color: $blue_500; }
 
-  .unused { background-color: $light_gray; }
+  .unused { background-color: $brown_500; }
   
   .legend { box-shadow: none; }
 }
