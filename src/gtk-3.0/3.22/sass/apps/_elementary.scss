@@ -132,6 +132,8 @@ listbox .h4 {
     padding: $small_padding $tiny_padding;
   }
 
+  /* Types of files */
+
   .app {
     background-color: $purple_500;
     border-color: darken($purple_500, 10%);
@@ -155,6 +157,64 @@ listbox .h4 {
   .video {
     background-color: $red_500;
     border-color: darken($red_500, 10%);
+  }
+
+  /* Filesystems, i.e. for the installer */
+
+  .swap { 
+    background-color: $red_600;
+    border-color: darken($red_600, 10%);
+  }
+
+  .ext4 {
+    background-color: $green_500;
+    border-color: darken($green_500, 10%);
+  }
+
+  .ext3 {
+    background-color: $green_600;
+    border-color: darken($green_600, 10%);
+  }
+
+  .ext2 {
+    background-color: $green_700;
+    border-color: darken($green_700, 10%);
+  }
+
+  .fat16, 
+  .fat32 {
+    background-color: $yellow_500;
+    border-color: darken($yellow_500, 10%);
+  }
+
+  .btrfs {
+    background-color: $blue_600;
+    border-color: darken($blue_600, 10%);
+  }
+
+  .xfs {
+    background-color: $indigo_500;
+    border-color: darken($indigo_500, 10%);
+  }
+
+  .ntfs {
+    background-color: $orange_500;
+    border-color: darken($orange_500, 10%);
+  }
+
+  .luks {
+    background-color: $purple_400;
+    border-color: darken($purple_400, 10%);
+  }
+
+  .lvm {
+    background-color: $purple_500;
+    border-color: darken($purple_500, 10%);
+  }
+
+  .none {
+    background-color: $blue_500;
+    border-color: darken($blue_500, 10%);
   }
 
   .legend {
@@ -232,7 +292,8 @@ window.csd {
 }
 
 headerbar.titlebar {
-  button.suggested-action { background-color: $suggested_color;}
+  button.suggested-action {
+    background-color: $suggested_color;}
 }
 }
 
