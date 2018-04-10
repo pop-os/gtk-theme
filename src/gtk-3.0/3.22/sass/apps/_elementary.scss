@@ -98,55 +98,65 @@ listbox .h4 {
 .storage-bar .trough {
   box-shadow: $shadow_2;
   border: none;
+  border-radius: 4px;
   background-image: none;
-  padding: $small_padding $tiny_padding;
+  
+  :first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  :last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
 }
 
 .storage-bar .fill-block {
   background-color: darken($darker_bg_color, 15%);
-  border: $border_size solid rgba($black, 0.35);
-  border-left-width: 0;
-  border-right-width: 0;
+  border-width: $border_size / 2;
   border-top-width: 0;
   border-bottom-width: $border_size;
-  border-bottom-color: darken($darker_bg_color, 35%);
-  padding: $small_padding $tiny_padding;
+  border-color: darken($darker_bg_color, 35%);
+  // padding: $small_padding $tiny_padding;
+}
+
+.storage-bar .trough .fill-block {
+  border: 1px solid;
+  border-top-width: 0;
+  border-bottom-width: 2px;
 }
 
 .storage-bar .empty-block {
   background-color: darken($alt_base_color, 5%);
+  border-width: $border_size / 2;
   border-bottom-width: $border_size;
-  border-bottom-color: darken($alt_base_color, 40%);
+  border-color: darken($alt_base_color, 40%);
 }
 
 .storage-bar .app {
   background-color: $purple_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($purple_500, 20%);
+  border-color: darken($purple_500, 20%);
 }
 
 .storage-bar .audio {
   background-color: $orange_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($orange_500, 20%);
+  border-color: darken($orange_500, 20%);
 }
 
 .storage-bar .files {
   background-color: $blue_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($blue_500, 20%);
+  border-color: darken($blue_500, 20%);
 }
 
 .storage-bar .photo {
   background-color: $green_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($green_500, 20%);
+  border-color: darken($green_500, 20%);
 }
 
 .storage-bar .video {
   background-color: $red_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($red_500, 40%);
+  border-color: darken($red_500, 40%);
 }
 
 .storage-bar .legend {
