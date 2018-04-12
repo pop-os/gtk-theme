@@ -58,41 +58,6 @@ install:
 	  done; \
 	done
 
-	# Install GNOME Shell Theme
-	for color in $(COLOR_VARIANTS); do \
-	  for size in $(SIZE_VARIANTS); do \
-	    export themedir=$(DESTDIR)$(BASE_DIR)/Pop$$color$$size; \
-	    install -d $$themedir/gnome-shell; \
-	    cd $(SRCDIR)/gnome-shell/$(GNOMEVER); \
-	    cp -ur \
-	      *.svg \
-	      $$themedir/gnome-shell; \
-	    cp -urL \
-	      extensions \
-	      pad-osd.css \
-	      $$themedir/gnome-shell; \
-	    if [ "$$color" != '-dark' ]; then \
-	      cp -urL \
-	        assets \
-	        $$themedir/gnome-shell; \
-	    else \
-	      cp -urL \
-	        assets-dark \
-	        $$themedir/gnome-shell/assets; \
-	    fi; \
-	    cp -ur \
-	      gnome-shell$$color$$size.css \
-	      $$themedir/gnome-shell/gnome-shell.css; \
-	    cp -ur \
-	      gnome-shell$$color$$size.css \
-	      $$themedir/gnome-shell/pop.css; \
-	    glib-compile-resources \
-	      --sourcedir=$$themedir/gnome-shell \
-	      --target=$$themedir/gnome-shell/gnome-shell-thememe.gresource \
-	      gnome-shell-theme.gresource.xml; \
-	  done; \
-	done
-
 	# Install GTK2 Theme \
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
@@ -220,7 +185,7 @@ recolor:
 	cd ./src/gtk-3.0/gtk-common/ && ./recolor-assets.sh > /dev/null
 	cd ./src/gtk-2.0/ && ./recolor-assets.sh > /dev/null
 
-sass: gtk2 gtk3 gnome-shell
+sass: gtk2 gtk3
 	@echo "** Generating the CSS..."
 
 
