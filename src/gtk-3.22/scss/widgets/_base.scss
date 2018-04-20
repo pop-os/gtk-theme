@@ -32,10 +32,10 @@
 * {
 
   background-clip: padding-box;
-  -GtkTextView-error-underline-color: @error_color;
-  -GtkIMHtml-hyperlink-color: @link_color;
-  -GtkHTML-link-color: @link_color;
-  -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; 
+  -GtkTextView-error-underline-color: $error_color;
+  -GtkIMHtml-hyperlink-color: $theme_color_2;
+  -GtkHTML-link-color: $theme_color_2;
+  //-gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; 
    
   &:selected {
     color: $selected_fg_color;

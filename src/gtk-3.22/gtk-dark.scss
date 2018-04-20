@@ -16,50 +16,12 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* Brand Colors */
-@define-color colorPrimary @titlebar_color;
-@define-color colorAccent @selected_bg_color;
-@define-color textColorPrimary shade (@text_color, 0.9);
-@define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 0.5), 0.6);
 
-/* Default color scheme */
-@define-color base_color #3d4248;
-@define-color bg_color shade (@base_color, 0.96);
-@define-color bg_highlight_color shade (@bg_color, 1.4);
-@define-color border_color alpha (@BLACK_900, 0.25);
-@define-color fg_color @SILVER_300;
-@define-color insensitive_color mix(@bg_color, @text_color, 0.31);
-@define-color inset_dark_color alpha (@BLACK_900, 0.03);
-@define-color inset_dark_color_backdrop alpha (@BLACK_900, 0.03);
-@define-color menu_separator alpha (@BLACK_900, 0.25);
-@define-color menu_separator_shadow alpha (white, 0.05);
-@define-color placeholder_text_color shade(@text_color, 0.8);
-@define-color selected_bg_color shade (@BLUEBERRY_300, 0.85);
-@define-color selected_fg_color white;
-@define-color text_color @SILVER_100;
-@define-color text_shadow_color alpha (@BLACK_900, 0.4);
-@define-color titlebar_color shade (@base_color, 0.9);
-@define-color title_color shade (@text_color, 0.9);
-@define-color title_shadow_color alpha (@BLACK_900, 0.6);
-@define-color tooltip_bg_color @BLACK_900;
-@define-color tooltip_fg_color white;
-@define-color internal_element_color mix(@text_color, @base_color, 0.4);
-@define-color internal_element_prelight mix(@text_color, @base_color, 0.4);
-@define-color internal_element_insensitive mix(@internal_element_color, @base_color, 0.7);
-@define-color view_symbolic_color shade(@internal_element_color, 0.8);
+$color: "dark";
 
-/* Colormap actually used by the theme, to be overridden in other css files */
-@define-color theme_bg_color @bg_color;
-@define-color attention_color @BLUEBERRY_500;
-@define-color link_color @BLUEBERRY_500;
-@define-color warning_color @BANANA_500;
-@define-color error_color @STRAWBERRY_500;
-@define-color success_color @LIME_300;
-@define-color insensitive_fg_color @SILVER_500;
+@import 'scss/colors';
+@import 'scss/widgets/base';
+@import 'scss/widgets/tooltip';
 
-@import url("gtk-widgets.css");
-@import url("gtk-widgets-dark.css");
-@import url("granite-widgets.css");
-@import url("granite-widgets-dark.css");
-@import url("apps.css");
-@import url("animate.css");
+// To be removed by the end of development
+@import 'scss/gtk-widgets-dark';

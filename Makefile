@@ -1,7 +1,8 @@
 SHELL = /bin/bash
-COLOR_VARIANTS = '' '-dark' '-light'
-SIZE_VARIANTS = '' '-slim'
-COMPONENTS = 'gtk-2.0' 'gtk-3.22'
+COLOR_VARIANTS = '' '-dark'
+SIZE_VARIANTS = ''
+COMPONENTS = 'gtk-' 'plank'
+GTK_VERSIONS = '3.22' '2.0'
 SASSC_OPT=-M -t expanded
 BASE_DIR=/usr/share/themes
 REPODIR=$(CURDIR)
@@ -51,19 +52,26 @@ prepare:
 	  for size in $(SIZE_VARIANTS); do \
 	    mkdir -p build/Pop$$size$$color; \
 	    for component in $(COMPONENTS); do \
-	      cp -r src/$$component build/Pop$$size$$color/; \
+	      if [ "$$component" = "gtk-" ]; then \
+	        for version in $(GTK_VERSIONS); do \
+	          cp -r src/$$component$$version build/Pop$$size$$color/; \
+	        done; \
+	      else \
+	        cp -r src/$$component build/Pop$$size$$color/; \
+	      fi; \
 	    done; \
 	  done; \
 	done
-	#cp -r src/* build
 
 gtk3: prepare
 	@echo "** Generating GTK3..."
 
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
-	    for version in '3.20' '3.22'; do \
-	      sassc $(SASSC_OPT) src/gtk-3.0/$$version/gtk$$color$$size.{scss,css}; \
+	    for version in $(GTK_VERSIONS); do \
+	      if [ "$$version" != "2.0" ]; then \
+	        sassc $(SASSC_OPT) build/Pop$$size$$color/gtk-$$version/gtk$$color$$size.{scss,css}; \
+	      fi; \
 	    done; \
 	  done; \
 	done

@@ -24,6 +24,48 @@
  
 $color: "light";
 
-@import 'sass/colors';
-@import 'sass/widgets/base';
-@import 'sass/widgets/tooltip';
+@import 'scss/colors';
+@import 'scss/widgets/base';
+@import 'scss/widgets/tooltip';
+
+// To be removed by the end of development
+@import 'scss/gtk-widgets';
+
+/* Brand Colors */
+@define-color colorPrimary $titlebar_bg_color;
+@define-color colorAccent $theme_color_2;
+@define-color textColorPrimary mix (@colorPrimary, $fg_color, 0.75);
+@define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.4);
+
+/* Default color scheme */
+@define-color base_color $base_color;
+@define-color bg_color $bg_color;
+@define-color bg_highlight_color white;
+@define-color border_color alpha ($dark_neutral_grey_900, 0.25);
+@define-color fg_color $dark_neutral_grey_500;
+@define-color insensitive_color insensitive($fg_color);
+@define-color inset_dark_color alpha ($dark_neutral_grey_900, 0.06);
+@define-color inset_dark_color_backdrop alpha ($dark_neutral_grey_900, 0.03);
+@define-color menu_separator alpha ($dark_neutral_grey_900, 0.15);
+@define-color menu_separator_shadow alpha (white, 0.8);
+@define-color placeholder_text_color shade($fg_color, 2.5);
+@define-color selected_bg_color shade ($blue_300, 0.85);
+@define-color selected_fg_color white;
+@define-color text_color $dark_neutral_grey_500;
+@define-color text_shadow_color alpha (white, 0.4);
+@define-color titlebar_color $titlebar_bg_color;
+@define-color title_color $titlebar_fg_color;
+@define-color title_shadow_color alpha (white, 0.6);
+@define-color tooltip_bg_color $dark_neutral_grey_900;
+@define-color tooltip_fg_color white;
+@define-color internal_element_color mix($fg_color, @base_color, 0.4);
+@define-color internal_element_prelight mix($fg_color, @base_color, 0.2);
+
+/* Colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_bg_color $bg_color;
+@define-color attention_color $blue_500;
+@define-color link_color $theme_color_2;
+@define-color warning_color $warning_color;
+@define-color error_color $error_color;
+@define-color success_color $suggested_color;
+@define-color insensitive_fg_color $light_neutral_grey_500;
