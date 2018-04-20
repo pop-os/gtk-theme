@@ -1,0 +1,132 @@
+/*
+ * Pop!_OS GTK Theme (The Pop!_GTK Theme).
+ * Copyright 2017-2018 System76, Inc.
+ * 
+ * _color-palette.scss - Defines the master color palette
+ *
+ * The Pop!_GTK Theme is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with the Pop!_GTK Theme; if not, write to:
+ * Free Software Foundation, Inc.
+ * 51 Franklin Street, Fifth Floor
+ * Boston, MA  02110-1301  
+ * USA
+ * 
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+// Orange
+$orange_100: #fff066;
+$orange_300: #ffca40;
+$orange_500: #faa41a;
+$orange_700: #de8800;
+$orange_900: #c26c00;
+
+
+// Red
+$red_100: #FF9459;
+$red_300: #FF793E;
+$red_500: #f15d22;
+$red_700: #CF3B00;
+$red_900: #AC1800;
+
+
+// Yellow 
+$yellow_100: #ffffa8;
+$yellow_300: #fffa7d;
+$yellow_500: #ffce51;
+$yellow_700: #d1a023;
+$yellow_900: #a27100;
+
+
+// Green
+$green_100: #A2F3BE;
+$green_300: #8ADBA6;
+$green_500: #73C48F;
+$green_700: #479863;
+$green_900: #1C6D38;
+
+
+// Blue
+$blue_100: #85F6FF;
+$blue_300: #67D8E6;
+$blue_500: #48B9C7;
+$blue_700: #1C8D9B;
+$blue_900: #00616F;
+
+
+// Purple
+$purple_100: #D25DE6;
+$purple_300: #B742CB;
+$purple_500: #9C27B0;
+$purple_700: #830E97;
+$purple_900: #6A007E;
+
+
+// Indigo
+$indigo_100: #94A6FF;
+$indigo_300: #6A7CE0;
+$indigo_500: #3F51B5;
+$indigo_700: #213397;
+$indigo_900: #031579;
+
+
+// Warm Grey 
+$warm_grey_100: #9F9792;
+$warm_grey_300: #7B736E;
+$warm_grey_500: #574F4A;
+$warm_grey_700: #463E39;
+$warm_grey_900: #342C27;
+
+
+// Light Neutral Grey 
+$light_neutral_grey_100: #EEEEEE;
+$light_neutral_grey_300: #CCCCCC;
+$light_neutral_grey_500: #AAAAAA;
+$light_neutral_grey_700: #888888;
+$light_neutral_grey_900: #666666;
+
+
+// Dark Neutral Grey 
+$dark_neutral_grey_100: #555555;
+$dark_neutral_grey_300: #444444;
+$dark_neutral_grey_500: #333333;
+$dark_neutral_grey_700: #222222;
+$dark_neutral_grey_900: #111111;
+
+
+// Light UI
+$light_ui_100: #FCFCFC;
+$light_ui_300: #F6F6F6;
+$light_ui_500: #EDEDED;
+$light_ui_700: #E6E6E6;
+$light_ui_900: #DEDEDE;
+
+
+// Dark UI
+$dark_ui_100: #474341;
+$dark_ui_300: #403C3A;
+$dark_ui_500: #393634;
+$dark_ui_700: #33302F;
+$dark_ui_900: #2B2928;
+
+$white: #FFFFFF;
+$black: #000000;
+$mid_grey: #888888;
+
+$fg_color:                    if($variant == 'light', $brown_800, $white);
+$secondary_fg_color:          if($variant == 'light', rgba($brown_800, 0.7), rgba($white, 0.7));
+$hint_fg_color:               if($variant == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
+$disabled_fg_color:           if($variant == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
+$disabled_secondary_fg_color: if($variant == 'light', rgba($brown_800, 0.3), rgba($white, 0.3));
+$track_color:                 if($variant == 'light', rgba($brown_900, 0.3), rgba($white, 0.3));
+$divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));

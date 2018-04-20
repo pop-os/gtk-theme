@@ -1,0 +1,45 @@
+/*
+ * Pop!_OS GTK Theme (The Pop!_GTK Theme).
+ * Copyright 2017-2018 System76, Inc.
+ * 
+ * widgets/_tooltip.scss - Tooltips
+ *
+ * The Pop!_GTK Theme is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with the Pop!_GTK Theme; if not, write to:
+ * Free Software Foundation, Inc.
+ * 51 Franklin Street, Fifth Floor
+ * Boston, MA  02110-1301  
+ * USA
+ * 
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+
+tooltip,
+.overlay-bar {
+  color: $inverse_fg_color;
+  background-color: insensitive($inverse_bg_color);
+  border-radius: $corner_radius;
+  border: none;
+  box-shadow: $shadow_2;
+  padding: $mini_padding_em $tiny_padding_em;
+  margin: $tiny_padding;
+  
+  label {
+    color: $inverse_fg_color;
+  }
+}
+
+.overlay-bar {
+  margin: $mini_padding;
+}

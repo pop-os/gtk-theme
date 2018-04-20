@@ -1,0 +1,58 @@
+/*
+ * Pop!_OS GTK Theme (The Pop!_GTK Theme).
+ * Copyright 2017-2018 System76, Inc.
+ * 
+ * _variables.scss - Some commonly reused variables.
+ *
+ * The Pop!_GTK Theme is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with the Pop!_GTK Theme; if not, write to:
+ * Free Software Foundation, Inc.
+ * 51 Franklin Street, Fifth Floor
+ * Boston, MA  02110-1301  
+ * USA
+ * 
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+// Radii
+$corner_radius: 4px;
+
+// Sizes
+$mini_size: if($compact == 'false',4px, 2px);
+$tiny_size: if($compact == 'false', 12px, 10px);
+$small_size: if($compact == 'false', 16px, 14px);
+$medium_size: if($compact == 'false', 24px, 20px);
+$large_size: if($compact == 'false', 32px, 28px);
+
+// Padding
+$no_padding: 1px;
+$mini_padding: 2px;
+$tiny_padding: if($compact == 'false', 6px, 4px);
+$small_padding: if($compact == 'false', 8px, 6px);
+$standard_padding: if($compact == 'false', 12px, 10px);
+$large_padding: if($compact == 'false', 16px, 12px);
+
+$no_padding_em: 0.1em;
+$mini_padding_em: 0.2em;
+$tiny_padding_em: if($compact == 'false', 0.6em, 0.4em);
+$small_padding_em: if($compact == 'false', 0.8em, 0.6em);
+$standard_padding_em: if($compact == 'false', 1.2em, 1em);
+$large_padding_em: if($compact == 'false', 1.6em, 1.2em);
+
+// Shadows:
+$shadow_0: 0 1px 2px rgba(0, 0, 0, 0.08);
+$shadow_1: 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow_2: 0 3px 3px rgba(0, 0, 0, 0.23);
+$shadow_3: 0 6px 3px rgba(0, 0, 0, 0.23);
+$shadow_4: 0 10px 5px rgba(0, 0, 0, 0.22);
+$shadow_5: 0 15px 6px rgba(0, 0, 0, 0.22);
