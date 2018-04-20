@@ -48,6 +48,10 @@ gtk2:
 prepare:
 	@echo "** Setting up a build environment **"
 
+	for version in $(GTK_VERSIONS); do \
+	  mkdir -p src/gtk-$$version; \
+	done
+
 	for color in $(COLORS); do \
 	  for size in $(SIZES); do\
 	    export dirname="Pop$$color$$size"; \
