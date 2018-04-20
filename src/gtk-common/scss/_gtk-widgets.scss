@@ -1,34 +1,16 @@
-/*
- * Pop!_OS GTK Theme (The Pop!_GTK Theme).
- * Copyright 2017-2018 System76, Inc.
- * 
- * sass/widgets/_misc.scss - Miscellaneous small widgets
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_base.scss - Base/fallback states for GTK Widgets
  *
- * The Pop!_GTK Theme is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- * 
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public
- * License along with the Pop!_GTK Theme; if not, write to:
- * Free Software Foundation, Inc.
- * 51 Franklin Street, Fifth Floor
- * Boston, MA  02110-1301  
- * USA
- * 
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
  
- /***************
-  * Base States *
-  ***************/
- 
- /************
+/***************
+ * Base States *
+ ***************/
+
+/************
  * Tooltips *
  ************/
  
@@ -36,126 +18,13 @@
  * Miscellaneous *
  ****************/
 
-rubberband,
-.view.rubberband,
-.rubberband {
-    background-color: alpha (@colorAccent, 0.35);
-    border: 1px solid @colorAccent;
-    transition: all 600ms ease-out;
-}
-
-.dnd {
-    background-color: alpha (@colorAccent, 0.4);
-    background-image: none;
-    border: 1px solid @colorAccent;
-    border-radius: 3px;
-    margin: 3px;
-}
-
-.monospace {
-    font-family: monospace;
-}
-
-.keycap {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @bg_color,
-                0.97
-            ),
-            @bg_color
-        );
-    border: 1px solid @border_color;
-    border-radius: 2.5px;
-    box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -2px 0 0 alpha (@bg_highlight_color, 0.15),
-        inset 0 -1px 0 0 shade (@bg_color, 0.85),
-        0 1px 2px alpha (#000, 0.05);
-    font-size: 85%;
-    min-width: 12px;
-    padding: 3px 6px 4px;
-    text-shadow: 0 1px @text_shadow_color;
-}
-
 /**************
  * Separators *
- *************/
+ **************/
 
-menu separator,
-separator.horizontal {
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
-    margin-bottom: -1px;
-}
-
-menu separator {
-    margin: 4px 0;
-}
-
-separator.vertical {
-    border-left: 1px solid @menu_separator;
-    border-right: 1px solid @menu_separator_shadow;
-    margin-right: -1px;
-}
-
-paned.vertical > separator {
-    background-image:
-        linear-gradient(
-            to bottom,
-            @menu_separator 1px,
-            @menu_separator_shadow 1px,
-            @menu_separator_shadow 2px,
-            transparent 2px
-        );
-    margin-bottom: -7px;
-    min-height: 8px;
-}
-
-paned.horizontal > separator {
-    background-image:
-        linear-gradient(
-            to right,
-            @menu_separator 1px,
-            @menu_separator_shadow 1px,
-            @menu_separator_shadow 2px,
-            transparent 2px
-        );
-    margin-right: -7px;
-    min-width: 8px;
-}
-
-.titlebar separator:first-child,
-.titlebar separator:last-child {
-    margin: 0 4px;
-}
-
-toolbar separator,
-.titlebar separator {
-    background: none;
-    margin: 0 18px;
-}
-
-.titlebar separator:first-child,
-.titlebar separator:last-child {
-    margin: 0;
-    min-width: 0;
-    padding: 0;
-}
-
-toolbar paned separator,
-.toolbar .pane-separator,
-.titlebar .pane-separator {
-    background-color: transparent;
-    background-image: url("assets/pane-handle.svg");
-    box-shadow: none;
-}
-
-/*************
-* Text Entry *
-*************/
+/**************
+ * Text Entry *
+ **************/
 
 entry,
 spinbutton,

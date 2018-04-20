@@ -40,7 +40,7 @@ recolor:
 
 
 sass: gtk3
-	@echo "** Generating the CSS..."
+	@echo "** Generated the CSS..."
 
 gtk2:
 
