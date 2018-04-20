@@ -1,6 +1,7 @@
 SHELL = /bin/bash
 COLOR_VARIANTS = '' '-dark' '-light'
 SIZE_VARIANTS = '' '-slim'
+COMPONENTS = 'gtk-2.0' 'gtk-3.22'
 SASSC_OPT=-M -t expanded
 BASE_DIR=/usr/share/themes
 REPODIR=$(CURDIR)
@@ -12,17 +13,7 @@ all: sass assets
 assets:
 
 clean:
-	-rm -rf ./src/gtk-2.0/assets/*.png
-	-rm -rf ./src/gtk-2.0/assets-dark/*.png
-	-rm -rf ./src/gtk-2.0/*.svg
-	-rm -rf ./src/gtk-2.0/gtkrc
-	-rm -rf ./src/gtk-2.0/gtkrc-dark
-	-rm -rf ./src/gtk-2.0/gtkrc-light
-	-rm -rf ./src/gtk-3.0/gtk-common/assets/*.png
-	-rm -rf ./src/gtk-3.0/gtk-common/*.svg
-	-rm -rf ./src/gtk-3.0/**/*.css
-	-rm -rf ./src/gnome-shell/**/*.css
-	-rm -rf ./src/**/*.tmp
+	-rm -rf build
 
 uninstall:
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop
@@ -54,13 +45,17 @@ gtk2:
 
 
 prepare:
+	@echo "** Setting up a build environment **"
 	mkdir -p build
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
 	    mkdir -p build/Pop$$size$$color; \
+	    for component in $(COMPONENTS); do \
+	      cp -r src/$$component build/Pop$$size$$color/; \
+	    done; \
 	  done; \
 	done
-	cp -r src/* build
+	#cp -r src/* build
 
 gtk3: prepare
 	@echo "** Generating GTK3..."
