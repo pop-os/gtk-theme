@@ -2,7 +2,7 @@
  * Pop!_OS GTK Theme (The Pop!_GTK Theme).
  * Copyright 2017-2018 System76, Inc.
  * 
- * _color-palette.scss - Defines the master color palette
+ * sass/widgets/_misc.scss - Miscellaneous small widgets
  *
  * The Pop!_GTK Theme is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -35,21 +35,6 @@
 /*****************
  * Miscellaneous *
  ****************/
-
-spinner {
-    background-image: none;
-    opacity: 0;
-    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
-}
-
-spinner:checked {
-    opacity: 0.8;
-    animation: spin 600ms linear infinite;
-}
-
-spinner:checked:disabled {
-    opacity: 0.4;
-}
 
 rubberband,
 .view.rubberband,

@@ -123,10 +123,3 @@ $white: #FFFFFF;
 $black: #000000;
 $mid_grey: #888888;
 
-$fg_color:                    if($variant == 'light', $brown_800, $white);
-$secondary_fg_color:          if($variant == 'light', rgba($brown_800, 0.7), rgba($white, 0.7));
-$hint_fg_color:               if($variant == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
-$disabled_fg_color:           if($variant == 'light', rgba($brown_800, 0.5), rgba($white, 0.5));
-$disabled_secondary_fg_color: if($variant == 'light', rgba($brown_800, 0.3), rgba($white, 0.3));
-$track_color:                 if($variant == 'light', rgba($brown_900, 0.3), rgba($white, 0.3));
-$divider_color:               if($variant == 'light', rgba($brown_700, 0.12), rgba($white, 0.12));

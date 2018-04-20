@@ -28,26 +28,29 @@
 $corner_radius: 4px;
 
 // Sizes
-$mini_size: if($compact == 'false',4px, 2px);
-$tiny_size: if($compact == 'false', 12px, 10px);
-$small_size: if($compact == 'false', 16px, 14px);
-$medium_size: if($compact == 'false', 24px, 20px);
-$large_size: if($compact == 'false', 32px, 28px);
+$mini_size: if($slim == 'false',4px, 2px);
+$tiny_size: if($slim == 'false', 12px, 10px);
+$small_size: if($slim == 'false', 16px, 14px);
+$medium_size: if($slim == 'false', 24px, 20px);
+$large_size: if($slim == 'false', 32px, 28px);
+
+$line_size: 2px;
+$border_size: 1px;
 
 // Padding
 $no_padding: 1px;
 $mini_padding: 2px;
-$tiny_padding: if($compact == 'false', 6px, 4px);
-$small_padding: if($compact == 'false', 8px, 6px);
-$standard_padding: if($compact == 'false', 12px, 10px);
-$large_padding: if($compact == 'false', 16px, 12px);
+$tiny_padding: if($slim == 'false', 6px, 4px);
+$small_padding: if($slim == 'false', 8px, 6px);
+$standard_padding: if($slim == 'false', 12px, 10px);
+$large_padding: if($slim == 'false', 16px, 12px);
 
 $no_padding_em: 0.1em;
 $mini_padding_em: 0.2em;
-$tiny_padding_em: if($compact == 'false', 0.6em, 0.4em);
-$small_padding_em: if($compact == 'false', 0.8em, 0.6em);
-$standard_padding_em: if($compact == 'false', 1.2em, 1em);
-$large_padding_em: if($compact == 'false', 1.6em, 1.2em);
+$tiny_padding_em: if($slim == 'false', 0.6em, 0.4em);
+$small_padding_em: if($slim == 'false', 0.8em, 0.6em);
+$standard_padding_em: if($slim == 'false', 1.2em, 1em);
+$large_padding_em: if($slim == 'false', 1.6em, 1.2em);
 
 // Shadows:
 $shadow_0: 0 1px 2px rgba(0, 0, 0, 0.08);

@@ -2,7 +2,7 @@
  * Pop!_OS GTK Theme (The Pop!_GTK Theme).
  * Copyright 2017-2018 System76, Inc.
  * 
- * widgets/_base.scss - Base/fallback states for GTK Widgets
+ * sass/widgets/_misc.scss - Miscellaneous small widgets
  *
  * The Pop!_GTK Theme is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -24,46 +24,44 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
  
-.background {
-    color: $fg_color;
-    background-color: $bg_color;
-}
-
-* {
-
-  background-clip: padding-box;
-  -GtkTextView-error-underline-color: $error_color;
-  -GtkIMHtml-hyperlink-color: $theme_color_2;
-  -GtkHTML-link-color: $theme_color_2;
-  //-gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; 
-   
-  &:selected {
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
-  }
+/*
+ * Spinner
+ */
+spinner {
+  background-image: none;
+  opacity: 0;
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
   
-  &:disabled {
-    color: insensitive($fg_color);
-    -gtk-icon-effect: dim;
-  }
-  
-  &:hover {
-    -gtk-icon-effect: none;
+  &:checked {
+    opacity: 1;
+    animation: spin 1.2s linear infinite;
+    
+    &:disabled {
+      opacity: 0.6;
+    }
   }
 }
 
-.gtkstyle-fallback {
-  color: $fg_color;
-  background-color: $bg_color;
+rubberband,
+.rubberband,
+.view.rubberband {
+  background-color: line($color_theme_1);
+  border: none;
+  transition: all 500ms ease-out;
 }
 
-image,
-label,
-box,
-grid {
-  background-color: transparent;
-  
-  &:disabled {
-    background-color: transparent;
-  }
+// Duffeyrolls not donuts?
+.dnd {
+  background-color: line($color_theme_1);
+  background-image: none;
+  border-radius: $corner_radius;
+  margin: $mini_padding;
+}
+
+.keycap {
+  background-color: $dark_bg_color;
+  border-radius: $corner_radius;
+  font-size: 85%;
+  min-width: $tiny_size;
+  padding: $mini_padding $tiny_padding;
 }
