@@ -1,0 +1,33 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_progressbar.scss - Progress bar styling
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+progress,
+.progressbar {
+  background-color: $color_theme_1;
+  border-radius: $corner_radius;
+  
+  &:backdrop {
+    background-color: to800($color_theme_1);
+  }
+}
+
+trough, 
+.trough {
+  background-color: $color_theme_1;
+  border-radius: $corner_radius;
+  
+  &:backdrop {
+    background-color: to800($color_theme_1);
+  }
+  
+  entry &,
+  spinbutton & {
+    padding: 0 $small_padding;
+  }
+}
+
