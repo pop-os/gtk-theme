@@ -306,7 +306,8 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
   background-color: $bg_color;
   box-shadow: $shadow_2;
   
-  .linked > button {
+  .linked > button,
+  .linked > button:nth-child(n-2) {
     @include entry(normal);
     @extend %linked;
     
