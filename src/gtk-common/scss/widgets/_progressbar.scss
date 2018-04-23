@@ -66,7 +66,6 @@ levelbar {
     &.empty {
       @extend %trough;
     }
-    
   }
   
   trough {
@@ -75,5 +74,64 @@ levelbar {
     &:backdrop {
       background-color: transparent;
     }
+  }
+}
+
+scale {
+  padding: $small_padding;
+  outline-color: transparent;
+  
+  slider {
+    color: $color_theme_1;
+    background-color: $color_theme_1;
+    border-radius: $circular_radius;
+    min-width: $small_size;
+    min-height: $small_size;
+    box-shadow: none;
+    margin: -1*$small_padding;
+    
+    &:hover {
+      box-shadow: $shadow_1;
+      
+      &:active:focus {
+        box-shadow: $shadow_2;
+      }
+    }
+    
+    &:backdrop {
+      background-color: to400($color_theme_1);
+    }
+    
+    &:disabled {
+      background-color: to600($color_theme_1);
+      
+      &:backdrop {
+        background-color: to200($color_theme_1);
+      }
+    }
+  }
+  
+  trough {
+    @extend %trough;
+    margin: $mini_padding;
+    outline-color: transparent;
+  }
+  
+  highlight {
+    @extend %progress;
+  }
+  
+  mark indicator {
+    color: to600($fg_color);
+  }
+  
+  &.horizontal mark indicator {
+    min-height: $marks_size;
+    min-width: $border_size;
+  }
+  
+  &.vertical mark indicator {
+    min-height: $border_size;
+    min-width: $marks_size;
   }
 }
