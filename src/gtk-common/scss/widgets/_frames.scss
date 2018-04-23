@@ -1,0 +1,32 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_frames.scss - Frames and borders
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+%frame,
+frame,
+.frame {
+  border: $border_size solid to200($fg_color);
+  
+  &.flat{
+    border: none;
+  }
+}
+
+overshoot,
+undershoot,
+.overshoot,
+.undershoot {
+  &.left,
+  &.right,
+  &.top,
+  &.bottom {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
