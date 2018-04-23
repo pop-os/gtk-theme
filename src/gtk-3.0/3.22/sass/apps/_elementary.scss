@@ -59,7 +59,9 @@ button.back-button,
 }
 
 .h4,
-.category-label {
+.category-label,
+dialog label.primary,
+GtkDialog GtkLabel.primary {
   font-weight: bold;
 }
 
@@ -72,6 +74,7 @@ list .h4,
 listbox .h4 {
   padding-left: 6px;
 }
+
 
 /***********
  * Welcome *
