@@ -6,9 +6,11 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
  
+ 
 /*
  * Spinner
  */
+ 
 spinner {
   background-image: none;
   opacity: 0;
@@ -24,12 +26,26 @@ spinner {
   }
 }
 
+
+/*
+ * Overscroll effect
+ */
+
 rubberband,
 .rubberband,
 .view.rubberband {
   background-color: to200($color_theme_1);
   border: none;
   transition: all 500ms ease-out;
+}
+
+
+/*
+ * Symbolic Images
+ */
+ 
+image {
+    color: inherit;
 }
 
 // Duffeyrolls not donuts?
