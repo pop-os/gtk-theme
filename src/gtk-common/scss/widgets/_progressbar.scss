@@ -18,6 +18,10 @@ levelbar block {
   &:backdrop {
     background-color: to400($color_theme_1);
   }
+  
+  entry & {
+    color: $inverse_fg_color;
+  }
 }
 
 %trough,
