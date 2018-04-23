@@ -5,3 +5,122 @@
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
+
+@mixin entry($type, $focus_color: $color_theme_2, $text_color: $fg_color) {
+
+  @if $type == normal {
+    transition: all $standard_duration ease;
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  to400($fg_color) 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;;
+    border-radius: $corner_radius $corner_radius 0 0;
+    box-shadow: $shadow_0;
+    padding: $tiny_padding_em;
+  }
+
+  @if $type == focus {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  $focus_color 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;
+    box-shadow: $shadow_2;
+    //border-bottom: $focus_color
+  }
+
+  @if $type == disabled {
+    box-shadow: $shadow_0;
+  }
+
+  @if $type == flat-normal {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  to400($fg_color) 0%,
+                                  transparent 0%)
+                                  0 0 0 / 0 0 0px;
+    box-shadow: none;
+  }
+
+  @if $type == flat-focus {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  $color_theme_2 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;
+    box-shadow: none;
+  }
+}
+ 
+entry,
+.entry {
+  @include entry(normal);
+  color: $fg_color;
+  background-color: $bg_hl_color;
+  transition: all $standard_duration ease;
+  
+  &.error {
+    background-color: to200($error_color);
+  }
+  
+  &:focus {
+    @include entry(focus);
+  }
+  
+  &:disabled {
+    @include entry(disabled);
+    background-color: to600($bg_hl_color);
+  }
+  
+  selection {
+    background-color: $color_theme_1;
+    color: $inverse_fg_color;
+  }
+  
+  toolbar &:backdrop,
+  .titlebar &:backdrop {
+    background-color: to800($bg_hl_color);
+  }
+  
+  image {
+    color: $fg_color;
+    margin: 0 $tiny_padding;
+    
+    &:backdrop {
+      color: to600($fg_color);
+    }
+  }
+  
+  &.flat {
+    @include entry(flat-normal);
+    
+    &:focus {
+      @include entry(flat-focus);
+    }
+  }
+}
+
+spinbutton {
+  &.horizontal {
+    @include entry(normal);
+    color: $fg_color;
+    background-color: $bg_hl_color;
+    transition: all $standard_duration ease;
+    
+    button {
+      border: none;
+      
+    }
+    
+    entry {
+      @include reset;
+      padding: 0 $large_padding 0 $small_padding;
+    }
+    
+    &:focus {
+      @include entry(focus);
+      
+      entry {
+        @include reset;
+        padding: 0 $large_padding 0 $small_padding;
+      }
+    }
+  }
+}

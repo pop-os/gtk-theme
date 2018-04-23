@@ -6,6 +6,15 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
  
+@mixin reset {
+  background: none;
+  box-shadow: none;
+  border-image: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+ 
 .background {
     color: $fg_color;
     background-color: $bg_color;
@@ -25,7 +34,7 @@
   }
   
   &:disabled {
-    color: insensitive($fg_color);
+    color: to600($fg_color);
     -gtk-icon-effect: dim;
   }
   

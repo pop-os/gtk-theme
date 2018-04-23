@@ -7,7 +7,7 @@
  */
 
 separator {
-  border: 0 solid divider($fg_color);
+  border: 0 solid to200($fg_color);
   margin: $no_padding;
   
   menu &,

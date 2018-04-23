@@ -9,20 +9,20 @@
 @import 'color-palette';
 
 // Some color functions to opacitize colors for certain functions
-@function secondary($color) {
+@function to800($color) {
   @return rgba($color, 0.8);
 }
-@function insensitive($color) {
+@function to600($color) {
   @return rgba($color, 0.6);
 }
-@function hint($color) {
-  @return rgba($color, 0.7);
+@function to400($color) {
+  @return rgba($color, 0.4);
 }
-@function line($color) {
-  @return rgba($color, 0.3);
+@function to200($color) {
+  @return rgba($color, 0.2);
 }
-@function divider($color) {
-  @return rgba($color, 0.12);
+@function to100($color) {
+  @return rgba($color, 0.1);
 }
 
 // Main Accent Colors
@@ -31,11 +31,11 @@ $color_theme_2: if($color=='dark', $orange_700, $orange_500);
 
 // Background UI Colors
 $base_color: if($color=='dark', $black, $white); 
-$bg_color: if($color=='dark', $dark_ui_300, $light_ui_300);
-$bg_hl_color: if($color=='dark', $dark_ui_100, $light_ui_100);
+$bg_color: if($color=='dark', $dark_ui_700, $light_ui_300);
+$bg_hl_color: if($color=='dark', $dark_ui_900, $light_ui_100);
 $bg_emp_color: if($color=='dark', $dark_ui_500, $light_ui_500);
-$dark_bg_color: if($color=='dark', $dark_ui_700, $light_ui_700);
-$darker_bg_color: if($color=='dark', $dark_ui_900, $light_ui_900);
+$dark_bg_color: if($color=='dark', $dark_ui_300, $light_ui_700);
+$darker_bg_color: if($color=='dark', $dark_ui_100, $light_ui_900);
 
 $inverse_bg_color: $dark_ui_500;
 $obverse_bg_color: $light_ui_500;
