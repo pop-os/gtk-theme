@@ -1,28 +1,35 @@
 // This file is part of the Pop!_GTK Theme.
 // See gtk.scss for full license and copyright information
 /* 
- * widgets/_progressbar.scss - Progress bar styling
+ * widgets/_progressbar.scss - Progress bar and levelbar styling
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
+ 
 
+%progress,
 progress,
-.progressbar {
+.progressbar 
+levelbar block {
   background-color: $color_theme_1;
   border-radius: $corner_radius;
+  border: none;
   
   &:backdrop {
-    background-color: to800($color_theme_1);
+    background-color: to400($color_theme_1);
   }
 }
 
+%trough,
 trough, 
-.trough {
-  background-color: $color_theme_1;
+.trough,
+levelbar block.empty {
+  background-color: to200($fg_color);
   border-radius: $corner_radius;
+  border: none;
   
   &:backdrop {
-    background-color: to800($color_theme_1);
+    background-color: to100($fg_color);
   }
   
   entry &,
@@ -31,3 +38,42 @@ trough,
   }
 }
 
+levelbar {
+  block {
+    @extend %progress;
+    margin: $mini_padding;
+    
+    &.filled.low {
+      background-color: $error_color;
+      
+      &:backdrop {
+        background-color: to400($error_color);
+      }
+    }
+    
+    &.filled.middle {
+      @extend %progress;
+    }
+    
+    &.filled.high {
+      background-color: $suggested_color;
+      
+      &:backdrop {
+        background-color: to400($suggested_color);
+      }
+    }
+    
+    &.empty {
+      @extend %trough;
+    }
+    
+  }
+  
+  trough {
+    background-color: transparent;
+    
+    &:backdrop {
+      background-color: transparent;
+    }
+  }
+}

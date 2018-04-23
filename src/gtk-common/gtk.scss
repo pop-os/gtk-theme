@@ -23,12 +23,19 @@
  * Portions of this theme based on the elementary GTK Theme.
  * Copyright 2016 elementary LLC.
  */
+
  
 $color: "light";
 $slim: "false";
 
 @import 'scss/colors';
 @import 'scss/variables';
+
+//FIXME Remove this after completing debugging
+* {
+  @include reset;
+}
+
 @import 'scss/widgets/base';
 @import 'scss/widgets/tooltip';
 @import 'scss/widgets/misc';
@@ -36,3 +43,4 @@ $slim: "false";
 @import 'scss/widgets/entry';
 @import 'scss/widgets/textview';
 @import 'scss/widgets/progressbar';
+

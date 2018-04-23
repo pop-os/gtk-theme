@@ -4,6 +4,15 @@
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
+
+@mixin reset {
+  background: none;
+  box-shadow: none;
+  border-image: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
  
 // Radii
 $corner_radius: 4px;
