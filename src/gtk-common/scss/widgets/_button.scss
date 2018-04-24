@@ -17,6 +17,26 @@ button,
   box-shadow: $shadow_1;
   border-radius: $corner_radius;  
   
+  &.image-button,
+  &.round,
+  &.circular {
+    border-radius: $circular_radius;
+    padding: $mini_padding;
+    min-height: $large_size;
+    min-width: $large_size;
+  }
+  
+  &.flat {
+    @extend %flat;
+    
+    
+  }
+  
+  &.text-button {
+    padding: $mini_padding_em $small_padding_em;
+    border-radius: $corner_radius;
+  }
+  
   label {
     padding: 0, $small_padding_em;
   }
@@ -58,43 +78,31 @@ button,
     box-shadow: $shadow_3;
   }
   
-  titlebar &,
-  .titlebar &,
-  headerbar &,
-  .headerbar & {
-    background-color: transparent;
-    color: $titlebar_fg_color;
-    box-shadow: none;
+  %flat-button,
+  toolbar &,
+  .toolbar &,
+  actionbar &,
+  .actionbar & {
+    @extend %flat;
+    color: $fg_color;
     margin: $tiny_padding;
     min-width: $large_size;
     min-height: $large_size;
+    padding: $mini_padding_em;
+    
+    &.text-button.image-button {
+      min-width: $large_size;
+      padding: $mini_padding;
+      border-radius: $circular_radius;
+    }
     
     &:backdrop {
-      color: to600($titlebar_fg_color);
+      color: to600($fg_color);
       
       label,
       image {
-        color: to600($titlebar_fg_color);
+        color: to600($fg_color);
       }
-    }
-    
-    &:checked {
-      @include underline(focus);
-      box-shadow: none;
-      
-      &:backdrop {
-        background-color: transparent;
-      }
-    }
-    
-    &:hover {
-      background-color: to100($titlebar_fg_color);
-      box-shadow: none;
-    }
-    
-    &:active {
-      background-color: to200($titlebar_fg_color);
-      box-shadow: none;
     }
   }
   
@@ -111,7 +119,7 @@ button,
     @extend %linked-vertical;
   }
   
-  .color {
+  &.color {
     padding: 0;
     margin: 0;
     
@@ -119,10 +127,62 @@ button,
       margin: 0;
     }
   }
-
+  
+  titlebar &,
+  .titlebar &,
+  headerbar &,
+  .headerbar & {
+    @extend %flat-button;
+    color: $titlebar_fg_color;
+    background-color: transparent;
+    box-shadow: none;
+    
+    &.text-button {
+      padding: $mini_padding_em $standard_padding_em;
+      min-width: 3*$large_size;
+      box-shadow: none;
+    }
+    
+    &:disabled,
+    &:disabled image,
+    &:disabled label {
+      color: to400($titlebar_fg_color);
+    }
+    
+    &:backdrop {
+      color: to600($titlebar_fg_color);
+      box-shadow: none;
+      
+      label,
+      image {
+        color: to600($titlebar_fg_color);
+      }
+    }
+    &:hover {
+      background-color: transparent;  
+      box-shadow: none;
+    }
+    
+    &:active {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    
+    &:checked {
+      background-color: transparent;
+      @include underline(focus);
+      box-shadow: none;
+      
+      &:backdrop {
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 titlebar .linked button,
 headerbar .linked button {
   margin: 0;
+  border-radius: $corner_radius $corner_radius 0 0;
 }

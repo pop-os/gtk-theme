@@ -1,7 +1,7 @@
 // This file is part of the Pop!_GTK Theme.
 // See gtk.scss for full license and copyright information
 /* 
- * widgets/_base.scss - Base/fallback states for GTK Widgets
+ * widgets/_base.scss - Base/fallback states for GTK Widgets and Mixins
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
@@ -45,6 +45,14 @@
   background-color: $bg_color;
 }
 
+.link {
+  color: $color_theme_2;
+}
+.visited {
+  color: darken($color_theme_2, 20%);
+}
+
+
 image,
 label,
 box,
@@ -58,8 +66,11 @@ grid {
 
 %linked-horizontal {
   border-radius: 0;
+  margin: $mini_padding 0;
+  
 
-  &:first-child {
+  &:first-child,
+  &:first-child * {
     border-radius: $corner_radius 0 0 $corner_radius;
     
     &:dir-rtl {
@@ -67,7 +78,8 @@ grid {
     }
   }
   
-  &:last-child {
+  &:last-child,
+  &:last-child * {
     border-radius: 0 $corner_radius $corner_radius 0;
     
     &:dir-rtl {
@@ -82,6 +94,7 @@ grid {
   
 %linked-vertical{
   border-radius: 0;
+  margin: 0 $mini_padding;
   
   &:first-child {
     border-radius: $corner_radius $corner_radius 0 0;
@@ -102,7 +115,6 @@ grid {
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;;
     border-radius: $corner_radius $corner_radius 0 0;
-    box-shadow: $shadow_0;
     padding: $tiny_padding_em;
   }
 
@@ -111,7 +123,6 @@ grid {
                                   $focus_color 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
-    box-shadow: $shadow_2;
     
     &:backdrop {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
@@ -122,7 +133,10 @@ grid {
   }
 
   @if $type == disabled {
-    box-shadow: $shadow_0;
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  to200($fg_color) 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;;
   }
 
   @if $type == flat-normal {
@@ -139,5 +153,29 @@ grid {
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
     box-shadow: none;
+  }
+}
+
+%flat {
+  background-color: transparent;
+  box-shadow: none;
+  
+  &:hover {
+    background-color: to100($fg_color);  
+    box-shadow: none;
+  }
+  
+  &:active {
+    background-color: to200($fg_color);
+    box-shadow: none;
+  }
+  
+  &:checked {
+    background-color: transparent;
+    @include underline(focus);
+    
+    &:backdrop {
+      background-color: transparent;
+    }
   }
 }

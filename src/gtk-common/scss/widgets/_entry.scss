@@ -12,6 +12,7 @@
 entry,
 .entry {
   @include underline(normal);
+  box-shadow: $shadow_0;
   color: $fg_color;
   background-color: $bg_hl_color;
   transition: all $standard_duration ease;
@@ -22,6 +23,7 @@ entry,
   
   &:focus {
     @include underline(focus);
+    box-shadow: $shadow_2;
   }
   
   &:disabled {
