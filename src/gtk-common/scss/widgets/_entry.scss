@@ -69,6 +69,15 @@ spinbutton {
     button {
       @include reset;
       padding: $mini_padding;
+      border-radius: $circular_radius;
+      
+      &:hover {
+        background-color: to100($fg_color);
+      }
+      
+      &:active {
+        background-color: to200($fg_color);
+      }
     }
     
     entry {
@@ -89,5 +98,22 @@ spinbutton {
   &.vertical {
     @include reset;
     padding: $tiny_padding;
+    
+    button {
+      @extend %flat;
+      color: $fg_color;
+      min-width: $large_size;
+      min-height: $large_size;
+      padding: $mini_padding_em;
+      
+      &:backdrop {
+        color: to600($fg_color);
+        
+        label,
+        image {
+          color: to600($fg_color);
+        }
+      }
+    }
   }
 }

@@ -104,6 +104,14 @@ button,
         color: to600($fg_color);
       }
     }
+    
+    &:checked {
+      color: $fg_color;
+      
+      &:backdrop {
+        color: to600($fg_color);
+      }
+    }
   }
   
   .linked.horizontal > & {
