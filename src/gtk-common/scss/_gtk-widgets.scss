@@ -9,95 +9,36 @@
 /***************
  * Base States *
  ***************/
-
 /************
  * Tooltips *
  ************/
- 
 /*****************
  * Miscellaneous *
  ****************/
-
 /**************
  * Separators *
  **************/
-
 /**************
  * Text Entry *
  **************/
-
 /*************
  * Text view *
  *************/
-
-
-
 /*******************
 * Symbolic images *
 *******************/
-
-
-
 /****************
  * Progress bar *
  ****************/
-
-
-
 /************
 * Level Bar *
 ************/
-
-
-
 /********
 * Scale *
 ********/
-
-
-
 /*********
 * Frames *
 *********/
-
-frame,
-.frame {
-    border: 1px solid @border_color;
-    color: lighter (@fg_color);
-}
-
-scrolledwindow.frame {
-    border: 1px solid @border_color;
-}
-
-frame.flat,
-scrolledwindow viewport.frame,
-.frame.flat {
-    border: none;
-}
-
-overshoot.left,
-overshoot.right,
-overshoot.top,
-overshoot.bottom,
-undershoot.left,
-undershoot.right,
-undershoot.top,
-undershoot.bottom,
-.overshoot.left,
-.overshoot.right,
-.overshoot.top,
-.overshoot.bottom,
-.undershoot.left,
-.undershoot.right,
-.undershoot.top,
-.undershoot.bottom {
-    background-image: none;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-}
-
 /**********
 * Buttons *
 **********/

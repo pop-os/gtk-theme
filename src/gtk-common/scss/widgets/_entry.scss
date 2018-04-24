@@ -6,52 +6,12 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-@mixin entry($type, $focus_color: $color_theme_2, $text_color: $fg_color) {
 
-  @if $type == normal {
-    transition: all $standard_duration ease;
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to400($fg_color) 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;;
-    border-radius: $corner_radius $corner_radius 0 0;
-    box-shadow: $shadow_0;
-    padding: $tiny_padding_em;
-  }
 
-  @if $type == focus {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $focus_color 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;
-    box-shadow: $shadow_2;
-    //border-bottom: $focus_color
-  }
-
-  @if $type == disabled {
-    box-shadow: $shadow_0;
-  }
-
-  @if $type == flat-normal {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to400($fg_color) 0%,
-                                  transparent 0%)
-                                  0 0 0 / 0 0 0px;
-    box-shadow: none;
-  }
-
-  @if $type == flat-focus {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $color_theme_2 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;
-    box-shadow: none;
-  }
-}
- 
+%entry,
 entry,
 .entry {
-  @include entry(normal);
+  @include underline(normal);
   color: $fg_color;
   background-color: $bg_hl_color;
   transition: all $standard_duration ease;
@@ -61,11 +21,11 @@ entry,
   }
   
   &:focus {
-    @include entry(focus);
+    @include underline(focus);
   }
   
   &:disabled {
-    @include entry(disabled);
+    @include underline(disabled);
     background-color: to600($bg_hl_color);
   }
   
@@ -89,24 +49,24 @@ entry,
   }
   
   &.flat {
-    @include entry(flat-normal);
+    @include underline(flat-normal);
     
     &:focus {
-      @include entry(flat-focus);
+      @include underline(flat-focus);
     }
   }
 }
 
 spinbutton {
   &.horizontal {
-    @include entry(normal);
+    @include underline(normal);
     color: $fg_color;
     background-color: $bg_hl_color;
     transition: all $standard_duration ease;
     
     button {
-      border: none;
-      
+      @include reset;
+      padding: $mini_padding;
     }
     
     entry {
@@ -115,12 +75,17 @@ spinbutton {
     }
     
     &:focus {
-      @include entry(focus);
+      @include underline(focus);
       
       entry {
         @include reset;
         padding: 0 $large_padding 0 $small_padding;
       }
     }
+  }
+  
+  &.vertical {
+    @include reset;
+    padding: $tiny_padding;
   }
 }

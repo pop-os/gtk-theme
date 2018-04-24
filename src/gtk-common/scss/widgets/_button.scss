@@ -1,0 +1,128 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_button.scss - Buttons
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+
+%button,
+button,
+.button {
+  padding: .1em+$mini_padding_em .1em+$tiny_padding_em;
+  border: none;
+  background-color: $bg_hl_color;
+  color: $fg_color;
+  box-shadow: $shadow_1;
+  border-radius: $corner_radius;  
+  
+  label {
+    padding: 0, $small_padding_em;
+  }
+  
+  &:backdrop {
+    color: to600($fg_color);
+  }
+  
+  &:hover {
+    box-shadow: $shadow_2;
+  }
+  
+  &:disabled {
+    color: to200($fg_color);
+  }
+  
+  &:checked {
+    background-color: $color_theme_2;
+    color: $inverse_fg_color;
+    
+    &:backdrop {
+      background-color: to600($color_theme_2);
+      color: to800($inverse_fg_color);
+    }
+    
+    &:disabled {
+      color: darken($color_theme_2, 10%);
+      background-color: to200($color_theme_2);
+      border: $border_size solid to100($fg_color);
+      
+      &:backdrop {
+        background-color: to100($color_theme_2);
+        color: to600(darken($color_theme_2, 10%));
+      }
+    }
+  }
+  
+  &:active {
+    box-shadow: $shadow_3;
+  }
+  
+  titlebar &,
+  .titlebar &,
+  headerbar &,
+  .headerbar & {
+    background-color: transparent;
+    color: $titlebar_fg_color;
+    box-shadow: none;
+    margin: $tiny_padding;
+    min-width: $large_size;
+    min-height: $large_size;
+    
+    &:backdrop {
+      color: to600($titlebar_fg_color);
+      
+      label,
+      image {
+        color: to600($titlebar_fg_color);
+      }
+    }
+    
+    &:checked {
+      @include underline(focus);
+      box-shadow: none;
+      
+      &:backdrop {
+        background-color: transparent;
+      }
+    }
+    
+    &:hover {
+      background-color: to100($titlebar_fg_color);
+      box-shadow: none;
+    }
+    
+    &:active {
+      background-color: to200($titlebar_fg_color);
+      box-shadow: none;
+    }
+  }
+  
+  .linked.horizontal > & {
+    border-color: transparent;
+    @extend %linked-horizontal;
+    
+    &:active,
+    &:checked {
+    }
+  }
+  
+  .linked.vertical > & {
+    @extend %linked-vertical;
+  }
+  
+  .color {
+    padding: 0;
+    margin: 0;
+    
+    colorswatch {
+      margin: 0;
+    }
+  }
+
+}
+
+titlebar .linked button,
+headerbar .linked button {
+  margin: 0;
+}

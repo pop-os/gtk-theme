@@ -34,6 +34,10 @@
   &:hover {
     -gtk-icon-effect: none;
   }
+  
+  //&:backdrop {
+  //  color: to600($fg_color);
+  //}
 }
 
 .gtkstyle-fallback {
@@ -49,5 +53,91 @@ grid {
   
   &:disabled {
     background-color: transparent;
+  }
+}
+
+%linked-horizontal {
+  border-radius: 0;
+
+  &:first-child {
+    border-radius: $corner_radius 0 0 $corner_radius;
+    
+    &:dir-rtl {
+      border-radius: 0 $corner_radius $corner_radius 0;
+    }
+  }
+  
+  &:last-child {
+    border-radius: 0 $corner_radius $corner_radius 0;
+    
+    &:dir-rtl {
+      border-radius: 0 $corner_radius 0 0 $corner_radius;
+    }
+  }
+  
+  &:only-child {
+    border-radius: $corner_radius;
+  }
+}
+  
+%linked-vertical{
+  border-radius: 0;
+  
+  &:first-child {
+    border-radius: $corner_radius $corner_radius 0 0;
+  }
+  
+  &:last-child {
+    border-radius: 0 0 $corner_radius $corner_radius;
+
+  }
+}
+
+@mixin underline($type, $focus_color: $color_theme_2, $text_color: $fg_color) {
+
+  @if $type == normal {
+    transition: all $standard_duration ease;
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  to400($fg_color) 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;;
+    border-radius: $corner_radius $corner_radius 0 0;
+    box-shadow: $shadow_0;
+    padding: $tiny_padding_em;
+  }
+
+  @if $type == focus {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  $focus_color 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;
+    box-shadow: $shadow_2;
+    
+    &:backdrop {
+      border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                    to400($focus_color) 100%,
+                                    transparent 0%)
+                                    0 0 2 / 0 0 2px;
+    }
+  }
+
+  @if $type == disabled {
+    box-shadow: $shadow_0;
+  }
+
+  @if $type == flat-normal {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  to400($fg_color) 0%,
+                                  transparent 0%)
+                                  0 0 0 / 0 0 0px;
+    box-shadow: none;
+  }
+
+  @if $type == flat-focus {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  $color_theme_2 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;
+    box-shadow: none;
   }
 }

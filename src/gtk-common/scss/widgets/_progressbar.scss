@@ -89,8 +89,8 @@ scale {
     color: $color_theme_1;
     background-color: $color_theme_1;
     border-radius: $circular_radius;
-    min-width: $small_size;
-    min-height: $small_size;
+    min-width: $tiny_size;
+    min-height: $tiny_size;
     box-shadow: none;
     margin: -1*$small_padding;
     
@@ -107,10 +107,12 @@ scale {
     }
     
     &:disabled {
-      background-color: to600($color_theme_1);
+      color: $bg_color;
+      background-color: $bg_color;
+      border: $line_size solid to400($fg_color);
       
       &:backdrop {
-        background-color: to200($color_theme_1);
+        border-color: to200($fg_color);
       }
     }
   }
@@ -123,6 +125,14 @@ scale {
   
   highlight {
     @extend %progress;
+    
+    &:disabled {
+      background-color: to400($fg_color);
+      
+      &:backdrop {
+        background-color: to200($fg_color);
+      }
+    }
   }
   
   mark indicator {
