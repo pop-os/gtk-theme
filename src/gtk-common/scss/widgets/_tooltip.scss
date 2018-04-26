@@ -9,16 +9,16 @@
 
 tooltip,
 .overlay-bar {
-  color: $inverse_fg_color;
-  background-color: insensitive($inverse_bg_color);
+  color: $fg_color;
+  background-color: red;
   border-radius: $corner_radius;
   border: none;
   box-shadow: $shadow_2;
   padding: $mini_padding_em $tiny_padding_em;
   margin: $tiny_padding;
   
-  label {
-    color: $inverse_fg_color;
+  * {
+    color: $fg_color;
   }
 }
 

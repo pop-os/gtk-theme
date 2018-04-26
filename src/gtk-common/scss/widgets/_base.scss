@@ -6,67 +6,17 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
  
-
- 
-.background {
-    color: $fg_color;
-    background-color: $bg_color;
-}
-
-* {
-
-  background-clip: padding-box;
-  -GtkTextView-error-underline-color: $error_color;
-  -GtkIMHtml-hyperlink-color: $color_theme_2;
-  -GtkHTML-link-color: $color_theme_2;
-  //-gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; 
-   
-  &:selected {
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
-  }
-  
-  &:disabled {
-    color: to600($fg_color);
-    -gtk-icon-effect: dim;
-  }
-  
-  &:hover {
-    -gtk-icon-effect: none;
-  }
-  
-  //&:backdrop {
-  //  color: to600($fg_color);
-  //}
-}
-
-.gtkstyle-fallback {
-  color: $fg_color;
-  background-color: $bg_color;
-}
-
-.link {
-  color: $color_theme_2;
-}
-.visited {
-  color: darken($color_theme_2, 20%);
-}
-
-
-image,
-label,
-box,
-grid {
-  background-color: transparent;
-  
-  &:disabled {
-    background-color: transparent;
-  }
+@mixin reset {
+  background: none;
+  box-shadow: none;
+  border-image: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 %linked-horizontal {
   border-radius: 0;
-  margin: $mini_padding 0;
   
 
   &:first-child,
@@ -94,7 +44,6 @@ grid {
   
 %linked-vertical{
   border-radius: 0;
-  margin: 0 $mini_padding;
   
   &:first-child {
     border-radius: $corner_radius $corner_radius 0 0;
@@ -114,8 +63,6 @@ grid {
                                   to400($fg_color) 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;;
-    border-radius: $corner_radius $corner_radius 0 0;
-    padding: $tiny_padding_em;
   }
 
   @if $type == focus {
@@ -156,7 +103,7 @@ grid {
   }
 }
 
-%flat {
+@mixin flat {
   background-color: transparent;
   box-shadow: none;
   
@@ -179,3 +126,58 @@ grid {
     }
   }
 }
+
+@mixin base-states {
+  color: $fg_color;
+  
+  &:backdrop {
+    opacity: 0.85;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    
+    &:backdrop {
+      opacity: 0.3;
+    }
+  }
+}
+
+* {
+  @include reset; //FIXME: Remove for debugging
+  background-clip: padding-box;
+  -GtkTextView-error-underline-color: $error_color;
+  -GtkIMHtml-hyperlink-color: $color_theme_2;
+  -GtkHTML-link-color: $color_theme_2;
+  //-gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; 
+}
+
+.background {
+    color: $fg_color;
+    background-color: $bg_color;
+}
+
+.gtkstyle-fallback {
+  color: $fg_color;
+  background-color: $bg_color;
+}
+
+.link {
+  color: $color_theme_2;
+}
+.visited {
+  color: darken($color_theme_2, 20%);
+}
+
+
+image,
+label,
+box,
+grid {
+  background-color: transparent;
+  
+  &:disabled {
+    background-color: transparent;
+  }
+}
+

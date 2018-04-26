@@ -4,15 +4,6 @@
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
-
-@mixin reset {
-  background: none;
-  box-shadow: none;
-  border-image: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
  
 // Radii
 $corner_radius: 4px;
@@ -32,6 +23,7 @@ $marks_size: 6px;
 // Padding
 $no_padding: 1px;
 $mini_padding: 2px;
+$tinier_padding: 4px;
 $tiny_padding: if($slim == 'false', 6px, 4px);
 $small_padding: if($slim == 'false', 8px, 6px);
 $standard_padding: if($slim == 'false', 12px, 10px);
@@ -39,6 +31,7 @@ $large_padding: if($slim == 'false', 16px, 12px);
 
 $no_padding_em: 0.1em;
 $mini_padding_em: 0.2em;
+$tinier_padding_em: 0.4em;
 $tiny_padding_em: if($slim == 'false', 0.6em, 0.4em);
 $small_padding_em: if($slim == 'false', 0.8em, 0.6em);
 $standard_padding_em: if($slim == 'false', 1.2em, 1em);

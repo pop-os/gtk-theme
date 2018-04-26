@@ -6,8 +6,6 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-
-
 %entry,
 entry,
 .entry {
@@ -15,10 +13,10 @@ entry,
   box-shadow: $shadow_0;
   color: $fg_color;
   background-color: $bg_hl_color;
-  transition: all $standard_duration ease;
+  padding: $tinier_padding_em $small_padding_em;
   
-  &.error {
-    background-color: to200($error_color);
+  &:backdrop {
+    color: to600($fg_color);
   }
   
   &:focus {
@@ -28,7 +26,6 @@ entry,
   
   &:disabled {
     @include underline(disabled);
-    background-color: to600($bg_hl_color);
   }
   
   selection {
@@ -36,83 +33,89 @@ entry,
     color: $inverse_fg_color;
   }
   
-  toolbar &:backdrop,
-  .titlebar &:backdrop {
-    background-color: to800($bg_hl_color);
-  }
-  
   image {
     color: $fg_color;
-    margin: 0 $tiny_padding;
     
     &:backdrop {
-      color: to600($fg_color);
+      color: to400($fg_color);
     }
   }
   
   &.flat {
-    @include underline(flat-normal);
+    @include flat;
+  }
+}
+
+/*
+ * Spin Buttons
+ */
+
+spinbutton {
+  &.horizontal {
+    @extend %entry;
     
-    &:focus {
-      @include underline(flat-focus);
+    entry {
+      @include reset;
+    }
+  }
+  
+  button {
+    @include flat-button;
+    
+    &:backdrop {
+      color: to600($fg_color);
+    }
+    
+    &:disabled {
+      box-shadow: none;
+      color: to400($fg_color);
+      
+      &:backdrop {
+        color: to200($fg_color);
+      }
     }
   }
 }
 
-spinbutton {
-  &.horizontal {
-    @include underline(normal);
-    color: $fg_color;
-    background-color: $bg_hl_color;
-    transition: all $standard_duration ease;
-    
-    button {
-      @include reset;
-      padding: $mini_padding;
-      border-radius: $circular_radius;
-      
-      &:hover {
-        background-color: to100($fg_color);
-      }
-      
-      &:active {
-        background-color: to200($fg_color);
-      }
-    }
-    
-    entry {
-      @include reset;
-      padding: 0 $large_padding 0 $small_padding;
-    }
-    
-    &:focus {
-      @include underline(focus);
-      
-      entry {
-        @include reset;
-        padding: 0 $large_padding 0 $small_padding;
-      }
-    }
+/* 
+ * ComboBoxes
+ */
+
+combobox {
+
+  arrow {
+    min-width: $medium_size;
+    min-height: $medium_size;
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   }
   
-  &.vertical {
-    @include reset;
-    padding: $tiny_padding;
+  button {
+    @include underline(normal);
+    background-color: $bg_hl_color;
     
-    button {
-      @extend %flat;
+    &:backdrop {
+      color: to600($fg_color);
+    }
+    
+    &:active,
+    &:checked,
+    &:hover {
+      @include underline(focus);
+      background-color: $bg_hl_color;
       color: $fg_color;
-      min-width: $large_size;
-      min-height: $large_size;
-      padding: $mini_padding_em;
+    }
+    
+    &:active,
+    &:checked {
+      background-color: to200($color_theme_2);
+    }
+    
+    &:disabled {
+      @include underline(disabled);
+      color: to400($fg_color);
       
       &:backdrop {
-        color: to600($fg_color);
-        
-        label,
-        image {
-          color: to600($fg_color);
-        }
+        color: to200($fg_color);
       }
     }
   }
