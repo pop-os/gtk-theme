@@ -21,6 +21,10 @@ levelbar block {
   
   entry & {
     color: $inverse_fg_color;
+    background-color:  to400($color_theme_1);
+    margin: -5px -10px;
+    border-bottom: $line_size solid $color_theme_1;
+    border-radius: $corner_radius $corner_radius 0 0;
   }
 }
 

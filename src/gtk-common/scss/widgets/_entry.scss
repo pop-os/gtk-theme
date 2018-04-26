@@ -90,6 +90,7 @@ combobox {
   }
   
   button {
+    padding: $tinier_padding_em $tinier_padding_em $tinier_padding_em $standard_padding_em;
     @include underline(normal);
     background-color: $bg_hl_color;
     
@@ -118,5 +119,9 @@ combobox {
         color: to200($fg_color);
       }
     }
+  }
+  
+  entry + button {
+    padding: $tinier_padding;
   }
 }

@@ -1,0 +1,52 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_linked.scss - Linked items
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+ 
+.linked {
+  > button,
+  > entry,
+  > combobox .combo {
+    border-radius: 0;
+  }
+  
+  //&.horizontal,
+  & {
+    :first-child,
+    > :first-child .combo {
+      border-radius: $corner_radius 0 0 $corner_radius;
+    }
+    
+    :last-child,
+    > :last-child .combo {
+      border-radius: 0 $corner_radius $corner_radius 0;
+    }
+  }
+  
+  &.vertical {
+    :first-child,
+    > :first-child .combo  {
+      border-radius: $corner_radius $corner_radius 0 0;
+    }
+    
+    :last-child,
+    > :last-child .combo  {
+      border-radius: 0 0 $corner_radius $corner_radius ;
+    }
+  }
+  
+  :only-child,
+  > :only-child .combo  {
+    border-radius: $corner_radius;
+  }
+  
+  entry + button {
+    @extend %entry;
+    padding: $tinier_padding;
+    background-color: $bg_hl_color;
+  }
+}
