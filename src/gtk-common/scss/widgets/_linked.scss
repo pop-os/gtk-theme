@@ -50,3 +50,12 @@
     background-color: $bg_hl_color;
   }
 }
+
+//undo on stackswitcher buttons
+
+stackswitcher.linked.stack-switcher > button.radio.text-button:first-child,
+stackswitcher.linked.stack-switcher > button.radio.text-button:last-child,
+stackswitcher.linked.stack-switcher > button.radio.text-button:only-child,
+stackswitcher.linked.stack-switcher > button.radio.text-button {
+  border-radius: $corner_radius $corner_radius 0 0;
+}

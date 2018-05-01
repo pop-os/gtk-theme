@@ -14,6 +14,7 @@ levelbar block {
   background-color: $color_theme_1;
   border-radius: $corner_radius;
   border: none;
+  padding: $marks_size;
   
   &:backdrop {
     background-color: to400($color_theme_1);

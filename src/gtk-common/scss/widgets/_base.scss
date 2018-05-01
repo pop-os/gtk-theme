@@ -55,12 +55,12 @@
   }
 }
 
-@mixin underline($type, $focus_color: $color_theme_2, $text_color: $fg_color) {
+@mixin underline($type, $focus_color: $color_theme_2, $line_color: $fg_color) {
 
   @if $type == normal {
     transition: all $standard_duration ease;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to400($fg_color) 100%,
+                                  to400($line_color) 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;;
   }
@@ -81,14 +81,14 @@
 
   @if $type == disabled {
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to200($fg_color) 100%,
+                                  to200($line_color) 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;;
   }
 
   @if $type == flat-normal {
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to400($fg_color) 0%,
+                                  to400($line_color) 0%,
                                   transparent 0%)
                                   0 0 0 / 0 0 0px;
     box-shadow: none;

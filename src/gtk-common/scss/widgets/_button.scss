@@ -79,5 +79,42 @@ button,
   &.text-button {
     padding: $tinier_padding_em $large_padding_em;
     border-radius: $corner_radius;
+  }
+  
+  stackswitcher & {
+    @include flat-button;
+    
+    &:checked {
+      @include underline(focus);
+      
+      &:hover {
+        @include underline(focus);
+      }
+    }
+    
+    &:hover {
+      @include underline(insensitive);
+      
+      &:checked {
+        @include underline(focus);
+      }
+    }
+    
+    .titlebar & {
+      color: $titlebar_fg_color;
+      
+      &:hover {
+        @include underline(disabled, $color_theme_2, $titlebar_fg_color);
+        background-color: to100($titlebar_fg_color);
+        
+        &:checked {
+          @include underline(focus);
+        }
+      }
+    }
+  }
+  
+  &.lock {
+    padding: $tinier_padding_em $small_padding_em;
   } 
 }
