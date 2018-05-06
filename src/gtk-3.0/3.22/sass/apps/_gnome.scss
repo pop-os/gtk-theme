@@ -30,6 +30,10 @@ window.csd > box.horizontal {
   widget > overlay > box.vertical > grid.horizontal > stack > button.toggle {
     margin: $tiny_padding;
   }
+  
+  row.activatable button.image-button.circular {
+    margin: 0 4px 6px 4px;
+  }
 
 }
 
