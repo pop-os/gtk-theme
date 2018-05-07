@@ -344,7 +344,7 @@ combobox {
 // This isn't an actual combobox, but it looks like one, so we should theme it
 // the same way.
 
-box.horizontal.linked > entry + button:not(.combo) {
+box.horizontal.linked > entry + button:not(.combo):not(.image-button) {
   @include entry(normal)
 
   &:disabled { @include entry(disabled)}
