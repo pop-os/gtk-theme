@@ -57,11 +57,6 @@ window.csd > headerbar.titlebar > box.linked > button.image-button {
   border-image: none;
 }
 
-// Need to make the entry slightly wider to fit the text. Dunno why it cuts off
-window.csd > headerbar.titlebar > box.linked.horizontal > entry:nth-child(2) {
-  min-width: 6em;
-}
-
 /**********
  * Evince *
  **********/
