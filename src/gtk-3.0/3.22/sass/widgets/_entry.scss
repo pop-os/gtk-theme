@@ -5,7 +5,7 @@
 entry {
   %entry_basic, & {
     min-height: $entry_size;
-    min-width: $entry_size * 2;
+    min-width: 7em;
     padding: $tiny_padding;
     border-top-left-radius: $pop_radius;
     border-top-right-radius: $pop_radius;
