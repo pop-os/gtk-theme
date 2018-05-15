@@ -1,0 +1,67 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_tabs.scss - Tabs, tab bars, and notebooks
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+notebook {
+  background-color: $bg_hl_color;
+  border: none;
+  
+  header {
+    background-color: $bg_emp_color;
+    border: $border_size solid $darker_bg_color;
+    
+    &.top {
+      border-top-width: 0;
+      
+      
+      tab:checked {
+        box-shadow: inset 0 -1*$line_size 0px $color_theme_2;
+      }
+    }
+    
+    &.bottom {
+      border-bottom-width: 0;
+      
+      tab:checked {
+        box-shadow: inset 0 $line_size 0px $color_theme_2;
+      }
+    }
+    
+    &.left {
+      border-left-width: 0;
+      
+      tab:checked {
+        box-shadow: inset -1*$line_size 0px 0px $color_theme_2;
+      }
+    }
+    
+    &.right {
+     border-right-width: 0;
+      
+      tab:checked {
+        box-shadow: inset $line_size 0px 0px $color_theme_2;
+      }
+    }
+    
+    &.backdrop {
+      background-color: to600($bg_emp_color);
+    }
+  
+    tab {
+      background-color: $bg_emp_color;
+      padding: $tiny_padding $small_padding;
+      
+      &:checked {
+        background-color: $bg_hl_color;
+      }
+      
+      &:hover {
+        background-color: $bg_color;
+      }
+    }
+  }
+}
