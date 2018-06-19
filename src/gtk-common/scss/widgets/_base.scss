@@ -7,51 +7,27 @@
  */
  
 @mixin reset {
+  margin: 0;
+  padding: 0;
+  border: none;
   background: none;
   box-shadow: none;
   border-image: none;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
-%linked-horizontal {
-  border-radius: 0;
+@mixin base_states {
+  color: $fg_color;
   
-
-  &:first-child,
-  &:first-child * {
-    border-radius: $corner_radius 0 0 $corner_radius;
+  &:backdrop {
+    opacity: 0.85;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
     
-    &:dir-rtl {
-      border-radius: 0 $corner_radius $corner_radius 0;
+    &:backdrop {
+      opacity: 0.3;
     }
-  }
-  
-  &:last-child,
-  &:last-child * {
-    border-radius: 0 $corner_radius $corner_radius 0;
-    
-    &:dir-rtl {
-      border-radius: 0 $corner_radius 0 0 $corner_radius;
-    }
-  }
-  
-  &:only-child {
-    border-radius: $corner_radius;
-  }
-}
-  
-%linked-vertical{
-  border-radius: 0;
-  
-  &:first-child {
-    border-radius: $corner_radius $corner_radius 0 0;
-  }
-  
-  &:last-child {
-    border-radius: 0 0 $corner_radius $corner_radius;
-
   }
 }
 
@@ -59,47 +35,53 @@
 
   @if $type == normal {
     transition: all $standard_duration ease;
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to400($line_color) 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;;
+    border-image: radial-gradient(
+                    circle closest-corner at center calc(100% - 1px),
+                    to400($line_color) 100%,
+                    transparent 0%)
+                    0 0 2 / 0 0 2px;
   }
 
   @if $type == focus {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $focus_color 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;
+    border-image: radial-gradient(
+                    circle closest-corner at center calc(100% - 1px),
+                    $focus_color 100%,
+                    transparent 0%)
+                    0 0 2 / 0 0 2px;
     
     &:backdrop {
-      border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                    to400($focus_color) 100%,
-                                    transparent 0%)
-                                    0 0 2 / 0 0 2px;
+      border-image: radial-gradient(
+                      circle closest-corner at center calc(100% - 1px),
+                      to400($focus_color) 100%,
+                      transparent 0%)
+                      0 0 2 / 0 0 2px;
     }
   }
 
   @if $type == disabled {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to200($line_color) 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;;
+    border-image: radial-gradient(
+                    circle closest-corner at center calc(100% - 1px),
+                    to200($line_color) 100%,
+                    transparent 0%)
+                    0 0 2 / 0 0 2px;
   }
 
   @if $type == flat-normal {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  to400($line_color) 0%,
-                                  transparent 0%)
-                                  0 0 0 / 0 0 0px;
     box-shadow: none;
+    border-image: radial-gradient(
+                    circle closest-corner at center calc(100% - 1px),
+                    to400($line_color) 0%,
+                    transparent 0%)
+                    0 0 0 / 0 0 0;
   }
 
   @if $type == flat-focus {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $color_theme_2 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;
     box-shadow: none;
+    border-image: radial-gradient(
+                    circle closest-corner at center calc(100% - 1px),
+                    $color_theme_2 100%,
+                    transparent 0%)
+                    0 0 2 / 0 0 2px;
   }
 }
 
@@ -127,19 +109,42 @@
   }
 }
 
-@mixin base-states {
-  color: $fg_color;
+%linked-horizontal {
+  border-radius: 0;
   
-  &:backdrop {
-    opacity: 0.85;
+  &:first-child,
+  &:first-child * {
+    border-radius: $corner_radius 0 0 $corner_radius;
+    
+    &:dir-rtl {
+      border-radius: 0 $corner_radius $corner_radius 0;
+    }
   }
   
-  &:disabled {
-    opacity: 0.6;
+  &:last-child,
+  &:last-child * {
+    border-radius: 0 $corner_radius $corner_radius 0;
     
-    &:backdrop {
-      opacity: 0.3;
+    &:dir-rtl {
+      border-radius: 0 $corner_radius 0 0 $corner_radius;
     }
+  }
+  
+  &:only-child {
+    border-radius: $corner_radius;
+  }
+}
+  
+%linked-vertical {
+  border-radius: 0;
+  
+  &:first-child {
+    border-radius: $corner_radius $corner_radius 0 0;
+  }
+  
+  &:last-child {
+    border-radius: 0 0 $corner_radius $corner_radius;
+
   }
 }
 
@@ -149,17 +154,16 @@
   -GtkTextView-error-underline-color: $error_color;
   -GtkIMHtml-hyperlink-color: $color_theme_2;
   -GtkHTML-link-color: $color_theme_2;
-  //-gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; 
 }
 
 .background {
-    color: $fg_color;
     background-color: $bg_color;
+    color: $fg_color;
 }
 
 .gtkstyle-fallback {
-  color: $fg_color;
   background-color: $bg_color;
+  color: $fg_color;
 }
 
 .link {

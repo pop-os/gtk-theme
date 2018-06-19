@@ -8,44 +8,49 @@
 switch {
   transition: all 500ms ease;
   border-radius: $circular_radius;
-  background-color: to600($fg_color);
   background-clip: padding-box;
-  background-image: url("assets/scalable/switch-symbols.svg");
+  background-color: to600($fg_color);
+  background-image: url('assets/scalable/switch-symbols.svg');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-repeat: no-repeat;
   font-size: 0;
 
-  &:disabled { background-color: to200($fg_color); }
+  &:disabled { 
+    background-color: to200($fg_color);
+  }
 
   &:checked {
     background-color: $color_theme_2;
     
 
     &:disabled,
-    &:backdrop { background-color: to600($color_theme_2); }
+    &:backdrop { 
+      background-color: to600($color_theme_2); 
+    }
   }
 
   slider {
-    transition: all 500ms ease;
     min-width: 20px;
     min-height: 20px;
     margin: 2px;
+    transition: all 500ms ease;
     border-radius: $circular_radius;
-    -gtk-outline-radius: $circular_radius;
-    box-shadow: $shadow_2;
     background-color: $bg_hl_color;
+    box-shadow: $shadow_2;
+    -gtk-outline-radius: $circular_radius;
   }
 
-  &:hover slider { box-shadow: $shadow_3; }
+  &:hover slider { 
+    box-shadow: $shadow_3; 
+  }
 
   &:checked slider {
     transition: all 500ms ease;
     color: $bg_hl_color;
   }
 
-  &:checked:disabled slider { animation: none; }
-
-  row:selected & {
+  &:checked:disabled slider { 
+    animation: none;
   }
 }

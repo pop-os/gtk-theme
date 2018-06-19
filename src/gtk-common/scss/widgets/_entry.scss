@@ -9,11 +9,11 @@
 %entry,
 entry,
 .entry {
-  @include underline(normal);
-  box-shadow: $shadow_0;
-  color: $fg_color;
-  background-color: $bg_hl_color;
   padding: $tinier_padding_em $small_padding_em;
+  @include underline(normal);
+  background-color: $bg_hl_color;
+  color: $fg_color;
+  box-shadow: $shadow_0;
   
   &:backdrop {
     color: to600($fg_color);
@@ -60,15 +60,15 @@ spinbutton {
   }
   
   button {
-    @include flat-button;
+    @include flat_button;
     
     &:backdrop {
       color: to600($fg_color);
     }
     
     &:disabled {
-      box-shadow: none;
       color: to400($fg_color);
+      box-shadow: none;
       
       &:backdrop {
         color: to200($fg_color);
@@ -86,11 +86,12 @@ combobox {
   arrow {
     min-width: $medium_size;
     min-height: $medium_size;
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
   }
   
   button {
-    padding: $tinier_padding_em $tinier_padding_em $tinier_padding_em $standard_padding_em;
+    padding: $tinier_padding_em; 
+    padding-left: $standard_padding_em;
     @include underline(normal);
     background-color: $bg_hl_color;
     

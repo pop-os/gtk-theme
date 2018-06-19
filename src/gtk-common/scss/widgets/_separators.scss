@@ -7,13 +7,13 @@
  */
 
 separator {
-  border: 0 solid to200($fg_color);
   margin: $no_padding;
+  border: 0 solid to200($fg_color);
   
   menu &,
   &.horizontal {
-    border-top-width: $border_size;
     margin: $no_padding;
+    border-top-width: $border_size;
   }
   
   menu & {
@@ -25,25 +25,20 @@ separator {
   }
   
   paned.vertical > & {
-    background-color: transparent;
-    margin-bottom: -1*$mini_size;
     min-height: $tiny_size;
+    margin-bottom: -1*$mini_size;
+    background-color: transparent;
   }
   
   paned.horizontal > & {
-    background-color: transparent;
-    margin-right: -1*$mini_size;
     min-height: $tiny_size;
+    margin-right: -1*$mini_size;
+    background-color: transparent;
   }
   
   toolbar &,
   .titlebar & {
-    background: none;
     margin: 0 $standard_padding;
-  }
-  
-  .titlebar &:first_child,
-  .titlebar &:last_child {
-    
+    background: none;
   }
 }

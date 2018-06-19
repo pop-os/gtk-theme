@@ -14,5 +14,8 @@ menu,
 .content-view .menu,
 window.menu,
 window.popup {
-  
+  padding: $tinier_padding;
+  border-radius: $corner_radius;
+  background-color: $bg_color;
+  box-shadow: $shadow_2;
 }

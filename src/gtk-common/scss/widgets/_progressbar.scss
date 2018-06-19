@@ -11,20 +11,20 @@
 progress,
 .progressbar 
 levelbar block {
-  background-color: $color_theme_1;
-  border-radius: $corner_radius;
   border: none;
+  border-radius: $corner_radius;
+  background-color: $color_theme_1;
   
   &:backdrop {
     background-color: to400($color_theme_1);
   }
   
   entry & {
-    color: $inverse_fg_color;
-    background-color:  to400($color_theme_1);
     margin: -5px -10px;
     border-bottom: $line_size solid $color_theme_1;
     border-radius: $corner_radius $corner_radius 0 0;
+    background-color:  to400($color_theme_1);
+    color: $inverse_fg_color;
   }
 }
 
@@ -32,9 +32,9 @@ levelbar block {
 trough, 
 .trough,
 levelbar block.empty {
-  background-color: to200($fg_color);
-  border-radius: $corner_radius;
   border: none;
+  border-radius: $corner_radius;
+  background-color: to200($fg_color);
   
   &:backdrop {
     background-color: to100($fg_color);
@@ -90,13 +90,13 @@ scale {
   outline-color: transparent;
   
   slider {
-    color: $color_theme_1;
-    background-color: $color_theme_1;
-    border-radius: $circular_radius;
     min-width: $tiny_size;
     min-height: $tiny_size;
-    box-shadow: none;
     margin: -1*$small_padding;
+    border-radius: $circular_radius;
+    background-color: $color_theme_1;
+    color: $color_theme_1;
+    box-shadow: none;
     
     &:hover {
       box-shadow: $shadow_1;
@@ -111,9 +111,9 @@ scale {
     }
     
     &:disabled {
-      color: $bg_color;
-      background-color: $bg_color;
       border: $line_size solid to400($fg_color);
+      background-color: $bg_color;
+      color: $bg_color;
       
       &:backdrop {
         border-color: to200($fg_color);
@@ -144,12 +144,12 @@ scale {
   }
   
   &.horizontal mark indicator {
-    min-height: $marks_size;
     min-width: $border_size;
+    min-height: $marks_size;
   }
   
   &.vertical mark indicator {
-    min-height: $border_size;
     min-width: $marks_size;
+    min-height: $border_size;
   }
 }

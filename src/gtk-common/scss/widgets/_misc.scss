@@ -14,7 +14,7 @@
 spinner {
   background-image: none;
   opacity: 0;
-  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+  -gtk-icon-source: -gtk-icontheme('process-working-symbolic');
   
   &:checked {
     opacity: 1;
@@ -34,9 +34,9 @@ spinner {
 rubberband,
 .rubberband,
 .view.rubberband {
-  background-color: to200($color_theme_1);
-  border: none;
   transition: all 500ms ease-out;
+  border: none;
+  background-color: to200($color_theme_1);
 }
 
 
@@ -50,16 +50,15 @@ image {
 
 // Duffeyrolls not donuts?
 .dnd {
+  border-radius: $corner_radius;
   background-color: to200($color_theme_1);
   background-image: none;
-  border-radius: $corner_radius;
-  margin: $mini_padding;
 }
 
 .keycap {
-  background-color: $dark_bg_color;
-  border-radius: $corner_radius;
-  font-size: 85%;
   min-width: $tiny_size;
   padding: $mini_padding $tiny_padding;
+  border-radius: $corner_radius;
+  background-color: $dark_bg_color;
+  font-size: 85%;
 }

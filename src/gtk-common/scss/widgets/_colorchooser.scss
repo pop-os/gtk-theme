@@ -24,7 +24,7 @@ colorchooser {
     overlay {
       &,
       &:selected,
-      &:selected:focus{
+      &:selected:focus {
         background: none;
       }
     }

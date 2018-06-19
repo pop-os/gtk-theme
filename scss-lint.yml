@@ -1,9 +1,6 @@
 rules:
   attribute-quotes: 1
-  border-zero:
-    - 2
-    -
-      convention: 'none'
+  border-zero: 0
   brace-style:
     - 2
     -
@@ -20,11 +17,7 @@ rules:
     - 2
     -
       include: false
-  empty-line-between-blocks:
-    - 2
-    -
-      include: true
-      allow-single-line-rulesets: false
+  empty-line-between-blocks: 0
   extends-before-declarations: 2
   extends-before-mixins: 2
   final-newline: 1
@@ -35,7 +28,7 @@ rules:
     - 1
     -
       allow-leading-underscore: true
-      convention: snakecase
+      convention: hyphenatedlowercase
   hex-length:
     - 2
     -
@@ -45,10 +38,7 @@ rules:
     -
       style: uppercase
   id-name-format: 0
-  indentation:
-    - 2
-    -
-      size: 2
+  indentation: 0
   leading-zero:
     - 1
     -
@@ -63,7 +53,7 @@ rules:
     -
       allow-leading-underscore: true
       convention: snakecase
-  mixins-before-declarations: 2
+  mixins-before-declarations: 0
   nesting-depth: 0
   no-color-hex: 0
   no-color-keywords: 0
@@ -84,37 +74,37 @@ rules:
   no-mergeable-selectors: 0
   no-misspelled-properties: 0
   no-qualifying-elements: 0
-  no-trailing-whitespace: 1
-  no-trailing-zero: 1
+  no-trailing-whitespace: 0
+  no-trailing-zero: 2
   no-transition-all: 0
   no-universal-selectors: 0
   no-url-domains: 0
   no-url-protocols: 0
   no-value-vendor-prefix: 0
   no-warn: 1
-  one-declaration-per-line: 1
+  one-declaration-per-line: 2
   placeholder-in-extend: 0
   property-sort-order:
-    - 1
+    - 2
     -
       order: smacss
       ignore-custom-properties: false
   property-units: 0
   pseudo-element: 0
   quotes:
-    - 1
+    - 2
     -
       style: single
   shorthand-values: 1
   single-line-per-selector:  0
   space-after-bang: 0
-  space-after-colon: 1
-  space-after-comma: 1
+  space-after-colon: 2
+  space-after-comma: 2
   space-around-operator: 0
-  space-before-bang: 1
-  space-before-brace: 1
+  space-before-bang: 2
+  space-before-brace: 2
   space-before-colon:
-    - 1
+    - 2
     -
       include: false
   space-between-parens: 0
@@ -126,4 +116,4 @@ rules:
     -
       allow-leading-underscore: true
       convention: snakecase
-  zero-unit: 1
+  zero-unit: 2

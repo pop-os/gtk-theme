@@ -7,14 +7,14 @@
  */
 
 scrollbar {
-  background-color: transparent;
   transition: all 1200ms ease-out;
+  background-color: transparent;
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
   
   slider {
-    background-color: to600($fg_color);
     border: $border_size solid to200($bg_color);
+    background-color: to600($fg_color);
   }
   
   trough {

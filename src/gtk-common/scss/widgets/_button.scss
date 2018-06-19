@@ -6,7 +6,7 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-@mixin flat-button {
+@mixin flat_button {
   @include flat;
   
   &:hover {
@@ -26,12 +26,12 @@
 %button,
 button,
 .button {
-  border: none;
   padding: $mini_padding_em;
+  border: none;
   border-radius: $corner_radius;
   background-color: $bg_hl_color;
   box-shadow: $shadow_1;
-  @include base-states;
+  @include base_states;
   
   &:backdrop {
     color: to600($fg_color);
@@ -55,7 +55,6 @@ button,
   }
   
   &:disabled {
-    box-shadow: none;
     box-shadow: inset 0 0 0 $line_size to200($fg_color);
     
     &:checked:backdrop {
@@ -64,16 +63,16 @@ button,
   }
   
   &.flat {
-    @include flat-button;
+    @include flat_button;
   }
   
   &.round,
   &.circular,
   &.image-button {
-    border-radius: $circular_radius;
-    padding: $tinier_padding;
-    min-height: $medium_size;
     min-width: $medium_size;
+    min-height: $medium_size;
+    padding: $tinier_padding;
+    border-radius: $circular_radius;
   }
   
   &.text-button {
@@ -82,7 +81,7 @@ button,
   }
   
   stackswitcher & {
-    @include flat-button;
+    @include flat_button;
     
     &:checked {
       @include underline(focus);

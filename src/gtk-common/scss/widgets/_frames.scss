@@ -12,7 +12,7 @@ frame,
   border: $border_size solid to200($fg_color);
   border-radius: $corner_radius/2;
   
-  &.flat{
+  &.flat {
     border: none;
   }
 }
@@ -25,9 +25,9 @@ undershoot,
   &.right,
   &.top,
   &.bottom {
-    background-image: none;
-    background-color: transparent;
     border: none;
+    background-color: transparent;
+    background-image: none;
     box-shadow: none;
   }
 }

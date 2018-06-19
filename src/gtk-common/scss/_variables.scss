@@ -10,7 +10,7 @@ $corner_radius: 4px;
 $circular_radius: 999px;
 
 // Sizes
-$mini_size: if($slim == 'false',4px, 2px);
+$mini_size: if($slim == 'false', 4px, 2px);
 $tiny_size: if($slim == 'false', 12px, 10px);
 $small_size: if($slim == 'false', 16px, 14px);
 $medium_size: if($slim == 'false', 24px, 20px);

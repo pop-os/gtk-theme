@@ -9,13 +9,13 @@
 
 tooltip,
 .overlay-bar {
-  color: $fg_color;
-  background-color: red;
-  border-radius: $corner_radius;
-  border: none;
-  box-shadow: $shadow_2;
-  padding: $mini_padding_em $tiny_padding_em;
   margin: $tiny_padding;
+  padding: $mini_padding_em $tiny_padding_em;
+  border: none;
+  border-radius: $corner_radius;
+  background-color: $bg_color;
+  color: $fg_color;
+  box-shadow: $shadow_2;
   
   * {
     color: $fg_color;
