@@ -1,6 +1,6 @@
 // This file is part of the Pop!_GTK Theme.
 // See gtk.scss for full license and copyright information
-/* 
+/*!
  * _colors.scss - Master color definitions.
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
@@ -30,7 +30,7 @@ $color_theme_1: if($color=='dark', $blue_700, $blue_500);
 $color_theme_2: if($color=='dark', $orange_700, $orange_500);
 
 // Background UI Colors
-$base_color: if($color=='dark', $black, $white); 
+$base_color: if($color=='dark', $black, $white);
 $bg_color: if($color=='dark', $dark_ui_700, $light_ui_300);
 $bg_hl_color: if($color=='dark', $dark_ui_900, $light_ui_100);
 $bg_emp_color: if($color=='dark', $dark_ui_500, $light_ui_500);
@@ -43,7 +43,7 @@ $obverse_bg_color: $light_ui_500;
 $selected_bg_color: $color_theme_1;
 
 // Foreground UI Colors
-$base_fg_color: if($color=='dark', $white, $black); 
+$base_fg_color: if($color=='dark', $white, $black);
 $fg_color: if($color=='dark', $light_ui_300, $dark_ui_300);
 $fg_hl_color: if($color=='dark', $light_ui_100, $dark_ui_100);
 $fg_emp_color: if($color=='dark', $light_ui_500, $dark_ui_500);
@@ -68,88 +68,88 @@ $titlebar_fg_color: $light_ui_500;
 $titlebar_hl_color: mix($titlebar_bg_color, $inverse_fg_color, 90%);
 
 
-/* 
+/*!
  * Public Colors
  */
- 
+
 // apps rely on some named colors to be exported
-/* GTK NAMED COLORS
+/*!GTK NAMED COLORS
    ----------------
    use responsibly! */
 
 // Sass thinks we're using the colors in the variables as strings and may shoot
-// warning, it's innocuous and can be defeated by using "" + $var
+// warning, it's innocuous and can be defeated by using '' + $var
 //widget text/foreground color */
-@define-color theme_fg_color #{"" + $fg_color};
+@define-color theme_fg_color #{'' + $fg_color};
 
 //text color for entries, views and content in general */
-@define-color theme_text_color #{"" + $fg_color};
+@define-color theme_text_color #{'' + $fg_color};
 
 //widget base background color */
-@define-color theme_bg_color #{"" + $bg_color};
-@define-color bg_color #{"" + $bg_color};
+@define-color theme_bg_color #{'' + $bg_color};
+@define-color bg_color #{'' + $bg_color};
 
 //text widgets and the like base background color */
-@define-color theme_base_color #{"" + $base_color};
+@define-color theme_base_color #{'' + $base_color};
 
 //base background color of selections */
-@define-color theme_selected_bg_color #{"" + $selected_bg_color};
+@define-color theme_selected_bg_color #{'' + $selected_bg_color};
 
 //text/foreground color of selections */
-@define-color theme_selected_fg_color #{"" + $selected_fg_color};
+@define-color theme_selected_fg_color #{'' + $selected_fg_color};
 
 //base background color of insensitive widgets */
-@define-color insensitive_bg_color #{"" + $bg_color};
+@define-color insensitive_bg_color #{'' + $bg_color};
 
 //text foreground color of insensitive widgets */
-@define-color insensitive_fg_color #{"" + insensitive($fg_color)};
+@define-color insensitive_fg_color #{'' + insensitive($fg_color)};
 
 //insensitive text widgets and the like base background color */
-@define-color insensitive_base_color #{"" + $dark_bg_color};
+@define-color insensitive_base_color #{'' + $dark_bg_color};
 
 //widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #{"" + $fg_color};
+@define-color theme_unfocused_fg_color #{'' + $fg_color};
 
 //text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #{"" + $fg_color};
+@define-color theme_unfocused_text_color #{'' + $fg_color};
 
 //widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color #{"" + $bg_color};
+@define-color theme_unfocused_bg_color #{'' + $bg_color};
 
 //text widgets and the like base background color on backdrop windows */
-@define-color theme_unfocused_base_color #{"" + $base_color};
+@define-color theme_unfocused_base_color #{'' + $base_color};
 
 //base background color of selections on backdrop windows */
-@define-color theme_unfocused_selected_bg_color #{"" + $color_theme_1};
+@define-color theme_unfocused_selected_bg_color #{'' + $color_theme_1};
 
 //text/foreground color of selections on backdrop windows */
-@define-color theme_unfocused_selected_fg_color #{"" + insensitive($fg_color)};
+@define-color theme_unfocused_selected_fg_color #{'' + insensitive($fg_color)};
 
 //insensitive color on backdrop windows */
-@define-color unfocused_insensitive_color #{"" + $fg_color};
+@define-color unfocused_insensitive_color #{'' + $fg_color};
 
 //widgets main borders color */
-@define-color borders #{"" + line($fg_color)};
+@define-color borders #{'' + line($fg_color)};
 
 //widgets main borders color on backdrop windows */
-@define-color unfocused_borders #{"" + line($fg_color)};
+@define-color unfocused_borders #{'' + line($fg_color)};
 
 //these are pretty self explicative */
-@define-color warning_color #{"" + $warning_color};
-@define-color error_color #{"" + $error_color};
-@define-color success_color #{"" + $suggested_color};
-@define-color destructive_color #{"" + $destructive_color};
-@define-color suggested_color #{"" + $suggested_color};
+@define-color warning_color #{'' + $warning_color};
+@define-color error_color #{'' + $error_color};
+@define-color success_color #{'' + $suggested_color};
+@define-color destructive_color #{'' + $destructive_color};
+@define-color suggested_color #{'' + $suggested_color};
 
 //this is really an API */
-@define-color content_view_bg #{"" + $base_color};
-@define-color placeholder_text_color #{"" + hint($fg_color)};
+@define-color content_view_bg #{'' + $base_color};
+@define-color placeholder_text_color #{'' + hint($fg_color)};
 
 $spice_slide_background: lighten($warm_grey_700, 5%);
 $spice_selected_slide_background: lighten($warm_grey_700, 7%);
 
 //These are for Spice-up Presentation maker
-@define-color SpicePrimaryBackground #{"" + $warm_grey_700};
-@define-color SpiceSlideBackground #{"" + $spice_slide_background};
-@define-color SpiceSlideBackgroundSelected #{"" + lighten($warm_grey_700, 7%)};
-@define-color colorPrimary #{"" + $color_theme_1};
+@define-color SpicePrimaryBackground #{'' + $warm_grey_700};
+@define-color SpiceSlideBackground #{'' + $spice_slide_background};
+@define-color SpiceSlideBackgroundSelected #{'' + lighten($warm_grey_700, 7%)};
+@define-color colorPrimary #{'' + $color_theme_1};

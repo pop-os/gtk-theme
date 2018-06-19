@@ -1,0 +1,18 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_menus.scss - Menus and Menu bars
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.menuitem {
+  padding: $mini_padding_em;
+}
+
+menu,
+.content-view .menu,
+window.menu,
+window.popup {
+  
+}
