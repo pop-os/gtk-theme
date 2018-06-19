@@ -1,5 +1,5 @@
 *.pem
-#src/**/*.css
+src/**/*.css
 *.orig
 src/gtk-*/**/assets/*.png
 src/gtk-2.0/**/assets/*.png
