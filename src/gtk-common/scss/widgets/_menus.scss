@@ -6,10 +6,6 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-.menuitem {
-  padding: $mini_padding_em;
-}
-
 menu,
 .content-view .menu,
 window.menu,
@@ -18,4 +14,54 @@ window.popup {
   border-radius: $corner_radius;
   background-color: $bg_color;
   box-shadow: $shadow_2;
+
+  &.button {
+    background-image: none;
+  }
+}
+
+menuitem,
+.menuitem
+modalbutton, {
+  min-width: 4 * $large_size;
+  padding: $mini_padding_em;
+  border: none;
+  border-radius: $corner_radius;
+  background-color: none;
+  color: $fg_color;
+  text-shadow: none;
+  box-shadow: none;
+  -gtk-icon-shadow: none;
+  
+  &:active, 
+  &:hover {
+    background-color: $darker_bg_color;
+  }
+  
+  :disabled {
+    color: to600($fg_color);
+  }
+  
+  arrow {
+    min-width: $small_size;
+    min-height: $small_size;
+    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+    
+    &:dir(rtl) {
+      -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl');
+    }
+    
+    &.top {
+      -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+    }
+    
+    &.bottom {
+      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    }
+  }
+  
+  image,
+  label {
+    padding: $tinier_padding_em;
+  }
 }
