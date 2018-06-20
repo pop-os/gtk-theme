@@ -1,0 +1,67 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_check-radio.scss - Check boxes and Radio Buttons
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+check,
+radio {
+  min-width: $check_size;
+  min-height: $check_size;
+  padding: $no_padding;
+  transition: all 200ms ease;
+  border: $line_size solid to800($fg_color);
+  
+  &:checked,
+  &:indeterminate {  
+    border: $line_size solid $color_theme_2;
+    background-color: $color_theme_2;
+    color: $selected_fg_color;
+  }
+  
+  &:checked {
+    -gtk-icon-source: url('/home/ian/Documents/Pop/theme-rewrite/build/Pop/gtk-3.22/assets/check-symbols.svg'); // sass-lint:disable-line max-line-length FIXME: debug info
+  }
+  
+  &:indeterminate {
+    -gtk-icon-source: url('/home/ian/Documents/Pop/theme-rewrite/build/Pop/gtk-3.22/assets/indeterminate-symbols.svg'); // sass-lint:disable-line max-line-length FIXME: debug info
+  }
+  
+  &:disabled,
+  &:backdrop {
+    border: $line_size solid to400($fg_color);
+    
+    &:checked {
+      background-color: to600($color_theme_2);
+    }
+    
+    &:backdrop {
+      border: $line_size solid to200($fg_color);
+      
+      &:checked {
+        background-color: to200($color_theme_2);
+      } 
+    }
+  }
+}
+
+check {
+  border-radius: $corner_radius;
+}
+
+radio {
+  border-radius: $circular_radius;
+}
+
+checkbutton label,
+radiobutton label {
+  &:dir(ltr) {
+    margin-left: $tiny_padding_em;
+  }
+  
+  &:dir(rtl) {
+    margin-right: $tiny_padding_em;
+  }
+}

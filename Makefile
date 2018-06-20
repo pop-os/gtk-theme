@@ -28,7 +28,7 @@ uninstall:
 	-rm -rf $(DESTDIR)/usr/share/themes/Pop-light-slim
 
 install:
-
+	gedit build/Pop/gtk-3.22/gtk.css
 
 assets-gtk2:
 
@@ -45,7 +45,7 @@ sass: gtk3
 gtk2:
 
 
-prepare:
+prepare: lint
 	@echo "** Setting up a build environment **"
 
 	for version in $(GTK_VERSIONS); do \
@@ -93,6 +93,10 @@ gtk3: prepare
 	    done; \
 	  done; \
 	done
+
+lint:
+	@echo "** Checking for Code Quality..."
+	sass-lint -vqc scss-lint.yml src/gtk-common/scss/**/*.scss
 
 
 .PHONY: all install uninstall gtk3 gtk2 sass recolor assets-gtk3 assets-gtk2 clean install-gnome-shell gnomeshell

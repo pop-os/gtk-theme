@@ -108,7 +108,7 @@ rules:
     -
       include: false
   space-between-parens: 0
-  trailing-semicolon: 1
+  trailing-semicolon: 2
   url-quotes: 1
   variable-for-property: 0
   variable-name-format:

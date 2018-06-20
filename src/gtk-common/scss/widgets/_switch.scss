@@ -10,11 +10,14 @@ switch {
   border-radius: $circular_radius;
   background-clip: padding-box;
   background-color: to600($fg_color);
-  background-image: url('assets/scalable/switch-symbols.svg');
+  background-image: url('/home/ian/Documents/Pop/theme-rewrite/build/Pop/gtk-3.22/assets/switch-symbols.svg'); // sass-lint:disable-line max-line-length FIXME: debug info
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   font-size: 0;
+  /*box-shadow: inset 0 1px 2px 1px rgba(0, 0, 0, 0.24);*/
+  
+  box-shadow: inset $shadow_2;
 
   &:disabled { 
     background-color: to200($fg_color);
