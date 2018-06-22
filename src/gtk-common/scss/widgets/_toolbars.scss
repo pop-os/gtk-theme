@@ -1,0 +1,40 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_toolbars.scss - Toolbar styling
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+toolbar,
+.toolbar {
+  padding: $tinier_padding;
+  background-color: $dark_bg_color;
+  color: $dark_fg_color;
+  
+  &:backdrop {
+    color: to600($dark_fg_color);
+  }
+}
+
+actionbar,
+.secondary-toolbar,
+.bottom-toolbar {
+  padding: $tinier_padding;
+  background-color: $dark_bg_color;
+  color: $dark_fg_color;
+  box-shadow: none;
+  
+  label,
+  image {
+    color: $dark_fg_color;
+    
+    &:backdrop {
+      color: to600($dark_fg_color);
+    }
+  }
+  
+  &:backdrop {
+    color: to600($dark_fg_color);
+  }
+}
