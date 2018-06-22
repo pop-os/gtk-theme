@@ -11,8 +11,10 @@
 progress,
 .progressbar 
 levelbar block {
+  min-width: $progress_size;
+  min-height: $progress_size;
   border: none;
-  border-radius: $corner_radius;
+  border-radius: $circular_radius;
   background-color: $color_theme_1;
   
   &:backdrop {
@@ -32,8 +34,10 @@ levelbar block {
 trough, 
 .trough,
 levelbar block.empty {
+  min-width: $progress_size;
+  min-height: $progress_size;
   border: none;
-  border-radius: $corner_radius;
+  border-radius: $circular_radius;
   background-color: to200($fg_color);
   
   &:backdrop {
@@ -90,9 +94,9 @@ scale {
   outline-color: transparent;
   
   slider {
-    min-width: $tiny_size;
-    min-height: $tiny_size;
-    margin: -1*$small_padding;
+    min-width: 3 * $progress_size;
+    min-height: 3 * $progress_size;
+    margin: -2 * $progress_size;
     border-radius: $circular_radius;
     background-color: $color_theme_1;
     color: $color_theme_1;
