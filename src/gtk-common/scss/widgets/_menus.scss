@@ -23,7 +23,7 @@ window.popup {
 menuitem,
 .menuitem
 modelbutton, {
-  min-width: 4 * $large_size;
+  min-width: $large_size;
   padding: $mini_padding_em;
   border: none;
   border-radius: $corner_radius;
