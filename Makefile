@@ -69,6 +69,11 @@ prepare: lint
 		    cp -r \
 		      src/gtk-$$version \
 		      build/$$dirname/; \
+		    if [ "$$color" = "-dark" ]; then \
+		      echo "copy dark mode"; \
+		      cp src/gtk-common/gtk-dark.scss \
+		         build/$$dirname/gtk-$$version/gtk.scss; \
+	            fi; \
 		  else \
 		    cp -r \
 		      src/gtk-$$version \
@@ -96,7 +101,8 @@ gtk3: prepare
 	  for size in $(SIZES); do \
 	    for version in $(GTK_VERSIONS); do \
 	      if [ "$$version" != "2.0" ]; then \
-	        sassc $(SASSC_OPT) build/$(THEME_NAME)$$size$$color/gtk-$$version/gtk$$color$$size.{scss,css}; \
+	        sassc $(SASSC_OPT) build/$(THEME_NAME)$$size$$color/gtk-$$version/gtk.{scss,css}; \
+	        sassc $(SASSC_OPT) build/$(THEME_NAME)$$size$$color/gtk-$$version/gtk-dark.{scss,css}; \
 	      fi; \
 	    done; \
 	  done; \

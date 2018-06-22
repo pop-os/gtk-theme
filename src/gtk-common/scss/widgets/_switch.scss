@@ -10,7 +10,7 @@ switch {
   border-radius: $circular_radius;
   background-clip: padding-box;
   background-color: to600($fg_color);
-  background-image: url('/home/ian/Documents/Pop/theme-rewrite/build/Pop/gtk-3.22/assets/switch-symbols.svg'); // sass-lint:disable-line max-line-length FIXME: debug info
+  background-image: url('assets/switch-symbols.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

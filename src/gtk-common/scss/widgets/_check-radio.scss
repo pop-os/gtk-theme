@@ -22,11 +22,11 @@ radio {
   }
   
   &:checked {
-    -gtk-icon-source: url('/home/ian/Documents/Pop/theme-rewrite/build/Pop/gtk-3.22/assets/check-symbols.svg'); // sass-lint:disable-line max-line-length FIXME: debug info
+    -gtk-icon-source: url('assets/check-symbols.svg'); 
   }
   
   &:indeterminate {
-    -gtk-icon-source: url('/home/ian/Documents/Pop/theme-rewrite/build/Pop/gtk-3.22/assets/indeterminate-symbols.svg'); // sass-lint:disable-line max-line-length FIXME: debug info
+    -gtk-icon-source: url('assets/indeterminate-symbols.svg');
   }
   
   &:disabled,
@@ -44,6 +44,12 @@ radio {
         background-color: to200($color_theme_2);
       } 
     }
+  }
+  
+  menuitem &,
+  .menuitem &,
+  modelbutton & {
+    margin: $tiny_padding;
   }
 }
 
