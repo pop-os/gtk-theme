@@ -149,7 +149,8 @@
 }
 
 * {
-  @include reset; //FIXME: Remove for debugging
+  //@include reset; //FIXME: Remove for debugging
+  //transition: all 200ms ease;
   background-clip: padding-box;
   -GtkTextView-error-underline-color: $error_color;
   -GtkIMHtml-hyperlink-color: $color_theme_2;
