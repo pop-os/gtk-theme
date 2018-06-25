@@ -47,23 +47,6 @@ $slim: 'false';
 @import 'scss/widgets/check-radio';
 @import 'scss/widgets/menus';
 
-titlebar,
-headerbar,
-.titlebar,
-.headerbar {
-  padding: $mini_padding $large_padding;
-  border: 0 solid $titlebar_hl_color;
-  border-top-width: $border_size;
-  border-radius: $corner_radius $corner_radius 0 0;
-  background-color: $titlebar_bg_color;
-  color: $titlebar_fg_color;
-  box-shadow: $shadow_2;
-}
-
-decoration,
-.window-frame {
-  box-shadow: $shadow_5;
-}
 
 /***************************
 * Overlay Button *

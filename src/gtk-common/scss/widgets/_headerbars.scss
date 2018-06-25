@@ -6,3 +6,35 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
+headerbar,
+.headerbar,
+titlebar,
+.titlebar {
+  border: 0 solid $titlebar_hl_color;
+  border-top-width: $border_size;
+  border-radius: $corner_radius $corner_radius 0 0;
+  background-color: $titlebar_bg_color;
+  color: $titlebar_fg_color;
+  
+  &:backdrop {
+    background-color: $titlebar_hl_color;
+    color: to600($titlebar_fg_color);
+  }
+  
+  separator {
+    margin: $tiny_padding;
+    background-color: $titlebar_bg_color;
+    color: $titlebar_bg_color;
+    
+    &:backdrop {
+      background-color: $titlebar_hl_color;
+      color: $titlebar_hl_color;
+    }
+  }
+  
+}
+
+decoration,
+.window-frame {
+  box-shadow: $shadow_5;
+}
