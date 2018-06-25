@@ -9,7 +9,7 @@
 %frame,
 frame,
 .frame {
-  border: $border_size solid to200($fg_color);
+  border: none;
   border-radius: $corner_radius/2;
   
   &.flat {

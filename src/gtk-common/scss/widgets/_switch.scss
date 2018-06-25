@@ -6,7 +6,7 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 switch {
-  transition: all 500ms ease;
+  transition: $standard_transition;
   border-radius: $circular_radius;
   background-clip: padding-box;
   background-color: to600($fg_color);
@@ -15,19 +15,22 @@ switch {
   background-position: center;
   background-size: contain;
   font-size: 0;
-  /*box-shadow: inset 0 1px 2px 1px rgba(0, 0, 0, 0.24);*/
-  
-  box-shadow: inset $shadow_2;
+  box-shadow: 0 1px 3px rgba($black, 0.12) inset,
+              0 1px 2px rgba($black, 0.24) inset;
 
   &:disabled { 
     background-color: to200($fg_color);
+    box-shadow: none;
   }
 
   &:checked {
     background-color: $color_theme_2;
     
 
-    &:disabled,
+    &:disabled { 
+      background-color: to600($color_theme_2); 
+      box-shadow: none;
+    }
     &:backdrop { 
       background-color: to600($color_theme_2); 
     }
@@ -43,15 +46,31 @@ switch {
     min-width: $switch_size;
     min-height: $switch_size;
     margin: 2px;
-    transition: all 500ms ease;
+    transition: $standard_transition;
     border-radius: $circular_radius;
     background-color: $bg_hl_color;
-    box-shadow: $shadow_2;
+    box-shadow: $shadow_1;
     -gtk-outline-radius: $circular_radius;
+    
+    :disabled:hover &,
+    :disabled:checked &,
+    :disabled:active & {
+      box-shadow: none;
+    }
   }
-
+  
+  &:diabled {
+    
+    &,
+    &:hover,
+    &:checked,
+    &:active {
+      box-shadow: none;
+    }
+  }
+  
   &:hover slider { 
-    box-shadow: $shadow_3; 
+    box-shadow: $shadow_2; 
   }
 
   &:checked slider {

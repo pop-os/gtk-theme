@@ -34,7 +34,7 @@ spinner {
 rubberband,
 .rubberband,
 .view.rubberband {
-  transition: all 500ms ease-out;
+  transition: $standard_transition;
   border: none;
   background-color: to200($color_theme_1);
 }

@@ -11,7 +11,7 @@ radio {
   min-width: $check_size;
   min-height: $check_size;
   padding: $no_padding;
-  transition: all 200ms ease;
+  transition: $standard_transition;
   //border: $border_size solid red;
   box-shadow: inset 0 0 0 2px to800($fg_color);
    
@@ -77,12 +77,12 @@ radio:not(:checked):indeterminate:active {
 check:not(:checked),
 radio:not(:checked) {
   & {
-    transition: all 200ms ease,
+    transition: $standard_transition,
                 -gtk-icon-transform 0;
   }
 
   &:active {
-    transition: all 200ms ease,
+    transition: $standard_transition,
                 -gtk-icon-transform 0;
   }
 

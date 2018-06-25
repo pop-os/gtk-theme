@@ -12,60 +12,9 @@ headerbar,
   padding: $mini_padding $large_padding;
 }
 
-/*
 titlebar,
 .titlebar {
-  border: 0 solid $titlebar_hl_color;
-  border-top-width: $border_size;
-  border-radius: $corner_radius $corner_radius 0 0;
-  background-color: $titlebar_bg_color;
-  color: $titlebar_fg_color;
-  
-  &:backdrop {
-    border: 0 solid lighten($titlebar_hl_color, 10%);
-    border-top-width: $border_size;
-    background-color: $titlebar_hl_color;
-    color: to600($titlebar_fg_color);
-  }
-  
-  &.tiled,
-  &.maximized,
-  &.fullscreen,
-  &.tiled-bottom,
-  &.tiled-top,
-  &.tiled-left,
-  &.tiled-right {
-    border: none;
-    border-radius: none;
-    box-shadow: none;
-  }
-  
-  separator {
-    margin: $tiny_padding;
-    background-color: $titlebar_bg_color;
-    color: $titlebar_bg_color;
-    
-    &:backdrop {
-      background-color: $titlebar_hl_color;
-      color: $titlebar_hl_color;
-    }
-  }
-  
-  .titlebar {
-    margin: none;
-    padding: none;
-    border: none;
-    
-    &:backdrop {
-      margin: none;
-      padding: none;
-      border: none;
-    }
-  }
-}*/
-
-titlebar,
-.titlebar {
+  transition: $standard_transition;
   color: $titlebar_fg_color;
   
   &:backdrop {
@@ -98,6 +47,7 @@ titlebar,
 }
 
 decoration {
+  transition: $standard_transition;
   border: 0 solid $titlebar_hl_color;
   border-top-width: $border_size;
   border-radius: $corner_radius;

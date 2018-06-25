@@ -7,7 +7,7 @@
  */
 
 scrollbar {
-  transition: all 1200ms ease-out;
+  transition: $standard_transition;
   background-color: transparent;
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;

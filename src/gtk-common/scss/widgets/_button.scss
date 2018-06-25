@@ -27,7 +27,7 @@
 button,
 .button {
   padding: $mini_padding_em;
-  transition: all 200ms ease;
+  transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
   background-color: $bg_hl_color;
