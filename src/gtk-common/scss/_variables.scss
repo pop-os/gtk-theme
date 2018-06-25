@@ -21,7 +21,8 @@ $border_size: 1px;
 $progress_size: 4px;
 $marks_size: 6px;
 $check_size: 18px;
-$toolbar_size: if($slim == 'false', 48px, 32px);
+$switch_size: 20px;
+$toolbar_size: if($slim == 'false', 42px, 32px);
 
 // Padding
 $no_padding: 1px;

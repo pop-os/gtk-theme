@@ -32,10 +32,16 @@ switch {
       background-color: to600($color_theme_2); 
     }
   }
+  
+  headerbar &,
+  toolbar & {
+    margin-top: ($toolbar_size / 2) - ($switch_size / 2) - 2px; 
+    margin-bottom: ($toolbar_size / 2) - ($switch_size / 2) - 2px;  
+  }
 
   slider {
-    min-width: 20px;
-    min-height: 20px;
+    min-width: $switch_size;
+    min-height: $switch_size;
     margin: 2px;
     transition: all 500ms ease;
     border-radius: $circular_radius;
