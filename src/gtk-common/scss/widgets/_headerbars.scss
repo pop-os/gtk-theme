@@ -10,6 +10,7 @@ headerbar,
 .headerbar,
 titlebar,
 .titlebar {
+  padding: $mini_padding $large_padding;
   border: 0 solid $titlebar_hl_color;
   border-top-width: $border_size;
   border-radius: $corner_radius $corner_radius 0 0;
@@ -32,6 +33,11 @@ titlebar,
     }
   }
   
+}
+
+headerbar,
+.headerbar {
+  min-height: $toolbar_size;
 }
 
 decoration,

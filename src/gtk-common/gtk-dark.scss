@@ -26,6 +26,7 @@
 
  
 $color: 'dark';
+$titlebar: 'dark';
 $slim: 'false';
 
 @import 'scss/colors';
@@ -46,6 +47,8 @@ $slim: 'false';
 @import 'scss/widgets/switch';
 @import 'scss/widgets/check-radio';
 @import 'scss/widgets/menus';
+@import 'scss/widgets/toolbars';
+@import 'scss/widgets/headerbars';
 
 
 /***************************
