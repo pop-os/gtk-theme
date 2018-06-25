@@ -12,6 +12,7 @@ headerbar,
   padding: $mini_padding $large_padding;
 }
 
+/*
 titlebar,
 .titlebar {
   border: 0 solid $titlebar_hl_color;
@@ -25,6 +26,18 @@ titlebar,
     border-top-width: $border_size;
     background-color: $titlebar_hl_color;
     color: to600($titlebar_fg_color);
+  }
+  
+  &.tiled,
+  &.maximized,
+  &.fullscreen,
+  &.tiled-bottom,
+  &.tiled-top,
+  &.tiled-left,
+  &.tiled-right {
+    border: none;
+    border-radius: none;
+    box-shadow: none;
   }
   
   separator {
@@ -49,12 +62,66 @@ titlebar,
       border: none;
     }
   }
+}*/
+
+titlebar,
+.titlebar {
+  color: $titlebar_fg_color;
+  
+  &:backdrop {
+    color: to600($titlebar_fg_color);
+  }
+  
+  separator {
+    margin: $tiny_padding;
+    border: none;
+    background-color: $titlebar_bg_color;
+    color: $titlebar_bg_color;
+    
+    &:backdrop {
+      background-color: $titlebar_hl_color;
+      color: $titlebar_hl_color;
+    }
+  }
+  
+  .titlebar {
+    margin: none;
+    padding: none;
+    border: none;
+    
+    &:backdrop {
+      margin: none;
+      padding: none;
+      border: none;
+    }
+  }
 }
 
-decoration,
-.window-frame {
-  border-radius: 10px + $corner_radius;
-  background-color: transparent; //needed to prevent peeking
+decoration {
+  border: 0 solid $titlebar_hl_color;
+  border-top-width: $border_size;
+  border-radius: $corner_radius;
+  background-color: $titlebar_bg_color; 
   box-shadow: $shadow_5;
+  
+  &:backdrop {
+    border: 0 solid lighten($titlebar_hl_color, 10%);
+    border-top-width: $border_size;
+    background-color: $titlebar_hl_color;
+    color: to600($titlebar_fg_color);
+  }
+  
+  .tiled &,
+  .maximized &,
+  .fullscreen &,
+  .tiled-bottom &,
+  .tiled-top &,
+  .tiled-left &,
+  .tiled-right & {
+    border: none;
+    border-top-width: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 

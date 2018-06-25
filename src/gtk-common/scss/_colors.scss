@@ -66,7 +66,7 @@ $error_color: $red_700;
 // Titlebar colors
 $titlebar_bg_color: if($color=='light', 
                       if($titlebar=='dark', $warm_grey_500, $light_ui_500),
-                      mix($warm_grey_500, $dark_neutral_grey_900, 40%));
+                      mix($warm_grey_700, $dark_neutral_grey_500, 40%));
 $titlebar_fg_color: if($titlebar=='dark', $light_ui_500, $warm_grey_500);
 $titlebar_hl_color: mix($titlebar_bg_color, $inverse_fg_color, 90%);
 
