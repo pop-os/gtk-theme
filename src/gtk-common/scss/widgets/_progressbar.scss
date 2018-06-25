@@ -13,6 +13,7 @@ progress,
 levelbar block {
   min-width: $progress_size;
   min-height: $progress_size;
+  transition: $standard_transition;
   border: none;
   border-radius: $circular_radius;
   background-color: $color_theme_1;
@@ -23,6 +24,7 @@ levelbar block {
   
   entry & {
     margin: -5px -10px;
+    transition: $standard_transition;
     border-bottom: $line_size solid $color_theme_1;
     border-radius: $corner_radius $corner_radius 0 0;
     background-color:  to400($color_theme_1);
@@ -36,6 +38,7 @@ trough,
 levelbar block.empty {
   min-width: $progress_size;
   min-height: $progress_size;
+  transition: $standard_transition;
   border: none;
   border-radius: $circular_radius;
   background-color: to200($fg_color);
@@ -97,6 +100,7 @@ scale {
     min-width: 3 * $progress_size;
     min-height: 3 * $progress_size;
     margin: -2 * $progress_size;
+    transition: $standard_transition;
     border-radius: $circular_radius;
     background-color: $color_theme_1;
     color: $color_theme_1;
