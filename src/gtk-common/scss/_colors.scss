@@ -25,6 +25,7 @@
   @return rgba($color, 0.1);
 }
 
+
 // Main Accent Colors
 $color_theme_1: if($color=='dark', $blue_700, $blue_500);
 $color_theme_2: if($color=='dark', $orange_700, $orange_500);
@@ -63,10 +64,64 @@ $warning_color: $yellow_700;
 $error_color: $red_700;
 
 // Titlebar colors
-$titlebar_bg_color: $warm_grey_500;
-$titlebar_fg_color: $light_ui_500;
+$titlebar_bg_color: if($color=='light', 
+                      if($titlebar=='dark', $warm_grey_500, $light_ui_500),
+                      mix($warm_grey_500, $dark_neutral_grey_900, 40%));
+$titlebar_fg_color: if($titlebar=='dark', $light_ui_500, $warm_grey_500);
 $titlebar_hl_color: mix($titlebar_bg_color, $inverse_fg_color, 90%);
 
+/*
+ * Debug Block
+ */
+
+.pop-debug-color-block-invalid-nostyle {
+/* Sizes */
+  -color: $color;
+  -titlebar: $titlebar;
+  -slim: $slim;
+
+/* Main Accent Colors */
+  -color_theme_1: $color_theme_1;
+  -color_theme_2: $color_theme_2;
+
+/* Background UI Colors */
+  -base_color: $base_color;
+  -bg_color: $bg_color;
+  -bg_hl_color: $bg_hl_color;
+  -bg_emp_color: $bg_emp_color;
+  -dark_bg_color: $dark_bg_color;
+  -darker_bg_color: $darker_bg_color;
+
+  -inverse_bg_color: $inverse_bg_color;
+  -obverse_bg_color: $obverse_bg_color;
+
+  -selected_bg_color: $selected_bg_color;
+
+/* Foreground UI Colors */
+  -base_fg_color: $base_fg_color;
+  -fg_color: $fg_color;
+  -fg_hl_color: $fg_hl_color;
+  -fg_emp_color: $fg_emp_color;
+  -dark_fg_color: $dark_fg_color;
+  -darker_fg_color: $darker_fg_color;
+
+  -inverse_fg_color: $inverse_fg_color;
+  -obverse_fg_color: $obverse_fg_color;
+
+  -selected_fg_color: $selected_fg_color;
+
+/* Highlight Colors */
+  -suggested_color: $suggested_color;
+  -destructive_color: $destructive_color;
+  -information_color: $information_color;
+  -warning_color: $warning_color;
+  -error_color: $error_color;
+
+/* Titlebar colors */
+  -titlebar_bg_color: $titlebar_bg_color;
+  -titlebar_fg_color: $titlebar_fg_color;
+  -titlebar_hl_color: $titlebar_hl_color;
+}
 
 /*!
  * Public Colors
