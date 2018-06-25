@@ -1,16 +1,21 @@
 // This file is part of the Pop!_GTK Theme.
 // See gtk.scss for full license and copyright information
 /* 
- * widgets/_headerbars.scss - Header bars and title bars
+ * widgets/_header-title-bars.scss - Header bars and title bars
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
 headerbar,
+.headerbar {
+  min-height: $toolbar_size;
+  padding: $mini_padding $large_padding;
+}
+
+headerbar,
 .headerbar,
 titlebar,
 .titlebar {
-  padding: $mini_padding $large_padding;
   border: 0 solid $titlebar_hl_color;
   border-top-width: $border_size;
   border-radius: $corner_radius $corner_radius 0 0;
@@ -33,14 +38,16 @@ titlebar,
     }
   }
   
-}
-
-headerbar,
-.headerbar {
-  min-height: $toolbar_size;
+  headerbar {
+    padding: none;
+    border: none;
+  }
 }
 
 decoration,
 .window-frame {
+  border-radius: 10px + $corner_radius;
+  background-color: transparent; //needed to prevent peeking
   box-shadow: $shadow_5;
 }
+
