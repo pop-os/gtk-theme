@@ -6,72 +6,87 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-headerbar,
-.headerbar {
-  min-height: $toolbar_size;
-  padding: $mini_padding $large_padding;
-}
-
-titlebar,
 .titlebar {
-  transition: $standard_transition;
+  padding: $mini_padding $large_padding;
+  border-radius: $corner_radius $corner_radius 0 0;
+  background-color: $titlebar_bg_color;
+  box-shadow: inset 0 0 0 $border_size $titlebar_hl_color;
   color: $titlebar_fg_color;
   
   &:backdrop {
+    background-color: lighten($titlebar_bg_color, 10%);
+    box-shadow: inset 0 0 0 $border_size lighten($titlebar_hl_color, 10%);
     color: to600($titlebar_fg_color);
   }
   
-  separator {
-    margin: $tiny_padding;
-    border: none;
-    background-color: $titlebar_bg_color;
-    color: $titlebar_bg_color;
-    
-    &:backdrop {
-      background-color: $titlebar_hl_color;
-      color: $titlebar_hl_color;
-    }
-  }
-  
-  .titlebar {
-    margin: none;
-    padding: none;
-    border: none;
-    
-    &:backdrop {
-      margin: none;
-      padding: none;
-      border: none;
-    }
-  }
-}
-
-decoration {
-  transition: $standard_transition;
-  border: 0 solid $titlebar_hl_color;
-  border-top-width: $border_size;
-  border-radius: $corner_radius;
-  background-color: $titlebar_bg_color; 
-  box-shadow: $shadow_5;
-  
-  &:backdrop {
-    border: 0 solid lighten($titlebar_hl_color, 10%);
-    border-top-width: $border_size;
-    background-color: $titlebar_hl_color;
-    color: to600($titlebar_fg_color);
-  }
-  
-  .tiled &,
   .maximized &,
   .fullscreen &,
-  .tiled-bottom &,
-  .tiled-top &,
+  .tiled &,
   .tiled-left &,
-  .tiled-right & {
-    border: none;
-    border-top-width: none;
+  .tiled-right &,
+  .tiled-top &,
+  .tiled-bottom & {
     border-radius: 0;
     box-shadow: none;
   }
+  
+  &.default-decoration {
+    min-height: $large_size;
+  }
+  
+  &.flat,
+  dialog &,
+  messagedialog & {
+    background-color: $bg_color;
+    box-shadow: inset 0 0 0 $darker_bg_color;
+    
+    .title {
+      color: $fg_color;
+      
+      &:backdrop {
+        color: to600($fg_color);
+      }
+    }
+  }
+  
+  .title {
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    font-size: 80%;
+    font-weight: 500;
+  }
+  
+  .titlebutton {
+    padding: $tinier_padding;
+    border-radius: $circular_radius;
+    background: none;
+    color: $titlebar_fg_color;
+    box-shadow: none;
+    
+    &:hover {
+      background-color: to100($titlebar_fg_color);
+    }
+    
+    &:active {
+      background-color: to200($titlebar_fg_color);
+    }
+    
+    &.close {
+      background-color: $close_button_color;
+      
+      &:backdrop {
+        background-color: to200($titlebar_fg_color);
+      }
+      
+      &:hover {
+        background-color: mix($close_button_color, $obverse_bg_color, 95%);
+      }
+      
+      &:active {
+        background-color: mix($close_button_color, $obverse_bg_color, 90%);
+      }
+    }
+  }
 }
-

@@ -69,6 +69,7 @@ $titlebar_bg_color: if($color=='light',
                       mix($warm_grey_700, $dark_neutral_grey_500, 40%));
 $titlebar_fg_color: if($titlebar=='dark', $light_ui_500, $warm_grey_500);
 $titlebar_hl_color: mix($titlebar_bg_color, $inverse_fg_color, 90%);
+$close_button_color: mix($red_500, $color_theme_2, 50%);
 
 /*
  * Debug Block
