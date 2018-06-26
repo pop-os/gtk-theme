@@ -1,3 +1,9 @@
+pop-gtk-theme (3.1.2) bionic; urgency=medium
+
+  * Fix listing of theme in GTK Inspector.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 25 May 2018 11:52:27 -0600
+
 pop-gtk-theme (3.1.1) bionic; urgency=medium
 
   * Corrects an Eye of GNOME issue where the zoom-in button was weird.
