@@ -49,7 +49,9 @@ button:visited {
  // for error dialogs.
 
 .terminal,
-.terminal text {
+.terminal text,
+.terminal scrollbar:hover,
+.terminal trough {
     background-color: $neutral_dark_bg_color;
     color: $light_fg_color;
 }
