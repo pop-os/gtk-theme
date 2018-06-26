@@ -114,4 +114,68 @@ button,
   &.lock {
     padding: $tinier_padding_em $small_padding_em;
   } 
+  
+  label {
+    font-weight: 600;
+  }
+  
+  &.suggested-action {
+    background-color: $suggested_color;
+    color: $inverse_fg_color;
+    
+    headerbar & {
+      box-shadow: $shadow_1;
+    }
+    
+    &:hover {
+      background-color: mix($suggested_color, $obverse_bg_color, 80%);
+      
+      headerbar & {
+        box-shadow: $shadow_2;
+      }
+    }
+    
+    &:active {
+      background-color: mix($suggested_color, $obverse_bg_color, 60%);
+      
+      headerbar & {
+        box-shadow: $shadow_3;
+      }
+    }
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+  
+  &.destructive-action {
+    background-color: $destructive_color;
+    color: $inverse_fg_color;
+    
+    headerbar & {
+      box-shadow: $shadow_1;
+    }
+    
+    &:hover {
+      background-color: mix($destructive_color, $obverse_bg_color, 80%);
+      
+      headerbar & {
+        box-shadow: $shadow_2;
+      }
+    }
+    
+    &:active {
+      background-color: mix($destructive_color, $obverse_bg_color, 60%);
+      
+      headerbar & {
+        box-shadow: $shadow_3;
+      }
+    }
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+  }
 }

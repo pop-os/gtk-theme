@@ -159,3 +159,15 @@ headerbar,
     }
   }
 }
+
+menu window.popup decoration,
+window.menu .window-frame.menu.csd,
+window.menu .window-frame.popup.csd {
+  border-radius: $corner_radius;
+  box-shadow: $shadow_3;
+}
+
+tooltip decoration {
+  border-radius: $corner_radius;
+  box-shadow: $shadow_2;
+}

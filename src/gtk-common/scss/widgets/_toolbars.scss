@@ -37,4 +37,24 @@ actionbar,
   &:backdrop {
     color: to600($dark_fg_color);
   }
+  
+  button {
+    @include flat_button;
+  }
 }
+
+.inline-toolbar {
+  background-color: $dark_bg_color;
+  
+  button {
+    @include flat_button;
+  }
+}
+
+searchbar,
+.location-bar,
+.search-bar {
+  @extend %entry;
+  border-radius: $corner_radius $corner_radius 0 0;
+}
+
