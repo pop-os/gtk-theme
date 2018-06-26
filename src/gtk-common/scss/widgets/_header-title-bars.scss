@@ -6,17 +6,18 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-.titlebar {
+.titlebar,
+titlebar {
   padding: $mini_padding $large_padding;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $titlebar_bg_color;
-  box-shadow: inset 0 0 0 $border_size $titlebar_hl_color;
   color: $titlebar_fg_color;
+  box-shadow: inset 0 0 0 $border_size $titlebar_hl_color;
   
   &:backdrop {
-    background-color: lighten($titlebar_bg_color, 10%);
-    box-shadow: inset 0 0 0 $border_size lighten($titlebar_hl_color, 10%);
+    background-color: lighten($titlebar_bg_color, 5%);
     color: to600($titlebar_fg_color);
+    box-shadow: inset 0 0 0 $border_size lighten($titlebar_hl_color, 5%);
   }
   
   .maximized &,
@@ -35,7 +36,6 @@
   }
   
   &.flat,
-  dialog &,
   messagedialog & {
     background-color: $bg_color;
     box-shadow: inset 0 0 0 $darker_bg_color;
@@ -49,6 +49,20 @@
     }
   }
   
+  .titlebar,
+  .headerbar,
+  headerbar {
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  seperator {
+    border-color: transparent;
+    background-color: transparent;
+    color: transparent;
+    box-shadow: none;
+  }
+  
   .title {
     font-weight: 700;
   }
@@ -59,6 +73,8 @@
   }
   
   .titlebutton {
+    min-width: $small_size;
+    min-height: $small_size;
     padding: $tinier_padding;
     border-radius: $circular_radius;
     background: none;
@@ -71,6 +87,7 @@
     
     &:active {
       background-color: to200($titlebar_fg_color);
+      box-shadow: $shadow_2;
     }
     
     &.close {
@@ -81,12 +98,60 @@
       }
       
       &:hover {
-        background-color: mix($close_button_color, $obverse_bg_color, 95%);
+        background-color: mix($close_button_color, $obverse_bg_color, 80%);
       }
       
       &:active {
-        background-color: mix($close_button_color, $obverse_bg_color, 90%);
+        background-color: mix($close_button_color, $obverse_bg_color, 60%);
       }
+    }
+  }
+}
+
+decoration,
+.window-frame {
+  transition: $standard_transition;
+  border-radius: 2 * 4px;
+  background-color: $titlebar_bg_color;
+  // Transparent shadows prevent the windows from jumping when shadows change.
+  box-shadow: $shadow_4, 0 19px 38px transparent;
+  
+  &:backdrop {
+    background-color: lighten($titlebar_bg_color, 5%);
+    box-shadow: $shadow_2, 0 19px 38px transparent;
+  }
+}
+
+headerbar,
+.headerbar {
+  min-height: $toolbar_size;
+  
+  button,
+  .button {
+    background-color: transparent;
+    color: $titlebar_fg_color;
+    box-shadow: none;
+    border-image: radial-gradient(
+        circle closest-corner at center calc(100% - 1px), 
+        $color_theme_2 0%, 
+        transparent 0%) 0 0 0 / 0 0 0;
+    
+    &:hover {
+      background-color: to100($titlebar_fg_color);
+      color: $titlebar_fg_color;
+      box-shadow: none;
+    }
+    
+    &:active {
+      background-color: to200($titlebar_fg_color);
+    }
+    
+    &:checked {
+      background-color: to100($titlebar_fg_color);
+      border-image: radial-gradient(
+        circle closest-corner at center calc(100% - 1px), 
+        $color_theme_2 100%, 
+        transparent 0%) 0 0 2 / 0 0 2px;
     }
   }
 }
