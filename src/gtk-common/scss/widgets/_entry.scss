@@ -129,8 +129,8 @@ spinbutton {
 combobox {
 
   arrow {
-    min-width: $medium_size;
-    min-height: $medium_size;
+    min-width: 19px;
+    min-height: 19px;
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
   }
   
