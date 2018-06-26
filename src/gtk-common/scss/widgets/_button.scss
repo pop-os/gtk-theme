@@ -26,7 +26,7 @@
 %button,
 button,
 .button {
-  padding: $mini_padding_em;
+  padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
@@ -68,16 +68,16 @@ button,
   }
   
   &.round,
-  &.circular,
-  &.image-button {
+  &.circular {
     min-width: $medium_size;
     min-height: $medium_size;
-    padding: $tinier_padding;
+    margin: $mini_padding;
+    padding: $tiny_padding_em;
     border-radius: $circular_radius;
   }
   
   &.text-button {
-    padding: $tinier_padding_em $large_padding_em;
+    padding: $tiny_padding_em $large_padding_em;
     border-radius: $corner_radius;
   }
   
@@ -97,6 +97,7 @@ button,
     }
     
     .titlebar & {
+      padding: $tiny_padding_em 2 * $large_padding_em;
       color: $titlebar_fg_color;
       
       &:hover {

@@ -57,7 +57,7 @@ titlebar {
   }
   
   seperator {
-    border-color: transparent;
+    border: none;
     background-color: transparent;
     color: transparent;
     box-shadow: none;
@@ -132,9 +132,13 @@ headerbar,
     color: $titlebar_fg_color;
     box-shadow: none;
     border-image: radial-gradient(
-        circle closest-corner at center calc(100% - 1px), 
-        $color_theme_2 0%, 
-        transparent 0%) 0 0 0 / 0 0 0;
+      circle closest-corner at center calc(100% - 1px), 
+      $color_theme_2 0%, 
+      transparent 0%) 0 0 0 / 0 0 0;
+    
+    &:backdrop {
+      color: to600($titlebar_fg_color);
+    }
     
     &:hover {
       background-color: to100($titlebar_fg_color);
