@@ -92,12 +92,8 @@ button,
       }
     }
     
-    &:hover {
-      @include underline(insensitive);
-      
-      &:checked {
-        @include underline(focus);
-      }
+    &:hover:checked {
+      @include underline(focus);  
     }
     
     .titlebar & {
