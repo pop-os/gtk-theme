@@ -9,7 +9,7 @@
 %entry,
 entry,
 .entry {
-  padding: $tinier_padding_em $small_padding_em;
+  padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
   @include underline(normal);
   background-color: $bg_hl_color;
@@ -75,6 +75,50 @@ spinbutton {
         color: to200($fg_color);
       }
     }
+  }
+}
+
+spinbutton {
+  button {
+    @include flat_button;
+    
+    &:backdrop {
+      color: to600($fg_color);
+    }
+    
+    &:disabled {
+      color: to400($fg_color);
+      box-shadow: none;
+      
+      &:backdrop {
+        color: to200($fg_color);
+      }
+    }
+  }
+  
+  &.horizontal {
+    padding: 
+      $tiny_padding 
+      $tinier_padding
+      $tiny_padding 
+      $large_padding;
+    border-radius: $corner_radius $corner_radius 0 0;
+    
+    entry {
+      min-width: 2.1em;
+      margin-right: $tiny_padding;
+    }
+    
+    button {
+      margin: $mini_padding 0;
+      padding: $tiny_padding;
+      border-radius: $circular_radius;
+    }
+  }
+  
+  &.vertical entry {
+    margin: $mini_padding;
+    border-radius: $corner_radius $corner_radius 0 0;
   }
 }
 
