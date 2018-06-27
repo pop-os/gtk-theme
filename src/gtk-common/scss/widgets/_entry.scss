@@ -97,12 +97,10 @@ spinbutton {
   }
   
   &.horizontal {
-    // sass-lint:disable-block indentation 
+    // sass-lint:disable indentation
     padding: 
-      $tiny_padding 
-      $tinier_padding
-      $tiny_padding 
-      $large_padding;
+      $tiny_padding $tinier_padding $tiny_padding $large_padding; 
+    // sass-lint:enable indentation
     border-radius: $corner_radius $corner_radius 0 0;
     
     entry {

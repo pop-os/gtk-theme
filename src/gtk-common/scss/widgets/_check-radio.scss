@@ -12,7 +12,6 @@ radio {
   min-height: $check_size;
   padding: $no_padding;
   transition: $standard_transition;
-  //border: $border_size solid red;
   box-shadow: inset 0 0 0 2px to800($fg_color);
    
   &:backdrop {
@@ -77,15 +76,13 @@ radio:not(:checked):indeterminate:active {
 check:not(:checked),
 radio:not(:checked) {
   & {
-    // sass-lint:disable-block indentation 
     transition: $standard_transition,
-      -gtk-icon-transform 0;
+      -gtk-icon-transform 0; // sass-lint:disable-line indentation
   }
 
   &:active {
-    // sass-lint:disable-block indentation 
     transition: $standard_transition,
-      -gtk-icon-transform 0;
+      -gtk-icon-transform 0; // sass-lint:disable-line indentation
   }
 
   //menu menuitem & { transition: none; }
