@@ -7,6 +7,7 @@
  */
  
 notebook {
+  transition: $standard_transition;
   border: none;
   background-color: $bg_hl_color;
   
@@ -53,6 +54,7 @@ notebook {
   
     tab {
       padding: $tiny_padding $small_padding;
+      transition: $standard_transition;
       background-color: $bg_emp_color;
       
       &:checked {
