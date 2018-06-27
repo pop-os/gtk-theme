@@ -38,7 +38,10 @@ rules:
     -
       style: uppercase
   id-name-format: 0
-  indentation: 0
+  indentation:
+    - 2
+    -
+      size: 2
   leading-zero:
     - 1
     -
