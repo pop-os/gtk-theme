@@ -48,7 +48,10 @@ button:visited {
  // These are not libvte terminals, these are small embedded terminal widgets
  // for error dialogs.
 
-.terminal text {
+.terminal,
+.terminal text,
+.terminal scrollbar:hover,
+.terminal trough {
     background-color: $neutral_dark_bg_color;
     color: $light_fg_color;
 }
@@ -194,10 +197,10 @@ cursor-handle {
   caret-color: $accent_color;
 }*/
 
-stackswitcher button.text-button { min-width: 100px; } 
+stackswitcher button.text-button { min-width: 100px; }
 
 stackswitcher button.circular,
-stackswitcher button.text-button.circular { 
+stackswitcher button.text-button.circular {
   min-width: $medium_size;
   min-height: $medium_size;
   padding: 0;
@@ -231,4 +234,3 @@ stackswitcher button.text-button.circular {
 }
 
 .monospace { font-family: monospace; }
-
