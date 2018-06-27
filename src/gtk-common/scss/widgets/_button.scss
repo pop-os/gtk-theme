@@ -180,3 +180,25 @@ button,
     }
   }
 }
+
+modelbutton,
+.model,
+modelbutton.image-button {
+  @include flat_button;
+  transition: $standard_transition;
+  border-radius: $corner_radius;
+  background-color: transparent;
+  font-weight: 400;
+  
+  label {
+    font-weight: 400;
+  }
+  
+  &:hover {
+    background-color: to200($fg_color);
+  }
+  
+  &:active {
+    background-color: to400($fg_color);
+  }
+}

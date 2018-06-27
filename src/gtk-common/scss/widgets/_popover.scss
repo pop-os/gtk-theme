@@ -10,12 +10,13 @@ popover,
 popover.osd,
 .popover,
 .popover.osd {
-  margin: $standard_padding;
+  margin: $large_padding;
   border-radius: $corner_radius;
-  box-shadow: $shadow_3;
+  box-shadow: $shadow_2;
   
   image,
   label {
+    padding: $tiny_padding_em;
     color: $fg_color;
     
     &:disabled {
@@ -25,5 +26,16 @@ popover.osd,
   
   .view {
     background-color: transparent;
+  }
+  
+  .model.image-button {
+    margin: 2 * $mini_size;
+    padding: 0;
+    border-radius: $circular_radius;
+    
+    image {
+      margin: 2 * $mini_size;
+      padding: 0;
+    }
   }
 }
