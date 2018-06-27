@@ -28,7 +28,11 @@
 
 // Main Accent Colors
 $color_theme_1: if($color=='dark', $blue_700, $blue_500);
+$light_color_1: $blue_300;
+$dark_color_1: $blue_700;
 $color_theme_2: if($color=='dark', $orange_700, $orange_500);
+$light_color_2: $orange_300;
+$dark_color_2: $orange_700;
 
 // Background UI Colors
 $base_color: if($color=='dark', $dark_ui_900, $white);

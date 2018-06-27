@@ -74,3 +74,6 @@ treeview {
   }
 }
 
+scrolledwindow {
+  border: $border_size solid to100($fg_color);
+}

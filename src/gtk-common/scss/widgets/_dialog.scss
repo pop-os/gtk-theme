@@ -1,0 +1,61 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_dialog.scss - Dialogs
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+dialog {
+  box-shadow: $shadow_3;
+  
+  .titlebar {
+    background-color: $titlebar_bg_color;
+    box-shadow: inset 0 0 0 $border_size $titlebar_hl_color;
+    
+    image,
+    label {
+      color: $titlebar_fg_color;
+    }
+  }
+}
+
+messagedialog {
+  border-radius: 0 0 $corner_radius $corner_radius;
+  background-color: $bg_color;
+  color: $fg_color;
+  
+  .titlebar {
+    min-height: 0;
+    background-color: $bg_color;
+    box-shadow: none;
+    
+    &:backdrop {
+      background-color: $bg_color;
+      box-shadow: none;
+    }
+    
+    label {
+      color: transparent;
+    }
+  }
+  
+  .dialog-action-box {
+    border: 0 solid to100($fg_color);
+    
+    button {
+      border-radius: $corner_radius;
+      background-color: transparent;
+      color: $dark_color_2;
+      box-shadow: none;
+      
+      &:hover {
+        background-color: to100($color_theme_2);
+      }
+      
+      &:active {
+        background-color: to200($color_theme_2);
+      }
+    }
+  }
+}

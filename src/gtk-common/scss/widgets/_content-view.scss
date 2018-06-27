@@ -13,6 +13,7 @@
 
 .content-view,
 .content-view viewport {
+  border: $border_size solid to100($fg_color);
   background-color: transparent;
   background-image: none;
   
