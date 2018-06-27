@@ -15,6 +15,7 @@ list,
     border-color: to100($fg_color);
     
     label {
+      // sass-lint:disable-block indentation 
       margin: 
         $tiny_padding_em $large_padding_em $tiny_padding_em $small_padding_em;
       color: $fg_color;

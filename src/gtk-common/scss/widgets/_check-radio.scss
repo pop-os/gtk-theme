@@ -77,13 +77,15 @@ radio:not(:checked):indeterminate:active {
 check:not(:checked),
 radio:not(:checked) {
   & {
+    // sass-lint:disable-block indentation 
     transition: $standard_transition,
-                -gtk-icon-transform 0;
+      -gtk-icon-transform 0;
   }
 
   &:active {
+    // sass-lint:disable-block indentation 
     transition: $standard_transition,
-                -gtk-icon-transform 0;
+      -gtk-icon-transform 0;
   }
 
   //menu menuitem & { transition: none; }

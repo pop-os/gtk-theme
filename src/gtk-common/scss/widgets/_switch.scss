@@ -6,6 +6,7 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 switch {
+  // sass-lint:disable-block indentation 
   transition: $standard_transition;
   border-radius: $circular_radius;
   background-clip: padding-box;
@@ -15,8 +16,9 @@ switch {
   background-position: center;
   background-size: contain;
   font-size: 0;
-  box-shadow: 0 1px 3px rgba($black, 0.12) inset,
-              0 1px 2px rgba($black, 0.24) inset;
+  box-shadow: 
+    0 1px 3px rgba($black, 0.12) inset,
+    0 1px 2px rgba($black, 0.24) inset;
 
   &:disabled { 
     background-color: to200($fg_color);

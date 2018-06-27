@@ -36,52 +36,52 @@
   @if $type == normal {
     transition: all $standard_duration ease;
     border-image: radial-gradient(
-                    circle closest-corner at center calc(100% - 1px),
-                    to400($line_color) 100%,
-                    transparent 0%)
-                    0 0 2 / 0 0 2px;
+      circle closest-corner at center calc(100% - 1px),
+      to400($line_color) 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
   }
 
   @if $type == focus {
     border-image: radial-gradient(
-                    circle closest-corner at center calc(100% - 1px),
-                    $focus_color 100%,
-                    transparent 0%)
-                    0 0 2 / 0 0 2px;
+      circle closest-corner at center calc(100% - 1px),
+      $focus_color 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
     
     &:backdrop {
       border-image: radial-gradient(
-                      circle closest-corner at center calc(100% - 1px),
-                      to400($focus_color) 100%,
-                      transparent 0%)
-                      0 0 2 / 0 0 2px;
+        circle closest-corner at center calc(100% - 1px),
+        to400($focus_color) 100%,
+        transparent 0%)
+        0 0 2 / 0 0 2px; // sass-lint:disable-line indentation
     }
   }
 
   @if $type == disabled {
     border-image: radial-gradient(
-                    circle closest-corner at center calc(100% - 1px),
-                    to200($line_color) 100%,
-                    transparent 0%)
-                    0 0 2 / 0 0 2px;
+      circle closest-corner at center calc(100% - 1px),
+      to200($line_color) 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
   }
 
   @if $type == flat-normal {
     box-shadow: none;
     border-image: radial-gradient(
-                    circle closest-corner at center calc(100% - 1px),
-                    to400($line_color) 0%,
-                    transparent 0%)
-                    0 0 0 / 0 0 0;
+      circle closest-corner at center calc(100% - 1px),
+      to400($line_color) 0%,
+      transparent 0%)
+      0 0 0 / 0 0 0; // sass-lint:disable-line indentation
   }
 
   @if $type == flat-focus {
     box-shadow: none;
     border-image: radial-gradient(
-                    circle closest-corner at center calc(100% - 1px),
-                    $color_theme_2 100%,
-                    transparent 0%)
-                    0 0 2 / 0 0 2px;
+      circle closest-corner at center calc(100% - 1px),
+      $color_theme_2 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation
   }
 }
 
@@ -158,8 +158,8 @@
 }
 
 .background {
-    background-color: $bg_color;
-    color: $fg_color;
+  background-color: $bg_color;
+  color: $fg_color;
 }
 
 .gtkstyle-fallback {

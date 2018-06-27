@@ -40,7 +40,7 @@ notebook {
     }
     
     &.right {
-     border-right-width: 0;
+      border-right-width: 0;
       
       tab:checked {
         box-shadow: inset $line_size 0 0 $color_theme_2;
