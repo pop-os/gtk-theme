@@ -23,7 +23,6 @@
   button {
     @include flat_button;
     font-weight: 700;
-    text-transform: uppercase;
     
     &:hover {
       background-color: to100($inverse_fg_color);

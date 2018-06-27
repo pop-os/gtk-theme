@@ -97,13 +97,15 @@ radio {
   border-radius: $circular_radius;
 }
 
-checkbutton label,
-radiobutton label {
-  &:dir(ltr) {
+checkbutton,
+radiobutton {
+  margin: $tiny_padding_em;
+  
+  label:dir(ltr) {
     margin-left: $tiny_padding_em;
   }
   
-  &:dir(rtl) {
+  label:dir(rtl) {
     margin-right: $tiny_padding_em;
   }
 }

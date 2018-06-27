@@ -168,68 +168,6 @@ actionbar .subtitle {
 /*************
 * List Boxes *
 *************/
-
-list,
-.list {
-    background-color: @base_color;
-}
-
-popover list,
-.popover GtkListBox,
-.popover .list {
-    background-color: transparent;
-}
-
-row,
-.list-row {
-    border-color: @border_color;
-}
-
-row,
-.list-row.button {
-    background-image: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-row:selected button,
-.list-row:selected:focus .button {
-    background-color: @bg_color;
-    transition: none;
-}
-
-row:selected button.flat,
-.list-row:selected:focus .button.flat {
-    background-color: alpha (@text_color, 0.3);
-    text-shadow: 0 1px 1px alpha (@text_color, 0.15);
-    -gtk-icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
-}
-
-row:selected,
-row:selected:backdrop,
-.list-row:selected,
-.list-row:selected:backdrop {
-    background-color: shade (@base_color, 0.8);
-    color: @text_color;
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-}
-
-row:selected:focus,
-.list-row:selected:focus {
-    background-color: @colorAccent;
-    color: @selected_fg_color;
-}
-
-row:selected:focus image {
-    color: @selected_fg_color;
-}
-
-.list-row GtkTextView {
-    background-color: transparent;
-}
-
 /***************
 * Content View *
 ***************/

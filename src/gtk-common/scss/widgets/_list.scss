@@ -27,9 +27,13 @@ list,
       &:hover {
         box-shadow: $shadow_1;
       }
+      
+      &.flat label
+      &.flat image {
+        color: to800($fg_color);
+      }
     }
     
-    &:selected,
     &:focus {
       background-color: $color_theme_1;
       
@@ -41,6 +45,21 @@ list,
       button label,
       button image {
         color: $fg_color;
+      }
+      
+      button.flat {
+        &:hover {
+          background-color: to100($inverse_fg_color);
+        }
+        
+        &:active {
+          background-color: to200($inverse_fg_color);
+        }
+        
+        label,
+        image {
+          color: $inverse_fg_color;
+        }
       }
       
       scale {
