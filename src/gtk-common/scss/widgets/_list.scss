@@ -1,0 +1,93 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_list.scss - Lists / Listview / List Box
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+list,
+.list {
+  background-color: $base_color;
+  
+  row,
+  .list-row {
+    border-color: to100($fg_color);
+    
+    label {
+      margin: 
+        $tiny_padding_em $large_padding_em $tiny_padding_em $small_padding_em;
+      color: $fg_color;
+    }
+    
+    button {
+      background-color: $bg_color;
+      box-shadow: $shadow_0;
+      
+      &:hover {
+        box-shadow: $shadow_1;
+      }
+    }
+    
+    &:selected,
+    &:focus {
+      background-color: $color_theme_1;
+      
+      label,
+      image {
+        color: $inverse_fg_color;
+      }
+      
+      button label,
+      button image {
+        color: $fg_color;
+      }
+      
+      scale {
+        slider {
+          background-color: $inverse_fg_color;
+          color: $inverse_fg_color;
+          
+          &:disabled {
+            border: $line_size solid to400($inverse_fg_color);
+            background-color: $bg_color;
+            color: $bg_color;
+            
+            &:backdrop {
+              border-color: to200($inverse_fg_color);
+            }
+          }
+        }
+        
+        trough {
+          background-color: to600($inverse_fg_color);
+          
+          &:disabled {
+            background-color: to200($inverse_fg_color);
+            
+            &:backdrop {
+              background-color: to100($inverse_fg_color);
+            }
+          }
+        }
+        
+        highlight {
+          background-color: $inverse_fg_color;
+          color: $inverse_fg_color;
+          
+          &:disabled {
+            background-color: to400($inverse_fg_color);
+            
+            &:backdrop {
+              background-color: to200($inverse_fg_color);
+            }
+          }
+        }
+      }
+      
+      &:backdrop {
+        background-color: to600($color_theme_1);
+      }
+    }
+  }
+}
