@@ -85,6 +85,11 @@ list,
         }
       }
       
+      check,
+      radio {
+        box-shadow: inset 0 0 0 2px $inverse_fg_color;
+      }
+      
       &:backdrop {
         background-color: to600($color_theme_1);
       }
