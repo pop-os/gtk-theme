@@ -177,40 +177,6 @@ actionbar .subtitle {
 /***********
 * Expander *
 ***********/
-
-expander arrow,
-.expander,
-.category-expander {
-    min-height: 16px;
-    min-width: 16px;
-    transition: all 150ms ease-in-out;
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-}
-
-expander arrow:dir(rtl),
-.expander:dir(rtl),
-.category-expander:dir(rtl) {
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
-}
-
-.source-list.category-expander,
-.source-list.category-expander:backdrop {
-    color: transparent;
-    border: none;
-}
-
-expander arrow:checked,
-.expander:checked,
-.category-expander:checked {
-    -gtk-icon-transform: rotate(90deg);
-}
-
-expander arrow:checked:dir(rtl),
-.expander:checked:dir(rtl),
-.category-expander:checked:dir(rtl) {
-    -gtk-icon-transform: rotate(-90deg);
-}
-
 /**************
 * GtkCalendar *
 **************/
