@@ -11,7 +11,7 @@
 .sidebar list,
 .source-list,
 .source-list.view {
-  background-color: $base-color;
+  background-color: $base_color;
   color: $fg_color;
   
   dialog & {
@@ -22,10 +22,10 @@
   .list-row,
   .sidebar-item,
   .sidebar-row {
-    border-color: transparent;
-    border-style: solid;
-    border-width: $no_padding;
     padding: 0 $tiny_padding;
+    border-width: $no_padding;
+    border-style: solid;
+    border-color: transparent;
     
     &:hover {
       background-color: $darker_bg_color;

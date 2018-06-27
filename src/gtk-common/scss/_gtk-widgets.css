@@ -180,23 +180,6 @@ actionbar .subtitle {
 /**************
 * GtkCalendar *
 **************/
-
-calendar {
-    border-radius: 2px;
-}
-
-calendar button,
-calendar button:disabled,
-calendar header,
-calendar .view {
-    background-color: transparent;
-    background-image: none;
-}
-
-.highlight {
-    color: #777;
-}
-
 /*************
 * GtkInfoBar *
 *************/

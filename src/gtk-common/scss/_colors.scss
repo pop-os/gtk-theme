@@ -59,9 +59,10 @@ $selected_fg_color: $white;
 // Highlight Colors
 $suggested_color: $green_700;
 $destructive_color: $red_700;
-$information_color: $indigo_500;
-$warning_color: $yellow_700;
+$information_color: $green_700;
+$warning_color: $yellow_500;
 $error_color: $red_700;
+$question_color: $indigo_300;
 
 // Titlebar colors
 $titlebar_bg_color: if(

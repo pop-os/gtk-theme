@@ -1,0 +1,75 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_infobar.scss - Infobar
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+infobar {
+  border: none;
+  background-color: $bg_color;
+  box-shadow: $shadow_2;
+
+  
+  &.frame {
+    border-radius: $corner_radius;
+  }
+    
+  label,
+  image {
+    color: $fg_color;
+  }
+  
+  &.error {
+    background-color: $error_color;
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+    
+    button {
+      background-color: mix($bg_color, $error_color, 20%);
+    }
+  }
+  
+  &.question {
+    background-color: $question_color;
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+    
+    button {
+      background-color: mix($bg_color, $question_color, 20%);
+    }
+  }
+  
+  &.warning {
+    background-color: $warning_color;
+    
+    label,
+    image {
+      color: $obverse_fg_color;
+    }
+    
+    button {
+      background-color: mix($bg_color, $warning_color, 20%);
+    }
+  }
+  
+  &.info {
+    background-color: $information_color;
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+    
+    button {
+      background-color: mix($bg_color, $information_color, 20%);
+    }
+  }
+}
