@@ -1,0 +1,16 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_notification-popups.scss - App Notifications
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.app-notification,
+.app-notification.frame {
+  padding: $small_padding_em;
+  border: none;
+  background-clip: padding-box;
+  background-color: to800($inverse_bg_color);
+  box-shadow: $shadow_2; 
+}
