@@ -46,8 +46,12 @@ messagedialog {
     button {
       border-radius: $corner_radius;
       background-color: transparent;
-      color: $dark_color_2;
+      color: to800($fg_color);
       box-shadow: none;
+      
+      &:focus {
+        color: $dark_color_2;
+      }
       
       &:hover {
         background-color: to100($color_theme_2);

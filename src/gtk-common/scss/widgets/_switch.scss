@@ -22,6 +22,7 @@ switch {
   &:disabled { 
     background-color: to200($fg_color);
     box-shadow: none;
+    opacity: 70%;
   }
 
   &:checked {
@@ -53,6 +54,7 @@ switch {
     box-shadow: $shadow_1;
     -gtk-outline-radius: $circular_radius;
     
+    :disabled &,
     :disabled:hover &,
     :disabled:checked &,
     :disabled:active & {
@@ -61,11 +63,15 @@ switch {
   }
   
   &:disabled {
+    box-shadow: none;
     
-    &,
     &:hover,
     &:checked,
     &:active {
+      box-shadow: none;
+    }
+    
+    slider {
       box-shadow: none;
     }
   }

@@ -12,7 +12,8 @@ list,
   
   row,
   .list-row {
-    border-color: to100($fg_color);
+    padding: 0;
+    border-color: transparent;
     
     label {
       // sass-lint:disable-block indentation 

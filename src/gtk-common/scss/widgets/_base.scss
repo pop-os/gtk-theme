@@ -34,7 +34,7 @@
 @mixin underline($type, $focus_color: $color_theme_2, $line_color: $fg_color) {
 
   @if $type == normal {
-    transition: all $standard_duration ease;
+    transition: $standard_transition;
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
       to400($line_color) 100%,

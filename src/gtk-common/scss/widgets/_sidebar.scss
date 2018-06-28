@@ -11,6 +11,9 @@
 .sidebar list,
 .source-list,
 .source-list.view {
+  padding: 0;
+  border: none;
+  border-radius: none;
   background-color: $base_color;
   color: $fg_color;
   
@@ -22,30 +25,47 @@
   .list-row,
   .sidebar-item,
   .sidebar-row {
-    padding: 0 $tiny_padding;
+    margin: -1px;
+    padding: 0 $tiny_padding_em;
+    transition: $fast_transition; //Standard looks a tiny bit janky
     border-width: $no_padding;
     border-style: solid;
     border-color: transparent;
+    font-size: 110%;
+    font-weight: 300;
     
     &:hover {
       background-color: $darker_bg_color;
     }
     
     &:selected {
-      background-color: $color_theme_1;
+      background-color: $color_theme_2;
+      font-weight: 400;
       
       &:backdrop {
-        background-color: to600($color_theme_1);
+        background-color: to600($color_theme_2);
       }
+      
+      label,
+      image {
+        color: $inverse_fg_color;
+      }
+    }
+    
+    button {
+      @include flat_button;
     }
   }
   
   button {
-    padding: $tiny_padding_em;
+    padding: 0.5 * $no_padding_em;
+    transition: $fast_transition;
   }
   
-  label {
-    padding: $tiny_padding_em;
+  label,
+  image {
+    padding: 0.5 * $no_padding_em;
+    transition: $fast_transition;
   }
   
   .frame {
