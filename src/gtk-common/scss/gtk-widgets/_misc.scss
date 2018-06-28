@@ -18,7 +18,7 @@ spinner {
   
   &:checked {
     opacity: 1;
-    animation: spin 1.2s linear infinite;
+    animation: spin 3s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
     
     &:disabled {
       opacity: 0.6;
@@ -61,4 +61,13 @@ image {
   border-radius: $corner_radius;
   background-color: $dark_bg_color;
   font-size: 85%;
+}
+
+/* 
+ * Statusbars
+ */
+
+statusbar frame {
+  margin: 0;
+  border: none;
 }

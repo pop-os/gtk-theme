@@ -162,9 +162,33 @@
   color: $fg_color;
 }
 
+*:disabled { 
+  -gtk-icon-effect: dim;
+}
+
 .gtkstyle-fallback {
   background-color: $bg_color;
   color: $fg_color;
+
+  &:hover {
+    background-color: darken($bg_color, 5%);
+    color: $fg_color;
+  }
+
+  &:active {
+    background-color: darken($bg_color, 10%);
+    color: $fg_color;
+  }
+
+  &:disabled {
+    background-color: $bg_color;
+    color: to600($fg_color);
+  }
+
+  &:selected {
+    background-color: $color_theme_1;
+    color: $inverse_fg_color;
+  }
 }
 
 .link {
@@ -174,6 +198,13 @@
   color: darken($color_theme_2, 20%);
 }
 
+.view {
+  selection,
+  &:selected {
+    background-color: $color_theme_1;
+    color: $inverse_fg_color;
+  }
+}
 
 image,
 label,

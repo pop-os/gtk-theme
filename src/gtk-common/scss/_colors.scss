@@ -24,7 +24,9 @@
 @function to100($color) {
   @return rgba($color, 0.1);
 }
-
+@function to50($color) {
+  @return rgba($color, 0.05);
+}
 
 // Main Accent Colors
 $color_theme_1: if($color=='dark', $blue_700, $blue_500);

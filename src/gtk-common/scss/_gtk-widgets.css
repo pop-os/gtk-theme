@@ -198,38 +198,3 @@ actionbar .subtitle {
 /**************
 * Text Styles *
 **************/
-
-.dim-label {
-    opacity: 0.75;
-}
-
-.attention {
-    color: @attention_color;
-}
-
-image.error,
-.error {
-    color: @error_color;
-}
-
-image.warning,
-.warning {
-    color: @warning_color;
-}
-
-label.warning {
-    color: @BANANA_900;
-}
-
-image.success,
-.success {
-    color: @success_color;
-}
-
-label.success {
-    color: @LIME_900;
-}
-
-link {
-    color: @link_color;
-}

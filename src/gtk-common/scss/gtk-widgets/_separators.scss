@@ -24,18 +24,6 @@ separator {
     border-left-width: $border_size; 
   }
   
-  paned.vertical > & {
-    min-height: $tiny_size;
-    margin-bottom: -1*$mini_size;
-    background-color: transparent;
-  }
-  
-  paned.horizontal > & {
-    min-height: $tiny_size;
-    margin-right: -1*$mini_size;
-    background-color: transparent;
-  }
-  
   toolbar &,
   .titlebar & {
     margin: 0 $standard_padding;
