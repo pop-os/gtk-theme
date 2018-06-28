@@ -7,36 +7,36 @@
  */
 
 .dim-label {
-    opacity: 0.75;
+  opacity: 0.75;
 }
 
 .attention {
-    color: $link_color;
+  color: $link_color;
 }
 
 image.error,
 .error {
-    color: $error_color;
+  color: $error_color;
 }
 
 image.warning,
 .warning {
-    color: $warning_color;
+  color: $warning_color;
 }
 
 label.warning {
-    color: $warning_color;
+  color: $warning_color;
 }
 
 image.success,
 .success {
-    color: $success_color;
+  color: $success_color;
 }
 
 label.success {
-    color: $success_color;
+  color: $success_color;
 }
 
 link {
-    color: $link_color;
+  color: $link_color;
 }
