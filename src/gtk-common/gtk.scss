@@ -1,5 +1,5 @@
 /*
- * Pop!_OS GTK Theme (The Pop!_GTK Theme).
+ * Pop!_OS gtk-widgets Theme (The Pop!_GTK Theme).
  * Copyright 2017-2018 System76, Inc.
  *
  * The Pop!_GTK Theme is free software; you can redistribute it and/or
@@ -31,34 +31,35 @@ $slim: 'false';
 
 @import 'scss/colors';
 @import 'scss/variables';
-@import 'scss/widgets/base';
-@import 'scss/widgets/button';
-@import 'scss/widgets/tooltip';
-@import 'scss/widgets/misc';
-@import 'scss/widgets/separators';
-@import 'scss/widgets/entry';
-@import 'scss/widgets/textview';
-@import 'scss/widgets/progressbar';
-@import 'scss/widgets/frames';
-@import 'scss/widgets/colorchooser';
-@import 'scss/widgets/linked';
-@import 'scss/widgets/tabs';
-@import 'scss/widgets/scrollbars';
-@import 'scss/widgets/switch';
-@import 'scss/widgets/check-radio';
-@import 'scss/widgets/menus';
-@import 'scss/widgets/toolbars';
-@import 'scss/widgets/header-title-bars';
-@import 'scss/widgets/assistant';
-@import 'scss/widgets/views';
-@import 'scss/widgets/flowbox';
-@import 'scss/widgets/notification-popups';
-@import 'scss/widgets/list';
-@import 'scss/widgets/content-view';
-@import 'scss/widgets/sidebar';
-@import 'scss/widgets/expander';
-@import 'scss/widgets/calendar';
-@import 'scss/widgets/infobar';
-@import 'scss/widgets/popover';
-@import 'scss/widgets/dialog';
-@import 'scss/widgets/emoji-picker';
+@import 'scss/gtk-widgets/base';
+@import 'scss/gtk-widgets/button';
+@import 'scss/gtk-widgets/tooltip';
+@import 'scss/gtk-widgets/misc';
+@import 'scss/gtk-widgets/separators';
+@import 'scss/gtk-widgets/entry';
+@import 'scss/gtk-widgets/textview';
+@import 'scss/gtk-widgets/progressbar';
+@import 'scss/gtk-widgets/frames';
+@import 'scss/gtk-widgets/colorchooser';
+@import 'scss/gtk-widgets/linked';
+@import 'scss/gtk-widgets/tabs';
+@import 'scss/gtk-widgets/scrollbars';
+@import 'scss/gtk-widgets/switch';
+@import 'scss/gtk-widgets/check-radio';
+@import 'scss/gtk-widgets/menus';
+@import 'scss/gtk-widgets/toolbars';
+@import 'scss/gtk-widgets/header-title-bars';
+@import 'scss/gtk-widgets/assistant';
+@import 'scss/gtk-widgets/views';
+@import 'scss/gtk-widgets/flowbox';
+@import 'scss/gtk-widgets/notification-popups';
+@import 'scss/gtk-widgets/list';
+@import 'scss/gtk-widgets/content-view';
+@import 'scss/gtk-widgets/sidebar';
+@import 'scss/gtk-widgets/expander';
+@import 'scss/gtk-widgets/calendar';
+@import 'scss/gtk-widgets/infobar';
+@import 'scss/gtk-widgets/popover';
+@import 'scss/gtk-widgets/dialog';
+@import 'scss/gtk-widgets/emoji-picker';
+@import 'scss/gtk-widgets/test-styles';
