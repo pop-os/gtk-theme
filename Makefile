@@ -13,7 +13,12 @@ GNOMEVER=3.26
 
 all: sass assets
 
-assets:
+assets: gtk2
+	@echo "** Generating the Assets..."
+
+	cd ./src/gtk-2.0/ && find . -type f -name *.png -exec rm -v '{}' +
+	cd ./src/gtk-2.0/ && pwd && ./render-assets.sh
+	cd ./src/gtk-2.0/ && ./render-assets-dark.sh
 
 clean:
 	-rm -rf build
@@ -46,6 +51,9 @@ sass: gtk3
 	@echo "** Generated the CSS..."
 
 gtk2:
+	@echo "** Matching Colors"
+
+	cd ./src/gtk-2.0/ && ./recolor-assets.sh > /dev/null
 
 
 prepare: lint
