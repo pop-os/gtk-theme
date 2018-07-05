@@ -98,63 +98,133 @@ listbox .h4 {
  * Storage Bar *
  ***************/
 
-.storage-bar .trough {
-  box-shadow: $shadow_2;
-  border: none;
-  background-image: none;
-  padding: $small_padding $tiny_padding;
-}
+.storage-bar {
+  .trough {
+    box-shadow: $shadow_2;
+    border: none;
+    border-radius: $material_radius;
+    background-image: none;
+    
+    :first-child {
+      border-top-left-radius: $material_radius;
+      border-bottom-left-radius: $material_radius;
+    }
+    
+    :last-child {
+      border-top-right-radius: $material_radius;
+      border-bottom-right-radius: $material_radius;
+    }
+    
+    .fill-block,
+    .empty-block {
+      border-width: 0.5px;
+      border-style: solid;
+      border-top-width: 0;
+      border-bottom-width: 2px;
+    }
+    
+    .empty-block,
+    .unused {
+      background-color: darken($alt_base_color, 5%);
+      border-color: darken($alt_base_color, 15%);
+    }
+  }
 
-.storage-bar .fill-block {
-  background-color: darken($darker_bg_color, 15%);
-  border: $border_size solid rgba($black, 0.35);
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($darker_bg_color, 35%);
-  padding: $small_padding $tiny_padding;
-}
+  .fill-block {
+    background-color: darken($darker_bg_color, 15%);
+    border-color: darken($darker_bg_color, 25%);
+    padding: $small_padding $tiny_padding;
+  }
+  
+  .legend {
+    padding: $small_padding;
+    border-radius: 50%;
+  }
 
-.storage-bar .empty-block {
-  background-color: darken($alt_base_color, 5%);
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($alt_base_color, 40%);
-}
+  /* Types of files */
 
-.storage-bar .app {
-  background-color: $purple_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($purple_500, 20%);
-}
+  .app {
+    background-color: $purple_500;
+    border-color: darken($purple_500, 10%);
+  }
 
-.storage-bar .audio {
-  background-color: $orange_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($orange_500, 20%);
-}
+  .audio {
+    background-color: $orange_500;
+    border-color: darken($orange_500, 10%);
+  }
 
-.storage-bar .files {
-  background-color: $blue_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($blue_500, 20%);
-}
+  .files {
+    background-color: $blue_500;
+    border-color: darken($blue_500, 10%);
+  }
 
-.storage-bar .photo {
-  background-color: $green_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($green_500, 20%);
-}
+  .photo {
+    background-color: $green_500;
+    border-color: darken($green_500, 10%);
+  }
 
-.storage-bar .video {
-  background-color: $red_500;
-  border-bottom-width: $border_size;
-  border-bottom-color: darken($red_500, 40%);
-}
+  .video {
+    background-color: $red_500;
+    border-color: darken($red_500, 10%);
+  }
 
-.storage-bar .legend {
-  padding: $small_padding;
-  border-radius: 50%;
+  /* Filesystems, i.e. for the installer */
+
+  .swap { 
+    background-color: $red_600;
+    border-color: darken($red_600, 10%);
+  }
+
+  .ext4 {
+    background-color: $green_500;
+    border-color: darken($green_500, 10%);
+  }
+
+  .ext3 {
+    background-color: $green_600;
+    border-color: darken($green_600, 10%);
+  }
+
+  .ext2 {
+    background-color: $green_700;
+    border-color: darken($green_700, 10%);
+  }
+
+  .fat16, 
+  .fat32 {
+    background-color: $yellow_500;
+    border-color: darken($yellow_500, 20%);
+  }
+
+  .btrfs {
+    background-color: $blue_600;
+    border-color: darken($blue_600, 10%);
+  }
+
+  .xfs {
+    background-color: $indigo_500;
+    border-color: darken($indigo_500, 10%);
+  }
+
+  .ntfs {
+    background-color: $orange_500;
+    border-color: darken($orange_500, 10%);
+  }
+
+  .luks {
+    background-color: $purple_400;
+    border-color: darken($purple_400, 10%);
+  }
+
+  .lvm {
+    background-color: $purple_500;
+    border-color: darken($purple_500, 10%);
+  }
+
+  .none {
+    background-color: $blue_500;
+    border-color: darken($blue_500, 10%);
+  }
 }
 
 /**************
@@ -214,20 +284,22 @@ window.background.csd.rounded > grid.titlebar {
  ************/
 
 window.csd {
-> overlay > stack > grid.app-back > revealer > box.toolbar {
-  box.frame {
-    button.image-button,
-    button.entry,
-    entry {
-      background-color: transparent;
-      box-shadow: none;
+  > overlay > stack > grid.app-back > revealer > box.toolbar {
+    box.frame {
+      button.image-button,
+      button.entry,
+      entry {
+        background-color: transparent;
+        box-shadow: none;
+      }
     }
   }
-}
 
-headerbar.titlebar {
-  button.suggested-action { background-color: $suggested_color;}
-}
+  headerbar.titlebar {
+    button.suggested-action {
+      background-color: $suggested_color;
+    }
+  }
 }
 
 
