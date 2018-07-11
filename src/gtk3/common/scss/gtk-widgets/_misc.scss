@@ -18,7 +18,7 @@ spinner {
   
   &:checked {
     opacity: 1;
-    animation: spin 3s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+    animation: spin 1s linear infinite;
     
     &:disabled {
       opacity: 0.6;
