@@ -102,8 +102,7 @@ button,
       color: $titlebar_fg_color;
       
       &:hover {
-        @include underline(disabled, $color_theme_2, $titlebar_fg_color);
-        background-color: to100($titlebar_fg_color);
+        @include underline(focus);
         
         &:checked {
           @include underline(focus);

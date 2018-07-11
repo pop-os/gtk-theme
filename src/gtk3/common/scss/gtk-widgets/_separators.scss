@@ -7,17 +7,24 @@
  */
 
 separator {
-  margin: $no_padding;
+  margin: 0;
   border: 0 solid to200($fg_color);
   
   menu &,
   &.horizontal {
-    margin: $no_padding;
+    margin: 0;
     border-top-width: $border_size;
   }
   
   menu & {
     margin: $tiny_padding 0;
+  }
+  
+  list & {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0 solid to100($fg_color);
   }
   
   &.vertical {
@@ -26,7 +33,8 @@ separator {
   
   toolbar &,
   .titlebar & {
-    margin: 0 $standard_padding;
+    margin: 0;
+    border: none;
     background: none;
   }
 }

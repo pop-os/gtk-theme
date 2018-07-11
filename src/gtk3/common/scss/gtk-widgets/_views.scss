@@ -75,5 +75,11 @@ treeview {
 }
 
 scrolledwindow {
-  border: $border_size solid to100($fg_color);
+  border: 0 solid to100($fg_color);
+}
+
+viewport, 
+viewport.frame {
+  border: 0 solid to100($fg_color);
+  border-image-width: 0;
 }

@@ -12,6 +12,7 @@
   > entry,
   > combobox .combo {
     border-radius: 0;
+    box-shadow: none;
   }
   
   //&.horizontal,
@@ -31,6 +32,7 @@
     :first-child,
     > :first-child .combo  {
       border-radius: $corner_radius $corner_radius 0 0;
+      box-shadow: none;
     }
     
     :last-child,
@@ -49,6 +51,15 @@
     padding: $tinier_padding;
     background-color: $bg_hl_color;
   }
+  
+  // weird issue with 
+  & > spinbutton button,
+  & > spinbutton button:focus,
+  & > spinbutton button:last-child {
+    @include flat_button;
+    border-radius: $circular_radius;
+    border-image: none;
+  }
 }
 
 //undo on stackswitcher buttons
@@ -56,6 +67,7 @@
 stackswitcher.linked.stack-switcher > button.radio.text-button:first-child,
 stackswitcher.linked.stack-switcher > button.radio.text-button:last-child,
 stackswitcher.linked.stack-switcher > button.radio.text-button:only-child,
-stackswitcher.linked.stack-switcher > button.radio.text-button {
+stackswitcher.linked.stack-switcher > button.radio.text-button,
+titlebar .linked > button {
   border-radius: $corner_radius $corner_radius 0 0;
 }

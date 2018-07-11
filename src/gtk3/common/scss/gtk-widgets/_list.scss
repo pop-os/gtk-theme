@@ -18,12 +18,12 @@ list,
     label {
       // sass-lint:disable-block indentation 
       margin: 
-        $tiny_padding_em $large_padding_em $tiny_padding_em $small_padding_em;
+        $mini_padding_em $large_padding_em $mini_padding_em $tiny_padding_em;
       color: $fg_color;
     }
     
     button {
-      background-color: $bg_color;
+      background-color: $bg_hl_color;
       box-shadow: $shadow_0;
       
       &:hover {
@@ -36,8 +36,8 @@ list,
       }
     }
     
-    &:focus {
-      background-color: $color_theme_1;
+    &:selected {
+      background-color: $color_theme_2;
       
       label,
       image {
@@ -112,7 +112,7 @@ list,
       }
       
       &:backdrop {
-        background-color: to600($color_theme_1);
+        background-color: to600($color_theme_2);
       }
     }
   }

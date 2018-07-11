@@ -126,14 +126,20 @@ headerbar,
 .headerbar {
   min-height: $toolbar_size;
   
+  entry,
+  .entry {
+    margin: $mini_padding 0;
+  }
+  
   button,
   .button {
+    margin: $mini_padding 0;
     background-color: transparent;
     color: $titlebar_fg_color;
     box-shadow: none;
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px), 
-      $color_theme_2 0%, 
+      transparent 0%, 
       transparent 0%) 0 0 0 / 0 0 0;
     
     &:backdrop {
@@ -151,11 +157,15 @@ headerbar,
     }
     
     &:checked {
-      background-color: to100($titlebar_fg_color);
+      background-color: transparent;
       border-image: radial-gradient(
         circle closest-corner at center calc(100% - 1px), 
         $color_theme_2 100%, 
         transparent 0%) 0 0 2 / 0 0 2px;
+      
+      &:hover {
+        background-color: to100($titlebar_fg_color);
+      }
     }
   }
 }

@@ -9,9 +9,10 @@
 %entry,
 entry,
 .entry {
+  @include underline(normal);
   padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
-  @include underline(normal);
+  border-radius: $corner_radius $corner_radius 0 0;
   background-color: $bg_hl_color;
   color: $fg_color;
   box-shadow: $shadow_0;
@@ -81,6 +82,7 @@ spinbutton {
 spinbutton {
   button {
     @include flat_button;
+    border-radius: $circular_radius;
     
     &:backdrop {
       color: to600($fg_color);

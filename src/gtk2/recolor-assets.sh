@@ -20,6 +20,7 @@
 # <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>.
 
 
+
 # List of Current Color definitions:
 fg="574F4A"
 accent="FAA41A"
@@ -119,5 +120,7 @@ for i in $files; do
 	f="${i}.tmp"
 	mv "$f" "${f%.in.tmp}"
 done
+
+echo `pwd`
 
 echo "Color Replacement complete."
