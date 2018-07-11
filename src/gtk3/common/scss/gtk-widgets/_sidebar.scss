@@ -26,7 +26,7 @@
   .sidebar-item,
   .sidebar-row {
     margin: -1px;
-    padding: 0 $tiny_padding_em;
+    padding: $tinier_padding $standard_padding;
     transition: $fast_transition; //Standard looks a tiny bit janky
     border-width: $no_padding;
     border-style: solid;
