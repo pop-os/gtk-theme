@@ -11,7 +11,7 @@ dialog {
   
   .titlebar {
     background-color: $titlebar_bg_color;
-    box-shadow: inset 0 0 0 $border_size $titlebar_hl_color;
+    box-shadow: $titlebar_border;
     
     image,
     label {

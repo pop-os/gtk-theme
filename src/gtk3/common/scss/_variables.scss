@@ -24,6 +24,7 @@ $check_size: 18px;
 $switch_size: 20px;
 $toolbar_size: if($slim == 'false', 42px, 32px);
 $arrow_size: 19px;
+$scrollbar_size: 10px;
 
 // Padding
 $no_padding: 1px;
@@ -41,6 +42,12 @@ $tiny_padding_em: if($slim == 'false', 0.6em, 0.4em);
 $small_padding_em: if($slim == 'false', 0.8em, 0.6em);
 $standard_padding_em: if($slim == 'false', 1.2em, 1em);
 $large_padding_em: if($slim == 'false', 1.6em, 1.2em);
+
+// Border Shadows
+$titlebar_border: 
+  inset 0 0 0 $border_size $titlebar_hl_color,
+  inset 0 -1 * $border_size 0 0 $titlebar_dl_color;
+$scrollbar_border: inset 0 0 0 $border_size to400($inverse_fg_color);
 
 // Shadows:
 $shadow_0: 0 1px 2px rgba(0,  0,  0,  0.08);
