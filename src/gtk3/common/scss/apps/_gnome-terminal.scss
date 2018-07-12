@@ -1,0 +1,21 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gnome-terminal.scss - App-overrides for GNOME Terminal
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+terminal-window > headerbar.titlebar > box.right > .close {
+  margin-right: -2px;
+  margin-left: -2px;
+}
+
+// Terminal needs a border to help with the case of overlapping windows.
+terminal-window > box {
+  border: 2px solid $titlebar_bg_color;
+  
+  &:backdrop {
+    border: 2px solid lighten($titlebar_bg_color, 5%);
+  }
+}
