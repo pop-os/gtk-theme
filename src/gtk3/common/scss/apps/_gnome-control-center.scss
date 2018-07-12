@@ -1,0 +1,30 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gnome-control-center.scss - App overrides for GNOME Control Center
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+window.csd > box.horizontal {
+  box.vertical > scrolledwindow.view > viewport.frame > stack > list > row:selected { //sass-lint:disable-line max-line-length
+    background-color: $color_theme_2;
+    color: $inverse_fg_color;
+    
+    &:backdrop {
+      background-color: to600($color_theme_2);
+    }
+  }
+
+  widget > overlay > box.vertical > grid.horizontal > stack > button.toggle {
+    margin: $tiny_padding;
+  }
+  
+  row.activatable button.image-button.circular {
+    margin: 0 4px 6px;
+  }
+  
+  box.vertical > box.horizontal > box.horizontal > frame {
+    border: none;
+  }
+}
