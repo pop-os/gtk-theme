@@ -170,7 +170,7 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color insensitive_bg_color #{'' + $bg_color};
 
 //text foreground color of insensitive widgets */
-@define-color insensitive_fg_color #{'' + insensitive($fg_color)};
+@define-color insensitive_fg_color #{'' + to600($fg_color)};
 
 //insensitive text widgets and the like base background color */
 @define-color insensitive_base_color #{'' + $dark_bg_color};
@@ -191,16 +191,16 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color theme_unfocused_selected_bg_color #{'' + $color_theme_1};
 
 //text/foreground color of selections on backdrop windows */
-@define-color theme_unfocused_selected_fg_color #{'' + insensitive($fg_color)};
+@define-color theme_unfocused_selected_fg_color #{'' + to600($fg_color)};
 
 //insensitive color on backdrop windows */
 @define-color unfocused_insensitive_color #{'' + $fg_color};
 
 //widgets main borders color */
-@define-color borders #{'' + line($fg_color)};
+@define-color borders #{'' + to200($fg_color)};
 
 //widgets main borders color on backdrop windows */
-@define-color unfocused_borders #{'' + line($fg_color)};
+@define-color unfocused_borders #{'' + to200($fg_color)};
 
 //these are pretty self explicative */
 @define-color warning_color #{'' + $warning_color};
@@ -211,7 +211,7 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 
 //this is really an API */
 @define-color content_view_bg #{'' + $base_color};
-@define-color placeholder_text_color #{'' + hint($fg_color)};
+@define-color placeholder_text_color #{'' + to400($fg_color)};
 
 $spice_slide_background: lighten($warm_grey_700, 5%);
 $spice_selected_slide_background: lighten($warm_grey_700, 7%);

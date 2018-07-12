@@ -50,7 +50,7 @@ scrollbar {
       background-color: to600($darker_bg_color);
       
       &:backdrop {
-        background-color: t6400($darker_bg_color);
+        background-color: to600($darker_bg_color);
       }
     }
     
