@@ -188,13 +188,11 @@ headerbar,
 menu window.popup decoration,
 window.menu .window-frame.menu.csd,
 window.menu .window-frame.popup.csd {
-  margin: 6px;
   border-radius: $corner_radius;
   box-shadow: $shadow_3;
 }
 
 tooltip decoration {
-  margin: 6px;
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
 }
