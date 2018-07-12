@@ -148,6 +148,22 @@
   }
 }
 
+%selected-items {
+  background-color: $color_theme_1;
+  color: $inverse_fg_color;
+  &:backdrop {
+    background-color: backdrop($color_theme_1);
+  }
+
+  @at-root %nobg-selected-items, & {
+    color: $inverse_fg_color;
+
+    &:disabled {
+      color: to400($inverse_fg_color);
+    }
+  }
+}
+
 * {
   //@include reset; //FIXME: Remove for debugging
   //transition: all 200ms ease;

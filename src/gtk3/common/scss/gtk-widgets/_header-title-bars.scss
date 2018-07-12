@@ -9,17 +9,16 @@
 .titlebar,
 titlebar {
   padding: $mini_padding $large_padding;
+  border: 0 solid $titlebar_hl_color;
+  border-width: $border_size $border_size 0;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $titlebar_bg_color;
   color: $titlebar_fg_color;
-  box-shadow: $titlebar_border;
   
   &:backdrop {
+    border-color: lighten($titlebar_hl_color, 5%);
     background-color: lighten($titlebar_bg_color, 5%);
     color: to600($titlebar_fg_color);
-    box-shadow: 
-    inset 0 0 0 $border_size lighten($titlebar_hl_color, 5%),
-    inset 0 -1 * $border_size 0 0 lighten($titlebar_dl_color, 5%);
   }
   
   .maximized &,
@@ -29,6 +28,7 @@ titlebar {
   .tiled-right &,
   .tiled-top &,
   .tiled-bottom & {
+    border: none;
     border-radius: 0;
     box-shadow: none;
   }
@@ -103,6 +103,7 @@ titlebar {
   .headerbar,
   headerbar {
     padding: 0;
+    border: none;
     box-shadow: none;
   }
   
@@ -125,15 +126,16 @@ titlebar {
 
 decoration,
 .window-frame {
+  margin: 6px;
   transition: $standard_transition;
   border-radius: 2 * 4px;
   background-color: $titlebar_bg_color;
   // Transparent shadows prevent the windows from jumping when shadows change.
-  box-shadow: $shadow_4, 0 14px 28px transparent;
+  box-shadow: $shadow_window, 0 16px 16px transparent;
   
   &:backdrop {
     background-color: lighten($titlebar_bg_color, 5%);
-    box-shadow: $shadow_2, 0 14px 28px transparent;
+    box-shadow: $shadow_2, 0 16px 16px transparent;
   }
 }
 
@@ -185,14 +187,21 @@ headerbar,
   }
 }
 
+window > .titlebar,
+window > headerbar {
+  box-shadow: $shadow_1;
+}
+
 menu window.popup decoration,
 window.menu .window-frame.menu.csd,
 window.menu .window-frame.popup.csd {
+  margin: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_3;
 }
 
 tooltip decoration {
+  margin: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
 }

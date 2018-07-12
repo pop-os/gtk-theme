@@ -55,13 +55,13 @@ scrollbar {
     }
     
     &.horizontal slider {
-      min-width: $scrollbar_size * 3;
+      min-width: $progress_size * 3;
       min-height: $scrollbar_size;
     }
   
     &.vertical slider {
       min-width: $scrollbar_size;
-      min-height: $scrollbar_size * 3;
+      min-height: $progress_size * 3;
     }
   }
 }

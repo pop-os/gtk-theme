@@ -55,7 +55,9 @@ actionbar,
 searchbar,
 .location-bar,
 .search-bar {
-  @extend %entry;
   border-radius: $corner_radius $corner_radius 0 0;
+  border-color: transparent;
+  background-color: $bg_emp_color;
+  box-shadow: inset 0 -1 * $border_size 0 0 to100($fg_color);
 }
 
