@@ -37,43 +37,6 @@ titlebar {
     min-height: $large_size;
   }
   
-  &.flat,
-  messagedialog & {
-    background-color: $bg_color;
-    box-shadow: inset 0 0 0 $darker_bg_color;
-    
-    .title {
-      color: $fg_color;
-      
-      &:backdrop {
-        color: to600($fg_color);
-      }
-    }
-  }
-  
-  .titlebar,
-  .headerbar,
-  headerbar {
-    padding: 0;
-    box-shadow: none;
-  }
-  
-  seperator {
-    border: none;
-    background-color: transparent;
-    color: transparent;
-    box-shadow: none;
-  }
-  
-  .title {
-    font-weight: 700;
-  }
-  
-  .subtitle {
-    font-size: 80%;
-    font-weight: 500;
-  }
-  
   .titlebutton {
     min-width: $small_size;
     min-height: $small_size;
@@ -108,6 +71,56 @@ titlebar {
       }
     }
   }
+  
+  &.flat,
+  messagedialog & {
+    background-color: $bg_color;
+    box-shadow: inset 0 0 0 $darker_bg_color;
+    
+    .title {
+      color: $fg_color;
+      
+      &:backdrop {
+        color: to600($fg_color);
+      }
+    }
+    
+    .titlebutton {
+      margin: $tiny_padding;
+      
+      &.close {
+        background-color: $close_button_color;
+        
+        &:backdrop {
+          background-color: to400($light_neutral_grey_700);
+          color: if($color == 'dark', $inverse_fg_color, $obverse_fg_color);
+        }
+      }
+    }
+  }
+  
+  .titlebar,
+  .headerbar,
+  headerbar {
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  seperator {
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    box-shadow: none;
+  }
+  
+  .title {
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    font-size: 80%;
+    font-weight: 500;
+  }
 }
 
 decoration,
@@ -116,11 +129,11 @@ decoration,
   border-radius: 2 * 4px;
   background-color: $titlebar_bg_color;
   // Transparent shadows prevent the windows from jumping when shadows change.
-  box-shadow: $shadow_4, 0 19px 38px transparent;
+  box-shadow: $shadow_4, 0 14px 28px transparent;
   
   &:backdrop {
     background-color: lighten($titlebar_bg_color, 5%);
-    box-shadow: $shadow_2, 0 19px 38px transparent;
+    box-shadow: $shadow_2, 0 14px 28px transparent;
   }
 }
 
@@ -175,15 +188,18 @@ headerbar,
 menu window.popup decoration,
 window.menu .window-frame.menu.csd,
 window.menu .window-frame.popup.csd {
+  margin: 6px;
   border-radius: $corner_radius;
   box-shadow: $shadow_3;
 }
 
 tooltip decoration {
+  margin: 6px;
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
 }
 
-decoration {
+decoration,
+window {
   margin: 6px;
 }
