@@ -1,0 +1,24 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _eye-of-gnome.scss - Eye of GNOME Image Viewer App Overrides.
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+// Zoom in button is using the styling of the adjacent entry, which looks odd
+
+window.csd > headerbar.titlebar > box.linked { 
+  > button.image-button {
+    @include flat_button;
+    padding-right: $small_padding;
+    padding-left: $small_padding;
+    border-radius: $corner_radius;
+    border-image: none;
+  }
+  
+  > entry {
+    margin: $tiny_padding;
+    border-radius: $corner_radius $corner_radius 0 0;
+  }
+}
