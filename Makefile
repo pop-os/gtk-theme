@@ -115,7 +115,6 @@ install:
 	  $(gtk2_output)/apps.rc
 	install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-2.0/assets \
 	  $(gtk2_output)/assets/*.png
-ifeq ($(DARK), 'TRUE')
 	@echo "Installing Dark theme"
 	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark
 	sed -e \
@@ -144,7 +143,6 @@ ifeq ($(DARK), 'TRUE')
 	install $(gtk2_output)/gtkrc-dark $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0
 	install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0/assets \
 	  $(gtk2_output)/assets/*.png
-endif
 	@echo "** $(theme_name) Theme installed!"
 
 uninstall:

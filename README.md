@@ -1,38 +1,122 @@
-# The Gtk+ Stylesheet for elementary OS
+<p align="center">
+<img src="https://github.com/system76/pop-gtk-theme/raw/master/Pop_gtk-logo.png"/>
+</p>
 
-[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=45189256)](https://www.bountysource.com/trackers/45189256-elementary-stylesheet)
+-------------------
 
-An original Gtk.CSS stylesheet designed specifically for [elementary OS](https://elementary.io) and its desktop environment: Pantheon.
+A GTK+ theme for Pop!_OS 
 
-This stylesheet is licensed openly under the terms of the [GNU General Public License](https://github.com/elementary/stylesheet/blob/master/COPYING). Redistributing, forking, remixing, etc. are encouraged!
+*NOTE* This version of the theme is currently in _ALPHA_. It is not considered
+complete or ready for day-to-day use. Certain elements may not be themed 
+correctly.
 
-If you feel the desire to compensate the designers who maintain this stylesheet for your usage, [please see this page](https://elementary.io/get-involved#funding) and thank you!
 
-## Not a General Purpose Stylesheet
+## Screenshots
+-------------------
+![Pop GTK+ Theme](screenshots/main.png) ![GNOME Maps](screenshots/pop-maps.png) ![Dark Theme](screenshots/pop-builder.png)
 
-Special fixes for GNOME apps (Nautilus, GNOME Control Center, GNOME Shell, etc) or other desktop environments will not be implemented. The aim of style classes should be to be generic across applications. If an application needs a unique style,  it should be bundled with that application.
 
-## Testing
+### Required Components
+-------------------
+Pop supports Gtk+ 3.22.x
 
-This stylesheet doesn't need to be compiled. It is recommended to make a
-symbolic link from the source directory to "/usr/share/themes" for testing:
+ ```
+ * Gtk+-3.0             >= 3.22
+ * Gtk+-2.0             >= 2.24.30
+ * gtk2-engines-pixbuf  >= 2.24.30
+ * gtk2-engines-murrine >= 0.98.1
+ ```
 
-    ln -s /path/to/your/branch /usr/share/themes/
-    
-Apps will need to be restarted or the system stylesheet will need to be
-changed for your changes to take effect.
+### Recommendations
 
-You can also test changes live with Gtk Inspector. Make sure you have Gtk
-development libraries installed, then enable the inspector shortcut:
+- For GTK, use icons alongside [Pop Icon Theme](https://github.com/system76/pop-icon-theme)
+- For fonts, use:
+ > Window Titles: Fira Sans SemiBold 10
 
-    apt install libgtk-3-dev
-    gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
-    
-Open an app you wish to test your changes on. Open Gtk Inspector with the
-keyboard shortcut Shift + Ctrl + D, then navigate to the tab "Custom CSS".
-Your changes here will take immediate effect on the focused app.
+ > Interface: Fira Sans Book 10
 
-We use [stylelint](http://stylelint.io/) for CSS linting. For testing locally:
-* You will need `npm` installed.
-* Run `npm install` to grab stylelint. You will only need to do this once.
-* Run `npm test` and it will lint all the CSS files.
+ > Documents: Roboto Slab Regular 11
+
+ > Monospace: Fira Mono Regular 11
+
+
+### Installation
+
+Pop is intended to be installed through the package manager. Packages for Ubuntu are available in PPA:
+```
+sudo add-apt-repository ppa:system76/pop
+sudo apt update
+sudo apt install pop-theme
+```
+It's recommended to use the `pop-theme` metapackage, as this will pull in all components of the look. However, individual components can be installed separately, e.g:
+```
+sudo apt install pop-gtk-theme
+```
+It's also recommended to restart the GNOME Shell after applying the theme of your choice.
+
+Enter the Shell's command launcher
+```
+Alt + F2
+```
+
+This will restart the Shell after you hit Enter
+```
+r
+```
+
+
+
+### Installation from Git Source
+----------------------------
+
+###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can install it using:
+
+```
+sudo apt install libsass0 sassc inkscape optipng libglib2.0-dev-bin
+```
+
+1. If previous versions were installed/existed, remove them first.
+
+ ```
+ sudo apt remove system76-pop-gtk-theme
+ sudo make uninstall
+ sudo rm -rf /usr/share/themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
+ rm -rf ~/.local/share/themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
+ rm -rf ~/.themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
+ ```
+
+2. Generate the theme files.
+
+```
+make clean
+make
+```
+
+3. Install the theme.
+
+```
+sudo make install
+```
+
+#### Rebuilding after modifications:
+
+You shouldn't need to rebuild the entire theme after modifications. If you 
+modify only the GTK3 sources, then using `make gtk3` will be sufficient for 
+rebuilding the theme. This saves you needing to build the Gtk-2 assets again. 
+
+TODO
+----
+* Prepare for Steam theming (priority: Low)
+
+Public License
+--------------
+ GPLv2.0
+
+ > **Note:**
+ >
+ > SVG files are licensed under CC BY-SA 4.0
+
+Special Thanks to
+--------------
+ Nana-4, the developer of Materia.
+ tista500 and the Adapta Theme Project: https://github.com/adapta-project/
