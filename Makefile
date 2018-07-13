@@ -78,7 +78,7 @@ $(gtk3_targets): %.scss: $(gtk3_versions)
 	done
 	@echo "Built $*!"
 
-$(gtk3_versions): %: lint
+$(gtk3_versions): %:
 	@echo "Setting up $*:"
 	mkdir -p $(build_output)/$*
 	-cp -r --target-directory=$(build_output)/$* \
