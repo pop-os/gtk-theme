@@ -182,6 +182,11 @@
   -gtk-icon-effect: dim;
 }
 
+*:selected {
+  background-color: $color_theme_1;
+  color: $fg_color;
+}
+
 .gtkstyle-fallback {
   background-color: $bg_color;
   color: $fg_color;
