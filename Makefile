@@ -105,7 +105,7 @@ install-gtk3:
 	$(foreach type,$(variants),sed "s/~theme~name/$(theme_name)$(type)/" $(CURDIR)/index.theme.in > $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/index.theme;)
 	@echo "** Installed $(theme_name) Gtk+3!"
 
-install-gtk2: install
+install-gtk2:
 	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-2.0;)
 	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-2.0/assets;)
 	$(foreach light,$(light_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(light)/gtk-2.0/assets $(gtk2_assets_output)/*.png;)
@@ -116,7 +116,7 @@ install-gtk2: install
 	$(foreach dark,$(dark_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/ $(gtk2_output)/*.rc;)
 	$(foreach dark,$(dark_variants),install  $(gtk2_output)/gtkrc-dark $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/gtkrc;)
 
-install: install-gtk3
+install: install-gtk3 install-gtk2
 
 debug:
 	$(foreach type,$(variants),echo "** variant: $(theme_name)$(type)";)
