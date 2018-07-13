@@ -11,15 +11,17 @@ SRC_DIR = $(CURDIR)/src
 theme_name = Pop-4
 build_output = $(CURDIR)/build
 
+variants := "" "-light" "-dark" "-slim" "-slim-light" "-slim-dark"
+slim_variants := "-slim" "-slim-light"
+light_variants := "" "-light"
+dark_variants := "-dark" "-slim-dark"
+
 # GTK3 Options
 gtk3_src = $(SRC_DIR)/gtk3
 gtk3_common = $(gtk3_src)/common
 gtk3_versions := 3.22
 gtk3_oldest_version = 3.22
-gtk3_targets := gtk.scss gtk-dark.scss
-DARK = 'TRUE'
-LIGHT = 'LIGHT'
-SLIM = 'TRUE'
+gtk3_targets := gtk.scss gtk-dark.scss gtk-light.scss gtk-slim.scss gtk-slim-dark.scss gtk-slim-light.scss
 
 # GTK2 Options
 gtk2_src = $(SRC_DIR)/gtk2
@@ -89,61 +91,35 @@ lint:
 	@echo "** Checking for Code Quality..."
 	sass-lint -vqc scss-lint.yml src/gtk3/**/scss/**/*.scss
 
-install:
-	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)
-	sed -e \
-	  s/"~theme~name"/$(theme_name)/g \
-	  $(CURDIR)/index.theme.in > $(DESTDIR)$(THEMES_DIR)/$(theme_name)/index.theme;
-	for version in $(gtk3_versions); do \
-	  install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-$$version; \
-	  install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-$$version/assets; \
-	  install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-$$version \
-	    $(build_output)/$$version/gtk.css \
-	    $(build_output)/$$version/gtk-dark.css; \
-	  install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-$$version/assets \
-	    $(build_output)/$$version/assets/*.svg; \
+install-gtk3:
+	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type);)
+	for version in $(gtk3_versions); do\
+	  $(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-$$version/;) \
+	  $(foreach type,$(variants),cp -r $(build_output)/$$version/assets $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-$$version/;) \
+	  $(foreach type,$(variants),install $(build_output)/$$version/gtk$(type).css $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-$$version/gtk.css;) \
+	  $(foreach light,$(light_variants), install $(build_output)/$$version/gtk-dark.css $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(light)/gtk-$$version/gtk-dark.css;) \
+	  $(foreach slim,$(slim_variants), install $(build_output)/$$version/gtk-slim-dark.css $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(slim)/gtk-$$version/gtk-dark.css;) \
 	done
-	-unlink $(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-3.0
-	ln -s "gtk-$(gtk3_oldest_version)" $(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-3.0
-	# GTK2
-	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-2.0
-	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-2.0/assets
-	install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-2.0 \
-	  $(gtk2_output)/gtkrc \
-	  $(gtk2_output)/main.rc \
-	  $(gtk2_output)/hacks.rc \
-	  $(gtk2_output)/apps.rc
-	install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)/gtk-2.0/assets \
-	  $(gtk2_output)/assets/*.png
-	@echo "Installing Dark theme"
-	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark
-	sed -e \
-	  s/"~theme~name"/$(theme_name)-dark/g \
-	  $(CURDIR)/index.theme.in > $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/index.theme;
-	for version in $(gtk3_versions); do \
-	  install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-$$version; \
-	  install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-$$version/assets; \
-	  install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-$$version \
-	    $(build_output)/$$version/gtk-dark.css; \
-	  cp \
-	    $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-$$version/gtk-dark.css \
-	    $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-$$version/gtk.css; \
-	  install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-$$version/assets \
-	    $(build_output)/$$version/assets/*.svg; \
-	done
-	-unlink $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-3.0
-	ln -s "gtk-$(gtk3_oldest_version)" $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-3.0
-	# GTK 2
-	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0
-	install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0/assets
-	install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0 \
-	  $(gtk2_output)/main.rc \
-	  $(gtk2_output)/hacks.rc \
-	  $(gtk2_output)/apps.rc
-	install $(gtk2_output)/gtkrc-dark $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0
-	install --target-directory=$(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark/gtk-2.0/assets \
-	  $(gtk2_output)/assets/*.png
-	@echo "** $(theme_name) Theme installed!"
+	-$(foreach type,$(variants),unlink $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-3.0;)
+	$(foreach type,$(variants),ln -s gtk-$(gtk3_oldest_version) $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-3.0;)
+	$(foreach type,$(variants),sed "s/~theme~name/$(theme_name)$(type)/" $(CURDIR)/index.theme.in > $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/index.theme;)
+	@echo "** Installed $(theme_name) Gtk+3!"
+
+install-gtk2: install
+	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-2.0;)
+	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/gtk-2.0/assets;)
+	$(foreach light,$(light_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(light)/gtk-2.0/assets $(gtk2_assets_output)/*.png;)
+	$(foreach slim,$(slim_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(slim)/gtk-2.0/assets $(gtk2_assets_output)/*.png;)
+	$(foreach dark,$(dark_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/assets $(gtk2_assets_output)-dark/*.png;)
+	$(foreach light,$(light_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(light)/gtk-2.0/ $(gtk2_output)/*.rc $(gtk2_output)/gtkrc;)
+	$(foreach slim,$(slim_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(slim)/gtk-2.0/ $(gtk2_output)/*.rc $(gtk2_output)/gtkrc;)
+	$(foreach dark,$(dark_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/ $(gtk2_output)/*.rc;)
+	$(foreach dark,$(dark_variants),install  $(gtk2_output)/gtkrc-dark $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/gtkrc;)
+
+install: install-gtk3
+
+debug:
+	$(foreach type,$(variants),echo "** variant: $(theme_name)$(type)";)
 
 uninstall:
 	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)
@@ -153,6 +129,8 @@ uninstall:
 	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-light-compact
 	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark-compact
 	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-slim
+	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-slim-dark
+	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-slim-light
 	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-dark-slim
 	-rm -rf $(DESTDIR)$(THEMES_DIR)/$(theme_name)-light-slim
 
@@ -160,6 +138,6 @@ clean:
 	-mkdir -p $(build_output)
 	-rm -r $(build_output)
 
-.PHONY: clean install uninstall lint $(gtk3_targets) $(gtk3_versions)
+.PHONY: clean install install-gtk3 install-gtk2 debug uninstall lint $(gtk3_targets) $(gtk3_versions)
 
 .SUFFIXES: .png
