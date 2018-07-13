@@ -1,3 +1,9 @@
+pop-gtk-theme (3.99.0) bionic; urgency=medium
+
+  * New version of the theme - Alpha release
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 13 Jul 2018 12:49:02 -0600
+
 pop-gtk-theme (3.1.1) bionic; urgency=medium
 
   * Embedded Terminal styling
