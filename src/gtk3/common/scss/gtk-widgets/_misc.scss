@@ -10,7 +10,11 @@
 /*
  * Spinner
  */
- 
+
+@keyframes spin {
+  to { -gtk-icon-transform: rotate(1turn); }
+}
+
 spinner {
   background-image: none;
   opacity: 0;
