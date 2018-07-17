@@ -64,6 +64,16 @@ button,
     }
   }
   
+  .titlebar & {
+    color: $titlebar_fg_color;
+    
+    &:checked,
+    &:active,
+    &:hover {
+      color: $titlebar_active_color;
+    }
+  }
+  
   &.flat {
     @include flat_button;
   }
@@ -95,6 +105,11 @@ button,
     
     &:hover:checked {
       @include underline(focus);  
+    }
+    
+    &:disabled {
+      @include underline(disabled);
+      border: none;
     }
     
     .titlebar & {
@@ -176,6 +191,30 @@ button,
     label,
     image {
       color: $inverse_fg_color;
+    }
+  }
+}
+
+.path-bar button {
+  
+  &:disabled {
+    box-shadow: none;
+  }
+  
+  &.text-button {
+    padding: $tiny_padding_em;
+    padding-right: $standard_padding_em;
+    padding-left: $tiny_padding_em;
+    border-radius: $corner_radius;
+    background-image: url('assets/pathbar-separator.svg');
+    background-repeat: no-repeat no-repeat;
+    background-position: 100% 50%;
+    background-size: 12px;
+    
+    &:dir(rtl) {
+      padding-right: $tiny_padding_em;
+      padding-left: $standard_padding_em;
+      background-position: 0% 50%;
     }
   }
 }

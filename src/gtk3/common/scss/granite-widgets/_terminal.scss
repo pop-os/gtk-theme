@@ -6,14 +6,15 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-.terminal {
+.terminal,
+.terminal text {
   background-color: $dark_neutral_grey_300;
   color: $inverse_fg_color;
   font-family: monospace;
   
   selection {
-    background-color: $obverse_bg_color;
-    color: $obverse_fg_color;
+    background-color: $dark_color_1;
+    color: $inverse_fg_color;
   }
 }
 
