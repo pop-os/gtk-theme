@@ -1,0 +1,44 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _libreoffics.scss - LibreOffice App overrides
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+window.background:not(.solid-csd) {
+  // for 'Notebookbar' toolbar
+  > notebook:not(.frame) {
+    border: 0 none transparent; // unset borders
+    background-color: $bg_color;
+
+    > stack {
+      border: none;
+      background-color: $bg_color;
+      box-shadow: none;
+    }
+
+    > header.top {
+      border: 0 none transparent; // unset borders
+      background-color: $bg_color;
+      box-shadow: $shadow_2;
+
+      tabs {
+        &, > tab {
+          background-color: transparent;
+
+          &,
+          label,
+          image { color: to800($bg_color); }
+
+          &:hover,
+          &:checked {
+            &,
+            label,
+            image { color: $fg_color; }
+          }
+        }
+      }
+    }
+  }
+}
