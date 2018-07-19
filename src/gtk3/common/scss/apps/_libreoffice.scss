@@ -29,13 +29,17 @@ window.background:not(.solid-csd) {
 
           &,
           label,
-          image { color: to800($bg_color); }
+          image {
+            color: to800($bg_color);
+          }
 
           &:hover,
           &:checked {
             &,
             label,
-            image { color: $fg_color; }
+            image {
+              color: $fg_color;
+            }
           }
         }
       }

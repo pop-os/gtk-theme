@@ -15,8 +15,8 @@ stackswitcher.horizontal.linked.stack-switcher.osd {
   > button:last-child,
   > button:only-child, {
     border-radius: $corner_radius;
-    border-image: none;
     background-color: transparent;
+    border-image: none;
     
     &:hover {
       color: $light_color_2;
@@ -24,8 +24,8 @@ stackswitcher.horizontal.linked.stack-switcher.osd {
     
     &:checked {
       border-radius: $corner_radius;
-      border-image: none;
       background-color: $color_theme_2;
+      border-image: none;
       
       &:hover {
         color: $inverse_fg_color;
