@@ -7,7 +7,29 @@
  */
 
 
-.horizontal.linked.stack-switcher.osd {
-  border-radius: $corner_radius $corner_radius 0 0;
-  background-color: to200($fg_color);
+stackswitcher.horizontal.linked.stack-switcher.osd {
+  border-radius: $corner_radius;
+  background-color: to400($inverse_bg_color);
+  
+  > button:first-child,
+  > button:last-child,
+  > button:only-child, {
+    border-radius: $corner_radius;
+    border-image: none;
+    background-color: transparent;
+    
+    &:hover {
+      color: $light_color_2;
+    }
+    
+    &:checked {
+      border-radius: $corner_radius;
+      border-image: none;
+      background-color: $color_theme_2;
+      
+      &:hover {
+        color: $inverse_fg_color;
+      }
+    }
+  }
 }
