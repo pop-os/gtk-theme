@@ -34,7 +34,14 @@ separator {
   toolbar &,
   .titlebar & {
     margin: 0;
+    padding: 0;
     border: none;
     background: none;
+    
+    &.titlebutton {
+      min-width: $tiny_size;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

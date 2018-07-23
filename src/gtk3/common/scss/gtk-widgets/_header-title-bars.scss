@@ -8,7 +8,7 @@
 
 .titlebar,
 titlebar {
-  padding: $mini_padding $large_padding;
+  padding: $mini_padding $standard_padding;
   border: 0 solid $titlebar_hl_color;
   border-width: $border_size $border_size 0;
   border-radius: $corner_radius $corner_radius 0 0;
@@ -56,6 +56,7 @@ titlebar {
     }
     
     &.close {
+      margin: $small_padding 0;
       background-color: $close_button_color;
       
       &:backdrop {
@@ -69,6 +70,10 @@ titlebar {
       &:active {
         background-color: mix($close_button_color, $obverse_bg_color, 60%);
       }
+    }
+    
+    &.appmenu.popup {
+      padding: $small_padding;
     }
   }
   
@@ -99,7 +104,6 @@ titlebar {
     }
   }
   
-  .titlebar,
   .headerbar,
   headerbar {
     padding: 0;
@@ -142,6 +146,7 @@ decoration,
 headerbar,
 .headerbar {
   min-height: $toolbar_size;
+  padding: $mini_padding $standard_padding;
   
   entry,
   .entry {
