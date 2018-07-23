@@ -28,6 +28,8 @@ entry,
   
   &:disabled {
     @include underline(disabled);
+    background-color: to400($bg_hl_color);
+    color: to600($fg_color);
   }
   
   selection {
@@ -36,15 +38,20 @@ entry,
   }
   
   image {
+    margin: 0 $tiny_padding_em 0 $no_padding;
     color: $fg_color;
     
     &:backdrop {
-      color: to400($fg_color);
+      color: to200($fg_color);
     }
   }
   
   &.flat {
     @include flat;
+  }
+  
+  .titlebar &:disabled {
+    opacity: 0.6;
   }
 }
 
