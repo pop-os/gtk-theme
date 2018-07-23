@@ -5,3 +5,13 @@
  *
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
+
+// Appcenter uses textviews for displaying App info/changelogs
+window.csd > stack > stack.view > grid.horizontal > overlay {
+  viewport.frame > grid.horizontal > grid.vertical {
+    textview.view text,
+    grid.horizontal > list {
+      background-color: $bg_color;
+    }
+  }
+}
