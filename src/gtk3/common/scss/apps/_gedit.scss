@@ -22,7 +22,10 @@
   }
   
   .linked > entry {
-    margin: $tinier_padding $small_padding;
     border-radius: $corner_radius $corner_radius 0 0;
+    
+    entry {
+      @include reset;
+    }
   }
 }
