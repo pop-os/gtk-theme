@@ -100,6 +100,7 @@ radio {
 checkbutton,
 radiobutton {
   margin: $tiny_padding_em;
+  outline-offset: 4px;
   
   label:dir(ltr) {
     margin-left: $tiny_padding_em;
