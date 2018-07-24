@@ -79,8 +79,8 @@ titlebar {
   
   &.flat,
   messagedialog & {
-    background-color: $bg_color;
     border-width: 0;
+    background-color: $bg_color;
     box-shadow: none;
     
     .title {
