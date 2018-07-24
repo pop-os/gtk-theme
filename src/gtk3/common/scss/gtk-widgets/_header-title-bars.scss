@@ -178,6 +178,7 @@ headerbar,
     
     &:checked {
       background-color: transparent;
+      color: $titlebar_fg_color;
       border-image: radial-gradient(
         circle closest-corner at center calc(100% - 1px), 
         $color_theme_2 100%, 
