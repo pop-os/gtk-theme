@@ -6,6 +6,7 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 switch {
+  margin: 4px 0; //needed to help prevent switches from growing.
   transition: $standard_transition;
   border-radius: $circular_radius;
   background-clip: padding-box;
