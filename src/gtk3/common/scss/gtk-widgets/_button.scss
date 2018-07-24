@@ -193,6 +193,18 @@ button,
       color: $inverse_fg_color;
     }
   }
+  
+  popover stack & {
+    @include flat_button;
+    padding: $tiny_padding_em;
+    border-radius: $corner_radius;
+        
+    image,
+    label {
+      padding: 0;
+      margin: 0
+    }
+  }
 }
 
 .path-bar button {

@@ -67,3 +67,23 @@ widget.view .icon-item-background,
     }
   }
 }
+
+// Tiny fix for border radius on popover buttons
+popover stack box.linked button,
+popover stack box.linked button:first-child,
+popover stack box.linked button:last-child {
+  border-radius: $corner_radius
+}
+
+// Zoom controls
+.nautilus-window > popover > stack > box.vertical > box.linked.horizontal + box.vertical > box.vertical > box.horizontal.linked {
+  margin: $tiny_padding;
+  border-radius: $corner_radius;
+  background-color: $bg_hl_color;
+  box-shadow: $shadow_1;
+  
+  button:disabled {
+    border: none;
+    box-shadow: none;
+  }
+}
