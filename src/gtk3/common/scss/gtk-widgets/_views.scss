@@ -60,6 +60,11 @@ treeview {
     &:checked {
       box-shadow: none;
     }
+    
+    &:disabled {
+      border: none;
+      box-shadow: none;
+    }
   }
   
     
