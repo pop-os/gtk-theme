@@ -17,10 +17,6 @@
   background-color: $base_color;
   color: $fg_color;
   
-  dialog & {
-    background-color: $bg_color;
-  }
-  
   row,
   .list-row,
   .sidebar-item,
