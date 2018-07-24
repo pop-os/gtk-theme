@@ -22,6 +22,11 @@
       background-color: $color_theme_2;
       color: $inverse_fg_color;
       border-image: none;
+      
+      &:backdrop {
+        background-color: to400($color_theme_2);
+        border-image: none;
+      }
     }
   }
   
