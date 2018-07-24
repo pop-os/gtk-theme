@@ -20,7 +20,6 @@
   
   &:checked {
     @include underline(focus);
-    color: $fg_color;
   }
 }
 
@@ -207,10 +206,16 @@ button,
   }
 }
 
-.path-bar button {
+.path-bar button,
+#pathbarbox button {
   
   &:disabled {
     box-shadow: none;
+  }
+  
+  &:checked {
+    background-color: transparent;
+    color: $fg_color;
   }
   
   &.text-button {

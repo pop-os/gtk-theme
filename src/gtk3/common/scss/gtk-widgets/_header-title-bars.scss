@@ -80,7 +80,8 @@ titlebar {
   &.flat,
   messagedialog & {
     background-color: $bg_color;
-    box-shadow: inset 0 0 0 $darker_bg_color;
+    border-width: 0;
+    box-shadow: none;
     
     .title {
       color: $fg_color;
@@ -130,10 +131,7 @@ titlebar {
 
 decoration,
 .window-frame {
-  margin: 6px;
-  transition: $standard_transition;
-  border-radius: 2 * 4px;
-  background-color: $titlebar_bg_color;
+  border-radius: $corner_radius;
   // Transparent shadows prevent the windows from jumping when shadows change.
   box-shadow: $shadow_window, 0 16px 16px transparent;
   

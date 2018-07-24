@@ -14,3 +14,7 @@ window.rounded actionbar {
     border-radius: $corner_radius;
   }
 }
+
+window.flat headerbar {
+  box-shadow: none;
+}
