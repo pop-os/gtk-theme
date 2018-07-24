@@ -13,6 +13,7 @@ list,
   row,
   .list-row {
     padding: 0;
+    transition: $standard_transition;
     border-color: transparent;
     
     label {
@@ -20,6 +21,10 @@ list,
       margin: 
         $mini_padding_em $large_padding_em $mini_padding_em $tiny_padding_em;
       color: $fg_color;
+    }
+    
+    &:hover {
+      background-color: $dark_bg_color;
     }
     
     button {
