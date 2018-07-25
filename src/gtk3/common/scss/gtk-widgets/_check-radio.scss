@@ -56,6 +56,11 @@ radio {
   modelbutton & {
     margin: $tiny_padding;
   }
+  
+  treeview.view &:selected {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $inverse_fg_color;
+  }
 }
 
 //check:not(:checked):active,
