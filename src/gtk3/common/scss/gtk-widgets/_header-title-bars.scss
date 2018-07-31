@@ -30,6 +30,7 @@ titlebar {
   .tiled-bottom & {
     border: none;
     border-radius: 0;
+    box-shadow: none;
   }
   
   &.default-decoration {
@@ -128,9 +129,7 @@ titlebar {
   }
 }
 
-decoration,
-.ssd decoration {
-  margin: 6px;
+decoration {
   border-radius: $corner_radius;
   // Transparent shadows prevent the windows from jumping when shadows change.
   box-shadow: $shadow_window, 0 16px 16px transparent;
