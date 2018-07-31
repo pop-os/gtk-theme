@@ -53,11 +53,11 @@ window.background:not(.csd) {
       color: $fg_color;
 
       &:hover { 
-        background-image: image(gtkalpha(currentColor, 0.1 / 2));
+        background-image: image($dark_bg_color);
       }
 
       &:active {
-        background-image: image(gtkalpha(currentColor, 0.1));
+        background-image: image($dark_bg_color);
       }
     }
 

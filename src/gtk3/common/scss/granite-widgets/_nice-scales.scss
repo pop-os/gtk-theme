@@ -26,14 +26,14 @@ scale {
   }
   
   &.warmth trough {
-    background-image: linear-gradient (
+    background-image: linear-gradient(
       to right,
       to400($orange_100),
       to600($orange_500)
     );
   }
   &.warmth:dir(rtl) trough {
-    background-image: linear-gradient (
+    background-image: linear-gradient(
       to left,
       to400($orange_100),
       to600($orange_500)
