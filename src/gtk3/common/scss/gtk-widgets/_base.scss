@@ -167,13 +167,13 @@
 * {
   //@include reset; //FIXME: Remove for debugging
   //transition: all 200ms ease;
+  outline: 0 solid to400($light_neutral_grey_700);
+  outline-offset: -4px;
   background-clip: padding-box;
   -GtkTextView-error-underline-color: $error_color;
   -GtkIMHtml-hyperlink-color: $color_theme_2;
   -GtkHTML-link-color: $color_theme_2;
   -gtk-outline-radius: $corner_radius;
-  outline-offset: -4px;
-  outline: 0 solid to400($light_neutral_grey_700);
   
   &:focus {
     outline-width: $line_size;

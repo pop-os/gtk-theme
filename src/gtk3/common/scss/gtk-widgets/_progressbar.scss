@@ -103,10 +103,10 @@ scale {
     margin: -2 * $progress_size;
     transition: $standard_transition;
     border-radius: $circular_radius;
+    outline: $line_size solid to400($light_neutral_grey_700);
     background-color: $color_theme_1;
     color: $color_theme_1;
     box-shadow: none;
-    outline: $line_size solid to400($light_neutral_grey_700);
     
     &:hover {
       box-shadow: $shadow_1;
