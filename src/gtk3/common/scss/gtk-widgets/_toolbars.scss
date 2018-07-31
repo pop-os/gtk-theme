@@ -45,10 +45,12 @@ actionbar,
 }
 
 .inline-toolbar {
+  padding: $tiny_padding;
   background-color: $dark_bg_color;
   
   button {
     @include flat_button;
+    padding: $tiny_padding;
   }
 }
 

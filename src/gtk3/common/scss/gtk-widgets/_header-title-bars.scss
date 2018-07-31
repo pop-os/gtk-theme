@@ -129,8 +129,7 @@ titlebar {
   }
 }
 
-decoration,
-.window-frame {
+decoration {
   border-radius: $corner_radius;
   // Transparent shadows prevent the windows from jumping when shadows change.
   box-shadow: $shadow_window, 0 16px 16px transparent;
@@ -196,9 +195,7 @@ window > headerbar {
   box-shadow: $shadow_1;
 }
 
-menu window.popup decoration,
-window.menu .window-frame.menu.csd,
-window.menu .window-frame.popup.csd {
+menu window.popup decoration, {
   margin: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_3;
@@ -210,7 +207,6 @@ tooltip decoration {
   box-shadow: $shadow_2;
 }
 
-decoration,
-window {
+decoration{
   margin: 6px;
 }
