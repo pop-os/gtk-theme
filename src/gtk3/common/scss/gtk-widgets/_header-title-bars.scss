@@ -131,6 +131,7 @@ titlebar {
 
 decoration {
   border-radius: $corner_radius;
+  background-color: $titlebar_bg_color;
   // Transparent shadows prevent the windows from jumping when shadows change.
   box-shadow: $shadow_window, 0 16px 16px transparent;
   
