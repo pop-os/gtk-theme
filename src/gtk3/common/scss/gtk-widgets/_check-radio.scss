@@ -23,10 +23,11 @@ radio {
   &:indeterminate {  
     background-color: $color_theme_2;
     color: $selected_fg_color;
-    box-shadow: inset 0 0 0 2px $color_theme_2;
+    box-shadow: inset 0 0 0 2px transparent;
     
     &:backdrop {
       background-color: to400($color_theme_2);
+      box-shadow: inset 0 0 0 2px transparent;
     }
   }
   
@@ -44,9 +45,11 @@ radio {
     &:checked,
     &:indeterminate {
       background-color: to600($color_theme_2);
+      box-shadow: inset 0 0 0 2px transparent;
       
       &:backdrop {  
         background-color: to200($color_theme_2);
+        box-shadow: inset 0 0 0 2px transparent;
       }
     }
   }
