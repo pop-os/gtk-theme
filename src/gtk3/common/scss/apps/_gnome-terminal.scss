@@ -13,9 +13,14 @@ terminal-window > headerbar.titlebar > box.right > .close {
 
 // Terminal needs a border to help with the case of overlapping windows.
 terminal-window > box {
-  border: $line_size solid $titlebar_bg_color;
+  border: 0 solid $titlebar_hl_color;
+  border-width: 0 $border_size $border_size $border_size;
   
   &:backdrop {
-    border: $line_size solid lighten($titlebar_bg_color, 5%);
+    border: $border_size solid lighten($titlebar_bg_color, 5%);
+  }
+  
+  menubar {
+    border: none;
   }
 }
