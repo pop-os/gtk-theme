@@ -43,7 +43,8 @@ button,
   }
   
   &:active {
-    box-shadow: $shadow_3;
+    background-color: $dark_bg_color;
+    box-shadow: $shadow_0;
   }
   
   &:checked {
@@ -154,7 +155,7 @@ button,
       background-color: mix($suggested_color, $obverse_bg_color, 60%);
       
       headerbar & {
-        box-shadow: $shadow_3;
+        background-color: mix($suggested_color, $obverse_bg_color, 40%);
       }
     }
     
@@ -184,7 +185,7 @@ button,
       background-color: mix($destructive_color, $obverse_bg_color, 60%);
       
       headerbar & {
-        box-shadow: $shadow_3;
+        box-shadow: $shadow_0;
       }
     }
     
@@ -204,6 +205,10 @@ button,
       margin: 0;
       padding: 0;
     }
+  }
+  
+  revealer > & {
+    margin: 10px;
   }
 }
 

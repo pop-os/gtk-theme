@@ -12,7 +12,7 @@ list,
   
   row,
   .list-row {
-    padding: 0;
+    padding: 4px;
     transition: $standard_transition;
     border-color: transparent;
     
@@ -37,11 +37,16 @@ list,
       margin: 4px;
       padding: $tiny_padding_em;
       background-color: $bg_hl_color;
-      box-shadow: $shadow_0;
+      box-shadow: $shadow_1;
       
       &:hover {
         background-color: $bg_hl_color;
-        box-shadow: $shadow_1;
+        box-shadow: $shadow_2;
+        
+        &:active {
+          background-color: $dark_bg_color;
+          box-shadow: $shadow_0;
+        }
       }
       
       &.flat label
