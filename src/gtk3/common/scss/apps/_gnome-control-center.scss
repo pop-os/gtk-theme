@@ -6,8 +6,12 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-window.csd > box.horizontal > stack > box.vertical > widget > stack > overlay {
-  box.vertical > grid.horizontal > stack > button.toggle {
+window.csd > box.horizontal > stack > box.vertical > widget > stack { 
+  overlay > box.vertical > grid.horizontal > stack > button.toggle {
+    @include flat_button;
+  }
+  
+  viewport > grid.horizontal box row.activatable button.circular.image-button {
     @include flat_button;
   }
 }
