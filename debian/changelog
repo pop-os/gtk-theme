@@ -1,3 +1,9 @@
+pop-gtk-theme (3.99.1) bionic; urgency=medium
+
+  * New updated Alpha based on feedback from design
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 07 Aug 2018 10:35:23 -0600
+
 pop-gtk-theme (3.99.0) bionic; urgency=medium
 
   * New version of the theme - Alpha release
