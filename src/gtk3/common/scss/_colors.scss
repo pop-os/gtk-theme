@@ -212,7 +212,7 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 
 //this is really an API */
 @define-color content_view_bg #{'' + $base_color};
-@define-color placeholder_text_color #{'' + to400($fg_color)};
+@define-color placeholder_text_color #{'' + #999};
 
 $spice_slide_background: lighten($warm_grey_700, 5%);
 $spice_selected_slide_background: lighten($warm_grey_700, 7%);
