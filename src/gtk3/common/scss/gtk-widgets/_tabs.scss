@@ -57,7 +57,7 @@ notebook {
     }
   
     tab {
-      padding: $tiny_padding_em $small_padding_em;
+      padding: $tiny_padding $small_padding_em;
       transition: $standard_transition, font-weight 0ms linear, color 0ms linear;
       background-color: transparent;
       
@@ -69,6 +69,12 @@ notebook {
       
       &:hover {
         color: $dark_color_2;
+      }
+      
+      button {
+        @include flat_button;
+        margin: 0 0 0 $standard_padding;
+        padding: $mini_padding;
       }
     }
   }
