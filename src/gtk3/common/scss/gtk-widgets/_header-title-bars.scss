@@ -155,7 +155,7 @@ headerbar,
   button,
   .button {
     margin: $mini_padding 0;
-    background-color: transparent;
+    background-color: to100($titlebar_fg_color);
     color: $titlebar_fg_color;
     box-shadow: none;
     border-image: radial-gradient(
@@ -164,6 +164,7 @@ headerbar,
       transparent 0%) 0 0 0 / 0 0 0;
     
     &:disabled {
+      background-color: transparent;
       box-shadow: none;
     }
     
@@ -172,17 +173,17 @@ headerbar,
     }
     
     &:hover {
-      background-color: to100($titlebar_fg_color);
+      background-color: to200($titlebar_fg_color);
       color: $titlebar_fg_color;
       box-shadow: none;
     }
     
     &:active {
-      background-color: to200($titlebar_fg_color);
+      background-color: to400($titlebar_fg_color);
     }
     
     &:checked {
-      background-color: transparent;
+      background-color: to100($titlebar_fg_color);
       color: $titlebar_fg_color;
       border-image: radial-gradient(
         circle closest-corner at center calc(100% - 1px), 
@@ -190,7 +191,7 @@ headerbar,
         transparent 0%) 0 0 2 / 0 0 2px;
       
       &:hover {
-        background-color: to100($titlebar_fg_color);
+        background-color: to200($titlebar_fg_color);
       }
     }
   }
