@@ -195,6 +195,12 @@ headerbar,
       }
     }
   }
+  
+  .linked entry,
+  .linked button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 window > .titlebar,
