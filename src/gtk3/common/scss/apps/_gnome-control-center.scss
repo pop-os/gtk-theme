@@ -7,7 +7,7 @@
  */
 
 window.csd > box.horizontal > stack > box.vertical > widget > stack > overlay {
-  box.vertical > grid.horiztonal > stack > button.toggle {
+  box.vertical > grid.horizontal > stack > button.toggle {
     @include flat_button;
   }
 }
