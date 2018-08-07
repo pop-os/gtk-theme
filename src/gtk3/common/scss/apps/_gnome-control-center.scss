@@ -1,0 +1,13 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gnome-control-center.scss - App Overides for GNOME Control Center
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+window.csd > box.horizontal > stack > box.vertical > widget > stack > overlay {
+  box.vertical > grid.horiztonal > stack > button.toggle {
+    @include flat_button;
+  }
+}
