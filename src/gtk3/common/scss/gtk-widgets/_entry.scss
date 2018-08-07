@@ -87,9 +87,16 @@ spinbutton {
 }
 
 spinbutton {
-  button {
+  button.up,
+  button.down {
     @include flat_button;
     border-radius: $circular_radius;
+    color: $fg_color;
+    
+    &:hover,
+    &:active {
+      color: $fg_color;
+    }
     
     &:backdrop {
       color: to600($fg_color);
