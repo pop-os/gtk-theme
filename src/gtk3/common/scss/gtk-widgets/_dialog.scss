@@ -50,6 +50,10 @@ messagedialog {
       color: to800($fg_color);
       box-shadow: none;
       
+      &.destructive-action label {
+        color: $destructive_color;
+      }
+      
       &:focus {
         color: $dark_color_2;
       }
