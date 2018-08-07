@@ -85,6 +85,7 @@ button,
     margin: $mini_padding;
     padding: $tiny_padding_em;
     border-radius: $circular_radius;
+    -gtk-outline-radius: $circular_radius;
   }
   
   &.text-button {
