@@ -53,6 +53,15 @@ entry,
   .titlebar &:disabled {
     opacity: 0.6;
   }
+  
+  .linked > & {
+    margin: 0;
+  }
+  
+  .linked > & > image {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*
