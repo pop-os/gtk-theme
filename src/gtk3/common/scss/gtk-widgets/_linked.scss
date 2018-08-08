@@ -16,12 +16,19 @@
   > entry,
   > combobox .combo {
     @include flat;
-    border-radius: 0;
+    border-radius: $corner_radius;
+    border-image: none;
     
     &:checked {
       background-color: $color_theme_2;
       color: $inverse_fg_color;
       border-image: none;
+      
+      &:hover {
+        border-image: none;
+        background-color: $light_color_2;
+        color: $inverse_fg_color;
+      }
       
       &:backdrop {
         background-color: to400($color_theme_2);
@@ -34,25 +41,25 @@
   & {
     :first-child,
     > :first-child .combo {
-      border-radius: $corner_radius 0 0 $corner_radius;
+      border-radius: $corner_radius;
     }
     
     :last-child,
     > :last-child .combo {
-      border-radius: 0 $corner_radius $corner_radius 0;
+      border-radius: $corner_radius;
     }
   }
   
   &.vertical {
     :first-child,
     > :first-child .combo  {
-      border-radius: $corner_radius $corner_radius 0 0;
+      border-radius: $corner_radius;
       box-shadow: none;
     }
     
     :last-child,
     > :last-child .combo  {
-      border-radius: 0 0 $corner_radius $corner_radius;
+      border-radius: $corner_radius;
     }
   }
   
@@ -77,13 +84,15 @@
   }
 }
 
-//undo on stackswitcher buttons
-
-stackswitcher.linked.stack-switcher > button.radio:first-child,
-stackswitcher.linked.stack-switcher > button.radio:last-child,
-stackswitcher.linked.stack-switcher > button.radio:only-child,
-stackswitcher.linked.stack-switcher > button.radio {
-  border-radius: $corner_radius $corner_radius 0 0;
+//stackswitcher buttons
+stackswitcher > button.radio:hover {
+  @include underline(focus);
+  background-color: transparent;
+  
+  &:checked {
+    border-image: none;
+    background-color: $color_theme_2;
+  }
 }
 
 .titlebar .linked,
