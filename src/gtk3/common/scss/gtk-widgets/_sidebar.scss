@@ -17,11 +17,10 @@
   background-color: $base_color;
   color: $fg_color;
   
-  %row,
   row,
   .list-row,
   .sidebar-item,
-  .sidebar-row, {
+  .sidebar-row {
     margin: -1px;
     padding: $tinier_padding $standard_padding;
     transition: $fast_transition; //Standard looks a tiny bit janky
@@ -48,24 +47,6 @@
     
     button {
       @include flat_button;
-    }
-  }
-  
-  .cell {
-    @extend %row;
-    
-    &:selected {
-      background-color: $color_theme_1;
-      color: $inverse_fg_color;
-      
-      &:backdrop {
-        background-color: to600($color_theme_1);
-      }
-      
-      label,
-      image {
-        color: $inverse_fg_color;
-      }
     }
   }
   
