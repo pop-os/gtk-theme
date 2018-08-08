@@ -17,11 +17,6 @@ popover.osd,
   image,
   label {
     padding: $tiny_padding_em;
-    color: $fg_color;
-    
-    &:disabled {
-      color: to600($fg_color);
-    }
   }
   
   .view {
