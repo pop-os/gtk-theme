@@ -53,6 +53,36 @@ levelbar block.empty {
   }
 }
 
+
+treeview.trough,
+treeview.progressbar {
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+  box-shadow: none;
+  
+  &:backdrop,
+  &:backdrop:selected {
+    background-color: transparent;
+  }
+}
+
+treeview.progressbar {
+  border-bottom-color: $color_theme_1;
+  
+  &:selected {
+    border-bottom-color: $inverse_fg_color;
+  }
+}
+
+treeview.trough {
+  border-bottom-color: to200($fg_color);
+  
+  &:selected {
+    border-bottom-color: to400($inverse_fg_color);
+  }
+}
+
 levelbar {
   block {
     @extend %progress;
