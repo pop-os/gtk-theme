@@ -10,9 +10,4 @@ textview,
 textview text {
   background-color: $base_color;
   color: $fg_color;
-  
-  &.view,
-  &.view text{
-    background-color: $bg_color;
-  }
 }
