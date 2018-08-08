@@ -68,9 +68,13 @@
     border-radius: $corner_radius;
   }
   
-  entry + button {
+  entry,
+  entry + button,
+  entry + button + button,
+  entry + button + button + button {
     @extend %entry;
-    padding: $tinier_padding;
+    @include underline(normal); 
+    padding: $tiny_padding_em;
     background-color: $bg_hl_color;
   }
   
