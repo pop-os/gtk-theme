@@ -110,11 +110,17 @@ radiobutton {
   margin: $tiny_padding_em;
   outline-offset: 4px;
   
-  label:dir(ltr) {
-    margin-left: $tiny_padding_em;
-  }
-  
-  label:dir(rtl) {
-    margin-right: $tiny_padding_em;
+  label {
+    &:disabled {
+      color: to600($fg_color);
+    }
+    
+    &:dir(ltr) {
+      margin-left: $tiny_padding_em;
+    }
+    
+    &:dir(rtl) {
+      margin-right: $tiny_padding_em;
+    }
   }
 }
