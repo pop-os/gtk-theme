@@ -194,6 +194,10 @@ headerbar,
         background-color: to200($titlebar_fg_color);
       }
     }
+    
+    &.flat:checked {
+      color: $titlebar_fg_color;
+    }
   }
   
   .linked entry,
