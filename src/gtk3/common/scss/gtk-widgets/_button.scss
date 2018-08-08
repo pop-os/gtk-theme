@@ -221,11 +221,13 @@ button,
   }
   
   &:checked {
+    @include underline(focus);
     background-color: transparent;
     color: $fg_color;
   }
   
-  &.text-button {
+  &.text-button,
+  &.toggle {
     padding: $tiny_padding_em;
     padding-right: $standard_padding_em;
     padding-left: $tiny_padding_em;
@@ -239,6 +241,10 @@ button,
       padding-right: $tiny_padding_em;
       padding-left: $standard_padding_em;
       background-position: 0% 50%;
+    }
+    
+    image {
+      padding: $mini_padding;
     }
   }
 }
