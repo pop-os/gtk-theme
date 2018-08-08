@@ -1,0 +1,14 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _overshoot.scss - Overscroll highlight bounce color effect
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+overshoot.top,
+overshoot.bottom,
+overshoot.left,
+overshoot.right, {
+  background-color: to100($fg_color);
+}
