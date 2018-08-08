@@ -14,8 +14,8 @@
   background-color: transparent;
   background-image: -gtk-icontheme('go-previous-symbolic');
   background-repeat: no-repeat no-repeat;
-  background-position: 10% 50%;
-  background-size: $small_size;
+  background-position: 5px 50%;
+  background-size: 21px;
   
   .titlebar & {
     @include flat_button;
