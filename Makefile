@@ -39,6 +39,11 @@ gtk2_lib := $(gtk2_src)/apps.rc $(gtk2_src)/hacks.rc $(gtk2_src)/main.rc $(gtk2_
 gtk2_control_task = mv -t $(gtk2_output)
 gtk2_lib_task = cp -t $(gtk2_output)
 
+# Plank Options
+plank_src = $(SRC_DIR)/plank
+plank_file = $(plank_src)/dock.theme
+plank_dir = plank
+
 all: $(gtk3_versions) gtk3 gtk2
 	@echo "** Built the $(theme_name) GTK theme!"
 
@@ -116,7 +121,11 @@ install-gtk2:
 	$(foreach dark,$(dark_variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/ $(gtk2_output)/*.rc;)
 	$(foreach dark,$(dark_variants),install  $(gtk2_output)/gtkrc-dark $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(dark)/gtk-2.0/gtkrc;)
 
-install: install-gtk3 install-gtk2
+install-plank:
+	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/$(plank_dir);)
+	$(foreach type,$(variants),install -t $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type)/$(plank_dir) $(plank_file);)
+
+install: install-gtk3 install-gtk2 install-plank
 
 debug:
 	$(foreach type,$(variants),echo "** variant: $(theme_name)$(type)";)
