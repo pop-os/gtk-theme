@@ -111,6 +111,8 @@ radiobutton {
   outline-offset: 4px;
   
   label {
+    color: $fg_color;
+    
     &:disabled {
       color: to600($fg_color);
     }
@@ -121,6 +123,14 @@ radiobutton {
     
     &:dir(rtl) {
       margin-right: $tiny_padding_em;
+    }
+    
+    &:backdrop {
+      color: to600($fg_color);
+      
+      &:disabled {
+        color: to400($fg_color);
+      }
     }
   }
 }

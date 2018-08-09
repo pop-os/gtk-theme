@@ -25,6 +25,10 @@ switch {
     box-shadow: none;
     opacity: 0.7;
   }
+  
+  &:backdrop {
+    background-color: to200($fg_color);
+  }
 
   &:checked {
     background-color: $color_theme_2;

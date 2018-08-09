@@ -96,6 +96,7 @@ stackswitcher > button.radio:hover {
   &:checked {
     border-image: none;
     background-color: $color_theme_2;
+    color: $inverse_fg_color;
   }
 }
 
