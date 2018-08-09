@@ -57,7 +57,7 @@ notebook {
     }
   
     tab {
-      padding: $tiny_padding $small_padding_em;
+      padding: $tiny_padding $mini_padding;
       transition: $standard_transition, font-weight 0ms linear, color 0ms linear;
       background-color: transparent;
       
@@ -71,10 +71,22 @@ notebook {
         color: $dark_color_2;
       }
       
+      label {
+        padding: 0 $standard_padding_em;
+      }
+      
+      image {
+        padding: 0 $small_padding;
+      }
+      
       button {
         @include flat_button;
-        margin: 0 0 0 $standard_padding;
+        margin: 0;
         padding: $mini_padding;
+        
+        image {
+          padding: 0;
+        }
       }
     }
   }
