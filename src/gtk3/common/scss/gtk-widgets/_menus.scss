@@ -13,12 +13,13 @@ window.popup {
   padding: $tinier_padding;
   border-radius: $corner_radius;
   background-color: $bg_color;
-  box-shadow: $shadow_2;
 
   &.button {
     background-image: none;
   }
 }
+
+
 
 menubar,
 .menubar {
