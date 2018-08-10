@@ -68,7 +68,9 @@ entry,
  * Spin Buttons
  */
 
-spinbutton {
+%spinbutton,
+spinbutton,
+.linked spinbutton {
   &.horizontal {
     @extend %entry;
     
@@ -93,9 +95,7 @@ spinbutton {
       }
     }
   }
-}
 
-spinbutton {
   button.up,
   button.down {
     @include flat_button;

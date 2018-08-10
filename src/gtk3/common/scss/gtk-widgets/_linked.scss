@@ -37,41 +37,8 @@
     }
   }
   
-  //&.horizontal,
-  & {
-    :first-child,
-    > :first-child .combo {
-      border-radius: $corner_radius;
-    }
-    
-    :last-child,
-    > :last-child .combo {
-      border-radius: $corner_radius;
-    }
-  }
-  
-  &.vertical {
-    :first-child,
-    > :first-child .combo  {
-      border-radius: $corner_radius;
-      box-shadow: none;
-    }
-    
-    :last-child,
-    > :last-child .combo  {
-      border-radius: $corner_radius;
-    }
-  }
-  
-  :only-child,
-  > :only-child .combo  {
-    border-radius: $corner_radius;
-  }
-  
   entry,
-  entry + button,
-  entry + button + button,
-  entry + button + button + button {
+  entry ~ button, {
     @extend %entry;
     @include underline(normal); 
     padding: $tiny_padding_em;
