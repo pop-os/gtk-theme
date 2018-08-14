@@ -45,6 +45,10 @@
     background-color: $bg_hl_color;
   }
   
+  spinbutton entry ~ button:disabled {
+      border-image: none;
+    }
+  
   // weird issue with linked spinbuttons
   & > spinbutton button,
   & > spinbutton button:focus,
