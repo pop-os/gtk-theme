@@ -1,3 +1,9 @@
+pop-gtk-theme (3.99.3) UNRELEASED; urgency=medium
+
+  * New release of the theme for 4.0.0-b3
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 14 Aug 2018 09:32:54 -0600
+
 pop-gtk-theme (3.99.2) bionic; urgency=medium
 
   * Beta 2 for version 4 of Pop_GTK
