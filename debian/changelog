@@ -1,3 +1,9 @@
+pop-gtk-theme (3.1.2cosmic0) cosmic; urgency=medium
+
+  * Cosmic release
+
+ -- Jeremy Soller <jeremy@system76.com>  Wed, 15 Aug 2018 08:09:55 -0600
+
 pop-gtk-theme (3.1.2) bionic; urgency=medium
 
   * Fix listing of theme in GTK Inspector.
