@@ -1,0 +1,48 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _pathbar.scss - Pathbar widgets
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.path-bar button,
+#pathbarbox button {
+  
+  &:disabled {
+    box-shadow: none;
+  }
+  
+  &:checked {
+    @include underline(focus);
+    background-color: transparent;
+    color: $fg_color;
+  }
+  
+  &.text-button,
+  &.toggle {
+    padding: $tiny_padding_em;
+    padding-right: $standard_padding_em;
+    padding-left: $tiny_padding_em;
+    border-radius: $corner_radius;
+    background-image: url('assets/pathbar-separator.svg');
+    background-repeat: no-repeat no-repeat;
+    background-position: 100% 50%;
+    background-size: 12px;
+    
+    &:dir(rtl) {
+      padding-right: $tiny_padding_em;
+      padding-left: $standard_padding_em;
+      background-position: 0% 50%;
+    }
+    
+    image {
+      padding: $mini_padding;
+    }
+  }
+  
+  &.popup {
+    padding: $tiny_padding;
+    background-image: none;
+  }
+}
