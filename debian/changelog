@@ -1,8 +1,15 @@
-pop-gtk-theme (3.99.3) UNRELEASED; urgency=medium
+pop-gtk-theme (3.99.4) UNRELEASED; urgency=medium
+
+  * Fix packaging issue in Cosmic
+  * Remove errant pathbar seperator from new folder button
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 21 Aug 2018 10:47:26 -0600
+
+pop-gtk-theme (3.99.3) bionic; urgency=medium
 
   * New release of the theme for 4.0.0-b3
 
- -- Ian Santopietro <ian@system76.com>  Tue, 14 Aug 2018 09:32:54 -0600
+ -- Ian Santopietro <ian@system76.com>  Tue, 21 Aug 2018 10:47:22 -0600
 
 pop-gtk-theme (3.99.2) bionic; urgency=medium
 
