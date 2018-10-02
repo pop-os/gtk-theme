@@ -1,3 +1,37 @@
+pop-gtk-theme (4.0.0) bionic; urgency=medium
+
+  * Theme rewritten from scratch
+  * Redesigned widgets:
+  *     Switches
+  *     Buttons
+  *     Tabs/Notebooks
+  *     Stack Switchers
+  *     Linked Widgets
+  *     Toolbars
+  *     Separators
+  *     Scrollbars
+  *     Tree Views
+  *     Headerbars
+  *     Frames
+  *     InfoBars
+  *     Flat buttons
+  *     Rounded and image buttons
+  * New Granite widgets
+  *     Accent classes
+  *     Card stacks
+  *     Mode-Switches
+  *     Nice Scales
+  *     Rounded-Windows
+  *     Avatars
+  * All widgets have received new implementations
+  * Reworked, cleaner build system
+  * More modular theme structure
+  * Greatly reduced number of assets
+  * Large reduction in total size of CSS
+  * Various bug fixes and improvements
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 02 Oct 2018 12:13:56 -0600
+
 pop-gtk-theme (3.99.4) bionic; urgency=medium
 
   * Fix packaging issue in Cosmic

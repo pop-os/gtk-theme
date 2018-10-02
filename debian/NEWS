@@ -1,0 +1,17 @@
+pop-gtk-theme (4.0.0) bionic; urgency=medium
+
+    This version includes an all-new version of the Pop!_GTK theme. After a lot
+    of hard work, the theme SCSS has been completely re-written from the ground-
+    up with all new implementations and styling for widgets. This has combined
+    to make Pop!_GTK one of the smallest complete GTK Stylesheets the authors
+    can find, which will keep the loading times and RAM usage low. It has also
+    reduced the number of required assets to just four files, which minimizes
+    installation time and package size, and greatly eases maintainence.
+
+    The new version also includes a completely re-worked build system which
+    also greatly eases maintainence of the theme for developers. This includes
+    usage of native MAKE build formats that make the installation faster and
+    more reliable.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 02 Oct 2018 12:13:56 -0600
+ 
