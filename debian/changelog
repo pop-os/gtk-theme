@@ -63,6 +63,25 @@ pop-gtk-theme (3.99.0) bionic; urgency=medium
 
  -- Ian Santopietro <ian@system76.com>  Fri, 13 Jul 2018 12:49:02 -0600
 
+pop-gtk-theme (3.1.2cosmic0) cosmic; urgency=medium
+
+  * Cosmic release
+
+ -- Jeremy Soller <jeremy@system76.com>  Wed, 15 Aug 2018 08:09:55 -0600
+
+pop-gtk-theme (3.1.2) bionic; urgency=medium
+
+  * Fix listing of theme in GTK Inspector.
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 25 May 2018 11:52:27 -0600
+
+pop-gtk-theme (3.1.1) bionic; urgency=medium
+
+  * Corrects an Eye of GNOME issue where the zoom-in button was weird.
+  * Corrects an Eye of GNOME issue where the text in the entry could be cut off.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 07 May 2018 11:08:48 -0600
+
 pop-gtk-theme (3.1.1) bionic; urgency=medium
 
   * Embedded Terminal styling
