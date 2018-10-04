@@ -4,8 +4,9 @@
 #  cause issues down the line.
 
 for variant in '' '-dark' '-light' '-slim' '-dark-slim' '-light-slim'; do
-    assets="/usr/share/themes/Pop$variant/gtk-$version/assets"
-    if [ -L "$assets" ]; then
-        unlink "$assets"
-    fi
+    for version in '3.20' '3.22'
+        assets="/usr/share/themes/Pop$variant/gtk-$version/assets"
+        if [ -L "$assets" ]; then
+            unlink "$assets"
+        fi
 done
