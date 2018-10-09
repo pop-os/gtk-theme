@@ -42,8 +42,9 @@ menubar,
       color: if($color == 'light', $dark_color_2, $light_color_2);
     }
   }
-
-  window > box > &:first-child {
+  window > &,
+  window > box > &:first-child,
+  terminal-window > box > &:first-child {
     padding: 0;
     border: 0 solid $titlebar_hl_color;
     border-width: 0 $border_size;
