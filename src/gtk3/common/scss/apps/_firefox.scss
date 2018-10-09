@@ -123,3 +123,8 @@ window.background:not(.csd) {
     color: to400($inverse_fg_color);
   }
 }
+
+// Tab titles and backgrounds
+#MozillaGtkWidget menubar menuitem {
+  color: $titlebar_fg_color;
+}
