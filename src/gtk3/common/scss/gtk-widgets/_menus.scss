@@ -23,45 +23,67 @@ window.popup {
 
 menubar,
 .menubar {
-  padding: 0;
-  border: 0 solid $titlebar_hl_color;
-  border-width: 0 $border_size;
-  background-color: $titlebar_bg_color;
-  color: $titlebar_fg_color;
-  -GtkWidget-window-dragging: true;
-  
-  .maximized &,
-  .fullscreen &,
-  .tiled &,
-  .tiled-left &,
-  .tiled-right &,
-  .tiled-top &,
-  .tiled-bottom & {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  
-  &:backdrop {
-    border-color: lighten($titlebar_hl_color, 5%);
-    background-color: lighten($titlebar_bg_color, 5%);
-  }
+  background-color: $darker_bg_color;
   
   > menuitem {
     transition: $standard_transition;
     border: $line_size solid transparent;
-    color: to800($titlebar_fg_color);
+    color: $fg_color;
     
     &:hover {
       border-bottom-color: $color_theme_2;
       background-color: transparent;
-      color: if($titlebar == 'light', $dark_color_2, $light_color_2);
+      color: if($color == 'light', $dark_color_2, $light_color_2);
     }
     
     &:active {
       border-bottom-color: $color_theme_2;
-      background-color: transparent;
-      color: if($titlebar == 'light', $dark_color_2, $light_color_2);
+      background-color: $bg_color;
+      color: if($color == 'light', $dark_color_2, $light_color_2);
+    }
+  }
+
+  window > box > &:first-child {
+    padding: 0;
+    border: 0 solid $titlebar_hl_color;
+    border-width: 0 $border_size;
+    background-color: $titlebar_bg_color;
+    color: $titlebar_fg_color;
+    -GtkWidget-window-dragging: true;
+    
+    .maximized &,
+    .fullscreen &,
+    .tiled &,
+    .tiled-left &,
+    .tiled-right &,
+    .tiled-top &,
+    .tiled-bottom & {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    
+    &:backdrop {
+      border-color: lighten($titlebar_hl_color, 5%);
+      background-color: lighten($titlebar_bg_color, 5%);
+    }
+    
+    > menuitem {
+      transition: $standard_transition;
+      border: $line_size solid transparent;
+      color: to800($titlebar_fg_color);
+      
+      &:hover {
+        border-bottom-color: $color_theme_2;
+        background-color: transparent;
+        color: if($titlebar == 'light', $dark_color_2, $light_color_2);
+      }
+      
+      &:active {
+        border-bottom-color: $color_theme_2;
+        background-color: transparent;
+        color: if($titlebar == 'light', $dark_color_2, $light_color_2);
+      }
     }
   }
 
@@ -87,6 +109,10 @@ modelbutton, {
   
   :disabled {
     color: to600($fg_color);
+  }
+  
+  accelerator {
+    color: to400($fg_color);
   }
   
   arrow {
