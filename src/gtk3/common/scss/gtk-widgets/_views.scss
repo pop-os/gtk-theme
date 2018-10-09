@@ -91,3 +91,9 @@ viewport.frame {
   border: 0 solid to100($fg_color);
   border-image-width: 0;
 }
+
+// Seems to be required for LibreOffice 
+.view {
+  background-color: $base_color;
+  color: $fg_color;
+}
