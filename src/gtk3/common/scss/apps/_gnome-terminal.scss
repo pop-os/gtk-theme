@@ -20,7 +20,7 @@ terminal-window > box {
     border: $border_size solid lighten($titlebar_bg_color, 5%);
   }
   
-  menubar {
+  menubar:first-child {
     border: none;
   }
 }
