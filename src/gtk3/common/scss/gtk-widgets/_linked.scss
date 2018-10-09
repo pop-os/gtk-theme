@@ -25,9 +25,9 @@
       border-image: none;
       
       &:hover {
-        border-image: none;
         background-color: $light_color_2;
         color: $inverse_fg_color;
+        border-image: none;
       }
       
       &:backdrop {
@@ -46,8 +46,8 @@
   }
   
   spinbutton entry ~ button:disabled {
-      border-image: none;
-    }
+    border-image: none;
+  }
   
   // weird issue with linked spinbuttons
   & > spinbutton button,
@@ -65,9 +65,9 @@ stackswitcher > button.radio:hover {
   background-color: transparent;
   
   &:checked {
-    border-image: none;
     background-color: $color_theme_2;
     color: $inverse_fg_color;
+    border-image: none;
   }
 }
 

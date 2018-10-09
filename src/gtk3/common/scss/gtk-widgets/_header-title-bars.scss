@@ -227,10 +227,10 @@ tooltip decoration {
 .window-frame.ssd {
   margin: 0;
   border-radius: $corner_radius;
-  box-shadow: $shadow_0
+  box-shadow: $shadow_0;
 }
 
 .ssd decoration { 
   margin: 8px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 3px rgba($black, 0.16);
 }
