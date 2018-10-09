@@ -45,6 +45,12 @@
       }
     }
     
+    &:drop(active),
+    &.sidebar-new-bookmark-row {
+      border: $border_size solid $color_theme_2;
+      color: $dark_color_2;
+    }
+
     button {
       @include flat_button;
     }
