@@ -63,6 +63,25 @@ text:selected {
       //background-image: $light_ui_700;
       background-image: $dark_fg_color;
     }
+    
+    &.close {
+      margin: $small_padding 0;
+      padding: 4px;
+      border-radius: $circular_radius;
+      background-color: $close_button_color;
+      
+      &:backdrop {
+        background-color: to200($titlebar_fg_color);
+      }
+      
+      &:hover {
+        background-color: mix($close_button_color, $obverse_bg_color, 80%);
+      }
+      
+      &:active {
+        background-color: mix($close_button_color, $obverse_bg_color, 60%);
+      }
+    }
   }
   
   // for the bookmark toolbar's separators
