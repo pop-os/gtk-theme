@@ -78,6 +78,11 @@ button,
     @include flat_button;
   }
   
+  &.text-button {
+    padding: $tiny_padding_em $large_padding_em;
+    border-radius: $corner_radius;
+  }
+  
   &.round,
   &.circular {
     min-width: $medium_size;
@@ -86,11 +91,6 @@ button,
     padding: $tiny_padding_em;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
-  }
-  
-  &.text-button {
-    padding: $tiny_padding_em $large_padding_em;
-    border-radius: $corner_radius;
   }
   
   stackswitcher & {
