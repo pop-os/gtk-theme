@@ -56,12 +56,12 @@ text:selected {
 
     &:hover { 
       //background-image: $light_ui_700;
-      background-image: $dark_fg_color;
+      background-color: $dark_fg_color;
     }
 
     &:active {
       //background-image: $light_ui_700;
-      background-image: $dark_fg_color;
+      background-color: $dark_fg_color;
     }
     
     &.close {
