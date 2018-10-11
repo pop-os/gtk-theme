@@ -12,119 +12,98 @@
 
 $firefox_border_color: to200($black);
 
-window.background:not(.csd) {
-  > widget {
-    // for the bookmark toolbar's separators
-    > separator { 
-      color: $firefox_border_color; 
-    }
-
-    // avoid black border
-    > scrollbar { 
-      min-width: $scrollbar_size;
-      min-height: $scrollbar_size;
-      background-clip: border-box;
-    }
-
-    // emphasize borders color
-    > scrollbar,
-    > frame > border { 
-      border-color: $firefox_border_color;
-    }
-
-    > entry,
-    > button > button {
-      border: 1px solid $firefox_border_color;
-      border-radius: $corner_radius;
-      box-shadow: none;
-    }
-
-    > entry {
-      min-height: 32px - 6px;
-
-      &:focus { 
-        border-color: $color_theme_2;
-      }
-    }
-
-    > button > button {
-      padding: 4px 8px;
-      background-size: auto;
-      color: $fg_color;
-
-      &:hover { 
-        background-image: image($dark_bg_color);
-      }
-
-      &:active {
-        background-image: image($dark_bg_color);
-      }
-    }
-
-    // use 16px assets for hard-coded sizing
-    > checkbutton > check {
-      @extend %checkradio;
-      border-radius: $corner_radius;
-    }
-
-    > radiobutton > radio {
-      @extend %checkradio;
-      border-radius: $circular_radius;
-    }
-  }
-
-  // remove ugly border around the menus
-  > window > menu,
-  > menu > menu { 
-    border: none;
-  }
-  button label {
-    color: to800($fg_color);
-  }
-}
-
 // Firefox now uses this for selected items
 text:selected { 
   @extend %selected-items;
 }
 
-// for backwards compatibility
-window.background:not(.csd) {
-  > widget {
-    > menubar {
-      color: to600($titlebar_fg_color);
-      
-      label,
-      image {
-        color: to600($titlebar_fg_color);
-      }
+#MozillaGtkWidget { 
+  entry,
+  button,
+  button > button {
+    border: 1px solid $firefox_border_color;
+    border-radius: $corner_radius;
+    //background-color: $light_ui_300;
+    //color: $obverse_fg_color;
+    box-shadow: none;
+    
+    //> label {
+    //  color: $fg_color;
+    //}
+    
+    //window > & {
+    //  background-color: $bg_color;
+    //  color: $fg_color;
+    //  
+    //  > label {
+    //    color: $fg_color;
+    //  }
+    //}
+  }
 
-      &:hover {
-        color: $titlebar_fg_color;
-      }
+  entry {
+    min-height: 32px - 6px;
 
-      &:disabled {
-        color: to400($titlebar_fg_color);
-      }
-    }
-
-    > frame {
-      color: $firefox_border_color;
-    }
-
-    > checkbutton > check,
-    > radiobutton > radio {
-      margin: 0;
-      padding: 0;
+    &:focus { 
+      border-color: $color_theme_2;
     }
   }
 
-  > window.background > menu > separator {
-    color: to400($inverse_fg_color);
-  }
-}
+  button,
+  button > button {
+    padding: 4px 8px;
+    background-size: auto;
 
-// Tab titles and backgrounds
-#MozillaGtkWidget menubar menuitem {
-  color: $titlebar_fg_color;
+    &:hover { 
+      //background-image: $light_ui_700;
+      background-image: $dark_fg_color;
+    }
+
+    &:active {
+      //background-image: $light_ui_700;
+      background-image: $dark_fg_color;
+    }
+  }
+  
+  // for the bookmark toolbar's separators
+  > separator { 
+    color: $firefox_border_color; 
+  }
+
+  // avoid black border
+  > scrollbar { 
+    min-width: $scrollbar_size;
+    min-height: $scrollbar_size;
+    background-clip: border-box;
+  }
+
+  // emphasize borders color
+  > scrollbar,
+  > frame > border { 
+    border-color: $firefox_border_color;
+  }  
+  check,
+  radio {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px to800($obverse_fg_color);
+    
+    &:checked {
+      background-color: $color_theme_2;
+      box-shadow: inset 0 0 0 2px $color_theme_2;
+    }
+  }
+  
+  menubar {
+    background-color: $titlebar_bg_color;
+    
+    menuitem {
+      color: $titlebar_fg_color;
+    }
+  }
+  
+  // remove ugly border around the menus
+  > window > menu,
+  > menu > menu { 
+    border: none;
+  }
 }
