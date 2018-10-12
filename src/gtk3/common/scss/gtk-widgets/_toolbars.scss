@@ -1,0 +1,57 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_toolbars.scss - Toolbars and Action bars
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+toolbar,
+.toolbar {
+  padding: $tinier_padding;
+  background-color: $dark_bg_color;
+  color: $dark_fg_color;
+  box-shadow: inset 0 0 0 $border_size $darker_bg_color;
+  
+  &:backdrop {
+    color: to600($dark_fg_color);
+  }
+}
+
+actionbar,
+.secondary-toolbar,
+.bottom-toolbar,
+.inline-toolbar {
+  padding: $tinier_padding;
+  background-color: $dark_bg_color;
+  color: $dark_fg_color;
+  box-shadow: none;
+  
+  label,
+  image {
+    color: $dark_fg_color;
+    
+    &:backdrop {
+      color: to600($dark_fg_color);
+    }
+  }
+  
+  &:backdrop {
+    color: to600($dark_fg_color);
+  }
+  
+  button {
+    @include flat_button;
+    padding: $tiny_padding;
+  }
+}
+
+searchbar,
+.location-bar,
+.search-bar {
+  border-radius: $corner_radius $corner_radius 0 0;
+  border-color: transparent;
+  background-color: $bg_emp_color;
+  box-shadow: inset 0 -1 * $border_size 0 0 to100($fg_color);
+}
+

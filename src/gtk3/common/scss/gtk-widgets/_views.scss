@@ -1,0 +1,99 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_views.scss - Treeview, Listview, Iconview
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.cell:selected {
+  background-color: $color_theme_1;
+  color: $inverse_fg_color;
+  
+  &:backdrop {
+    background-color: to600($color_theme_1);
+  }
+}
+
+treeview {
+  border-radius: 0;
+  background-color: $base_color;
+  -GtkTreeView-vertical-separator: $tinier_padding;
+  -GtkTreeView-horizontal-separator: $tinier_padding;
+  -GtkTreeView-expander-size: 16;
+  -GtkTreeView-grid-line-pattern: '\000\000';
+
+  
+  row:nth-child(odd) {
+    background-color: to100($color_theme_1);
+  }
+  
+  row:nth-child(even) {
+    background-color: $base_color;
+  }
+  
+  entry {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+  
+  header button {
+    border: 0 solid to200($fg_color);
+    border-right-width: $border_size;
+    border-bottom-width: $border_size;
+    border-radius: 0;
+    background-color: $dark_bg_color;
+    box-shadow: none;
+    
+    &:first-child {
+      border-left-width: $border_size;
+      border-top-left-radius: $corner_radius;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $corner_radius;
+    }
+    
+    &:active,
+    &:hover,
+    &:checked {
+      box-shadow: none;
+    }
+    
+    &:disabled {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
+    
+  check {
+    border-radius: $corner_radius;
+  }
+  
+  radio {
+    border-radius: $circular_radius;
+  }
+  
+  &:selected check,
+  &:selected radio {
+    box-shadow: inset 0 0 0 2px $inverse_fg_color;
+  }
+}
+
+scrolledwindow {
+  border: 0 solid to100($fg_color);
+}
+
+viewport, 
+viewport.frame {
+  border: 0 solid to100($fg_color);
+  border-image-width: 0;
+}
+
+// Seems to be required for LibreOffice 
+.view {
+  background-color: $base_color;
+  color: $fg_color;
+}

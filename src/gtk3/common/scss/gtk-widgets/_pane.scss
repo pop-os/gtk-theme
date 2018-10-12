@@ -1,0 +1,26 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_pane.scss - Paned widgets
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+paned {
+  background-color: $base_color;
+  
+  > separator {
+    min-width: $line_size;
+    min-height: $line_size;
+    margin: 0;
+    background-color: to50($fg_hl_color);
+  }
+  
+  &.horizontal separator {
+    margin: $tiny_padding 0;
+  }
+  
+  &.vertical separator {
+    margin: 0 $tiny_padding;
+  }
+}

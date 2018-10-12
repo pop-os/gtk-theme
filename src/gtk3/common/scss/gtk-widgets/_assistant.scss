@@ -1,0 +1,18 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_assistant.scss - GtkAssistant
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.sidebar {
+  padding: 0;
+  background-color: $base_color;
+  color: to600($fg_color);
+  
+  .highlight {
+    color: $fg_color;
+    font-weight: 600;
+  }
+}

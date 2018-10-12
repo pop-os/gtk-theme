@@ -1,0 +1,43 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_calendar.scss - Calendar
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+calendar {
+  padding: $mini_padding;
+  border: $border_size solid to100($fg_color);
+  background-color: $base_color;
+  color: $fg_color;
+
+  &:disabled { 
+    color: to600($fg_color);
+  }
+
+  &:selected {
+    border-radius: $corner_radius;
+    background-color: $color_theme_1;
+    color: $inverse_fg_color;
+  }
+
+  &.header {
+    border: 0 solid to100($fg_color);
+    border-bottom-width: $border_size;
+    border-radius: 0;
+  }
+
+  &.button { 
+    @include flat_button;
+  }
+
+  &.highlight {
+    color: $fg_hl_color;
+    font-weight: 500;
+  }
+
+  &:indeterminate { 
+    color: to400($fg_color);
+  }
+}

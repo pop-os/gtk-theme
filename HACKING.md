@@ -1,19 +1,19 @@
 ## Summary
 
-- Do not edit the CSS directly, edit the source SCSS files and run `make sass`
+- Do not edit the CSS directly, edit the source SCSS files and run `make gtk3`
 - To be able to use the latest/adequate version of Sass, install `sassc`
 - To change the SVG assets color, use the recoloring script, and do not edit the
   svg.in files.
 
 ## How to tweak the theme
 
-Like the upstream Adwaita, this theme is written and processed in Sass.
+This theme is written and processed in Sass.
 
 You can read about Sass at http://sass-lang.com/documentation/. Once you make
 your changes to the SCSS files, run the `./parse-sass.sh` script to rebuild the
 CSS files.
 
-Here's a rundown of the _supporting_ stylesheets:
+Here's a rundown of the stylesheets:
 
 - `_variables.scss`
 
@@ -29,25 +29,19 @@ Here's a rundown of the _supporting_ stylesheets:
   global color definitions. We keep the number of defined colors to a necessary
   minimum. It covers both the light variant and the dark variant.
 
-- `_colors-public.scss`
+- `./gtk-widgets/`
+  
+  Provides the base theming for different GTK Widgets.
 
-  SCSS colors exported through gtk to allow for 3rd party apps color mixing.
+- `./granite-widgets/`
+  
+  Provides special theming for any supported Granite widgets.
 
-- `_drawing.scss`
+- `./apps/`
+  
+  Any application-specific styling or style overrides
 
-  drawing helper mixings/functions to allow easier definition of widget drawing
-  under specific context.
-
-- `_common.scss`
-
-  actual definitions of style for each widget. This is where you are likely to
-  add/remove your changes.
-
-- `_apps.scss` or `_extensions.scss`
-
-  app/extension specific stylings.
-
-## How to change the assets
+## How to change the GTK2 assets
 
 The svg.in source files are converted to SVG by the `recolor-assets.sh` script,
 and then are rendered out to PNG files when the theme is built from
@@ -60,10 +54,6 @@ Before rendering or building, all assets are color matched according to the
 is the correct place to do it. It's also good for basic stlye changes, like 
 changing the border radius. 
 
-There is a recolor script for Gtk3, Gtk2, and xfwm. You'll need to edit all 
-three (or at least all of them you want to be updated). This is planned to be 
-consolidated in the near future.
-
 If you want to modify the look/style of the assets, you can open them in 
 inkscape or another vector graphics editor and modify them there. You may need 
 to remove the `.in` extension from the end of the filename first. Be sure that 
@@ -73,7 +63,7 @@ theme.
 
 ## Useful Links
 
-#### Upstream theme sources
+#### GTK3 theme sources
 
 - [GTK+ 4.0](https://github.com/GNOME/gtk/tree/master/gtk/theme/Adwaita)
   - [3.22](https://github.com/GNOME/gtk/tree/gtk-3-22/gtk/theme/Adwaita)
@@ -86,6 +76,4 @@ theme.
 #### Tips
 
 - [Unity/Theming](https://wiki.ubuntu.com/Unity/Theming)
-- [Material Design Guidelines](https://www.material.io/guidelines/)
-- [Personal CSS Guidelines](https://github.com/nana-4/materia-theme/wiki/CSS-Guidelines)
 - [The GTK+ Inspector](https://blog.gtk.org/2017/04/05/the-gtk-inspector/)

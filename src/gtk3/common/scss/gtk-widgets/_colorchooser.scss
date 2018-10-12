@@ -1,0 +1,40 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_colorchooser.scss - Color Picker dialog
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+colorchooser {
+  colorswatch {
+    margin: $no_padding $mini_padding;
+    border-radius: $corner_radius;
+    background: none;
+    box-shadow: $shadow_1;
+    
+    &.dark overlay {
+      color: $inverse_fg_color;
+    }
+    
+    &.light overlay {
+      color: $obverse_fg_color;
+    }
+    
+    overlay {
+      &,
+      &:selected,
+      &:selected:focus {
+        background: none;
+      }
+    }
+    
+    &#add-color-button {
+      @extend %button;
+    }
+  }
+}
+
+scale.color slider {
+  background-color: $fg_color; 
+}

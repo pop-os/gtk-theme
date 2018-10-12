@@ -1,0 +1,138 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_list.scss - Lists / Listview / List Box
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+list,
+.list {
+  background-color: $base_color;
+  
+  row,
+  .list-row {
+    padding: 4px;
+    transition: $standard_transition;
+    border-color: transparent;
+    
+    > label {
+      // sass-lint:disable-block indentation 
+      margin: 
+        $mini_padding_em $large_padding_em $mini_padding_em $tiny_padding_em;
+      color: $fg_color;
+    }
+    
+    &:hover {
+      background-color: $dark_bg_color;
+    }
+    
+    .linked {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    
+    button,
+    .linked button {
+      margin: 4px;
+      padding: $tiny_padding_em;
+      background-color: $bg_hl_color;
+      box-shadow: $shadow_1;
+      
+      &:hover {
+        background-color: $bg_hl_color;
+        box-shadow: $shadow_2;
+        
+        &:active {
+          background-color: $dark_bg_color;
+          box-shadow: $shadow_0;
+        }
+      }
+      
+      &.flat label
+      &.flat image {
+        color: to800($fg_color);
+      }
+    }
+    
+    &:selected {
+      background-color: $color_theme_2;
+      
+      label,
+      image {
+        color: $inverse_fg_color;
+      }
+      
+      button label,
+      button image {
+        color: $fg_color;
+      }
+      
+      button.flat {
+        &:hover {
+          background-color: to100($inverse_fg_color);
+        }
+        
+        &:active {
+          background-color: to200($inverse_fg_color);
+        }
+        
+        label,
+        image {
+          color: $inverse_fg_color;
+        }
+      }
+      
+      scale {
+        slider {
+          background-color: $inverse_fg_color;
+          color: $inverse_fg_color;
+          
+          &:disabled {
+            border: $line_size solid to400($inverse_fg_color);
+            background-color: $bg_color;
+            color: $bg_color;
+            
+            &:backdrop {
+              border-color: to200($inverse_fg_color);
+            }
+          }
+        }
+        
+        trough {
+          background-color: to600($inverse_fg_color);
+          
+          &:disabled {
+            background-color: to200($inverse_fg_color);
+            
+            &:backdrop {
+              background-color: to100($inverse_fg_color);
+            }
+          }
+        }
+        
+        highlight {
+          background-color: $inverse_fg_color;
+          color: $inverse_fg_color;
+          
+          &:disabled {
+            background-color: to400($inverse_fg_color);
+            
+            &:backdrop {
+              background-color: to200($inverse_fg_color);
+            }
+          }
+        }
+      }
+      
+      check,
+      radio {
+        box-shadow: inset 0 0 0 2px $inverse_fg_color;
+      }
+      
+      &:backdrop {
+        background-color: to600($color_theme_2);
+      }
+    }
+  }
+}

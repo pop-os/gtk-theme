@@ -1,0 +1,13 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_textview.scss - Textview widget styling
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+textview,
+textview text {
+  background-color: $base_color;
+  color: $fg_color;
+}

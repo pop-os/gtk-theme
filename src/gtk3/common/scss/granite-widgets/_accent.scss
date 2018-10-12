@@ -1,0 +1,11 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _accent.scss - Accented text/labels
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.accent {
+  color: if($color=='dark', $light_color_1, $dark_color_1);
+}

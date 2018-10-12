@@ -1,0 +1,90 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _nautilus.scss - Nautilus App Overrides
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.nautilus-window,
+.nautilus-window notebook,
+.nautilus-window notebook > stack {
+  background-color: $bg_color;
+}
+
+.nautilus-window .floating-bar {
+  min-height: $large_size;
+  padding: 0;
+  transition: $standard_transition, border-width 0;
+  border-width: $border_size;
+  border-style: solid solid none;
+  border-radius: $corner_radius $corner_radius 0 0;
+  border-color: to400($fg_color);
+  background-clip: padding-box;
+  background-color: $dark_bg_color;
+
+  &.bottom.left { // axes left border and border radius
+    margin-right: 8px - 1px;
+    border-left-style: none;
+    border-top-left-radius: 0;
+  }
+
+  &.bottom.right { // axes right border and border radius
+    margin-left: 8px - 1px;
+    border-right-style: none;
+    border-top-right-radius: 0;
+  }
+
+  button {
+    margin: $tiny_padding;
+  }
+}
+
+widget.view .icon-item-background,
+.nautilus-canvas-item {
+  background-color: $color_theme_1;
+  color: $fg_color;
+  text-shadow: $shadow_0;
+}
+
+.nautilus-canvas-item {
+  border-radius: $corner_radius;
+}
+
+// Icon view
+.nautilus-window {
+
+  widget.view > .icon-item-background {
+    padding: 4px;
+    border-radius: $corner_radius;
+  }
+
+  &:selected {
+    background-color: transparent;
+
+    widget.view > .icon-item-background { 
+      background-color: $color_theme_1;
+    }
+  }
+}
+
+// Tiny fix for border radius on popover buttons
+popover stack box.linked button,
+popover stack box.linked button:first-child,
+popover stack box.linked button:last-child {
+  border-radius: $corner_radius;
+}
+
+// Zoom controls
+.nautilus-window > popover > stack > box.vertical > box.linked.horizontal 
++ box.vertical > box.vertical > box.horizontal.linked {
+  margin: $tiny_padding;
+  border-radius: $corner_radius;
+  background-color: $bg_hl_color;
+  box-shadow: $shadow_0;
+  
+  button:disabled {
+    border: none;
+    box-shadow: none;
+  }
+}

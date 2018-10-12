@@ -1,0 +1,44 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gtk.scss - Master File for GTK+ Widgets
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+@import 'base';
+@import 'button';
+@import 'tooltip';
+@import 'misc';
+@import 'separators';
+@import 'entry';
+@import 'textview';
+@import 'progressbar';
+@import 'frames';
+@import 'pane';
+@import 'colorchooser';
+@import 'linked';
+@import 'tabs';
+@import 'scrollbars';
+@import 'switch';
+@import 'check-radio';
+@import 'menus';
+@import 'toolbars';
+@import 'header-title-bars';
+@import 'assistant';
+@import 'views';
+@import 'flowbox';
+@import 'notification-popups';
+@import 'list';
+@import 'content-view';
+@import 'sidebar';
+@import 'expander';
+@import 'calendar';
+@import 'infobar';
+@import 'popover';
+@import 'dialog';
+@import 'emoji-picker';
+@import 'text-styles';
+@import 'filechooser';
+@import 'overshoot';
+@import 'pathbar';

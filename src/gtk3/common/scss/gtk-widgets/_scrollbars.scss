@@ -1,0 +1,67 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_scrollbars.scss - Scrollbars
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+scrollbar {
+  transition: $standard_transition;
+  background-clip: border-box;
+  background-color: transparent;
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false;
+  
+  trough {
+    padding: 0;
+    transition: $standard_transition;
+    border-radius: 0;
+    background-clip: border-box;
+    background-color: transparent;
+    
+    &:backdrop {
+      background-color: transparent;
+    }
+  }
+  
+  slider {
+    margin: $mini_padding;
+    transition: $standard_transition;
+    border: $border_size solid to600($bg_color);
+    border-radius: $circular_radius;
+    background-clip: border-box;
+    background-color: to800($fg_color);
+  }
+  
+  &.horizontal slider {
+    min-width: $progress_size * 3;
+    min-height: $progress_size;
+  }
+  
+  &.vertical slider {
+    min-width: $progress_size;
+    min-height: $progress_size * 3;
+  }
+
+  &.hovering {
+  
+    trough {
+      background-color: to600($darker_bg_color);
+      
+      &:backdrop {
+        background-color: to600($darker_bg_color);
+      }
+    }
+    
+    &.horizontal slider {
+      min-width: $progress_size * 3;
+      min-height: $scrollbar_size;
+    }
+  
+    &.vertical slider {
+      min-width: $scrollbar_size;
+      min-height: $progress_size * 3;
+    }
+  }
+}

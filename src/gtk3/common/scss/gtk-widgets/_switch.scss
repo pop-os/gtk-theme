@@ -1,0 +1,96 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_switch.scss - on-off switch
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+switch {
+  margin: 4px 0; //needed to help prevent switches from growing.
+  transition: $standard_transition;
+  border-radius: $circular_radius;
+  background-clip: padding-box;
+  background-color: to600($fg_color);
+  background-image: url('assets/switch-symbols.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 0;
+  box-shadow: 
+    0 1px 3px rgba($black, 0.12) inset, // sass-lint:disable-line indentation
+    0 1px 2px rgba($black, 0.24) inset;// sass-lint:disable-line indentation
+
+  &:disabled { 
+    background-color: to200($fg_color);
+    box-shadow: none;
+    opacity: 0.7;
+  }
+  
+  &:backdrop {
+    background-color: to200($fg_color);
+  }
+
+  &:checked {
+    background-color: $color_theme_2;
+    
+
+    &:disabled { 
+      background-color: to600($color_theme_2); 
+      box-shadow: none;
+    }
+    &:backdrop { 
+      background-color: to600($color_theme_2); 
+    }
+  }
+  
+  headerbar &,
+  toolbar & {
+    margin-top: ($toolbar_size / 2) - ($switch_size / 2) - 2px; 
+    margin-bottom: ($toolbar_size / 2) - ($switch_size / 2) - 2px;  
+  }
+
+  slider {
+    min-width: $switch_size;
+    min-height: $switch_size;
+    margin: 2px;
+    transition: $standard_transition;
+    border-radius: $circular_radius;
+    background-color: $bg_hl_color;
+    box-shadow: $shadow_1;
+    -gtk-outline-radius: $circular_radius;
+    
+    :disabled &,
+    :disabled:hover &,
+    :disabled:checked &,
+    :disabled:active & {
+      box-shadow: none;
+    }
+  }
+  
+  &:disabled {
+    box-shadow: none;
+    
+    &:hover,
+    &:checked,
+    &:active {
+      box-shadow: none;
+    }
+    
+    slider {
+      box-shadow: none;
+    }
+  }
+  
+  &:hover slider { 
+    box-shadow: $shadow_2; 
+  }
+
+  &:checked slider {
+    transition: all 500ms ease;
+    color: $bg_hl_color;
+  }
+
+  &:checked:disabled slider { 
+    animation: none;
+  }
+}

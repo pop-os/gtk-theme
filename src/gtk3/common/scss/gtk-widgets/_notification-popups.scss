@@ -1,0 +1,47 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_notification-popups.scss - App Notifications
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.app-notification,
+.app-notification.frame {
+  margin: $standard_padding_em;
+  padding: $small_padding_em;
+  border: none;
+  border-radius: $corner_radius;
+  background-clip: padding-box;
+  background-color: to800(mix($inverse_bg_color, $warm_grey_500, 30%));
+  box-shadow: $shadow_2; 
+  
+  label {
+    color: $inverse_fg_color;
+  }
+  
+  button {
+    @include flat_button;
+    font-weight: 700;
+    
+    &:hover {
+      background-color: to100($inverse_fg_color);
+    }
+    
+    &:active {
+      background-color: to200($inverse_fg_color);
+    }
+    
+    label {
+      color: $orange_300;
+    }
+    
+    image {
+      color: to600($inverse_fg_color);
+    }
+    
+    &.image-button {
+      border-radius: $circular_radius;
+    }
+  }
+}

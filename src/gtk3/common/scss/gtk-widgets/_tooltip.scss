@@ -1,0 +1,27 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_tooltip.scss - Tooltips
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+
+tooltip,
+.overlay-bar {
+  margin: $tiny_padding;
+  padding: $mini_padding_em $tiny_padding_em;
+  border: none;
+  border-radius: $corner_radius;
+  background-color: $bg_color;
+  color: $fg_color;
+  box-shadow: $shadow_2;
+  
+  * {
+    color: $fg_color;
+  }
+}
+
+.overlay-bar {
+  margin: $mini_padding;
+}

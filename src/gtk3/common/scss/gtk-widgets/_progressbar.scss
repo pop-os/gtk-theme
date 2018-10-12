@@ -1,0 +1,194 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_progressbar.scss - Progress bar and levelbar styling
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+
+%progress,
+progress,
+.progressbar 
+levelbar block {
+  min-width: $progress_size;
+  min-height: $progress_size;
+  transition: $standard_transition;
+  border: none;
+  border-radius: $circular_radius;
+  background-color: $color_theme_1;
+  
+  &:backdrop {
+    background-color: to400($color_theme_1);
+  }
+  
+  entry & {
+    margin: -5px -10px;
+    transition: $standard_transition;
+    border-bottom: $line_size solid $color_theme_1;
+    border-radius: $corner_radius $corner_radius 0 0;
+    background-color:  to400($color_theme_1);
+    color: $inverse_fg_color;
+  }
+}
+
+%trough,
+trough, 
+.trough,
+levelbar block.empty {
+  min-width: $progress_size;
+  min-height: $progress_size;
+  transition: $standard_transition;
+  border: none;
+  border-radius: $circular_radius;
+  background-color: to200($fg_color);
+  
+  &:backdrop {
+    background-color: to100($fg_color);
+  }
+  
+  entry &,
+  spinbutton & {
+    padding: 0 $small_padding;
+  }
+}
+
+
+treeview.trough,
+treeview.progressbar {
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  
+  &:backdrop,
+  &:backdrop:selected {
+    background-color: transparent;
+  }
+}
+
+treeview.progressbar {
+  border-bottom-color: $color_theme_1;
+  
+  &:selected {
+    border-bottom-color: $inverse_fg_color;
+  }
+}
+
+treeview.trough {
+  border-bottom-color: to200($fg_color);
+  
+  &:selected {
+    border-bottom-color: to400($inverse_fg_color);
+  }
+}
+
+levelbar {
+  block {
+    @extend %progress;
+    margin: $mini_padding;
+    
+    &.filled.low {
+      background-color: $error_color;
+      
+      &:backdrop {
+        background-color: to400($error_color);
+      }
+    }
+    
+    &.filled.middle {
+      @extend %progress;
+    }
+    
+    &.filled.high {
+      background-color: $suggested_color;
+      
+      &:backdrop {
+        background-color: to400($suggested_color);
+      }
+    }
+    
+    &.empty {
+      @extend %trough;
+    }
+  }
+  
+  trough {
+    background-color: transparent;
+    
+    &:backdrop {
+      background-color: transparent;
+    }
+  }
+}
+
+scale {
+  padding: $small_padding;
+  
+  outline-offset: 4px;
+  
+  slider {
+    min-width: 3 * $progress_size;
+    min-height: 3 * $progress_size;
+    margin: -2 * $progress_size;
+    transition: $standard_transition;
+    border-radius: $circular_radius;
+    outline: $line_size solid to400($light_neutral_grey_700);
+    background-color: $color_theme_1;
+    color: $color_theme_1;
+    box-shadow: none;
+    
+    &:hover {
+      box-shadow: $shadow_1;
+      
+      &:active:focus {
+        box-shadow: $shadow_2;
+      }
+    }
+    
+    &:backdrop {
+      background-color: to400($color_theme_1);
+    }
+    
+    &:disabled {
+      border: $line_size solid to400($fg_color);
+      background-color: $bg_color;
+      color: $bg_color;
+      
+      &:backdrop {
+        border-color: to200($fg_color);
+      }
+    }
+  }
+  
+  trough {
+    @extend %trough;
+    margin: $mini_padding;
+  }
+  
+  highlight {
+    @extend %progress;
+    
+    &:disabled {
+      background-color: to400($fg_color);
+      
+      &:backdrop {
+        background-color: to200($fg_color);
+      }
+    }
+  }
+  
+  mark indicator {
+    color: to600($fg_color);
+  }
+  
+  &.horizontal mark indicator {
+    min-width: $border_size;
+    min-height: $marks_size;
+  }
+  
+  &.vertical mark indicator {
+    min-width: $marks_size;
+    min-height: $border_size;
+  }
+}

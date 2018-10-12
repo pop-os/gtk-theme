@@ -1,0 +1,21 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _welcome.scss - Text-styles for the Welcome Screen
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.welcome {
+  font-size: 10pt;
+  text-shadow: none;
+
+  .dim-label {
+    color: to800($fg_color);
+  }
+
+  .h1,
+  .h3 {
+    color: to800($fg_color);
+  }
+}

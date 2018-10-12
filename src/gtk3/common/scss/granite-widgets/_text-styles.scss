@@ -1,0 +1,40 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _text-styles.scss - Formatting for special text style classes
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.accent {
+  color: $color_theme_1;
+}
+
+.h1 {
+  font-size: 20pt;
+  font-weight: 300;
+}
+
+.h2 {
+  font-size: 16pt;
+  font-weight: 200;
+}
+
+.h3 {
+  font-size: 11pt;
+}
+
+.h4,
+.category-label {
+  color: to800($fg_color);
+  font-weight: 700;
+}
+
+.h4 {
+  padding-top: $tiny_padding_em;
+  padding-bottom: $tiny_padding_em;
+}
+
+list .h4 {
+  padding-left: $tiny_padding_em;
+}

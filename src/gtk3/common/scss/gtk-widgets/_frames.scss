@@ -1,0 +1,56 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_frames.scss - Frames and borders
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+%frame,
+frame,
+.frame {
+  border: $border_size solid to100($fg_color);
+  border-top: if(
+    $color == 'light',
+    $border_size solid to100(lighten($fg_color, 30%)),
+    $border_size solid to100(darken($fg_color, 30%)));
+  border-bottom: if(
+    $color == 'light',
+    $border_size solid to100(darken($fg_color, 30%)),
+    $border_size solid to100(lighten($fg_color, 30%)));
+  border-radius: $corner_radius/2;
+  
+  &.flat {
+    border: none;
+  }
+  
+  frame,
+  .frame {
+    border: none;
+  }
+}
+
+scrolledwindow {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+overshoot,
+undershoot,
+.overshoot,
+.undershoot {
+  &.left,
+  &.right,
+  &.top,
+  &.bottom {
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+  }
+}
+
+viewport.frame {
+  background-color: $bg_color;
+}

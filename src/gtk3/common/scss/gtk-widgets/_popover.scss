@@ -1,0 +1,36 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_popover.scss - Popovers
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+popover,
+popover.osd,
+.popover,
+.popover.osd {
+  margin: 0;
+  border-radius: $corner_radius;
+  box-shadow: $shadow_2;
+  
+  image,
+  label {
+    padding: $tiny_padding_em;
+  }
+  
+  .view {
+    background-color: transparent;
+  }
+  
+  .model.image-button {
+    margin: 2 * $mini_size;
+    padding: 0;
+    border-radius: $circular_radius;
+    
+    image {
+      margin: 2 * $mini_size;
+      padding: 0;
+    }
+  }
+}

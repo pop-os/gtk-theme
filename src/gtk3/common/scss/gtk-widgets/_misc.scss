@@ -1,0 +1,79 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * sass/widgets/_misc.scss - Miscellaneous small widgets
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+ 
+/*
+ * Spinner
+ */
+
+@keyframes spin {
+  to {
+    -gtk-icon-transform: rotate(1turn);
+  }
+}
+
+spinner {
+  background-image: none;
+  opacity: 0;
+  -gtk-icon-source: -gtk-icontheme('process-working-symbolic');
+  
+  &:checked {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+    
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+/*
+ * Overscroll effect
+ */
+
+rubberband,
+.rubberband,
+.view.rubberband {
+  transition: $standard_transition;
+  border: none;
+  background-color: to200($color_theme_1);
+}
+
+
+/*
+ * Symbolic Images
+ */
+ 
+image {
+  color: inherit;
+}
+
+// Duffeyrolls not donuts?
+.dnd {
+  border-radius: $corner_radius;
+  background-color: to200($color_theme_1);
+  background-image: none;
+}
+
+.keycap {
+  min-width: $tiny_size;
+  padding: $mini_padding $tiny_padding;
+  border-radius: $corner_radius;
+  background-color: $dark_bg_color;
+  font-size: 85%;
+}
+
+/* 
+ * Statusbars
+ */
+
+statusbar frame {
+  margin: 0;
+  border: none;
+}

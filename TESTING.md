@@ -16,7 +16,6 @@ be moved from one repository to the next.
 Things to look at:
  - [gtk3-widget-factory](#gtk)
  - [Nautilus](#nautilus)
- - [Gnome shell](#shell)
  - [Gnome-Tweak-Tool](#gtt)
  
  **Things to check in gtk3-widget-factory**<a name="gtk"></a>
@@ -56,13 +55,6 @@ Things to look at:
  **Check that Nautilus has the proper color**<a name="nautilus"></a>
  - context information (sidebar entries)
  - tabs have orange underlines, path bars
-
- **Gnome shell**<a name="shell"></a>
- - orange underline/straightlines everywhere
- - calendar - selected day is orange - days with events are blue
- - volume slider should be blue
- - active popup menu - orange
- - wifi selection is blue
  
 **Gnome-Tweak-Tool**<a name="gtt"></a>
  

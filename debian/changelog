@@ -1,3 +1,68 @@
+pop-gtk-theme (4.0.0) bionic; urgency=medium
+
+  * Theme rewritten from scratch
+  * Redesigned widgets:
+  *     Switches
+  *     Buttons
+  *     Tabs/Notebooks
+  *     Stack Switchers
+  *     Linked Widgets
+  *     Toolbars
+  *     Separators
+  *     Scrollbars
+  *     Tree Views
+  *     Headerbars
+  *     Frames
+  *     InfoBars
+  *     Flat buttons
+  *     Rounded and image buttons
+  * New Granite widgets
+  *     Accent classes
+  *     Card stacks
+  *     Mode-Switches
+  *     Nice Scales
+  *     Rounded-Windows
+  *     Avatars
+  * All widgets have received new implementations
+  * Reworked, cleaner build system
+  * More modular theme structure
+  * Greatly reduced number of assets
+  * Large reduction in total size of CSS
+  * Various bug fixes and improvements
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 02 Oct 2018 12:13:56 -0600
+
+pop-gtk-theme (3.99.4) bionic; urgency=medium
+
+  * Fix packaging issue in Cosmic
+  * Remove errant pathbar seperator from new folder button
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 21 Aug 2018 10:50:29 -0600
+
+pop-gtk-theme (3.99.3) bionic; urgency=medium
+
+  * New release of the theme for 4.0.0-b3
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 21 Aug 2018 10:47:22 -0600
+
+pop-gtk-theme (3.99.2) bionic; urgency=medium
+
+  * Beta 2 for version 4 of Pop_GTK
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 09 Aug 2018 11:26:15 -0600
+
+pop-gtk-theme (3.99.1) bionic; urgency=medium
+
+  * New updated Alpha based on feedback from design
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 07 Aug 2018 10:35:23 -0600
+
+pop-gtk-theme (3.99.0) bionic; urgency=medium
+
+  * New version of the theme - Alpha release
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 13 Jul 2018 12:49:02 -0600
+
 pop-gtk-theme (3.1.2cosmic0) cosmic; urgency=medium
 
   * Cosmic release

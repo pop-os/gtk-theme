@@ -1,0 +1,31 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gedit.scss - Gedit Text Editor App Overrides
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.gedit-search-slider {
+  margin: 0 $standard_padding $standard_padding;
+  padding: $small_padding;
+  border-radius: 0 0 $corner_radius $corner_radius;
+  background-color: $bg_color;
+  box-shadow: $shadow_2;
+  
+  .linked > button,
+  .linked > button:nth-child(n-2) {
+    @include flat_button;
+    padding: $small_padding;
+    border-radius: $corner_radius;
+    border-image: none;
+  }
+  
+  .linked > entry {
+    border-radius: $corner_radius $corner_radius 0 0;
+    
+    entry {
+      @include reset;
+    }
+  }
+}

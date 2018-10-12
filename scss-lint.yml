@@ -1,0 +1,122 @@
+rules:
+  attribute-quotes: 1
+  border-zero: 0
+  brace-style:
+    - 2
+    -
+      style: '1tbs'
+      allow-single-line: false
+  class-name-format: 0
+  clean-import-paths:
+    - 2
+    -
+      leading-underscore: false
+      filename-extension: false
+  declarations-before-nesting: 2
+  empty-args:
+    - 2
+    -
+      include: false
+  empty-line-between-blocks: 0
+  extends-before-declarations: 2
+  extends-before-mixins: 2
+  final-newline: 1
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  function-name-format:
+    - 1
+    -
+      allow-leading-underscore: true
+      convention: hyphenatedlowercase
+  hex-length:
+    - 2
+    -
+      style: short
+  hex-notation:
+    - 1
+    -
+      style: uppercase
+  id-name-format: 0
+  indentation:
+    - 2
+    -
+      size: 2
+  leading-zero:
+    - 1
+    -
+      include: true
+  max-file-line-count: 0
+  max-line-length:
+    - 1
+    -
+      length: 81
+  mixin-name-format:
+    - 1
+    -
+      allow-leading-underscore: true
+      convention: snakecase
+  mixins-before-declarations: 0
+  nesting-depth: 0
+  no-color-hex: 0
+  no-color-keywords: 0
+  no-color-literals:
+    - 1
+    -
+      allow-map-identifiers: false
+      allow-variable-identifiers: true
+      allow-rgba: true
+  no-combinators: 0
+  no-css-comments: 0
+  no-debug: 0
+  no-empty-rulesets: 1
+  no-extends: 0
+  no-ids: 0
+  no-important: 0
+  no-invalid-hex: 2
+  no-mergeable-selectors: 0
+  no-misspelled-properties: 0
+  no-qualifying-elements: 0
+  no-trailing-whitespace: 0
+  no-trailing-zero: 2
+  no-transition-all: 0
+  no-universal-selectors: 0
+  no-url-domains: 0
+  no-url-protocols: 0
+  no-value-vendor-prefix: 0
+  no-warn: 1
+  one-declaration-per-line: 2
+  placeholder-in-extend: 0
+  property-sort-order:
+    - 2
+    -
+      order: smacss
+      ignore-custom-properties: false
+  property-units: 0
+  pseudo-element: 0
+  quotes:
+    - 2
+    -
+      style: single
+  shorthand-values: 1
+  single-line-per-selector:  0
+  space-after-bang: 0
+  space-after-colon: 2
+  space-after-comma: 2
+  space-around-operator: 0
+  space-before-bang: 2
+  space-before-brace: 2
+  space-before-colon:
+    - 2
+    -
+      include: false
+  space-between-parens: 0
+  trailing-semicolon: 2
+  url-quotes: 1
+  variable-for-property: 0
+  variable-name-format:
+    - 1
+    -
+      allow-leading-underscore: true
+      convention: snakecase
+  zero-unit: 2

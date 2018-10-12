@@ -1,0 +1,232 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _storage-bar.scss - Storage Bar widget for dividing storage space
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.storage-bar {
+
+  .trough {
+    padding: $small_padding $tiny_padding;
+    border: none;
+    border-radius: $corner_radius $corner_radius 0 0;
+    background-image: none;
+    box-shadow: $shadow_2;
+  }
+  
+  .fill-block {
+    padding: $small_padding $tiny_padding;
+    border: $border_size solid rgba($black, 0.35);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: $border_size;
+    border-left-width: 0;
+    border-radius: 0;
+    border-bottom-color: darken($darker_bg_color, 35%);
+    background-color: darken($darker_bg_color, 15%);
+    
+    &:first-child {
+      border-radius: $corner_radius 0 0;
+    }
+    
+    &:last-child {
+      border-radius: 0 $corner_radius 0 0;
+    }
+    
+    &:only-child {
+      border-radius: $corner_radius $corner_radius 0 0;
+    }
+    
+    image {
+      -gtk-icon-style: symbolic;
+    }
+  }
+
+  .empty-block {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($bg_hl_color, 40%);
+    background-color: darken($bg_hl_color, 5%);
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .app {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($purple_500, 30%);
+    background-color: $purple_500;
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .audio {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($orange_500, 20%);
+    background-color: $orange_500;
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .files {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($blue_500, 20%);
+    background-color: $blue_500;
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .photo {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($green_500, 30%);
+    background-color: $green_500;
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .video {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($red_500, 20%);
+    background-color: $red_500;
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .legend {
+    padding: $small_padding;
+    border-radius: 50%;
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+  
+  .disk-bar {
+    padding: 0;
+    border-radius: $corner_radius;   
+    background-color: $warm_grey_500; 
+  } 
+
+  .ext2, .ext3, .ext4, .fat16, .fat32, .btrfs, 
+  .xfs,  .ntfs, .luks, .lvm,   .none,  .swap , .unused {
+    // sass-lint:disable-block indentation
+    border: none;
+    box-shadow: 
+      inset 0 -2px rgba($warm_grey_700, 0.5),
+      inset 1px 0 rgba($warm_grey_700, 0.5),
+      inset -1px 0 rgba($warm_grey_700, 0.5);
+  }
+
+  .swap { 
+    background-color: $red_700; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .ext4 { 
+    background-color: $green_500; 
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .ext3 { 
+    background-color: $green_700; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .ext2 { 
+    background-color: $green_900; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .fat16, 
+  .fat32 { 
+    background-color: $yellow_500; 
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .btrfs { 
+    background-color: $blue_700; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .xfs { 
+    background-color: $indigo_500; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .ntfs { 
+    background-color: $orange_500; 
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .luks { 
+    background-color: $purple_300; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .lvm { 
+    background-color: $purple_500; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+
+  .none { 
+    background-color: $blue_500; 
+    
+    image {
+      color: $obverse_fg_color;
+    }
+  }
+
+  .unused { 
+    background-color: $warm_grey_500; 
+    
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+  
+  .legend { 
+    box-shadow: none; 
+  }
+}

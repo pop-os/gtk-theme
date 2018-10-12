@@ -1,0 +1,35 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gnome-weather.scss - App overrides for GNOME Weather
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+
+stackswitcher.horizontal.linked.stack-switcher.osd {
+  border-radius: $corner_radius;
+  background-color: to400($inverse_bg_color);
+  
+  > button:first-child,
+  > button:last-child,
+  > button:only-child, {
+    border-radius: $corner_radius;
+    background-color: transparent;
+    border-image: none;
+    
+    &:hover {
+      color: $light_color_2;
+    }
+    
+    &:checked {
+      border-radius: $corner_radius;
+      background-color: $color_theme_2;
+      border-image: none;
+      
+      &:hover {
+        color: $inverse_fg_color;
+      }
+    }
+  }
+}

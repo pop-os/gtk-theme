@@ -1,0 +1,250 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_base.scss - Base/fallback states for GTK Widgets and Mixins
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  border-image: none;
+}
+
+@mixin base_states {
+  color: $fg_color;
+  
+  &:backdrop {
+    opacity: 0.85;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    
+    &:backdrop {
+      opacity: 0.3;
+    }
+  }
+}
+
+@mixin underline($type, $focus_color: $color_theme_2, $line_color: $fg_color) {
+
+  @if $type == normal {
+    transition: $standard_transition;
+    border-image: radial-gradient(
+      circle closest-corner at center calc(100% - 1px),
+      to400($line_color) 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
+  }
+
+  @if $type == focus {
+    border-image: radial-gradient(
+      circle closest-corner at center calc(100% - 1px),
+      $focus_color 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
+    
+    &:backdrop {
+      border-image: radial-gradient(
+        circle closest-corner at center calc(100% - 1px),
+        to400($focus_color) 100%,
+        transparent 0%)
+        0 0 2 / 0 0 2px; // sass-lint:disable-line indentation
+    }
+  }
+
+  @if $type == disabled {
+    border-image: radial-gradient(
+      circle closest-corner at center calc(100% - 1px),
+      to200($line_color) 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
+  }
+
+  @if $type == flat-normal {
+    box-shadow: none;
+    border-image: radial-gradient(
+      circle closest-corner at center calc(100% - 1px),
+      to400($line_color) 0%,
+      transparent 0%)
+      0 0 0 / 0 0 0; // sass-lint:disable-line indentation
+  }
+
+  @if $type == flat-focus {
+    box-shadow: none;
+    border-image: radial-gradient(
+      circle closest-corner at center calc(100% - 1px),
+      $color_theme_2 100%,
+      transparent 0%)
+      0 0 2 / 0 0 2px; // sass-lint:disable-line indentation
+  }
+}
+
+@mixin flat {
+  background-color: transparent;
+  box-shadow: none;
+  
+  &:hover {
+    background-color: to100($fg_color);  
+    box-shadow: none;
+  }
+  
+  &:active {
+    background-color: to200($fg_color);
+    box-shadow: none;
+  }
+  
+  &:checked {
+    background-color: transparent;
+    @include underline(focus);
+    
+    &:backdrop {
+      background-color: transparent;
+    }
+  }
+}
+
+%linked-horizontal {
+  border-radius: 0;
+  
+  &:first-child,
+  &:first-child * {
+    border-radius: $corner_radius 0 0 $corner_radius;
+    
+    &:dir-rtl {
+      border-radius: 0 $corner_radius $corner_radius 0;
+    }
+  }
+  
+  &:last-child,
+  &:last-child * {
+    border-radius: 0 $corner_radius $corner_radius 0;
+    
+    &:dir-rtl {
+      border-radius: 0 $corner_radius 0 0 $corner_radius;
+    }
+  }
+  
+  &:only-child {
+    border-radius: $corner_radius;
+  }
+}
+  
+%linked-vertical {
+  border-radius: 0;
+  
+  &:first-child {
+    border-radius: $corner_radius $corner_radius 0 0;
+  }
+  
+  &:last-child {
+    border-radius: 0 0 $corner_radius $corner_radius;
+
+  }
+}
+
+%selected-items {
+  background-color: $color_theme_1;
+  color: $inverse_fg_color;
+  &:backdrop {
+    background-color: to600($color_theme_1);
+  }
+
+  @at-root %nobg-selected-items, & {
+    color: $inverse_fg_color;
+
+    &:disabled {
+      color: to400($inverse_fg_color);
+    }
+  }
+}
+
+* {
+  //@include reset; //FIXME: Remove for debugging
+  //transition: all 200ms ease;
+  outline: 0 solid to400($light_neutral_grey_700);
+  outline-offset: -4px;
+  background-clip: padding-box;
+  -GtkTextView-error-underline-color: $error_color;
+  -GtkIMHtml-hyperlink-color: $color_theme_2;
+  -GtkHTML-link-color: $color_theme_2;
+  -gtk-outline-radius: $corner_radius;
+  
+  &:focus {
+    outline-width: $line_size;
+  }
+}
+
+.background {
+  background-color: $bg_color;
+  color: $fg_color;
+}
+
+*:disabled { 
+  -gtk-icon-effect: dim;
+}
+
+*:selected {
+  background-color: $color_theme_1;
+  color: $fg_color;
+}
+
+.gtkstyle-fallback {
+  background-color: $bg_color;
+  color: $fg_color;
+
+  &:hover {
+    background-color: darken($bg_color, 5%);
+    color: $fg_color;
+  }
+
+  &:active {
+    background-color: darken($bg_color, 10%);
+    color: $fg_color;
+  }
+
+  &:disabled {
+    background-color: $bg_color;
+    color: to600($fg_color);
+  }
+
+  &:selected {
+    background-color: $color_theme_1;
+    color: $inverse_fg_color;
+  }
+}
+
+.link {
+  color: $color_theme_2;
+}
+.visited {
+  color: darken($color_theme_2, 20%);
+}
+
+.view {
+  selection,
+  &:selected {
+    background-color: $color_theme_1;
+    color: $inverse_fg_color;
+  }
+}
+
+image,
+label,
+box,
+grid {
+  background-color: transparent;
+  
+  &:disabled {
+    background-color: transparent;
+  }
+}
+
+.context-menu {
+  font-family: initial;
+}

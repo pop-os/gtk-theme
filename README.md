@@ -4,7 +4,11 @@
 
 -------------------
 
-An adaptive Gtk+ theme based on the Materia GTK+ theme.
+A GTK+ theme for Pop!_OS 
+
+*NOTE* This version of the theme is currently in _ALPHA_. It is not considered
+complete or ready for day-to-day use. Certain elements may not be themed 
+correctly.
 
 
 ## Screenshots
@@ -14,33 +18,14 @@ An adaptive Gtk+ theme based on the Materia GTK+ theme.
 
 ### Required Components
 -------------------
-Pop supports Gtk+ 3.22.x, 3.20.x and 3.18.x
+Pop supports Gtk+ 3.22.x
 
  ```
- * Gtk+-3.0             >= 3.18.9
+ * Gtk+-3.0             >= 3.22
  * Gtk+-2.0             >= 2.24.30
  * gtk2-engines-pixbuf  >= 2.24.30
  * gtk2-engines-murrine >= 0.98.1
  ```
-
-#### Supported Desktop Environments
-------------------------------
-
- ```
- * GNOME-Shell     >= 3.18.3
- * GNOME-Flashback >= 3.18.2
- * Budgie-Desktop  >= 10.2.7
- * Unity7          >= 7.4.0
- * XFce4           >= 4.12.2
- * Mate            >= 1.14.0 (Gtk+ 3.2x only)
- * LXDE            >= 0.99.1 (Gtk+ 2.x only)
- ```
-
- > **Note:**
- >
- >   * Mate-Desktop and Pantheon support are W.I.P.
-
-
 
 ### Recommendations
 
@@ -84,11 +69,12 @@ r
 ### Installation from Git Source
 ----------------------------
 
-###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can install it using:
+###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can all build-dependencies using:
 
 ```
-sudo apt install libsass0 sassc inkscape optipng libglib2.0-dev-bin
+sudo apt install libtool pkg-config sassc inkscape optipng parallel libglib2.0-dev libgdk-pixbuf2.0-dev librsvg2-dev libxml2-utils
 ```
+
 
 1. If previous versions were installed/existed, remove them first.
 
@@ -113,7 +99,11 @@ make
 sudo make install
 ```
 
+#### Rebuilding after modifications:
 
+You shouldn't need to rebuild the entire theme after modifications. If you 
+modify only the GTK3 sources, then using `make gtk3` will be sufficient for 
+rebuilding the theme. This saves you needing to build the Gtk-2 assets again. 
 
 TODO
 ----
@@ -131,4 +121,3 @@ Special Thanks to
 --------------
  Nana-4, the developer of Materia.
  tista500 and the Adapta Theme Project: https://github.com/adapta-project/
-

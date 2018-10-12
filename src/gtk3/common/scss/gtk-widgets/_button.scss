@@ -1,0 +1,236 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_button.scss - Buttons
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+@mixin flat_button {
+  @include flat;
+  font-weight: 700;
+  
+  &:hover {
+    background-color: to100($fg_color);
+  }
+  
+  &:active {
+    background-color: to200($fg_color);
+  }
+  
+  &:checked {
+    color: $fg_color;
+  }
+}
+
+%button,
+button,
+.button {
+  padding: $tiny_padding_em $small_padding_em;
+  transition: $standard_transition;
+  border: none;
+  border-radius: $corner_radius;
+  background-color: $bg_hl_color;
+  box-shadow: $shadow_1;
+  @include base_states;
+  
+  &:backdrop {
+    color: to600($fg_color);
+  }
+  
+  &:hover {
+    box-shadow: $shadow_2;
+  }
+  
+  &:active {
+    background-color: $dark_bg_color;
+    box-shadow: $shadow_0;
+  }
+  
+  &:checked {
+    background-color: $color_theme_2;
+    color: $inverse_fg_color;
+    
+    &:backdrop {
+      opacity: 0.6;
+    }
+  }
+  
+  &:disabled {
+    box-shadow: inset 0 0 0 $line_size to200($fg_color);
+    
+    &:checked:backdrop {
+      opacity: 0.2;
+    }
+  }
+  
+  .titlebar & {
+    color: $titlebar_fg_color;
+    
+    &:checked,
+    &:active,
+    &:hover {
+      color: $titlebar_active_color;
+    }
+  }
+  
+  &.flat {
+    @include flat_button;
+  }
+  
+  &.text-button {
+    padding: $tiny_padding_em $large_padding_em;
+    border-radius: $corner_radius;
+  }
+  
+  &.round,
+  &.circular {
+    min-width: $medium_size;
+    min-height: $medium_size;
+    margin: $mini_padding;
+    padding: $tiny_padding_em;
+    border-radius: $circular_radius;
+    -gtk-outline-radius: $circular_radius;
+  }
+  
+  stackswitcher & {
+    @include flat_button;
+    
+    &:checked {
+      @include underline(focus);
+      background-color: transparent;
+      
+      &:hover {
+        @include underline(focus);
+        background-color: to200($bg_color);
+      }
+    }
+    
+    &:disabled {
+      @include underline(disabled);
+      border: none;
+    }
+    
+    .titlebar &,
+    headerbar & {
+      padding: $tiny_padding_em 2 * $large_padding_em;
+      color: $titlebar_fg_color;
+      
+      &:hover {
+        @include underline(focus);
+        color: $titlebar_fg_color;
+        
+        &:checked {
+          @include underline(focus);
+          color: $titlebar_fg_color;
+        }
+      }
+    }
+  }
+  
+  &.lock {
+    padding: $tinier_padding_em $small_padding_em;
+  } 
+  
+  label {
+    font-weight: 600;
+  }
+  
+  &.suggested-action {
+    background-color: $suggested_color;
+    color: $inverse_fg_color;
+    
+    headerbar & {
+      box-shadow: $shadow_1;
+    }
+    
+    &:hover {
+      background-color: mix($suggested_color, $obverse_bg_color, 80%);
+      
+      headerbar & {
+        box-shadow: $shadow_2;
+      }
+    }
+    
+    &:active {
+      background-color: mix($suggested_color, $obverse_bg_color, 60%);
+      
+      headerbar & {
+        background-color: mix($suggested_color, $obverse_bg_color, 40%);
+      }
+    }
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+  
+  &.destructive-action {
+    background-color: $destructive_color;
+    color: $inverse_fg_color;
+    
+    headerbar & {
+      box-shadow: $shadow_1;
+    }
+    
+    &:hover {
+      background-color: mix($destructive_color, $obverse_bg_color, 80%);
+      
+      headerbar & {
+        box-shadow: $shadow_2;
+      }
+    }
+    
+    &:active {
+      background-color: mix($destructive_color, $obverse_bg_color, 60%);
+      
+      headerbar & {
+        box-shadow: $shadow_0;
+      }
+    }
+    
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+  }
+  
+  popover stack & {
+    @include flat_button;
+    padding: $tiny_padding_em;
+    border-radius: $corner_radius;
+        
+    image,
+    label {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  revealer > & {
+    margin: 10px;
+  }
+}
+
+modelbutton,
+.model,
+modelbutton.image-button {
+  @include flat_button;
+  transition: $standard_transition;
+  border-radius: $corner_radius;
+  background-color: transparent;
+  font-weight: 400;
+  
+  label {
+    font-weight: 400;
+  }
+  
+  &:hover {
+    background-color: to200($fg_color);
+  }
+  
+  &:active {
+    background-color: to400($fg_color);
+  }
+}

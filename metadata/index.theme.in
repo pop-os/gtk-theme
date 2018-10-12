@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=~theme~name
+Comment=The Pop GTK Theme.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=~theme~name
+MetacityTheme=~theme~name
+IconTheme=~theme~name
+CursorTheme=~theme~name
+CursorSize=24

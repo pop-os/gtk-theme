@@ -1,0 +1,23 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _terminal.scss - Text View widgets intended to look like terminals
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.terminal,
+.terminal text {
+  background-color: $dark_neutral_grey_300;
+  color: $inverse_fg_color;
+  font-family: monospace;
+  
+  selection {
+    background-color: $dark_color_1;
+    color: $inverse_fg_color;
+  }
+}
+
+label.terminal {
+  padding: $standard_padding_em;
+}

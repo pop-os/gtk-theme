@@ -1,0 +1,82 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_sidebar.scss - Sidebar and Source List
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.sidebar,
+.sidebar.view,
+.sidebar list,
+.source-list,
+.source-list.view {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: $base_color;
+  color: $fg_color;
+  
+  row,
+  .list-row,
+  .sidebar-item,
+  .sidebar-row {
+    margin: -1px;
+    padding: $tinier_padding $standard_padding;
+    transition: $fast_transition; //Standard looks a tiny bit janky
+    border-width: $no_padding;
+    border-style: solid;
+    border-color: transparent;
+    
+    &:hover {
+      background-color: $darker_bg_color;
+    }
+    
+    &:selected {
+      background-color: $color_theme_2;
+      
+      &:backdrop {
+        background-color: to600($color_theme_2);
+      }
+      
+      label,
+      image {
+        color: $inverse_fg_color;
+      }
+    }
+    
+    &:drop(active),
+    &.sidebar-new-bookmark-row {
+      border: $border_size solid $color_theme_2;
+      color: $dark_color_2;
+    }
+
+    button {
+      @include flat_button;
+    }
+  }
+  
+  button {
+    padding: 0.5 * $no_padding_em;
+    transition: $fast_transition;
+  }
+  
+  label,
+  image {
+    padding: 0.5 * $no_padding_em;
+    transition: $fast_transition;
+  }
+  
+  .frame {
+    border: none;
+  }
+  
+  .stack-switcher button {
+    @include flat_button;
+    -gtk-icon-style: symbolic;
+  }
+  
+  separator {
+    border: none;
+  }
+}

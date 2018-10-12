@@ -1,0 +1,42 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_text-styles.scss - Text Styles
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.dim-label {
+  opacity: 0.75;
+}
+
+.attention {
+  color: $link_color;
+}
+
+image.error,
+.error {
+  color: $error_color;
+}
+
+image.warning,
+.warning {
+  color: $warning_color;
+}
+
+label.warning {
+  color: $dark_warning_color;
+}
+
+image.success,
+.success {
+  color: $success_color;
+}
+
+label.success {
+  color: $success_color;
+}
+
+link {
+  color: $link_color;
+}

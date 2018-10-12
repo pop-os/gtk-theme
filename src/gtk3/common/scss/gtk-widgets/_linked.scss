@@ -1,0 +1,88 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_linked.scss - Linked items
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+ 
+.linked {
+  border-radius: $corner_radius;
+  background-color: $bg_hl_color;
+  box-shadow: $shadow_0;
+
+  > button,
+  > entry,
+  > combobox .combo {
+    @include flat;
+    border-radius: $corner_radius;
+    border-image: none;
+    
+    &:checked {
+      background-color: $color_theme_2;
+      color: $inverse_fg_color;
+      border-image: none;
+      
+      &:hover {
+        background-color: $light_color_2;
+        color: $inverse_fg_color;
+        border-image: none;
+      }
+      
+      &:backdrop {
+        background-color: to400($color_theme_2);
+        border-image: none;
+      }
+    }
+  }
+  
+  entry,
+  entry ~ button, {
+    @extend %entry;
+    @include underline(normal); 
+    padding: $tiny_padding_em;
+    background-color: $bg_hl_color;
+  }
+  
+  spinbutton entry ~ button:disabled {
+    border-image: none;
+  }
+  
+  // weird issue with linked spinbuttons
+  & > spinbutton button,
+  & > spinbutton button:focus,
+  & > spinbutton button:last-child {
+    @include flat_button;
+    border-radius: $circular_radius;
+    border-image: none;
+  }
+}
+
+//stackswitcher buttons
+stackswitcher > button.radio:hover {
+  @include underline(focus);
+  background-color: transparent;
+  
+  &:checked {
+    background-color: $color_theme_2;
+    color: $inverse_fg_color;
+    border-image: none;
+  }
+}
+
+.titlebar .linked,
+.headerbar .linked,
+headerbar .linked {
+  background-color: to100($titlebar_fg_color);
+  
+  button:checked {
+    @include flat;
+    background-color: transparent;
+    color: $titlebar_fg_color;
+  }
+  
+  button:hover {
+    background-color: to100($titlebar_fg_color);
+  }
+}

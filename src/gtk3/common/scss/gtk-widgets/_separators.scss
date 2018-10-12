@@ -1,0 +1,47 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * sass/widgets/_separators.scss - Separators and dividers
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+separator {
+  margin: 0;
+  border: 0 solid to200($fg_color);
+  
+  menu &,
+  &.horizontal {
+    margin: 0;
+    border-top-width: $border_size;
+  }
+  
+  menu & {
+    margin: $tiny_padding 0;
+  }
+  
+  list & {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0 solid to100($fg_color);
+  }
+  
+  &.vertical {
+    border-left-width: $border_size; 
+  }
+  
+  toolbar &,
+  .titlebar & {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    
+    &.titlebutton {
+      min-width: $tiny_size;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

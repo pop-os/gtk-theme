@@ -1,0 +1,43 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_content-view.scss - Content View
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.content-view-window {
+  border: $border_size solid to100($fg_color);
+  border-radius: $corner_radius;
+}
+
+.content-view,
+.content-view viewport {
+  border: $border_size solid to100($fg_color);
+  background-color: transparent;
+  background-image: none;
+  
+  column-header button {
+    border: 0 solid to200($fg_color);
+    border-right-width: $border_size;
+    border-bottom-width: $border_size;
+    border-radius: 0;
+    background-color: $dark_bg_color;
+    box-shadow: none;
+    
+    &:first-child {
+      border-left-width: $border_size;
+      border-top-left-radius: $corner_radius;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $corner_radius;
+    }
+    
+    &:active,
+    &:hover,
+    &:checked {
+      box-shadow: none;
+    }
+  }
+}

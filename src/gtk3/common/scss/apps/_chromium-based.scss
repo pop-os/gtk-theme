@@ -1,0 +1,11 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _chromium-based.scss - App overrides for Chromium-based apps (chrome)
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+tooltip.chromium {
+  border-radius: $corner_radius;
+}

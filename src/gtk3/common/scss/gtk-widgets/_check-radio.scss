@@ -1,0 +1,136 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * widgets/_check-radio.scss - Check boxes and Radio Buttons
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+%checkradio,
+check,
+radio {
+  min-width: $check_size;
+  min-height: $check_size;
+  padding: $no_padding;
+  transition: $standard_transition;
+  box-shadow: inset 0 0 0 2px to800($fg_color);
+   
+  &:backdrop {
+    box-shadow: inset 0 0 0 2px to400($fg_color);
+  }
+  
+  &:checked,
+  &:indeterminate {  
+    background-color: $color_theme_2;
+    color: $selected_fg_color;
+    box-shadow: inset 0 0 0 2px transparent;
+    
+    &:backdrop {
+      background-color: to400($color_theme_2);
+      box-shadow: inset 0 0 0 2px transparent;
+    }
+  }
+  
+  &:checked {
+    -gtk-icon-source: url('assets/check-symbols.svg'); 
+  }
+  
+  &:indeterminate {
+    -gtk-icon-source: url('assets/indeterminate-symbols.svg');
+  }
+  
+  &:disabled, {
+    box-shadow: inset 0 0 0 2px to400($fg_color);
+    
+    &:checked,
+    &:indeterminate {
+      background-color: to600($color_theme_2);
+      box-shadow: inset 0 0 0 2px transparent;
+      
+      &:backdrop {  
+        background-color: to200($color_theme_2);
+        box-shadow: inset 0 0 0 2px transparent;
+      }
+    }
+  }
+  
+  menuitem &,
+  .menuitem &,
+  modelbutton & {
+    margin: $tiny_padding;
+  }
+  
+  treeview.view &:selected {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $inverse_fg_color;
+  }
+}
+
+//check:not(:checked):active,
+//radio:not(:checked):active {
+//  -gtk-icon-transform: rotate(90deg); 
+//}
+
+
+radio:not(:checked):active,
+check:not(:checked):active {
+  -gtk-icon-transform: scale(0);
+}
+
+check:not(:checked):indeterminate:active,
+radio:not(:checked):indeterminate:active {
+  -gtk-icon-transform: scaleX(-1);
+} 
+
+check:not(:checked),
+radio:not(:checked) {
+  & {
+    transition: $standard_transition,
+      -gtk-icon-transform 0; // sass-lint:disable-line indentation
+  }
+
+  &:active {
+    transition: $standard_transition,
+      -gtk-icon-transform 0; // sass-lint:disable-line indentation
+  }
+
+  //menu menuitem & { transition: none; }
+}
+
+check {
+  border-radius: $corner_radius;
+}
+
+radio {
+  border-radius: $circular_radius;
+}
+
+checkbutton,
+radiobutton {
+  margin: $tiny_padding_em;
+  outline-offset: 4px;
+  
+  label {
+    color: $fg_color;
+    
+    &:disabled {
+      color: to600($fg_color);
+    }
+    
+    &:dir(ltr) {
+      margin-left: $tiny_padding_em;
+    }
+    
+    &:dir(rtl) {
+      margin-right: $tiny_padding_em;
+    }
+    
+    &:backdrop {
+      color: to600($fg_color);
+      
+      &:disabled {
+        color: to400($fg_color);
+      }
+    }
+  }
+}
