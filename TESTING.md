@@ -55,13 +55,6 @@ Things to look at:
  **Check that Nautilus has the proper color**<a name="nautilus"></a>
  - context information (sidebar entries)
  - tabs have orange underlines, path bars
-
- **Gnome shell**<a name="shell"></a>
- - orange underline/straightlines everywhere
- - calendar - selected day is orange - days with events are blue
- - volume slider should be blue
- - active popup menu - orange
- - wifi selection is blue
  
 **Gnome-Tweak-Tool**<a name="gtt"></a>
  
