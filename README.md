@@ -69,7 +69,7 @@ r
 ### Installation from Git Source
 ----------------------------
 
-###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can install it using:
+###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can all build-dependencies using:
 
 ```
 sudo apt install libtool pkg-config sassc inkscape optipng parallel libglib2.0-dev libgdk-pixbuf2.0-dev librsvg2-dev libxml2-utils
