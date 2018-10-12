@@ -72,12 +72,7 @@ r
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can install it using:
 
 ```
-sudo apt install libtool pkg-config libsass0 inkscape optipng parallel libglib2.0-dev libgdk-pixbuf2.0-dev librsvg2-dev libxml2-utils
-```
-
-###### On Ubuntu Cosmic (18.10) based OSs, you will need to install `libsass1` instead:
-```
-sudo apt install libtool pkg-config libsass1 inkscape optipng parallel libglib2.0-dev libgdk-pixbuf2.0-dev librsvg2-dev libxml2-utils
+sudo apt install libtool pkg-config sassc inkscape optipng parallel libglib2.0-dev libgdk-pixbuf2.0-dev librsvg2-dev libxml2-utils
 ```
 
 
