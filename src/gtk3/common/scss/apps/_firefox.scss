@@ -23,22 +23,7 @@ text:selected {
   button > button {
     border: 1px solid $firefox_border_color;
     border-radius: $corner_radius;
-    //background-color: $light_ui_300;
-    //color: $obverse_fg_color;
     box-shadow: none;
-    
-    //> label {
-    //  color: $fg_color;
-    //}
-    
-    //window > & {
-    //  background-color: $bg_color;
-    //  color: $fg_color;
-    //  
-    //  > label {
-    //    color: $fg_color;
-    //  }
-    //}
   }
 
   entry {
@@ -52,23 +37,24 @@ text:selected {
   button,
   button > button {
     padding: 4px 8px;
+    background-color: $bg_color;
     background-size: auto;
-
-    &:hover { 
-      //background-image: $light_ui_700;
-      background-color: $dark_fg_color;
+    color: $fg_color;
+    
+    &:hover {
+      background-color: $dark_bg_color;
     }
-
+    
     &:active {
-      //background-image: $light_ui_700;
-      background-color: $dark_fg_color;
+      background-color: $darker_bg_color;
     }
     
     &.close {
-      margin: $small_padding 0;
+      margin: $small_padding 0 $small_padding $standard_padding;
       padding: 4px;
       border-radius: $circular_radius;
       background-color: $close_button_color;
+      color: $inverse_fg_color;
       
       &:backdrop {
         background-color: to200($titlebar_fg_color);
