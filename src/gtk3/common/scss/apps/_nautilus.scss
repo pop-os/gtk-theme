@@ -11,8 +11,8 @@
   // New Path Bar in 3.30
   .path-bar-box > widget.path-bar > box {
     > button {
-      background-image: none;
       padding: $tiny_padding_em $small_padding_em;
+      background-image: none;
       
       &:checked {
         border-image: none;
