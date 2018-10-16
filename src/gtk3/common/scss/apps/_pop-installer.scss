@@ -33,9 +33,9 @@
     
     &:checked {
       padding-right: 0;
-      border: 0 solid #faa41a;
-      border-image: none;
+      border: 0 solid $color_theme_2;
       border-left-width: 12px;
+      border-image: none;
     }
     
     &.image-button {
