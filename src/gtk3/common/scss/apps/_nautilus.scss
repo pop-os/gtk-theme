@@ -117,3 +117,11 @@
     background-color: $bg_color;
   }
 }
+
+// Nautilus Desktop Widget
+
+.nautilus-desktop.nautilus-canvas-item:not(:selected),
+.caja-desktop.caja-canvas-item:not(:selected) {
+  color: $white;
+  text-shadow: $shadow_1;
+}
