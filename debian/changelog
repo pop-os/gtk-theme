@@ -3,6 +3,7 @@ pop-gtk-theme (4.0.1) cosmic; urgency=medium
   * Fix for GNOME Terminal jumping issue. (#217)
   * Fix for GNOME Weather forecast background (#219)
   * Fix for Firefox CSD window dragging (#223)
+  * Desktop Icon text are now readable.
 
  -- Ian Santopietro <ian@system76.com>  Fri, 19 Oct 2018 12:31:44 -0600
 
@@ -663,4 +664,3 @@ pop-gtk-theme (1.0.0) zesty; urgency=medium
   * First release
 
  -- Jeremy Soller <jeremy@system76.com>  Thu, 20 Apr 2017 11:07:01 -0600
-
