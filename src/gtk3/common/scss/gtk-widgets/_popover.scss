@@ -19,6 +19,13 @@ popover.osd,
     padding: $tiny_padding_em;
   }
   
+  button image,
+  flowbox image,
+  button label,
+  flowbox label {
+    padding: 0;
+  }
+
   .view {
     background-color: transparent;
   }
