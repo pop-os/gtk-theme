@@ -74,15 +74,25 @@ stackswitcher > button.radio:hover {
 .titlebar .linked,
 .headerbar .linked,
 headerbar .linked {
+  min-height: $large_size;
+  margin: 4px 0;
+  padding: 0;
   background-color: to100($titlebar_fg_color);
   
-  button:checked {
-    @include flat;
-    background-color: transparent;
-    color: $titlebar_fg_color;
+  button {
+
+    &:checked {
+      @include flat;
+      background-color: transparent;
+      color: $titlebar_fg_color;
+    }
+
+    &:hover {
+      background-color: to100($titlebar_fg_color);
+    }
   }
   
-  button:hover {
-    background-color: to100($titlebar_fg_color);
+  &.stack-switcher button.text-button {
+    padding: 0 $standard_padding * 2;
   }
 }
