@@ -10,13 +10,13 @@
 // git.gnome.org/browse/gnome-builder/tree/data/themes?h=gnome-builder-3-26
 
 window.workbench > stack.titlebar {
-  padding: $mini_padding $standard_padding;
+  padding: $no_padding $standard_padding;
 
   .global-search {
     margin: $tinier_padding;
   }
   headerbar omnibar.linked.horizontal {
-    min-height: $large_size + 3px;
+    min-height: $large_size + 2px;
 
     button:first-child {
       margin: 0 $tiny_padding 0 0;

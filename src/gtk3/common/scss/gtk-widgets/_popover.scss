@@ -33,4 +33,9 @@ popover.osd,
       padding: 0;
     }
   }
+
+  .linked .model.image-button {
+    margin: 0;
+    border-radius: $corner_radius;
+  }
 }
