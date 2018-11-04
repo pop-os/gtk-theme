@@ -117,3 +117,14 @@
     background-color: $bg_color;
   }
 }
+
+// Nautilus Desktop Widget
+
+.nautilus-desktop.nautilus-canvas-item:not(:selected),
+.caja-desktop.caja-canvas-item:not(:selected) {
+  color: $white;
+  text-shadow: -1px 0 $text_shadow_color,
+    0 1px $text_shadow_color, // sass-lint:disable-line indentation
+    1px 0 $text_shadow_color, // sass-lint:disable-line indentation
+    0 -1px $text_shadow_color; // sass-lint:disable-line indentation
+}
