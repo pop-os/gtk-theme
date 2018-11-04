@@ -86,6 +86,9 @@ $titlebar_dl_color: mix($titlebar_bg_color, black, 80%);
 $titlebar_active_color: if($titlebar=='dark', $light_ui_100, $warm_grey_900);
 $close_button_color: mix($red_500, $color_theme_2, 50%);
 
+// Misc Colors
+$text_shadow_color: rgba($black, 0.7);
+
 /*
  * Debug Block
  */
