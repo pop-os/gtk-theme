@@ -170,7 +170,7 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color theme_selected_fg_color #{'' + $selected_fg_color};
 
 //base background color of insensitive widgets */
-@define-color insensitive_bg_color #{'' + $bg_color};
+@define-color insensitive_bg_color #{'' + t600($bg_color)};
 
 //text foreground color of insensitive widgets */
 @define-color insensitive_fg_color #{'' + to600($fg_color)};
@@ -179,10 +179,10 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color insensitive_base_color #{'' + $dark_bg_color};
 
 //widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #{'' + $fg_color};
+@define-color theme_unfocused_fg_color #{'' + to600($fg_color)};
 
 //text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #{'' + $fg_color};
+@define-color theme_unfocused_text_color #{'' + to600($fg_color)};
 
 //widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #{'' + $bg_color};
@@ -191,13 +191,13 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color theme_unfocused_base_color #{'' + $base_color};
 
 //base background color of selections on backdrop windows */
-@define-color theme_unfocused_selected_bg_color #{'' + $color_theme_1};
+@define-color theme_unfocused_selected_bg_color #{'' + to600($color_theme_1)};
 
 //text/foreground color of selections on backdrop windows */
 @define-color theme_unfocused_selected_fg_color #{'' + to600($fg_color)};
 
 //insensitive color on backdrop windows */
-@define-color unfocused_insensitive_color #{'' + $fg_color};
+@define-color unfocused_insensitive_color #{'' + to400($fg_color)};
 
 //widgets main borders color */
 @define-color borders #{'' + to200($fg_color)};
