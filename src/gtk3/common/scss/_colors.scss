@@ -150,6 +150,9 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 
 // Sass thinks we're using the colors in the variables as strings and may shoot
 // warning, it's innocuous and can be defeated by using '' + $var
+// Also, this doesn't work with our toX00 functions, so set a var for those
+// first and set the @define to that.
+
 //widget text/foreground color */
 @define-color theme_fg_color #{'' + $fg_color};
 
@@ -170,19 +173,23 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color theme_selected_fg_color #{'' + $selected_fg_color};
 
 //base background color of insensitive widgets */
-@define-color insensitive_bg_color #{'' + t600($bg_color)};
+$theme_insensitive_bg_color: to600($bg_color);
+@define-color insensitive_bg_color #{'' + $theme_insensitive_bg_color};
 
 //text foreground color of insensitive widgets */
-@define-color insensitive_fg_color #{'' + to600($fg_color)};
+$theme_insensitive_fg_color: to600($fg_color);
+@define-color insensitive_fg_color #{'' + $theme_insensitive_fg_color};
 
 //insensitive text widgets and the like base background color */
 @define-color insensitive_base_color #{'' + $dark_bg_color};
 
 //widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #{'' + to600($fg_color)};
+$theme_unfocused_fg_color: to600($fg_color);
+@define-color theme_unfocused_fg_color #{'' + $theme_unfocused_fg_color};
 
 //text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #{'' + to600($fg_color)};
+$theme_unfocused_text_color: to600($fg_color);
+@define-color theme_unfocused_text_color #{'' + $theme_unfocused_text_color};
 
 //widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #{'' + $bg_color};
@@ -191,19 +198,23 @@ $close_button_color: mix($red_500, $color_theme_2, 50%);
 @define-color theme_unfocused_base_color #{'' + $base_color};
 
 //base background color of selections on backdrop windows */
-@define-color theme_unfocused_selected_bg_color #{'' + to600($color_theme_1)};
+$theme_unfocused_selected_bg_color: to600($color_theme_1);
+@define-color theme_unfocused_selected_bg_color #{'' + $theme_unfocused_selected_bg_color};
 
 //text/foreground color of selections on backdrop windows */
-@define-color theme_unfocused_selected_fg_color #{'' + to600($fg_color)};
+$theme_unfocused_selected_fg_color: to600($fg_color);
+@define-color theme_unfocused_selected_fg_color #{'' + $theme_unfocused_selected_fg_color};
 
 //insensitive color on backdrop windows */
-@define-color unfocused_insensitive_color #{'' + to400($fg_color)};
+$theme_unfocused_insensitive_color: to400($fg_color);
+@define-color unfocused_insensitive_color #{'' + $theme_unfocused_insensitive_color};
 
 //widgets main borders color */
-@define-color borders #{'' + to200($fg_color)};
+$theme_borders_color: to200($fg_color);
+@define-color borders #{'' + $theme_borders_color};
 
 //widgets main borders color on backdrop windows */
-@define-color unfocused_borders #{'' + to200($fg_color)};
+@define-color unfocused_borders #{'' + $theme_borders_color};
 
 //these are pretty self explicative */
 @define-color warning_color #{'' + $warning_color};
