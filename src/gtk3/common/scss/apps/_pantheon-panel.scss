@@ -1,12 +1,37 @@
 // This file is part of the Pop!_GTK Theme.
 // See gtk.scss for full license and copyright information
-/* 
- * _pantheon-panel.scss - App overrides for Pantheon Panel
- *
- * File credits: Ian Santopietro <isantop@gmail.com>
- */
+/*
+* _pantheon-panel.scss - App overrides for Pantheon Panel
+*
+* File credits: Ian Santopietro <isantop@gmail.com>
+*/
 
 .panel {
+  background-color: transparent;
+  transition: all 100ms ease-in-out;
+}
+
+.panel.maximized {
   background-color: $warm_grey_900;
-  font-weight: normal;  
+}
+
+.panel.translucent {
+  background-color: rgba($warm_grey_900, 0.5);
+
+}
+
+.panel.color-light.translucent {
+  background-color: rgba(#fff, 0.85);
+}
+
+.composited-indicator > revealer label,
+.composited-indicator > revealer image,
+.composited-indicator > revealer spinner {
+  color: #fff;
+}
+
+.panel.color-light .composited-indicator > revealer label,
+.panel.color-light .composited-indicator > revealer image,
+.panel.color-light .composited-indicator > revealer spinner {
+  color: rgba(#000, 0.65);
 }
