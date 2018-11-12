@@ -6,10 +6,6 @@
 
 A GTK+ theme for Pop!_OS 
 
-*NOTE* This version of the theme is currently in _ALPHA_. It is not considered
-complete or ready for day-to-day use. Certain elements may not be themed 
-correctly.
-
 
 ## Screenshots
 -------------------
