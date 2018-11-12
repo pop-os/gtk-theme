@@ -34,6 +34,9 @@ stackswitcher.horizontal.linked.stack-switcher.osd {
   }
 }
 
-window.csd > grid.vertical > stack grid.horizontal > grid.horizontal > grid.horizontal > stack > scrolledwindow > viewport {
-  background-color: transparent;
+window.csd > grid.vertical > stack grid.horizontal > grid.horizontal {
+  > grid.horizontal > stack > scrolledwindow > viewport {
+    background-color: transparent;
+  }
 }
+
