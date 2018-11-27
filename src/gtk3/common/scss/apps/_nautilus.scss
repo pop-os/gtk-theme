@@ -77,6 +77,10 @@
     background-color: $color_theme_1;
     color: $fg_color;
     text-shadow: $shadow_0;
+
+    &:selected {
+      color: $inverse_fg_color;
+    }
   }
 
   .nautilus-canvas-item {

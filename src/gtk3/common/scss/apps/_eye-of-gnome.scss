@@ -18,7 +18,7 @@ window.csd > headerbar.titlebar > box.linked {
   }
   
   > entry {
-    margin: $tiny_padding;
+    margin: 0;
     border-radius: $corner_radius $corner_radius 0 0;
   }
 }

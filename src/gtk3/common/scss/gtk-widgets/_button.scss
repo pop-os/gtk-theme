@@ -113,7 +113,9 @@ button,
     
     .titlebar &,
     headerbar & {
-      padding: $tiny_padding_em 2 * $large_padding_em;
+      min-width: $large_size;
+      min-height: $large_size;
+      padding: 0 $standard_padding;
       color: $titlebar_fg_color;
       
       &:hover {
