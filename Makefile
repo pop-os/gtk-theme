@@ -94,7 +94,7 @@ $(gtk3_versions): %:
 
 lint:
 	@echo "** Checking for Code Quality..."
-	sass-lint -vqc scss-lint.yml src/gtk3/**/scss/**/*.scss
+	sass-lint -vqc sass-lint.yml src/gtk3/**/scss/**/*.scss
 
 install-gtk3:
 	$(foreach type,$(variants),install -d $(DESTDIR)$(THEMES_DIR)/$(theme_name)$(type);)

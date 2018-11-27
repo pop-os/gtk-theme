@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - npm install -g sass-lint
+script: sass-lint -vqc sass-lint.yml src/gtk3/**/scss/**/*.scss
