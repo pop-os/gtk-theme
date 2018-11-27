@@ -38,7 +38,7 @@ entry,
   }
   
   image {
-    margin: 0 $tiny_padding_em 0 $no_padding;
+    margin: 0;
     color: $fg_color;
     
     &:backdrop {
@@ -194,4 +194,9 @@ combobox {
   entry + button {
     padding: $tinier_padding;
   }
+}
+
+image.entry_icon {
+  padding-bottom: 12px;
+  padding-left: 4px;
 }

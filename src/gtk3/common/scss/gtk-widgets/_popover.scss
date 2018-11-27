@@ -19,6 +19,13 @@ popover.osd,
     padding: $tiny_padding_em;
   }
   
+  button image,
+  flowbox image,
+  button label,
+  flowbox label {
+    padding: 0;
+  }
+
   .view {
     background-color: transparent;
   }
@@ -32,5 +39,10 @@ popover.osd,
       margin: 2 * $mini_size;
       padding: 0;
     }
+  }
+
+  .linked .model.image-button {
+    margin: 0;
+    border-radius: $corner_radius;
   }
 }
