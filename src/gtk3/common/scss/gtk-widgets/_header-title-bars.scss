@@ -127,6 +127,18 @@ titlebar {
     font-size: 80%;
     font-weight: 500;
   }
+
+  entry {
+    min-height: $large_size - 4px;
+    margin: 0;
+    padding: $mini_padding;
+  }
+
+  box,
+  stack,
+  spinner {
+    margin: 0;
+  }
 }
 
 decoration {
@@ -145,7 +157,7 @@ decoration {
 headerbar,
 .headerbar {
   min-height: $toolbar_size;
-  padding: $mini_padding $standard_padding;
+  padding:  $standard_padding;
   
   entry,
   .entry {
@@ -154,7 +166,7 @@ headerbar,
   
   button,
   .button {
-    margin: $mini_padding 0;
+    margin: $tinier_padding 0;
     background-color: to100($titlebar_fg_color);
     color: $titlebar_fg_color;
     box-shadow: none;

@@ -43,12 +43,23 @@ text:selected {
     
     &:hover {
       background-color: $dark_bg_color;
+
+      &:focus {
+        background-color: $dark_bg_color;
+      }
     }
 
     &:active {
       background-color: $darker_bg_color;
     }
     
+    &:focus,
+    &:selected,
+    &:checked {
+      border-color: $color_theme_2;
+      background-color: $dark_bg_color;
+    }
+
     &.close {
       margin: $small_padding 0 $small_padding $standard_padding;
       padding: 4px;
