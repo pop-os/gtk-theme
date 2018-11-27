@@ -3,4 +3,4 @@ node_js:
 	- "node"
 before_script:
 	- npm install -g sass-lint
-script: sass-lint -vqc scss-lint.yml src/gtk3/**/scss/**/*.scss
+script: sass-lint -vqc sass-lint.yml src/gtk3/**/scss/**/*.scss
