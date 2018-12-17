@@ -107,7 +107,7 @@ radio {
 
 checkbutton,
 radiobutton {
-  margin: $tiny_padding_em;
+  margin: $mini_padding_em + 0.1em;
   outline-offset: 4px;
   
   label {
