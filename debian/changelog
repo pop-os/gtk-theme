@@ -1,3 +1,11 @@
+pop-gtk-theme (4.1.0) cosmic; urgency=medium
+
+  * Reduce padding on several widgets. Fixes #243
+  * Rework styling on spinbuttons, particularly vertical ones.
+  * Make toolbars draggable too (like Menus).
+
+ -- Ian Santopietro <ian@pop-os.localdomain>  Mon, 17 Dec 2018 11:38:54 -0700
+
 pop-gtk-theme (4.0.1) cosmic; urgency=medium
 
   * Fix for GNOME Terminal jumping issue. (#217)
