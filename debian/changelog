@@ -3,6 +3,7 @@ pop-gtk-theme (4.1.0) cosmic; urgency=medium
   * Reduce padding on several widgets. Fixes #243
   * Rework styling on spinbuttons, particularly vertical ones.
   * Make toolbars draggable too (like Menus).
+  * Addresses poor styling of "Install" buttons in Pop_Shop.
 
  -- Ian Santopietro <ian@pop-os.localdomain>  Mon, 17 Dec 2018 11:38:54 -0700
 
