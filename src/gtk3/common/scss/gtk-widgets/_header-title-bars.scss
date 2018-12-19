@@ -77,17 +77,11 @@ titlebar {
     }
   }
   
-  window > &.flat,
+  &.flat,
   messagedialog & {
     border-width: 0;
     background-color: $bg_color;
-    color: $fg_color;
     box-shadow: none;
-
-    image,
-    label {
-      color: $fg_color;
-    }
     
     .title {
       color: $fg_color;

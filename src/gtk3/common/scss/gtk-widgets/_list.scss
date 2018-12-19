@@ -38,28 +38,18 @@ list,
       box-shadow: $shadow_1;
       
       &:hover {
-        background-color: rgba($fg_color, 0.1);
+        background-color: $bg_hl_color;
+        box-shadow: $shadow_2;
         
         &:active {
-          background-color: rgba($fg_color, 0.2);
+          background-color: $dark_bg_color;
+          box-shadow: $shadow_0;
         }
-      }
-
-      &.image-button,
-      &.up,
-      &.down {
-        background-color: transparent;
-        box-shadow: none;
       }
       
       &.flat label
       &.flat image {
         color: to800($fg_color);
-      }
-
-      &.combo {
-        background-color: $bg_hl_color;
-        box-shadow: $shadow_1;
       }
     }
     
