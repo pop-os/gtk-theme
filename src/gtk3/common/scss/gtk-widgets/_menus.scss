@@ -7,10 +7,8 @@
  */
 
 menu,
-.content-view .menu,
-window.menu,
 window.popup {
-  padding: $tinier_padding;
+  padding: $mini_padding;
   border-radius: $corner_radius;
   background-color: $bg_color;
 
@@ -94,7 +92,7 @@ menuitem,
 .menuitem
 modelbutton, {
   min-width: $large_size;
-  padding: $mini_padding_em;
+  padding: $mini_padding;
   border: none;
   border-radius: $corner_radius;
   background-color: transparent;
@@ -136,7 +134,7 @@ modelbutton, {
   
   image,
   label {
-    padding: $tinier_padding_em;
+    padding: $mini_padding;
   }
 }
 
