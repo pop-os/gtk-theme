@@ -20,6 +20,28 @@ titlebar {
     background-color: lighten($titlebar_bg_color, 5%);
     color: to600($titlebar_fg_color);
   }
+
+  button {
+    box-shadow: none;
+
+    &:hover {
+      background-color: rgba($bg_color, 0.2);
+      box-shadow: none;
+
+      &:focus {
+        background-color: rgba($bg_color, 0.2);
+      }
+
+      &:active {
+        background-color: rgba($bg_color, 0.4);
+        box-shadow: $shadow_0;
+      }
+    }
+
+    &:focus {
+      background-color: rgba($bg_color, 0.1);
+    }
+  }
   
   .maximized &,
   .fullscreen &,

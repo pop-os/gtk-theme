@@ -23,26 +23,46 @@
   }
 }
 
+%button-fallback {
+  // fallback buttons for non-native apps
+  @extend %fallback-normal;
+
+  &:active,
+  &:focus { 
+    @extend %fallback-active; 
+  }
+
+  &:disabled { 
+    @extend %fallback-insensitive; 
+  }
+}
+
 %button,
 button,
 .button {
+  @extend %button-fallback;
   padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
   background-color: $bg_hl_color;
-  box-shadow: $shadow_1;
+  
+  // Set shadows for GTK3-Native apps.
+  .background & {
+    box-shadow: $shadow_1;
+  }
+  
   @include base_states;
   
   &:backdrop {
     color: to600($fg_color);
   }
   
-  &:hover {
+  .background &:hover {
     box-shadow: $shadow_2;
   }
   
-  &:active {
+  .background &:active {
     background-color: $dark_bg_color;
     box-shadow: $shadow_0;
   }

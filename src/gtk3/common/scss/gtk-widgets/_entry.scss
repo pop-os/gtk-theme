@@ -6,9 +6,47 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
+%entry-fallback-normal {
+  border: 1px solid rgba($fg_color, 0.4);
+  background-color: $base_color;
+  color: $fg_color;
+  box-shadow: none;
+  border-image: none;
+}
+
+%entry-fallback-focus {
+  border: 1px solid $color_theme_2;
+  background-color: $base_color;
+  color: $fg_color;
+  box-shadow: none;
+  border-image: none;
+}
+
+%entry-fallback-insensitive {
+  border: 1px solid rgba($fg_color, 0.2);
+  background-color: transparent;
+  color: rgba($fg_color, 0.4);
+  box-shadow: none;
+  border-image: none;
+}
+
+%entry-fallback {
+  &, &.flat {
+    @extend %entry-fallback-normal;
+    border-radius: 2px;
+    &:focus { 
+      @extend %entry-fallback-focus; 
+    }
+    &:disabled { 
+      @extend %entry-fallback-insensitive; 
+    }
+  }
+}
+
 %entry,
 entry,
 .entry {
+  @extend %entry-fallback;
   @include underline(normal);
   padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
