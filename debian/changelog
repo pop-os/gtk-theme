@@ -7,6 +7,7 @@ pop-gtk-theme (4.1.0) cosmic; urgency=medium
     This makes the theme much more compact overall and saves space.
   * Pop_Shop Install and Uninstall buttons are now flat.
   * Windows can now be dragged by grabbing the empty area of toolbar widgets.
+  * Adds a fallback style for non-native apps like LibreOffice. Fixes #245
 
  -- Ian Santopietro <ian@pop-os.localdomain>  Wed, 19 Dec 2018 14:07:32 -0700
 
