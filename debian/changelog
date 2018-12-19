@@ -1,3 +1,15 @@
+pop-gtk-theme (4.1.0) cosmic; urgency=medium
+
+  * Tweaks to the color Palette to ensure that colors are always distinct.
+  * Spinbuttons are now much better looking.
+  * -slim will now make certain things even smaller than before.
+  * The sizes and paddings of many elements are reduced
+    This makes the theme much more compact overall and saves space.
+  * Pop_Shop Install and Uninstall buttons are now flat.
+  * Windows can now be dragged by grabbing the empty area of toolbar widgets.
+
+ -- Ian Santopietro <ian@pop-os.localdomain>  Wed, 19 Dec 2018 14:07:32 -0700
+
 pop-gtk-theme (4.0.1) cosmic; urgency=medium
 
   * Fix for GNOME Terminal jumping issue. (#217)
