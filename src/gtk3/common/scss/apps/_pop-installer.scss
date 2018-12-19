@@ -25,26 +25,12 @@
       }
     }
   }
-  
+
   button.flat.toggle {
-    padding-right: 12px;
-    border: 0 solid $color_theme_2;
-    outline-offset: -2px;
-    
+    border: none;
+  
     &:checked {
-      padding-right: 0;
-      border: 0 solid $color_theme_2;
-      border-left-width: 12px;
-      border-image: none;
-    }
-    
-    &.image-button {
-      // Need to unset these for .image-button classes or the terminal button is
-      // weird.
-      @include flat_button;
-      padding: $tiny_padding_em $small_padding_em;
-      border-width: 0;
-      outline-offset: -6px;
+      background-color: to200($fg_color);
     }
   }
 
