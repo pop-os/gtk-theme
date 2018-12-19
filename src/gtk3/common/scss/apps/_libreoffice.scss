@@ -14,7 +14,7 @@
 // sass-lint disable: indentation
 
 window.background:not(.solid-csd) {
-// for 'Notebookbar' toolbar
+  // for 'Notebookbar' toolbar
   > notebook:not(.frame) {
     border: 0 none transparent; // unset borders
     background-color: $base_color;
@@ -23,9 +23,5 @@ window.background:not(.solid-csd) {
       border: none;
       box-shadow: none;
     }
-  }
-
-  button {
-    // Use a fallback mode for non-native buttons.
   }
 }
