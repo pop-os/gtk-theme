@@ -50,6 +50,15 @@ list,
       &.down {
         background-color: transparent;
         box-shadow: none;
+
+        &:hover {
+          background-color: rgba($fg_color, 0.1);
+          box-shadow: none;
+
+          &:active {
+            background-color: rgba($fg_color, 0.2);
+          }
+        }
       }
       
       &.flat label
@@ -73,7 +82,7 @@ list,
       
       button label,
       button image {
-        color: $fg_color;
+        color: $inverse_fg_color;
       }
       
       button.flat {

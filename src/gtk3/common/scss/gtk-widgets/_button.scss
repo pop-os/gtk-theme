@@ -158,12 +158,26 @@ button,
     font-weight: 600;
   }
   
-  &.suggested-action {
+  &.suggested-action,
+  .background &.suggested-action {
     background-color: $suggested_color;
     color: $inverse_fg_color;
     
     headerbar & {
       box-shadow: $shadow_1;
+    }
+
+    &:focus {
+      outline-color: rgba($inverse_fg_color, 0.4);
+      background-color: $suggested_color;
+
+      &:hover {
+        background-color: mix($suggested_color, $obverse_bg_color, 80%);
+      
+        headerbar & {
+          box-shadow: $shadow_2;
+        }
+      }
     }
     
     &:hover {
@@ -194,6 +208,19 @@ button,
     
     headerbar & {
       box-shadow: $shadow_1;
+    }
+
+    &:focus {
+      outline-color: rgba($inverse_fg_color, 0.4);
+      background-color: $destructive_color;
+
+      &:hover {
+        background-color: mix($destructive_color, $obverse_bg_color, 80%);
+      
+        headerbar & {
+          box-shadow: $shadow_2;
+        }
+      }
     }
     
     &:hover {
