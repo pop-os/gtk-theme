@@ -42,6 +42,7 @@
     @extend %entry;
     @include underline(normal); 
     padding: $tiny_padding_em;
+    border: none;
     background-color: $bg_hl_color;
   }
   

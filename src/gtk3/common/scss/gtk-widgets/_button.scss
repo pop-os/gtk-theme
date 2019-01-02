@@ -47,12 +47,12 @@ button,
   border-radius: $corner_radius;
   background-color: $bg_hl_color;
   
+  @include base_states;
+
   // Set shadows for GTK3-Native apps.
   .background & {
     box-shadow: $shadow_1;
   }
-  
-  @include base_states;
   
   &:backdrop {
     color: to600($fg_color);

@@ -53,13 +53,21 @@ entry,
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $bg_hl_color;
   color: $fg_color;
-  box-shadow: $shadow_0;
+
+  .background & {
+    border: none;
+    box-shadow: $shadow_0;
+
+    &:hover {
+      box-shadow: $shadow_1;
+    }
+  }
   
   &:backdrop {
     color: to600($fg_color);
   }
   
-  &:focus {
+  .background &:focus {
     @include underline(focus);
     box-shadow: $shadow_2;
   }
@@ -107,8 +115,8 @@ entry,
  */
 
 %spinbutton,
-spinbutton,
-.linked spinbutton {
+.background spinbutton,
+.background .linked spinbutton {
   padding: 0;
   border: none;
   border-radius: $corner_radius;
@@ -137,6 +145,10 @@ spinbutton,
     &:disabled {
       color: rgba($fg_color, 0.4);
     }
+  }
+
+  &:disabled entry {
+    color: rgba($fg_color, 0.4);
   }
  
   &,
