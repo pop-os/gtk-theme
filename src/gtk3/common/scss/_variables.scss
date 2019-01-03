@@ -25,6 +25,7 @@ $switch_size: 20px;
 $toolbar_size: if($slim == 'false', 42px, 32px);
 $arrow_size: 19px;
 $scrollbar_size: 10px;
+$icon_size: 16px;
 
 // Padding
 $no_padding: if($slim == 'false', 1px, 0);
