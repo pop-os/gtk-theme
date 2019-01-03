@@ -1,0 +1,84 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _palette.scss - Color Palette Definitions for compatibility with Granite.
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+// Colors need to be named based on the elementary stylesheet names in order to
+// be fully compatible. This maps our Pop names to the elementary names.
+
+/* Strawberry */
+@define-color STRAWBERRY_100 #{'' + $red_100};
+@define-color STRAWBERRY_300 #{'' + $red_300};
+@define-color STRAWBERRY_500 #{'' + $red_500};
+@define-color STRAWBERRY_700 #{'' + $red_700};
+@define-color STRAWBERRY_900 #{'' + $red_900};
+
+/* Orange */
+@define-color ORANGE_100 #{'' + $orange_100};
+@define-color ORANGE_300 #{'' + $orange_300};
+@define-color ORANGE_500 #{'' + $orange_500};
+@define-color ORANGE_700 #{'' + $orange_700};
+@define-color ORANGE_900 #{'' + $orange_900};
+
+/* Banana */
+@define-color BANANA_100 #{'' + $yellow_100};
+@define-color BANANA_300 #{'' + $yellow_300};
+@define-color BANANA_500 #{'' + $yellow_500};
+@define-color BANANA_700 #{'' + $yellow_700};
+@define-color BANANA_900 #{'' + $yellow_900};
+
+/* Lime */
+@define-color LIME_100 #{'' + $green_100};
+@define-color LIME_300 #{'' + $green_300};
+@define-color LIME_500 #{'' + $green_500};
+@define-color LIME_700 #{'' + $green_700};
+@define-color LIME_900 #{'' + $green_900};
+
+/* Blueberry */
+@define-color BLUEBERRY_100 #{'' + $indigo_100};
+@define-color BLUEBERRY_300 #{'' + $indigo_300};
+@define-color BLUEBERRY_500 #{'' + $indigo_500};
+@define-color BLUEBERRY_700 #{'' + $indigo_700};
+@define-color BLUEBERRY_900 #{'' + $indigo_900};
+
+/* Grape */
+@define-color GRAPE_100 #{'' + $purple_100};
+@define-color GRAPE_300 #{'' + $purple_300};
+@define-color GRAPE_500 #{'' + $purple_500};
+@define-color GRAPE_700 #{'' + $purple_700};
+@define-color GRAPE_900 #{'' + $purple_900};
+
+/* Cocoa */
+@define-color COCOA_100 #{'' + $warm_grey_100};
+@define-color COCOA_300 #{'' + $warm_grey_300};
+@define-color COCOA_500 #{'' + $warm_grey_500};
+@define-color COCOA_700 #{'' + $warm_grey_700};
+@define-color COCOA_900 #{'' + $warm_grey_900};
+
+/* Silver */
+@define-color SILVER_100 #{'' + $light_neutral_grey_100};
+@define-color SILVER_300 #{'' + $light_neutral_grey_300};
+@define-color SILVER_500 #{'' + $light_neutral_grey_500};
+@define-color SILVER_700 #{'' + $light_neutral_grey_700};
+@define-color SILVER_900 #{'' + $light_neutral_grey_900};
+
+/* Slate */
+@define-color SLATE_100 #{'' + $dark_neutral_grey_100};
+@define-color SLATE_300 #{'' + $dark_neutral_grey_300};
+@define-color SLATE_500 #{'' + $dark_neutral_grey_500};
+@define-color SLATE_700 #{'' + $dark_neutral_grey_700};
+@define-color SLATE_900 #{'' + $dark_neutral_grey_900};
+
+/* Black */
+@define-color BLACK_100 #{'' + $dark_ui_100};
+@define-color BLACK_300 #{'' + $dark_ui_300};
+@define-color BLACK_500 #{'' + $dark_ui_500};
+@define-color BLACK_700 #{'' + $dark_ui_700};
+@define-color BLACK_900 #{'' + $dark_ui_900};
+ 
+/* Basic UI define */
+
+@define-color fg_color #{'' + $fg_color};
