@@ -173,14 +173,22 @@ decoration {
   margin: 8px;
   border-radius: $corner_radius;
   background-color: $titlebar_bg_color;
-  // Transparent shadows prevent the windows from jumping when shadows change.
-  box-shadow: $shadow_window, 0 16px 16px transparent;
+  box-shadow: $shadow_window;
   
   &:backdrop {
-    background-color: lighten($titlebar_bg_color, 5%);
-    box-shadow: $shadow_2, 0 16px 16px transparent;
+    background-color: $titlebar_hl_color;
+    box-shadow: $shadow_window_bd, $shadow_2;
+  }
+
+  .solid-csd & {
+    margin: 2px;
+    border-radius: 0;
+    background-color: $titlebar_bg_color;
+    box-shadow: none;
   }
 }
+
+
 
 headerbar,
 .headerbar {
