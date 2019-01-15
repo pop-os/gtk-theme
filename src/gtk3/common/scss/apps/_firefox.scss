@@ -10,7 +10,7 @@
  * track down/fix.
  */
 
-$firefox_border_color: to200($black);
+$firefox_border_color: mix($black, $white, 20%);
 
 // Firefox now uses this for selected items
 text:selected { 
@@ -18,6 +18,10 @@ text:selected {
 }
 
 #MozillaGtkWidget { 
+  headerbar.titlebar {
+    margin: 0;
+    padding: (28px - $icon_size * 1.5) / 2;
+  }
   entry,
   button,
   button > button {
@@ -98,6 +102,11 @@ text:selected {
   > frame > border { 
     border-color: $firefox_border_color;
   }  
+
+  frame {
+    border-color: $bg_color;
+  }
+  
   check,
   radio {
     background-color: transparent;

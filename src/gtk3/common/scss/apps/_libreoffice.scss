@@ -1,0 +1,27 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _libreoffice.scss - App overrides for Libreoffice
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ * 
+ * NOTE: LibreOffice does NOT use GTK for styling. It does attempt to guess the 
+ * correct style from this stylesheet, so bugs may appear and are difficult to
+ * track down/fix.
+ */
+
+// workaround for LibreOffice with fallback-mode liked-buttons
+// sass-lint disable: indentation
+
+window.background:not(.solid-csd) {
+  // for 'Notebookbar' toolbar
+  > notebook:not(.frame) {
+    border: 0 none transparent; // unset borders
+    background-color: $base_color;
+
+    > stack {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

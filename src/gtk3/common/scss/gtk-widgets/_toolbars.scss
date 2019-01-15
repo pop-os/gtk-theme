@@ -12,6 +12,7 @@ toolbar,
   background-color: $dark_bg_color;
   color: $dark_fg_color;
   box-shadow: inset 0 0 0 $border_size $darker_bg_color;
+  -GtkWidget-window-dragging: true;
   
   &:backdrop {
     color: to600($dark_fg_color);
@@ -40,9 +41,30 @@ actionbar,
     color: to600($dark_fg_color);
   }
   
-  button {
+  button,
+  .background & button {
     @include flat_button;
     padding: $tiny_padding;
+
+    &:checked {
+      border: none;
+      background-color: $color_theme_2;
+
+      label,
+      image {
+        color: $white;
+      }
+      
+      &:backdrop {
+        border: none;
+        background-color: rgba($color_theme_2, 0.4);
+      }
+    }
+  }
+
+  .linked button,
+  .background & .linked button {
+    border: none;
   }
 }
 

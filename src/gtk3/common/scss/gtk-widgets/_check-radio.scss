@@ -11,7 +11,7 @@ check,
 radio {
   min-width: $check_size;
   min-height: $check_size;
-  padding: $no_padding;
+  padding: $mini_padding;
   transition: $standard_transition;
   box-shadow: inset 0 0 0 2px to800($fg_color);
    
@@ -57,7 +57,7 @@ radio {
   menuitem &,
   .menuitem &,
   modelbutton & {
-    margin: $tiny_padding;
+    margin: $no_padding $tiny_padding;
   }
   
   treeview.view &:selected {
@@ -107,8 +107,8 @@ radio {
 
 checkbutton,
 radiobutton {
-  margin: $tiny_padding_em;
-  outline-offset: 4px;
+  margin: $no_padding;
+  outline-offset: 2px;
   
   label {
     color: $fg_color;

@@ -16,7 +16,7 @@ popover.osd,
   
   image,
   label {
-    padding: $tiny_padding_em;
+    padding: $tinier_padding_em;
   }
   
   button image,
@@ -31,7 +31,7 @@ popover.osd,
   }
   
   .model.image-button {
-    margin: 2 * $mini_size;
+    margin: $mini_size;
     padding: 0;
     border-radius: $circular_radius;
     
