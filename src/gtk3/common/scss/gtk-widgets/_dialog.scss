@@ -50,8 +50,25 @@ messagedialog {
       color: to800($fg_color);
       box-shadow: none;
       
-      &.destructive-action label {
-        color: $destructive_color;
+      &.destructive-action {
+        background-color: transparent;
+
+        &:hover {
+          background-color: rgba($destructive_color, 0.1);
+
+          &:active {
+            background-color: rgba($destructive_color, 0.2);
+          }
+        }
+
+        label {
+          color: $destructive_color;
+
+          &:hover,
+          &:focus {
+            color: $inverse_fg_color;
+          }
+        }
       }
       
       &:focus {
