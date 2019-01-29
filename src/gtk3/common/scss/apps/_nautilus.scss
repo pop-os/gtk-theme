@@ -127,13 +127,7 @@
 // We hate wildcard selectors, but this seems to get rid of the white line. See
 // github.com/pop-os/gtk-theme/issues/266
 .nautilus-desktop-window grid paned overlay notebook box * {
-  border: none;
-  outline-color: transparent;
-  background-clip: border-box;
   background-color: transparent;
-  color: transparent;
-  text-decoration-color: transparent;
-  
 }
 
 .nautilus-desktop.nautilus-canvas-item:not(:selected),
