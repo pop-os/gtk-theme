@@ -1,3 +1,9 @@
+pop-gtk-theme (4.1.2) cosmic; urgency=medium
+
+  * Make round buttons take up less space.
+
+ -- Ian Santopietro <isantop@gmail.com>  Thu, 07 Feb 2019 15:26:51 -0700
+
 pop-gtk-theme (4.1.1) cosmic; urgency=medium
 
   * Ensure Destructive dialog buttons are always readable. (#267)
