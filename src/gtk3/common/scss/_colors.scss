@@ -70,7 +70,7 @@ $warning_color: $yellow_500;
 $error_color: $red_700;
 $question_color: $indigo_300;
 $success_color: $green_700;
-$link_color: $dark_color_2;
+$link_color: if($color=="dark", $color_theme_2, $dark_color_2);
 
 $dark_warning_color: if($color=='dark', $yellow_500, $yellow_700);
 

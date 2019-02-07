@@ -219,8 +219,9 @@
   }
 }
 
-.link {
-  color: $color_theme_2;
+.link,
+:link {
+  color: $link_color;
 }
 .visited {
   color: darken($color_theme_2, 20%);

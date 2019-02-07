@@ -21,7 +21,7 @@ it is very likely an upstream issue.
 
 
 
-**Pop version (run ```head -n 3 /usr/share/themes/Pop/gtk-3.22/gtk.css```):**
+**Pop version (run ```apt policy pop-gtk-theme```):**
 
 
 

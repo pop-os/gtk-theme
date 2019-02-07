@@ -10,7 +10,6 @@ infobar {
   border: none;
   background-color: $bg_color;
   box-shadow: $shadow_2;
-
   
   &.frame {
     border-radius: $corner_radius;
@@ -19,6 +18,7 @@ infobar {
   label,
   image {
     color: $fg_color;
+    -gtk-icon-style: symbolic;
   }
   
   &.error {
@@ -31,6 +31,20 @@ infobar {
     
     button {
       background-color: mix($bg_color, $error_color, 20%);
+    }
+
+    menu,
+    popover {
+      image,
+      label {
+        color: $fg_color;
+      }
+    }
+    
+    button,
+    button label,
+    button image {
+      color: $inverse_fg_color;
     }
   }
   
@@ -45,6 +59,20 @@ infobar {
     button {
       background-color: mix($bg_color, $question_color, 20%);
     }
+
+    menu,
+    popover {
+      image,
+      label {
+        color: $fg_color;
+      }
+    }
+    
+    button,
+    button label,
+    button image {
+      color: $inverse_fg_color;
+    }
   }
   
   &.warning {
@@ -57,6 +85,7 @@ infobar {
     
     button {
       background-color: mix($bg_color, $warning_color, 20%);
+      color: $obverse_fg_color;
     }
   }
   
@@ -70,6 +99,38 @@ infobar {
     
     button {
       background-color: mix($bg_color, $information_color, 20%);
+      color: $inverse_fg_color;
+    }
+
+    menu,
+    popover {
+      image,
+      label {
+        color: $fg_color;
+      }
+    }
+    
+    button,
+    button label,
+    button image {
+      color: $inverse_fg_color;
+    }
+  }
+  
+  .linked {
+    background-color: rgba($obverse_bg_color, 0.1);
+
+    button {
+      background-color: transparent;
+
+      &:hover {
+        background-color: rgba($inverse_bg_color, 0.1);
+      }
+
+      &:active {
+        background-color: rgba($inverse_bg_color, 0.3);
+      }
     }
   }
 }
+
