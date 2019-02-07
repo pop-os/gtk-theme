@@ -61,8 +61,37 @@ messagedialog {
           }
         }
 
+        &:focus {
+          outline-color: rgba($fg_color, 0.2);
+        }
+
         label {
           color: $destructive_color;
+
+          &:hover,
+          &:focus {
+            color: $inverse_fg_color;
+          }
+        }
+      }
+
+      &.suggested-action {
+        background-color: transparent;
+
+        &:hover {
+          background-color: rgba($suggested_color, 0.1);
+
+          &:active {
+            background-color: rgba($suggested_color, 0.2);
+          }
+        }
+
+        &:focus {
+          outline-color: rgba($fg_color, 0.2);
+        }
+
+        label {
+          color: $suggested_color;
 
           &:hover,
           &:focus {
