@@ -1,3 +1,9 @@
+pop-gtk-theme (4.1.2) cosmic; urgency=medium
+
+  * Nautilus Desktop menu is no longer transparent. (#272)
+
+ -- Ian Santopietro <isantop@gmail.com>  Mon, 11 Feb 2019 10:35:05 -0700
+
 pop-gtk-theme (4.1.1) cosmic; urgency=medium
 
   * Ensure Destructive dialog buttons are always readable. (#267)
