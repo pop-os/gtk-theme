@@ -1,8 +1,8 @@
 pop-gtk-theme (4.1.2) cosmic; urgency=medium
 
-  * Make round buttons take up less space.
+  * Nautilus Desktop menu is no longer transparent. (#272)
 
- -- Ian Santopietro <isantop@gmail.com>  Thu, 07 Feb 2019 15:26:51 -0700
+ -- Ian Santopietro <isantop@gmail.com>  Mon, 11 Feb 2019 10:35:05 -0700
 
 pop-gtk-theme (4.1.1) cosmic; urgency=medium
 
