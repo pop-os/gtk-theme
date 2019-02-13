@@ -41,6 +41,8 @@
 button,
 .button {
   @extend %button-fallback;
+  min-width: $tiny_size;
+  min-height: $tiny_size;
   padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
   border: none;
@@ -105,10 +107,9 @@ button,
   
   &.round,
   &.circular {
-    min-width: $medium_size;
-    min-height: $medium_size;
-    margin: $mini_padding;
-    padding: $tiny_padding_em;
+    min-width: $large_size;
+    min-height: $large_size;
+    padding: 0;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
   }
