@@ -11,7 +11,10 @@ switch {
   border-radius: $circular_radius;
   background-clip: padding-box;
   background-color: to600($fg_color);
-  background-image: url('assets/switch-symbols.svg');
+  background-image: -gtk-scaled(
+    url('assets/switch-symbols@1.png'),
+    url('assets/switch-symbols@2.png'),
+    url('assets/switch-symbols@3.png'));
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

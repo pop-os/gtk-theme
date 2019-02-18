@@ -32,11 +32,17 @@ radio {
   }
   
   &:checked {
-    -gtk-icon-source: url('assets/check-symbols.svg'); 
+    -gtk-icon-source: -gtk-scaled(
+      url('assets/check-symbols@1.png'),
+      url('assets/check-symbols@2.png'),
+      url('assets/check-symbols@3.png')); 
   }
   
   &:indeterminate {
-    -gtk-icon-source: url('assets/indeterminate-symbols.svg');
+    -gtk-icon-source: -gtk-scaled(
+      url('assets/indeterminate-symbols@1.png'),
+      url('assets/indeterminate-symbols@2.png'),
+      url('assets/indeterminate-symbols@3.png'));
   }
   
   &:disabled, {
