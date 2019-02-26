@@ -59,6 +59,10 @@ list,
             background-color: rgba($fg_color, 0.2);
           }
         }
+
+        &:checked {
+          background-color: $color_theme_2;
+        }
       }
       
       &.flat label
