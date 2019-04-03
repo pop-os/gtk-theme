@@ -255,12 +255,18 @@ headerbar,
   }
 }
 
+.titlebar hdyleaflet headerbar,
+hdyleaflet headerbar {
+  min-height: $toolbar_size;
+  padding: $mini_padding_em $standard_padding_em;
+}
+
 window > .titlebar,
 window > headerbar {
   box-shadow: $shadow_1;
 }
 
-menu window.popup decoration, {
+menu window.popup decoration {
   margin: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_3;

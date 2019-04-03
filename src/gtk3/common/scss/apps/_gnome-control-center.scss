@@ -6,12 +6,19 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-window.csd > box.horizontal > stack > box.vertical > widget > stack { 
-  overlay > box.vertical > grid.horizontal > stack > button.toggle {
-    @include flat_button;
+window.csd {
+  .titlebar > box > headerbar {
+    min-height: $toolbar_size;
+    padding: $mini_padding_em $standard_padding_em;
   }
   
-  viewport > grid.horizontal box row.activatable button.circular.image-button {
-    @include flat_button;
+  > box.horizontal > stack > box.vertical > widget > stack { 
+    overlay > box.vertical > grid.horizontal > stack > button.toggle {
+      @include flat_button;
+    }
+    
+    viewport > grid.horizontal box row.activatable button.circular.image-button {
+      @include flat_button;
+    }
   }
 }
