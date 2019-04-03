@@ -36,13 +36,13 @@ $small_padding: if($slim == 'false', 8px, 6px);
 $standard_padding: if($slim == 'false', 12px, 10px);
 $large_padding: if($slim == 'false', 16px, 12px);
 
-$no_padding_em: 0.1em;
-$mini_padding_em: 0.2em;
-$tinier_padding_em: 0.4em;
-$tiny_padding_em: if($slim == 'false', 0.6em, 0.4em);
-$small_padding_em: if($slim == 'false', 0.8em, 0.6em);
-$standard_padding_em: if($slim == 'false', 1.2em, 1em);
-$large_padding_em: if($slim == 'false', 1.6em, 1.2em);
+$no_padding_em: if($slim == 'false', 0.1em, 0);
+$mini_padding_em: if($slim == 'false', 0.15em, 0);
+$tinier_padding_em: if($slim == 'false', 0.3em, 0.2em);
+$tiny_padding_em: if($slim == 'false', 0.5em, 0.3em);
+$small_padding_em: if($slim == 'false', 0.6em, 0.3em);
+$standard_padding_em: if($slim == 'false', 1em, 0.8em);
+$large_padding_em: if($slim == 'false', 1.4em, 1em);
 
 // Border Shadows
 $titlebar_border: 
