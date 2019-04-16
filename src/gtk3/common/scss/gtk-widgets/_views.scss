@@ -15,7 +15,8 @@
   }
 }
 
-treeview {
+treeview,
+.background treeview {
   border-radius: 0;
   background-color: $base_color;
   -GtkTreeView-vertical-separator: $tinier_padding;
