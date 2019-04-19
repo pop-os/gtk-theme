@@ -37,6 +37,11 @@
     }
   }
   
+  // Fix labels in 3.32
+  .sidebar-icon {
+    margin-right: 6px;
+  }
+
   // Zoom controls
   > popover > stack > box.vertical > box.linked.horizontal 
   + box.vertical > box.vertical > box.horizontal.linked {
