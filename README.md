@@ -25,7 +25,7 @@ Pop supports Gtk+ 3.22.x
 
 ### Recommendations
 
-- For GTK, use icons alongside [Pop Icon Theme](https://github.com/system76/pop-icon-theme)
+- For GTK, use icons alongside [Pop Icon Theme](https://github.com/pop-os/icon-theme)
 - For fonts, use:
  > Window Titles: Fira Sans SemiBold 10
 
