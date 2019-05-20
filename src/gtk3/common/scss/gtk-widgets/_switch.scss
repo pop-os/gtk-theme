@@ -10,7 +10,7 @@ switch {
   transition: $standard_transition;
   border-radius: $circular_radius;
   background-clip: padding-box;
-  background-color: to600($fg_color);
+  background-color: rgba($fg_color, 0.6);
   background-image: -gtk-scaled(
     url('assets/switch-symbols@1.png'),
     url('assets/switch-symbols@2.png'),
@@ -25,13 +25,13 @@ switch {
     0 1px 2px rgba($black, 0.24) inset;// sass-lint:disable-line indentation
 
   &:disabled { 
-    background-color: to200($fg_color);
+    background-color: rgba($fg_color, 0.2);
     box-shadow: none;
     opacity: 0.7;
   }
   
   &:backdrop {
-    background-color: to200($fg_color);
+    background-color: rgba($fg_color, 0.2);
   }
 
   &:checked {
@@ -39,11 +39,11 @@ switch {
     
 
     &:disabled { 
-      background-color: to600($color_theme_2); 
+      background-color: rgba($color_theme_2, 0.6); 
       box-shadow: none;
     }
     &:backdrop { 
-      background-color: to600($color_theme_2); 
+      background-color: rgba($color_theme_2, 0.6); 
     }
   }
   
@@ -59,7 +59,7 @@ switch {
     margin: 2px;
     transition: $standard_transition;
     border-radius: $circular_radius;
-    background-color: $bg_hl_color;
+    background-color: $overlay_color;
     box-shadow: $shadow_1;
     -gtk-outline-radius: $circular_radius;
     
@@ -91,7 +91,7 @@ switch {
 
   &:checked slider {
     transition: all 500ms ease;
-    color: $bg_hl_color;
+    color: $overlay_color;
   }
 
   &:checked:disabled slider { 

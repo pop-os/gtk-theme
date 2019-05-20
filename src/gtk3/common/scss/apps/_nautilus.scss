@@ -20,11 +20,11 @@
       }
       
       &:hover {
-        background-color: to100($titlebar_fg_color);
+        background-color: rgba($titlebar_fg_color, 0.1);
       }
       
       &:active {
-        background-color: to200($titlebar_fg_color);
+        background-color: rgba($titlebar_fg_color, 0.1);
       }
     }
     
@@ -47,7 +47,7 @@
   + box.vertical > box.vertical > box.horizontal.linked {
     margin: $tiny_padding;
     border-radius: $corner_radius;
-    background-color: $bg_hl_color;
+    background-color: $overlay_color;
     box-shadow: $shadow_0;
     
     button:disabled {
@@ -100,9 +100,9 @@
     border-width: $border_size;
     border-style: solid solid none;
     border-radius: $corner_radius $corner_radius 0 0;
-    border-color: to400($fg_color);
+    border-color: rgba($fg_color, 0.4);
     background-clip: padding-box;
-    background-color: $dark_bg_color;
+    background-color: $inverse_overlay_color;
 
     &.bottom.left { // axes left border and border radius
       margin-right: 8px - 1px;
@@ -142,7 +142,7 @@
 
     :active,
     :hover {
-      background-color: $darker_bg_color;
+      background-color: $inverse_overlay_color;
 
       check,
       radio {

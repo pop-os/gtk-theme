@@ -17,7 +17,7 @@
       background-color: $color_theme_1;
       
       &:backdrop {
-        background-color: to600($color_theme_1);
+        background-color: rgba($color_theme_1, 0.6);
       }
       
       image {
@@ -30,7 +30,7 @@
     border: none;
   
     &:checked {
-      background-color: to200($fg_color);
+      background-color: rgba($fg_color, 0.2);
     }
   }
 

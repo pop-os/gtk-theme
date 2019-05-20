@@ -11,7 +11,7 @@
   color: $inverse_fg_color;
   
   &:backdrop {
-    background-color: to600($color_theme_1);
+    background-color: rgba($color_theme_1, 0.6);
   }
 }
 
@@ -26,7 +26,7 @@ treeview,
 
   
   row:nth-child(odd) {
-    background-color: to100($color_theme_1);
+    background-color: rgba($color_theme_1, 0.1);
   }
   
   row:nth-child(even) {
@@ -40,11 +40,11 @@ treeview,
   }
   
   header button {
-    border: 0 solid to200($fg_color);
+    border: 0 solid rgba($fg_color, 0.2);
     border-right-width: $border_size;
     border-bottom-width: $border_size;
     border-radius: 0;
-    background-color: $dark_bg_color;
+    background-color: $inverse_overlay_color;
     box-shadow: none;
     
     &:first-child {
@@ -84,12 +84,12 @@ treeview,
 }
 
 scrolledwindow {
-  border: 0 solid to100($fg_color);
+  border: 0 solid rgba($fg_color, 0.1);
 }
 
 viewport, 
 viewport.frame {
-  border: 0 solid to100($fg_color);
+  border: 0 solid rgba($fg_color, 0.1);
   border-image-width: 0;
 }
 

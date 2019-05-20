@@ -19,7 +19,7 @@ levelbar block {
   background-color: $color_theme_1;
   
   &:backdrop {
-    background-color: to400($color_theme_1);
+    background-color: rgba($color_theme_1, 0.4);
   }
   
   entry & {
@@ -27,7 +27,7 @@ levelbar block {
     transition: $standard_transition;
     border-bottom: $line_size solid $color_theme_1;
     border-radius: $corner_radius $corner_radius 0 0;
-    background-color:  to400($color_theme_1);
+    background-color:  rgba($color_theme_1, 0.4);
     color: $inverse_fg_color;
   }
 }
@@ -41,10 +41,10 @@ levelbar block.empty {
   transition: $standard_transition;
   border: none;
   border-radius: $circular_radius;
-  background-color: to200($fg_color);
+  background-color: rgba($fg_color, 0.2);
   
   &:backdrop {
-    background-color: to100($fg_color);
+    background-color: rgba($fg_color, 0.1);
   }
   
   entry &,
@@ -76,10 +76,10 @@ treeview.progressbar {
 }
 
 treeview.trough {
-  border-bottom-color: to200($fg_color);
+  border-bottom-color: rgba($fg_color, 0.2);
   
   &:selected {
-    border-bottom-color: to400($inverse_fg_color);
+    border-bottom-color: rgba($inverse_fg_color, 0.4);
   }
 }
 
@@ -92,7 +92,7 @@ levelbar {
       background-color: $error_color;
       
       &:backdrop {
-        background-color: to400($error_color);
+        background-color: rgba($error_color, 0.4);
       }
     }
     
@@ -104,7 +104,7 @@ levelbar {
       background-color: $suggested_color;
       
       &:backdrop {
-        background-color: to400($suggested_color);
+        background-color: rgba($suggested_color, 0.4);
       }
     }
     
@@ -133,7 +133,7 @@ scale {
     margin: -2 * $progress_size;
     transition: $standard_transition;
     border-radius: $circular_radius;
-    outline: $line_size solid to400($light_neutral_grey_700);
+    outline: $line_size solid rgba($light_neutral_grey_700, 0.4);
     background-color: $color_theme_1;
     color: $color_theme_1;
     box-shadow: none;
@@ -147,16 +147,16 @@ scale {
     }
     
     &:backdrop {
-      background-color: to400($color_theme_1);
+      background-color: rgba($color_theme_1, 0.4);
     }
     
     &:disabled {
-      border: $line_size solid to400($fg_color);
+      border: $line_size solid rgba($fg_color, 0.4);
       background-color: $bg_color;
       color: $bg_color;
       
       &:backdrop {
-        border-color: to200($fg_color);
+        border-color: rgba($fg_color, 0.2);
       }
     }
   }
@@ -170,16 +170,16 @@ scale {
     @extend %progress;
     
     &:disabled {
-      background-color: to400($fg_color);
+      background-color: rgba($fg_color, 0.4);
       
       &:backdrop {
-        background-color: to200($fg_color);
+        background-color: rgba($fg_color, 0.2);
       }
     }
   }
   
   mark indicator {
-    color: to600($fg_color);
+    color: rgba($fg_color, 0.6);
   }
   
   &.horizontal mark indicator {

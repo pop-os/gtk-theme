@@ -8,12 +8,12 @@
 
 calendar {
   padding: $mini_padding;
-  border: $border_size solid to100($fg_color);
+  border: $border_size solid rgba($fg_color, 0.1);
   background-color: $base_color;
   color: $fg_color;
 
   &:disabled { 
-    color: to600($fg_color);
+    color: rgba($fg_color, 0.6);
   }
 
   &:selected {
@@ -23,7 +23,7 @@ calendar {
   }
 
   &.header {
-    border: 0 solid to100($fg_color);
+    border: 0 solid rgba($fg_color, 0.1);
     border-bottom-width: $border_size;
     border-radius: 0;
   }
@@ -33,11 +33,11 @@ calendar {
   }
 
   &.highlight {
-    color: $fg_hl_color;
+    color: rgba($fg_color, 0.8);
     font-weight: 500;
   }
 
   &:indeterminate { 
-    color: to400($fg_color);
+    color: rgba($fg_color, 0.4);
   }
 }

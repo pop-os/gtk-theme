@@ -13,10 +13,10 @@ radio {
   min-height: $check_size;
   padding: $mini_padding;
   transition: $standard_transition;
-  box-shadow: inset 0 0 0 2px to800($fg_color);
+  box-shadow: inset 0 0 0 2px rgba($fg_color, 0.8);
    
   &:backdrop {
-    box-shadow: inset 0 0 0 2px to400($fg_color);
+    box-shadow: inset 0 0 0 2px rgba($fg_color, 0.4);
   }
   
   &:checked,
@@ -26,7 +26,7 @@ radio {
     box-shadow: inset 0 0 0 2px transparent;
     
     &:backdrop {
-      background-color: to400($color_theme_2);
+      background-color: rgba($color_theme_2, 0.4);
       box-shadow: inset 0 0 0 2px transparent;
     }
   }
@@ -45,16 +45,16 @@ radio {
       url('assets/indeterminate-symbols@3.png'));
   }
   
-  &:disabled, {
-    box-shadow: inset 0 0 0 2px to400($fg_color);
+  &:disabled {
+    box-shadow: inset 0 0 0 2px rgba($fg_color, 0.4);
     
     &:checked,
     &:indeterminate {
-      background-color: to600($color_theme_2);
+      background-color: rgba($color_theme_2, 0.6);
       box-shadow: inset 0 0 0 2px transparent;
       
       &:backdrop {  
-        background-color: to200($color_theme_2);
+        background-color: rgba($color_theme_2, 0.2);
         box-shadow: inset 0 0 0 2px transparent;
       }
     }
@@ -120,7 +120,7 @@ radiobutton {
     color: $fg_color;
     
     &:disabled {
-      color: to600($fg_color);
+      color: rgba($fg_color, 0.6);
     }
     
     &:dir(ltr) {
@@ -132,10 +132,10 @@ radiobutton {
     }
     
     &:backdrop {
-      color: to600($fg_color);
+      color: rgba($fg_color, 0.6);
       
       &:disabled {
-        color: to400($fg_color);
+        color: rgba($fg_color, 0.4);
       }
     }
   }

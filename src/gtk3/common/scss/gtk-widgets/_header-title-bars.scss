@@ -18,7 +18,7 @@ titlebar {
   &:backdrop {
     border-color: lighten($titlebar_hl_color, 5%);
     background-color: lighten($titlebar_bg_color, 5%);
-    color: to600($titlebar_fg_color);
+    color: rgba($titlebar_fg_color, 0.6);
   }
 
   button {
@@ -69,11 +69,11 @@ titlebar {
     box-shadow: none;
     
     &:hover {
-      background-color: to100($titlebar_fg_color);
+      background-color: rgba($titlebar_fg_color, 0.1);
     }
     
     &:active {
-      background-color: to200($titlebar_fg_color);
+      background-color: rgba($titlebar_fg_color, 0.2);
       box-shadow: $shadow_2;
     }
     
@@ -82,7 +82,7 @@ titlebar {
       background-color: $close_button_color;
       
       &:backdrop {
-        background-color: to200($titlebar_fg_color);
+        background-color: rgba($titlebar_fg_color, 0.2);
       }
       
       &:hover {
@@ -115,7 +115,7 @@ titlebar {
       color: $fg_color;
       
       &:backdrop {
-        color: to600($fg_color);
+        color: rgba($fg_color, 0.6);
       }
     }
     
@@ -126,7 +126,7 @@ titlebar {
         background-color: $close_button_color;
         
         &:backdrop {
-          background-color: to400($light_neutral_grey_700);
+          background-color: rgba($light_neutral_grey_700, 0.4);
           color: if($color == 'dark', $inverse_fg_color, $obverse_fg_color);
         }
       }
@@ -203,7 +203,7 @@ headerbar,
   button,
   .button {
     margin: $tinier_padding 0;
-    background-color: to100($titlebar_fg_color);
+    background-color: rgba($titlebar_fg_color, 0.1);
     color: $titlebar_fg_color;
     box-shadow: none;
     border-image: radial-gradient(
@@ -217,21 +217,21 @@ headerbar,
     }
     
     &:backdrop {
-      color: to600($titlebar_fg_color);
+      color: rgba($titlebar_fg_color, 0.6);
     }
     
     &:hover {
-      background-color: to200($titlebar_fg_color);
+      background-color: rgba($titlebar_fg_color, 0.2);
       color: $titlebar_fg_color;
       box-shadow: none;
     }
     
     &:active {
-      background-color: to400($titlebar_fg_color);
+      background-color: rgba($titlebar_fg_color, 0.4);
     }
     
     &:checked {
-      background-color: to100($titlebar_fg_color);
+      background-color: rgba($titlebar_fg_color, 0.1);
       color: $titlebar_fg_color;
       border-image: radial-gradient(
         circle closest-corner at center calc(100% - 1px), 
@@ -239,7 +239,7 @@ headerbar,
         transparent 0%) 0 0 2 / 0 0 2px;
       
       &:hover {
-        background-color: to200($titlebar_fg_color);
+        background-color: rgba($titlebar_fg_color, 0.2);
       }
     }
     

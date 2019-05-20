@@ -8,7 +8,7 @@
 
 separator {
   margin: 0;
-  border: 0 solid to200($fg_color);
+  border: 0 solid rgba($fg_color, 0.2);
   
   menu &,
   &.horizontal {
@@ -24,7 +24,7 @@ separator {
     min-width: 0;
     margin: 0;
     padding: 0;
-    border: 0 solid to100($fg_color);
+    border: 0 solid rgba($fg_color, 0.1);
   }
   
   &.vertical {

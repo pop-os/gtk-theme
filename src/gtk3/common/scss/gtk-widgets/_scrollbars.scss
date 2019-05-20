@@ -28,10 +28,10 @@ scrollbar {
   slider {
     margin: $mini_padding;
     transition: $standard_transition;
-    border: $border_size solid to600($bg_color);
+    border: $border_size solid rgba($bg_color, 0.6);
     border-radius: $circular_radius;
     background-clip: border-box;
-    background-color: to800($fg_color);
+    background-color: rgba($fg_color, 0.8);
   }
   
   &.horizontal slider {
@@ -47,10 +47,10 @@ scrollbar {
   &.hovering {
   
     trough {
-      background-color: to600($darker_bg_color);
+      background-color: rgba($inverse_overlay_color, 0.6);
       
       &:backdrop {
-        background-color: to600($darker_bg_color);
+        background-color: rgba($inverse_overlay_color, 0.6);
       }
     }
     

@@ -68,12 +68,12 @@ button.dzlmenubuttonitem {
   font-weight: normal;
 
   &:disabled {
-    color: to400($fg_color);
+    color: rgba($fg_color, 0.4);
   }
 }
 
 idelayoutstackheader {
-  border-bottom: 1px solid to100($fg_color);
+  border-bottom: 1px solid rgba($fg_color, 0.1);
 
   button:checked {
     color: $fg_color;
@@ -85,10 +85,10 @@ ideeditorutilities > dzldockpaned > box > stackswitcher {
   background-color: $bg_color;
 
   &:dir(ltr) {
-    border-right: 1px solid to100($fg_color);
+    border-right: 1px solid rgba($fg_color, 0.1);
   }
   &:dir(rtl) {
-    border-left: 1px solid to100($fg_color);
+    border-left: 1px solid rgba($fg_color, 0.1);
   }
 
   button {
@@ -110,17 +110,17 @@ popover.messagepopover {
   // padding: 0;
 
   list {
-    border: 1px solid to100($fg_color);
+    border: 1px solid rgba($fg_color, 0.1);
 
     row:not(:last-child) {
-      border-bottom: 1px solid to100($fg_color);
+      border-bottom: 1px solid rgba($fg_color, 0.1);
     }
   }
 }
 
 // Bottom Panel Tabs - doesn't currently work
 dzldockstack {
-  background-color: $dark_bg_color;
+  background-color: $inverse_overlay_color;
   
   dzltabstrip {
     border-radius: $corner_radius;
@@ -129,7 +129,7 @@ dzldockstack {
   
   dzltab {
     border: none; 
-    background-color: $bg_hl_color;
+    background-color: $overlay_color;
     box-shadow: none;
     
     &:checked {

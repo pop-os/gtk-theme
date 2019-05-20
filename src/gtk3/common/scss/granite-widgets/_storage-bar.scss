@@ -24,8 +24,8 @@
     border-bottom-width: $border_size;
     border-left-width: 0;
     border-radius: 0;
-    border-bottom-color: darken($darker_bg_color, 35%);
-    background-color: darken($darker_bg_color, 15%);
+    border-bottom-color: rgba($fg_color, 0.2);
+    background-color: $inverse_overlay_color;
     
     &:first-child {
       border-radius: $corner_radius 0 0;
@@ -46,8 +46,8 @@
 
   .empty-block {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($bg_hl_color, 40%);
-    background-color: darken($bg_hl_color, 5%);
+    border-bottom-color: darken($overlay_color, 40%);
+    background-color: darken($overlay_color, 5%);
     
     image {
       color: $obverse_fg_color;

@@ -42,7 +42,7 @@ rubberband,
 .view.rubberband {
   transition: $standard_transition;
   border: none;
-  background-color: to200($color_theme_1);
+  background-color: rgba($color_theme_1, 0.2);
 }
 
 
@@ -57,7 +57,7 @@ image {
 // Duffeyrolls not donuts?
 .dnd {
   border-radius: $corner_radius;
-  background-color: to200($color_theme_1);
+  background-color: rgba($color_theme_1, 0.2);
   background-image: none;
 }
 
@@ -65,7 +65,7 @@ image {
   min-width: $tiny_size;
   padding: $mini_padding $tiny_padding;
   border-radius: $corner_radius;
-  background-color: $dark_bg_color;
+  background-color: $overlay_color;
   font-size: 85%;
 }
 

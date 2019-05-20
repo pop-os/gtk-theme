@@ -37,7 +37,7 @@
     transition: $standard_transition;
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
-      to400($line_color) 100%,
+      rgba($line_color, 0.4) 100%,
       transparent 0%)
       0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
   }
@@ -52,7 +52,7 @@
     &:backdrop {
       border-image: radial-gradient(
         circle closest-corner at center calc(100% - 1px),
-        to400($focus_color) 100%,
+        rgba($focus_color, 0.4) 100%,
         transparent 0%)
         0 0 2 / 0 0 2px; // sass-lint:disable-line indentation
     }
@@ -61,7 +61,7 @@
   @if $type == disabled {
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
-      to200($line_color) 100%,
+      rgba($line_color, 0.2) 100%,
       transparent 0%)
       0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
   }
@@ -70,7 +70,7 @@
     box-shadow: none;
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
-      to400($line_color) 0%,
+      rgba($line_color, 0.4) 0%,
       transparent 0%)
       0 0 0 / 0 0 0; // sass-lint:disable-line indentation
   }
@@ -90,12 +90,12 @@
   box-shadow: none;
   
   &:hover {
-    background-color: to100($fg_color);  
+    background-color: rgba($fg_color, 0.1);  
     box-shadow: none;
   }
   
   &:active {
-    background-color: to200($fg_color);
+    background-color: rgba($fg_color, 0.2);
     box-shadow: none;
   }
   
@@ -152,14 +152,14 @@
   background-color: $color_theme_1;
   color: $inverse_fg_color;
   &:backdrop {
-    background-color: to600($color_theme_1);
+    background-color: rgba($color_theme_1, 0.6);
   }
 
   @at-root %nobg-selected-items, & {
     color: $inverse_fg_color;
 
     &:disabled {
-      color: to400($inverse_fg_color);
+      color: rgba($inverse_fg_color, 0.4);
     }
   }
 }
@@ -167,7 +167,7 @@
 * {
   //@include reset; //FIXME: Remove for debugging
   //transition: all 200ms ease;
-  outline: 0 solid to400($light_neutral_grey_700);
+  outline: 0 solid rgba($light_neutral_grey_700, 0.4);
   outline-offset: -4px;
   background-clip: padding-box;
   -GtkTextView-error-underline-color: $error_color;
@@ -210,7 +210,7 @@
 
   &:disabled {
     background-color: $bg_color;
-    color: to600($fg_color);
+    color: rgba($fg_color, 0.6);
   }
 
   &:selected {

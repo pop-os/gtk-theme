@@ -24,7 +24,7 @@ list,
     }
     
     &:hover {
-      background-color: $dark_bg_color;
+      background-color: $inverse_overlay_color;
     }
     
     .linked {
@@ -34,7 +34,7 @@ list,
     
     button,
     .linked button {
-      background-color: $bg_hl_color;
+      background-color: $overlay_color;
       box-shadow: $shadow_1;
       
       &:hover {
@@ -67,11 +67,11 @@ list,
       
       &.flat label
       &.flat image {
-        color: to800($fg_color);
+        color: rgba($fg_color, 0.8);
       }
 
       &.combo {
-        background-color: $bg_hl_color;
+        background-color: $overlay_color;
         box-shadow: $shadow_1;
       }
     }
@@ -91,11 +91,11 @@ list,
       
       button.flat {
         &:hover {
-          background-color: to100($inverse_fg_color);
+          background-color: rgba($inverse_fg_color, 0.1);
         }
         
         &:active {
-          background-color: to200($inverse_fg_color);
+          background-color: rgba($inverse_fg_color, 0.2);
         }
         
         label,
@@ -110,24 +110,24 @@ list,
           color: $inverse_fg_color;
           
           &:disabled {
-            border: $line_size solid to400($inverse_fg_color);
+            border: $line_size solid rgba($inverse_fg_color, 0.4);
             background-color: $bg_color;
             color: $bg_color;
             
             &:backdrop {
-              border-color: to200($inverse_fg_color);
+              border-color: rgba($inverse_fg_color, 0.2);
             }
           }
         }
         
         trough {
-          background-color: to600($inverse_fg_color);
+          background-color: rgba($inverse_fg_color, 0.6);
           
           &:disabled {
-            background-color: to200($inverse_fg_color);
+            background-color: rgba($inverse_fg_color, 0.2);
             
             &:backdrop {
-              background-color: to100($inverse_fg_color);
+              background-color: rgba($inverse_fg_color, 0.1);
             }
           }
         }
@@ -137,10 +137,10 @@ list,
           color: $inverse_fg_color;
           
           &:disabled {
-            background-color: to400($inverse_fg_color);
+            background-color: rgba($inverse_fg_color, 0.4);
             
             &:backdrop {
-              background-color: to200($inverse_fg_color);
+              background-color: rgba($inverse_fg_color, 0.2);
             }
           }
         }
@@ -152,7 +152,7 @@ list,
       }
       
       &:backdrop {
-        background-color: to600($color_theme_2);
+        background-color: rgba($color_theme_2, 0.6);
       }
     }
   }

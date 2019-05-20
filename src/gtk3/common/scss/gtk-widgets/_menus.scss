@@ -22,7 +22,7 @@ window.popup {
 
 menubar,
 .menubar {
-  background-color: $darker_bg_color;
+  background-color: $inverse_overlay_color;
   -GtkWidget-window-dragging: true;
   
   > menuitem {
@@ -71,7 +71,7 @@ menubar,
     > menuitem {
       transition: $standard_transition;
       border: $line_size solid transparent;
-      color: to800($titlebar_fg_color);
+      color: rgba($titlebar_fg_color, 0.8);
       
       &:hover {
         border-bottom-color: $color_theme_2;
@@ -91,7 +91,7 @@ menubar,
 
 menuitem,
 .menuitem
-modelbutton, {
+modelbutton {
   min-width: $large_size;
   padding: $mini_padding;
   border: none;
@@ -104,15 +104,15 @@ modelbutton, {
   
   &:active, 
   &:hover {
-    background-color: $darker_bg_color;
+    background-color: $inverse_overlay_color;
   }
   
   :disabled {
-    color: to600($fg_color);
+    color: rgba($fg_color, 0.6);
   }
   
   accelerator {
-    color: to400($fg_color);
+    color: rgba($fg_color, 0.6);
   }
   
   arrow {

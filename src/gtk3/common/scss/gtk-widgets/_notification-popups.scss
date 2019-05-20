@@ -13,7 +13,7 @@
   border: none;
   border-radius: $corner_radius;
   background-clip: padding-box;
-  background-color: to800(mix($inverse_bg_color, $warm_grey_500, 30%));
+  background-color: mix($inverse_bg_color, $warm_grey_500, 30%);
   box-shadow: $shadow_2; 
   
   label {
@@ -25,11 +25,11 @@
     font-weight: 700;
     
     &:hover {
-      background-color: to100($inverse_fg_color);
+      background-color: rgba($inverse_fg_color, 0.1);
     }
     
     &:active {
-      background-color: to200($inverse_fg_color);
+      background-color: rgba($inverse_fg_color, 0.2);
     }
     
     label {
@@ -37,7 +37,7 @@
     }
     
     image {
-      color: to600($inverse_fg_color);
+      color: rgba($inverse_fg_color, 0.6);
     }
     
     &.image-button {

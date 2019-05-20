@@ -8,59 +8,33 @@
 
 @import 'color-palette';
 
-// Some color functions to opacitize colors for certain functions
-@function to800($color) {
-  @return rgba($color, 0.8);
-}
-@function to600($color) {
-  @return rgba($color, 0.6);
-}
-@function to400($color) {
-  @return rgba($color, 0.4);
-}
-@function to200($color) {
-  @return rgba($color, 0.2);
-}
-@function to100($color) {
-  @return rgba($color, 0.1);
-}
-@function to50($color) {
-  @return rgba($color, 0.05);
-}
-
 // Main Accent Colors
-$color_theme_1: if($color=='dark', $blue_700, $blue_500);
-$light_color_1: $blue_300;
-$dark_color_1: $blue_700;
-$color_theme_2: if($color=='dark', $orange_700, $orange_500);
-$light_color_2: $orange_300;
-$dark_color_2: $orange_900;
+$color_theme_1: if($color=='dark', $blue_300, $blue_500);
+$light_color_1: if($color=='dark', $blue_100, $blue_300);
+$dark_color_1: if($color=='dark', $blue_500, $blue_700);
+$color_theme_2: if($color=='dark', $orange_300, $orange_500);
+$light_color_2: if($color=='dark', $orange_100, $orange_300);
+$dark_color_2: if($color=='dark', $orange_500, $orange_700);
 
 // Background UI Colors
-$base_color: if($color=='dark', $dark_ui_900, $white);
+$base_color: if($color=='dark', rgba($light_ui_300, 0.14), $white);
 $bg_color: if($color=='dark', $dark_ui_700, $light_ui_300);
-$bg_hl_color: if($color=='dark', $dark_ui_900, $light_ui_100);
-$bg_emp_color: if($color=='dark', $dark_ui_500, $light_ui_500);
-$dark_bg_color: if($color=='dark', $dark_ui_300, $light_ui_700);
-$darker_bg_color: if($color=='dark', $dark_ui_100, $light_ui_900);
+$overlay_color: if($color=='dark', rgba($light_ui_300, .07), rgba($base_color, 0.9));
+$inverse_overlay_color: if($color=='dark', rgba($dark_ui_900, .07), rgba($light_ui_900, 0.5));
 
-$inverse_bg_color: $dark_ui_500;
+$inverse_bg_color: $dark_ui_700;
 $obverse_bg_color: $light_ui_500;
 
 $selected_bg_color: $color_theme_1;
 
 // Foreground UI Colors
-$base_fg_color: if($color=='dark', $white, $black);
-$fg_color: if($color=='dark', $light_ui_300, $dark_ui_300);
-$fg_hl_color: if($color=='dark', $light_ui_100, $dark_ui_100);
-$fg_emp_color: if($color=='dark', $light_ui_500, $dark_ui_500);
-$dark_fg_color: if($color=='dark', $light_ui_700, $dark_ui_700);
-$darker_fg_color: if($color=='dark', $light_ui_900, $dark_ui_900);
+$base_fg_color: if($color=='dark', $light_ui_100, $dark_ui_900);
+$fg_color: if($color=='dark', $light_ui_500, $dark_ui_700);
 
-$inverse_fg_color: $light_ui_100;
-$obverse_fg_color: $dark_ui_500;
+$inverse_fg_color: $light_ui_300;
+$obverse_fg_color: $dark_ui_700;
 
-$selected_fg_color: $white;
+$selected_fg_color: if($color=='dark', $dark_ui_700, $light_ui_100);
 
 // Highlight Colors
 $suggested_color: $green_700;
@@ -106,10 +80,6 @@ $text_shadow_color: rgba($black, 0.7);
 /* Background UI Colors */
   -base_color: $base_color;
   -bg_color: $bg_color;
-  -bg_hl_color: $bg_hl_color;
-  -bg_emp_color: $bg_emp_color;
-  -dark_bg_color: $dark_bg_color;
-  -darker_bg_color: $darker_bg_color;
 
   -inverse_bg_color: $inverse_bg_color;
   -obverse_bg_color: $obverse_bg_color;
@@ -119,10 +89,6 @@ $text_shadow_color: rgba($black, 0.7);
 /* Foreground UI Colors */
   -base_fg_color: $base_fg_color;
   -fg_color: $fg_color;
-  -fg_hl_color: $fg_hl_color;
-  -fg_emp_color: $fg_emp_color;
-  -dark_fg_color: $dark_fg_color;
-  -darker_fg_color: $darker_fg_color;
 
   -inverse_fg_color: $inverse_fg_color;
   -obverse_fg_color: $obverse_fg_color;
@@ -176,22 +142,23 @@ $text_shadow_color: rgba($black, 0.7);
 @define-color theme_selected_fg_color #{'' + $selected_fg_color};
 
 //base background color of insensitive widgets */
-$theme_insensitive_bg_color: to600($bg_color);
+$theme_insensitive_bg_color: rgba($bg_color, 0.6);
 @define-color insensitive_bg_color #{'' + $theme_insensitive_bg_color};
 
 //text foreground color of insensitive widgets */
-$theme_insensitive_fg_color: to600($fg_color);
+$theme_insensitive_fg_color: rgba($fg_color, 0.6);
 @define-color insensitive_fg_color #{'' + $theme_insensitive_fg_color};
 
 //insensitive text widgets and the like base background color */
-@define-color insensitive_base_color #{'' + $dark_bg_color};
+$theme_inverse_overlay_color: $dark_ui_300;
+@define-color insensitive_base_color #{'' + $theme_inverse_overlay_color};
 
 //widget text/foreground color on backdrop windows */
-$theme_unfocused_fg_color: to600($fg_color);
+$theme_unfocused_fg_color: rgba($fg_color, 0.6);
 @define-color theme_unfocused_fg_color #{'' + $theme_unfocused_fg_color};
 
 //text color for entries, views and content in general on backdrop windows */
-$theme_unfocused_text_color: to600($fg_color);
+$theme_unfocused_text_color: rgba($fg_color, 0.6);
 @define-color theme_unfocused_text_color #{'' + $theme_unfocused_text_color};
 
 //widget base background color on backdrop windows */
@@ -201,19 +168,19 @@ $theme_unfocused_text_color: to600($fg_color);
 @define-color theme_unfocused_base_color #{'' + $base_color};
 
 //base background color of selections on backdrop windows */
-$theme_unfocused_selected_bg_color: to600($color_theme_1);
+$theme_unfocused_selected_bg_color: rgba($color_theme_1, 0.6);
 @define-color theme_unfocused_selected_bg_color #{'' + $theme_unfocused_selected_bg_color};
 
 //text/foreground color of selections on backdrop windows */
-$theme_unfocused_selected_fg_color: to600($fg_color);
+$theme_unfocused_selected_fg_color: rgba($fg_color, 0.6);
 @define-color theme_unfocused_selected_fg_color #{'' + $theme_unfocused_selected_fg_color};
 
 //insensitive color on backdrop windows */
-$theme_unfocused_insensitive_color: to400($fg_color);
+$theme_unfocused_insensitive_color: rgba($fg_color, 0.6);
 @define-color unfocused_insensitive_color #{'' + $theme_unfocused_insensitive_color};
 
 //widgets main borders color */
-$theme_borders_color: to200($fg_color);
+$theme_borders_color: rgba($fg_color, 0.6);
 @define-color borders #{'' + $theme_borders_color};
 
 //widgets main borders color on backdrop windows */

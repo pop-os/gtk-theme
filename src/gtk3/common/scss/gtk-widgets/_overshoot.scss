@@ -9,6 +9,6 @@
 overshoot.top,
 overshoot.bottom,
 overshoot.left,
-overshoot.right, {
-  background-color: to100($fg_color);
+overshoot.right {
+  background-color: rgba($fg_color, 0.1);
 }

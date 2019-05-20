@@ -42,12 +42,12 @@ messagedialog {
   }
   
   .dialog-action-box {
-    border: 0 solid to100($fg_color);
+    border: 0 solid rgba($fg_color, 0.1);
     
     button {
       border-radius: $corner_radius;
       background-color: transparent;
-      color: to800($fg_color);
+      color: rgba($fg_color, 0.8);
       box-shadow: none;
       
       &.destructive-action {
@@ -105,11 +105,11 @@ messagedialog {
       }
       
       &:hover {
-        background-color: to100($color_theme_2);
+        background-color: rgba($color_theme_2, 0.1);
       }
       
       &:active {
-        background-color: to200($color_theme_2);
+        background-color: rgba($color_theme_2, 0.2);
       }
     }
   }

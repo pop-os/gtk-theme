@@ -7,22 +7,22 @@
  */
 
 .content-view-window {
-  border: $border_size solid to100($fg_color);
+  border: $border_size solid rgba($fg_color, 0.1);
   border-radius: $corner_radius;
 }
 
 .content-view,
 .content-view viewport {
-  border: $border_size solid to100($fg_color);
+  border: $border_size solid rgba($fg_color, 0.1);
   background-color: transparent;
   background-image: none;
   
   column-header button {
-    border: 0 solid to200($fg_color);
+    border: 0 solid rgba($fg_color, 0.2);
     border-right-width: $border_size;
     border-bottom-width: $border_size;
     border-radius: 0;
-    background-color: $dark_bg_color;
+    background-color: $inverse_overlay_color;
     box-shadow: none;
     
     &:first-child {

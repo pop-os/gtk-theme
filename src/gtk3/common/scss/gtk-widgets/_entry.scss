@@ -8,7 +8,7 @@
 
 %entry-fallback-normal {
   border: 1px solid rgba($fg_color, 0.4);
-  background-color: $base_color;
+  background-color: $overlay_color;
   color: $fg_color;
   box-shadow: none;
   border-image: none;
@@ -16,7 +16,7 @@
 
 %entry-fallback-focus {
   border: 1px solid $color_theme_2;
-  background-color: $base_color;
+  background-color: $overlay_color;
   color: $fg_color;
   box-shadow: none;
   border-image: none;
@@ -51,7 +51,7 @@ entry,
   padding: $tiny_padding_em $small_padding_em;
   transition: $standard_transition;
   border-radius: $corner_radius $corner_radius 0 0;
-  background-color: $bg_hl_color;
+  background-color: $overlay_color;
   color: $fg_color;
 
   .background & {
@@ -64,7 +64,7 @@ entry,
   }
   
   &:backdrop {
-    color: to600($fg_color);
+    color: rgba($fg_color, 0.6);
   }
   
   .background &:focus {
@@ -74,13 +74,13 @@ entry,
   
   &:disabled {
     @include underline(disabled);
-    background-color: to400($bg_hl_color);
-    color: to600($fg_color);
+    background-color: transparent;
+    color: rgba($fg_color, 0.6);
   }
   
   selection {
-    background-color: $color_theme_1;
-    color: $inverse_fg_color;
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
   
   image {
@@ -88,7 +88,7 @@ entry,
     color: $fg_color;
     
     &:backdrop {
-      color: to200($fg_color);
+      color: rgba($fg_color, 0.2);
     }
   }
   
@@ -100,8 +100,11 @@ entry,
     opacity: 0.6;
   }
   
-  .linked > & {
+  .linked & {
     margin: 0;
+    background-color: transparent;
+
+
   }
   
   .linked > & > image {
@@ -120,13 +123,22 @@ entry,
   padding: 0;
   border: none;
   border-radius: $corner_radius;
-  background-color: $base_color;
+  background-color: $overlay_color;
   box-shadow: $shadow_0;
 
   &:focus,
   &:active {
     border-radius: $corner_radius $corner_radius 0 0;
     box-shadow: inset 0 -2px 0 0 $color_theme_2, $shadow_1;
+  }
+
+  &:disabled {
+    @include underline(disabled);
+    background-color: transparent;
+
+    entry {
+      color: rgba($fg_color, 0.4);
+    }
   }
  
   button,
@@ -139,6 +151,7 @@ entry,
     &:backdrop {
       border: none;
       background-color: transparent;
+      color: rgba($fg_color, 0.4);
       box-shadow: none;
     }
  
@@ -147,7 +160,9 @@ entry,
     }
   }
 
-  &:disabled entry {
+  &:disabled entry,
+  &:disabled label,
+  &:disabled image {
     color: rgba($fg_color, 0.4);
   }
  
@@ -207,31 +222,31 @@ combobox {
     padding: $tinier_padding_em; 
     padding-left: $standard_padding_em;
     @include underline(normal);
-    background-color: $bg_hl_color;
+    background-color: transparent;
     
     &:backdrop {
-      color: to600($fg_color);
+      color: rgba($fg_color, 0.6);
     }
     
     &:active,
     &:checked,
     &:hover {
       @include underline(focus);
-      background-color: $bg_hl_color;
+      // background-color: $overlay_color;
       color: $fg_color;
     }
     
     &:active,
     &:checked {
-      background-color: to200($color_theme_2);
+      background-color: $color_theme_2;
     }
     
     &:disabled {
       @include underline(disabled);
-      color: to400($fg_color);
+      color: rgba($fg_color, 0.4);
       
       &:backdrop {
-        color: to200($fg_color);
+        color: rgba($fg_color, 0.2);
       }
     }
   }

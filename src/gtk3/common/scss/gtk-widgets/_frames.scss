@@ -6,28 +6,14 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
+ @function frame_border($color) {
+  @return rgba($color, 0.1);
+}
+
 %frame,
 frame,
 .frame {
-  border: $border_size solid to100($fg_color);
-  border-top: if(
-    $color == 'light',
-    $border_size solid to100(lighten($fg_color, 30%)),
-    $border_size solid to100(darken($fg_color, 30%)));
-  border-bottom: if(
-    $color == 'light',
-    $border_size solid to100(darken($fg_color, 30%)),
-    $border_size solid to100(lighten($fg_color, 30%)));
-  border-radius: $corner_radius/2;
-  
-  &.flat {
-    border: none;
-  }
-  
-  frame,
-  .frame {
-    border: none;
-  }
+  color: $fg_color;
 }
 
 scrolledwindow {

@@ -46,22 +46,22 @@ text:selected {
     color: $fg_color;
     
     &:hover {
-      background-color: $dark_bg_color;
+      background-color: $inverse_overlay_color;
 
       &:focus {
-        background-color: $dark_bg_color;
+        background-color: $inverse_overlay_color;
       }
     }
 
     &:active {
-      background-color: $darker_bg_color;
+      background-color: $inverse_overlay_color;
     }
     
     &:focus,
     &:selected,
     &:checked {
       border-color: $color_theme_2;
-      background-color: $dark_bg_color;
+      background-color: $inverse_overlay_color;
     }
 
     &.close {
@@ -72,7 +72,7 @@ text:selected {
       color: $inverse_fg_color;
       
       &:backdrop {
-        background-color: to200($titlebar_fg_color);
+        background-color: rgba($titlebar_fg_color, 0.2);
       }
       
       &:hover {
@@ -110,7 +110,7 @@ text:selected {
   check,
   radio {
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px to800($obverse_fg_color);
+    box-shadow: inset 0 0 0 2px rgba($obverse_fg_color, 0.8);
     
     &:checked {
       background-color: $color_theme_2;
