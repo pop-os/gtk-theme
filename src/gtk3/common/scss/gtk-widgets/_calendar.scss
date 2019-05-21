@@ -18,8 +18,8 @@ calendar {
 
   &:selected {
     border-radius: $corner_radius;
-    background-color: $color_theme_1;
-    color: $inverse_fg_color;
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
 
   &.header {

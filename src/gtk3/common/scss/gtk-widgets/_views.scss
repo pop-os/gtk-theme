@@ -7,8 +7,8 @@
  */
 
 .cell:selected {
-  background-color: $color_theme_1;
-  color: $inverse_fg_color;
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
   
   &:backdrop {
     background-color: rgba($color_theme_1, 0.6);
@@ -17,8 +17,9 @@
 
 treeview,
 .background treeview {
-  border-radius: 0;
-  background-color: $base_color;
+  padding: $mini_padding;
+  border-radius: 1px;
+  background-color: $overlay_color;
   -GtkTreeView-vertical-separator: $tinier_padding;
   -GtkTreeView-horizontal-separator: $tinier_padding;
   -GtkTreeView-expander-size: 16;
@@ -30,7 +31,7 @@ treeview,
   }
   
   row:nth-child(even) {
-    background-color: $base_color;
+    background-color: $overlay_color;
   }
   
   entry {
@@ -39,16 +40,18 @@ treeview,
     border-radius: 0;
   }
   
+  header {
+    margin: $mini_padding;
+    border-radius: $corner_radius;
+    background-color: $inverse_overlay_color;
+  }
+
   header button {
-    border: 0 solid rgba($fg_color, 0.2);
-    border-right-width: $border_size;
-    border-bottom-width: $border_size;
     border-radius: 0;
     background-color: $inverse_overlay_color;
     box-shadow: none;
     
     &:first-child {
-      border-left-width: $border_size;
       border-top-left-radius: $corner_radius;
     }
     
@@ -79,17 +82,15 @@ treeview,
   
   &:selected check,
   &:selected radio {
-    box-shadow: inset 0 0 0 2px $inverse_fg_color;
+    box-shadow: inset 0 0 0 2px $selected_fg_color;
   }
 }
 
 scrolledwindow {
-  border: 0 solid rgba($fg_color, 0.1);
 }
 
 viewport, 
 viewport.frame {
-  border: 0 solid rgba($fg_color, 0.1);
   border-image-width: 0;
 }
 

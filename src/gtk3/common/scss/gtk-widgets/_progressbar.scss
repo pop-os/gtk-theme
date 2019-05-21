@@ -68,10 +68,10 @@ treeview.progressbar {
 }
 
 treeview.progressbar {
-  border-bottom-color: $color_theme_1;
+  border-bottom-color: $selected_bg_color;
   
   &:selected {
-    border-bottom-color: $inverse_fg_color;
+    border-bottom-color: $selected_fg_color;
   }
 }
 
@@ -79,7 +79,7 @@ treeview.trough {
   border-bottom-color: rgba($fg_color, 0.2);
   
   &:selected {
-    border-bottom-color: rgba($inverse_fg_color, 0.4);
+    border-bottom-color: rgba($selected_fg_color, 0.4);
   }
 }
 

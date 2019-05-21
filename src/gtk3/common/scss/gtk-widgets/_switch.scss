@@ -12,9 +12,9 @@ switch {
   background-clip: padding-box;
   background-color: rgba($fg_color, 0.6);
   background-image: -gtk-scaled(
-    url('assets/switch-symbols@1.png'),
-    url('assets/switch-symbols@2.png'),
-    url('assets/switch-symbols@3.png'));
+    url('assets/#{$color}/switch-symbols@1.png'),
+    url('assets/#{$color}/switch-symbols@2.png'),
+    url('assets/#{$color}/switch-symbols@3.png'));
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -59,7 +59,7 @@ switch {
     margin: 2px;
     transition: $standard_transition;
     border-radius: $circular_radius;
-    background-color: $overlay_color;
+    background-color: $bg_color;
     box-shadow: $shadow_1;
     -gtk-outline-radius: $circular_radius;
     
@@ -91,7 +91,7 @@ switch {
 
   &:checked slider {
     transition: all 500ms ease;
-    color: $overlay_color;
+    color: $bg_color;
   }
 
   &:checked:disabled slider { 

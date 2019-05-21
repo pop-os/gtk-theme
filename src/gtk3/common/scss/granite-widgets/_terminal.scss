@@ -13,8 +13,8 @@
   font-family: monospace;
   
   selection {
-    background-color: $dark_color_1;
-    color: $inverse_fg_color;
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
 }
 

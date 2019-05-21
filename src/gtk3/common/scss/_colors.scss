@@ -19,13 +19,11 @@ $dark_color_2: if($color=='dark', $orange_500, $orange_700);
 // Background UI Colors
 $base_color: if($color=='dark', rgba($light_ui_300, 0.14), $white);
 $bg_color: if($color=='dark', $dark_ui_700, $light_ui_300);
-$overlay_color: if($color=='dark', rgba($light_ui_300, .07), $light_ui_100);
-$inverse_overlay_color: if($color=='dark', rgba($dark_ui_900, .07), rgba($base_color, 0.5));
+$overlay_color: if($color=='dark', rgba($light_ui_300, .07), rgba($white, 0.78));
+$inverse_overlay_color: if($color=='dark', rgba($light_ui_300, .07), rgba($dark_ui_700, 0.08));
 
 $inverse_bg_color: $dark_ui_700;
 $obverse_bg_color: $light_ui_500;
-
-$selected_bg_color: $color_theme_1;
 
 // Foreground UI Colors
 $base_fg_color: if($color=='dark', $light_ui_100, $dark_ui_900);
@@ -34,16 +32,19 @@ $fg_color: if($color=='dark', $light_ui_500, $dark_ui_700);
 $inverse_fg_color: $light_ui_300;
 $obverse_fg_color: $dark_ui_700;
 
+// Selection Colors
+
 $selected_fg_color: if($color=='dark', $dark_ui_700, $light_ui_100);
+$selected_bg_color: $color_theme_1;
 
 // Highlight Colors
-$suggested_color: $green_700;
-$destructive_color: $red_700;
-$information_color: $green_700;
-$warning_color: $yellow_500;
-$error_color: $red_700;
-$question_color: $indigo_300;
-$success_color: $green_700;
+$suggested_color: if($color=='dark', $green_300, $green_700);
+$destructive_color: if($color=='dark', $red_300, $red_700);
+$information_color: if($color=='dark', $green_300, $green_700);
+$warning_color: if($color=='dark', $yellow_300, $yellow_700);;
+$error_color: if($color=='dark', $red_300, $red_700);
+$question_color: if($color=='dark', $indigo_100, $indigo_300);
+$success_color: if($color=='dark', $green_300, $green_700);
 $link_color: if($color=="dark", $color_theme_2, $dark_color_2);
 
 $dark_warning_color: if($color=='dark', $yellow_500, $yellow_700);

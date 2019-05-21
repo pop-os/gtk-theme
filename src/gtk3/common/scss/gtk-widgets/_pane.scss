@@ -7,13 +7,13 @@
  */
 
 paned {
-  background-color: $base_color;
+  background-color: $overlay_color;
   
   > separator {
     min-width: $line_size;
     min-height: $line_size;
     margin: 0;
-    background-color: $inverse_overlay_color;
+    background-color: rgba($fg_color, 0.2);
   }
   
   &.horizontal separator {
