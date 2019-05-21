@@ -6,7 +6,7 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
- @function frame_border($color) {
+@function frame-border($color) {
   @return rgba($color, 0.1);
 }
 
