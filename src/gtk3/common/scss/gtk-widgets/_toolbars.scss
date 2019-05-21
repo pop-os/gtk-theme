@@ -53,7 +53,7 @@ actionbar,
 
       label,
       image {
-        color: $white;
+        color: $selected_fg_color;
       }
       
       &:backdrop {

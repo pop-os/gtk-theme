@@ -21,4 +21,8 @@ expander arrow,
       -gtk-icon-transform: rotate(-90deg);
     }
   }
+
+  box {
+    background-color: $overlay_color;
+  }
 }

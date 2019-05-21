@@ -7,7 +7,7 @@
  */
 
 .cell:selected {
-  background-color: $selected_bg_color;
+  background-color: $color_theme_1;
   color: $selected_fg_color;
   
   &:backdrop {
@@ -96,10 +96,29 @@ viewport.frame {
 
 // Seems to be required for LibreOffice 
 .view {
-  background-color: $base_color;
+  background-color: $overlay_color;
   color: $fg_color;
+
+  text {
+    background-color: transparent;
+
+    selection,
+    :selected {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+  }
 }
 
-textview selection {
-  color: $selected_fg_color;
+iconview.view {
+  background-color: transparent;
+
+  &:selected,
+  :selected {
+    background-color: $selected_bg_color;
+  }
+}
+
+stack.view {
+  background-color: transparent;
 }

@@ -9,11 +9,14 @@
 notebook {
   transition: $standard_transition;
   border: none;
+  border-radius: 2px;
   background-color: $overlay_color;
   
   header {
+    margin: 2px;
     border: none;
-    background-color: if($color=='dark', $overlay_color, $inverse_overlay_color);
+    border-radius: $corner_radius;
+    background-color: $inverse_overlay_color;
     
     &.top {
       padding: 0 $tiny_padding_em;

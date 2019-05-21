@@ -13,8 +13,8 @@ $color_theme_1: if($color=='dark', $blue_300, $blue_500);
 $light_color_1: if($color=='dark', $blue_100, $blue_300);
 $dark_color_1: if($color=='dark', $blue_500, $blue_700);
 $color_theme_2: if($color=='dark', $orange_300, $orange_500);
-$light_color_2: if($color=='dark', $orange_100, $orange_300);
-$dark_color_2: if($color=='dark', $orange_500, $orange_700);
+$light_color_2: if($color=='dark', $orange_300, $orange_300);
+$dark_color_2: if($color=='dark', $orange_300, $orange_700);
 
 // Background UI Colors
 $base_color: if($color=='dark', rgba($light_ui_300, 0.14), $white);
@@ -41,7 +41,7 @@ $selected_bg_color: $color_theme_1;
 $suggested_color: if($color=='dark', $green_300, $green_700);
 $destructive_color: if($color=='dark', $red_300, $red_700);
 $information_color: if($color=='dark', $green_300, $green_700);
-$warning_color: if($color=='dark', $yellow_300, $yellow_700);;
+$warning_color: if($color=='dark', $yellow_300, $yellow_500);;
 $error_color: if($color=='dark', $red_300, $red_700);
 $question_color: if($color=='dark', $indigo_100, $indigo_300);
 $success_color: if($color=='dark', $green_300, $green_700);

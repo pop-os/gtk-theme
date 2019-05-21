@@ -20,11 +20,11 @@
     
     &:checked {
       background-color: $color_theme_2;
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
       
       &:hover {
         background-color: $light_color_2;
-        color: $inverse_fg_color;
+        color: $selected_fg_color;
       }
       
       &:backdrop {
@@ -80,8 +80,13 @@ stackswitcher > button.radio:hover {
   
   &:checked {
     background-color: $color_theme_2;
-    color: $inverse_fg_color;
-    border-image: none;
+    color: $selected_fg_color;
+    border-image: none;  
+    
+    headerbar &,
+    .headerbar & {
+      color: $titlebar_fg_color;
+    }
   }
 }
 
@@ -91,7 +96,7 @@ headerbar .linked {
   min-height: $large_size;
   margin: 5px 0;
   padding: 0;
-  background-color: rgba($titlebar_fg_color, 0.4);
+  background-color: rgba($titlebar_fg_color, 0.1);
   
   button {
 
