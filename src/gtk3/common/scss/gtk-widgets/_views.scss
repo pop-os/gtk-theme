@@ -99,3 +99,7 @@ viewport.frame {
   background-color: $base_color;
   color: $fg_color;
 }
+
+textview selection {
+  color: $selected_fg_color;
+}
