@@ -37,7 +37,7 @@
     transition: $standard_transition;
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
-      rgba($line_color, 0.4) 100%,
+      rgba($fg_color, 0.2) 100%,
       transparent 0%)
       0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
   }
@@ -61,7 +61,7 @@
   @if $type == disabled {
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
-      rgba($line_color, 0.2) 100%,
+      rgba($fg_color, 0.1) 100%,
       transparent 0%)
       0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
   }
@@ -70,7 +70,7 @@
     box-shadow: none;
     border-image: radial-gradient(
       circle closest-corner at center calc(100% - 1px),
-      rgba($line_color, 0.4) 0%,
+      rgba($fg_color, 0.4) 0%,
       transparent 0%)
       0 0 0 / 0 0 0; // sass-lint:disable-line indentation
   }

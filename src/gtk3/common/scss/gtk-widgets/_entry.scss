@@ -49,13 +49,14 @@ entry,
   @extend %entry-fallback;
   @include underline(normal);
   padding: $tiny_padding_em $small_padding_em;
-  transition: $standard_transition;
+  transition: $standard_transition, border-image 300ms ease;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $overlay_color;
   color: $fg_color;
 
   .background & {
     border: none;
+    @include underline(normal);
     box-shadow: $shadow_0;
 
     &:hover {
@@ -69,7 +70,7 @@ entry,
   
   .background &:focus {
     @include underline(focus);
-    box-shadow: $shadow_2;
+    box-shadow: $shadow_1;
   }
   
   &:disabled {
@@ -101,10 +102,9 @@ entry,
   }
   
   .linked & {
+    @include underline(normal);
     margin: 0;
     background-color: transparent;
-
-
   }
   
   .linked > & > image {
@@ -121,6 +121,7 @@ entry,
 .background spinbutton,
 .background .linked spinbutton {
   padding: 0;
+  transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
   background-color: $overlay_color;
@@ -128,8 +129,9 @@ entry,
 
   &:focus,
   &:active {
+    @include underline(focus);
     border-radius: $corner_radius $corner_radius 0 0;
-    box-shadow: inset 0 -2px 0 0 $color_theme_2, $shadow_1;
+    box-shadow: $shadow_1;
   }
 
   &:disabled {

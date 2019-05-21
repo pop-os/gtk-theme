@@ -17,21 +17,34 @@
   > combobox .combo {
     @include flat;
     border-radius: $corner_radius;
-    border-image: none;
     
     &:checked {
       background-color: $color_theme_2;
       color: $inverse_fg_color;
-      border-image: none;
       
       &:hover {
         background-color: $light_color_2;
         color: $inverse_fg_color;
-        border-image: none;
       }
       
       &:backdrop {
         background-color: rgba($color_theme_2, 0.4);
+      }
+    }
+  }
+
+  > button,
+  > combobox .combo {
+    border-image: none;
+    
+    &:checked {
+      border-image: none;
+      
+      &:hover {
+        border-image: none;
+      }
+      
+      &:backdrop {
         border-image: none;
       }
     }

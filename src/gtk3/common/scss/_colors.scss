@@ -19,8 +19,8 @@ $dark_color_2: if($color=='dark', $orange_500, $orange_700);
 // Background UI Colors
 $base_color: if($color=='dark', rgba($light_ui_300, 0.14), $white);
 $bg_color: if($color=='dark', $dark_ui_700, $light_ui_300);
-$overlay_color: if($color=='dark', rgba($light_ui_300, .07), rgba($base_color, 0.9));
-$inverse_overlay_color: if($color=='dark', rgba($dark_ui_900, .07), rgba($light_ui_900, 0.5));
+$overlay_color: if($color=='dark', rgba($light_ui_300, .07), $light_ui_100);
+$inverse_overlay_color: if($color=='dark', rgba($dark_ui_900, .07), rgba($base_color, 0.5));
 
 $inverse_bg_color: $dark_ui_700;
 $obverse_bg_color: $light_ui_500;
