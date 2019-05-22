@@ -42,6 +42,10 @@ titlebar {
       background-color: rgba($bg_color, 0.1);
     }
   }
+
+  entry {
+    background-color: $bg_color;
+  }
   
   .maximized &,
   .fullscreen &,
