@@ -9,3 +9,12 @@
 .terminal-titlebar {
   padding: $tinier_padding;
 }
+
+.tilix-background,
+.tilix-terminal-scrolledwindow {
+  background-color: transparent;
+
+  vte-terminal {
+    background-color: transparent;
+  }
+}
