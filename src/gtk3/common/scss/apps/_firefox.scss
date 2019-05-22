@@ -11,6 +11,7 @@
  */
 
 $firefox_border_color: mix($black, $white, 20%);
+$firefox_bg_color: if($color=='dark', mix($fg_color, $bg_color, 3%), $white);
 
 // Firefox now uses this for selected items
 text:selected { 
@@ -18,15 +19,27 @@ text:selected {
 }
 
 #MozillaGtkWidget { 
+
+  * {
+    background-color: $firefox_bg_color;
+    color: $fg_color;
+
+    &:selected {
+      @extend %selected-items;
+    }
+  }
+
   headerbar.titlebar {
     margin: 0;
     padding: (28px - $icon_size * 1.5) / 2;
   }
+
   entry,
   button,
   button > button {
     border: 1px solid $firefox_border_color;
     border-radius: $corner_radius;
+    background-color: $firefox_bg_color;
     box-shadow: none;
   }
 
@@ -123,6 +136,21 @@ text:selected {
     
     menuitem {
       color: $titlebar_fg_color;
+    }
+  }
+
+  menuitem {
+    color: $fg_color;
+
+    &:hover,
+    &:active {
+      background-color: rgba($fg_color, 0.1); 
+    }
+
+    &:disabled,
+    &:inactive,
+    &:insensitive {
+      color: rgba($fg_color, 0.6);
     }
   }
   
