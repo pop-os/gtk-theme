@@ -27,7 +27,12 @@ switch {
   &:disabled { 
     background-color: rgba($fg_color, 0.2);
     box-shadow: none;
+    color: transparent;
     opacity: 0.7;
+
+    image {
+      color: transparent;
+    }
   }
   
   &:backdrop {
@@ -40,7 +45,12 @@ switch {
 
     &:disabled { 
       background-color: rgba($color_theme_2, 0.6); 
+      color: transparent;
       box-shadow: none;
+
+      image {
+        color: transparent;
+      }
     }
     &:backdrop { 
       background-color: rgba($color_theme_2, 0.6); 
