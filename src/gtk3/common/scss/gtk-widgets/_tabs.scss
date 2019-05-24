@@ -16,7 +16,7 @@ notebook {
     background-color: $bg_emp_color;
     
     &.top {
-      padding: 0 $tiny_padding_em;
+      
       border-top-width: 0;
       
       
@@ -26,7 +26,7 @@ notebook {
     }
     
     &.bottom {
-      padding: 0 $tiny_padding_em;
+      
       border-bottom-width: 0;
       
       tab:checked {
@@ -35,7 +35,7 @@ notebook {
     }
     
     &.left {
-      padding: $tiny_padding_em 0;
+      
       border-left-width: 0;
       
       tab:checked {
@@ -44,7 +44,7 @@ notebook {
     }
     
     &.right {
-      padding: $tiny_padding_em 0;
+      
       border-right-width: 0;
       
       tab:checked {
@@ -57,7 +57,7 @@ notebook {
     }
   
     tab {
-      padding: $tinier_padding_em;
+      
       transition: $standard_transition, font-weight 0ms linear, color 0ms linear;
       background-color: transparent;
       
@@ -72,20 +72,20 @@ notebook {
       }
       
       label {
-        padding: 0 $tiny_padding_em;
+        
       }
       
       image {
-        padding: 0 $small_padding;
+        
       }
       
       button {
         @include flat_button;
-        margin: 0;
-        padding: $mini_padding;
+        
+        
         
         image {
-          padding: 0;
+          
         }
       }
     }

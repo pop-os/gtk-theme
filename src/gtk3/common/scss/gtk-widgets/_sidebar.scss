@@ -11,7 +11,7 @@
 .sidebar list,
 .source-list,
 .source-list.view {
-  padding: 0;
+  
   border: none;
   border-radius: 0;
   background-color: $base_color;
@@ -21,8 +21,8 @@
   .list-row,
   .sidebar-item,
   .sidebar-row {
-    margin: -1px;
-    padding: $tinier_padding $standard_padding;
+    
+    
     transition: $fast_transition; //Standard looks a tiny bit janky
     border-width: $no_padding;
     border-style: solid;
@@ -57,13 +57,13 @@
   }
   
   button {
-    padding: 0.5 * $no_padding_em;
+    
     transition: $fast_transition;
   }
   
   label,
   image {
-    padding: 0.5 * $no_padding_em;
+    
     transition: $fast_transition;
   }
   

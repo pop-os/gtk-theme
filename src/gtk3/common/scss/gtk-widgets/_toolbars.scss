@@ -8,7 +8,7 @@
 
 toolbar,
 .toolbar {
-  padding: $tinier_padding;
+  
   background-color: $dark_bg_color;
   color: $dark_fg_color;
   box-shadow: inset 0 0 0 $border_size $darker_bg_color;
@@ -23,7 +23,7 @@ actionbar,
 .secondary-toolbar,
 .bottom-toolbar,
 .inline-toolbar {
-  padding: $tinier_padding;
+  
   background-color: $dark_bg_color;
   color: $dark_fg_color;
   box-shadow: none;
@@ -44,7 +44,7 @@ actionbar,
   button,
   .background & button {
     @include flat_button;
-    padding: $tiny_padding;
+    
 
     &:checked {
       border: none;

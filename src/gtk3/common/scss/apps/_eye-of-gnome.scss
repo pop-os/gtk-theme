@@ -11,14 +11,14 @@
 window.csd > headerbar.titlebar > box.linked { 
   > button.image-button {
     @include flat_button;
-    padding-right: $small_padding;
-    padding-left: $small_padding;
+    
+    
     border-radius: $corner_radius;
     border-image: none;
   }
   
   > entry {
-    margin: 0;
+    
     border-radius: $corner_radius $corner_radius 0 0;
   }
 }

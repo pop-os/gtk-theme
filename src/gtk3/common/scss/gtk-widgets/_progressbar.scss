@@ -23,7 +23,7 @@ levelbar block {
   }
   
   entry & {
-    margin: -5px -10px;
+    
     transition: $standard_transition;
     border-bottom: $line_size solid $color_theme_1;
     border-radius: $corner_radius $corner_radius 0 0;
@@ -49,7 +49,7 @@ levelbar block.empty {
   
   entry &,
   spinbutton & {
-    padding: 0 $small_padding;
+    
   }
 }
 
@@ -86,7 +86,7 @@ treeview.trough {
 levelbar {
   block {
     @extend %progress;
-    margin: $mini_padding;
+    
     
     &.filled.low {
       background-color: $error_color;
@@ -123,14 +123,14 @@ levelbar {
 }
 
 scale {
-  padding: $small_padding;
+  
   
   outline-offset: 4px;
   
   slider {
     min-width: 3 * $progress_size;
     min-height: 3 * $progress_size;
-    margin: -2 * $progress_size;
+    
     transition: $standard_transition;
     border-radius: $circular_radius;
     outline: $line_size solid to400($light_neutral_grey_700);
@@ -163,7 +163,7 @@ scale {
   
   trough {
     @extend %trough;
-    margin: $mini_padding;
+    
   }
   
   highlight {

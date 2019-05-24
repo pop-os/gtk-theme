@@ -10,29 +10,29 @@
 // git.gnome.org/browse/gnome-builder/tree/data/themes?h=gnome-builder-3-26
 
 window.workbench > stack.titlebar {
-  padding: $no_padding $standard_padding;
+  
 
   .global-search {
-    margin: $tinier_padding;
+    
   }
   headerbar omnibar.linked.horizontal {
-    min-height: $large_size + 2px;
+    
 
     button:first-child {
-      margin: 0 $tiny_padding 0 0;
-      padding: $small_padding;
+      
+      
       border-radius: $corner_radius;
     }
 
     entry {
-      padding-right: 3px;
+      
       border-right: 0 transparent;
       border-radius: $corner_radius 0 0;
     }
 
     button:last-child {
       @include underline(normal);
-      padding: 0 1em;
+      
       border-left: 0 transparent;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -46,20 +46,20 @@ window.workbench > stack.titlebar {
 
   headerbar box.horizontal box.linked {
     button.image-button {
-      padding: 0 $standard_padding;
+      
     }
 
     button.dzlmenubutton.run-arrow-button {
-      padding: 0 $tinier_padding;
+      
     }
   }
 }
 
 button.dzlmenubutton image {
-  min-width: $large_size - 6px;
+  
 
   &.arrow { 
-    min-width: $large_size - 9px;
+    
   }
 }
 
@@ -107,7 +107,7 @@ ideeditorsidebar notebook header {
 }
 
 popover.messagepopover {
-  // padding: 0;
+  // 
 
   list {
     border: 1px solid to100($fg_color);

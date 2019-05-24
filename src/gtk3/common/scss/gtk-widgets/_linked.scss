@@ -41,7 +41,7 @@
   entry ~ button, {
     @extend %entry;
     @include underline(normal); 
-    padding: $tiny_padding_em;
+    
     border: none;
     background-color: $bg_hl_color;
   }
@@ -75,9 +75,9 @@ stackswitcher > button.radio:hover {
 .titlebar .linked,
 .headerbar .linked,
 headerbar .linked {
-  min-height: $large_size;
-  margin: 5px 0;
-  padding: 0;
+  
+  
+  
   background-color: to100($titlebar_fg_color);
   
   button {
@@ -94,6 +94,6 @@ headerbar .linked {
   }
   
   &.stack-switcher button.text-button {
-    padding: 0 $standard_padding * 2;
+    
   }
 }

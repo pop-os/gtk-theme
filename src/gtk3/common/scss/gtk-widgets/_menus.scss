@@ -9,7 +9,7 @@
 %menu,
 menu,
 window.popup {
-  padding: $mini_padding;
+  
   border-radius: $corner_radius;
   background-color: $bg_color;
 
@@ -45,7 +45,7 @@ menubar,
   window > &,
   window > box > &:first-child,
   terminal-window > box > &:first-child {
-    padding: 0;
+    
     border: 0 solid $titlebar_hl_color;
     border-width: 0 $border_size;
     background-color: $titlebar_bg_color;
@@ -92,8 +92,8 @@ menubar,
 menuitem,
 .menuitem
 modelbutton, {
-  min-width: $large_size;
-  padding: $mini_padding;
+  
+  
   border: none;
   border-radius: $corner_radius;
   background-color: transparent;
@@ -116,8 +116,8 @@ modelbutton, {
   }
   
   arrow {
-    min-width: $small_size;
-    min-height: $small_size;
+    
+    
     -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
     
     &:dir(rtl) {
@@ -135,7 +135,7 @@ modelbutton, {
   
   image,
   label {
-    padding: $mini_padding;
+    
   }
 }
 

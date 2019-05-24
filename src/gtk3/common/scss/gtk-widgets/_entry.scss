@@ -48,7 +48,7 @@ entry,
 .entry {
   @extend %entry-fallback;
   @include underline(normal);
-  padding: $tiny_padding_em $small_padding_em;
+  
   transition: $standard_transition;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $bg_hl_color;
@@ -84,7 +84,7 @@ entry,
   }
   
   image {
-    margin: 0;
+    
     color: $fg_color;
     
     &:backdrop {
@@ -101,12 +101,12 @@ entry,
   }
   
   .linked > & {
-    margin: 0;
+    
   }
   
   .linked > & > image {
-    margin: 0;
-    padding: 0;
+    
+    
   }
 }
 
@@ -117,7 +117,7 @@ entry,
 %spinbutton,
 .background spinbutton,
 .background .linked spinbutton {
-  padding: 0;
+  
   border: none;
   border-radius: $corner_radius;
   background-color: $base_color;
@@ -157,7 +157,7 @@ entry,
     button.up,
     button.down {
       @include flat_button;
-      padding: $tinier_padding;
+      
       border-radius: $circular_radius;
       box-shadow: none;
  
@@ -172,21 +172,21 @@ entry,
   }
  
   entry {
-    margin: 0;
-    padding: 0;
+    
+    
   }
  
   &.horizontal {
-    padding: $tinier_padding $small_padding;
+    
  
     entry {
-      min-width: 2.5em;
+      
     }
   }
  
   &.vertical {
     button {
-      margin: $small_padding;
+      
     }
   }
 }
@@ -198,14 +198,14 @@ entry,
 combobox {
 
   arrow {
-    min-width: 19px;
-    min-height: 19px;
+    
+    
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
   }
   
   button {
-    padding: $tinier_padding_em; 
-    padding-left: $standard_padding_em;
+     
+    
     @include underline(normal);
     background-color: $bg_hl_color;
     
@@ -237,11 +237,11 @@ combobox {
   }
   
   entry + button {
-    padding: $tinier_padding;
+    
   }
 }
 
 image.entry_icon {
-  padding-bottom: 12px;
-  padding-left: 4px;
+  
+  
 }

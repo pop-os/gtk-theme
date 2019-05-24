@@ -41,9 +41,9 @@
 button,
 .button {
   @extend %button-fallback;
-  min-width: $tiny_size;
-  min-height: $tiny_size;
-  padding: $tiny_padding_em $small_padding_em;
+  
+  
+  
   transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
@@ -101,15 +101,15 @@ button,
   }
   
   &.text-button {
-    padding: $tiny_padding_em $large_padding_em;
+    
     border-radius: $corner_radius;
   }
   
   &.round,
   &.circular {
-    min-width: $large_size;
-    min-height: $large_size;
-    padding: 0;
+    
+    
+    
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
   }
@@ -134,9 +134,9 @@ button,
     
     .titlebar &,
     headerbar & {
-      min-width: $large_size;
-      min-height: $large_size;
-      padding: 0 $standard_padding;
+      
+      
+      
       color: $titlebar_fg_color;
       
       &:hover {
@@ -152,7 +152,7 @@ button,
   }
   
   &.lock {
-    padding: $tinier_padding_em $small_padding_em;
+    
   } 
   
   label {
@@ -248,18 +248,18 @@ button,
   
   popover stack & {
     @include flat_button;
-    padding: $tiny_padding_em;
+    
     border-radius: $corner_radius;
         
     image,
     label {
-      margin: 0;
-      padding: 0;
+      
+      
     }
   }
   
   revealer > & {
-    margin: 10px;
+    
   }
 }
 

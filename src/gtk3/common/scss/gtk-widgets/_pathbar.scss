@@ -21,9 +21,9 @@
   
   &.text-button,
   &.toggle {
-    padding: $tiny_padding_em;
-    padding-right: $standard_padding_em;
-    padding-left: $tiny_padding_em;
+    
+    
+    
     border-radius: $corner_radius;
     background-image: url('assets/pathbar-separator.svg');
     background-repeat: no-repeat no-repeat;
@@ -31,18 +31,18 @@
     background-size: 12px;
     
     &:dir(rtl) {
-      padding-right: $tiny_padding_em;
-      padding-left: $standard_padding_em;
+      
+      
       background-position: 0% 50%;
     }
     
     image {
-      padding: $mini_padding;
+      
     }
   }
   
   &.popup {
-    padding: $tiny_padding;
+    
     background-image: none;
   }
 }
