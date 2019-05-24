@@ -9,9 +9,10 @@
 %checkradio,
 check,
 radio {
-  
-  
-  
+  min-width: $check_size;
+  min-height: $check_size;
+  margin: $mini_padding_em;
+  padding: $check_padding;
   transition: $standard_transition;
   box-shadow: inset 0 0 0 2px to800($fg_color);
    

@@ -48,7 +48,7 @@ entry,
 .entry {
   @extend %entry-fallback;
   @include underline(normal);
-  
+  padding: $entry_padding;
   transition: $standard_transition;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $bg_hl_color;

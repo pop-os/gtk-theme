@@ -7,8 +7,8 @@
  */
 
 .titlebar,
-titlebar {
-  
+headerbar.titlebar {
+  padding: $headerbar_padding;
   border: 0 solid $titlebar_hl_color;
   border-width: $border_size $border_size 0;
   border-radius: $corner_radius $corner_radius 0 0;
@@ -54,15 +54,9 @@ titlebar {
     border-radius: 0;
     box-shadow: none;
   }
-  
-  &.default-decoration {
-    
-  }
-  
+
   .titlebutton {
-    
-    
-    
+    padding: $button_padding_image - 2px;
     border-radius: $circular_radius;
     background: none;
     color: $titlebar_fg_color;
@@ -93,10 +87,6 @@ titlebar {
         background-color: mix($close_button_color, $obverse_bg_color, 60%);
       }
     }
-    
-    &.appmenu.popup {
-      
-    }
   }
   
   window > &.flat,
@@ -120,7 +110,8 @@ titlebar {
     }
     
     .titlebutton {
-      
+      padding: $no_padding;
+      border-radius: $circular_radius;
       
       &.close {
         background-color: $close_button_color;
@@ -135,7 +126,7 @@ titlebar {
   
   .headerbar,
   headerbar {
-    
+    padding: 0;
     border: none;
     box-shadow: none;
   }
@@ -170,7 +161,7 @@ titlebar {
 }
 
 decoration {
-  
+  margin: 8px;
   border-radius: $corner_radius;
   background-color: $titlebar_bg_color;
   box-shadow: $shadow_window;
@@ -257,8 +248,7 @@ headerbar,
 
 .titlebar hdyleaflet headerbar,
 hdyleaflet headerbar {
-  
-  
+  padding: $headerbar_padding;
 }
 
 window > .titlebar,

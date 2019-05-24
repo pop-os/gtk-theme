@@ -41,9 +41,7 @@
 button,
 .button {
   @extend %button-fallback;
-  
-  
-  
+  padding: $button_padding_text $button_padding_text * 2;
   transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
@@ -100,16 +98,18 @@ button,
     @include flat_button;
   }
   
-  &.text-button {
-    
+  &.text-button {  
     border-radius: $corner_radius;
+  }
+
+  &.image-button,
+  &.disclosure-button {
+    padding: $button_padding_image;
   }
   
   &.round,
   &.circular {
-    
-    
-    
+    padding: $button_padding_image;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
   }
@@ -134,9 +134,7 @@ button,
     
     .titlebar &,
     headerbar & {
-      
-      
-      
+      padding: $button_padding_text $button_padding_text * 4;
       color: $titlebar_fg_color;
       
       &:hover {

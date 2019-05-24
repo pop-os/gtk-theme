@@ -8,8 +8,9 @@
 
 %menu,
 menu,
+.menu,
 window.popup {
-  
+  padding: $menu_padding;
   border-radius: $corner_radius;
   background-color: $bg_color;
 
@@ -18,6 +19,54 @@ window.popup {
   }
 }
 
+menuitem,
+.menuitem,
+modelbutton {
+  min-height: $check_size;
+  padding: $menu_padding;
+  border: none;
+  border-radius: $corner_radius;
+  background-color: transparent;
+  color: $fg_color;
+  text-shadow: none;
+  box-shadow: none;
+  -gtk-icon-shadow: none;
+  
+  &:active, 
+  &:hover {
+    background-color: $darker_bg_color;
+  }
+  
+  :disabled {
+    color: rgba($fg_color, 0.6);
+  }
+  
+  accelerator {
+    color: rgba($fg_color, 0.4);
+  }
+  
+  arrow {
+    min-width: $arrow_size;
+    min-height: $arrow_size;
+    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+    
+    &:dir(rtl) {
+      -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl');
+    }
+    
+    &.top {
+      -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+    }
+    
+    &.bottom {
+      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    }
+  }
+  
+  image,
+  label {
+  }
+}
 
 
 menubar,
@@ -26,6 +75,7 @@ menubar,
   -GtkWidget-window-dragging: true;
   
   > menuitem {
+    padding: $menu_padding $menu_padding * 3;
     transition: $standard_transition;
     border: $line_size solid transparent;
     color: $fg_color;
@@ -45,7 +95,6 @@ menubar,
   window > &,
   window > box > &:first-child,
   terminal-window > box > &:first-child {
-    
     border: 0 solid $titlebar_hl_color;
     border-width: 0 $border_size;
     background-color: $titlebar_bg_color;
@@ -86,56 +135,4 @@ menubar,
       }
     }
   }
-
 }
-
-menuitem,
-.menuitem
-modelbutton, {
-  
-  
-  border: none;
-  border-radius: $corner_radius;
-  background-color: transparent;
-  color: $fg_color;
-  text-shadow: none;
-  box-shadow: none;
-  -gtk-icon-shadow: none;
-  
-  &:active, 
-  &:hover {
-    background-color: $darker_bg_color;
-  }
-  
-  :disabled {
-    color: to600($fg_color);
-  }
-  
-  accelerator {
-    color: to400($fg_color);
-  }
-  
-  arrow {
-    
-    
-    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-    
-    &:dir(rtl) {
-      -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl');
-    }
-    
-    &.top {
-      -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
-    }
-    
-    &.bottom {
-      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-    }
-  }
-  
-  image,
-  label {
-    
-  }
-}
-
