@@ -41,6 +41,11 @@ headerbar.titlebar {
     &:focus {
       background-color: rgba($bg_color, 0.1);
     }
+
+    &.image-button,
+    &.disclosure-button {
+      padding: $button_padding_image + 1.5px;
+    }
   }
   
   .maximized &,

@@ -227,6 +227,11 @@
   color: darken($color_theme_2, 20%);
 }
 
+arrow {
+  min-width: $arrow_size;
+  min-height: $arrow_size;
+}
+
 .view {
   selection,
   &:selected {
