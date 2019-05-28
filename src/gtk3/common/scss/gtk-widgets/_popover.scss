@@ -13,17 +13,13 @@ popover.osd,
   padding: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
-  
-  image,
-  label {
-    
-  }
-  
-  button image,
-  flowbox image,
-  button label,
-  flowbox label {
-    
+
+  modelbutton {
+    padding: $tinier_padding_em;
+
+    arrow {
+      min-height: $standard_padding_em;
+    }
   }
 
   .view {

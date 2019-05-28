@@ -25,21 +25,21 @@ headerbar.titlebar {
     box-shadow: none;
 
     &:hover {
-      background-color: rgba($bg_color, 0.2);
+      background-color: rgba($titlebar_fg_color, 0.2);
       box-shadow: none;
 
       &:focus {
-        background-color: rgba($bg_color, 0.2);
+        background-color: rgba($titlebar_fg_color, 0.2);
       }
 
       &:active {
-        background-color: rgba($bg_color, 0.4);
+        background-color: rgba($titlebar_fg_color, 0.4);
         box-shadow: $shadow_0;
       }
     }
 
     &:focus {
-      background-color: rgba($bg_color, 0.1);
+      background-color: rgba($titlebar_fg_color, 0.1);
     }
 
     &.image-button,
@@ -157,12 +157,6 @@ headerbar.titlebar {
     
     
   }
-
-  box,
-  stack,
-  spinner {
-    
-  }
 }
 
 decoration {
@@ -184,21 +178,31 @@ decoration {
   }
 }
 
-
+.geary-titlebar {
+  min-height: 0;
+  padding: 0;
+}
 
 headerbar,
 .headerbar {
-  
-  
-  
+
   entry,
   .entry {
-    
+    background-color: $bg_color;
+
+    &:focus {
+      background-color: $bg_color;
+    }
+
+    &:disabled {
+      background-color: rgba($bg_color, 0.4);
+    }
   }
   
+  
+
   button,
   .button {
-    
     background-color: rgba($titlebar_fg_color, 0.1);
     color: $titlebar_fg_color;
     box-shadow: none;
@@ -209,7 +213,13 @@ headerbar,
     
     &:disabled {
       background-color: transparent;
+      color: rgba($titlebar_fg_color, 0.4);
       box-shadow: none;
+
+      image,
+      label {
+        color: rgba($titlebar_fg_color, 0.4);
+      }
     }
     
     &:backdrop {
@@ -244,10 +254,8 @@ headerbar,
     }
   }
   
-  .linked entry,
-  .linked button {
-    
-    
+  .linked button:hover {
+    background-color: rgba($titlebar_fg_color, 0.1);
   }
 }
 

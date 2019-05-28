@@ -22,7 +22,7 @@ actionbar,
 .secondary-toolbar,
 .bottom-toolbar,
 .inline-toolbar {
-  
+  padding: $tinier_padding_em;
   background-color: $inverse_overlay_color;
   color: $fg_color;
   box-shadow: none;
