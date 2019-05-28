@@ -84,9 +84,15 @@ treeview.trough {
 }
 
 levelbar {
+  
+  trough {
+    background-color: $overlay_color;
+    box-shadow: $shadow_1;
+  }
+
   block {
     @extend %progress;
-    
+    margin: $mini_padding_em;
     
     &.filled.low {
       background-color: $error_color;
@@ -123,14 +129,13 @@ levelbar {
 }
 
 scale {
-  
-  
+  padding: $small_padding_em;  
   outline-offset: 4px;
   
   slider {
-    min-width: 3 * $progress_size;
-    min-height: 3 * $progress_size;
-    
+    min-width: 2 * $progress_size;
+    min-height: 2 * $progress_size;
+    margin: -1.5 * $progress_size;
     transition: $standard_transition;
     border-radius: $circular_radius;
     outline: $line_size solid rgba($light_neutral_grey_700, 0.4);
@@ -163,7 +168,6 @@ scale {
   
   trough {
     @extend %trough;
-    
   }
   
   highlight {

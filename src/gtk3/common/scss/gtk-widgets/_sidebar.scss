@@ -21,7 +21,7 @@
   .list-row,
   .sidebar-item,
   .sidebar-row {
-    
+    padding: $small_padding_em;
     
     transition: $fast_transition; //Standard looks a tiny bit janky
     border-width: $no_padding;
@@ -63,7 +63,7 @@
   
   label,
   image {
-    
+    padding: 0 $tinier_padding_em;    
     transition: $fast_transition;
   }
   
