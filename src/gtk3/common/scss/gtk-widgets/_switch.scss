@@ -6,11 +6,11 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 switch {
-   //needed to help prevent switches from growing.
+  margin: 4px 0; //needed to help prevent switches from growing.
   transition: $standard_transition;
   border-radius: $circular_radius;
   background-clip: padding-box;
-  background-color: to600($fg_color);
+  background-color: rbga($fg_color, 0.6);
   background-image: -gtk-scaled(
     url('assets/switch-symbols@1.png'),
     url('assets/switch-symbols@2.png'),
@@ -49,14 +49,14 @@ switch {
   
   headerbar &,
   toolbar & {
-     
+     background-color: 
       
   }
 
   slider {
-    
-    
-    
+    min-width: $switch_size;
+    min-height: $switch_size;
+    margin: 2px;
     transition: $standard_transition;
     border-radius: $circular_radius;
     background-color: $bg_hl_color;
