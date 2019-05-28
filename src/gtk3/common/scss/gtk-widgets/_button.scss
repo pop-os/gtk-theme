@@ -41,9 +41,7 @@
 button,
 .button {
   @extend %button-fallback;
-  min-width: $tiny_size;
-  min-height: $tiny_size;
-  padding: $tiny_padding_em $small_padding_em;
+  padding: $button_padding_text $button_padding_text * 2;
   transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
@@ -106,16 +104,18 @@ button,
     @include flat_button;
   }
   
-  &.text-button {
-    padding: $tiny_padding_em $large_padding_em;
+  &.text-button {  
     border-radius: $corner_radius;
+  }
+
+  &.image-button,
+  &.disclosure-button {
+    padding: $button_padding_image;
   }
   
   &.round,
   &.circular {
-    min-width: $large_size;
-    min-height: $large_size;
-    padding: 0;
+    padding: $button_padding_image;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
   }
@@ -140,9 +140,7 @@ button,
     
     .titlebar &,
     headerbar & {
-      min-width: $large_size;
-      min-height: $large_size;
-      padding: 0 $standard_padding;
+      padding: $button_padding_text $button_padding_text * 4;
       color: $titlebar_fg_color;
       
       &:hover {
@@ -158,7 +156,7 @@ button,
   }
   
   &.lock {
-    padding: $tinier_padding_em $small_padding_em;
+    
   } 
   
   label {
@@ -254,18 +252,18 @@ button,
   
   popover stack & {
     @include flat_button;
-    padding: $tiny_padding_em;
+    
     border-radius: $corner_radius;
         
     image,
     label {
-      margin: 0;
-      padding: 0;
+      
+      
     }
   }
   
   revealer > & {
-    margin: 10px;
+    
   }
 }
 

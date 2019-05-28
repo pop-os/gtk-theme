@@ -20,7 +20,8 @@ $line_size: 2px;
 $border_size: 1px;
 $progress_size: 4px;
 $marks_size: 6px;
-$check_size: 18px;
+$menu_size: 150px;
+$check_size: 15px;
 $switch_size: 20px;
 $toolbar_size: if($slim == 'false', 42px, 32px);
 $arrow_size: 19px;
@@ -36,13 +37,20 @@ $small_padding: if($slim == 'false', 8px, 6px);
 $standard_padding: if($slim == 'false', 12px, 10px);
 $large_padding: if($slim == 'false', 16px, 12px);
 
-$no_padding_em: if($slim == 'false', 0.1em, 0);
-$mini_padding_em: if($slim == 'false', 0.15em, 0);
+$no_padding_em: if($slim == 'false', 0.1em, 0.05em);
+$mini_padding_em: if($slim == 'false', 0.15em, 0.075em);
 $tinier_padding_em: if($slim == 'false', 0.3em, 0.2em);
 $tiny_padding_em: if($slim == 'false', 0.5em, 0.3em);
 $small_padding_em: if($slim == 'false', 0.6em, 0.3em);
 $standard_padding_em: if($slim == 'false', 1em, 0.8em);
 $large_padding_em: if($slim == 'false', 1.4em, 1em);
+
+$button_padding_text: $tiny_padding_em;
+$button_padding_image: $tiny_padding;
+$headerbar_padding: $tiny_padding_em $small_padding_em;
+$entry_padding: $tiny_padding_em;
+$menu_padding: $mini_padding_em;
+$check_padding: $mini_padding_em;
 
 // Border Shadows
 $titlebar_border: 
@@ -53,10 +61,10 @@ $scrollbar_border: inset 0 0 0 $border_size rgba($inverse_fg_color, 0.4);
 // Shadows:
 $shadow_0: 0 1px 2px rgba(0,  0,  0,  0.08);
 $shadow_1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-$shadow_2: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
-$shadow_3: 0 4px 8px rgba(0, 0, 0, 0.19), 0 4px 6px rgba(0, 0, 0, 0.23);
-$shadow_4: 0 8px 16px rgba(0, 0, 0, 0.25), 0 8px 10px rgba(0, 0, 0, 0.22);
-$shadow_5: 0 16px 32px rgba(0, 0, 0, 0.3), 0 12px 12px rgba(0, 0, 0, 0.22);
+$shadow_2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow_3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow_4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow_5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 $shadow_hover: $shadow_4;
 $shadow_window: 0 6px 12px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
 $shadow_window_bd: 0 6px 12px transparent, 0 4px 4px transparent;

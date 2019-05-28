@@ -8,8 +8,9 @@
 
 %menu,
 menu,
+.menu,
 window.popup {
-  padding: $mini_padding;
+  padding: $menu_padding;
   border-radius: $corner_radius;
   background-color: $bg_color;
 
@@ -26,6 +27,7 @@ menubar,
   -GtkWidget-window-dragging: true;
   
   > menuitem {
+    padding: $menu_padding $menu_padding * 3;
     transition: $standard_transition;
     border: $line_size solid transparent;
     color: $fg_color;
@@ -45,7 +47,6 @@ menubar,
   window > &,
   window > box > &:first-child,
   terminal-window > box > &:first-child {
-    padding: 0;
     border: 0 solid $titlebar_hl_color;
     border-width: 0 $border_size;
     background-color: $titlebar_bg_color;

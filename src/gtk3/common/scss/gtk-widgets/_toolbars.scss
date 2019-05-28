@@ -8,7 +8,6 @@
 
 toolbar,
 .toolbar {
-  padding: $tinier_padding;
   border-radius: 0 0 $corner_radius $corner_radius;
   background-color: $inverse_overlay_color;
   color: $fg_color;
@@ -23,8 +22,7 @@ actionbar,
 .secondary-toolbar,
 .bottom-toolbar,
 .inline-toolbar {
-  margin: $mini_padding;
-  padding: $tinier_padding;
+  
   background-color: $inverse_overlay_color;
   color: $fg_color;
   box-shadow: none;
@@ -45,7 +43,7 @@ actionbar,
   button,
   .background & button {
     @include flat_button;
-    padding: $tiny_padding;
+    
 
     &:checked {
       border: none;
@@ -72,7 +70,6 @@ actionbar,
 searchbar,
 .location-bar,
 .search-bar {
-  margin: $mini_padding;
   border-radius: $corner_radius $corner_radius 0 0;
   border-color: transparent;
   background-color: $inverse_overlay_color;

@@ -7,16 +7,16 @@
  */
 
 .emoji-picker { 
-  margin: 0;
+  
   
   entry {
-    margin: 8px 8px 0;
-    padding: 0;
+    
+    
     box-shadow: none;
   }
 
   box > label {
-    margin: 0 $tiny_padding_em 0 $no_padding_em;
+    
     color: $fg_color;
     font-size: 120%;
     font-weight: 300;
@@ -28,15 +28,15 @@
 }
 
 .emoji-box .box {
-  margin: 0;
+  
 }
 
 .emoji label {
-  padding: 0;
+  
 }
 
 button.emoji-section.text-button {
-  min-width: 36px;
-  margin: 4px 2px;
-  padding: 0;
+  
+  
+  
 }

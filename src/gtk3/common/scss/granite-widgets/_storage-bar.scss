@@ -9,7 +9,7 @@
 .storage-bar {
 
   .trough {
-    padding: $small_padding $tiny_padding;
+    
     border: none;
     border-radius: $corner_radius $corner_radius 0 0;
     background-image: none;
@@ -17,7 +17,7 @@
   }
   
   .fill-block {
-    padding: $small_padding $tiny_padding;
+    
     border: $border_size solid rgba($black, 0.35);
     border-top-width: 0;
     border-right-width: 0;
@@ -105,7 +105,7 @@
   }
 
   .legend {
-    padding: $small_padding;
+    
     border-radius: 50%;
     
     image {
@@ -114,7 +114,7 @@
   }
   
   .disk-bar {
-    padding: 0;
+    
     border-radius: $corner_radius;   
     background-color: $warm_grey_500; 
   } 

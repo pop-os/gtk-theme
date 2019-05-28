@@ -11,7 +11,7 @@
   // New Path Bar in 3.30
   .path-bar-box > widget.path-bar > box {
     > button {
-      padding: $tiny_padding_em $small_padding_em;
+      
       background-color: transparent;
       background-image: none;
       
@@ -39,13 +39,13 @@
   
   // Fix labels in 3.32
   .sidebar-icon {
-    margin-right: 6px;
+    
   }
 
   // Zoom controls
   > popover > stack > box.vertical > box.linked.horizontal 
   + box.vertical > box.vertical > box.horizontal.linked {
-    margin: $tiny_padding;
+    
     border-radius: $corner_radius;
     background-color: $overlay_color;
     box-shadow: $shadow_0;
@@ -65,7 +65,7 @@
   
   // Icon View
   widget.view > .icon-item-background {
-    padding: 4px;
+    
     border-radius: $corner_radius;
   }
 
@@ -94,8 +94,8 @@
   
   // Floating Bar
   .floating-bar {
-    min-height: $large_size;
-    padding: 0;
+    
+    
     transition: $standard_transition, border-width 0;
     border-width: $border_size;
     border-style: solid solid none;
@@ -105,19 +105,19 @@
     background-color: $inverse_overlay_color;
 
     &.bottom.left { // axes left border and border radius
-      margin-right: 8px - 1px;
+      
       border-left-style: none;
       border-top-left-radius: 0;
     }
 
     &.bottom.right { // axes right border and border radius
-      margin-left: 8px - 1px;
+      
       border-right-style: none;
       border-top-right-radius: 0;
     }
 
     button {
-      margin: $tiny_padding;
+      
     }
   }
   

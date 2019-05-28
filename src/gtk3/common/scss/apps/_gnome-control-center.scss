@@ -6,10 +6,18 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-window.csd {
+ window.csd {
   .titlebar > box > headerbar {
-    min-height: $toolbar_size;
-    padding: $mini_padding_em $standard_padding_em;
+    padding: $headerbar_padding;
+
+    &:first-child {
+      min-width: 250px;
+      padding-right: 0;
+    }
+
+    label {
+      padding: 0 $standard_padding;
+    }
   }
   
   > box.horizontal > stack > box.vertical > widget > stack { 

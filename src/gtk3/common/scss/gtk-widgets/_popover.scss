@@ -10,20 +10,20 @@ popover,
 popover.osd,
 .popover,
 .popover.osd {
-  margin: 0;
+  padding: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
   
   image,
   label {
-    padding: $tinier_padding_em;
+    
   }
   
   button image,
   flowbox image,
   button label,
   flowbox label {
-    padding: 0;
+    
   }
 
   .view {
@@ -31,18 +31,18 @@ popover.osd,
   }
   
   .model.image-button {
-    margin: $mini_size;
-    padding: 0;
+    
+    
     border-radius: $circular_radius;
     
     image {
-      margin: 2 * $mini_size;
-      padding: 0;
+      
+      
     }
   }
 
   .linked .model.image-button {
-    margin: 0;
+    
     border-radius: $corner_radius;
   }
 }

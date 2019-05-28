@@ -62,8 +62,8 @@ image {
 }
 
 .keycap {
-  min-width: $tiny_size;
-  padding: $mini_padding $tiny_padding;
+  
+  
   border-radius: $corner_radius;
   background-color: $overlay_color;
   font-size: 85%;
@@ -74,6 +74,6 @@ image {
  */
 
 statusbar frame {
-  margin: 0;
+  
   border: none;
 }

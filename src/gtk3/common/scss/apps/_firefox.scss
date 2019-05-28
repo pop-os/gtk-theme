@@ -30,8 +30,8 @@ text:selected {
   }
 
   headerbar.titlebar {
-    margin: 0;
-    padding: (28px - $icon_size * 1.5) / 2;
+    
+    
   }
 
   entry,
@@ -44,7 +44,7 @@ text:selected {
   }
 
   entry {
-    min-height: 32px - 6px;
+    
 
     &:focus { 
       border-color: $color_theme_2;
@@ -53,7 +53,7 @@ text:selected {
 
   button,
   button > button {
-    padding: 4px 8px;
+    
     background-color: $bg_color;
     background-size: auto;
     color: $fg_color;
@@ -78,8 +78,8 @@ text:selected {
     }
 
     &.close {
-      margin: $small_padding 0 $small_padding $standard_padding;
-      padding: 4px;
+      
+      
       border-radius: $circular_radius;
       background-color: $close_button_color;
       color: $inverse_fg_color;
@@ -105,8 +105,8 @@ text:selected {
 
   // avoid black border
   > scrollbar { 
-    min-width: $scrollbar_size;
-    min-height: $scrollbar_size;
+    
+    
     background-clip: border-box;
   }
 
