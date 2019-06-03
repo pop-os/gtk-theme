@@ -6,87 +6,9 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
+ 
+
 .nautilus-window {
-
-  // New Path Bar in 3.30
-  .path-bar-box > widget.path-bar > box {
-    > button {
-      
-      background-color: transparent;
-      background-image: none;
-      
-      &:checked {
-        border-image: none;
-      }
-      
-      &:hover {
-        background-color: rgba($titlebar_fg_color, 0.1);
-      }
-      
-      &:active {
-        background-color: rgba($titlebar_fg_color, 0.1);
-      }
-    }
-    
-    &:last-child > button {
-      border-image: radial-gradient(
-        circle closest-corner at center calc(100% - 1px),
-        $color_theme_2 100%,
-        transparent 0%)
-        0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
-    }
-  }
-  
-  // Fix labels in 3.32
-  .sidebar-icon {
-    
-  }
-
-  // Zoom controls
-  > popover > stack > box.vertical > box.linked.horizontal 
-  + box.vertical > box.vertical > box.horizontal.linked {
-    
-    border-radius: $corner_radius;
-    background-color: $overlay_color;
-    box-shadow: $shadow_0;
-    
-    button:disabled {
-      border: none;
-      box-shadow: none;
-    }
-  }
-  
-  // Tiny fix for border radius on popover buttons
-  popover stack box.linked button,
-  popover stack box.linked button:first-child,
-  popover stack box.linked button:last-child {
-    border-radius: $corner_radius;
-  }
-  
-  // Icon View
-  widget.view > .icon-item-background {
-    
-    border-radius: $corner_radius;
-  }
-
-  &:selected {
-    background-color: transparent;
-
-    widget.view > .icon-item-background { 
-      background-color: $color_theme_1;
-    }
-  }
-  
-  widget.view .icon-item-background,
-  .nautilus-canvas-item {
-    background-color: $color_theme_1;
-    color: $fg_color;
-    text-shadow: $shadow_0;
-
-    &:selected {
-      color: $selected_fg_color;
-    }
-  }
 
   .nautilus-canvas-item {
     border-radius: $corner_radius;
@@ -94,30 +16,22 @@
   
   // Floating Bar
   .floating-bar {
-    
-    
     transition: $standard_transition, border-width 0;
     border-width: $border_size;
     border-style: solid solid none;
     border-radius: $corner_radius $corner_radius 0 0;
     border-color: rgba($fg_color, 0.4);
     background-clip: padding-box;
-    background-color: $inverse_overlay_color;
+    background-color: mix($fg_color, $bg_color, 20%);
 
     &.bottom.left { // axes left border and border radius
-      
       border-left-style: none;
       border-top-left-radius: 0;
     }
 
     &.bottom.right { // axes right border and border radius
-      
       border-right-style: none;
       border-top-right-radius: 0;
-    }
-
-    button {
-      
     }
   }
   

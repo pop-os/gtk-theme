@@ -6,8 +6,7 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-.titlebar,
-headerbar.titlebar {
+headerbar {
   padding: $headerbar_padding;
   border: 0 solid $titlebar_hl_color;
   border-width: $border_size $border_size 0;
@@ -21,20 +20,42 @@ headerbar.titlebar {
     color: rgba($titlebar_fg_color, 0.6);
   }
 
-  button {
+  .maximized &,
+  .fullscreen &,
+  .tiled &,
+  .tiled-left &,
+  .tiled-right &,
+  .tiled-top &,
+  .tiled-bottom & {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  button,
+  .background & button {
+    @include flat_button;
+    background-color: rgba($titlebar_fg_color, 0.1);
+    color: $titlebar_fg_color;
     box-shadow: none;
 
     &:hover {
       background-color: rgba($titlebar_fg_color, 0.2);
       box-shadow: none;
 
-      &:focus {
-        background-color: rgba($titlebar_fg_color, 0.2);
-      }
-
       &:active {
         background-color: rgba($titlebar_fg_color, 0.4);
-        box-shadow: $shadow_0;
+      }
+    }
+
+    &:checked {
+      @include underline(focus);
+      
+      image,
+      label,
+      arrow,
+      widget {
+        color: $titlebar_fg_color;
       }
     }
 
@@ -46,18 +67,15 @@ headerbar.titlebar {
     &.disclosure-button {
       padding: $button_padding_image + 1.5px;
     }
-  }
-  
-  .maximized &,
-  .fullscreen &,
-  .tiled &,
-  .tiled-left &,
-  .tiled-right &,
-  .tiled-top &,
-  .tiled-bottom & {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
+
+    image,
+    label {
+      color: $titlebar_fg_color;
+
+      &:disabled {
+        color: rgba($titlebar_fg_color, 0.6);
+      }
+    }
   }
 
   .titlebutton {
@@ -73,11 +91,9 @@ headerbar.titlebar {
     
     &:active {
       background-color: rgba($titlebar_fg_color, 0.2);
-      box-shadow: $shadow_2;
     }
     
     &.close {
-      
       background-color: $close_button_color;
       
       &:backdrop {
@@ -92,6 +108,10 @@ headerbar.titlebar {
         background-color: mix($close_button_color, $obverse_bg_color, 60%);
       }
     }
+  }
+
+  .linked button {
+    background-color: transparent;
   }
   
   window > &.flat,
@@ -131,9 +151,12 @@ headerbar.titlebar {
   
   .headerbar,
   headerbar {
-    padding: 0;
     border: none;
     box-shadow: none;
+  }
+
+  .titlebar {
+    padding: 0;
   }
   
   seperator {
@@ -150,12 +173,6 @@ headerbar.titlebar {
   .subtitle {
     font-size: 80%;
     font-weight: 500;
-  }
-
-  entry {
-    
-    
-    
   }
 }
 
@@ -183,82 +200,6 @@ decoration {
   padding: 0;
 }
 
-headerbar,
-.headerbar {
-
-  entry,
-  .entry {
-    background-color: $bg_color;
-
-    &:focus {
-      background-color: $bg_color;
-    }
-
-    &:disabled {
-      background-color: rgba($bg_color, 0.4);
-    }
-  }
-  
-  
-
-  button,
-  .button {
-    background-color: rgba($titlebar_fg_color, 0.1);
-    color: $titlebar_fg_color;
-    box-shadow: none;
-    border-image: radial-gradient(
-      circle closest-corner at center calc(100% - 1px), 
-      transparent 0%, 
-      transparent 0%) 0 0 0 / 0 0 0;
-    
-    &:disabled {
-      background-color: transparent;
-      color: rgba($titlebar_fg_color, 0.4);
-      box-shadow: none;
-
-      image,
-      label {
-        color: rgba($titlebar_fg_color, 0.4);
-      }
-    }
-    
-    &:backdrop {
-      color: rgba($titlebar_fg_color, 0.6);
-    }
-    
-    &:hover {
-      background-color: rgba($titlebar_fg_color, 0.2);
-      color: $titlebar_fg_color;
-      box-shadow: none;
-    }
-    
-    &:active {
-      background-color: rgba($titlebar_fg_color, 0.4);
-    }
-    
-    &:checked {
-      background-color: rgba($titlebar_fg_color, 0.1);
-      color: $titlebar_fg_color;
-      border-image: radial-gradient(
-        circle closest-corner at center calc(100% - 1px), 
-        $color_theme_2 100%, 
-        transparent 0%) 0 0 2 / 0 0 2px;
-      
-      &:hover {
-        background-color: rgba($titlebar_fg_color, 0.2);
-      }
-    }
-    
-    &.flat:checked {
-      color: $titlebar_fg_color;
-    }
-  }
-  
-  .linked button:hover {
-    background-color: rgba($titlebar_fg_color, 0.1);
-  }
-}
-
 .titlebar hdyleaflet headerbar,
 hdyleaflet headerbar {
   padding: $headerbar_padding;
@@ -272,7 +213,7 @@ window > headerbar {
 menu window.popup decoration {
   
   border-radius: $corner_radius;
-  box-shadow: $shadow_3;
+  box-shadow: $shadow_2;
 }
 
 tooltip decoration {
@@ -288,6 +229,5 @@ tooltip decoration {
 }
 
 .ssd decoration { 
-  
   box-shadow: 0 3px 3px rgba($black, 0.16);
 }
