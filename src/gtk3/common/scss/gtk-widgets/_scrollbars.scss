@@ -14,7 +14,7 @@ scrollbar {
   -GtkScrollbar-has-forward-stepper: false;
   
   trough {
-    
+    padding: 2px;
     transition: $standard_transition;
     border-radius: 0;
     background-clip: border-box;
@@ -26,7 +26,6 @@ scrollbar {
   }
   
   slider {
-    
     transition: $standard_transition;
     border: $border_size solid rgba($bg_color, 0.6);
     border-radius: $circular_radius;
@@ -35,33 +34,33 @@ scrollbar {
   }
   
   &.horizontal slider {
-    
-    
+    min-width: $scrollbar_size * 3;
+    min-height: $scrollbar_size / 2;
   }
   
   &.vertical slider {
-    
-    
-  }
+    min-width: $scrollbar_size / 2;
+    min-height: $scrollbar_size * 3;
+}
 
   &.hovering {
-  
     trough {
-      background-color: rgba($inverse_overlay_color, 0.6);
+      padding: 2px;
+      background-color: $inverse_overlay_color;
       
       &:backdrop {
-        background-color: rgba($inverse_overlay_color, 0.6);
+        background-color: $inverse_overlay_color;
       }
     }
-    
+
     &.horizontal slider {
-      
-      
+      min-width: $scrollbar_size * 2;
+      min-height: $scrollbar_size;
     }
   
     &.vertical slider {
-      
-      
+      min-width: $scrollbar_size;
+      min-height: $scrollbar_size * 3;
     }
   }
 }
