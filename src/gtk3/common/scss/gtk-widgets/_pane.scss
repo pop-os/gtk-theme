@@ -10,14 +10,17 @@ paned {
   background-color: $overlay_color;
   
   > separator {
-    background-color: rgba($fg_color, 0.2);
+    min-width: $mini_padding_em;
+    min-height: $mini_padding_em;
+    padding: $tinier_padding;
+    background-color: rgba($fg_color, 0.05);
   }
   
-  &.horizontal separator {
-    
-  }
+  // &.horizontal separator {
+  //   background-color: $inverse_overlay_color;
+  // }
   
-  &.vertical separator {
-    
-  }
+  // &.vertical separator {
+  //   background-color: $inverse_overlay_color; 
+  // }
 }
