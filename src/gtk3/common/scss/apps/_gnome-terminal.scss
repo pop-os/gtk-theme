@@ -6,11 +6,6 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-terminal-window > headerbar.titlebar > box.right > .close {
-  
-  
-}
-
 // Terminal needs a border to help with the case of overlapping windows.
 terminal-window > box {
   border: 0 solid $titlebar_hl_color;

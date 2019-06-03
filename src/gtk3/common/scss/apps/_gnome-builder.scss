@@ -10,29 +10,20 @@
 // git.gnome.org/browse/gnome-builder/tree/data/themes?h=gnome-builder-3-26
 
 window.workbench > stack.titlebar {
-  
 
-  .global-search {
-    
-  }
   headerbar omnibar.linked.horizontal {
     
-
     button:first-child {
-      
-      
       border-radius: $corner_radius;
     }
 
     entry {
-      
       border-right: 0 transparent;
       border-radius: $corner_radius 0 0;
     }
 
     button:last-child {
       @include underline(normal);
-      
       border-left: 0 transparent;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -42,24 +33,6 @@ window.workbench > stack.titlebar {
         background-color: $base_color;
       }
     }
-  }
-
-  headerbar box.horizontal box.linked {
-    button.image-button {
-      
-    }
-
-    button.dzlmenubutton.run-arrow-button {
-      
-    }
-  }
-}
-
-button.dzlmenubutton image {
-  
-
-  &.arrow { 
-    
   }
 }
 

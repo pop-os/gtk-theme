@@ -155,10 +155,6 @@ button,
     }
   }
   
-  &.lock {
-    
-  } 
-  
   label {
     font-weight: 600;
   }
@@ -252,18 +248,7 @@ button,
   
   popover stack & {
     @include flat_button;
-    
     border-radius: $corner_radius;
-        
-    image,
-    label {
-      
-      
-    }
-  }
-  
-  revealer > & {
-    
   }
 }
 

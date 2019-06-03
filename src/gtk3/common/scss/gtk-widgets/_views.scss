@@ -35,8 +35,6 @@ treeview,
   }
   
   entry {
-    
-    
     border-radius: 0;
   }
   
@@ -87,6 +85,7 @@ treeview,
 }
 
 scrolledwindow {
+  border-radius: $corner_radius / 2;
 }
 
 viewport, 

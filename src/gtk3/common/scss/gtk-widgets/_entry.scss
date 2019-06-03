@@ -102,13 +102,13 @@ entry,
   }
 
   .entry-tag {
+    margin: 2px 0;
     padding-left: $tiny_padding_em;
-    margin: 2px 0px;
     border: none;
     border-radius: 4px;
-    box-shadow: none;
     background-color: $selected_bg_color;
     color: $selected_fg_color;
+    box-shadow: none;
 
     .background image {
       color: $selected_fg_color;
@@ -124,8 +124,8 @@ entry,
     &.button {
       @include flat_button;
       border: none;
-      box-shadow: none;
       color: $selected_fg_color;
+      box-shadow: none;
 
       image,
       label {
@@ -236,8 +236,6 @@ combobox {
   }
   
   button {
-     
-    
     @include underline(normal);
     background-color: transparent;
     
@@ -266,10 +264,6 @@ combobox {
         color: rgba($fg_color, 0.2);
       }
     }
-  }
-  
-  entry + button {
-    
   }
 }
 

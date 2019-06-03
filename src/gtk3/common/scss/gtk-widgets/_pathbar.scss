@@ -21,9 +21,6 @@
   
   &.text-button,
   &.toggle {
-    
-    
-    
     border-radius: $corner_radius;
     background-image: url('assets/pathbar-separator.svg');
     background-repeat: no-repeat no-repeat;
@@ -31,18 +28,11 @@
     background-size: 12px;
     
     &:dir(rtl) {
-      
-      
       background-position: 0% 50%;
-    }
-    
-    image {
-      
     }
   }
   
   &.popup {
-    
     background-image: none;
   }
 }

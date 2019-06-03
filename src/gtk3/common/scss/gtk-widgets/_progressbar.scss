@@ -23,7 +23,6 @@ levelbar block {
   }
   
   entry & {
-    
     transition: $standard_transition;
     border-bottom: $line_size solid $color_theme_1;
     border-radius: $corner_radius $corner_radius 0 0;
@@ -45,11 +44,6 @@ levelbar block.empty {
   
   &:backdrop {
     background-color: rgba($fg_color, 0.1);
-  }
-  
-  entry &,
-  spinbutton & {
-    
   }
 }
 

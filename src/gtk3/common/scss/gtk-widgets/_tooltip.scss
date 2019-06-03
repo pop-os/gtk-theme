@@ -8,9 +8,7 @@
 
 
 tooltip,
-.overlay-bar {
-  
-  
+.overlay-bar { 
   border: none;
   border-radius: $corner_radius;
   background-color: $bg_color;
@@ -20,8 +18,4 @@ tooltip,
   * {
     color: $fg_color;
   }
-}
-
-.overlay-bar {
-  
 }

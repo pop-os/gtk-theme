@@ -74,18 +74,8 @@ notebook {
         padding: 0 $tiny_padding_em;
       }
       
-      image {
-        
-      }
-      
       button {
         @include flat_button;
-        
-        
-        
-        image {
-          
-        }
       }
     }
   }
