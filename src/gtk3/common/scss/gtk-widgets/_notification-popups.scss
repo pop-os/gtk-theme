@@ -8,8 +8,8 @@
 
 .app-notification,
 .app-notification.frame {
-  
-  
+  margin: $standard_padding_em;
+  padding: $small_padding_em;
   border: none;
   border-radius: $corner_radius;
   background-clip: padding-box;
