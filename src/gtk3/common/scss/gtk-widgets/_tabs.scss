@@ -60,7 +60,7 @@ notebook {
     }
   
     tab {
-      
+      padding: $tiny_padding_em;
       transition: $standard_transition, font-weight 0ms linear, color 0ms linear;
       background-color: transparent;
       
@@ -75,7 +75,7 @@ notebook {
       }
       
       label {
-        
+        padding: 0 $tiny_padding_em;
       }
       
       image {
