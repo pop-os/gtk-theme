@@ -146,6 +146,7 @@ entry,
 %spinbutton,
 .background spinbutton,
 .background .linked spinbutton {
+  padding: $tinier_padding_em;
   transition: $standard_transition;
   border: none;
   border-radius: $corner_radius;
@@ -170,6 +171,10 @@ entry,
  
   button,
   entry {
+    min-width: 2px;
+    min-height: 2px;
+    padding: 3px;
+
     &,
     &:hover,
     &:active,
@@ -185,6 +190,10 @@ entry,
     &:disabled {
       color: rgba($fg_color, 0.4);
     }
+  }
+
+  &.horizontal entry {
+    min-width: 4em;
   }
 
   &:disabled entry,
@@ -210,25 +219,6 @@ entry,
       &:active {
         background-color: rgba($fg_color, 0.2);
       }
-    }
-  }
- 
-  entry {
-    
-    
-  }
- 
-  &.horizontal {
-    
- 
-    entry {
-      
-    }
-  }
- 
-  &.vertical {
-    button {
-      
     }
   }
 }
