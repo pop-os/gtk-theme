@@ -26,7 +26,7 @@ infobar {
     
     label,
     image {
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
     
     button {
@@ -44,7 +44,7 @@ infobar {
     button,
     button label,
     button image {
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
   }
   
@@ -53,7 +53,7 @@ infobar {
     
     label,
     image {
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
     
     button {
@@ -71,7 +71,7 @@ infobar {
     button,
     button label,
     button image {
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
   }
   
@@ -80,12 +80,12 @@ infobar {
     
     label,
     image {
-      color: $obverse_fg_color;
+      color: $selected_fg_color;
     }
     
     button {
       background-color: mix($bg_color, $warning_color, 20%);
-      color: $obverse_fg_color;
+      color: $selected_fg_color;
     }
   }
   
@@ -94,12 +94,12 @@ infobar {
     
     label,
     image {
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
     
     button {
       background-color: mix($bg_color, $information_color, 20%);
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
 
     menu,
@@ -113,22 +113,22 @@ infobar {
     button,
     button label,
     button image {
-      color: $inverse_fg_color;
+      color: $selected_fg_color;
     }
   }
   
   .linked {
-    background-color: rgba($obverse_bg_color, 0.1);
+    background-color: $inverse_overlay_color;
 
     button {
       background-color: transparent;
 
       &:hover {
-        background-color: rgba($inverse_bg_color, 0.1);
+        background-color: $overlay_color;
       }
 
       &:active {
-        background-color: rgba($inverse_bg_color, 0.3);
+        background-color: $overlay_color;
       }
     }
   }
