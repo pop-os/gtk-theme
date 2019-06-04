@@ -36,6 +36,21 @@
         0 0 2 / 0 0 2px; // sass-lint:disable-line indentation 
     }
   }
+
+  // Search button (with arrow)
+  .path-bar-box ~ box button.popup.toggle {
+    border-radius: $corner_radius;
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgba($white, 0.4);
+    }
+
+    label,
+    image {
+      color: $inverse_fg_color;
+    }
+  }
   
   // Fix labels in 3.32
   .sidebar-icon {
