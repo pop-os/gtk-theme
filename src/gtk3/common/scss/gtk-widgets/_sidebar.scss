@@ -16,6 +16,19 @@
   border-radius: 0;
   background-color: $base_color;
   color: $fg_color;
+
+  &:selected {
+    background-color: $color_theme_1;
+      
+    &:backdrop {
+      background-color: rbga($color_theme_1, 0.6);
+    }
+
+    label,
+    image {
+      color: $white;
+    }
+  }
   
   row,
   .list-row,
@@ -36,11 +49,12 @@
       background-color: $color_theme_2;
       
       &:backdrop {
-        background-color: to600($color_theme_2);
+        background-color: $color_theme_2;
       }
       
       label,
       image {
+        background-color: $color_theme_2;
         color: $inverse_fg_color;
       }
     }
