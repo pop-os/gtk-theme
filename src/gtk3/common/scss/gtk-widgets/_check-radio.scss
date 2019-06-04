@@ -112,6 +112,7 @@ radiobutton {
   outline-offset: 2px;
   
   label {
+    padding: 0 $tiny_padding_em;
     color: $fg_color;
     
     &:disabled {
