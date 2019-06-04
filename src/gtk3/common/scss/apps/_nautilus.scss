@@ -13,32 +13,6 @@
   .nautilus-canvas-item {
     border-radius: $corner_radius;
   }
-  
-  // Floating Bar
-  .floating-bar {
-    transition: $standard_transition, border-width 0;
-    border-width: $border_size;
-    border-style: solid solid none;
-    border-radius: $corner_radius $corner_radius 0 0;
-    border-color: rgba($fg_color, 0.4);
-    background-clip: padding-box;
-    background-color: mix($fg_color, $bg_color, 20%);
-
-    &.bottom.left { // axes left border and border radius
-      border-left-style: none;
-      border-top-left-radius: 0;
-    }
-
-    &.bottom.right { // axes right border and border radius
-      border-right-style: none;
-      border-top-right-radius: 0;
-    }
-  }
-  
-  notebook,
-  notebook > stack {
-    background-color: $bg_color;
-  }
 }
 
 // Nautilus Desktop Widget
@@ -83,4 +57,25 @@
     0 1px $text_shadow_color, // sass-lint:disable-line indentation
     1px 0 $text_shadow_color, // sass-lint:disable-line indentation
     0 -1px $text_shadow_color; // sass-lint:disable-line indentation
+}
+
+// Floating Bar
+.floating-bar {
+  transition: $standard_transition, border-width 0;
+  border-width: $border_size;
+  border-style: solid solid none;
+  border-radius: $corner_radius $corner_radius 0 0;
+  border-color: rgba($fg_color, 0.4);
+  background-clip: padding-box;
+  background-color: mix($fg_color, $bg_color, 20%);
+
+  &.bottom.left { // axes left border and border radius
+    border-left-style: none;
+    border-top-left-radius: 0;
+  }
+
+  &.bottom.right { // axes right border and border radius
+    border-right-style: none;
+    border-top-right-radius: 0;
+  }
 }
