@@ -54,10 +54,10 @@ messagedialog {
         background-color: transparent;
 
         &:hover {
-          background-color: rgba($destructive_color, 0.1);
+          background-color: rgba($red, 0.1);
 
           &:active {
-            background-color: rgba($destructive_color, 0.2);
+            background-color: rgba($red, 0.2);
           }
         }
 
@@ -66,7 +66,7 @@ messagedialog {
         }
 
         label {
-          color: $destructive_color;
+          color: $dark_red;
 
           &:hover,
           &:focus {
@@ -79,10 +79,10 @@ messagedialog {
         background-color: transparent;
 
         &:hover {
-          background-color: rgba($suggested_color, 0.1);
+          background-color: rgba($green, 0.1);
 
           &:active {
-            background-color: rgba($suggested_color, 0.2);
+            background-color: rgba($green, 0.2);
           }
         }
 
@@ -91,7 +91,7 @@ messagedialog {
         }
 
         label {
-          color: $suggested_color;
+          color: $dark_green;
 
           &:hover,
           &:focus {

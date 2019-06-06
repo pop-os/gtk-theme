@@ -89,10 +89,10 @@ levelbar {
     margin: $mini_padding_em;
     
     &.filled.low {
-      background-color: $error_color;
+      background-color: $error_bg_color;
       
       &:backdrop {
-        background-color: rgba($error_color, 0.4);
+        background-color: rgba($error_bg_color, 0.4);
       }
     }
     
@@ -101,10 +101,10 @@ levelbar {
     }
     
     &.filled.high {
-      background-color: $suggested_color;
+      background-color: $suggested_bg_color;
       
       &:backdrop {
-        background-color: rgba($suggested_color, 0.4);
+        background-color: rgba($suggested_bg_color, 0.4);
       }
     }
     

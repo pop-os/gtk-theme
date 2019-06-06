@@ -56,51 +56,51 @@
 
   .app {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($purple_500, 30%);
-    background-color: $purple_500;
+    border-bottom-color: darken($light_purple, 30%);
+    background-color: $light_purple;
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .audio {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($orange_500, 20%);
-    background-color: $orange_500;
+    border-bottom-color: darken($light_orange, 20%);
+    background-color: $light_orange;
     
     image {
-      color: $obverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .files {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($blue_500, 20%);
-    background-color: $blue_500;
+    border-bottom-color: darken($light_blue, 20%);
+    background-color: $light_blue;
     
     image {
-      color: $obverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .photo {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($green_500, 30%);
-    background-color: $green_500;
+    border-bottom-color: darken($light_green, 30%);
+    background-color: $light_green;
     
     image {
-      color: $obverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .video {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($red_500, 20%);
-    background-color: $red_500;
+    border-bottom-color: darken($light_red, 20%);
+    background-color: $light_red;
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
@@ -109,14 +109,14 @@
     border-radius: 50%;
     
     image {
-      color: $obverse_fg_color;
+      color: $color_fg_color;
     }
   }
   
   .disk-bar {
     
     border-radius: $corner_radius;   
-    background-color: $warm_grey_500; 
+    background-color: $warm_grey; 
   } 
 
   .ext2, .ext3, .ext4, .fat16, .fat32, .btrfs, 
@@ -124,13 +124,13 @@
     // sass-lint:disable-block indentation
     border: none;
     box-shadow: 
-      inset 0 -2px rgba($warm_grey_700, 0.5),
-      inset 1px 0 rgba($warm_grey_700, 0.5),
-      inset -1px 0 rgba($warm_grey_700, 0.5);
+      inset 0 -2px rgba($dark_warm_grey, 0.5),
+      inset 1px 0 rgba($dark_warm_grey, 0.5),
+      inset -1px 0 rgba($dark_warm_grey, 0.5);
   }
 
   .swap { 
-    background-color: $red_700; 
+    background-color: $dark_red; 
     
     image {
       color: $inverse_fg_color;
@@ -138,15 +138,15 @@
   }
 
   .ext4 { 
-    background-color: $green_500; 
+    background-color: $green; 
     
     image {
-      color: $obverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .ext3 { 
-    background-color: $green_700; 
+    background-color: $dark_green; 
     
     image {
       color: $inverse_fg_color;
@@ -154,32 +154,32 @@
   }
 
   .ext2 { 
-    background-color: $green_900; 
+    background-color: $light_green; 
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .fat16, 
   .fat32 { 
-    background-color: $yellow_500; 
+    background-color: $light_yellow; 
     
     image {
-      color: $obverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .btrfs { 
-    background-color: $blue_700; 
+    background-color: $light_blue; 
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .xfs { 
-    background-color: $indigo_500; 
+    background-color: $light_indigo; 
     
     image {
       color: $inverse_fg_color;
@@ -187,7 +187,7 @@
   }
 
   .ntfs { 
-    background-color: $orange_500; 
+    background-color: $orange; 
     
     image {
       color: $obverse_fg_color;
@@ -195,34 +195,34 @@
   }
 
   .luks { 
-    background-color: $purple_300; 
+    background-color: $light_purple; 
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .lvm { 
-    background-color: $purple_500; 
+    background-color: $purple; 
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
 
   .none { 
-    background-color: $blue_500; 
+    background-color: $dark_blue; 
     
     image {
-      color: $obverse_fg_color;
+      color: $inverse_fg_color;
     }
   }
 
   .unused { 
-    background-color: $warm_grey_500; 
+    background-color: $warm_grey; 
     
     image {
-      color: $inverse_fg_color;
+      color: $color_fg_color;
     }
   }
   

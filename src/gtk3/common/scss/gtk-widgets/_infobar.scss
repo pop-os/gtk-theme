@@ -22,7 +22,7 @@ infobar {
   }
   
   &.error {
-    background-color: $error_color;
+    background-color: $error_bg_color;
     
     label,
     image {
@@ -30,7 +30,7 @@ infobar {
     }
     
     button {
-      background-color: mix($bg_color, $error_color, 20%);
+      background-color: mix($bg_color, $error_bg_color, 20%);
     }
 
     menu,
@@ -49,7 +49,7 @@ infobar {
   }
   
   &.question {
-    background-color: $question_color;
+    background-color: $question_bg_color;
     
     label,
     image {
@@ -57,7 +57,7 @@ infobar {
     }
     
     button {
-      background-color: mix($bg_color, $question_color, 20%);
+      background-color: mix($bg_color, $question_bg_color, 20%);
     }
 
     menu,
@@ -76,7 +76,7 @@ infobar {
   }
   
   &.warning {
-    background-color: $warning_color;
+    background-color: $warning_bg_color;
     
     label,
     image {
@@ -84,13 +84,13 @@ infobar {
     }
     
     button {
-      background-color: mix($bg_color, $warning_color, 20%);
+      background-color: mix($bg_color, $warning_bg_color, 20%);
       color: $selected_fg_color;
     }
   }
   
   &.info {
-    background-color: $information_color;
+    background-color: $information_bg_color;
     
     label,
     image {
@@ -98,7 +98,7 @@ infobar {
     }
     
     button {
-      background-color: mix($bg_color, $information_color, 20%);
+      background-color: mix($bg_color, $information_bg_color, 20%);
       color: $selected_fg_color;
     }
 

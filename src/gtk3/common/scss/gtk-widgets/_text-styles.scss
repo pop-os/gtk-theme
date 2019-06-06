@@ -16,12 +16,12 @@
 
 image.error,
 .error {
-  color: $error_color;
+  color: $error_bg_color;
 }
 
 image.warning,
 .warning {
-  color: $warning_color;
+  color: $warning_bg_color;
 }
 
 label.warning {
@@ -30,11 +30,11 @@ label.warning {
 
 image.success,
 .success {
-  color: $success_color;
+  color: $success_bg_color;
 }
 
 label.success {
-  color: $success_color;
+  color: $success_bg_color;
 }
 
 link {

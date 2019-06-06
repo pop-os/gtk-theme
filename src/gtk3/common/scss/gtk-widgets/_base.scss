@@ -170,7 +170,7 @@
   outline: 0 solid rgba($light_neutral_grey_700, 0.4);
   outline-offset: -4px;
   background-clip: padding-box;
-  -GtkTextView-error-underline-color: $error_color;
+  -GtkTextView-error-underline-color: $error_bg_color;
   -GtkIMHtml-hyperlink-color: $color_theme_2;
   -GtkHTML-link-color: $color_theme_2;
   -gtk-outline-radius: $corner_radius;

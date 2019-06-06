@@ -69,7 +69,7 @@ button,
   
   &:checked {
     background-color: $color_theme_2;
-    color: $selected_fg_color;
+    color: $color_fg_color;
     
     &:backdrop {
       opacity: 0.6;
@@ -161,8 +161,8 @@ button,
   
   &.suggested-action,
   .background &.suggested-action {
-    background-color: $suggested_color;
-    color: $selected_fg_color;
+    background-color: $suggested_bg_color;
+    color: $color_fg_color;
     
     headerbar & {
       box-shadow: $shadow_1;
@@ -170,10 +170,10 @@ button,
 
     &:focus {
       outline-color: rgba($inverse_fg_color, 0.4);
-      background-color: $suggested_color;
+      background-color: $suggested_bg_color;
 
       &:hover {
-        background-color: mix($suggested_color, $obverse_bg_color, 80%);
+        background-color: mix($suggested_bg_color, $obverse_bg_color, 80%);
       
         headerbar & {
           box-shadow: $shadow_2;
@@ -182,7 +182,7 @@ button,
     }
     
     &:hover {
-      background-color: mix($suggested_color, $obverse_bg_color, 80%);
+      background-color: mix($suggested_bg_color, $obverse_bg_color, 80%);
       
       headerbar & {
         box-shadow: $shadow_2;
@@ -190,22 +190,22 @@ button,
     }
     
     &:active {
-      background-color: mix($suggested_color, $obverse_bg_color, 60%);
+      background-color: mix($suggested_bg_color, $obverse_bg_color, 60%);
       
       headerbar & {
-        background-color: mix($suggested_color, $obverse_bg_color, 40%);
+        background-color: mix($suggested_bg_color, $obverse_bg_color, 40%);
       }
     }
     
     label,
     image {
-      color: $selected_fg_color;
+      color: $color_fg_color;
     }
   }
   
   &.destructive-action {
-    background-color: $destructive_color;
-    color: $selected_fg_color;
+    background-color: $destructive_bg_color;
+    color: $color_fg_color;
     
     headerbar & {
       box-shadow: $shadow_1;
@@ -213,10 +213,10 @@ button,
 
     &:focus {
       outline-color: rgba($inverse_fg_color, 0.4);
-      background-color: $destructive_color;
+      background-color: $destructive_bg_color;
 
       &:hover {
-        background-color: mix($destructive_color, $obverse_bg_color, 80%);
+        background-color: mix($destructive_bg_color, $obverse_bg_color, 80%);
       
         headerbar & {
           box-shadow: $shadow_2;
@@ -225,7 +225,7 @@ button,
     }
     
     &:hover {
-      background-color: mix($destructive_color, $obverse_bg_color, 80%);
+      background-color: mix($destructive_bg_color, $obverse_bg_color, 80%);
       
       headerbar & {
         box-shadow: $shadow_2;
@@ -233,7 +233,7 @@ button,
     }
     
     &:active {
-      background-color: mix($destructive_color, $obverse_bg_color, 60%);
+      background-color: mix($destructive_bg_color, $obverse_bg_color, 60%);
       
       headerbar & {
         box-shadow: $shadow_0;
@@ -242,7 +242,7 @@ button,
     
     label,
     image {
-      color: $selected_fg_color;
+      color: $color_fg_color;
     }
   }
   

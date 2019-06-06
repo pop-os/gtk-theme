@@ -13,7 +13,7 @@
   border: none;
   border-radius: $corner_radius;
   background-clip: padding-box;
-  background-color: mix($inverse_bg_color, $warm_grey_500, 30%);
+  background-color: mix($inverse_bg_color, $dark_warm_grey, 30%);
   box-shadow: $shadow_2; 
   
   label {
@@ -33,7 +33,7 @@
     }
     
     label {
-      color: $orange_300;
+      color: $light_orange;
     }
     
     image {

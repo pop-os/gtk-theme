@@ -23,7 +23,7 @@ radio {
   &:checked,
   &:indeterminate {  
     background-color: $color_theme_2;
-    color: $selected_fg_color;
+    color: $color_fg_color;
     box-shadow: inset 0 0 0 2px transparent;
     
     &:backdrop {

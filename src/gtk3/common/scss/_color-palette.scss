@@ -1,73 +1,50 @@
 
-/* 
- * _color-palette.scss - Defines the master color palette
- *
- * File credits: Ian Santopietro <isantop@gmail.com>
- */
-
 // Orange
-$orange_100: #FFDB91;
-$orange_300: #F9B461;
-$orange_500: #FAA41A;
-$orange_700: #DE8800;
-$orange_900: #C26C00;
+$orange: if($color=='light', #ffad00, #fbb86c);
+$light_orange: if($color=='light', #fbb86c, #ffd7a1);
+$dark_orange: if($color=='light', #af5c02, #ffad00);
 
+// blue
+$blue: if($color=='light', #63b1bc, #6acad8);
+$light_blue: if($color=='light', #6acad8, #99ffff);
+$dark_blue: if($color=='light', #00496d, #63b1bc);
 
-// Red
-$red_100: #FF9262;
-$red_300: #FF793E;
-$red_500: #F15D22;
-$red_700: #CF3B00;
-$red_900: #AC1800;
+// green
+$green: if($color=='light', #82bf8c, #90cfb0);
+$light_green: if($color=='light', #90cfb0, #acf7d2);
+$dark_green: if($color=='light', #3b6e43, #82bf8c);
 
+// red
+$red: if($color=='light', #e56a54, #ea9090);
+$light_red: if($color=='light', #ea9090, #ffb5b5);
+$dark_red: if($color=='light', #a0252b, #e56a54);
 
-// Yellow 
-$yellow_100: #FFFFA8;
-$yellow_300: #FFFA7D;
-$yellow_500: #FFCE51;
-$yellow_700: #D1A023;
-$yellow_900: #A27100;
+// yellow
+$yellow: if($color=='light', #fedb40, #f9d87a);
+$light_yellow: if($color=='light', #fff19e, #f9d87a);
+$dark_yellow: if($color=='light', #966800, #fedb40);
 
+// purple
+$purple: if($color=='light', #cf7dff, #d58cff);
+$light_purple: if($color=='light', #d58cff, #e5b3ff);
+$dark_purple: if($color=='light', #813b96, #cf7dff);
 
-// Green
-$green_100: #A2F3BE;
-$green_300: #8ADBA6;
-$green_500: #73C48F;
-$green_700: #479863;
-$green_900: #1C6D38;
+// pink
+$pink: if($color=='light', #f93a83, #ff9cdd);
+$light_pink: if($color=='light', #ff9cdd, #ffc1ee);
+$dark_pink: if($color=='light', #ee4e88, #f93a83);
 
+// indigo
+$indigo: if($color=='light', #3e88ff, #95c4fc);
+$light_indigo: if($color=='light', #95c4fc, #bddbff);
+$dark_indigo: if($color=='light', #102a4c, #3e88ff);
 
-// Blue
-$blue_100: #85F6FF;
-$blue_300: #76DBE4;
-$blue_500: #48B9C7;
-$blue_700: #1C8D9B;
-$blue_900: #00616F;
+// warm_grey
+$warm_grey: #ada29e;
+$light_warm_grey: #9b8eae;
+$dark_warm_grey: #554742;
 
-
-// Purple
-$purple_100: #D25DE6;
-$purple_300: #B84ACB;
-$purple_500: #9C27B0;
-$purple_700: #830E97;
-$purple_900: #6A007E;
-
-
-// Indigo
-$indigo_100: #94A6FF;
-$indigo_300: #6A7CE0;
-$indigo_500: #3F51B5;
-$indigo_700: #213397;
-$indigo_900: #031579;
-
-
-// Warm Grey 
-$warm_grey_100: #9F9792;
-$warm_grey_300: #7B736E;
-$warm_grey_500: #574F4A;
-$warm_grey_700: #463E39;
-$warm_grey_900: #342C27;
-
+// ui
 
 // Light Neutral Grey 
 $light_neutral_grey_100: #EEE;
@@ -103,4 +80,3 @@ $dark_ui_900: #2B2928;
 $white: #FFF;
 $black: #000;
 $mid_grey: #888;
-
