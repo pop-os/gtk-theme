@@ -75,7 +75,8 @@ messagedialog {
         }
       }
 
-      &.suggested-action {
+      &.suggested-action,
+      &.suggested-action.default {
         background-color: transparent;
 
         &:hover {
