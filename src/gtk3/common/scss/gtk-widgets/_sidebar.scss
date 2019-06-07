@@ -34,12 +34,9 @@
   .list-row,
   .sidebar-item,
   .sidebar-row {
+    margin: -1px 0;
     padding: $small_padding_em;
-    
     transition: $fast_transition; //Standard looks a tiny bit janky
-    border-width: $no_padding;
-    border-style: solid;
-    border-color: transparent;
     
     &:hover {
       background-color: $inverse_overlay_color;
@@ -60,7 +57,7 @@
     
     &:drop(active),
     &.sidebar-new-bookmark-row {
-      border: $border_size solid $color_theme_2;
+      box-shadow: $border_shadow $color_theme_2;
       color: $dark_color_2;
     }
 

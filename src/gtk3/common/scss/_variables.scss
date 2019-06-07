@@ -53,6 +53,7 @@ $menu_padding: $mini_padding_em;
 $check_padding: $mini_padding_em;
 
 // Border Shadows
+$border_shadow: inset 0 0 0 $border_size;
 $titlebar_border: 
 inset 0 0 0 $border_size $titlebar_hl_color,
 inset 0 -1 * $border_size 0 0 $titlebar_bg_color;
