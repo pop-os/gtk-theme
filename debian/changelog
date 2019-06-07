@@ -2,6 +2,7 @@ pop-gtk-theme (4.2.0) UNRELEASED; urgency=medium
 
   * Reworked padding values throughout the theme to reduce visual sizing inconsistencies.
   * New colors for the dark theme to improve contrast and visual appearance. 
+  * Better contrast throughout the theme for better usability.
 
  -- Ian Santopietro <isantop@gmail.com>  Tue, 28 May 2019 10:59:19 -0600
 
