@@ -67,12 +67,6 @@ radio {
   }
 }
 
-//check:not(:checked):active,
-//radio:not(:checked):active {
-//  -gtk-icon-transform: rotate(90deg); 
-//}
-
-
 radio:not(:checked):active,
 check:not(:checked):active {
   -gtk-icon-transform: scale(0);

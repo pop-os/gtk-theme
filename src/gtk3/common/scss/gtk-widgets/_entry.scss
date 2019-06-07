@@ -168,7 +168,7 @@ entry,
       color: rgba($fg_color, 0.4);
     }
   }
- 
+
   button,
   entry {
     min-width: 2px;
@@ -186,7 +186,7 @@ entry,
       color: rgba($fg_color, 0.4);
       box-shadow: none;
     }
- 
+
     &:disabled {
       color: rgba($fg_color, 0.4);
     }
@@ -201,7 +201,7 @@ entry,
   &:disabled image {
     color: rgba($fg_color, 0.4);
   }
- 
+
   &,
   list row & {
     button,
@@ -211,11 +211,11 @@ entry,
       
       border-radius: $circular_radius;
       box-shadow: none;
- 
+
       &:hover {
         background-color: rgba($fg_color, 0.1);
       }
- 
+
       &:active {
         background-color: rgba($fg_color, 0.2);
       }
@@ -270,5 +270,3 @@ combobox {
 image.entry_icon {
   padding: $tinier_padding_em;
 }
-
-
