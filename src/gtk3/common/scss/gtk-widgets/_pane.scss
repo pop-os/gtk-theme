@@ -10,10 +10,20 @@ paned {
   background-color: $overlay_color;
   
   > separator {
-    min-width: $mini_padding_em;
-    min-height: $mini_padding_em;
-    padding: $tinier_padding;
-    background-color: rgba($fg_color, 0.05);
+    min-width: $small_padding_em;
+    min-height: $small_padding_em;
+    margin: 4px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &.horizontal > separator {
+    border-left: rgba($fg_color, 0.2) solid 1px;
+  }
+
+  &.vertical > separator {
+    border-top: rgba($fg_color, 0.2) solid 1px;
   }
   
   // &.horizontal separator {
