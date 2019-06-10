@@ -1,0 +1,27 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _geary.scss - Geary Email App Overrides
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.geary-sidebar-pane-separator {
+    background-color: black;
+
+    frame {
+        background-color: $overlay_color;
+    }
+}
+
+.geary-titlebar {
+    padding: $headerbar_padding;
+
+    &.geary-titlebar-right {
+        border-left-width: 0;
+    }
+
+    &.geary-titlebar-left {
+        border-right-width: 0;
+    }
+}
