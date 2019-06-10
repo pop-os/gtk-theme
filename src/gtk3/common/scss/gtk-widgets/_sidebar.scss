@@ -20,7 +20,7 @@
     background-color: $color_theme_1;
       
     &:backdrop {
-      background-color: rbga($color_theme_1, 0.6);
+      background-color: rgba($color_theme_1, 0.6);
     }
 
     label,
