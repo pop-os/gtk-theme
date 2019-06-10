@@ -1,48 +1,48 @@
 
 // Orange
-$orange: if($color=='light', #ffad00, #fbb86c);
-$light_orange: if($color=='light', #fbb86c, #ffd7a1);
-$dark_orange: if($color=='light', #af5c02, #ffad00);
+$orange: if($color=='light', #FFAD00, #FBB86C);
+$light_orange: if($color=='light', #FBB86C, #FFD7A1);
+$dark_orange: if($color=='light', #AF5C02, #FFAD00);
 
 // blue
-$blue: if($color=='light', #63b1bc, #6acad8);
-$light_blue: if($color=='light', #6acad8, #94EBEB);
-$dark_blue: if($color=='light', #00496d, #63b1bc);
+$blue: if($color=='light', #63B1BC, #6ACAD8);
+$light_blue: if($color=='light', #6ACAD8, #94EBEB);
+$dark_blue: if($color=='light', #00496D, #63B1BC);
 
 // green
-$green: if($color=='light', #82bf8c, #90cfb0);
-$light_green: if($color=='light', #90cfb0, #acf7d2);
-$dark_green: if($color=='light', #3b6e43, #82bf8c);
+$green: if($color=='light', #82BF8C, #90CFB0);
+$light_green: if($color=='light', #90CFB0, #ACF7D2);
+$dark_green: if($color=='light', #3B6E43, #82BF8C);
 
 // red
-$red: if($color=='light', #e56a54, #ea9090);
-$light_red: if($color=='light', #ea9090, #ffb5b5);
-$dark_red: if($color=='light', #a0252b, #e56a54);
+$red: if($color=='light', #E56A54, #EA9090);
+$light_red: if($color=='light', #EA9090, #FFB5B5);
+$dark_red: if($color=='light', #A0252B, #E56A54);
 
 // yellow
-$yellow: if($color=='light', #fedb40, #f9d87a);
-$light_yellow: if($color=='light', #fff19e, #f9d87a);
-$dark_yellow: if($color=='light', #966800, #fedb40);
+$yellow: if($color=='light', #FEDB40, #F9D87A);
+$light_yellow: if($color=='light', #FFF19E, #F9D87A);
+$dark_yellow: if($color=='light', #966800, #FEDB40);
 
 // purple
-$purple: if($color=='light', #cf7dff, #d58cff);
-$light_purple: if($color=='light', #d58cff, #e5b3ff);
-$dark_purple: if($color=='light', #813b96, #cf7dff);
+$purple: if($color=='light', #CF7DFF, #D58CFF);
+$light_purple: if($color=='light', #D58CFF, #E5B3FF);
+$dark_purple: if($color=='light', #813B96, #CF7DFF);
 
 // pink
-$pink: if($color=='light', #f93a83, #ff9cdd);
-$light_pink: if($color=='light', #ff9cdd, #ffc1ee);
-$dark_pink: if($color=='light', #ee4e88, #f93a83);
+$pink: if($color=='light', #F93A83, #FF9CDD);
+$light_pink: if($color=='light', #FF9CDD, #FFC1EE);
+$dark_pink: if($color=='light', #EE4E88, #F93A83);
 
 // indigo
-$indigo: if($color=='light', #3e88ff, #95c4fc);
-$light_indigo: if($color=='light', #95c4fc, #bddbff);
-$dark_indigo: if($color=='light', #102a4c, #3e88ff);
+$indigo: if($color=='light', #3E88FF, #95C4FC);
+$light_indigo: if($color=='light', #95C4FC, #BDDBFF);
+$dark_indigo: if($color=='light', #102A4C, #3E88FF);
 
 // warm_grey
-$warm_grey: #ada29e;
-$light_warm_grey: #9b8eae;
-$dark_warm_grey: #574f4a;
+$warm_grey: #ADA29E;
+$light_warm_grey: #9B8EAE;
+$dark_warm_grey: #574F4A;
 
 // ui
 

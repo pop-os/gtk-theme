@@ -7,21 +7,21 @@
  */
 
 .geary-sidebar-pane-separator {
-    background-color: black;
+  background-color: $black;
 
-    frame {
-        background-color: $overlay_color;
-    }
+  frame {
+    background-color: $overlay_color;
+  }
 }
 
 .geary-titlebar {
-    padding: $headerbar_padding;
+  padding: $headerbar_padding;
+  
+  &.geary-titlebar-right {
+    border-left-width: 0;
+  }
 
-    &.geary-titlebar-right {
-        border-left-width: 0;
-    }
-
-    &.geary-titlebar-left {
-        border-right-width: 0;
-    }
+  &.geary-titlebar-left {
+    border-right-width: 0;
+  }
 }

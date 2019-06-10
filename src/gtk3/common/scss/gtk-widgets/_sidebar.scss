@@ -56,8 +56,8 @@
     
     &:drop(active),
     &.sidebar-new-bookmark-row {
-      box-shadow: $border_shadow $color_theme_2;
       color: $dark_color_2;
+      box-shadow: $border_shadow $color_theme_2;
     }
 
     button {
