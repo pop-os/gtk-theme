@@ -71,8 +71,6 @@ text:selected {
     }
 
     &.close {
-      
-      
       border-radius: $circular_radius;
       background-color: $close_button_color;
       color: if($color=='dark', $black, $titlebar_fg_color);

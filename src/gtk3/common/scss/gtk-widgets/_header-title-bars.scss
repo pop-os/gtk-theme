@@ -223,7 +223,6 @@ decoration {
   }
 
   .solid-csd & {
-    
     border-radius: 0;
     background-color: $titlebar_bg_color;
     box-shadow: none;
@@ -246,19 +245,16 @@ window > headerbar {
 }
 
 menu window.popup decoration {
-  
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
 }
 
 tooltip decoration {
-  
   border-radius: $corner_radius;
   box-shadow: $shadow_2;
 }
 
 .window-frame.ssd {
-  
   border-radius: $corner_radius;
   box-shadow: $shadow_0;
 }

@@ -32,7 +32,6 @@ window.csd > stack > stack.view {
 
     > grid.horizontal > stack {
       
-      
       button.text-button {
         @include flat_button;
         background-color: $inverse_overlay_color;
