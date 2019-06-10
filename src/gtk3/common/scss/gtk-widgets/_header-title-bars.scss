@@ -34,7 +34,7 @@ titlebar {
 
       &:active {
         background-color: rgba($bg_color, 0.4);
-        box-shadow: $shadow_0;
+        box-shadow: none;
       }
     }
 
@@ -74,7 +74,7 @@ titlebar {
     
     &:active {
       background-color: to200($titlebar_fg_color);
-      box-shadow: $shadow_2;
+      box-shadow: none;
     }
     
     &.close {
