@@ -7,7 +7,7 @@
  */
 
 .geary-sidebar-pane-separator {
-  background-color: $black;
+  background-color: if($color=='dark', $black, $overlay_color);
 
   frame {
     background-color: $overlay_color;
