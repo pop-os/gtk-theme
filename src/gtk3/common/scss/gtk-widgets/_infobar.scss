@@ -9,7 +9,7 @@
 infobar {
   border: none;
   background-color: $bg_color;
-  box-shadow: $shadow_2;
+  box-shadow: $shadow_hover;
   
   &.frame {
     border-radius: $corner_radius;

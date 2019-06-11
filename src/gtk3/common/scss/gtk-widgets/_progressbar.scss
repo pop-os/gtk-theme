@@ -79,7 +79,7 @@ levelbar {
   
   trough {
     background-color: $overlay_color;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
   }
 
   block {
@@ -136,10 +136,10 @@ scale {
     box-shadow: none;
     
     &:hover {
-      box-shadow: $shadow_1;
+      box-shadow: $shadow_hover;
       
       &:active:focus {
-        box-shadow: $shadow_2;
+        box-shadow: $shadow_active;
       }
     }
     

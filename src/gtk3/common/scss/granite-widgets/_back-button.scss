@@ -20,15 +20,18 @@
   .titlebar & {
     @include flat_button;
     padding-left: $standard_padding * 3;
-    background-color: rgba($titlebar_fg_color, 0.1);
+    background-color: $titlebar_button_color;
     color: $titlebar_fg_color;
+    box-shadow: $shadow-standard;
     
     &:hover {
-      background-color: rgba($titlebar_fg_color, 0.1);
+      background-color: $titlebar_button_color;
+      box-shadow: $shadow-standard;
     }
     
     &:active {
-      background-color: rgba($titlebar_fg_color, 0.2);
+      background-color: $titlebar_button_color;
+      box-shadow: $shadow-standard;
     }
   }
   

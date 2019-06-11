@@ -1,0 +1,25 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _gnome-web.scss - GNOME Web Browser App Overrides
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.url_entry {
+  border-image: none;
+  border-radius: $corner_radius;
+  background-color: $titlebar_button_color;
+  box-shadow: $shadow_standard;
+
+  &:focus {
+    box-shadow: $shadow_active;  
+  }
+
+  + widget.right button {
+      @include flat_button;
+      min-width: 0;
+      min-height: 0;
+      padding: 2px;
+  }
+}

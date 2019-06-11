@@ -15,14 +15,14 @@
   border: none;
   border-radius: $corner_radius;
   background-color: $base_color;  
-  box-shadow: $shadow_2;
+  box-shadow: $shadow_standard;
   
   &:checked {
-    box-shadow: $shadow_3;
+    box-shadow: $shadow_standard;
   }
   
   &.collapsed {
     background-color: $bg_color;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
   }
 }
