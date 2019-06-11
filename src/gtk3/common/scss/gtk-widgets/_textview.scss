@@ -11,3 +11,11 @@ textview text {
   background-color: $base_color;
   color: $fg_color;
 }
+
+textview.monospace {
+  font-family: monospace;
+}
+
+textview.monospace .context-menu {
+  font: initial;
+}
