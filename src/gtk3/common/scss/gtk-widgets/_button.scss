@@ -51,7 +51,7 @@ button,
 
   // Set shadows for GTK3-Native apps.
   .background & {
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
   }
   
   &:backdrop {
@@ -59,12 +59,12 @@ button,
   }
   
   .background &:hover {
-    box-shadow: $shadow_2;
+    box-shadow: $shadow_hover;
   }
   
   .background &:active {
     background-color: $inverse_overlay_color;
-    box-shadow: $shadow_0;
+    box-shadow: $shadow_active;
   }
   
   &:checked {
@@ -99,18 +99,22 @@ button,
       color: $titlebar_active_color;
     }
   }
+
+  .popup.toggle {
+    padding: $button_padding_image;
+  }
   
   &.flat {
     @include flat_button;
   }
   
-  &.text-button {  
-    border-radius: $corner_radius;
-  }
-
   &.image-button,
   &.disclosure-button {
     padding: $button_padding_image;
+  }
+
+  &.text-button {  
+    border-radius: $corner_radius;
   }
   
   &.round,
@@ -165,7 +169,7 @@ button,
     color: $color_fg_color;
     
     headerbar & {
-      box-shadow: $shadow_1;
+      box-shadow: $shadow_standard;
     }
 
     &:focus {
@@ -176,17 +180,14 @@ button,
         background-color: mix($suggested_bg_color, $obverse_bg_color, 80%);
       
         headerbar & {
-          box-shadow: $shadow_2;
+          box-shadow: $shadow_hover;
         }
       }
     }
     
     &:hover {
       background-color: mix($suggested_bg_color, $obverse_bg_color, 80%);
-      
-      headerbar & {
-        box-shadow: $shadow_2;
-      }
+      box-shadow: $shadow_hover;
     }
     
     &:active {
@@ -194,6 +195,7 @@ button,
       
       headerbar & {
         background-color: mix($suggested_bg_color, $obverse_bg_color, 40%);
+        box-shadow: $shadow_active;
       }
     }
     
@@ -208,7 +210,7 @@ button,
     color: $color_fg_color;
     
     headerbar & {
-      box-shadow: $shadow_1;
+      box-shadow: $shadow_standard;
     }
 
     &:focus {
@@ -219,7 +221,7 @@ button,
         background-color: mix($destructive_bg_color, $obverse_bg_color, 80%);
       
         headerbar & {
-          box-shadow: $shadow_2;
+          box-shadow: $shadow_hover;
         }
       }
     }
@@ -228,7 +230,7 @@ button,
       background-color: mix($destructive_bg_color, $obverse_bg_color, 80%);
       
       headerbar & {
-        box-shadow: $shadow_2;
+        box-shadow: $shadow_hover;
       }
     }
     
@@ -236,7 +238,7 @@ button,
       background-color: mix($destructive_bg_color, $obverse_bg_color, 60%);
       
       headerbar & {
-        box-shadow: $shadow_0;
+        box-shadow: $shadow_standard;
       }
     }
     

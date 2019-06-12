@@ -34,7 +34,7 @@ list,
     button,
     .linked button {
       background-color: $overlay_color;
-      box-shadow: $shadow_1;
+      box-shadow: $shadow_standard;
       
       &:hover {
         background-color: rgba($fg_color, 0.1);
@@ -71,7 +71,7 @@ list,
 
       &.combo {
         background-color: $overlay_color;
-        box-shadow: $shadow_1;
+        box-shadow: $shadow_standard;
       }
     }
     

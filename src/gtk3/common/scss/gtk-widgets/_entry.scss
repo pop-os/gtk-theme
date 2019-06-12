@@ -57,10 +57,10 @@ entry,
   .background & {
     border: none;
     @include underline(normal);
-    box-shadow: $shadow_0;
+    box-shadow: $shadow_standard;
 
     &:hover {
-      box-shadow: $shadow_1;
+      box-shadow: $shadow_standard;
     }
   }
   
@@ -70,7 +70,7 @@ entry,
   
   .background &:focus {
     @include underline(focus);
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
   }
   
   &:disabled {
@@ -151,13 +151,13 @@ entry,
   border: none;
   border-radius: $corner_radius;
   background-color: $overlay_color;
-  box-shadow: $shadow_0;
+  box-shadow: $shadow_standard;
 
   &:focus,
   &:active {
     @include underline(focus);
     border-radius: $corner_radius $corner_radius 0 0;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
   }
 
   &:disabled {

@@ -70,7 +70,7 @@ switch {
     transition: $standard_transition;
     border-radius: $circular_radius;
     background-color: $bg_color;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
     -gtk-outline-radius: $circular_radius;
     
     :disabled &,
@@ -96,7 +96,7 @@ switch {
   }
   
   &:hover slider { 
-    box-shadow: $shadow_2; 
+    box-shadow: $shadow_standard; 
   }
 
   &:checked slider {

@@ -9,7 +9,7 @@
 .gedit-search-slider {
   border-radius: 0 0 $corner_radius $corner_radius;
   background-color: $bg_color;
-  box-shadow: $shadow_2;
+  box-shadow: $shadow_standard;
   
   .linked > button,
   .linked > button:nth-child(n-2) {

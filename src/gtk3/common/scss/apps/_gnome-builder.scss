@@ -96,7 +96,7 @@ dzldockstack {
   
   dzltabstrip {
     border-radius: $corner_radius;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_standard;
   }
   
   dzltab {
@@ -106,7 +106,7 @@ dzldockstack {
     
     &:checked {
       background-color: $color_theme_2;
-      box-shadow: $shadow_2;
+      box-shadow: $shadow_standard;
     }
   }
 }

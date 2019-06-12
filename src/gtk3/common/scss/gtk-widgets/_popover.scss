@@ -12,7 +12,7 @@ popover.osd,
 .popover.osd {
   padding: 0;
   border-radius: $corner_radius;
-  box-shadow: $shadow_2;
+  box-shadow: $shadow_hover;
 
   modelbutton {
     padding: $tinier_padding_em;
