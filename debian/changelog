@@ -1,10 +1,13 @@
-pop-gtk-theme (4.2.0) UNRELEASED; urgency=medium
+pop-gtk-theme (4.2.0) disco; urgency=medium
 
   * Reworked padding values throughout the theme to reduce visual sizing inconsistencies.
   * New colors for the dark theme to improve contrast and visual appearance. 
   * Better contrast throughout the theme for better usability.
+  * Large number of improvements to "Light" variant (light titlebars).
+  * Shadow changes to better prevent shadow-overrun errors.
+  * Shadows now cause pressed buttons to exhibit greater amounts of depth in the UI.
 
- -- Ian Santopietro <isantop@gmail.com>  Tue, 28 May 2019 10:59:19 -0600
+ -- Ian Santopietro <ian@akira>  Wed, 12 Jun 2019 14:33:58 -0600
 
 pop-gtk-theme (4.1.4) disco; urgency=medium
 
