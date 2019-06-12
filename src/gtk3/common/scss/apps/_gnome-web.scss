@@ -7,19 +7,19 @@
  */
 
 .url_entry {
-  border-image: none;
   border-radius: $corner_radius;
   background-color: $titlebar_button_color;
   box-shadow: $shadow_standard;
+  border-image: none;
 
   &:focus {
     box-shadow: $shadow_active;  
   }
 
   + widget.right buttonbox {
-      @include flat_button;
-      min-width: 0;
-      min-height: 0;
-      padding: 2px;
+    @include flat_button;
+    min-width: 0;
+    min-height: 0;
+    padding: 2px;
   }
 }

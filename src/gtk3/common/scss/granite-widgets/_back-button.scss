@@ -22,16 +22,16 @@
     padding-left: $standard_padding * 3;
     background-color: $titlebar_button_color;
     color: $titlebar_fg_color;
-    box-shadow: $shadow-standard;
+    box-shadow: $shadow_standard;
     
     &:hover {
       background-color: $titlebar_button_color;
-      box-shadow: $shadow-standard;
+      box-shadow: $shadow_standard;
     }
     
     &:active {
       background-color: $titlebar_button_color;
-      box-shadow: $shadow-standard;
+      box-shadow: $shadow_standard;
     }
   }
   
