@@ -89,7 +89,8 @@ headerbar {
     }
   }
 
-  .titlebutton {
+  .titlebutton,
+  .background & .titlebutton {
     padding: $button_padding_image - 2px;
     border-radius: $circular_radius;
     background: none;
@@ -114,6 +115,10 @@ headerbar {
       image {
         color: if($color=='dark', $black, $titlebar_fg_color);
       }
+
+      &:active {
+        background-color: $close_button_color;
+      }
       
       &:backdrop {
         background-color: rgba($titlebar_fg_color, 0.2);
@@ -132,7 +137,7 @@ headerbar {
       
       &:active {
         background-color: mix($close_button_color, $obverse_bg_color, 60%);
-        box-shadow: none;
+        box-shadow: $shadow_active;
       }
     }
 
