@@ -45,6 +45,8 @@ it is very likely an upstream issue.
 
 
 
-**Other Note (feature-request, question, etc...)**
+**Screenshot of the Issue**
+_You can press [PrtSc] on your keyboard to take a screenshot. Issues without 
+screenshots are very difficult to replicate and may not be fixed._
 
 
