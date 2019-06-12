@@ -70,8 +70,13 @@ headerbar {
     }
 
     &.image-button,
-    &.disclosure-button {
+    &.disclosure-button,
+    &.popup.toggle {
       padding: $button_padding_image + 1.5px;
+    }
+
+    &.text-button.image-button {
+      padding: $button_padding_text $button_padding_text * 2;
     }
 
     image,
@@ -127,6 +132,28 @@ headerbar {
       
       &:active {
         background-color: mix($close_button_color, $obverse_bg_color, 60%);
+        box-shadow: none;
+      }
+    }
+
+    &.appmenu {
+      background-color: transparent;
+      box-shadow: none;
+
+      &:hover {
+        background-color: rgba($titlebar_fg_color, 0.1);
+        box-shadow: none;
+
+        &:active,
+        &:checked {
+          background-color: rgba($titlebar_fg_color, 0.2);
+          box-shadow: none;
+        }
+      }
+
+      &:checked {
+        border-image: none;
+        background-color: rgba($titlebar_fg_color, 0.2);
         box-shadow: none;
       }
     }

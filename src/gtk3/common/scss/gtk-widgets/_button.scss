@@ -99,18 +99,22 @@ button,
       color: $titlebar_active_color;
     }
   }
+
+  .popup.toggle {
+    padding: $button_padding_image;
+  }
   
   &.flat {
     @include flat_button;
   }
   
-  &.text-button {  
-    border-radius: $corner_radius;
-  }
-
   &.image-button,
   &.disclosure-button {
     padding: $button_padding_image;
+  }
+
+  &.text-button {  
+    border-radius: $corner_radius;
   }
   
   &.round,

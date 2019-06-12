@@ -16,7 +16,7 @@
     box-shadow: $shadow_active;  
   }
 
-  + widget.right button {
+  + widget.right buttonbox {
       @include flat_button;
       min-width: 0;
       min-height: 0;
