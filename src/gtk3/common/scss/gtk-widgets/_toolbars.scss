@@ -59,6 +59,12 @@ actionbar,
         background-color: rgba($color_theme_2, 0.4);
       }
     }
+
+    &.destructive-action,
+    &.destructive-action label,
+    &.destructive-action image {
+      color: $destructive_bg_color;
+    }
   }
 
   .linked button,
