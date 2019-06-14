@@ -62,12 +62,12 @@ notebook {
       
       &:checked {
         background-color: transparent;
-        color: $dark_color_2;
+        color: $text_color_2;
         font-weight: 700;
       }
       
       &:hover {
-        color: $dark_color_2;
+        color: $text_color_2;
       }
       
       label {

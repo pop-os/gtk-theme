@@ -10,11 +10,11 @@
 
 // Main Accent Colors
 $color_theme_1: $blue;
-$light_color_1: $light_blue;
-$dark_color_1: $dark_blue;
+$highlight_color_1: $highlights_blue;
+$text_color_1: $text_blue;
 $color_theme_2: $orange;
-$light_color_2: $light_orange;
-$dark_color_2: $dark_orange;
+$highlight_color_2: $highlights_orange;
+$text_color_2: $text_orange;
 
 // Background UI Colors
 $base_color: if($color=='dark', rgba($light_ui_300, 0.14), $white);
@@ -36,19 +36,28 @@ $obverse_fg_color: $dark_ui_700;
 
 //$selected_fg_color: if($color=='dark', $black, $white);
 $selected_fg_color: $black;
-$selected_bg_color: $light_color_1;
+$selected_bg_color: $highlight_color_1;
 
 // Highlight Colors
-$suggested_bg_color: $green;
-$destructive_bg_color: $red;
-$information_bg_color: $green;
-$warning_bg_color: $yellow;
-$error_bg_color: $light_red;
-$question_bg_color: $light_indigo;
-$success_bg_color: $green;
-$link_color: $dark_orange;
+$suggested_bg_color: $highlights_green;
+$destructive_bg_color: $highlights_red;
+$information_bg_color: $highlights_green;
+$warning_bg_color: $highlights_yellow;
+$error_bg_color: $highlights_red;
+$question_bg_color: $highlights_indigo;
+$success_bg_color: $highlights_green;
+
+$suggested_text_color: $text_green;
+$destructive_text_color: $text_red;
+$information_text_color: $text_green;
+$warning_text_color: $text_yellow;
+$error_text_color: $text_red;
+$question_text_color: $text_indigo;
+$success_text_color: $text_green;
 
 $color_fg_color: $black;
+
+$link_color: $text_orange;
 
 $dark_warning_color: $yellow;
 

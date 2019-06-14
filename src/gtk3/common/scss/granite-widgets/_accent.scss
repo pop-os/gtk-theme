@@ -7,5 +7,5 @@
  */
 
 .accent {
-  color: if($color=='dark', $light_color_1, $dark_color_1);
+  color: if($color=='dark', $highlight_color_1, $text_color_1);
 }

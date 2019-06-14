@@ -10,32 +10,32 @@ scale {
   &.temperature trough {
     background-image: linear-gradient(
       to right,
-      $light_blue,
+      $highlights_blue,
       $light_neutral_grey_300,
-      $light_orange
+      $highlights_orange
     );
   }
   
   &.temperature:dir(rtl) trough {
     background-image: linear-gradient(
       to left,
-      $light_blue,
+      $highlights_blue,
       $light_neutral_grey_300,
-      $light_orange
+      $highlights_orange
     );
   }
   
   &.warmth trough {
     background-image: linear-gradient(
       to right,
-      rgba($light_orange, 0.4),
+      rgba($highlights_orange, 0.4),
       rgba($orange, 0.6)
     );
   }
   &.warmth:dir(rtl) trough {
     background-image: linear-gradient(
       to left,
-      rgba($light_orange, 0.4),
+      rgba($highlights_orange, 0.4),
       rgba($orange, 0.6)
     );
   }

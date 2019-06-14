@@ -54,8 +54,8 @@
 
   .app {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($light_purple, 30%);
-    background-color: $light_purple;
+    border-bottom-color: darken($highlights_purple, 30%);
+    background-color: $highlights_purple;
     
     image {
       color: $color_fg_color;
@@ -64,8 +64,8 @@
 
   .audio {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($light_orange, 20%);
-    background-color: $light_orange;
+    border-bottom-color: darken($highlights_orange, 20%);
+    background-color: $highlights_orange;
     
     image {
       color: $color_fg_color;
@@ -74,8 +74,8 @@
 
   .files {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($light_blue, 20%);
-    background-color: $light_blue;
+    border-bottom-color: darken($highlights_blue, 20%);
+    background-color: $highlights_blue;
     
     image {
       color: $color_fg_color;
@@ -84,8 +84,8 @@
 
   .photo {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($light_green, 30%);
-    background-color: $light_green;
+    border-bottom-color: darken($highlights_green, 30%);
+    background-color: $highlights_green;
     
     image {
       color: $color_fg_color;
@@ -94,8 +94,8 @@
 
   .video {
     border-bottom-width: $border_size;
-    border-bottom-color: darken($light_red, 20%);
-    background-color: $light_red;
+    border-bottom-color: darken($highlights_red, 20%);
+    background-color: $highlights_red;
     
     image {
       color: $color_fg_color;
@@ -126,7 +126,7 @@
   }
 
   .swap { 
-    background-color: $dark_red; 
+    background-color: $text_red; 
     
     image {
       color: $inverse_fg_color;
@@ -142,7 +142,7 @@
   }
 
   .ext3 { 
-    background-color: $dark_green; 
+    background-color: $text_green; 
     
     image {
       color: $inverse_fg_color;
@@ -150,7 +150,7 @@
   }
 
   .ext2 { 
-    background-color: $light_green; 
+    background-color: $highlights_green; 
     
     image {
       color: $color_fg_color;
@@ -159,7 +159,7 @@
 
   .fat16, 
   .fat32 { 
-    background-color: $light_yellow; 
+    background-color: $highlights_yellow; 
     
     image {
       color: $color_fg_color;
@@ -167,7 +167,7 @@
   }
 
   .btrfs { 
-    background-color: $light_blue; 
+    background-color: $highlights_blue; 
     
     image {
       color: $color_fg_color;
@@ -175,7 +175,7 @@
   }
 
   .xfs { 
-    background-color: $light_indigo; 
+    background-color: $highlights_indigo; 
     
     image {
       color: $inverse_fg_color;
@@ -191,7 +191,7 @@
   }
 
   .luks { 
-    background-color: $light_purple; 
+    background-color: $highlights_purple; 
     
     image {
       color: $color_fg_color;
@@ -207,7 +207,7 @@
   }
 
   .none { 
-    background-color: $dark_blue; 
+    background-color: $text_blue; 
     
     image {
       color: $inverse_fg_color;

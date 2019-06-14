@@ -1,43 +1,43 @@
 
 // Orange
 $orange: if($color=='light', #FFAD00, #FBB86C);
-$light_orange: if($color=='light', #FBB86C, #FFD7A1);
-$dark_orange: if($color=='light', #AF5C02, #FFAD00);
+$highlights_orange: if($color=='light', #FBB86C, #FFAD00);
+$text_orange: if($color=='light', #AF5C02, #FFD7A1);
 
 // blue
 $blue: if($color=='light', #63B1BC, #6ACAD8);
-$light_blue: if($color=='light', #6ACAD8, #94EBEB);
-$dark_blue: if($color=='light', #00496D, #63B1BC);
+$highlights_blue: if($color=='light', #6ACAD8, #63B1BC);
+$text_blue: if($color=='light', #00496D, #94EBEB);
 
 // green
 $green: if($color=='light', #82BF8C, #90CFB0);
-$light_green: if($color=='light', #90CFB0, #ACF7D2);
-$dark_green: if($color=='light', #3B6E43, #82BF8C);
+$highlights_green: if($color=='light', #90CFB0, #82BF8C);
+$text_green: if($color=='light', #3B6E43, #ACF7D2);
 
 // red
 $red: if($color=='light', #E56A54, #EA9090);
-$light_red: if($color=='light', #EA9090, #FFB5B5);
-$dark_red: if($color=='light', #A0252B, #E56A54);
+$highlights_red: if($color=='light', #EA9090, #E56A54);
+$text_red: if($color=='light', #A0252B, #FFB5B5);
 
 // yellow
 $yellow: if($color=='light', #FEDB40, #F9D87A);
-$light_yellow: if($color=='light', #FFF19E, #F9D87A);
-$dark_yellow: if($color=='light', #966800, #FEDB40);
+$highlights_yellow: if($color=='light', #FFF19E, #FEDB40);
+$text_yellow: if($color=='light', #966800, #FFF19E);
 
 // purple
 $purple: if($color=='light', #CF7DFF, #D58CFF);
-$light_purple: if($color=='light', #D58CFF, #E5B3FF);
-$dark_purple: if($color=='light', #813B96, #CF7DFF);
+$highlights_purple: if($color=='light', #D58CFF, #CF7DFF);
+$text_purple: if($color=='light', #813B96, #E5B3FF);
 
 // pink
 $pink: if($color=='light', #F93A83, #FF9CDD);
-$light_pink: if($color=='light', #FF9CDD, #FFC1EE);
-$dark_pink: if($color=='light', #EE4E88, #F93A83);
+$highlights_pink: if($color=='light', #FF9CDD, #EE4E88);
+$text_pink: if($color=='light', #AD154F, #FFC1EE);
 
 // indigo
 $indigo: if($color=='light', #3E88FF, #95C4FC);
-$light_indigo: if($color=='light', #95C4FC, #BDDBFF);
-$dark_indigo: if($color=='light', #102A4C, #3E88FF);
+$highlights_indigo: if($color=='light', #95C4FC, #5689E7);
+$text_indigo: if($color=='light', #102A4C, #BDDBFF);
 
 // warm_grey
 $warm_grey: #ADA29E;

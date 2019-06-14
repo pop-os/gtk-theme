@@ -33,13 +33,13 @@ menubar,
     &:hover {
       border-bottom-color: $color_theme_2;
       background-color: transparent;
-      color: if($color == 'light', $dark_color_2, $light_color_2);
+      color: if($color == 'light', $text_color_2, $highlight_color_2);
     }
     
     &:active {
       border-bottom-color: $color_theme_2;
       background-color: $bg_color;
-      color: if($color == 'light', $dark_color_2, $light_color_2);
+      color: if($color == 'light', $text_color_2, $highlight_color_2);
     }
   }
   window > &,
@@ -75,13 +75,13 @@ menubar,
       &:hover {
         border-bottom-color: $color_theme_2;
         background-color: transparent;
-        color: if($titlebar == 'light', $dark_color_2, $light_color_2);
+        color: if($titlebar == 'light', $text_color_2, $highlight_color_2);
       }
       
       &:active {
         border-bottom-color: $color_theme_2;
         background-color: transparent;
-        color: if($titlebar == 'light', $dark_color_2, $light_color_2);
+        color: if($titlebar == 'light', $text_color_2, $highlight_color_2);
       }
     }
   }
