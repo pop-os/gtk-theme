@@ -13,11 +13,11 @@
 %frame,
 frame,
 .frame {
+  border-radius: 0 0 $corner_radius $corner_radius;
   color: $fg_color;
 }
 
 scrolledwindow {
-  border: none;
 }
 
 overshoot,
@@ -28,13 +28,12 @@ undershoot,
   &.right,
   &.top,
   &.bottom {
-    border: none;
     background-color: transparent;
     background-image: none;
-    box-shadow: none;
   }
 }
 
 viewport.frame {
+  border-radius: 0 0 $corner_radius $corner_radius;
   background-color: $bg_color;
 }

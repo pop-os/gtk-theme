@@ -11,18 +11,12 @@
 }
 
 .card {
-  transition: $standard_transition;
-  border: none;
-  border-radius: $corner_radius;
-  background-color: $base_color;  
-  box-shadow: $shadow_standard;
+  background-color: $base_color;
   
   &:checked {
-    box-shadow: $shadow_standard;
   }
   
   &.collapsed {
     background-color: $bg_color;
-    box-shadow: $shadow_standard;
   }
 }

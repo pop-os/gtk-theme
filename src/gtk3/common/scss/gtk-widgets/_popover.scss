@@ -10,27 +10,39 @@ popover,
 popover.osd,
 .popover,
 .popover.osd {
-  padding: 0;
   border-radius: $corner_radius;
   box-shadow: $shadow_hover;
 
   modelbutton {
-    padding: $tinier_padding_em;
+    min-height: $modelbutton_size;
+    padding: $mini_padding_em ;
+    border-radius: $corner_radius;
+    outline-offset: -0.15em;
+
+    label {
+      padding: 0;
+      padding-right: $small_padding_em;
+
+      &:dir(rtl) {
+        padding-right: 0;
+        padding-left: $small_padding_em;
+      }
+    }
 
     arrow {
-      min-height: $standard_padding_em;
+      min-height: 0.9em;
     }
   }
 
   .view {
     background-color: transparent;
   }
-  
-  .model.image-button {
-    border-radius: $circular_radius;
-  }
+}
 
-  .linked .model.image-button {
-    border-radius: $corner_radius;
-  }
+popover,
+popover.menu,
+popover box,
+popover stack {
+  margin: 0;
+  padding: 0;
 }

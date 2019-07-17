@@ -6,8 +6,8 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 switch {
-  margin: 4px 0; //needed to help prevent switches from growing.
-  transition: $standard_transition;
+  min-width: 3.6em;
+  min-height: 1.8em;
   border-radius: $circular_radius;
   background-clip: padding-box;
   background-color: rgba($fg_color, 0.6);
@@ -20,19 +20,22 @@ switch {
   background-size: contain;
   color: transparent;
   font-size: 0;
-  box-shadow: 
-    0 1px 3px rgba($black, 0.12) inset, // sass-lint:disable-line indentation
-    0 1px 2px rgba($black, 0.24) inset;// sass-lint:disable-line indentation
+  box-shadow: 0 1px 2px 0 rgba($black, 0.5) inset;
 
   &:disabled { 
     background-color: rgba($fg_color, 0.2);
     color: transparent;
-    box-shadow: none;
     opacity: 0.7;
 
     image {
       color: transparent;
     }
+  }
+
+  .checked &, 
+  .selected & {
+    color: transparent;
+    font-size: 0;
   }
   
   &:backdrop {
@@ -46,7 +49,6 @@ switch {
     &:disabled { 
       background-color: rgba($color_theme_2, 0.6); 
       color: transparent;
-      box-shadow: none;
 
       image {
         color: transparent;
@@ -58,19 +60,16 @@ switch {
   }
   
   headerbar &,
-  toolbar & {
-    margin-top: ($toolbar_size / 2) - ($switch_size / 2) - 2px; 
-    margin-bottom: ($toolbar_size / 2) - ($switch_size / 2) - 2px;  
+  toolbar & {  
   }
 
   slider {
     min-width: $switch_size;
     min-height: $switch_size;
     margin: 2px;
-    transition: $standard_transition;
     border-radius: $circular_radius;
     background-color: $bg_color;
-    box-shadow: $shadow_standard;
+    box-shadow: 0 1px 2px 0 rgba($black, 0.5);
     -gtk-outline-radius: $circular_radius;
     
     :disabled &,
@@ -96,15 +95,30 @@ switch {
   }
   
   &:hover slider { 
-    box-shadow: $shadow_standard; 
+    box-shadow: 0 1px 2px 0 rgba($black, 0.5);
   }
 
   &:checked slider {
-    transition: all 500ms ease;
     color: $bg_color;
   }
 
   &:checked:disabled slider { 
-    animation: none;
+  }
+
+  :selected & {
+    color: transparent;
+
+    &:checked {
+      background-color: $selected_switch_color;
+    }
+
+    image,
+    label {
+      color: transparent;
+    }
+  }
+
+  .tweak-titlebar-right & {
+    margin: 3px;
   }
 }

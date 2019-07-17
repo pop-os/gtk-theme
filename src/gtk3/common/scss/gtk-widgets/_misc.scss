@@ -23,7 +23,7 @@ spinner {
   
   &:checked {
     opacity: 1;
-    animation: spin 1s linear infinite;
+    animation: spin 0.8s cubic-bezier(0.1, 0, 0.9, 1) infinite;
     
     &:disabled {
       opacity: 0.6;
@@ -38,8 +38,6 @@ spinner {
 rubberband,
 .rubberband,
 .view.rubberband {
-  transition: $standard_transition;
-  border: none;
   background-color: rgba($color_theme_1, 0.2);
 }
 
@@ -69,7 +67,6 @@ image {
  */
 
 statusbar frame {
-  border: none;
 }
 
 /* 

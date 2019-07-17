@@ -8,11 +8,8 @@
 
 tooltip,
 .overlay-bar { 
-  border: none;
-  border-radius: $corner_radius;
   background-color: $bg_color;
   color: $fg_color;
-  box-shadow: $shadow_hover;
   
   * {
     color: $fg_color;

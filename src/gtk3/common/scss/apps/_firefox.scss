@@ -32,7 +32,7 @@ text:selected {
   entry,
   button,
   button > button {
-    border: 1px solid $firefox_border_color;
+    border: 1 solid $firefox_border_color;
     border-radius: $corner_radius;
     background-color: $firefox_bg_color;
     box-shadow: none;

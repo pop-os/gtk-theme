@@ -7,20 +7,14 @@
  */
 
 .gedit-search-slider {
-  border-radius: 0 0 $corner_radius $corner_radius;
   background-color: $bg_color;
-  box-shadow: $shadow_standard;
   
   .linked > button,
   .linked > button:nth-child(n-2) {
     @include flat_button;
-    
-    border-radius: $corner_radius;
-    border-image: none;
   }
   
   .linked > entry {
-    border-radius: $corner_radius $corner_radius 0 0;
     
     entry {
       @include reset;

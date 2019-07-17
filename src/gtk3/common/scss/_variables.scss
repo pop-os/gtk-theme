@@ -6,27 +6,28 @@
  */
 
 // Radii
-$corner_radius: 4px;
+$corner_radius: 0.3em;
 $circular_radius: 999px;
 
 // Sizes
-$mini_size: if($slim == 'false', 4px, 2px);
-$tiny_size: if($slim == 'false', 12px, 10px);
-$small_size: if($slim == 'false', 16px, 14px);
-$medium_size: if($slim == 'false', 24px, 20px);
-$large_size: if($slim == 'false', 32px, 28px);
+$mini_size: if($slim == 'false', 0.3em, 0.15em);
+$tiny_size: if($slim == 'false', 0.9em, 0.75em);
+$small_size: if($slim == 'false', 1.2em, 1.05em);
+$medium_size: if($slim == 'false', 1.8em, 1.5em);
+$large_size: if($slim == 'false', 2.4em, 2.1em);
 
-$line_size: 2px;
-$border_size: 1px;
-$progress_size: 6px;
-$marks_size: 6px;
+$line_size: 0.15em;
+$border_size: 0.075em;
+$progress_size: 0.5em;
+$marks_size: 0.6em;
 $menu_size: 150px;
-$check_size: 15px;
+$check_size: 0.15em;
 $switch_size: 20px;
 $toolbar_size: if($slim == 'false', 42px, 32px);
 $arrow_size: 19px;
 $scrollbar_size: 5px;
 $icon_size: 16px;
+$modelbutton_size: if($slim == 'false', 1.8em, 1.5em);
 
 // Padding
 $no_padding: if($slim == 'false', 1px, 0);
@@ -42,10 +43,10 @@ $mini_padding_em: if($slim == 'false', 0.15em, 0.075em);
 $tinier_padding_em: if($slim == 'false', 0.3em, 0.2em);
 $tiny_padding_em: if($slim == 'false', 0.5em, 0.3em);
 $small_padding_em: if($slim == 'false', 0.6em, 0.3em);
-$standard_padding_em: if($slim == 'false', 1em, 0.8em);
+$standard_padding_em: if($slim == 'false', 1.2em, 0.8em);
 $large_padding_em: if($slim == 'false', 1.4em, 1em);
 
-$button_padding_text: $tiny_padding_em;
+$button_padding: $tiny_padding_em;
 $button_padding_image: $tiny_padding;
 $headerbar_padding: $tiny_padding_em $small_padding_em;
 $entry_padding: $tiny_padding_em;
@@ -59,10 +60,10 @@ inset 0 0 0 $border_size $titlebar_hl_color,
 inset 0 -1 * $border_size 0 0 $titlebar_bg_color;
 $scrollbar_border: inset 0 0 0 $border_size rgba($inverse_fg_color, 0.4);
 
-// Shadows:
-$shadow_standard: 0px 1px 2px 0px rgba(0,0,0,0.3);
-$shadow_hover: 0px 1px 2px 0px rgba(0,0,0,0.5);
-$shadow_active: 0px 1px 2px 0px if($color=='dark',rgba(0,0,0,0.5), rgba(0,0,0,0.3)) inset;
+// Shadows; 0 1px 2px 0, at varying opacities:
+$shadow_standard: 0 0.075em 0.15em 0 rgba(0, 0, 0, 0.3);
+$shadow_hover: 0 0.075em 0.15em rgba(0, 0, 0, 0.5);
+$shadow_active: 0 0.075em 0.15em if($color=='dark',rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)) inset;
 $shadow_window: 0 6px 12px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
 $shadow_window_bd: 0 6px 12px transparent, 0 4px 4px transparent;
 

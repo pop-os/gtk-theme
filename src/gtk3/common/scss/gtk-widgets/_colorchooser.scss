@@ -8,9 +8,7 @@
 
 colorchooser {
   colorswatch {
-    border-radius: $corner_radius;
     background: none;
-    box-shadow: $shadow_standard;
     
     &.dark overlay {
       color: $inverse_fg_color;

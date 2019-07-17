@@ -8,15 +8,11 @@
 
 window.csd {
   .titlebar > box > headerbar {
-    padding: $headerbar_padding;
 
     &:first-child {
-      min-width: 250px;
-      padding-right: 0;
     }
 
     label {
-      padding: 0 $standard_padding;
     }
   }
   

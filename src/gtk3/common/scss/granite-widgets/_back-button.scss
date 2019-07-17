@@ -36,7 +36,6 @@
   }
   
   &:dir(rtl) {
-    padding: $tiny_padding_em $small_padding_em;
     padding-right: $standard_padding * 3;
     padding-left: $small_padding;
     background-image: -gtk-icontheme('go-next-symbolic');

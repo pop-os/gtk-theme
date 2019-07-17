@@ -8,7 +8,6 @@
 
 @mixin flat_button {
   @include flat;
-  font-weight: 700;
   
   &:hover {
     background-color: rgba($inverse_bg_color, 0.1);
@@ -23,8 +22,11 @@
   }
 }
 
+// fallback buttons for non-native apps
 %button-fallback {
-  // fallback buttons for non-native apps
+  padding: $button_padding;
+  border-radius: $corner_radius;
+
   @extend %fallback-normal;
 
   &:active,
@@ -41,52 +43,37 @@
 button,
 .button {
   @extend %button-fallback;
-  padding: $button_padding_text $button_padding_text * 2;
-  transition: $standard_transition;
-  border: none;
-  border-radius: $corner_radius;
-  background-color: $overlay_color;
-  
-  @include base_states;
+  min-width: $small_size;
+  min-height: $small_size;
 
   // Set shadows for GTK3-Native apps.
   .background & {
+    margin: 0 0.075em 0.15em;
+    transition: $standard_transition;
+    border: none;
     box-shadow: $shadow_standard;
-  }
-  
-  &:backdrop {
-    color: rgba($fg_color, 0.6);
-  }
-  
-  .background &:hover {
-    box-shadow: $shadow_hover;
-  }
-  
-  .background &:active {
-    background-color: $inverse_overlay_color;
-    box-shadow: $shadow_active;
+
+    &:hover {
+      box-shadow: $shadow_hover; 
+    }
+
+    &:active,
+    &:hover:active {
+      box-shadow: $shadow_active;
+    }
   }
   
   &:checked {
     background-color: $color_theme_2;
     color: $color_fg_color;
-    
-    &:backdrop {
-      opacity: 0.6;
-    }
   }
   
   &:disabled {
-    box-shadow: inset 0 0 0 $line_size rgba($fg_color, 0.2);
 
     &:checked,
     &:checked label,
     &:checked image {
       color: $bg_color;
-
-      &:backdrop {
-        opacity: 0.2;
-      }
     }
   }
   
@@ -98,28 +85,27 @@ button,
     &:hover {
       color: $titlebar_active_color;
     }
-  }
 
-  .popup.toggle {
-    padding: $button_padding_image;
+    &.text-button {
+      padding: $button_padding $standard_padding * 2;
+    }
   }
   
   &.flat {
     @include flat_button;
+    font-weight: 700;
   }
   
   &.image-button,
   &.disclosure-button {
-    padding: $button_padding_image;
   }
 
   &.text-button {  
-    border-radius: $corner_radius;
+    padding: $button_padding;
   }
   
   &.round,
   &.circular {
-    padding: $button_padding_image;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
   }
@@ -144,7 +130,6 @@ button,
     
     .titlebar &,
     headerbar & {
-      padding: $button_padding_text $button_padding_text * 4;
       color: $titlebar_fg_color;
       
       &:hover {
@@ -169,7 +154,6 @@ button,
     color: $color_fg_color;
     
     headerbar & {
-      box-shadow: $shadow_standard;
     }
 
     &:focus {
@@ -210,7 +194,6 @@ button,
     color: $color_fg_color;
     
     headerbar & {
-      box-shadow: $shadow_standard;
     }
 
     &:focus {
@@ -250,21 +233,18 @@ button,
   
   popover stack & {
     @include flat_button;
-    border-radius: $corner_radius;
   }
+
+  @include base_states;
 }
 
 modelbutton,
 .model,
 modelbutton.image-button {
-  @include flat_button;
-  transition: $standard_transition;
-  border-radius: $corner_radius;
   background-color: transparent;
   font-weight: 400;
   
   label {
-    padding: $tinier_padding_em $tiny_padding_em;
     font-weight: 400;
   }
   

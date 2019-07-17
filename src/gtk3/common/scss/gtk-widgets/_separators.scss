@@ -7,28 +7,35 @@
  */
 
 separator {
-  border: 0 solid rgba($fg_color, 0.2);
+  background-color: rgba($fg_color, 0.1);
   
   menu &,
   &.horizontal {
-    border-top-width: $border_size;
+    min-height: $border_size;
   }
-  
-  menu & {
-    margin: $tiny_padding 0;
-  }
-  
-  list & {
-    border: 0 solid rgba($fg_color, 0.1);
-  }
-  
+
   &.vertical {
-    border-left-width: $border_size; 
+    min-width: $border_size;
+    margin: $tinier_padding_em;
+  }
+
+  &.sidebar {
+    background-color: transparent;
   }
   
   toolbar &,
   .titlebar & {
-    border: none;
-    background: none;
+    padding: $small_padding_em;
+    background-color: transparent;
+  }
+
+  list &{
+    margin: 0;
+    padding: 0;
+  }
+  
+  menu &,
+  popover & {
+    margin: $mini_padding_em;
   }
 }

@@ -7,43 +7,41 @@
  */
 
 .linked {
+  margin: 0 0.075em 0.15em;
   border-radius: $corner_radius;
   background-color: $overlay_color;
   box-shadow: $shadow_standard;
 
-  > button,
-  > entry,
-  > combobox .combo {
+  button,
+  entry,
+  spinbutton, .background & spinbutton,
+  combobox .combo {
     @include flat;
+    margin: 0;
     border-radius: $corner_radius;
+    box-shadow: none;
+    border-image: none;
     
     &:checked {
       background-color: $color_theme_2;
       color: $selected_fg_color;
+      box-shadow: none;
+      border-image: none;
+
+      &.toggle {
+        @include underline(focus);
+      }
       
       &:hover {
         background-color: $highlight_color_2;
         color: $selected_fg_color;
-      }
-      
-      &:backdrop {
-        background-color: rgba($color_theme_2, 0.4);
-      }
-    }
-  }
-
-  > button,
-  > combobox .combo {
-    border-image: none;
-    
-    &:checked {
-      border-image: none;
-      
-      &:hover {
+        box-shadow: none;
         border-image: none;
       }
       
       &:backdrop {
+        background-color: rgba($color_theme_2, 0.4);
+        box-shadow: none;
         border-image: none;
       }
     }
@@ -67,27 +65,50 @@
   & > spinbutton button:focus,
   & > spinbutton button:last-child {
     @include flat_button;
-    border-radius: $circular_radius;
-    border-image: none;
+  }
+
+  // Nested Linked boxes
+  .linked {
+    margin: 0;
+    box-shadow: none;
   }
 }
 
 //stackswitcher buttons
-stackswitcher > button.radio:hover {
-  @include underline(focus);
-  background-color: transparent;
-  
-  &:checked {
-    background-color: $color_theme_2;
-    color: $selected_fg_color;
-    border-image: none;  
-    
-    headerbar &,
-    .headerbar & {
-      color: $titlebar_fg_color;
+stackswitcher {
+  border-radius: $corner_radius;
+  background-color: $inverse_overlay_color;
+  box-shadow: $shadow_standard;
+
+  .titlebar & button,
+  headerbar & button {
+    padding: $button_padding $large_padding_em;
+  }
+
+  button,
+  .inline-toolbar & button,
+  actionbar & button {
+    @include flat_button;
+
+    &:hover {
+      background-color: transparent;
+      
+      &:checked {
+        border-radius: $corner_radius;
+        background-color: $color_theme_2;
+        color: $selected_fg_color;
+
+        .titlebar &,
+        headerbar & {
+          border-radius: $corner_radius $corner_radius 0 0;
+          background-color: transparent;
+          color: $titlebar_fg_color;
+        }
+      }
     }
   }
 }
+
 
 .titlebar .linked,
 .headerbar .linked,
@@ -95,6 +116,7 @@ headerbar .linked {
   background-color: $titlebar_button_color;
   
   button {
+    box-shadow: none;
 
     &:checked {
       @include flat;
@@ -104,6 +126,10 @@ headerbar .linked {
 
     &:hover {
       background-color: rgba($titlebar_fg_color, 0.1);
+      
+      &:active {
+        box-shadow: none;
+      }
     }
   }
 }

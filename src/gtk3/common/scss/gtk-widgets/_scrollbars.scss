@@ -14,7 +14,6 @@ scrollbar {
   -GtkScrollbar-has-forward-stepper: false;
   
   trough {
-    padding: 2px;
     transition: $standard_transition;
     border-radius: 0;
     background-clip: border-box;
@@ -45,7 +44,6 @@ scrollbar {
 
   &.hovering {
     trough {
-      padding: 2px;
       background-color: $inverse_overlay_color;
       
       &:backdrop {

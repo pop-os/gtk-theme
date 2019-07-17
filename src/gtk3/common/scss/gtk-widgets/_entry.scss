@@ -7,6 +7,7 @@
  */
 
 %entry-fallback-normal {
+
   border: 1px solid rgba($fg_color, 0.4);
   background-color: $overlay_color;
   color: $fg_color;
@@ -31,14 +32,19 @@
 }
 
 %entry-fallback {
+  padding: $entry_padding;
+  border-radius: $corner_radius;
+  background-color: $overlay_color;
+  color: $fg_color;
+
   &, &.flat {
-    @extend %entry-fallback-normal;
-    border-radius: 2px;
+    @extend %fallback-normal;
+    border-radius: $corner_radius;
     &:focus { 
-      @extend %entry-fallback-focus; 
+      @extend %fallback-active; 
     }
     &:disabled { 
-      @extend %entry-fallback-insensitive; 
+      @extend %fallback-insensitive; 
     }
   }
 }
@@ -47,21 +53,21 @@
 entry,
 .entry {
   @extend %entry-fallback;
-  @include underline(normal);
-  padding: $entry_padding;
-  transition: $standard_transition;
-  border-radius: $corner_radius $corner_radius 0 0;
-  background-color: $overlay_color;
-  color: $fg_color;
 
   .background & {
-    border: none;
     @include underline(normal);
+    margin: 0 0.075em 0.15em;
+    border: none;
     box-shadow: $shadow_standard;
 
     &:hover {
-      box-shadow: $shadow_standard;
+      box-shadow: $shadow_hover;
     }
+  }
+
+  &:focus {
+    @include underline(focus);
+    border-radius: $corner_radius $corner_radius 0 0;
   }
   
   &:backdrop {
@@ -69,12 +75,9 @@ entry,
   }
   
   .background &:focus {
-    @include underline(focus);
-    box-shadow: $shadow_standard;
   }
   
   &:disabled {
-    @include underline(disabled);
     background-color: transparent;
     color: rgba($fg_color, 0.6);
   }
@@ -85,7 +88,6 @@ entry,
   }
   
   image {
-    margin: 0;
     color: $fg_color;
     
     &:backdrop {
@@ -98,17 +100,11 @@ entry,
   }
   
   .titlebar &:disabled {
-    opacity: 0.6;
   }
 
   .entry-tag {
-    margin: 2px 0;
-    padding-left: $tiny_padding_em;
-    border: none;
-    border-radius: 4px;
     background-color: $selected_bg_color;
     color: $selected_fg_color;
-    box-shadow: none;
 
     .background image {
       color: $selected_fg_color;
@@ -123,9 +119,7 @@ entry,
   
     &.button {
       @include flat_button;
-      border: none;
       color: $selected_fg_color;
-      box-shadow: none;
 
       image,
       label {
@@ -144,11 +138,9 @@ entry,
  */
 
 %spinbutton,
+spinbutton,
 .background spinbutton,
 .background .linked spinbutton {
-  padding: $tinier_padding_em;
-  transition: $standard_transition;
-  border: none;
   border-radius: $corner_radius;
   background-color: $overlay_color;
   box-shadow: $shadow_standard;
@@ -157,11 +149,9 @@ entry,
   &:active {
     @include underline(focus);
     border-radius: $corner_radius $corner_radius 0 0;
-    box-shadow: $shadow_standard;
   }
 
   &:disabled {
-    @include underline(disabled);
     background-color: transparent;
 
     entry {
@@ -171,9 +161,8 @@ entry,
 
   button,
   entry {
-    min-width: 2px;
-    min-height: 2px;
-    padding: 3px;
+    box-shadow: none;
+    border-image: none;
 
     &,
     &:hover,
@@ -181,10 +170,9 @@ entry,
     &:focus,
     &:disabled,
     &:backdrop {
-      border: none;
       background-color: transparent;
-      color: rgba($fg_color, 0.4);
       box-shadow: none;
+      border-image: none;
     }
 
     &:disabled {
@@ -192,8 +180,29 @@ entry,
     }
   }
 
-  &.horizontal entry {
-    min-width: 4em;
+  button {
+    padding: $mini_padding_em;
+    border-radius: $circular_radius;
+    
+    image, 
+    label {
+      color: rgba($fg_color, 0.8);
+    }
+  }
+
+  &.horizontal {
+    
+    entry {
+      min-width: 3em;
+    }
+
+    button {
+      margin: $tiny_padding_em $mini_padding_em;
+    }
+  }
+
+  &.vertical button {
+    margin: $tinier_padding_em $standard_padding_em;
   }
 
   &:disabled entry,
@@ -207,10 +216,6 @@ entry,
     button,
     button.up,
     button.down {
-      @include flat_button;
-      
-      border-radius: $circular_radius;
-      box-shadow: none;
 
       &:hover {
         background-color: rgba($fg_color, 0.1);
@@ -228,30 +233,44 @@ entry,
  */
 
 combobox {
+  margin: 0;
 
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
   }
-  
-  button {
-    @include underline(normal);
+
+  box.linked {
     background-color: transparent;
+  }
+
+  entry.combo {
+    @include flat;
+    @include underline(normal);
+    margin: 0;
+    background-color: $overlay_color;
+
+    &:focus {
+      @include underline(focus);
+    }
+
+    &:disabled {
+      @include underline(disabled);
+    }
+  }
+  
+  button.combo {
+    @include underline(normal);
+    margin: 0;
+    background-color: $overlay_color;
+    outline-offset: -6px;
     
     &:backdrop {
       color: rgba($fg_color, 0.6);
     }
-    
-    &:active,
-    &:checked,
-    &:hover {
-      @include underline(focus);
-      // background-color: $overlay_color;
-      color: $fg_color;
-    }
-    
+
     &:active,
     &:checked {
-      background-color: $color_theme_2;
+      @include underline(focus);
     }
     
     &:disabled {
@@ -266,5 +285,4 @@ combobox {
 }
 
 image.entry_icon {
-  padding: $tinier_padding_em;
 }

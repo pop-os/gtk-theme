@@ -9,7 +9,6 @@
 expander arrow,
 .expander,
 .catefory-expander {
-  transition: $standard_transition;
   -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
   
   &:checked {

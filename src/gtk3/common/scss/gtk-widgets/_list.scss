@@ -8,17 +8,14 @@
 
 list,
 .list {
+  border-radius: 0 0 $corner_radius $corner_radius;
   background-color: $overlay_color;
   
   row,
   .list-row {
-    transition: $standard_transition;
-    border-color: transparent;
+    padding: $mini_padding_em;
     
-    > label {
-      // sass-lint:disable-block indentation 
-      margin: 
-        $mini_padding_em $large_padding_em $mini_padding_em $tiny_padding_em;
+    label {
       color: $fg_color;
     }
     
@@ -28,13 +25,11 @@ list,
     
     .linked {
       background-color: transparent;
-      box-shadow: none;
     }
     
     button,
     .linked button {
       background-color: $overlay_color;
-      box-shadow: $shadow_standard;
       
       &:hover {
         background-color: rgba($fg_color, 0.1);
@@ -48,11 +43,9 @@ list,
       &.up,
       &.down {
         background-color: transparent;
-        box-shadow: none;
 
         &:hover {
           background-color: rgba($fg_color, 0.1);
-          box-shadow: none;
 
           &:active {
             background-color: rgba($fg_color, 0.2);
@@ -71,7 +64,6 @@ list,
 
       &.combo {
         background-color: $overlay_color;
-        box-shadow: $shadow_standard;
       }
     }
     
@@ -81,6 +73,11 @@ list,
       label,
       image {
         color: $selected_fg_color;
+      }
+
+      switch label,
+      switch image {
+        color: transparent;
       }
       
       button label,
@@ -105,11 +102,11 @@ list,
       
       scale {
         slider {
+          border-color: $selected_fg_color;
           background-color: $selected_fg_color;
           color: $selected_fg_color;
           
           &:disabled {
-            border: $line_size solid rgba($selected_fg_color, 0.4);
             background-color: $bg_color;
             color: $bg_color;
             
@@ -147,7 +144,6 @@ list,
       
       check,
       radio {
-        box-shadow: inset 0 0 0 2px $selected_fg_color;
       }
       
       &:backdrop {

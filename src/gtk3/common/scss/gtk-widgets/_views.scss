@@ -17,8 +17,7 @@
 
 treeview,
 .background treeview {
-  padding: $mini_padding;
-  border-radius: 1px;
+  padding: 0.3em;
   background-color: $overlay_color;
   -GtkTreeView-vertical-separator: $tinier_padding;
   -GtkTreeView-horizontal-separator: $tinier_padding;
@@ -35,31 +34,36 @@ treeview,
   }
   
   entry {
-    border-radius: 0;
   }
   
   header {
-    margin: $mini_padding;
-    border-radius: $corner_radius;
-    background-color: $inverse_overlay_color;
+    margin: 0.3em;
   }
 
   header button {
+    @include flat_button;
+    margin: 0.3em 0;
+    border-right: 1px solid rgba($fg_color, 0.3);
     border-radius: 0;
     background-color: $inverse_overlay_color;
     box-shadow: none;
     
     &:first-child {
+      margin-left: 0.3em;
       border-top-left-radius: $corner_radius;
+      border-bottom-left-radius: $corner_radius;
     }
     
     &:last-child {
+      margin-right: 0.3em;
+      border-right: none;
       border-top-right-radius: $corner_radius;
+      border-bottom-right-radius: $corner_radius;
     }
     
-    &:active,
+    &:active:hover,
     &:hover,
-    &:checked {
+    &:focus {
       box-shadow: none;
     }
     
@@ -70,12 +74,9 @@ treeview,
   }
   
     
-  check {
-    border-radius: $corner_radius;
-  }
-  
+  check,
   radio {
-    border-radius: $circular_radius;
+    padding: $check_padding;
   }
   
   &:selected check,
@@ -85,7 +86,6 @@ treeview,
 }
 
 scrolledwindow {
-  border-radius: $corner_radius / 2;
 }
 
 viewport, 

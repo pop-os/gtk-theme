@@ -11,7 +11,6 @@ dialog {
   
   .titlebar {
     background-color: $titlebar_bg_color;
-    box-shadow: $titlebar_border;
     
     image,
     label {
@@ -24,30 +23,29 @@ messagedialog {
   border-radius: 0 0 $corner_radius $corner_radius;
   background-color: $bg_color;
   color: $fg_color;
+  -GtkWidget-window-dragging: true;
+
+  decoration {
+    border-radius: $corner_radius;
+  }
   
   .titlebar {
-    border: none;
+    border-radius: $corner_radius $corner_radius 0 0;
     background-color: $bg_color;
-    box-shadow: none;
     
     &:backdrop {
       background-color: $bg_color;
-      box-shadow: none;
     }
     
     label {
-      color: transparent;
     }
   }
   
   .dialog-action-box {
-    border: 0 solid rgba($fg_color, 0.1);
     
     button {
-      border-radius: $corner_radius;
       background-color: transparent;
       color: rgba($fg_color, 0.8);
-      box-shadow: none;
       
       &.destructive-action {
         background-color: transparent;

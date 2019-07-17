@@ -8,13 +8,7 @@
 
 .app-notification,
 .app-notification.frame {
-  margin: $standard_padding_em;
-  padding: $small_padding_em;
-  border: none;
-  border-radius: $corner_radius;
-  background-clip: padding-box;
   background-color: mix($inverse_bg_color, $dark_warm_grey, 30%);
-  box-shadow: $shadow_hover; 
   
   label {
     color: $inverse_fg_color;
@@ -41,7 +35,6 @@
     }
     
     &.image-button {
-      border-radius: $circular_radius;
     }
   }
 }

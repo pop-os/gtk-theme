@@ -8,11 +8,11 @@
 
 %menu,
 menu,
-.menu,
-window.popup {
-  padding: $menu_padding;
+.menu {
+  padding: $small_padding_em;
   border-radius: $corner_radius;
   background-color: $bg_color;
+  box-shadow: $shadow_hover;
 
   &.button {
     background-image: none;
@@ -25,28 +25,23 @@ menubar,
   -GtkWidget-window-dragging: true;
   
   > menuitem {
-    padding: $menu_padding $menu_padding * 3;
-    transition: $standard_transition;
-    border: $line_size solid transparent;
+    padding: $mini_padding_em $small_padding_em;
     color: $fg_color;
     
     &:hover {
-      border-bottom-color: $color_theme_2;
       background-color: transparent;
       color: if($color == 'light', $text_color_2, $highlight_color_2);
     }
     
     &:active {
-      border-bottom-color: $color_theme_2;
       background-color: $bg_color;
       color: if($color == 'light', $text_color_2, $highlight_color_2);
     }
   }
+  
   window > &,
   window > box > &:first-child,
   terminal-window > box > &:first-child {
-    border: 0 solid $titlebar_hl_color;
-    border-width: 0 $border_size;
     background-color: $titlebar_bg_color;
     color: $titlebar_fg_color;
 
@@ -57,29 +52,22 @@ menubar,
     .tiled-right &,
     .tiled-top &,
     .tiled-bottom & {
-      border: none;
-      border-radius: 0;
       box-shadow: none;
     }
     
     &:backdrop {
-      border-color: lighten($titlebar_hl_color, 5%);
       background-color: lighten($titlebar_bg_color, 5%);
     }
     
     > menuitem {
-      transition: $standard_transition;
-      border: $line_size solid transparent;
       color: rgba($titlebar_fg_color, 0.8);
       
       &:hover {
-        border-bottom-color: $color_theme_2;
         background-color: transparent;
         color: if($titlebar == 'light', $text_color_2, $highlight_color_2);
       }
       
       &:active {
-        border-bottom-color: $color_theme_2;
         background-color: transparent;
         color: if($titlebar == 'light', $text_color_2, $highlight_color_2);
       }
@@ -88,53 +76,60 @@ menubar,
 
 }
 
-menuitem,
-.menuitem
-modelbutton {
-  min-width: $large_size;
-  padding: $mini_padding;
-  border: none;
-  border-radius: $corner_radius;
-  background-color: transparent;
-  color: $fg_color;
-  text-shadow: none;
-  box-shadow: none;
-  -gtk-icon-shadow: none;
+menu,
+.menu {
   
-  &:active, 
-  &:hover {
-    background-color: $inverse_overlay_color;
-  }
-  
-  :disabled {
-    color: rgba($fg_color, 0.6);
-  }
-  
-  accelerator {
-    color: rgba($fg_color, 0.6);
-  }
-  
-  arrow {
-    min-width: $small_size;
-    min-height: $small_size;
-    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+  menuitem,
+  .menuitem {
+    padding: $tinier_padding_em $small_padding_em;
+    border-radius: $corner_radius;
+    background-color: transparent;
+    color: $fg_color;
+    -gtk-icon-shadow: none;
     
-    &:dir(rtl) {
-      -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl');
+    &:active, 
+    &:hover {
+      background-color: $inverse_overlay_color;
     }
     
-    &.top {
-      -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+    :disabled {
+      color: rgba($fg_color, 0.6);
     }
     
-    &.bottom {
-      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    accelerator {
+      color: rgba($fg_color, 0.6);
     }
-  }
-  
-  image,
-  label {
-    padding: $mini_padding;
+    
+    arrow {
+      min-height: 1.2em;
+      -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+      
+      &:dir(rtl) {
+        -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl');
+      }
+      
+      &.top {
+        -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+      }
+      
+      &.bottom {
+        -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+      }
+    }
+
+    label {
+      padding-right: $standard_padding_em;
+      padding-left: 0;
+
+      &:dir(rtl) {
+        padding-right: 0;
+        padding-left: $standard_padding_em;
+      }
+    }
+
+    check,
+    radio {
+      min-height: 1.2em;
+    }
   }
 }
-

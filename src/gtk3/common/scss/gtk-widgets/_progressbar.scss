@@ -12,9 +12,7 @@ progress,
 levelbar block {
   min-width: $progress_size;
   min-height: $progress_size;
-  transition: $standard_transition;
-  border: none;
-  border-radius: $circular_radius;
+  border-radius: $corner_radius;
   background-color: $color_theme_1;
   
   &:backdrop {
@@ -22,9 +20,6 @@ levelbar block {
   }
   
   entry & {
-    transition: $standard_transition;
-    border-bottom: $line_size solid $color_theme_1;
-    border-radius: $corner_radius $corner_radius 0 0;
     background-color:  rgba($color_theme_1, 0.4);
     color: $inverse_fg_color;
   }
@@ -36,9 +31,7 @@ trough,
 levelbar block.empty {
   min-width: $progress_size;
   min-height: $progress_size;
-  transition: $standard_transition;
-  border: none;
-  border-radius: $circular_radius;
+  border-radius: $corner_radius;
   background-color: rgba($fg_color, 0.2);
   
   &:backdrop {
@@ -48,10 +41,7 @@ levelbar block.empty {
 
 treeview.trough,
 treeview.progressbar {
-  border-bottom: 3px solid transparent;
-  border-radius: 0;
   background-color: transparent;
-  box-shadow: none;
   
   &:backdrop,
   &:backdrop:selected {
@@ -76,6 +66,8 @@ treeview.trough {
 }
 
 levelbar {
+  min-width: $progress_size;
+  min-height: $progress_size;
   
   trough {
     background-color: $overlay_color;
@@ -84,7 +76,7 @@ levelbar {
 
   block {
     @extend %progress;
-    margin: $mini_padding_em;
+    margin: 0.15em;
     
     &.filled.low {
       background-color: $error_bg_color;
@@ -121,25 +113,46 @@ levelbar {
 }
 
 scale {
-  padding: $small_padding_em;  
-  outline-offset: 4px;
+  min-height: 0.75em;
+}
+
+scale.horizontal {
+  margin: 0.75em 0;
+}
+
+scale.vertical {
+  margin: 0 0.75em;
+}
+
+scale slider {
+  min-width: 1.2em;
+  min-height: 1.2em;
+  margin: -0.6em;
+  border-radius: 9999px;
+}
+
+scale {
+
+  // This feels hacky, but seems to be the easiest way to get a focus outline.
+  *:focus {
+    outline-offset: 0.6em;
+  }
   
   slider {
-    min-width: 2 * $progress_size;
-    min-height: 2 * $progress_size;
-    margin: -1.5 * $progress_size;
+    min-width: 1.2em;
+    min-height: 1.2em;
+    margin: -0.6em;
     transition: $standard_transition;
+    border: 0.2em solid $color_theme_1;
     border-radius: $circular_radius;
-    outline: $line_size solid rgba($light_neutral_grey_700, 0.4);
     background-color: $color_theme_1;
     color: $color_theme_1;
-    box-shadow: none;
     
     &:hover {
-      box-shadow: $shadow_hover;
+      box-shadow: $shadow_standard;
       
       &:active:focus {
-        box-shadow: $shadow_active;
+        box-shadow: $shadow_hover;
       }
     }
     
@@ -148,12 +161,11 @@ scale {
     }
     
     &:disabled {
-      border: $line_size solid rgba($fg_color, 0.4);
+      border-color: rgba($fg_color, 0.4);
       background-color: $bg_color;
       color: $bg_color;
       
       &:backdrop {
-        border-color: rgba($fg_color, 0.2);
       }
     }
   }
@@ -174,17 +186,17 @@ scale {
     }
   }
   
-  mark indicator {
-    color: rgba($fg_color, 0.6);
+  mark {
+    min-width: 0.015em;
+    min-height: 0.015em;
+    background-color: rgba($fg_color, 0.6);
   }
   
-  &.horizontal mark indicator {
-    min-width: $border_size;
+  &.horizontal mark {
     min-height: $marks_size;
   }
   
-  &.vertical mark indicator {
+  &.vertical mark {
     min-width: $marks_size;
-    min-height: $border_size;
   }
 }

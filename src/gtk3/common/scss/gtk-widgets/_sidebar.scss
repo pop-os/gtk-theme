@@ -11,8 +11,6 @@
 .sidebar list,
 .source-list,
 .source-list.view {
-  border: none;
-  border-radius: 0;
   background-color: $base_color;
   color: $fg_color;
 
@@ -33,8 +31,7 @@
   .list-row,
   .sidebar-item,
   .sidebar-row {
-    margin: -1px 0;
-    padding: $small_padding_em;
+    margin: -1px;
     transition: $fast_transition; //Standard looks a tiny bit janky
     
     &:hover {
@@ -60,6 +57,10 @@
       box-shadow: $border_shadow $color_theme_2;
     }
 
+    image {
+      padding: $button_padding + 0.1em;
+    }
+
     button {
       @include flat_button;
     }
@@ -70,21 +71,15 @@
   }
   
   label,
-  image {
-    padding: 0 $tinier_padding_em;    
+  image {   
     transition: $fast_transition;
   }
   
   .frame {
-    border: none;
   }
   
   .stack-switcher button {
     @include flat_button;
     -gtk-icon-style: symbolic;
-  }
-  
-  separator {
-    border: none;
   }
 }

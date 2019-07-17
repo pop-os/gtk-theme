@@ -9,26 +9,26 @@
 %checkradio,
 check,
 radio {
-  min-width: $check_size;
-  min-height: $check_size;
-  margin: $mini_padding_em;
-  padding: $check_padding;
+  min-width: 1.2em;
+  min-height: 1.2em;
+  padding: $check_size;
   transition: $standard_transition;
-  box-shadow: inset 0 0 0 2px rgba($fg_color, 0.8);
+  box-shadow: inset 0 0 0 $line_size rgba($fg_color, 0.8);
    
   &:backdrop {
-    box-shadow: inset 0 0 0 2px rgba($fg_color, 0.4);
+    box-shadow: inset 0 0 0 $line_size rgba($fg_color, 0.4);
   }
   
   &:checked,
   &:indeterminate {  
+    border-color: $color_theme_2;
     background-color: $color_theme_2;
     color: $color_fg_color;
-    box-shadow: inset 0 0 0 2px transparent;
+    box-shadow: inset 0 0 0 $line_size $color_theme_2;;
     
     &:backdrop {
       background-color: rgba($color_theme_2, 0.4);
-      box-shadow: inset 0 0 0 2px transparent;
+      box-shadow: inset 0 0 0 $line_size rgba($color_theme_2, 0.4);
     }
   }
   
@@ -47,23 +47,49 @@ radio {
   }
   
   &:disabled {
-    box-shadow: inset 0 0 0 2px rgba($fg_color, 0.4);
+    box-shadow: inset 0 0 0 $line_size rgba($fg_color, 0.4);
     
     &:checked,
     &:indeterminate {
       background-color: rgba($color_theme_2, 0.6);
-      box-shadow: inset 0 0 0 2px transparent;
+      box-shadow: inset 0 0 0 $line_size transparent;
       
       &:backdrop {  
         background-color: rgba($color_theme_2, 0.2);
-        box-shadow: inset 0 0 0 2px transparent;
+        box-shadow: inset 0 0 0 $line_size transparent;
       }
+    }
+  }
+
+  menu menuitem & {
+    min-width: 1.2em;
+    min-height: 1.2em;
+    margin: 0;
+    margin-right: 0.6em;
+
+    &:dir(rtl) {
+      margin-right: 0;
+      margin-left: 0.6em;
     }
   }
   
   treeview.view &:selected {
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px $selected_fg_color;
+    box-shadow: inset 0 0 0 $line_size $selected_fg_color;
+
+    &:checked {
+      background-color: $selected_switch_color;
+    }
+  }
+
+  :selected &,
+  :selected &:checked {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 $line_size $selected_fg_color;
+  }
+
+  :selected &:checked {
+    background-color: $selected_switch_color;
   }
 }
 
@@ -88,8 +114,6 @@ radio:not(:checked) {
     transition: $standard_transition,
       -gtk-icon-transform 0; // sass-lint:disable-line indentation
   }
-
-  //menu menuitem & { transition: none; }
 }
 
 check {

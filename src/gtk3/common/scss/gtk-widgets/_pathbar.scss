@@ -10,7 +10,6 @@
 #pathbarbox button {
   
   &:disabled {
-    box-shadow: none;
   }
   
   &:checked {
@@ -21,14 +20,8 @@
   
   &.text-button,
   &.toggle {
-    border-radius: $corner_radius;
-    background-image: url('assets/pathbar-separator.svg');
-    background-repeat: no-repeat no-repeat;
-    background-position: 100% 50%;
-    background-size: 12px;
     
     &:dir(rtl) {
-      background-position: 0% 50%;
     }
   }
   

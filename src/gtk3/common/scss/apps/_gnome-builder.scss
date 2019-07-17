@@ -14,19 +14,13 @@ window.workbench > stack.titlebar {
   headerbar omnibar.linked.horizontal {
     
     button:first-child {
-      border-radius: $corner_radius;
     }
 
     entry {
-      border-right: 0 transparent;
-      border-radius: $corner_radius 0 0;
     }
 
     button:last-child {
       @include underline(normal);
-      border-left: 0 transparent;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
       background-color: $bg_color;
 
       &:hover {
@@ -46,7 +40,6 @@ button.dzlmenubuttonitem {
 }
 
 idelayoutstackheader {
-  border-bottom: 1px solid rgba($fg_color, 0.1);
 
   button:checked {
     color: $fg_color;
@@ -58,10 +51,8 @@ ideeditorutilities > dzldockpaned > box > stackswitcher {
   background-color: $bg_color;
 
   &:dir(ltr) {
-    border-right: 1px solid rgba($fg_color, 0.1);
   }
   &:dir(rtl) {
-    border-left: 1px solid rgba($fg_color, 0.1);
   }
 
   button {
@@ -82,31 +73,8 @@ popover.messagepopover {
   // 
 
   list {
-    border: 1px solid rgba($fg_color, 0.1);
 
     row:not(:last-child) {
-      border-bottom: 1px solid rgba($fg_color, 0.1);
-    }
-  }
-}
-
-// Bottom Panel Tabs - doesn't currently work
-dzldockstack {
-  background-color: $inverse_overlay_color;
-  
-  dzltabstrip {
-    border-radius: $corner_radius;
-    box-shadow: $shadow_standard;
-  }
-  
-  dzltab {
-    border: none; 
-    background-color: $overlay_color;
-    box-shadow: none;
-    
-    &:checked {
-      background-color: $color_theme_2;
-      box-shadow: $shadow_standard;
     }
   }
 }

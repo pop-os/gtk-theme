@@ -9,7 +9,9 @@
 headerbar {
   padding: $headerbar_padding;
   border: 0 solid $titlebar_hl_color;
-  border-width: $border_size $border_size 0;
+  border-top-width: $border_size;
+  border-right-width: $border_size;
+  border-left-width: $border_size;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $titlebar_bg_color;
   color: $titlebar_fg_color;
@@ -27,9 +29,7 @@ headerbar {
   .tiled-right &,
   .tiled-top &,
   .tiled-bottom & {
-    border: none;
     border-radius: 0;
-    box-shadow: none;
   }
 
   button,
@@ -51,17 +51,15 @@ headerbar {
 
     &:checked {
       background-color: $titlebar_button_color;
-      box-shadow: $shadow_active;
+      box-shadow: none;
     }
 
     &:checked {
-      @include underline(focus);
       
       image,
       label,
       arrow,
       widget {
-        color: $titlebar_fg_color;
       }
     }
 
@@ -72,11 +70,9 @@ headerbar {
     &.image-button,
     &.disclosure-button,
     &.popup.toggle {
-      padding: $button_padding_image + 1.5px;
     }
 
     &.text-button.image-button {
-      padding: $button_padding_text $button_padding_text * 2;
     }
 
     image,
@@ -91,20 +87,16 @@ headerbar {
 
   .titlebutton,
   .background & .titlebutton {
-    padding: $button_padding_image - 2px;
+    padding: $tinier_padding_em;
     border-radius: $circular_radius;
-    background: none;
     color: $titlebar_fg_color;
-    box-shadow: none;
     
     &:hover {
       background-color: rgba($titlebar_fg_color, 0.1);
-      box-shadow: none;
     }
     
     &:active {
       background-color: rgba($titlebar_fg_color, 0.2);
-      box-shadow: none;
     }
     
     &.close {
@@ -118,12 +110,12 @@ headerbar {
 
       &:active {
         background-color: $close_button_color;
+        box-shadow: $shadow_active;
       }
       
       &:backdrop {
         background-color: rgba($titlebar_fg_color, 0.2);
         color: $titlebar_fg_color;
-        box-shadow: none;
 
         image {
           color: $titlebar_fg_color;
@@ -137,29 +129,24 @@ headerbar {
       
       &:active {
         background-color: mix($close_button_color, $obverse_bg_color, 60%);
-        box-shadow: $shadow_active;
+        box-shadow: none;
       }
     }
 
     &.appmenu {
       background-color: transparent;
-      box-shadow: none;
 
       &:hover {
         background-color: rgba($titlebar_fg_color, 0.1);
-        box-shadow: none;
 
         &:active,
         &:checked {
           background-color: rgba($titlebar_fg_color, 0.2);
-          box-shadow: none;
         }
       }
 
       &:checked {
         background-color: rgba($titlebar_fg_color, 0.2);
-        box-shadow: none;
-        border-image: none;
       }
     }
   }
@@ -177,10 +164,8 @@ headerbar {
   
   window > &.flat,
   messagedialog & {
-    border-width: 0;
     background-color: $bg_color;
     color: $fg_color;
-    box-shadow: none;
 
     image,
     label {
@@ -194,37 +179,18 @@ headerbar {
         color: rgba($fg_color, 0.6);
       }
     }
-    
-    .titlebutton {
-      padding: $no_padding;
-      border-radius: $circular_radius;
-      
-      &.close {
-        background-color: $close_button_color;
-        
-        &:backdrop {
-          background-color: rgba($light_neutral_grey_700, 0.4);
-          color: if($color == 'dark', $inverse_fg_color, $obverse_fg_color);
-        }
-      }
-    }
   }
   
   .headerbar,
-  headerbar {
-    border: none;
-    box-shadow: none;
-  }
-
+  headerbar,
   .titlebar {
     padding: 0;
   }
+
+  .titlebar {
+  }
   
   seperator {
-    border: none;
-    background-color: $titlebar_bg_color;
-    color: transparent;
-    box-shadow: none;
   }
   
   .title {
@@ -233,7 +199,7 @@ headerbar {
   
   .subtitle {
     font-size: 80%;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .background & entry,
@@ -244,9 +210,10 @@ headerbar {
 }
 
 paned.titlebar {
-  padding: 0;
   border: 0 solid $titlebar_hl_color;
-  border-width: $border_size $border_size 0;
+  border-top-width: $border_size;
+  border-right-width: $border_size;
+  border-left-width: $border_size;
   border-radius: $corner_radius $corner_radius 0 0;
   background-color: $titlebar_bg_color;
   color: $titlebar_fg_color;
@@ -259,12 +226,17 @@ paned.titlebar {
 
   headerbar {
     border: none;
+    background-color: none;
+  }
+
+  separator {
+    border: none;
   }
 }
 
 decoration {
   margin: 8px;
-  border-radius: $corner_radius;
+  border-radius: $corner_radius $corner_radius 3px 3px;
   background-color: $titlebar_bg_color;
   box-shadow: $shadow_window;
   
@@ -274,42 +246,106 @@ decoration {
   }
 
   .solid-csd & {
-    border-radius: 0;
+    border-radius: $corner_radius $corner_radius 3px 3px;
     background-color: $titlebar_bg_color;
     box-shadow: none;
+  }
+
+  .fullscreen & {
+    border-radius: 0;
+  }
+
+  .tiled-left.tiled-bottom:not(.maximized) & {
+    border-bottom-left-radius: $corner_radius;
+    background-color: $black;
+  }
+
+  .tiled-right.tiled-bottom:not(.maximized) & {
+    border-bottom-right-radius: $corner_radius;
+    background-color: $black;
+  }
+
+  .maximized & {
+    border-bottom-left-radius: $corner_radius;
+    border-bottom-right-radius: $corner_radius;
+    background-color: $black;
+  }
+}
+
+window {
+  border-radius: 0 0 3px 3px;
+
+  &.fullscreen {
+    border-radius: 0;
+  }
+
+  &.tiled-left.tiled-bottom:not(.maximized) {
+    border-bottom-left-radius: $corner_radius;
+    border-bottom-right-radius: 0;
+  }
+
+  &.tiled-right.tiled-bottom:not(.maximized) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: $corner_radius;
+  }
+
+  &.maximized {
+    border-bottom-left-radius: $corner_radius;
+    border-bottom-right-radius: $corner_radius;
   }
 }
 
 .geary-titlebar {
-  min-height: 0;
-  padding: 0;
 }
 
-.titlebar hdyleaflet headerbar,
-hdyleaflet headerbar {
+.titlebar headerbar:not(.titlebar) {
   padding: $headerbar_padding;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-radius: 0;
+
+  &:first-child {
+    border-left-width: $border_size;
+    border-top-left-radius: $corner_radius;
+  }
+
+  &:last-child {
+    border-right-width: $border_size;
+    border-top-right-radius: $corner_radius;
+  }
 }
 
 window > .titlebar,
 window > headerbar {
-  box-shadow: $shadow_standard;
 }
 
 menu window.popup decoration {
-  border-radius: $corner_radius;
-  box-shadow: $shadow_hover;
 }
 
 tooltip decoration {
-  border-radius: $corner_radius;
-  box-shadow: $shadow_hover;
 }
 
 .window-frame.ssd {
-  border-radius: $corner_radius;
-  box-shadow: $shadow_standard;
 }
 
 .ssd decoration { 
-  box-shadow: 0 3px 3px rgba($black, 0.16);
+}
+
+.tweak-titlebar-right {
+  border-left-width: 0;
+}
+
+.tweak-titlebar-left {
+  border-right-width: 0;
+}
+
+.tweak-titlebar-left + separator {
+  margin: 0;
+  border-top: 1px solid $titlebar_hl_color;
+  background-color: transparent;
+
+  &:backdrop {
+    border-color: lighten($titlebar_hl_color, 5%);
+    background-color: lighten($titlebar_bg_color, 5%);
+  }
 }
