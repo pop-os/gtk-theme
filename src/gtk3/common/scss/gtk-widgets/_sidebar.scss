@@ -75,9 +75,6 @@
     transition: $fast_transition;
   }
   
-  .frame {
-  }
-  
   .stack-switcher button {
     @include flat_button;
     -gtk-icon-style: symbolic;

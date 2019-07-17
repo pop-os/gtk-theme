@@ -7,13 +7,11 @@
  */
 
 .emoji-picker { 
+  padding: $tiny_padding_em;
 
   box > label {
     color: $fg_color;
     font-size: 120%;
     font-weight: 300;
-  }
-  
-  scrolledwindow {
   }
 }

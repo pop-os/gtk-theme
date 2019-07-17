@@ -12,12 +12,6 @@
 window.workbench > stack.titlebar {
 
   headerbar omnibar.linked.horizontal {
-    
-    button:first-child {
-    }
-
-    entry {
-    }
 
     button:last-child {
       @include underline(normal);
@@ -50,31 +44,11 @@ idelayoutstackheader {
 ideeditorutilities > dzldockpaned > box > stackswitcher {
   background-color: $bg_color;
 
-  &:dir(ltr) {
-  }
-  &:dir(rtl) {
-  }
-
   button {
     background-color: transparent;
 
     &:active {
       background-color: $color_theme_2;
-    }
-  }
-}
-
-// buildui panel
-ideeditorsidebar notebook header {
-  background: transparent;
-}
-
-popover.messagepopover {
-  // 
-
-  list {
-
-    row:not(:last-child) {
     }
   }
 }

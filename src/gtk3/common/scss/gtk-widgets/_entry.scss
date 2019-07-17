@@ -74,9 +74,6 @@ entry,
     color: rgba($fg_color, 0.6);
   }
   
-  .background &:focus {
-  }
-  
   &:disabled {
     background-color: transparent;
     color: rgba($fg_color, 0.6);
@@ -97,9 +94,6 @@ entry,
   
   &.flat {
     @include flat;
-  }
-  
-  .titlebar &:disabled {
   }
 
   .entry-tag {
@@ -261,8 +255,8 @@ combobox {
   button.combo {
     @include underline(normal);
     margin: 0;
-    background-color: $overlay_color;
     outline-offset: -6px;
+    background-color: $overlay_color;
     
     &:backdrop {
       color: rgba($fg_color, 0.6);
@@ -285,4 +279,11 @@ combobox {
 }
 
 image.entry_icon {
+  margin-right: $small_padding_em;
+  margin-left: 0;
+
+  &:dir(rtl) {
+    margin-right: 0;
+    margin-left: $small_padding_em;
+  }
 }

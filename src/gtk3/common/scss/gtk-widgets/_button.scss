@@ -24,10 +24,9 @@
 
 // fallback buttons for non-native apps
 %button-fallback {
+  @extend %fallback-normal;
   padding: $button_padding;
   border-radius: $corner_radius;
-
-  @extend %fallback-normal;
 
   &:active,
   &:focus { 
@@ -95,10 +94,6 @@ button,
     @include flat_button;
     font-weight: 700;
   }
-  
-  &.image-button,
-  &.disclosure-button {
-  }
 
   &.text-button {  
     padding: $button_padding;
@@ -152,9 +147,6 @@ button,
   .background &.suggested-action {
     background-color: $suggested_bg_color;
     color: $color_fg_color;
-    
-    headerbar & {
-    }
 
     &:focus {
       outline-color: rgba($inverse_fg_color, 0.4);
@@ -192,9 +184,6 @@ button,
   &.destructive-action {
     background-color: $destructive_bg_color;
     color: $color_fg_color;
-    
-    headerbar & {
-    }
 
     &:focus {
       outline-color: rgba($inverse_fg_color, 0.4);

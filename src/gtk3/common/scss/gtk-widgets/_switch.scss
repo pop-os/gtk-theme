@@ -58,10 +58,6 @@ switch {
       background-color: rgba($color_theme_2, 0.6); 
     }
   }
-  
-  headerbar &,
-  toolbar & {  
-  }
 
   slider {
     min-width: $switch_size;
@@ -100,9 +96,6 @@ switch {
 
   &:checked slider {
     color: $bg_color;
-  }
-
-  &:checked:disabled slider { 
   }
 
   :selected & {

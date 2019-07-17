@@ -24,7 +24,7 @@ radio {
     border-color: $color_theme_2;
     background-color: $color_theme_2;
     color: $color_fg_color;
-    box-shadow: inset 0 0 0 $line_size $color_theme_2;;
+    box-shadow: inset 0 0 0 $line_size $color_theme_2;
     
     &:backdrop {
       background-color: rgba($color_theme_2, 0.4);

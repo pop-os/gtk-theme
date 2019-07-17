@@ -8,10 +8,13 @@
 
 window.rounded,
 window.rounded actionbar {
-  
+  border-radius: $corner_radius;
+
   decoration {
+    border-radius: $corner_radius;
   }
 }
 
 window.flat headerbar {
+  border-radius: $corner_radius $corner_radius 0 0;
 }

@@ -6,25 +6,11 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
-.content-view-window {
-}
-
 .content-view,
 .content-view viewport {
   background-color: transparent;
   
   column-header button {
     background-color: $inverse_overlay_color;
-    
-    &:first-child {
-    }
-    
-    &:last-child {
-    }
-    
-    &:active,
-    &:hover,
-    &:checked {
-    }
   }
 }

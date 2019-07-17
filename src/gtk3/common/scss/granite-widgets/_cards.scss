@@ -13,9 +13,6 @@
 .card {
   background-color: $base_color;
   
-  &:checked {
-  }
-  
   &.collapsed {
     background-color: $bg_color;
   }

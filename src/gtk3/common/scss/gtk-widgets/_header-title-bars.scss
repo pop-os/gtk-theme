@@ -54,25 +54,8 @@ headerbar {
       box-shadow: none;
     }
 
-    &:checked {
-      
-      image,
-      label,
-      arrow,
-      widget {
-      }
-    }
-
     &:focus {
       background-color: $titlebar_button_color;
-    }
-
-    &.image-button,
-    &.disclosure-button,
-    &.popup.toggle {
-    }
-
-    &.text-button.image-button {
     }
 
     image,
@@ -186,12 +169,6 @@ headerbar {
   .titlebar {
     padding: 0;
   }
-
-  .titlebar {
-  }
-  
-  seperator {
-  }
   
   .title {
     font-weight: 700;
@@ -295,9 +272,6 @@ window {
   }
 }
 
-.geary-titlebar {
-}
-
 .titlebar headerbar:not(.titlebar) {
   padding: $headerbar_padding;
   border-right-width: 0;
@@ -315,20 +289,8 @@ window {
   }
 }
 
-window > .titlebar,
-window > headerbar {
-}
-
-menu window.popup decoration {
-}
-
-tooltip decoration {
-}
-
-.window-frame.ssd {
-}
-
 .ssd decoration { 
+  margin: 4px;
 }
 
 .tweak-titlebar-right {

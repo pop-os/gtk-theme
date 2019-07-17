@@ -8,6 +8,9 @@
 
 .app-notification,
 .app-notification.frame {
+  margin: $large_padding_em;
+  padding: $headerbar_padding;
+  border-radius: $corner_radius;
   background-color: mix($inverse_bg_color, $dark_warm_grey, 30%);
   
   label {
@@ -32,9 +35,6 @@
     
     image {
       color: rgba($inverse_fg_color, 0.6);
-    }
-    
-    &.image-button {
     }
   }
 }

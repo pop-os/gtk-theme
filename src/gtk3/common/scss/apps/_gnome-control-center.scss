@@ -7,14 +7,6 @@
  */
 
 window.csd {
-  .titlebar > box > headerbar {
-
-    &:first-child {
-    }
-
-    label {
-    }
-  }
   
   > box.horizontal > stack > box.vertical > widget > stack { 
     overlay > box.vertical > grid.horizontal > stack > button.toggle {
