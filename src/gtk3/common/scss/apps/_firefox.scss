@@ -29,6 +29,18 @@ text:selected {
     }
   }
 
+  scrollbar {
+    background-color: transparent;
+
+    trough {
+      background-color: transparent;
+    }
+
+    slider {
+      background-color: rgba($fg_color, 0.8);
+    }
+  }
+
   entry,
   button,
   button > button {
