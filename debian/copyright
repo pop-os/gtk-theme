@@ -1,7 +1,70 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pop-gtk-theme
-Source: https://github.com/system76/pop-gtk-theme
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Pop
+Source: https://github.com/pop-os/gtk-theme
 
 Files: *
-Copyright: Copyright 2016-2017 System76
-License: GPL-2+ or CC-BY-SA-4.0+
+Copyright: 2019, System76, Inc.
+           2017-2018, Canonical
+           2009-2015, Red Hat, Inc.
+           2009, Intel Corporation
+           2015, Руслан Ижбулатов <lrn1986@gmail.com>
+License: GPL-3.0+
+
+Files: gnome-shell/upstream/gnome-shell-sass/_common.scss
+Copyright: 2009-2015 Red Hat, Inc.
+           2009 Intel Corporation
+License: LGPL-2.1
+
+Files: sounds/*
+Copyright: 2018, Mads Rosendahl <madsrh@gmail.com>
+License: CC-BY-SA
+
+License: GPL-3.0+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: CC-BY-SA
+ This work is licensed under the Creative Commons Attribution-Share Alike 4.0
+ United States License. To view a copy of this licence, visit
+ http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative
+ Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
+
+License: LGPL-2.1
+ This program is free software; you can redistribute it and/or modify it
+ under the terms and conditions of the GNU Lesser General Public License,
+ version 2.1, as published by the Free Software Foundation.
+ .
+ This program is distributed in the hope it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+ more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program; if not, write to the Free Software Foundation,
+ Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
+
+License: LGPL-3.0
+ This file is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free Software
+ Foundation; version 3.
+ .
+ This file is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program; if not, see <https://www.gnu.org/licenses/lgpl-3.0.txt>

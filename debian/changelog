@@ -1,704 +1,896 @@
-pop-gtk-theme (4.1.4) disco; urgency=medium
-
-  * Non-blurry checks and switches on HiDPI
-  * Set switch color to transparent (#270)
-
- -- Ian Santopietro <isantop@gmail.com>  Wed, 13 Feb 2019 10:02:30 -0700
- 
-pop-gtk-theme (4.1.3) cosmic; urgency=medium
-
-  * Make round buttons take up less space.
-
- -- Ian Santopietro <isantop@gmail.com>  Mon, 11 Feb 2019 13:32:04 -0700
-
-pop-gtk-theme (4.1.2) cosmic; urgency=medium
-
-  * Nautilus Desktop menu is no longer transparent. (#272)
-
- -- Ian Santopietro <isantop@gmail.com>  Mon, 11 Feb 2019 10:35:05 -0700
-
-pop-gtk-theme (4.1.1) cosmic; urgency=medium
-
-  * Ensure Destructive dialog buttons are always readable. (#267)
-
- -- Ian Santopietro <isantop@gmail.com>  Tue, 29 Jan 2019 13:50:48 -0700
-
-pop-gtk-theme (4.1.0) cosmic; urgency=medium
-
-  * Tweaks to the color Palette to ensure that colors are always distinct.
-  * Spinbuttons are now much better looking.
-  * -slim will now make certain things even smaller than before.
-  * The sizes and paddings of many elements are reduced
-    This makes the theme much more compact overall and saves space.
-  * Pop_Shop Install and Uninstall buttons are now flat.
-  * Windows can now be dragged by grabbing the empty area of toolbar widgets.
-
- -- Ian Santopietro <ian@pop-os.localdomain>  Wed, 19 Dec 2018 14:07:32 -0700
-
-pop-gtk-theme (4.0.1) cosmic; urgency=medium
-
-  * Fix for GNOME Terminal jumping issue. (#217)
-  * Fix for GNOME Weather forecast background (#219)
-  * Fix for Firefox CSD window dragging (#223)
-  * Desktop Icon text are now readable.
-  * Headerbar buttons are now the correct size.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 19 Oct 2018 12:31:44 -0600
-
-pop-gtk-theme (4.0.0) bionic; urgency=medium
-
-  * Theme rewritten from scratch
-  * Redesigned widgets:
-  *     Switches
-  *     Buttons
-  *     Tabs/Notebooks
-  *     Stack Switchers
-  *     Linked Widgets
-  *     Toolbars
-  *     Separators
-  *     Scrollbars
-  *     Tree Views
-  *     Headerbars
-  *     Frames
-  *     InfoBars
-  *     Flat buttons
-  *     Rounded and image buttons
-  * New Granite widgets
-  *     Accent classes
-  *     Card stacks
-  *     Mode-Switches
-  *     Nice Scales
-  *     Rounded-Windows
-  *     Avatars
-  * All widgets have received new implementations
-  * Reworked, cleaner build system
-  * More modular theme structure
-  * Greatly reduced number of assets
-  * Large reduction in total size of CSS
-  * Various bug fixes and improvements
-
- -- Ian Santopietro <ian@system76.com>  Tue, 02 Oct 2018 12:13:56 -0600
-
-pop-gtk-theme (3.99.4) bionic; urgency=medium
-
-  * Fix packaging issue in Cosmic
-  * Remove errant pathbar seperator from new folder button
-
- -- Ian Santopietro <ian@system76.com>  Tue, 21 Aug 2018 10:50:29 -0600
-
-pop-gtk-theme (3.99.3) bionic; urgency=medium
-
-  * New release of the theme for 4.0.0-b3
-
- -- Ian Santopietro <ian@system76.com>  Tue, 21 Aug 2018 10:47:22 -0600
-
-pop-gtk-theme (3.99.2) bionic; urgency=medium
-
-  * Beta 2 for version 4 of Pop_GTK
-
- -- Ian Santopietro <ian@system76.com>  Thu, 09 Aug 2018 11:26:15 -0600
-
-pop-gtk-theme (3.99.1) bionic; urgency=medium
-
-  * New updated Alpha based on feedback from design
-
- -- Ian Santopietro <ian@system76.com>  Tue, 07 Aug 2018 10:35:23 -0600
-
-pop-gtk-theme (3.99.0) bionic; urgency=medium
-
-  * New version of the theme - Alpha release
-
- -- Ian Santopietro <ian@system76.com>  Fri, 13 Jul 2018 12:49:02 -0600
-
-pop-gtk-theme (3.1.2cosmic0) cosmic; urgency=medium
-
-  * Cosmic release
-
- -- Jeremy Soller <jeremy@system76.com>  Wed, 15 Aug 2018 08:09:55 -0600
-
-pop-gtk-theme (3.1.2) bionic; urgency=medium
-
-  * Fix listing of theme in GTK Inspector.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 25 May 2018 11:52:27 -0600
-
-pop-gtk-theme (3.1.1) bionic; urgency=medium
-
-  * Corrects an Eye of GNOME issue where the zoom-in button was weird.
-  * Corrects an Eye of GNOME issue where the text in the entry could be cut off.
-
- -- Ian Santopietro <ian@system76.com>  Mon, 07 May 2018 11:08:48 -0600
-
-pop-gtk-theme (3.1.1) bionic; urgency=medium
-
-  * Embedded Terminal styling
-  * Indented GNOME Shell submenus
-
- -- Ian Santopietro <ian@system76.com>  Tue, 03 Apr 2018 11:32:47 -0600
-
-pop-gtk-theme (3.1.0) bionic; urgency=medium
-
-  * Fix black separators on split headerbars
-  * Tweak background colors on light themes
-  * Make the dark theme more neutral
-  * Improve contrast in -light variant
-  * Ensure that titlebar buttons are all the same size
-  * Ensure that round titlebar button are all actually round
-
- -- Ian Santopietro <ian@system76.com>  Fri, 23 Mar 2018 13:19:58 -0600
-
-pop-gtk-theme (3.0.3) artful; urgency=medium
-
-  * Fix bug with animating Overview. GH:pop-os/gtk-theme#93
-
- -- Ian Santopietro <ian@system76.com>  Tue, 16 Jan 2018 11:52:04 -0700
-
-pop-gtk-theme (3.0.2) artful; urgency=medium
-
-  * Ensure better headerbar size in -slim. 
-  * Make sure titlebuttons are all round. 
-
- -- Ian Santopietro <ian@system76.com>  Tue, 16 Jan 2018 11:51:15 -0700
-
-pop-gtk-theme (3.0.1) artful; urgency=medium
-
-  * Make login dialog wider to prevent long names from being cut off.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 19 Dec 2017 11:28:51 -0700
-
-pop-gtk-theme (3.0.0) artful; urgency=medium
-
-  * Correct bug with Close buttons in shell. 
-  * Fix Geary embeded composer recipient label.
-  * Close buttons are now identically sized.
-  * Re-structure of the entire theme
-  * Individual Components now carried in separate, imported scss files
-  * Build system ported (mostly) to native make
-  * Reworked backend and build files for more organized layout and easier modification.
-  * More expansive support for the backdrop style class for background windows.
-  * Red close buttons for enhanced usability.
-  * Contrast Improvements.
-  * Squared-off corners when windows are tiled.
-  * Programmatic generation of expansive color palettes.
-  * Slim theme size and padding reductions.
-  * Better Window margins for easier window resizing.
-  * Removal of headerbar separators for cleaner appearance
-  * Re-worked checkbox and radio button styling to erase some wonky issues.
-  * Re-written scale styling to improve appearance and animations.
-  * Shadow for the panel.
-  * Animation Improvements.
-  * InfoBar button text color is now visible.
-  * Color corrections to various widgets.
-  * Code Cosmetic improvements.
-  * Fix for Harvey titlebar
-  * Improved warning text contrast for Authentication dialogs.
-
- -- Ian Santopietro <ian@system76.com>  Mon, 18 Dec 2017 17:37:07 -0700
-
-pop-gtk-theme (2.99.4) artful; urgency=medium
-
-  * Correct bug with Close buttons in shell.
-  * Fix Geary embeded composer recipient label.
-
- -- Ian Santopietro <ian@system76.com>  Mon, 18 Dec 2017 17:36:23 -0700
-
-pop-gtk-theme (2.99.3) artful; urgency=medium
-
-  * Close buttons are now identically sized.
-
- -- Ian Santopietro <ian@system76.com>  Mon, 11 Dec 2017 10:09:48 -0700
-
-pop-gtk-theme (2.99.2) artful; urgency=medium
-
-  * Re-structure of the entire theme
-  * Individual Components now carried in separate, imported scss files
-  * Build system ported (mostly) to native make
-  * Reworked backend and build files for more organized layout and easier modification.
-  * More expansive support for the backdrop style class for background windows.
-  * Red close buttons for enhanced usability.
-  * Contrast Improvements.
-  * Squared-off corners when windows are tiled.
-  * Programmatic generation of expansive color palettes.
-  * Slim theme size and padding reductions.
-  * Better Window margins for easier window resizing.
-  * Removal of headerbar separators for cleaner appearance
-  * Re-worked checkbox and radio button styling to erase some wonky issues.
-  * Re-written scale styling to improve appearance and animations.
-  * Shadow for the panel.
-  * Animation Improvements.
-  * InfoBar button text color is now visible.
-  * Color corrections to various widgets.
-  * Code Cosmetic improvements.
-  * Fix for Harvey titlebar
-  * Improved warning text contrast for Authentication dialogs.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 07 Dec 2017 14:59:15 -0700
-
-pop-gtk-theme (2.2.3.0) artful; urgency=medium
-
-  * Contrast Improvements.
-  * Make buttons on InfoBars visible.
-  * Tiled windows no longer have rounded corners.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 25 Oct 2017 15:11:45 -0600
-
-pop-gtk-theme (2.2.2.1) artful; urgency=medium
-
-  * Fix inactive titlebars.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 19 Oct 2017 10:44:34 -0600
-
-pop-gtk-theme (2.2.2.0) artful; urgency=medium
-
-  * Titlebars and header bars can now be inactive.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 18 Oct 2017 12:19:52 -0600
-
-pop-gtk-theme (2.2.1.1) artful; urgency=medium
-
-  * Fix color-changing GNOME Shell menu popups.
-  * Fix missing padding in non CSD apps in Wayland.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 18 Oct 2017 11:20:57 -0600
-
-pop-gtk-theme (2.2.1.0) artful; urgency=medium
-
-  * Improve look of GNOME Shell App Folders.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 17 Oct 2017 10:04:28 -0600
-
-pop-gtk-theme (2.2.0.1) artful; urgency=medium
-
-  * Make App Folder backgrounds translucent.
-
- -- Ian Santopietro <ian@system76.com>  Mon, 16 Oct 2017 17:10:11 -0600
-
-pop-gtk-theme (2.2.0.0) artful; urgency=medium
-
-  * New upstream sync.
-  * Emoji picker support
-
- -- Ian Santopietro <ian@system76.com>  Wed, 11 Oct 2017 11:43:35 -0600
-
-pop-gtk-theme (2.1.2.0) artful; urgency=medium
-
-  * Internal code cosmetics
-  * Chrome/ium fixes
-  * Removal of outdated styling
-  * Support for headerbar.titlebar
-  * Firefox button text contrast improvements
-  * Fixes for Eye of GNOME
-  * Fixed bug with GNOME Shell builds
-  * Changed App-Wall tile :hover background color
-
- -- Ian Santopietro <ian@system76.com>  Tue, 10 Oct 2017 11:12:25 -0600
-
-pop-gtk-theme (2.1.1.10) artful; urgency=medium
-
-  * Bump version
-
- -- Jeremy Soller <jeremy@system76.com>  Wed, 13 Sep 2017 15:21:05 -0600
-
-pop-gtk-theme (2.1.1.9) artful; urgency=medium
-
-  * Add rule to set gnome-control-center sidebar to orange
-
- -- Jeremy Soller <jeremy@system76.com>  Wed, 13 Sep 2017 15:16:29 -0600
-
-pop-gtk-theme (2.1.1.8) artful; urgency=medium
-
-  * Change track_color to slightly darker color
-
- -- Jeremy Soller <jeremy@system76.com>  Tue, 12 Sep 2017 16:13:18 -0600
-
-pop-gtk-theme (2.1.1.7) artful; urgency=medium
-
-  * Add alternative for gdm3
-
- -- Jeremy Soller <jeremy@system76.com>  Fri, 08 Sep 2017 15:49:57 -0600
-
-pop-gtk-theme (2.1.1.6) artful; urgency=medium
-
-  * pop-gnome-shell-theme no longer replaces gnome-shell-common
-
- -- Jeremy Soller <jeremy@system76.com>  Thu, 07 Sep 2017 13:35:22 -0600
-
-pop-gtk-theme (2.1.1.5) artful; urgency=medium
-
-  * Move gnome-shell theme to pop.css
-
- -- Jeremy Soller <jeremy@system76.com>  Thu, 07 Sep 2017 13:02:44 -0600
-
-pop-gtk-theme (2.1.1.4) artful; urgency=medium
-
-  * Add assets to gnome-shell theme
-
- -- Jeremy Soller <jeremy@system76.com>  Thu, 07 Sep 2017 09:05:49 -0600
-
-pop-gtk-theme (2.1.1.3) artful; urgency=medium
-
-  * Remove gnome-shell mode, to be done in pop-session
-
- -- Jeremy Soller <jeremy@system76.com>  Wed, 06 Sep 2017 16:03:14 -0600
-
-pop-gtk-theme (2.1.1.2) artful; urgency=medium
-
-  * Move gnome-shell mode
-
- -- Jeremy Soller <jeremy@system76.com>  Wed, 06 Sep 2017 15:32:31 -0600
-
-pop-gtk-theme (2.1.1.1) artful; urgency=medium
-
-  * Add gnome shell mode
-
- -- Jeremy Soller <jeremy@system76.com>  Wed, 06 Sep 2017 14:44:59 -0600
-
-pop-gtk-theme (2.1.1.0) artful; urgency=medium
-
-  * Darkened brand colors in dark themes for better usability.
-  * Revised color theory on certain widgets for better appearance.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 31 Aug 2017 14:17:23 -0600
-
-pop-gtk-theme (2.1.0.0) artful; urgency=medium
-
-  * Update for 17.10.
-  * Newly pulled from upstream codebase.
-  * Added styling for Panthon Photos, Plank, and other elementary apps/widgets.
-  * GDM Theming.
-  * Fixed a bug that made syslog fill with GNOME Shell errors.
-  * Several typo fixes. 
-  * Fixes for some clipped buttons in 17.10.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 31 Aug 2017 11:08:02 -0600
-
-pop-gtk-theme (2.0.6.4) zesty; urgency=medium
- 
-  * Use brown instead of blue for login dialog background
-
- -- Ian Santopietro <ian@system76.com>  Wed, 23 Aug 2017 11:24:47 -0600
-
-pop-gtk-theme (2.0.6.3) zesty; urgency=medium
-
-  * 'Theme' not 'themes'.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 23 Aug 2017 11:13:05 -0600
-
-pop-gtk-theme (2.0.6.2) zesty; urgency=medium
-
-  * Install a GNOME Shell theme for GDM Themeing.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 23 Aug 2017 10:41:50 -0600
-
-pop-gtk-theme (2.0.6.1) zesty; urgency=medium
-
-  * Fix blue suggested action buttons in headerbars.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 22 Aug 2017 15:13:05 -0600
-
-pop-gtk-theme (2.0.6.0) zesty; urgency=medium
-
-  * Theme Ubiquity.
-  * Ensure combo buttons match their entries.
-  * Linked buttons have rounded corners on the outside.
-  * Shell uses circular user icons.
-  * Red Text for login warnings.
-  * Screen shield notifications.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 22 Aug 2017 09:41:27 -0600
-
-pop-gtk-theme (2.0.5.1) zesty; urgency=medium
-
-  * Add internal version field to check installed version.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 15 Aug 2017 12:57:13 -0600
-
-pop-gtk-theme (2.0.5.0) zesty; urgency=medium
-
-  * Support for a variety of Granite widgets (storage bar, text classes, etc).
-  * Dash background color adjusted to match the panel background.
-  * Fixes for ugly buttons in Chrome/ium. #8
-  * Fixes for Eye of Gnome next/previous button cutoff. #10
-  * Fixes for pixelated dash placeholder. #9
-  * Screenshield notifications now match the desktop counterparts.
-  * Overhauled appearance for Looking Glass.
-  * Contrast improvements for GNOME Shell.
-  * Various copyright notices corrected.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 15 Aug 2017 09:53:20 -0600
-
-pop-gtk-theme (2.0.4.1) zesty; urgency=medium
-
-  * Fix Symbolic link to 3.20 elementary SCSS.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 10 Aug 2017 13:36:42 -0600
-
-pop-gtk-theme (2.0.4.0) zesty; urgency=medium
-
-  * Add support for a limited selection of Granite Widgets.
-  * System Settings battery level is no longer black.
-  * Buttons in the Geary setup are no longer clipped on the bottom.
-  * Fixed Menubar colors in -dark and -light GTK2 variants.
-  * GTK2 and GTK3 widget radius consistency.
-  * Shell and GTK3 widget radius consistency.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 10 Aug 2017 13:26:21 -0600
-
-pop-gtk-theme (2.0.3.0) zesty; urgency=medium
-
-  * Entry Release. Much work focused on varius entry widgets.
-  * Make sure adjacent entries in Evince have no middle radius.
-  * Evince Entries are uniformly sized.
-  * Unfocused entries get lower Z-height
-  * Tweak minimum entry size to avoid clipping final characters.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 08 Aug 2017 15:07:33 -0600
-
-pop-gtk-theme (2.0.2.0) zesty; urgency=medium
-
-  * GtkInfoBar: Increased Contrast and visibility
-  * Better color and style consistency between GTK2 and GTK3
-  * Most Radii are now 4px instead of 2px
-  * Removed dashed line to indicate more content is scrollable
-  * Tweak for color consistency in GTK 3.18
-  * Active System Menu Popups use a lighter-weight font
-  * Active System Menu Popups also have a darker orange
-  * Change Orange Search and Clear icons to white in the Overview
-
- -- Ian Santopietro <ian@system76.com>  Mon, 07 Aug 2017 15:51:43 -0600
-
-pop-gtk-theme (2.0.1.0) zesty; urgency=medium
-
-  * Improve workspace pager styling.
-  * GTK+ Dialogs now match the Shell dialogs.
-  * Rich Notifications styling.
-  * Fira is now loaded first in Shell.
-  * Shell corner radius is now 4 pixels instead of 2.
-  * Improved the shadows for the workspace/applications switers.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 04 Aug 2017 14:32:15 -0600
-
-pop-gtk-theme (2.0.0.0) zesty; urgency=medium
-
-  * New release based on Flat-Plat instead of Adapta.
-  * Reduced Memory Usage.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 03 Aug 2017 11:52:45 -0600
-
-pop-gtk-theme (1.99.1.0) zesty; urgency=medium
-
-  * Tweaks to GNOME Shell theme for better Pop look and feel.
-  * GTK2 theme.
-  * Consistency fixes for some GTK3 assets.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 02 Aug 2017 16:43:16 -0600
-
-pop-gtk-theme (1.99.0.0) zesty; urgency=medium
-
-  * Recreate the entire theme with a new upstream based on Flat-Plat.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 02 Aug 2017 11:57:01 -0600
-
-pop-gtk-theme (1.3.1.13) zesty; urgency=medium
-
-  * Merge in changes from upstream.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 27 Jun 2017 09:32:10 -0600
-
-pop-gtk-theme (1.3.1.12) zesty; urgency=medium
-
-  * Use White instead of Foreground Color for Ubiquity.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 23 Jun 2017 13:21:06 -0600
-
-pop-gtk-theme (1.3.1.11) zesty; urgency=medium
-
-  * Merge in lastest upstream.
-  * Correct Ubiquity invisible text issue.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 23 Jun 2017 11:53:06 -0600
-
-pop-gtk-theme (1.3.1.10) zesty; urgency=medium
-
-  * Lighten GNOME Shell Panel color.
-  * Mirror GNOME Shell panel color change in GTK-based panels.
-  * Fix blue-inderline bug in GNOME Weather.
-  * Ensure Firefox styling is correct.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 23 Jun 2017 10:13:03 -0600
-
-pop-gtk-theme (1.3.1.9) zesty; urgency=medium
-
-  * 3rd Party: Re-apply panel-grid for MATE taskbar.
-  * Shell: Make days with events blue in calendar popover
-  * Maintenance: Merge from upstream
-
- -- Ian Santopietro <ian@system76.com>  Wed, 21 Jun 2017 11:14:54 -0600
-
-pop-gtk-theme (1.3.1.8) zesty; urgency=medium
-
-  * Update conflicts
-
- -- Jeremy Soller <jeremy@system76.com>  Tue, 20 Jun 2017 09:31:37 -0600
-
-pop-gtk-theme (1.3.1.7) zesty; urgency=medium
-
-  * Rename to pop-gtk-theme
-
- -- Jeremy Soller <jeremy@system76.com>  Mon, 19 Jun 2017 11:34:06 -0600
-
-pop-gtk-theme (1.3.1.6) zesty; urgency=medium
-
-  * Ubiquity: Make page title text white so that it is readable.
-  * Ubiquity: Turn progress dots into circles.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 16 Jun 2017 13:17:58 -0600
-
-pop-gtk-theme (1.3.1.5) zesty; urgency=medium
-
-  * Fix issue with invisible flat text buttons.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 16 Jun 2017 11:01:36 -0600
-
-pop-gtk-theme (1.3.1.4) zesty; urgency=medium
-
-  * Darken GDM/GNOME Shell background color.
-  * Pull in changes from upstream Adapta.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 16 Jun 2017 09:39:36 -0600
-
-pop-gtk-theme (1.3.1.3) zesty; urgency=medium
-
-  * Make dialog buttons white instead of blue to improve reability.
-  * Disable building of theme for 16.04
-
- -- Ian Santopietro <ian@system76.com>  Tue, 13 Jun 2017 14:36:12 -0600
-
-pop-gtk-theme (1.3.1.2) zesty; urgency=medium
-
-  * Adjust LightDM GTK Greeter styling.
-  * Pull in latest changes from upstream Adapta.
-  * Tweak Firefox Button styling.
-
- -- Ian Santopietro <ian@system76.com>  Mon, 05 Jun 2017 14:37:52 -0600
-
-pop-gtk-theme (1.3.1.1) zesty; urgency=medium
-
-  * Fix Dark theme.
-  * Fix Metathemes.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 02 Jun 2017 14:33:32 -0600
-
-pop-gtk-theme (1.3.1.0) zesty; urgency=medium
-
-  * Merge upstream Adapta.
-
- -- Ian Santopietro <ian@system76.com>  Fri, 02 Jun 2017 11:21:31 -0600
-
-pop-gtk-theme (1.3.0.1) zesty; urgency=medium
-
-  * Fix errant GtkSwitch widget coloring.
-  * Correct build error with new gnome-shell build-dep.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 31 May 2017 09:01:35 -0600
-
-pop-gtk-theme (1.3.0) zesty; urgency=medium
-
-  * Fix building from upstream Adapta.
-
- -- Ian Santopietro <ian@system76.com>  Tue, 30 May 2017 14:50:20 -0600
-
-pop-gtk-theme (1.2.2) zesty; urgency=medium
-
-  * Fix color migration problems from rebase.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 24 May 2017 16:22:58 -0600
-
-pop-gtk-theme (1.2.1) zesty; urgency=medium
-
-  * Re-write theme in more upstream-friendly way.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 17 May 2017 16:38:44 -0600
-
-pop-gtk-theme (1.2.0) zesty; urgency=medium
-
-  * Merge in upstream Adapta.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 04 May 2017 17:34:23 -0600
-
-pop-gtk-theme (1.1.1) zesty; urgency=medium
-
-  * Darken Terminal Background.
-
- -- Ian Santopietro <ian@system76.com>  Wed, 03 May 2017 17:21:04 -0600
-
-pop-gtk-theme (1.1.0) zesty; urgency=medium
-
-  * Color names refactored throughout the whole theme
-  * Subtle changes in colors to warm up the theme 
-
- -- Ian Santopietro <ian@system76.com>  Tue, 02 May 2017 21:19:58 -0600
-
-pop-gtk-theme (1.0.10) zesty; urgency=medium
-
-  * Fix backwards initial color definitions
-
- -- Ian Santopietro <ian@system76.com>  Mon, 01 May 2017 16:01:03 -0600
-
-pop-gtk-theme (1.0.9) zesty; urgency=medium
-
-  * Refactor most colors in the theme to easier-to-understand components
-  * Improve consistency between plans and implelentation
-  * Increase most border radii to lighten up and humanize the theme
-
- -- Ian Santopietro <ian@system76.com>  Mon, 01 May 2017 14:23:11 -0600
-
-pop-gtk-theme (1.0.8) zesty; urgency=medium
-
-  * GTK 2 Tweaks
-
- -- Ian Santopietro <ian@system76.com>  Thu, 27 Apr 2017 17:57:41 -0600
-
-pop-gtk-theme (1.0.7) zesty; urgency=medium
-
-  * Attempt to tweak color for "OFF" switches.
-  * Add slightly rounded top border
-  * Darken GtkEntry widgets to improve visibility.
-
- -- Ian Santopietro <ian@system76.com>  Thu, 27 Apr 2017 15:29:08 -0600
-
-pop-gtk-theme (1.0.6) zesty; urgency=medium
-
-  * Remove half-tiled effect on headerbars
-
- -- Ian Santopietro <ian@system76.com>  Thu, 27 Apr 2017 09:17:29 -0600
-
-pop-gtk-theme (1.0.5) zesty; urgency=medium
-
-  * Don't build unecessary extras
-
- -- Ian Santopietro <ian@system76.com>  Fri, 21 Apr 2017 17:20:10 -0600
-
-pop-gtk-theme (1.0.4) zesty; urgency=medium
-
-  * Fix build bug with Extras support
-
- -- Ian Santopietro <ian@system76.com>  Fri, 21 Apr 2017 16:58:03 -0600
-
-pop-gtk-theme (1.0.3) zesty; urgency=medium
-
-  * Disable building Nokto variants by default
-
- -- Ian Santopietro <ian@system76.com>  Fri, 21 Apr 2017 16:14:26 -0600
-
-pop-gtk-theme (1.0.1) zesty; urgency=medium
-
-  * Move to gnome section
-
- -- Jeremy Soller <jeremy@system76.com>  Fri, 21 Apr 2017 13:52:13 -0600
-
-pop-gtk-theme (1.0.0) zesty; urgency=medium
-
-  * First release
-
- -- Jeremy Soller <jeremy@system76.com>  Thu, 20 Apr 2017 11:07:01 -0600
+yaru-theme (19.10.1) eoan; urgency=medium
+
+  * Rebase Yaru on top of Adwaita 3.32
+    [ Feichtmeier ]
+    - Refresh Yaru with the latest upstream theme
+    - Move main differences to new _tweaks.scss dedicated file (headerbar and
+      included widgets, check/radio, switch, spinner)
+    - Apply Yaru color palette and geometry
+
+  * Icons
+    [ Carlo Lobrano ]
+    - Add missing rendering of preferences-desktop-font png
+
+    [ ubuntujaggers ]
+    - Adding Remmina's yaru icon plus pngs
+    - Adding Livepatch's yaru icon plus pngs
+    - Remove symlink for org.gnome.font-viewer-symbolic
+    - Fixing bottom left corner of 32px software centre icon
+    - New status icon for dialog-error which is also used as an emblem
+    - Adding revised emblem-symbolic-link
+    - Adding recoloured folders
+    - New symbolic icons to improve settings-app
+    - Adding new symbols for different applications categories
+    - New more simple software store
+    - New application-x-executable symbolic
+    - Moving the down arrow emblem on two app icons so they don't clash with real emblems
+    - Version of Sudoku icon with numerals
+    - New symbolic icons for application-x-appliance and applications-science
+    - Adding full colour version of drive-removable-media-symbolic
+    - Adding Yaru icon for Transmission
+    - Adding device icons for optical media
+    - Improvements to full colour printer icon
+    - Adding yaru app icons for LibreOffice
+    - Adding StartCenter icon
+    - Adding Snap Store icon
+    - Adding suggested replacement for files icon
+    - Adding icon for Jockey
+    - Updating camera-app-symbolic, filemanager-app-symbolic, jockey-symbolic and source-symbolic
+
+    [ Eaglers ]
+    - Improve Contacts icon
+    - Improve Archive Manager icon
+    - Improve Sudoku icon
+    - Add shadow of dog
+
+    [ Gustavo Costa ]
+    - Updated application-x-theme
+
+  * Tooling and infrastructure
+    [ Carlo Lobrano ]
+    - Add script to help sync upstream gtk-3-24 folder
+    - Enable again testing snap for bionic PR
+    [ Didier Roche ]
+    - Use single token for both snaps
+
+  * other:
+    [ Carlo Lobrano ]
+    - apps.scss: Nemo remove nautilus tweaks
+
+    [ Iain Lane ]
+    - Update gnome-shell upstream from 3.32.1
+    - Sync Yaru with changes in GNOME Shell 3.32.1 (LP: #1829699)
+
+    [ Marco Trevisan (Treviño) ]
+    - gnome-shell: Sync scss with upstream changes for 3.34
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Mon, 19 Aug 2019 12:47:50 +0200
+
+yaru-theme (19.04.3) disco; urgency=medium
+
+  * gbp.conf: Update branch for ubuntu/disco
+  * Sync Yaru with changes in GNOME Shell 3.32.1
+    - Fixes switches in VPN submenu (LP: #1829699)
+    - Fixes region screenshots (Shift + Print Screen) not displaying the
+      region properly (LP: #1830003)
+    - Fixes 1px gap next to some lists (e.g. gnome-control-center's users
+      panel) (LP: #1830203)
+    - Fixes clock on lock screen not being very readable with very bright
+      backgrounds (LP: #1830335)
+
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 24 May 2019 09:36:47 +0100
+
+yaru-theme (19.04.2) disco; urgency=medium
+
+  [ Feichtmeier ]
+  * New symlinks for gnome-control-center (LP:#1820135)
+  * Remove apt-daemon-download>updatenotifier symlinks
+  * Symlinks notes-app>org.gnome.Notes
+
+  [ Carlo Lobrano ]
+  * Remove border color from user-icon in login shell
+  * Prevent menu inside popover from having transparent background
+  * Support Gnome 3.32 apps icon name changes (LP:#1820767)
+  * Fix gnome-terminal tab close button hover color
+  * Add symlink for new baobab icon name org.gnome.baobab
+
+ -- Carlo Lobrano <c.lobrano@gmail.com>  Mon, 18 Mar 2019 17:50:36 +0100
+
+yaru-theme (19.04.1) disco; urgency=medium
+
+  [ Carlo Lobrano ]
+  * Fix link color in infobar
+  * Enforce integer sizes when rendering bitmaps
+  * Visible scrollbar trough improve slider visibility
+  * Move scrollbar trough styling from common to apps::firefox
+  * Increase visibility of slider in normal and hover state
+  * Actually release Yaru-dark in debian package
+  * Fixed osd button hover in light variant
+  * Convert literal to float first and then to int
+  * Allow generate-symlink providing a pattern
+  * fix audo-x mimetype symlinks
+  * fix symlinks
+  * fix symlinks
+  * Render again flac mimetype icon to fix thick borders
+  * remove desktop.ini files
+  * fix symlinks
+  * update places.list with inode-directory symlink
+  * Revert "Rename new email sound file"
+  * message.oga symlink of message-new-email.oga
+  * Fix symlink with relative path
+  * Remove orange bottom border in selected tab
+  * Do not change font-weight on checked tabs
+  * Removed commented code
+  * Patched generate-symlink script to handle emblems
+  * Add symlinks for the new emblems
+  * Increase border color
+  * Remove unused assets
+  * Add rendered PNGs
+  * Revert "Add rendered PNGs"
+  * sync gnome-shell upstream folder agains gnome-shell 3.30.2
+  * Synch gnome-shell upstream folder with upstream master 3.31.92 (6349f0feb)
+  * minor sync of docs files
+  * Set top-panel always full opaque
+  * removed activities.svg
+  * Sync world-clock style
+  * Restrict app menu width (from upstream)
+  * Replace corner ripple png assets with css
+  * search: Hide the separator line of the last result (from upstream)
+  * Minor fixes for notification-badge
+  * keyboard: add indicator and emoji page support from upstream
+  * Round avatar
+  * Use system arrows for calendar widget
+  * Use round user-icon in logout dialog
+  * Replace .window-close assets with scss
+  * Clean up some unused SVG images
+  * Removed doubled definition in dock.scss
+  * Remove icon-shadow in opaque panel
+  * Sync media-message-cover-icon icon-size and padding with upstream
+  * Completely remove icon-shadow
+  * Clean up of icon-shadow removal
+  * Removed text-shadow and fallback-window-icon as per upcoming changes
+  * Build snaps only for bionic branch
+  * Update comment about which content is built
+  * Actually prevent snapcraft to run if target is not Bionic
+  * Simplify prepare-build script
+  * Include gnome-shell MR !452
+
+  [ feichtmeier ]
+  * Add a polari icon and add polari>org.gnome.Polari symlink to the list
+  * Export png and symbolic polari icon
+  * Add symlinks polari>org.gnome.Polari
+  * Update readme with up-to-date screenshots
+  * Remove infobar styling which introduced backdrop bugs for fg_color
+  * Keep backdrop_bg_color for normal infobars in backdrop
+  * Use text_color for infobars
+  * Remove unused styling in backdrop for infobars
+  * Don't include entry:focus and entry selection in the jetpopoverwildcard
+  * Reduce menu box-shadow to avoid clipping on top menus
+  * Exclude dark menus
+  * Reorganize border and box-shadows, add box-shadow to windows
+  * Fix dark popover's separator and backdrop buttons/entries border
+  * Remove decoration.ssd boxshadow in backdrop
+  * Revert box-shadow removal for decoration.ssd in backdrop
+  * Add roundness to #pathbarbox sliderbuttons
+  * Add $borders_color to button.flat:hover when not in headerbar
+  * Adapt backdrop:hover
+  * Remove top highlight for switches in headerbar
+  * Remove border-top change and box-shadow also in backdrop for hb switches
+  * Remove whitespace
+
+  [ Eaglers ]
+  * Add icon for missing image
+  * Move icon for missing image to "status"
+  * Add symlink "gtk-image-missing"
+  * Improve existing emblems and add new
+  * Align the pictogram of emblem-shared icon location
+  * Inverse emblem-symbolic-link colors
+  * Revert emblem-symbolic-link color inversing
+  * Add 7z archive icon
+  * Fix gradient in some icons and align pictograms
+
+  [ ubuntujaggers ]
+  * adding a new version of source-symbolic.svg to optimise the Polari hash symbol for 16px and also adding the individual extracted polari-symbolic.svg
+  * making some small repairs to source-symbolic.svg and polari.svg
+  * adding light blue firefox icon - new SVG and all the pngs.
+  * adding a darker green Polari icon
+  * adding pngs for new darker green polari icon
+  * adding full colour SVG for quadrapassel app icon and all the pngs
+  * adding full size SVG for quadrapassel app icon that will scale better later, plus updated 256px pngs
+  * trying a new colour for quadrapassel
+  * adding new application-x-trash mimetype which is consistent with clock on image-loading icon
+  * adding version of quadrapassel based on madsrh's mockup
+  * adding symbolic icons for view-more and view-more-horizontal
+  * adding symbolic icons for view-more and view-more-horizontal
+  * setting up a new mergable branch with all the new non-uniform icons
+  * adding symlinks for disk usage app
+  * adding missing symlinks for apport --> error-app
+  * adding missing symlinks for clock-app
+  * adding non-uniform notes app and the symlinks
+  * improvement to 16px version of non-uniform software store
+  * Non-uniform version of messaging-app with symlinks
+  * Missing symlinks for Gnome Photos --> gallery-app
+  * Non-uniform icon for Ubiquity
+  * Non-uniform packages-app
+  * non-uniform ubiquity placing blue download arrow on disk utility app
+  * new rubbish bin copying current design but with pale bin, green logo and papers in disarray
+  * new symbolic for ubiquity
+  * darker green recycling logo
+  * redone symbolic icons for apps, for testing
+  * adding revise app symbols for testing
+  * new symbols for colour and font select under 'actions'
+  * adding preferences-system-applications that clones app store symbol
+  * non-uniform usage-app and symlinks
+  * non-uniform root-terminal-app icon
+  * revised source-symbolic and deletion of preferences-system-applications which didn't work
+  * preferences-applications-symbolic and preferences-apps-symbolic
+  * Non-uniform weather-app and symlinks
+  * deleting wrongly named app settings symbol and giving it the correct name in source-symbolic
+  * small correction to usage-app-symbolic and power-statistics-symbolic
+  * small improvements to ebook reader and scanner symbolics
+  * adding image-missing-symbolic SVG which was missing
+  * adding preferences-color and symlinks, plus preferences-desktop-accessibility which isn't used in ubuntu
+  * fixing preferences-color SVG
+
+  [ madsrh ]
+  * oga file extension for sounds
+  * new audio mime icons
+  * Removed unfinished icon
+  * Removed wrong icons
+  * Updated icons
+  * Fixed icons and added symlinks
+  * Adding a pgp mime icon
+  * Add mime icon for Audacity projects
+  * graphite-emblem-symbolic-link
+  * Add mime type icon for flac
+  * add symlink for python3 files
+  * Changed font to ubuntu
+  * added window-new-symbolic
+  * Updated logo
+  * Add mime-icon for GIMP
+  * Rename new email sound file
+  * Add more emblem icons
+  * more icons added
+  * Removed emblem-system
+  * Changed Star emblem to heart
+  * fix-missing-svg-emblem
+  * Add folder icons for Dropbox
+
+  [ Feichtmeier ]
+  * Fix active disabled/insensitive headerbar buttons to be
+  * Update Contributing with needed steps before building
+  * Adapt gtk tooltips border to shell
+  * Fix HB suggested- and destructive-action buttons border color
+  * Fix path-bar and nautilus-path-bar styling to the known underline design
+  * Fix first-child last child hover toggle + minimize selector+ fix bracket
+  * Create new symlinks to known apps for gnome 3.32 name changes
+  * Update CONTRIBUTING.md
+  * Add gnome-mines and -mahjongg full  color symlinks to new name convention
+  * Adapt symbolic icons
+  * system-monitor-app -> org.gnome.SystemMonitor symlinks
+  * Symlink: system-settings->org.gnome.Settings
+  * Symlink: log-viewer-app->org.gnome.Logs
+  * Fix selection-mode green buttons border-color on hover
+  * Adapt backdrop
+  * Fix Light/Dark emoji.popover button:checked difference
+  * Reduce complexity of the border-color control structure
+  * Revert "Fix Light/Dark emoji.popover button:checked difference"
+  * Style new hdyleaflet separators
+  * Symlink: passwords-app->org.gnome.seahorse.Application
+  * Replace page-indicator icons with SCSS /copied from upstream shell theme
+  * Remove welcome-app SVGs and pngs
+  * Update CONTRIBUTING.md
+  * Add round edges for desktop items selection frame
+  * Correctly style headerbar sidebar separator
+  * Remove border-color for sliders in headerbar
+  * Add hdyleaflet styling again
+
+  [ James Henstridge ]
+  * Add a build option to install compatibility stubs for communitheme theme name.
+
+  [ Thien Do ]
+  * Update "sound" part in contributing guideline
+
+  [ Aidan Harris ]
+  * Add inode-directory symlinks to folder icon
+
+  [ eaglersdeveloper ]
+  * Add fullcolor SSD icon
+
+ -- Carlo Lobrano <c.lobrano@gmail.com>  Tue, 12 Mar 2019 13:08:43 +0100
+
+yaru-theme (19.04) disco; urgency=medium
+
+  [ Carlo Lobrano ]
+  * dark gtk-2.0
+    - gtkrc: added dark colors
+    - fixed line
+    - fixed render-assets.sh permission
+    - assets: added button normal state
+    - assets: added button-hover
+    - assets: added button-insensitive
+    - assets: added button-active
+    - added entry widgets
+    - assets: fixed tabs and treeview headerbar
+    - external-assets: added checkbox unchecked
+    - external-assets: added radio unchecked
+    - assets: added pan (normal and insensitive)
+    - assets: added treeview-pan
+    - assets: added spin arrows
+    - assets: added spin button
+    - assets: added scale slider hover and active
+    - assets: added frame-notebook
+    - assets: fixed missing recoloring of spin buttons
+    - assets: fixed button insensitive border
+    - assets: fixed frame border
+    - assets: added transparent scrollbars
+    - assets: added handle horz + vert
+    - assets: added notebook-entries
+    - assets: added menu-radio and menu-checkbox
+    - main.rc: using menu-radio assets for radio checked
+    - assets: fixed frame-inline
+    - assets: fixed entry bleeding background
+    - assets: fixed menu-pan colors
+  * common/scale circular slider: made border transparent in dark variant
+  * shell common+dock: Fix dock opaque color and revert badge color
+  * shell/common: fixed auth dialog title style
+  * shell/common: Made dialog background brighter
+  * common/scale circular slider: made border transparent in dark variant
+  * Moved code-refactoring changes from 3.0 to 3.20 folder
+  * Fixed menu background and hover colors
+  * Added missing dependency in yaru part yaml
+  * Unify stackswitcher and buttonbox style
+  * Reuse all buttonbox code for stackswitcher
+  * Fixed missing hb button definition
+  * Use background property to set insertion-cursor icon
+  * Fixed insertion-cursor alignment
+  * re-enable -dark theme in snap
+  * testing snap session pointer to communitheme-dark
+  * Set both default and -dark Communitheme path to GTK2_RC_FILES env
+  * Update gtk-common-themes to release the -dark version as well
+  * Revert snap/session changes
+  * Fixed Nautilus dark backdrop separator color
+  * Attempt to set gtk2 them path according to current theme set
+  * Fixed set of GTK2_RC_FILES only when theme is Communitheme*
+  * Fix typo
+  * Remove test code
+  * Fixed comparison test
+  * Always set only one path to GTK2_RC_FILE
+  * treeview expander invert hover colors
+  * Fix linked entry+button combobox in error and warning state
+  * Do not darken error/warning border color in dark variant
+  * Remove unused underline_focus_headerbar
+  * Fix menu button hover
+  * Update README.md
+  * Add active button state for menu button
+  * Add toolbar button missing states
+  * Fix osd button active and active:hover states
+  * Unset GTK2_RC_FILES if current theme is not Communitheme*
+  * Make active button darker
+  * Change menu color to be the same as in gtk3
+  * Add proper svg image scaling and fix svg opacity
+  * Minor format adjustments
+  * Remove headerbar and menubar side borders
+  * Add solid bg to check and radio
+  * Fix glitches in non-straight lines
+  * Fix gtk2 treeview header double lines
+  * gtk2: Reduced GtkPaned handle size to remove the double line
+    between panes
+  * Remove dark communitheme from gtk-common-themes-other snap target
+  * Fix transparent scale in jet popover
+  * Add switch to jet popover wildcard black list
+  * Renamed x-trash icon into application-x-trash
+  * Revert "Remake shutdown icon"
+
+  [ ubuntujaggers ]
+  * provide a gnome-mines icon
+  * provide a gnome-mines icon
+  * provide a gnome-aisleriot icon
+  * provide a corrected gnome-aisleriot icon
+  * provide a gnome-mahjongg icon
+  * provide a gnome-mahjongg icon
+  * setting baseplate layer of gnome-mines, gnome-aisleriot and
+    gnome-mahjongg to be invisible rather than transparent
+  * providing corrected version of gnome-mahjongg icon with crisper
+    edges on smaller sizes
+  * providing transmission icon
+  * providing transmission icon with better vertical alignment
+  * providing ubiquity icon
+  * providing improved transmission icon
+  * providing transmission icon with more improvements
+  * providing usb-creator-gtk icon
+  * providing usb-creator-gtk icon with restored shadow on small sizes
+  * providing usb-creator-gtk icon with correction in baseplate layer
+  * providing usb-creator-gtk icon with no progress bar
+  * providing better transmission icon
+  * providing better gnome-mahjongg icon with blue background
+  * providing revised usb-creator-gtk icon
+  * providing aptdaemon-download icon
+  * providing more suru icons for ubiquity, gnome-mahjongg and
+    usb-creator-gtk
+  * providing improved icon for gnome-aisleriot
+  * providing improved icon for aptdaemon-download
+  * providing icon for aptdaemon-download with clearer arrow
+  * providing better icons for gnome-mines and transmission
+  * removing transmission.svg pending further discussion
+  * adding the icon for shotwell
+  * adding the new full colour icon for user-desktop
+  * amending the source file of all the scalable monochrome icons to
+    take the launcher buttons off the desktop icon so it matches the
+    full colour user-desktop icon
+  * adding icons for libreoffice apps
+  * fixing baseplate on libreoffice-main
+  * fixing baseplate on libreoffice-main attempt no. 2
+  * seeing if git add -A adds new libreoffice-base icon
+  * adding the remaining LibreOffice icons after running the python
+    script: writer, impress, draw, base, main
+  * adding svg for white firefox icon and all the pngs
+  * adding svg for dark blue firefox icon and all the pngs
+  * adding svg for network-server icon and all the pngs
+  * renaming the network glyph in source-symbolic to see if that works
+  * renaming the network glyph in source-symbolic to correct error
+    in previous commit
+  * adding svg for thunderbird and all the pngs
+  * adding folders.svg with the new folder-remote icons plus all the
+    pngs, and also a corrected version of source-symbolic.svg with the
+    ethernet glyph renamed folder-remote.
+  * adding folders.svg with the new folder-remote concept plus pngs.
+    Also committing a version of the source-symbolic svg which has the
+    redundant ethernet port glyph removed.
+  * adding x-trash.svg plus pngs of different sizes.
+  * adding printer.svg plus pngs of different sizes.
+  * updating source-symbolic.svg to include less ambiguous 'select all'
+    icon under actions
+  * updating source-symbolic.svg to include less ambiguous 'select all'
+    icon under actions
+  * updating source-symbolic.svg to include symbols for Suru apps and a
+    new select-all action icon
+  * updating source-symbolic.svg to fix some errors
+  * updating source-symbolic.svg to fix the nameless icon that caused the
+    script to fail
+  * this is a new version of source-symbolic.svg with all the new app symbols
+    and also the Adwaita-style select-all, plus all the individual svgs and
+    symlinks that the scripts produce
+
+  [ Sam Hewitt ]
+  * new language icon; updated software properties icon
+  * added USB drive icon
+  * added usb-creator-gtk icon
+
+  [ feichtmeier ]
+  * Export jaggers svgs to pngs
+  * Use lighten($slate,5%) for neutral infobars
+  * bg_color for not important infobars & remove custom code
+  * Export @ubuntujaggers new shotwell icon
+  * Fix infobar branch merge
+  * Fix backdrop bg color for generic infobars (question/info)
+  * Style buttons in light dialogues
+  * Provide an insync-folder icon
+  * $blue as $focus_color
+  * Fix GDM focus ring
+  * Adapt suggested action buttons to blue, solid focus
+  * Use focus color for entries, comboxboxes
+  * Darken entries border-top color less for the dark theme
+  * Use less code
+  * Fix inkscape to not use flatpak
+  * Use a new user-desktop and user-desktop-sybolic icon by @ubuntujaggers
+  * Fully opaque focus ring, dashed + -3px offset for gtk
+  * Remove the background and the radius to avoid stretched underline
+  * Normal font weight + header_fg_color for the checked button
+  * Style tag labels
+  * No orange underline for checked pathbar buttons
+  * Adapt backdrop
+  * Style entry tag with no border, slat bg and darker silk color
+  * Style the close button to become white on hover
+  * Don't change text color on hover
+  * Fix backdrop and checked:active
+  * Fix outline regressions introduced by PR #971
+  * Use the same purple bg color for GDM as Grub uses in Ubuntu
+  * Fixing entries to have a blue/dark blue selection for light/dark entries
+  * Provide an updated symlink list
+  * Symlink: aptdaemon-download.png -> update-notifier.png
+  * Jet menus and popovers
+  * Style jet app notifications for the dark theme
+  * Button hover and active refinements
+  * Remover border-top-color border-color difference for all button types
+  * Rename popover_border to menu_color and lighten popover's border
+  * Remove the top box-shadow for active buttons
+  * Remove box-shadow from insensitive-active buttons
+  * Darken border-color by 2% for active and backdrop-active dark btns
+  * Firefox theming
+  * Removes margin for toolbar toolitem box .linked.horizontal button
+  * Add backdrop hover underline for not checked pathbar buttons
+  * Remove red/yellow border of error/warning entries when ...
+  * Fix wrong settings icon in gnome shell 3.30+ status menu popup
+  * Removes firefox headerbar bleed fix because ....
+  * Make focus border for entries always the same color in dark and light
+  * Reduce the darkness of dark var undershoots + refactoring
+  * Bring back normal switches for dark popovers
+  * Use gtkalpha(currentColor, 0.3) for all outlines except ...
+  * Adapt sliders, increase offset by additional -1 because the new color
+  * Don't remove not selected rows outline
+  * Make selected text orange again in gtk and shell themes
+  * Replace focus_color with selected_bg_color in shell and gtk themes
+  * Fix .path-bar button styling
+  * Bring back symbolic icons for the app menu and the notitications/message
+
+  [ godlyranchdressing ]
+  * Update spinbuttons
+  * Better looking disabled text
+  * Update insensitive slider
+  * Style the Shell's virtual keyboard to match the rest of the theme
+  * Update meson file
+  * Update icons
+  * Use green bg for enter key
+  * Remove menuitem transition from context menus and popovers
+
+  [ Feichtmeier ]
+  * Make the badge border temporarily dark red,
+  * Make notification badge background red, too
+  * Update _drawing.scss
+
+  [ James Henstridge ]
+  * gtk: move existing theme to gtk-3.20 to make way for gtk-3.18
+    compatible theme.
+  * Import Gtk 3.18 Adwaita theme.
+  * gtk/src/light/gtk-3.0: port drawing code over from GTK 3.20 theme.
+  * gtk/src/light/gtk-3.0: set some properties to ensure we don't
+    inherit from Adwaita CSS unexpectedly.
+  * gtk/src/light/gtk-3.0: override headerbar box-shadow inherited from
+  Adwaita
+  * gtk/src/light/gtk-3.0: remove some "-gtk-" prefixes on properties
+  * gtk/src/light/gtk-3.0: more changes driven by GTK warnings
+  * gtk/src/light/gtk-3.0: attempt to fix up notebook tabs
+  * gtk/src/light/gtk-3.0: apply menu styling
+  * gtk/src/light/gtk-3.0: update asset sheet with Yaru assets
+  * gtk/src/light/gtk-3.0: use light assets on dark theme.
+  * gtk/src/light/gtk-3.0: use padding on titlebuttons to simulate
+    min-width/height
+  * gtk/src/light/gtk-3.0: make scales match GTK 3.20 theme
+  * gtk/src/light/gtk-3.0: update progress bars and level bars
+  * gtk/src/light/gtk-3.0: make spinner blue
+  * gtk/src/light/gtk-3.0: fix headerbar stack switcher underline, and
+    scale slider width
+  * gtk/src/light/gtk-3.20: Fix up some comments in meson build configuration
+  * gtk/src/light/gtk-3.0: port switches to Yaru look
+  * gtk/src/light/gtk-3.0: tweak hyperlink colours
+  * gtk/src/light/gtk-3.0: remove unused assets
+  * gtk/src/dark/gtk-3.0: support both versions of dark GTK 3 theme
+  * gtk/src/light/gtk-3.0: get rid of some unwanted text/icon shadows
+  * gtk/src/light/gtk-3.0: change text handle sizes to match assets.
+  * gtk/src/light/gtk-3.0: progressbar tweaks
+  * gtk: bundle CSS and assets into a gtk.gresource file
+  * build: we need libglib2.0-dev for glib-compile-resources
+
+  [ Eaglers ]
+  * Add Packages icon
+  * Add Podcasts icon
+  * Add object-select icon
+  * Add icon for USB hard disk
+  * Increase the pictogram of drive-harddisk-usb icon
+  * Remake shutdown icon
+  * Improve GNOME Help icon
+
+  [ madsrh ]
+  * Amplified sounds
+
+ -- Carlo Lobrano <c.lobrano@gmail.com>  Thu, 10 Jan 2019 11:26:55 +0100
+
+yaru-theme (18.10.7) cosmic; urgency=medium
+
+  [ feichtmeier ]
+  * Minor enhancement:
+    - add small margin to radiobutton radio in popovers and checks
+
+  [ Aaron Papin ]
+  * Minor enhancements:
+    - Treeview drop target is missing bottom green border + label
+    - Left part of focus ring not displayed
+
+  [ Didier Roche ]
+  * Really don't ship dark theme (LP: #1799217)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Mon, 22 Oct 2018 15:57:23 +0200
+
+yaru-theme (18.10.6) cosmic; urgency=medium
+
+  [ feichtmeier ]
+  * Symlink system-monitor-app -> gnome-system-monitor
+  * White outline color for green and red buttons
+  * White outline color for green button + improvements
+
+  [ Didier Roche ]
+  * Remove Shell artefacts from gtk-common-themes
+
+  [ Tiago Rodrigo Lampert ]
+  * Fix typo
+
+  [ Carlo Lobrano ]
+  * apps/software-center: added app-listbox-header background color
+  * apps/software-center: added missing bottom border to list box app row
+  * shell/popup-menu-item: fixed black border in submenu hover
+  * shell/dock: Fixed dock transparency
+  * apps/gnome-software: avoid double border when list is included in a box
+  * Fixing target from previous commit
+  * Reduced diff against master
+  * Reduced diff reverting trailing spaces
+  * apps/software-center: fixed theme parsing error
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 10 Oct 2018 10:05:57 +0200
+
+yaru-theme (18.10.5) cosmic; urgency=medium
+
+  [ Jeremy Bicha ]
+  * debian/gbp.conf: Enable multimaint-merge
+
+  [ feichtmeier ]
+  * Style labels inside default buttons inside headerbar
+  * Adapt headerbar entries to the buttons in headerbar
+  * Selected widgets should have the a light text color.
+  * Make .inline-toolbar.horizontal.sidebar-toolbar transparent in backdrop
+  * Add a margin to usb-creator's dialog Correct geary headerbar
+  * Make separators visible again in popups and calendar
+
+  [ Didier Roche ]
+  * Build gtk-common-themes using bionic docker image
+  * Ensure we pick correct Yaru version when building g-c-t
+  * Clean snapcraft.yaml sync for g-t-c
+  * Add some debug to ensure we pick the correct branch
+  * Remove debug in build script.
+
+  [ Carlo Lobrano ]
+  * apps/nautilus: removed custom notebook code
+  * apps/nautilus: added minimal custom code for dark variant
+  * apps/nautilus: fixed circular button backdrop transition
+  * apps/nautilus: fixed circular button bright border in normal state
+  * apps/nautilus: fixed circular button border in hover state
+  * shell/colors: made osd_borders_color brighter
+  * common/notebook: align active notebook tab labels
+  * light gtk2 assets: Fixing entry bleeding background
+  * drawing/switch: fixed backdrop insensitive switch (LP: #1794942)
+  * light gtk2: fixed radio/check buttons
+  * light gtk2 main.rc: fixed reference to insensitive check/radio assets
+  * gtk2 assets + main.rc: made scrollbars more similar to GTK3 ones
+  * gtk2 menu asset: fixed wrong file name
+
+  [ Ken VanDine ]
+  * Updated url to pull gtk-common-themes from gitlab.gnome.org
+
+  [ James Henstridge ]
+  * build: require Meson >= 0.45 for strip_directory support, fixing #835
+  * debian/control: update meson requirement here too
+
+ -- Didier Roche <didrocks@ubuntu.com>  Mon, 01 Oct 2018 14:11:06 +0200
+
+yaru-theme (18.10.4) cosmic; urgency=medium
+
+  [ feichtmeier ]
+  * Darken vbox and hbox separators a little
+  * Use the same border as context-menu for dark variant popovers
+  * Lighten up menus & use same border color fpr context and popover menus
+  * Brighten dark var menu color one more % to match button bg color
+  * Space after comma ;)
+  * Flatten infobar buttons
+  * Bold font for default buttons
+  * Flat buttons for with button_bg for text buttons in infobars
+  * Adapt backdrop for both dark and light
+  * Brighter dark buttons, mixed insensitive bg, fix mistakes
+  * Add comment to be clear about replacing this code in proper drawing code
+  * Darken active press effect more for light variant
+  * Style the label for the insensitive button
+  * Color the .default button's text-color black/white for light/dark theme
+  * Style button active, hover and checked
+  * Fix .default buttons in headerbar
+  * Make scrollbars background transparent, adapting to other scrollbars
+  * Exclude destruction action buttons also from the .default button styling
+  * Remove chrome styling from _apps
+  * Fix border bleed in the bottom edges
+  * Transparent bg for checked, add hover for checked
+  * Let message tray use normal icons instead of symbolic icons
+  * Remove the declaration, which let's the icon style fallback
+  * Use snall radius for nautilus widgets/canvas items
+  * Use -2px offset and change outline color to white when selected
+  * provide a simple-scan icon
+  * Provide an ISO image icon All work done by @eaglersdeveloper
+  * Move simple-scan "laser-layer" to the top
+
+  [ MadsRH ]
+  * Set font-weight to 500
+
+  [ Marco Trevisan (Treviño) ]
+  * gnome-shell, upstream: update to latest code
+
+  [ Carlo Lobrano ]
+  * notebook: refined unchecked tabs Nautilus + Gedit
+  * common+apps: use common style for Nautilus
+  * colors/menu: Slightly increase dark menu background color
+  * drawing/check+radio dark: use transparent background
+  * drawing/switch: made insensitive border as check/radio button
+  * apps/nautilus: fix circular button backdrop border color
+
+  [ Feichtmeier ]
+  * Update _common.scss
+
+  [ Olivier Tilloy ]
+  * Include Yaru in the custom gtk-common-themes snap built by CI jobs.
+  * Remove unused Yaru artefacts in the gtk-common-themes snap built by CI.
+  * Future-proof the removal of assets.
+
+  [ Didier Roche ]
+  * Add a light subdirectory
+  * Switch to configure_file to use template file
+  * Require meson 0.42 and misc cleanup
+  * Add dark theme for gtk3
+  * Don't install dark variant yet
+  * Readd support for GTK3 apps choosing dark theme in a light environment
+  * Simplify build system by using meson configure project
+  * Note: the dark theme is generated by the upstream build system, but not
+    shipped until ready (apart from the GTK3 dark theme for applications
+    requiring it in light theme environment)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 12 Sep 2018 17:02:47 +0200
+
+yaru-theme (18.10.3) cosmic; urgency=medium
+
+  [ Carlo Lobrano ]
+  * Made message dialog all white
+  * Renamed icon-shadow to -gtk-icon-shadow
+  * White border for check/radio in selected treeview rows
+  * improved visibility of icon over destructive button
+  * Fixed check/radio border color in selected row
+  * Avoid changing progressbar bg color when selected in treeview
+  * Let selected labels keep bright color in backdrop
+  * Update ISSUE_TEMPLATE.md
+  * Made notebook tabs more similar to gnome-terminal's ones
+  * Testing bright borders on dark variant
+  * Revert "Testing bright borders on dark variant"
+  * apps/nautilus dark: made unchecked tab darker
+  * common/levelbar: Fixed backdrop colors
+  * apps/nautilus dark: brighter tabs borders
+  * apps/nautilus dark: brighter sidebar separator
+  * apps/nautilus: fixed sassc compiler error
+  * common/check-radio: add hover effect to uncheck
+  * drawing/check-radio: transparent background for insensitive unchecked
+  * drawing/entry dark: made backdrop/insensitive borders equal as button ones
+  * common/spinbutton: fix backdrop/insensitive border colors
+  * apps/nautilus: minor format fixes
+  * notebook: made unchecked tabs the same color as headerbar
+  * apps/nautilus dark: remove bright sidebar
+  * view/check-radio: white border for selected in dark variant
+  * drawing/entries dark: fixed backdrop entry backdround color
+  * common/notebook: reviewd tabs' button hover
+  * travis: added after_failure target
+
+  [ feichtmeier ]
+  * Selected text improvements
+  * Replace $orange with $selected_bg_color in _apps.scss
+  * Make firefox/thunderbird scrollbars background and border transparent
+  * Lighten default button text color for the dark variant by 10%
+  * Adapt headerbar entries to the darktheme.
+  * Backdrop headerbar entry styling, adapted to the dark variant
+  * Use neutral_color to have the same blue in both dark and light
+  * Make dialogue, notificatio and hotplug buttons flat.
+  * Make active and active-hover buttons flat for headerbar
+  * Adapt buttonbox.linked button
+  * Adapt backdrop
+  * Fix hotplug notification
+  * Change base_hover and base_active transparentized color
+  * Make pathbarbox linked buttons have a transparent bg in backdrop
+  * Adapt selection-mode buttons in headerbar to the new headerbar styling
+  * Adapt flat suggested action buttons
+  * Use transparentized selcted fg color instead of silk
+
+  [ Sam Hewitt ]
+  * added welcome app icons based on the CoF
+  * welcome-app -> ubuntu-welcome-app
+  * added proper Rhythmbox icon
+  * removed executable permissions from most files
+  * added overamplified symbolic; changed file permissions
+
+  [ Jeremy Bicha ]
+  * gnome-shell: Don't use symbolic app icons in the top bar (LP: #1787401)
+
+  [ Marco Trevisan (Treviño) ]
+  * gnome-shell: make toggle class naming dynamic
+  * gnome-shell: reduce diff with upstream code
+
+  [ Didier Roche ]
+  * New upstream release r20
+  * Use stable docker image
+  * Reset suru icon themes
+  * Rebootstrap suru icon theme files from upstream
+  * Add back suru icon build system changes
+  * Remove after_failure stenza as it's outside the container
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 05 Sep 2018 17:28:14 +0200
+
+yaru-theme (18.10.2) cosmic; urgency=medium
+
+  [ Marco Trevisan (Treviño) ]
+  * New upstream release r17
+  * debian/control:
+    - add Vcs parameters
+    - point homepage to https://community.ubuntu.com/c/desktop/theme-refresh
+
+  [ Didier Roche ]
+  * debian/gbp.conf:
+    - only keep necessary configuration, skip the rest which isn't needed in
+      gbp buildpackage / gbp buildpackage --git-tag-only
+  * debian/control:
+    - move some build-deps to b-d-i as requested on the MIR
+    - bump Standards-Version to latest
+
+  [ Carlo Lobrano ]
+  * buttonbox as standard button
+  * Fixed toggle button size change on hover
+  * Improved pressed effect on button inside buttonbox
+  * Fixed buttonbox border color in backdrop
+  * Adjusted indentation
+  * Fixed backdrop checked button background
+  * Fix update-alternative commands (#684)
+  * Testing solid selection ring
+  * Fixed indentation
+  * optimized selector
+  * Replaced :insensitive pseudoclass with :disabled
+  * Style circular button in Nautilus
+  * Fixed speed of combobox selection ring transition
+  * Update ISSUE_TEMPLATE.md
+  * Made circular stop button background transparent
+  * Improved visibility of destructive-action button icon
+  * Remove opacity parameter from label in emoji-section
+
+  [ feichtmeier ]
+  * Update gtkrc
+  * Shrink icon sizes
+  * Style ubiquity
+  * Add a border and padding for the Quit-dialog
+  * Remove the global buttonbox stackswitcher imitation
+  * Make secondary nautilus icon labels less colorful
+  * Lighten the nautilus dim-label even further
+  * Gradient top panel, remove the bottom panel with -4000px margin-bottom
+  * Purple gradient for top and bottom section
+  * White header, purple heading, black bottom, blue progressdots
+  * Move the dialogue code out of the window code to be applied.
+  * Default button and outline style
+  * Add dark orange hover for default buttons
+  * 10% darker orange is enough
+  * Use a box-shadow on hover for the default button and no color change
+  * Style headerbar default buttons with headerbar text color
+  * Focus color, -1px offset, dashed
+  * -3px offset
+  * Dashed outline for buttons
+  * Back to dark header and footer, transparent progress dots, backdrop fix
+  * Light entry and button fix
+  * Use headerbar_fg_color for .default btns in headerbar
+  * Dark theme border improvements
+  * Emulate the border with an inset box shadow
+  * Infobar backdrop improvements
+  * Remove the headerbar border for geary new messages.
+  * Remove the uneven margin because of the recent buttonbox changes
+
+  [ Eaglers ]
+  * Fix Universal Access toggles
+  * Recolour Universal Access toggles to dark
+  * Recolour disabled Universal Access toggles to #6c6767
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Fri, 17 Aug 2018 18:00:13 +0200
+
+yaru-theme (18.10.1) cosmic; urgency=medium
+
+  [ Didier Roche ]
+  * debian/yaru-theme-gnome-shell.postinst:
+    - bump priority for Yaru gdm css to 15, higher than current ubuntu
+      unthemed default. (LP: #1783571)
+
+  [ Marco Trevisan (Treviño) ]
+  * Theme updated to support gnome-shell 3.29.90
+  * debian/gbp.conf:
+    - add build-package configuration
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Wed, 01 Aug 2018 16:32:46 +0200
+
+yaru-theme (18.10) cosmic; urgency=medium
+
+  * Initial packaging
+
+ -- Didier Roche <didrocks@ubuntu.com>  Mon, 16 Jul 2018 17:55:50 +0200

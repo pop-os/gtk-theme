@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=@VariantThemeName@
+Type=X-GNOME-Metatheme
+Comment=The @VariantThemeName@ GTK Theme
+Encoding=UTF-8
+GtkTheme=@VariantThemeName@
+IconTheme=@ThemeName@
+CursorTheme=@ThemeName@
+CursorSize=24
