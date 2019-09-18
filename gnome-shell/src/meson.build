@@ -49,6 +49,7 @@ theme_deps += custom_target('pop-session-theme',
 # static files to copy
 data_sources = [
   'calendar-today.svg',
+  'calendar-today-dark.svg',
   'checkbox-focused.svg',
   'checkbox-off-focused.svg',
   'checkbox-off.svg',

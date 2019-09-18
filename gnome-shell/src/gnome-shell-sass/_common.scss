@@ -1044,7 +1044,7 @@ StScrollBar {
       &:hover, &:focus { background-color: $_hover_bg_color; }
       &:active,&:selected {
         color: lighten($selected_fg_color,5%);
-        background-color: $selected_bg_color;
+        background-color: $entry_color;
         border-color: transparent; //avoid jumparound due to today
       }
       &.calendar-day-heading {  //day of week heading
@@ -1073,7 +1073,10 @@ StScrollBar {
       .calendar-day-with-events {
         color: lighten($fg_color,10%);
         font-weight: bold;
-        background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
+        background-image: if($variant=='light',
+                              url("calendar-today.svg"),
+                              url("calendar-today-dark.svg")
+        );
       }
       .calendar-other-month-day {
         color: transparentize($fg_color ,0.5);
