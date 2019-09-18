@@ -1,4 +1,4 @@
-Build started at 2019-09-17T16:19:41.431749
+Build started at 2019-09-18T14:00:13.767334
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -11,6 +11,13 @@ Project version: 5.0.0
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
 Program sassc found: YES (/usr/bin/sassc)
+Running command: /usr/bin/cp /usr/share/gnome-shell/theme/Pop/gnome-shell.css /usr/share/gnome-shell/theme/pop.css
+--- stdout ---
+
+--- stderr ---
+/usr/bin/cp: cannot stat '/usr/share/gnome-shell/theme/Pop/gnome-shell.css': No such file or directory
+
+
 Configuring index.theme using configuration
 Program sassc found: YES (/usr/bin/sassc)
 Configuring gtk.gresource.xml using configuration
@@ -29,5 +36,5 @@ Configuring gtk.gresource.xml using configuration
 Configuring index.theme using configuration
 Program install-dark-theme.sh found: YES (/home/ian/Documents/Pop/gtk-theme/gtk/src/dark/gtk-3.0/install-dark-theme.sh)
 Configuring index.theme using configuration
-Build targets in project: 9
+Build targets in project: 12
 Found ninja-1.8.2 at /usr/bin/ninja

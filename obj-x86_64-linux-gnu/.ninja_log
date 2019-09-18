@@ -1,12 +1,15 @@
 # ninja log v5
-1	29	1568758781	gnome-shell/src/gnome-shell-high-contrast.css	a09308daaaa9eb97
-1	32	1568758781	gnome-shell/src/gnome-shell.css	ba0b5af596a943af
-1	187	1568758781	gtk/src/light/gtk-3.0/gtk-generated.css	9d749d86f0c161
-1	208	1568758781	gtk/src/light/gtk-3.0/gtk-dark-generated.css	5445e12612960791
-208	215	1568758781	gtk/src/light/gtk-3.0/gtk30.gresource	e86fd0a9415a51f1
-215	218	1568758781	gtk/src/light/gtk-3.0/gtk.gresource	6b1329a8f049ccc9
-1	225	1568758781	gtk/src/light/gtk-3.20/gtk-generated.css	2f13e5b5a1b1635
-1	250	1568758781	gtk/src/light/gtk-3.20/gtk-dark-generated.css	17919835ee584549
-250	259	1568758781	gtk/src/light/gtk-3.20/gtk.gresource	8107b2b6fcd9732d
-3	205	0	meson-test	3e2f4d9c0df100a8
-3	365	0	meson-install	9bd7faa9472bf40f
+1	44	1568836813	gnome-shell/src/gnome-shell.css	ba0b5af596a943af
+1	48	1568836813	gnome-shell/src/light/gnome-shell.css	aef6bba7c08ac1d
+1	48	1568836813	gnome-shell/src/dark/gnome-shell.css	8fbe4f715106c174
+1	51	1568836813	gnome-shell/src/gnome-shell-high-contrast.css	a09308daaaa9eb97
+1	56	1568836813	gnome-shell/src/pop.css	b37a168be5274cec
+5	209	1568836814	gtk/src/light/gtk-3.0/gtk-generated.css	9d749d86f0c161
+1	221	1568836814	gtk/src/light/gtk-3.0/gtk-dark-generated.css	5445e12612960791
+221	228	1568836814	gtk/src/light/gtk-3.0/gtk30.gresource	e86fd0a9415a51f1
+229	231	1568836814	gtk/src/light/gtk-3.0/gtk.gresource	6b1329a8f049ccc9
+6	265	1568836814	gtk/src/light/gtk-3.20/gtk-dark-generated.css	17919835ee584549
+11	266	1568836814	gtk/src/light/gtk-3.20/gtk-generated.css	2f13e5b5a1b1635
+266	274	1568836814	gtk/src/light/gtk-3.20/gtk.gresource	8107b2b6fcd9732d
+2	215	0	meson-test	3e2f4d9c0df100a8
+2	414	0	meson-install	9bd7faa9472bf40f

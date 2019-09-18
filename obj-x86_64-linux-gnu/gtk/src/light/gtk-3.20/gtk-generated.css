@@ -3597,8 +3597,10 @@ scale trough, scale fill, progressbar trough {
     transition: 200ms ease-out; }
     scale trough:backdrop:disabled, scale fill:backdrop:disabled, progressbar trough:backdrop:disabled {
       background-color: #fafafa; }
-  row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled, row:selected progressbar trough:disabled, progressbar row:selected trough:disabled, row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill, row:selected progressbar trough, progressbar row:selected trough {
-    border-color: #3f8993; }
+  row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill, row:selected progressbar trough, progressbar row:selected trough {
+    background-color: rgba(0, 0, 0, 0.2); }
+    row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled, row:selected progressbar trough:disabled, progressbar row:selected trough:disabled {
+      background-color: rgba(0, 0, 0, 0.2); }
   .osd scale trough, scale .osd trough, .osd scale fill, scale .osd fill, .osd progressbar trough, progressbar .osd trough {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.5); }
@@ -3617,8 +3619,10 @@ scale highlight, progressbar progress {
     scale highlight:backdrop:disabled, progressbar progress:backdrop:disabled {
       background-color: transparent;
       border-color: transparent; }
-  row:selected scale highlight:disabled, scale row:selected highlight:disabled, row:selected progressbar progress:disabled, progressbar row:selected progress:disabled, row:selected scale highlight, scale row:selected highlight, row:selected progressbar progress, progressbar row:selected progress {
-    border-color: #3f8993; }
+  row:selected scale highlight, scale row:selected highlight, row:selected progressbar progress, progressbar row:selected progress {
+    background-color: #000; }
+    row:selected scale highlight:disabled, scale row:selected highlight:disabled, row:selected progressbar progress:disabled, progressbar row:selected progress:disabled {
+      background-color: #000; }
   .osd scale highlight, scale .osd highlight, .osd progressbar progress, progressbar .osd progress {
     border-color: rgba(0, 0, 0, 0.7); }
     .osd scale highlight:disabled, scale .osd highlight:disabled, .osd progressbar progress:disabled, progressbar .osd progress:disabled {
@@ -3670,25 +3674,36 @@ scale {
     text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
     -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
     background-image: linear-gradient(to bottom, white 20%, #F6F6F6 90%);
-    box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
-    border: 1px solid rgba(177, 177, 177, 0.5);
+    box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.07);
+    border: 1px solid #63B1BC;
+    background-image: none;
+    background-color: #63B1BC;
     border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-property: background, border, box-shadow; }
     scale slider:hover {
       color: #2B2928;
       outline-color: rgba(43, 41, 40, 0.3);
       border-color: rgba(185, 185, 185, 0.5);
-      box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
-      background-image: linear-gradient(to bottom, white 10%, white 90%); }
+      box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.07);
+      background-image: linear-gradient(to bottom, white 10%, white 90%);
+      background-image: none;
+      background-color: #63B1BC;
+      border-color: #63B1BC;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
     scale slider:active {
-      border-color: #3f8993; }
+      border-color: #aad5db; }
     scale slider:disabled {
       border-color: rgba(200, 200, 200, 0.5);
       background-image: image(#fafafa);
       text-shadow: none;
       -gtk-icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+      background-image: none;
+      background-color: rgba(99, 177, 188, 0.6);
+      border-color: rgba(99, 177, 188, 0.6);
+      box-shadow: none; }
       scale slider:disabled label, scale slider:disabled {
         color: #91908f; }
     scale slider:backdrop {
@@ -3697,7 +3712,11 @@ scale {
       background-image: image(#F6F6F6);
       text-shadow: none;
       -gtk-icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+      background-image: none;
+      background-color: #aad5db;
+      border-color: rgba(99, 177, 188, 0.6);
+      box-shadow: none; }
       scale slider:backdrop label, scale slider:backdrop {
         color: #91908f; }
       scale slider:backdrop:disabled {
@@ -3705,11 +3724,19 @@ scale {
         background-image: image(#fafafa);
         text-shadow: none;
         -gtk-icon-shadow: none;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+        background-image: none;
+        background-color: rgba(99, 177, 188, 0.4);
+        border-color: rgba(99, 177, 188, 0.4);
+        box-shadow: none; }
         scale slider:backdrop:disabled label, scale slider:backdrop:disabled {
           color: #d0d0d0; }
-    row:selected scale slider:disabled, row:selected scale slider {
-      border-color: #3f8993; }
+    row:selected scale slider {
+      background-color: #000;
+      border-color: #000; }
+      row:selected scale slider:disabled {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-color: rgba(0, 0, 0, 0.6); }
     .osd scale slider {
       color: #eeeeec;
       border-color: rgba(0, 0, 0, 0.7);
@@ -12588,6 +12615,475 @@ notebook > header.left tabs tab:checked {
 
 notebook > header.right tabs tab:checked {
   box-shadow: inset 3px 0 #FFAD00; }
+
+/* 
+ * _granite.scss - Master File for Granite Widgets.
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+/* 
+ * _avatar.scss - Circular Avatar Images
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.avatar {
+  border-radius: 999px;
+  box-shadow: none; }
+
+/* 
+ * _back-button.scss - Back Buttons with Arrows
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+button.back-button,
+button.back-button.text-button {
+  padding-right: 8px;
+  padding-left: 36px;
+  transition: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: -gtk-icontheme("go-previous-symbolic");
+  background-repeat: no-repeat no-repeat;
+  background-position: 5px 50%;
+  background-size: 21px; }
+  .titlebar button.back-button, .titlebar
+  button.back-button.text-button {
+    color: #F7F7F7;
+    outline-color: rgba(247, 247, 247, 0.3);
+    border-color: #46403c;
+    border-bottom-color: #2b2724;
+    background-image: linear-gradient(to top, #625953 2px, #625953);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.715451);
+    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.715451);
+    box-shadow: inset 0 1px #625953, 0 1px 2px rgba(0, 0, 0, 0.07);
+    background-color: #625953;
+    background-image: -gtk-icontheme("go-previous-symbolic");
+    background-repeat: no-repeat no-repeat;
+    background-position: 5px 50%;
+    background-size: 21px;
+    padding-left: 36px; }
+    .titlebar button.back-button:hover, .titlebar
+    button.back-button.text-button:hover {
+      color: #F7F7F7;
+      outline-color: rgba(247, 247, 247, 0.3);
+      border-color: #514a45;
+      border-bottom-color: #36312e;
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.635451);
+      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.635451);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+      background-image: linear-gradient(to top, #6d635d, #70665f 1px);
+      background-image: -gtk-icontheme("go-previous-symbolic");
+      background-repeat: no-repeat no-repeat;
+      background-position: 5px 50%;
+      background-size: 21px; }
+    .titlebar button.back-button:active, .titlebar
+    button.back-button.text-button:active {
+      color: #F7F7F7;
+      outline-color: rgba(247, 247, 247, 0.3);
+      border-color: #3b3633;
+      background-image: image(#302c29);
+      box-shadow: inset 0 1px rgba(87, 79, 74, 0);
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      border-color: #141313;
+      background-image: -gtk-icontheme("go-previous-symbolic");
+      background-repeat: no-repeat no-repeat;
+      background-position: 5px 50%;
+      background-size: 21px; }
+  button.back-button:dir(rtl),
+  button.back-button.text-button:dir(rtl) {
+    padding: 0.5em 0.6em;
+    padding-right: 36px;
+    padding-left: 8px;
+    background-image: -gtk-icontheme("go-next-symbolic");
+    background-repeat: no-repeat no-repeat;
+    background-position: 90% 50%; }
+
+/* 
+ * _cards.scss - Cards that float above their parent surface
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.deck {
+  background-color: #ffffff; }
+
+.card {
+  transition: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .card:checked {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .card.collapsed {
+    background-color: #F6F6F6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+/* 
+ * _storage-bar.scss - Storage Bar widget for dividing storage space
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.storage-bar .trough {
+  padding: 8px 6px;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  background-image: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.storage-bar .fill-block {
+  padding: 8px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-radius: 0;
+  border-bottom-color: rgba(111, 111, 111, 0.5);
+  background-color: #d9d9d9; }
+  .storage-bar .fill-block:first-child {
+    border-radius: 4px 0 0; }
+  .storage-bar .fill-block:last-child {
+    border-radius: 0 4px 0 0; }
+  .storage-bar .fill-block:only-child {
+    border-radius: 4px 4px 0 0; }
+  .storage-bar .fill-block image {
+    -gtk-icon-style: symbolic; }
+
+.storage-bar .empty-block {
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(98, 98, 98, 0.5);
+  background-color: #f2f2f2; }
+  .storage-bar .empty-block image {
+    color: black; }
+
+.storage-bar .app {
+  border-bottom-width: 1px;
+  border-bottom-color: #8f00e3;
+  background-color: #CF7DFF; }
+  .storage-bar .app image {
+    color: white; }
+
+.storage-bar .audio {
+  border-bottom-width: 1px;
+  border-bottom-color: #996800;
+  background-color: #FFAD00; }
+  .storage-bar .audio image {
+    color: black; }
+
+.storage-bar .files {
+  border-bottom-width: 1px;
+  border-bottom-color: #387881;
+  background-color: #63B1BC; }
+  .storage-bar .files image {
+    color: black; }
+
+.storage-bar .photo {
+  border-bottom-width: 1px;
+  border-bottom-color: #396f42;
+  background-color: #82BF8C; }
+  .storage-bar .photo image {
+    color: black; }
+
+.storage-bar .video {
+  border-bottom-width: 1px;
+  border-bottom-color: #b7331c;
+  background-color: #E56A54; }
+  .storage-bar .video image {
+    color: white; }
+
+.storage-bar .legend {
+  padding: 8px;
+  border-radius: 50%; }
+  .storage-bar .legend image {
+    color: black; }
+
+.storage-bar .disk-bar {
+  padding: 0;
+  border-radius: 4px;
+  background-color: #ADA29E; }
+
+.storage-bar .ext2, .storage-bar .ext3, .storage-bar .ext4, .storage-bar .fat16, .storage-bar .fat32, .storage-bar .btrfs,
+.storage-bar .xfs, .storage-bar .ntfs, .storage-bar .luks, .storage-bar .lvm, .storage-bar .none, .storage-bar .swap, .storage-bar .unused {
+  border: none;
+  box-shadow: inset 0 -2px rgba(87, 79, 74, 0.5), inset 1px 0 rgba(87, 79, 74, 0.5), inset -1px 0 rgba(87, 79, 74, 0.5); }
+
+.storage-bar .swap {
+  background-color: #A0252B; }
+  .storage-bar .swap image {
+    color: white; }
+
+.storage-bar .ext4 {
+  background-color: #82BF8C; }
+  .storage-bar .ext4 image {
+    color: black; }
+
+.storage-bar .ext3 {
+  background-color: #3B6E43; }
+  .storage-bar .ext3 image {
+    color: white; }
+
+.storage-bar .ext2 {
+  background-color: #90CFB0; }
+  .storage-bar .ext2 image {
+    color: black; }
+
+.storage-bar .fat16,
+.storage-bar .fat32 {
+  background-color: #FEDB40; }
+  .storage-bar .fat16 image,
+  .storage-bar .fat32 image {
+    color: black; }
+
+.storage-bar .btrfs {
+  background-color: #00496D; }
+  .storage-bar .btrfs image {
+    color: white; }
+
+.storage-bar .xfs {
+  background-color: #95C4FC; }
+  .storage-bar .xfs image {
+    color: black; }
+
+.storage-bar .ntfs {
+  background-color: #FFAD00; }
+  .storage-bar .ntfs image {
+    color: black; }
+
+.storage-bar .luks {
+  background-color: #E5B3FF; }
+  .storage-bar .luks image {
+    color: black; }
+
+.storage-bar .lvm {
+  background-color: #CF7DFF; }
+  .storage-bar .lvm image {
+    color: black; }
+
+.storage-bar .none {
+  background-color: #63B1BC; }
+  .storage-bar .none image {
+    color: black; }
+
+.storage-bar .unused {
+  background-color: #ADA29E; }
+  .storage-bar .unused image {
+    color: black; }
+
+.storage-bar .legend {
+  box-shadow: none; }
+
+/* 
+ * _welcome.scss - Text-styles for the Welcome Screen
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.welcome {
+  font-size: 10pt;
+  text-shadow: none; }
+  .welcome .dim-label, .welcome label.separator, .welcome .titlebar:not(headerbar) .subtitle, .titlebar:not(headerbar) .welcome .subtitle,
+  .welcome headerbar .subtitle, headerbar .welcome .subtitle {
+    color: to800(#2B2928); }
+  .welcome .h1,
+  .welcome .h3 {
+    color: to800(#2B2928); }
+
+/* 
+ * _rounded-window.scss - Rounded Windows
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+window.rounded,
+window.rounded actionbar {
+  border-radius: 0 0 4px 4px; }
+  window.rounded decoration,
+  window.rounded actionbar decoration {
+    border-radius: 4px; }
+
+window.flat headerbar {
+  box-shadow: none; }
+
+/* 
+ * _text-styles.scss - Formatting for special text style classes
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.accent {
+  color: #00496D; }
+
+.h1 {
+  font-size: 20pt;
+  font-weight: 300; }
+
+.h2 {
+  font-size: 16pt;
+  font-weight: 200; }
+
+.h3 {
+  font-size: 11pt; }
+
+.h4,
+.category-label {
+  color: to800(#2B2928);
+  font-weight: 700; }
+
+.h4 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+list .h4 {
+  padding-left: 0.5em; }
+
+/* 
+ * _nice-scales.scss - Scales for things like temperature
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+scale.temperature trough {
+  background-image: linear-gradient(to right, rgba(148, 235, 235, 0.4), #CCC, #FFD7A1); }
+
+scale.temperature:dir(rtl) trough {
+  background-image: linear-gradient(to left, rgba(148, 235, 235, 0.4), #CCC, #FFD7A1); }
+
+scale.warmth trough {
+  background-image: linear-gradient(to right, to400(#FFD7A1), to600(#FFAD00)); }
+
+scale.warmth:dir(rtl) trough {
+  background-image: linear-gradient(to left, to400(#FFD7A1), to600(#FFAD00)); }
+
+scale trough:disabled {
+  background-image: none; }
+
+/* 
+ * _terminal.scss - Text View widgets intended to look like terminals
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.terminal,
+.terminal text {
+  background-color: #666;
+  color: white;
+  font-family: monospace; }
+  .terminal selection,
+  .terminal text selection {
+    background-color: #00496D;
+    color: white; }
+
+label.terminal {
+  padding: 1em; }
+
+/* 
+ * _mode-switch.scss - Switches that pick between two different things
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.mode-switch,
+.mode-switch:checked {
+  background-color: #FFAD00;
+  background-image: none; }
+
+/* 
+ * _accent.scss - Accented text/labels
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+.accent {
+  color: #00496D; }
+
+/* 
+ * _palette.scss - Color Palette Definitions for compatibility with Granite.
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+/* Strawberry */
+@define-color STRAWBERRY_100 #ff8c82;
+@define-color STRAWBERRY_300 #ed5353;
+@define-color STRAWBERRY_500 #c6262e;
+@define-color STRAWBERRY_700 #a10705;
+@define-color STRAWBERRY_900 #7a0000;
+/* Orange */
+@define-color ORANGE_100 #ffc27d;
+@define-color ORANGE_300 #ffa154;
+@define-color ORANGE_500 #f37329;
+@define-color ORANGE_700 #cc3b02;
+@define-color ORANGE_900 #a62100;
+/* Banana */
+@define-color BANANA_100 #fff394;
+@define-color BANANA_300 #ffe16b;
+@define-color BANANA_500 #f9c440;
+@define-color BANANA_700 #d48e15;
+@define-color BANANA_900 #ad5f00;
+/* Lime */
+@define-color LIME_100 #d1ff82;
+@define-color LIME_300 #9bdb4d;
+@define-color LIME_500 #68b723;
+@define-color LIME_700 #3a9104;
+@define-color LIME_900 #206b00;
+/* Blueberry */
+@define-color BLUEBERRY_100 #8cd5ff;
+@define-color BLUEBERRY_300 #64baff;
+@define-color BLUEBERRY_500 #3689e6;
+@define-color BLUEBERRY_700 #0d52bf;
+@define-color BLUEBERRY_900 #002e99;
+/* Grape */
+@define-color GRAPE_100 #e4c6fa;
+@define-color GRAPE_300 #cd9ef7;
+@define-color GRAPE_500 #a56de2;
+@define-color GRAPE_700 #7239b3;
+@define-color GRAPE_900 #452981;
+/* Cocoa */
+@define-color COCOA_100 #a3907c;
+@define-color COCOA_300 #8a715e;
+@define-color COCOA_500 #715344;
+@define-color COCOA_700 #57392d;
+@define-color COCOA_900 #3d211b;
+/* Silver */
+@define-color SILVER_100 #fafafa;
+@define-color SILVER_300 #d4d4d4;
+@define-color SILVER_500 #abacae;
+@define-color SILVER_700 #7e8087;
+@define-color SILVER_900 #555761;
+/* Slate */
+@define-color SLATE_100 #95a3ab;
+@define-color SLATE_300 #667885;
+@define-color SLATE_500 #485a6c;
+@define-color SLATE_700 #273445;
+@define-color SLATE_900 #0e141f;
+/* Black */
+@define-color BLACK_100 #666;
+@define-color BLACK_300 #4d4d4d;
+@define-color BLACK_500 #333;
+@define-color BLACK_700 #1a1a1a;
+@define-color BLACK_900 #000;
+/* Basic UI define */
+@define-color fg_color #2B2928;
+/* 
+ * _pop-shop.scss - App overrides for Pop_Shop
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+window.csd > stack > stack.view > grid.horizontal > overlay viewport.frame > grid.horizontal > grid.vertical textview.view text,
+window.csd > stack > stack.view > grid.horizontal > overlay viewport.frame > grid.horizontal > grid.vertical grid.horizontal > list {
+  background-color: #F6F6F6; }
+
+window.csd > stack > stack.view box.vertical > scrolledwindow > viewport.frame > list > row.activatable:hover {
+  background-color: #F6F6F6; }
+  window.csd > stack > stack.view box.vertical > scrolledwindow > viewport.frame > list > row.activatable:hover button.text-button {
+    background-color: #dddddd; }
+    window.csd > stack > stack.view box.vertical > scrolledwindow > viewport.frame > list > row.activatable:hover button.text-button:hover {
+      background-color: #c3c3c3; }
+
+window.csd > stack > stack.view box.vertical > scrolledwindow > viewport.frame > list > row.activatable > grid.horizontal > stack {
+  padding: 6px; }
+  window.csd > stack > stack.view box.vertical > scrolledwindow > viewport.frame > list > row.activatable > grid.horizontal > stack button.text-button {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    background-color: #dddddd; }
+
+window.csd > headerbar.titlebar > stack > revealer > overlay > box.horizontal.linked.raised {
+  margin: 0; }
 
 /* GTK NAMED COLORS
    ----------------

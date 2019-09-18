@@ -1381,22 +1381,29 @@ StScrollBar {
 
     .search-entry-icon { icon-size: 1em; padding: 0 4px; color: $fg_color; }
 
-    &:hover, &:focus {
-      .search-entry-icon { color: transparentize($fg_color,.3); }
-    }
   }
 
   //search results
 
-  #searchResultsContent {
+  #searchResultsBin {
     max-width: 1000px;
+  }
+
+  #searchResultsContent {
+    min-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
     spacing: 16px;
   }
 
-  .search-section { spacing: 16px; } // This should be equal to #searchResultsContent spacing
-  .search-section-content { spacing: 32px; } // This is the space between the provider icon and the results container
+  .search-section { 
+    // min-width: 1000px;
+    spacing: 16px; // This should be equal to #searchResultsContent spacing
+  } 
+  .search-section-content { 
+    // min-width: 1000px;
+    spacing: 32px; // This is the space between the provider icon and the results container
+  } 
   .search-statustext { // "no results"
     @extend %status_text;
   }

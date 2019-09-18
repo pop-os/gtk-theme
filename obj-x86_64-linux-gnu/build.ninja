@@ -48,6 +48,18 @@ build gnome-shell/src/gnome-shell.css: CUSTOM_COMMAND ../gnome-shell/src/gnome-s
  COMMAND = /usr/bin/sassc -a ../gnome-shell/src/gnome-shell.scss gnome-shell/src/gnome-shell.css
  description = Generating$ style-gnome-shell$ with$ a$ custom$ command.
 
+build gnome-shell/src/pop.css: CUSTOM_COMMAND ../gnome-shell/src/gnome-shell.scss | /usr/bin/sassc ../gnome-shell/src/gnome-shell-high-contrast.scss ../gnome-shell/src/gnome-shell.scss ../gnome-shell/src/gnome-shell-sass/_colors.scss ../gnome-shell/src/gnome-shell-sass/_common.scss ../gnome-shell/src/gnome-shell-sass/_dock.scss ../gnome-shell/src/gnome-shell-sass/_drawing.scss ../gnome-shell/src/gnome-shell-sass/_high-contrast-colors.scss ../gnome-shell/src/gnome-shell-sass/_ubuntu-colors.scss
+ COMMAND = /usr/bin/sassc -a ../gnome-shell/src/gnome-shell.scss gnome-shell/src/pop.css
+ description = Generating$ pop-session-theme$ with$ a$ custom$ command.
+
+build gnome-shell/src/light/gnome-shell.css: CUSTOM_COMMAND ../gnome-shell/src/light/gnome-shell.scss | /usr/bin/sassc ../gnome-shell/src/light/gnome-shell.scss ../gnome-shell/src/light/../gnome-shell-sass/_colors.scss ../gnome-shell/src/light/../gnome-shell-sass/_common.scss ../gnome-shell/src/light/../gnome-shell-sass/_dock.scss ../gnome-shell/src/light/../gnome-shell-sass/_drawing.scss ../gnome-shell/src/light/../gnome-shell-sass/_high-contrast-colors.scss ../gnome-shell/src/light/../gnome-shell-sass/_ubuntu-colors.scss
+ COMMAND = /usr/bin/sassc -a ../gnome-shell/src/light/gnome-shell.scss gnome-shell/src/light/gnome-shell.css
+ description = Generating$ gnome-shell-light$ with$ a$ custom$ command.
+
+build gnome-shell/src/dark/gnome-shell.css: CUSTOM_COMMAND ../gnome-shell/src/dark/gnome-shell.scss | /usr/bin/sassc ../gnome-shell/src/dark/gnome-shell.scss ../gnome-shell/src/dark/../gnome-shell-sass/_colors.scss ../gnome-shell/src/dark/../gnome-shell-sass/_common.scss ../gnome-shell/src/dark/../gnome-shell-sass/_dock.scss ../gnome-shell/src/dark/../gnome-shell-sass/_drawing.scss ../gnome-shell/src/dark/../gnome-shell-sass/_high-contrast-colors.scss ../gnome-shell/src/dark/../gnome-shell-sass/_ubuntu-colors.scss
+ COMMAND = /usr/bin/sassc -a ../gnome-shell/src/dark/gnome-shell.scss gnome-shell/src/dark/gnome-shell.css
+ description = Generating$ gnome-shell-dark$ with$ a$ custom$ command.
+
 build gtk/src/light/gtk-3.0/gtk-dark-generated.css: CUSTOM_COMMAND ../gtk/src/light/gtk-3.0/gtk-dark.scss | /usr/bin/sassc ../gtk/src/light/gtk-3.0/_colors-public.scss ../gtk/src/light/gtk-3.0/_ubuntu-colors.scss ../gtk/src/light/gtk-3.0/_colors.scss ../gtk/src/light/gtk-3.0/_common.scss ../gtk/src/light/gtk-3.0/_drawing.scss
  COMMAND = /usr/bin/sassc -a ../gtk/src/light/gtk-3.0/gtk-dark.scss gtk/src/light/gtk-3.0/gtk-dark-generated.css
  description = Generating$ light-gtk-3.0-gtk-dark-generated.css$ with$ a$ custom$ command.
@@ -124,7 +136,7 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony gnome-shell/src/gnome-shell-high-contrast.css gnome-shell/src/gnome-shell.css gtk/src/light/gtk-3.0/gtk.gresource gtk/src/light/gtk-3.20/gtk.gresource
+build all: phony gnome-shell/src/gnome-shell-high-contrast.css gnome-shell/src/gnome-shell.css gnome-shell/src/pop.css gnome-shell/src/light/gnome-shell.css gnome-shell/src/dark/gnome-shell.css gtk/src/light/gtk-3.0/gtk.gresource gtk/src/light/gtk-3.20/gtk.gresource
 
 default all
 
@@ -140,11 +152,11 @@ build meson-clean: CUSTOM_COMMAND PHONY | clean-ctlist
  COMMAND = ninja -t clean
  description = Cleaning.
 
-build build.ninja: REGENERATE_BUILD ../meson.build ../gnome-shell/meson.build ../gnome-shell/src/meson.build ../gtk/meson.build ../gtk/src/meson.build ../gtk/src/light/meson.build ../gtk/src/index.theme.in ../gtk/src/light/gtk-2.0/meson.build ../gtk/src/light/gtk-3.0/meson.build ../gtk/src/light/gtk-3.0/gtk.gresource.xml.in ../gtk/src/light/gtk-3.20/meson.build ../gtk/src/light/gtk-3.20/gtk.gresource.xml.in ../gtk/src/dark/meson.build ../gtk/src/dark/gtk-2.0/meson.build ../gtk/src/dark/gtk-3.0/meson.build ../sounds/meson.build ../sounds/src/index.theme.in meson-private/coredata.dat ../meson_options.txt
+build build.ninja: REGENERATE_BUILD ../meson.build ../gnome-shell/meson.build ../gnome-shell/src/meson.build ../gnome-shell/src/light/meson.build ../gnome-shell/src/dark/meson.build ../gtk/meson.build ../gtk/src/meson.build ../gtk/src/light/meson.build ../gtk/src/index.theme.in ../gtk/src/light/gtk-2.0/meson.build ../gtk/src/light/gtk-3.0/meson.build ../gtk/src/light/gtk-3.0/gtk.gresource.xml.in ../gtk/src/light/gtk-3.20/meson.build ../gtk/src/light/gtk-3.20/gtk.gresource.xml.in ../gtk/src/dark/meson.build ../gtk/src/dark/gtk-2.0/meson.build ../gtk/src/dark/gtk-3.0/meson.build ../sounds/meson.build ../sounds/src/index.theme.in meson-private/coredata.dat ../meson_options.txt
  pool = console
 
 build reconfigure: REGENERATE_BUILD PHONY
  pool = console
 
-build ../meson.build ../gnome-shell/meson.build ../gnome-shell/src/meson.build ../gtk/meson.build ../gtk/src/meson.build ../gtk/src/light/meson.build ../gtk/src/index.theme.in ../gtk/src/light/gtk-2.0/meson.build ../gtk/src/light/gtk-3.0/meson.build ../gtk/src/light/gtk-3.0/gtk.gresource.xml.in ../gtk/src/light/gtk-3.20/meson.build ../gtk/src/light/gtk-3.20/gtk.gresource.xml.in ../gtk/src/dark/meson.build ../gtk/src/dark/gtk-2.0/meson.build ../gtk/src/dark/gtk-3.0/meson.build ../sounds/meson.build ../sounds/src/index.theme.in meson-private/coredata.dat ../meson_options.txt: phony 
+build ../meson.build ../gnome-shell/meson.build ../gnome-shell/src/meson.build ../gnome-shell/src/light/meson.build ../gnome-shell/src/dark/meson.build ../gtk/meson.build ../gtk/src/meson.build ../gtk/src/light/meson.build ../gtk/src/index.theme.in ../gtk/src/light/gtk-2.0/meson.build ../gtk/src/light/gtk-3.0/meson.build ../gtk/src/light/gtk-3.0/gtk.gresource.xml.in ../gtk/src/light/gtk-3.20/meson.build ../gtk/src/light/gtk-3.20/gtk.gresource.xml.in ../gtk/src/dark/meson.build ../gtk/src/dark/gtk-2.0/meson.build ../gtk/src/dark/gtk-3.0/meson.build ../sounds/meson.build ../sounds/src/index.theme.in meson-private/coredata.dat ../meson_options.txt: phony 
 

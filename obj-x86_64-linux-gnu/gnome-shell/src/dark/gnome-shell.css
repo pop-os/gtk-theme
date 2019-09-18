@@ -2065,13 +2065,156 @@ StScrollBar {
   border-radius: 4px;
   padding: 6px; }
 
-stage {
-  -st-icon-style: symbolic; }
+/* Default Ubuntu Dock styling, append !important to any changed rules */
+#dashtodockContainer.shrink #dash,
+#dashtodockContainer.dashtodock #dash {
+  border: 1px;
+  padding: 0px; }
 
-.toggle-switch {
-  width: 48px; }
+#dashtodockContainer.shrink.left #dash,
+#dashtodockContainer.dashtodock.left #dash {
+  border-left: 0px;
+  border-radius: 0px 9px 9px 0px; }
 
-.toggle-switch-us, .toggle-switch-intl {
-  background-image: url("resource:///org/gnome/shell/theme/toggle-off-hc.svg"); }
-  .toggle-switch-us:checked, .toggle-switch-intl:checked {
-    background-image: url("resource:///org/gnome/shell/theme/toggle-on-hc.svg"); }
+#dashtodockContainer.shrink.right #dash,
+#dashtodockContainer.dashtodock.right #dash {
+  border-right: 0px;
+  border-radius: 9px 0px 0px 9px; }
+
+#dashtodockContainer.shrink.top #dash,
+#dashtodockContainer.dashtodock.top #dash {
+  border-top: 0px;
+  border-radius: 0px 0px 9px 9px; }
+
+#dashtodockContainer.shrink.bottom #dash,
+#dashtodockContainer.dashtodock.bottom #dash {
+  border-bottom: 0px;
+  border-radius: 9px 9px 0px 0px; }
+
+#dashtodockContainer.straight-corner #dash,
+#dashtodockContainer.shrink.straight-corner #dash {
+  border-radius: 0px; }
+
+.bottom #dashtodockDashScrollview,
+.top #dashtodockDashScrollview {
+  -st-hfade-offset: 24px; }
+
+.left #dashtodockDashScrollview,
+.right #dashtodockDashScrollview {
+  -st-vfade-offset: 24px; }
+
+#dashtodockContainer.running-dots .dash-item-container > StButton,
+#dashtodockContainer.dashtodock .dash-item-container > StButton {
+  transition-duration: 250;
+  background-size: contain; }
+
+#dashtodockContainer.shrink .dash-item-container > StButton,
+#dashtodockContainer.dashtodock .dash-item-container > StButton {
+  padding: 2px 4px !important; }
+
+#dashtodockContainer.extended.top #dash, #dashtodockContainer.extended.right #dash,
+#dashtodockContainer.extended.bottom #dash, #dashtodockContainer.extended.left #dash {
+  border-radius: 0; }
+
+#dashtodockContainer.extended.top #dash, #dashtodockContainer.extended.bottom #dash {
+  border-left: 0px;
+  border-right: 0px; }
+
+#dashtodockContainer.extended.right #dash, #dashtodockContainer.extended.left #dash {
+  border-top: 0px;
+  border-bottom: 0px; }
+
+#dashtodockContainer.running-dots .app-well-app.running > .overview-icon,
+#dashtodockContainer.dashtodock .app-well-app.running > .overview-icon {
+  /* Running and focused application style */
+  background-image: none; }
+
+#dashtodockContainer.running-dots .app-well-app.focused .overview-icon {
+  background-color: rgba(238, 238, 236, 0.2); }
+
+#dashtodockContainer.dashtodock .app-well-app.focused .overview-icon {
+  background-color: rgba(238, 238, 236, 0.1); }
+
+#dashtodockContainer.dashtodock #dash {
+  background: #2e3436; }
+
+#dashtodockContainer.opaque {
+  /* Temporary reduce traslucency, see https://gitlab.gnome.org/GNOME/gnome-shell/merge_requests/376
+     * background-color: transparentize($dash_bg_color, $dash-opaque-alpha-value);
+     * transition-duration: 500ms; */
+  background-color: #232121;
+  border-color: rgba(0, 0, 0, 0.4); }
+
+#dashtodockContainer.transparent {
+  /* Temporary traslucency under overview state only. See https://gitlab.gnome.org/GNOME/gnome-shell/merge_requests/376
+     * background-color: transparentize($dash_bg_color, $dash-alpha-value);
+     * transition-duration: 500ms; */
+  background-color: #232121;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition-duration: 500ms; }
+  #dashtodockContainer.transparent:overview {
+    background-color: #232121;
+    transition-duration: 500ms; }
+
+#dashtodockContainer .number-overlay {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center; }
+
+#dashtodockContainer .notification-badge {
+  color: white;
+  background-color: #90CFB0;
+  padding: 0.2em 0.5em;
+  border-radius: 1em;
+  border: 1px solid #6cc097;
+  box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  text-align: center;
+  margin: 2px; }
+
+#dashtodockPreviewSeparator.popup-separator-menu-item-horizontal {
+  width: 1px;
+  height: auto;
+  border-right-width: 1px;
+  margin: 32px 0px; }
+
+/* Yaru Dock styling */
+#dashtodockContainer.shrink #dash,
+#dashtodockContainer.dashtodock #dash {
+  border: none !important;
+  box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, 0.4) !important; }
+
+#dashtodockContainer.shrink.left #dash,
+#dashtodockContainer.dashtodock.left #dash {
+  border: none !important; }
+
+#dashtodockContainer.shrink.right #dash,
+#dashtodockContainer.dashtodock.right #dash {
+  border: none !important; }
+
+#dashtodockContainer.shrink.top #dash,
+#dashtodockContainer.dashtodock.top #dash {
+  border: none !important; }
+
+#dashtodockContainer.shrink.bottom #dash,
+#dashtodockContainer.dashtodock.bottom #dash {
+  border: none !important; }
+
+#dashtodockContainer.straight-corner #dash,
+#dashtodockContainer.shrink.straight-corner #dash {
+  border: none !important; }
+
+#dashtodockContainer.shrink.left #dash,
+#dashtodockContainer.dashtodock.left #dash,
+#dashtodockContainer.shrink.right #dash,
+#dashtodockContainer.dashtodock.right #dash {
+  background: #232121;
+  padding-top: 2px;
+  padding-bottom: 2px; }
+
+#dashtodockContainer .show-apps .overview-icon {
+  border-radius: 4px; }
+
+#dashtodockContainer .show-apps:active .overview-icon, #dashtodockContainer .show-apps:checked .overview-icon {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: none; }
