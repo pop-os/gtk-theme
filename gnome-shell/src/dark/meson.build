@@ -22,3 +22,4 @@ theme_deps += custom_target('gnome-shell-dark',
                             install: true,
                             install_dir: install_dir,
                             depend_files: theme_sources)
+              
