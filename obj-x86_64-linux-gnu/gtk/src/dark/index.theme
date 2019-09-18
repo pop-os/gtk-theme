@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Pop-dark
+Type=X-GNOME-Metatheme
+Comment=The Pop-dark GTK Theme
+Encoding=UTF-8
+GtkTheme=Pop-dark
+IconTheme=Pop
+CursorTheme=Pop
+CursorSize=24

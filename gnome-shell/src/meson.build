@@ -1,5 +1,8 @@
 # destination directory
 install_dir = join_paths(gnomeshell_theme_dir, meson.project_name())
+theme_dir = join_paths(get_option('datadir'), 'themes')
+light_install_dir = join_paths(theme_dir, meson.project_name(), 'gnome-shell')
+dark_install_dir = join_paths(theme_dir, meson.project_name()+'-dark', 'gnome-shell')
 
 # generate .css files
 theme_sources = files([
@@ -32,6 +35,16 @@ foreach style: styles
                               install_dir: install_dir,
                               depend_files: theme_sources)
 endforeach
+
+theme_deps += custom_target('pop-session-theme',
+                            input: 'gnome-shell.scss',
+                            output: 'pop.css',
+                            command: [
+                              sassc, '-a', '@INPUT@', '@OUTPUT@'
+                            ],
+                            install: true,
+                            install_dir: gnomeshell_theme_dir,
+                            depend_files: theme_sources)
 
 # static files to copy
 data_sources = [
@@ -79,5 +92,16 @@ data_sources = [
   'ws-switch-arrow-up.svg',
 ]
 
+subdir('light')
+subdir('dark')
+
 # install static data files
-install_data(data_sources, install_dir: install_dir)
+install_data(data_sources, install_dir: join_paths(gnomeshell_theme_dir, meson.project_name()))
+install_data(data_sources, install_dir: light_install_dir)
+install_data(data_sources, install_dir: dark_install_dir)
+
+run_command(
+  'cp',
+  '/usr/share/gnome-shell/theme/Pop/gnome-shell.css',
+  '/usr/share/gnome-shell/theme/pop.css'
+)
