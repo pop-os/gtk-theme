@@ -564,21 +564,24 @@ StScrollBar {
       background-color: $entry_color;
       color: $selected_fg_color;
       box-shadow: inset 0 -1px 0px $_bubble_borders_color;
-      font-weight: bold;
+      &.selected {
+        background-color: $entry_color;
+        color: $selected_fg_color;
+      }
     }
     &.selected {
       background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
       color: $fg_color;
     }
     &:active { 
-      background-color: $entry_color;
+      background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
       color: $selected_fg_color;
 
-      &.selected {
-        background-color: transparentize($entry_color, if($variant=='light', 0.2, 0.9));
+      &:checked {
+        background-color: $entry_color;
         color: $selected_fg_color;
       }
-     }
+    }
     &:insensitive { color: transparentize($fg_color,.5); }
   }
 
