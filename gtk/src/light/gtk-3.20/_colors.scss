@@ -1,6 +1,7 @@
 // When color definition differs for dark and light variant
 // it gets @if ed depending on $variant
 
+@import 'pop_os-colors';
 
 $base_color: if($variant == 'light', #ffffff, #2B2928); 
 $text_color: if($variant == 'light', black, white);
