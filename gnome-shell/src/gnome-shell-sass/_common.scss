@@ -1209,6 +1209,13 @@ StScrollBar {
       &:rtl { /* 12px spacing + 2*4px padding */
               padding-right: 20px; margin-right: 1.09em; }
     }
+
+    StIcon {
+      width: 16px;
+      height: 16px;
+      icon-size: 16px;
+      padding: 4px;
+    }
   }
 
   .system-menu-action {
