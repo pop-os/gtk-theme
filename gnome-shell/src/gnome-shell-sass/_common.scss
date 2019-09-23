@@ -1062,6 +1062,7 @@ StScrollBar {
       .calendar-day-top { border-top-width: 1px; }
       .calendar-day-left { border-left-width: 1px; }
       .calendar-work-day {
+        color: $fg_color;
 
       }
       .calendar-nonwork-day {
