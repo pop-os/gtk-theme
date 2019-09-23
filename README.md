@@ -1,15 +1,10 @@
 <p align="center">
-<img src="https://github.com/system76/pop-gtk-theme/raw/master_cosmic/Pop_gtk-logo.png"/>
+<img src="https://github.com/system76/pop-gtk-theme/raw/master/Pop_gtk-logo.png"/>
 </p>
 
 -------------------
 
 A GTK+ theme for Pop!_OS 
-
-
-## Screenshots
--------------------
-![Pop GTK+ Theme](screenshots/main.png) ![GNOME Maps](screenshots/pop-maps.png) ![Dark Theme](screenshots/pop-builder.png)
 
 
 ### Required Components
