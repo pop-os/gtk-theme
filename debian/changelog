@@ -2,7 +2,7 @@ pop-gnome-theme (5.0.0) disco; urgency=medium
 
   * Rename source package 
 
- -- Ian Santopietro <ian@pop-os.localdomain>  Tue, 17 Sep 2019 16:10:46 -0600
+ -- Ian Santopietro <isantop@gmail.com>  Tue, 17 Sep 2019 16:10:46 -0600
 
 pop-gtk-theme (4.1.4) disco; urgency=medium
 
