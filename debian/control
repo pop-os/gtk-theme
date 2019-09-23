@@ -15,6 +15,7 @@ Package: pop-gnome-shell-theme
 Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         pop-gtk-theme
 Description: Pop GNOME Shell Theme
  The Pop theme for GNOME Shell
  .
