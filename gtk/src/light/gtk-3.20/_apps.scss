@@ -101,6 +101,16 @@ $small_radius: 4px;
   
       // Hide superfluous treeview drop target indication
       &.dnd { border-style: none; }
+
+      button {
+        border: 1px solid $borders_color;
+        border-top-width: 0;
+        border-left-width: 0;
+
+        &:first-child {
+          border-left-width: 0px;
+        }
+      }
     }
   
     notebook > header {
