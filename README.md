@@ -63,38 +63,44 @@ r
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can all build-dependencies using:
 
 ```
-sudo apt install libtool pkg-config sassc inkscape optipng parallel libglib2.0-dev libgdk-pixbuf2.0-dev librsvg2-dev libxml2-utils
+sudo apt install sassc meson libglib2.0-dev 
+```
+
+For making modifications to assets, you will additionally need these two:
+
+```
+sudo apt install inkscape optipng
 ```
 
 
 1. If previous versions were installed/existed, remove them first.
 
  ```
- sudo apt remove system76-pop-gtk-theme
- sudo make uninstall
- sudo rm -rf /usr/share/themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
- rm -rf ~/.local/share/themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
- rm -rf ~/.themes/{Pop,Pop-Eta,Pop-Nokto,Pop-Nokto-Eta}
+ sudo apt remove pop-gtk-theme
+ sudo rm -rf /usr/share/themes/Pop*
+ rm -rf ~/.local/share/themes/Pop*
+ rm -rf ~/.themes/Pop*
  ```
 
 2. Generate the theme files.
 
 ```
-make clean
-make
+meson build && cd build
+ninja
 ```
 
 3. Install the theme.
 
 ```
-sudo make install
+ninja install
 ```
 
 #### Rebuilding after modifications:
 
-You shouldn't need to rebuild the entire theme after modifications. If you 
-modify only the GTK3 sources, then using `make gtk3` will be sufficient for 
-rebuilding the theme. This saves you needing to build the Gtk-2 assets again. 
+You shouldn't need to rebuild the entire theme after modifications. If you make
+changes to any GTK3 or GTK2 assets, delete the old rendered copies and use the
+`render-assets.sh` script to regenerate those with new ones with your 
+modifications. 
 
 TODO
 ----
@@ -102,7 +108,10 @@ TODO
 
 Public License
 --------------
- GPLv2.0
+ Most files: GPL-3.0+
+ Upstream Adwaita: LGPLv2.1
+ Sound theme: CC-BY-SA-4.0
+
 
  > **Note:**
  >
