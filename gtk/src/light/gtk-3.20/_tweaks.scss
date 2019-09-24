@@ -758,3 +758,48 @@ notebook > header {
     }
   }
 }
+
+scale {
+  slider {
+    @include button(normal-alt, $edge: none);
+
+    border: 1px solid $selected_bg_color;
+    background-image: none;
+    background-color: $selected_bg_color;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(black, 0.1);
+    transition: $button_transition;
+    transition-property: background, border, box-shadow;
+
+    &:hover { 
+      @include button(hover-alt, $edge: none);
+      background-image: none;
+      background-color: $selected_bg_color;
+      border-color: $selected_bg_color;
+      box-shadow: 0 1px 0 rgba(black, 0.1);
+    }
+
+    &:active { 
+      border-color: lighten($selected_bg_color, 20%);
+    }
+
+    &:disabled { 
+      @include button(insensitive);
+      background-image: none;
+      background-color: rgba($selected_bg_color, 0.6);
+      border-color: rgba($selected_bg_color, 0.6);
+      box-shadow: none;
+    }
+
+    // ...on selected list rows
+    row:selected & {  
+      background-color: $selected_fg_color;
+      border-color: $selected_fg_color;
+
+      &:disabled {
+        background-color: rgba($selected_fg_color, 0.6);
+        border-color: rgba($selected_fg_color, 0.6);
+      }
+    }
+  }
+}
