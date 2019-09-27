@@ -161,15 +161,15 @@ StScrollBar {
   StBin {
     width: 24px;
     height: 22px;
-    background-image: if($variant=='light', url("checkbox-off.svg"), 
-                                            url("checkbox-off-dark.svg"));
+    background-image: if($variant=='light', url("/usr/share/gnome-shell/theme/Pop/checkbox-off.svg"), 
+                                            url("/usr/share/gnome-shell/theme/Pop/checkbox-off-dark.svg"));
   }
-  &:focus StBin { background-image: if($variant=='light', url("checkbox-off-focused.svg"),
-                                                          url("checkbox-off-focused-dark.svg")); }
-  &:checked StBin { background-image: if($variant=='light', url("checkbox.svg"),
-                                                            url("checkbox-dark.svg")); }
-  &:focus:checked StBin { background-image: if($variant=='light', url("checkbox-focused.svg"),
-                                                                  url("checkbox-focused-dark.svg")); }
+  &:focus StBin { background-image: if($variant=='light', url("/usr/share/gnome-shell/theme/Pop/checkbox-off-focused.svg"),
+                                                          url("/usr/share/gnome-shell/theme/Pop/checkbox-off-focused-dark.svg")); }
+  &:checked StBin { background-image: if($variant=='light', url("/usr/share/gnome-shell/theme/Pop/checkbox.svg"),
+                                                            url("/usr/share/gnome-shell/theme/Pop/checkbox-dark.svg")); }
+  &:focus:checked StBin { background-image: if($variant=='light', url("/usr/share/gnome-shell/theme/Pop/checkbox-focused.svg"),
+                                                                  url("/usr/share/gnome-shell/theme/Pop/checkbox-focused-dark.svg")); }
 }
 
 /* Switches */
@@ -178,11 +178,11 @@ StScrollBar {
   width: 46px;
   height: 22px;
   background-size: contain;
-  background-image: if($variant == 'light', url("toggle-off.svg"),
-					    url("toggle-off-dark.svg"));
+  background-image: if($variant == 'light', url("/usr/share/gnome-shell/theme/Pop/toggle-off.svg"),
+					    url("/usr/share/gnome-shell/theme/Pop/toggle-off-dark.svg"));
   &:checked { 
-    background-image: if($variant == 'light', url("toggle-on.svg"),
-					    url("toggle-on-dark.svg"));
+    background-image: if($variant == 'light', url("/usr/share/gnome-shell/theme/Pop/toggle-on.svg"),
+					    url("/usr/share/gnome-shell/theme/Pop/toggle-on-dark.svg"));
   }
 }
 
@@ -1078,8 +1078,8 @@ StScrollBar {
         color: lighten($fg_color,10%);
         font-weight: bold;
         background-image: if($variant=='light',
-                              url("calendar-today.svg"),
-                              url("calendar-today-dark.svg")
+                              url("/usr/share/gnome-shell/theme/Pop/calendar-today.svg"),
+                              url("/usr/share/gnome-shell/theme/Pop/calendar-today-dark.svg")
         );
       }
       .calendar-other-month-day {
