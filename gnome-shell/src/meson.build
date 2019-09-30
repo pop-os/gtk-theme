@@ -36,15 +36,15 @@ foreach style: styles
                               depend_files: theme_sources)
 endforeach
 
-# theme_deps += custom_target('pop-session-theme',
-#                             input: 'gnome-shell.scss',
-#                             output: 'pop.css',
-#                             command: [
-#                               sassc, '-a', '@INPUT@', '@OUTPUT@'
-#                             ],
-#                             install: true,
-#                             install_dir: gnomeshell_theme_dir,
-#                             depend_files: theme_sources)
+theme_deps += custom_target('pop-session-theme',
+                            input: 'gnome-shell.scss',
+                            output: 'pop.css',
+                            command: [
+                              sassc, '-a', '@INPUT@', '@OUTPUT@'
+                            ],
+                            install: true,
+                            install_dir: gnomeshell_theme_dir,
+                            depend_files: theme_sources)
 
 # static files to copy
 data_sources = [
