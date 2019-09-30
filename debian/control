@@ -28,7 +28,7 @@ Depends: ${shlibs:Depends},
          gnome-themes-extra,
          gtk2-engines-pixbuf,
          gtk2-engines-murrine,
-Conflicts: pop-gnome-shell-theme (<= 4.0.0),
+Conflicts: pop-gnome-shell-theme (<= 4.1.0),
 Description: Pop GTK Theme
  The Pop theme for GTK.
  .
