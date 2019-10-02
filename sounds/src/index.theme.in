@@ -1,0 +1,6 @@
+[Sound Theme]
+Name=@ThemeName@
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo
