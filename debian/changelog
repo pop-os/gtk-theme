@@ -1,6 +1,9 @@
-pop-gnome-theme (5.0.0) disco; urgency=medium
+pop-gtk-theme (5.0.0) disco; urgency=medium
 
-  * Rename source package 
+  * This is the result of making sure Pop does not break upstream GNOME apps. It's very
+    Pop-y, but with metrics and features that give it 100% feature parity with Adwaita
+    which helps ensure upstream apps will not break if a user is using this theme. 
+  
 
  -- Ian Santopietro <isantop@gmail.com>  Tue, 17 Sep 2019 16:10:46 -0600
 
