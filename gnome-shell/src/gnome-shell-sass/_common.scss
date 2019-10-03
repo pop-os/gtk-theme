@@ -1970,11 +1970,11 @@ StScrollBar {
   .modal-dialog-button {
     padding: 4px 18px;
     box-shadow: 0 1px 3px transparentize($shadow_color, 0.02);
-    background-color: $_gdm_bg;
+    background-color: rgba($_gdm_fg, 0.1);
     border-color: $_gdm_bg;
     color: $_gdm_fg;
 
-    $_hover_c: lighten($_gdm_bg, 5%);
+    $_hover_c: rgba($_gdm_fg, 0.1);
     &:hover, &:focus {
       background-color: $_hover_c;
       border-color: $_hover_c;
