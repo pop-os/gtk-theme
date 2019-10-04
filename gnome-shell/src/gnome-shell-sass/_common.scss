@@ -570,11 +570,11 @@ StScrollBar {
       }
     }
     &.selected {
-      background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+      background-color: rgba($fg_color, 0.14);
       color: $fg_color;
     }
     &:active { 
-      background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+      background-color: rgba($fg_color, 0.14);
       color: $selected_fg_color;
 
       &:checked {
