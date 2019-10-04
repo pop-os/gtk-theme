@@ -28,7 +28,7 @@ $cakeisalie: "This stylesheet is generated, DO NOT EDIT";
 
 $modal_radius: 6px;
 $button_radius: 4px;
-$panel-corner-radius: 0;
+$panel-corner-radius: 4px;
 
 $_trough_color: transparentize($fg_color, 0.9);
 $_bubble_borders_color: lighten($borders_color, if($variant=='light', 0%, 5%));
@@ -852,7 +852,7 @@ StScrollBar {
     -panel-corner-border-color: transparent;
 
     &:active, &:overview, &:focus {
-      -panel-corner-border-color: lighten($selected_bg_color,5%);
+      -panel-corner-border-color: $entry_color;
     }
 
     &.lock-screen, &.login-screen, &.unlock-screen {
