@@ -32,3 +32,4 @@ theme_deps += custom_target('gnome-shell-dark-autoswitch',
                             install: true,
                             install_dir: gnomeshell_theme_dir,
                             depend_files: theme_sources)
+                            
