@@ -28,7 +28,7 @@ $cakeisalie: "This stylesheet is generated, DO NOT EDIT";
 
 $modal_radius: 6px;
 $button_radius: 4px;
-$panel-corner-radius: 0;
+$panel-corner-radius: 4px;
 
 $_trough_color: transparentize($fg_color, 0.9);
 $_bubble_borders_color: lighten($borders_color, if($variant=='light', 0%, 5%));
@@ -570,11 +570,11 @@ StScrollBar {
       }
     }
     &.selected {
-      background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+      background-color: rgba($fg_color, 0.14);
       color: $fg_color;
     }
     &:active { 
-      background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+      background-color: rgba($fg_color, 0.14);
       color: $selected_fg_color;
 
       &:checked {
@@ -852,7 +852,7 @@ StScrollBar {
     -panel-corner-border-color: transparent;
 
     &:active, &:overview, &:focus {
-      -panel-corner-border-color: lighten($selected_bg_color,5%);
+      -panel-corner-border-color: $entry_color;
     }
 
     &.lock-screen, &.login-screen, &.unlock-screen {
@@ -1404,7 +1404,7 @@ StScrollBar {
   }
 
   #searchResultsContent {
-    min-width: 1000px;
+    max-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
     spacing: 16px;
@@ -1970,11 +1970,11 @@ StScrollBar {
   .modal-dialog-button {
     padding: 4px 18px;
     box-shadow: 0 1px 3px transparentize($shadow_color, 0.02);
-    background-color: $_gdm_bg;
+    background-color: rgba($_gdm_fg, 0.1);
     border-color: $_gdm_bg;
     color: $_gdm_fg;
 
-    $_hover_c: lighten($_gdm_bg, 5%);
+    $_hover_c: rgba($_gdm_fg, 0.1);
     &:hover, &:focus {
       background-color: $_hover_c;
       border-color: $_hover_c;
@@ -2112,7 +2112,7 @@ $_screenshield_shadow: 0px 0px 6px rgba(0, 0, 0, 0.726);
 .screen-shield-clock {
   color: white;
   text-shadow: $_screenshield_shadow;
-  font-weight: bold;
+  font-weight: 200;
   text-align: center;
   padding-bottom: 1.5em;
 }
@@ -2125,7 +2125,7 @@ $_screenshield_shadow: 0px 0px 6px rgba(0, 0, 0, 0.726);
 
 .screen-shield-clock-date { 
   font-size: 28pt;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .screen-shield-notifications-container {
