@@ -22,4 +22,13 @@ theme_deps += custom_target('gnome-shell-dark',
                             install: true,
                             install_dir: install_dir,
                             depend_files: theme_sources)
-              
+
+theme_deps += custom_target('gnome-shell-dark-autoswitch',
+                            input: 'gnome-shell.scss',
+                            output: 'pop-dark.css',
+                            command: [
+                              sassc, '-a', '@INPUT@', '@OUTPUT@'
+                            ],
+                            install: true,
+                            install_dir: gnomeshell_theme_dir,
+                            depend_files: theme_sources)
