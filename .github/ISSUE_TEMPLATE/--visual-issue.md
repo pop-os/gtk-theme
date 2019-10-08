@@ -1,0 +1,42 @@
+---
+name: "Visual Problem - Application"
+about: Report a visual problem with a modern application
+title: "[GTK]"
+labels: bug
+assignees: 'isantop'
+
+---
+
+**Describe the bug**
+A clear and concise description of what the bug is.
+
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Distribution:**
+Run `cat /etc/os-release`
+
+**Gtk+ 3.0 version:**
+Run `apt policy libgtk-3-0`
+
+**Desktop environment:**
+E.g. GNOME Shell 3.34, Pantheon 5.1, etc.
+
+**Theme package version:**
+Run `apt policy pop-gtk-theme`
+
+**Related Application/Widget**
+Please include application version, e.g. `apt policy {package name}`.
+
+**Additional context**
+Add any other context about the problem here.
