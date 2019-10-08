@@ -5,8 +5,9 @@ This document describes testing procedures for the software contained in this
 repository. All sections must be completed and signed off before a package can
 be moved from one repository to the next.
 
-## Part 1: Staging -> Proposed
-* Did it build?
+## Part 1: Staging -> Proposed (Theme Developer Checks)
+* Did it build? Ensure via CI before merging
+    - All PRs *MUST* build before merging into other branches
 * Are files present in build package:
     - Check package, data.tar - make sure all files intended to be installed are
       there
