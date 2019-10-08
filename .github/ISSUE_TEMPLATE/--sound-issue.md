@@ -1,7 +1,7 @@
 ---
-name: "Visual Problem - System/Shell"
-about: Report a visual problem the System interface (top bar, system menu, activities)
-title: "[Shell]"
+name: "Sound theme Problem"
+about: Report a problem with the system sounds
+title: "[Sound]"
 labels: bug
 assignees: 'isantop'
 
@@ -21,25 +21,35 @@ Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
-4. See error
+4. Hear error
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
 **Distribution:**
 Run `cat /etc/os-release`
 
-**GNOME Shell 3.0 version:**
-Run `apt policy gnome-shell`
+**Desktop environment:**
+E.g. GNOME Shell 3.34, Pantheon 5.1, etc.
 
 **Theme package version:**
-Run `apt policy pop-gnome-shell-theme`
+Run `apt policy pop-sound-theme`
 
-**Related Application/Widget**
-Please include application version, e.g. `apt policy {package name}`.
+**Related Sound:**
+ -[] Audio Volume Change Sound
+ -[] Low Battery Sound
+ -[] Terminal Bell/Beep
+ -[] Operation Complete Chime
+ -[] Device Added Chime
+ -[] Device Removed Chime
+ -[] Error Chime
+ -[] Question Chime
+ -[] Warning Chime
+ -[] Message/Notification Sound
+ -[] Instant Message Sound
+ -[] Trash Empty Sound
+
+ #### If your issue is with a sound other than one of these, then is is being provided by an application and is not applicable to this theme. Please file an issue with the application and not with this theme.
 
 **Additional context**
 Add any other context about the problem here.
