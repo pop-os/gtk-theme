@@ -16,7 +16,6 @@ be moved from one repository to the next.
 
 Things to look at:
  - [gtk3-widget-factory](#gtk) (in package `gtk-3-examples`)
- - [Nautilus](#nautilus)
  - [Gnome-Tweak-Tool](#gtt)
  
  **Things to check in gtk3-widget-factory**<a name="gtk"></a>
