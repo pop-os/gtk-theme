@@ -42,10 +42,10 @@ Run `apt policy libgtk-3-0`
 E.g. GNOME Shell 3.34, Pantheon 5.1, etc.
 
 **Theme package version:**
-Run `apt policy pop-gtk-theme`
+Run `apt policy pop-gtk-theme` or `flatpak info org.gtk.Gtk3theme.Pop`
 
 **Related Application/Widget**
-Please include application version, e.g. `apt policy {package name}`.
+Please include application version, e.g. `apt policy {package name}` or `flatpak info {appid}`.
 
 **Additional context**
 Add any other context about the problem here.
