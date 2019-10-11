@@ -101,6 +101,11 @@ Things to look at:
   - Shooting for 7.5:1 contrast ratios
  - Bright colors all have a backdrop shade (when window is not selected)
 
+ **Tools**
+ - Contrast (checking contrast ratios): https://flathub.org/apps/details/org.gnome.design.Contrast
+ - Online Contrast ratio checker: https://contrast-ratio.com
+ - Gimp can be used to get hex values from screenshots
+
  **If something visibly looks off, check the color hex values.**
  
  *Color hex values:*
