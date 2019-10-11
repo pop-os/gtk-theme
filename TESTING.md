@@ -17,6 +17,7 @@ be moved from one repository to the next.
 Things to look at:
  - [gtk3-widget-factory](#gtk) (in package `gtk-3-examples`)
  - [Gnome-Tweak-Tool](#gtt)
+ - [GNOME Shell](#shell)
  
  **Things to check in gtk3-widget-factory**<a name="gtk"></a>
  
@@ -43,7 +44,9 @@ Things to look at:
  *Header and title bars:* 
  - brown in normal theme (#574F4A)
  - dark theme - dark grey (#363636)
- - light theme - light grey (Light theme is currently missing)
+ - Close button is red-orange #f68f00
+   - Inactive windows have no close button background.
+
  
  *Window Backgrounds:*
  - light grey in normal theme (#F6F6F6)
@@ -57,10 +60,41 @@ Things to look at:
  
 **Gnome-Tweak-Tool**<a name="gtt"></a>
  
- *3 themes:*
+ *2 themes:*
   - Pop
   - Pop-Dark
-  - Pop-Light
+
+ **GNOME Shell**<a name='shell'></a>
+ 
+ *General Items*
+ - Correct font is used for all text.
+ - Theme switches with light/dark mode.
+ - Menus have rounded corners.
+
+ *Top Bar*
+ - Underline for active menu buttons.
+ - Panel corners are present
+ - Panel corner radius is identical to titlebar radius
+
+ *System Menu*
+ - Volume/Brightness sliders are blue
+ - Active submenus are orange with black text.
+ - Hovered item has grey background.
+ - User Icon is the correct size
+ - All text is aligned
+ 
+ *Calendar / Notifications*
+ - Selected Day is Orange with black text.
+ - Weekend days are faded out.
+ - Notifications have grey outline. 
+ - Notifications have lighter background.
+ - Active switch has orange background
+
+ *Activities*
+ - Folders should have lighter background.
+ - Icons are crisp.
+ - Search bar changes with dark theme.
+ - Search bar text is readable in light and dark theme.
  
  **Other things to note:**
  - Everything needs to be legible/high contrast
