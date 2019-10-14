@@ -106,6 +106,7 @@ $small_radius: 4px;
         border: 1px solid $borders_color;
         border-top-width: 0;
         border-left-width: 0;
+        color: rgba($fg_color, 0.7);
 
         &:first-child {
           border-left-width: 0px;
