@@ -576,11 +576,91 @@ radio {
   }
 }
 
-// // blue spinner
-// spinner {
-//   &:not(:backdrop) {
-//     color: $progress_bg_color;
-//   }
+// treeview.view Progressbar improvements
+treeview.view.trough,
+treeview.view.progressbar {
+  background: none;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+}
+
+treeview.view.progressbar {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: $selected_bg_color;
+}
+
+treeview.view.progressbar:selected {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: $selected_fg_color;
+}
+
+treeview.view.trough {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: rgba($fg_color, 0.2);
+}
+
+treeview.view.trough:selected {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: rgba($selected_fg_color, 0.2);
+}
+
+treeview.view {
+  background: none;
+  color: $fg_color;
+  background-color: transparent;
+}
+
+treeview.view:selected {
+  background: none;
+  color: $selected_fg_color;
+  background-color: $selected_bg_color;
+}
+
+// treeview.view.trough,
+// treeview.view.progressbar {
+//   background: none;
+//   border-radius: 4px;
+//   border: 3px solid transparent;
+// }
+
+// treeview.view.progressbar {
+//   background: none;
+//   background-color: transparent;
+//   border-bottom-color: @theme_selected_bg_color;
+// }
+
+// treeview.view.progressbar:selected {
+//   background: none;
+//   background-color: transparent;
+//   border-bottom-color: @theme_selected_fg_color;
+// }
+
+// treeview.view.trough {
+//   background: none;
+//   background-color: transparent;
+//   border-bottom-color: rgba(@theme_fg_color, 0.2);
+// }
+
+// treeview.view.trough:selected {
+//   background: none;
+//   background-color: transparent;
+//   border-bottom-color: rgba(@theme_selected_fg_color, 0.2);
+// }
+
+// treeview.view {
+//   background: none;
+//   color: @theme_fg_color;
+//   background-color: transparent;
+// }
+
+// treeview.view:selected {
+//   background: none;
+//   color: @theme_selected_fg_color;
+//   background-color: @theme_selected_bg_color;
 // }
 
 // TODO: REMOVE the diff when we fixed this upstream (upstream has blue suggested border color)

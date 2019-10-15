@@ -1982,56 +1982,6 @@ treeview.view {
     &:backdrop { color: mix($backdrop_fg_color, $backdrop_base_color, 70%); }
   }
 
-  &.progressbar { // progress bar in treeviews
-    @if $variant == light { color: $base_color; }
-
-    background-color: $progress_bg_color;
-    background-image: image($progress_bg_color);
-    box-shadow: none;
-
-    &:selected {
-      &:focus, & {
-
-        @if $variant == 'light' {
-          color: $selected_bg_color;
-
-        }
-
-        @else { box-shadow: inset 0 1px transparentize(white, 0.95); }
-
-        background-image: image($base_color);
-
-        &:backdrop {
-          @if $variant == 'light' {
-            color: $selected_bg_color;
-          }
-          background-color: $backdrop_base_color;
-        }
-      }
-    }
-
-    &:backdrop {
-      @if $variant == 'light' { color: $backdrop_base_color; }
-
-      @else { border-color: $backdrop_base_color; }
-      background-image: none;
-      box-shadow: none;
-    }
-  }
-
-  &.trough { // progress bar trough in treeviews
-    background-color: transparentize($fg_color,0.9);
-
-    &:selected {
-      &:focus, & {
-        background-color: if($variant == 'light',
-                             transparentize($selected_fg_color, 0.7),
-                             darken($selected_bg_color, 10%));
-
-      }
-    }
-  }
-
   header {
     button {
       $_column_header_color: mix($fg_color, $base_color, 50%);
