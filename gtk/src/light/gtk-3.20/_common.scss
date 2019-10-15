@@ -3580,6 +3580,11 @@ progressbar {
     }
   }
 
+  text {
+    background-color: transparent;
+    color: $fg_color;
+  }
+
   trough.empty progress { all: unset; } // makes the progress indicator disappear, when the fraction is 0
 }
 
