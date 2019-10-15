@@ -59,7 +59,7 @@
   @if $t==insensitive {
     color: $insensitive_fg_color;
     border-color: $borders_color;
-    background-color: $insensitive_bg_color;
+    background-color: rgba($insensitive_bg_color, 0.5);
     box-shadow: $_entry_edge;
   }
   @if $t==backdrop {
