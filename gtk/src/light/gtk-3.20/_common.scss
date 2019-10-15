@@ -4438,12 +4438,6 @@ colorchooser .popover.osd { border-radius: 5px; }
 /********
  * Misc *
  ********/
-
-// Drag handles (i.e. in Settings > Search)
-.drag-handle {
-  color: rgba($fg_color, 0.6);
-}
-
 //content view (grid/list)
 .content-view {
   background-color: darken($bg_color,7%);
