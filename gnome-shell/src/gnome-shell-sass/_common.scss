@@ -575,7 +575,7 @@ StScrollBar {
     }
     &:active { 
       background-color: rgba($fg_color, 0.14);
-      color: $selected_fg_color;
+      color: $fg_color;
 
       &:checked {
         background-color: $entry_color;
