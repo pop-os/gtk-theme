@@ -63,6 +63,11 @@ list.tweak-categories separator {
   background-color: if($variant=='light', white, $base_color);
   &:backdrop { background-color: $backdrop_base_color }
 
+  // Make sure tags fit inside the search entry
+  entry.search > * {
+    margin: 5px;
+  }  
+
   // Makes icons less bright in backdrop
   @at-root %dim_icons_in_backdrop,
   *scrolledwindow:backdrop { opacity: 0.9; }
