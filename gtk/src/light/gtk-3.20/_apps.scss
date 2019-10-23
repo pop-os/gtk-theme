@@ -3,17 +3,59 @@
 $small_radius: 4px;
 
 /***********
- * Tweak Tool *
- ***********/
- list.tweak-categories separator {
-    // hide sidebar separators
-    // make the sidebar look like a normal sidebar
-    background: transparent;
-  }
+* Tweak Tool *
+***********/
+list.tweak-categories separator {
+  // hide sidebar separators
+  // make the sidebar look like a normal sidebar
+  background: transparent;
+}
   
 /***********
-  * Nautilus *
-  ***********/
+* Nautilus *
+***********/
+
+// Disk Space Pie Chart
+// Code from 
+// gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/Adwaita.css
+.disk-space-display {
+  $disk_space_unknown: #888;
+  $disk_space_used: #6ACAD8;
+  $disk_space_free: #eeeeec;
+  border-style: solid;
+  border-width: 2px;
+
+  &.unkown {
+    background-color: $disk_space_unknown;
+    border-color: shade($disk_space_unknown, 0.7);
+    color: $disk_space_unknown;
+
+    &.border {
+      color: shade($disk_space_unknown, 0.7);
+    }
+  }
+
+  &.used {
+    background-color: $disk_space_used;
+    border-color: shade($disk_space_used, 0.7);
+    color: $disk_space_used;
+
+    &.border {
+      color: shade($disk_space_used, 0.7);
+    }
+  }
+
+  &.free {
+    background-color: $disk_space_free;
+    border-color: shade($disk_space_free, 0.7);
+    color: $disk_space_free;
+
+    &.border {
+      color: shade($disk_space_free, 0.7);
+    }
+  }
+}
+
 .nautilus-window {
   // keep details box visible
   // details box looks ugly when many items are selected and it floats above the orange
