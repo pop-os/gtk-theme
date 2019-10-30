@@ -256,6 +256,10 @@ headerbar,
     }
   }
 
+  entry:disabled {
+    color: rgba($fg_color, 0.8);
+  }
+
   separator {
     background: image(darken(#3d3d3d, 11%));
   }
