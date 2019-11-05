@@ -22,4 +22,6 @@ else
     && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
 fi
 done
+
+./render-assets-external.sh
 exit 0
