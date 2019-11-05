@@ -261,7 +261,7 @@ headerbar,
   }
 
   separator {
-    background: image(darken(#3d3d3d, 11%));
+    background: image(rgba($fg_color, if($variant == 'light', 0.2, 0.1)));
   }
 
   @if $variant=='light' {
