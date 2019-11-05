@@ -23,11 +23,11 @@ gtk3_scss_dependencies = [
 
 gtk3_assets = [
   'assets/bullet-symbolic.svg',
-  'assets/bullet-symbolic.symbolic.png',
+  'assets/bullet-symbolic.png',
   'assets/check-symbolic.svg',
-  'assets/check-symbolic.symbolic.png',
+  'assets/check-symbolic.png',
   'assets/dash-symbolic.svg',
-  'assets/dash-symbolic.symbolic.png',
+  'assets/dash-symbolic.png',
   'assets/slider-horz-scale-has-marks-above@2.png',
   'assets/slider-horz-scale-has-marks-above-active@2.png',
   'assets/slider-horz-scale-has-marks-above-active-dark@2.png',
