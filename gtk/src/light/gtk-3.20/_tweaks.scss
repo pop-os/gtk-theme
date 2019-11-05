@@ -563,6 +563,19 @@ radio {
     }
   }
 
+  &,
+  &:hover,
+  &:active {
+    border-color: rgba($fg_color, 0.6);
+  }
+
+  &:disabled {
+    border-color: rgba($fg_color, 0.2);
+  }
+
+  :selected & {
+    border-color: $selected_fg_color;
+  }
 
   &:not(:backdrop):checked:not(.selected) {
     border-color: $checkradio_bg_color;
@@ -571,8 +584,8 @@ radio {
   }
 
   &:not(:backdrop):disabled:checked {
-    background-image: image(mix($checkradio_bg_color, $insensitive_bg_color, 50%));
-    border-color: mix($checkradio_bg_color, $insensitive_bg_color, 50%);
+    background-image: image(rgba($checkradio_bg_color, 0.4));
+    border-color: rgba($checkradio_bg_color, 0.4);
   }
 }
 
