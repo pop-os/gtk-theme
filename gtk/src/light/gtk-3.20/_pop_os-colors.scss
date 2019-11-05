@@ -7,7 +7,8 @@ $text_orange: if($variant=='light', #AF5C02, #FFD7A1);
 // blue
 $blue: if($variant=='light', #63B1BC, #6ACAD8);
 $highlights_blue: if($variant=='light', #6ACAD8, #63B1BC);
-$text_blue: if($variant=='light', #00496D, #94EBEB);
+//$text_blue: if($variant=='light', #00496D, #94EBEB);
+$text_blue: if($variant=='light', #00496D, #6ACAD8);
 
 // green
 $green: if($variant=='light', #82BF8C, #90CFB0);
