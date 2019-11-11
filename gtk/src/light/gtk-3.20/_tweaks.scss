@@ -260,7 +260,9 @@ headerbar,
     color: rgba($fg_color, 0.8);
   }
 
-  separator {
+  // Also include backdrop styling, because they turn white in :backdrop
+  separator,
+  separator:backdrop {
     background: image(rgba($fg_color, if($variant == 'light', 0.2, 0.1)));
   }
 
