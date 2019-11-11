@@ -470,6 +470,22 @@ headerbar,
   }
 }
 
+// separators in paned headerbars, #405
+// We can't seem to use rgba here, so we darken the 
+// headerbar_bg_color instead.
+paned.titlebar > separator {
+  color: darken($headerbar_bg_color, 5%);
+  background: image(darken($headerbar_bg_color, 5%));
+  background-color: darken($headerbar_bg_color, 5%);
+
+  &:backdrop {
+  color: darken($headerbar_bg_color, 3%);
+  background: image(darken($headerbar_bg_color, 3%));
+  background-color: darken($headerbar_bg_color, 3%);
+  }
+}
+
+
 // titlebutton
 button.titlebutton {
 
