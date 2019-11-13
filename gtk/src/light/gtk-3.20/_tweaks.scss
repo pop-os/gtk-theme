@@ -889,6 +889,16 @@ scale {
     transition: $button_transition;
     transition-property: background, border, box-shadow;
 
+    &:backdrop {
+      border: 1px solid $selected_bg_color;
+      background-image: none;
+      background-color: mix($selected_bg_color, $bg_color, 60%);
+      border-radius: 100%;
+      box-shadow: 0 1px 0 rgba(black, 0.1);
+      transition: $button_transition;
+      transition-property: background, border, box-shadow;
+    }
+
     &:hover { 
       @include button(hover-alt, $edge: none);
       background-image: none;
@@ -904,9 +914,17 @@ scale {
     &:disabled { 
       @include button(insensitive);
       background-image: none;
-      background-color: rgba($selected_bg_color, 0.6);
+      background-color: rgba($selected_bg_color, 0.5);
       border-color: rgba($selected_bg_color, 0.6);
       box-shadow: none;
+
+      &:backdrop {
+        @include button(insensitive);
+        background-image: none;
+        background-color: rgba($selected_bg_color, 0.3);
+        border-color: rgba($selected_bg_color, 0.5);
+        box-shadow: none;
+      }
     }
 
     // ...on selected list rows
