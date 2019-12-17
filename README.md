@@ -33,7 +33,7 @@ Pop supports Gtk+ 3.22.x
 
 ### Installation
 
-Pop is intended to be installed through the package manager. Packages for Ubuntu are available in PPA:
+Pop is intended to be installed through the package manager. Packages for Pop are available in PPA:
 ```
 sudo add-apt-repository ppa:system76/pop
 sudo apt update
@@ -59,6 +59,8 @@ r
 
 ### Installation from Git Source
 ----------------------------
+
+This is the recommended method for users who aren't on Pop.
 
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can all build-dependencies using:
 
