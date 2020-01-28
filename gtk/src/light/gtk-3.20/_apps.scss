@@ -70,7 +70,7 @@ list.tweak-categories separator {
 
   // Makes icons less bright in backdrop
   @at-root %dim_icons_in_backdrop,
-  *scrolledwindow:backdrop { opacity: 0.9; }
+  & *scrolledwindow:backdrop { opacity: 0.9; }
 
   paned box.floating-bar {
     background: transparentize($jet, 0.1);
