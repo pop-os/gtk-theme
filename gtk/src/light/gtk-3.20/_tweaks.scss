@@ -914,15 +914,15 @@ scale {
     &:disabled { 
       @include button(insensitive);
       background-image: none;
-      background-color: rgba($selected_bg_color, 0.5);
-      border-color: rgba($selected_bg_color, 0.6);
+      background-color: mix($selected_bg_color, $bg_color, 50%);
+      border-color: mix($selected_bg_color, $bg_color, 60%);
       box-shadow: none;
 
       &:backdrop {
         @include button(insensitive);
         background-image: none;
-        background-color: rgba($selected_bg_color, 0.3);
-        border-color: rgba($selected_bg_color, 0.5);
+        background-color: mix($selected_bg_color, $bg_color, 30%);
+        border-color: mix($selected_bg_color, $bg_color, 50%);
         box-shadow: none;
       }
     }
