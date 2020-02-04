@@ -5,32 +5,32 @@ pop-gtk-theme (5.0.0) disco; urgency=medium
     which helps ensure upstream apps will not break if a user is using this theme. 
   
 
- -- Ian Santopietro <isantop@gmail.com>  Tue, 17 Sep 2019 16:10:46 -0600
+ -- Ian Santopietro <ian@system76.com>  Tue, 17 Sep 2019 16:10:46 -0600
 
 pop-gtk-theme (4.1.4) disco; urgency=medium
 
   * Non-blurry checks and switches on HiDPI
   * Set switch color to transparent (#270)
 
- -- Ian Santopietro <isantop@gmail.com>  Wed, 13 Feb 2019 10:02:30 -0700
+ -- Ian Santopietro <ian@system76.com>  Wed, 13 Feb 2019 10:02:30 -0700
  
 pop-gtk-theme (4.1.3) cosmic; urgency=medium
 
   * Make round buttons take up less space.
 
- -- Ian Santopietro <isantop@gmail.com>  Mon, 11 Feb 2019 13:32:04 -0700
+ -- Ian Santopietro <ian@system76.com>  Mon, 11 Feb 2019 13:32:04 -0700
 
 pop-gtk-theme (4.1.2) cosmic; urgency=medium
 
   * Nautilus Desktop menu is no longer transparent. (#272)
 
- -- Ian Santopietro <isantop@gmail.com>  Mon, 11 Feb 2019 10:35:05 -0700
+ -- Ian Santopietro <ian@system76.com>  Mon, 11 Feb 2019 10:35:05 -0700
 
 pop-gtk-theme (4.1.1) cosmic; urgency=medium
 
   * Ensure Destructive dialog buttons are always readable. (#267)
 
- -- Ian Santopietro <isantop@gmail.com>  Tue, 29 Jan 2019 13:50:48 -0700
+ -- Ian Santopietro <ian@system76.com>  Tue, 29 Jan 2019 13:50:48 -0700
 
 pop-gtk-theme (4.1.0) cosmic; urgency=medium
 
@@ -42,7 +42,7 @@ pop-gtk-theme (4.1.0) cosmic; urgency=medium
   * Pop_Shop Install and Uninstall buttons are now flat.
   * Windows can now be dragged by grabbing the empty area of toolbar widgets.
 
- -- Ian Santopietro <ian@pop-os.localdomain>  Wed, 19 Dec 2018 14:07:32 -0700
+ -- Ian Santopietro <ian@system76.com>  Wed, 19 Dec 2018 14:07:32 -0700
 
 pop-gtk-theme (4.0.1) cosmic; urgency=medium
 
