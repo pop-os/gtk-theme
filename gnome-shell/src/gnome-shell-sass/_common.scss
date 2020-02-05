@@ -2157,8 +2157,6 @@ $_screenshield_shadow: 0px 0px 6px rgba(0, 0, 0, 0.726);
 
 .screen-shield-notification-count-text { padding: 0px 0px 0px 12px; }
 
-#panel.lock-screen { background-color: transparentize($osd_bg_color, 0.5); }
-
 .screen-shield-background { //just the shadow, really
   background: black;
   box-shadow: 0px 2px 4px transparentize(black,0.6);
