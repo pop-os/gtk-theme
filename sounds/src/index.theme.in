@@ -1,6 +1,16 @@
 [Sound Theme]
 Name=@ThemeName@
-Directories=stereo
+Comment=The @ThemName@ Sound Theme
+Directories=stereo/alert stereo/action stereo/notification
 
-[stereo]
+[stereo/alert]
+Context=Alert
+OutputProfile=stereo
+
+[stereo/action]
+Context=Action
+OutputProfile=stereo
+
+[stereo/notification]
+Context=Notification
 OutputProfile=stereo
