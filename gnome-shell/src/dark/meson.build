@@ -1,35 +1,14 @@
-theme_dir = join_paths(get_option('datadir'), 'themes')
-install_dir = join_paths(theme_dir, meson.project_name()+'-dark', 'gnome-shell')
+# This is an hack we need to remove once meson fixes this issue:
+#  https://github.com/mesonbuild/meson/issues/2320
 
-theme_sources = files([
-  'gnome-shell.scss',
-  '../gnome-shell-sass/_colors.scss',
-  '../gnome-shell-sass/_common.scss',
-  '../gnome-shell-sass/_dock.scss',
-  '../gnome-shell-sass/_drawing.scss',
-  '../gnome-shell-sass/_high-contrast-colors.scss',
-  '../gnome-shell-sass/_ubuntu-colors.scss',
-])
-
-theme_deps = []
-
-theme_deps += custom_target('gnome-shell-dark',
-                            input: 'gnome-shell.scss',
-                            output: 'gnome-shell.css',
-                            command: [
-                              sassc, '-a', '@INPUT@', '@OUTPUT@'
-                            ],
-                            install: true,
-                            install_dir: install_dir,
-                            depend_files: theme_sources)
-
-theme_deps += custom_target('gnome-shell-dark-autoswitch',
-                            input: 'gnome-shell.scss',
-                            output: 'pop-dark.css',
-                            command: [
-                              sassc, '-a', '@INPUT@', '@OUTPUT@'
-                            ],
-                            install: true,
-                            install_dir: gnomeshell_theme_dir,
-                            depend_files: theme_sources)
-                            
+custom_target('style-css-@0@'.format(variant),
+  input: style_css,
+  output: output_styles,
+  command: [
+    gnomeshell_copy_and_rename,
+    '--input', '@INPUT@',
+    '--output', '@OUTPUT@',
+  ],
+  install: true,
+  install_dir: install_dir,
+)
