@@ -133,20 +133,20 @@
   .calendar-today {
     font-weight: bold;
     border: 1px solid transparent;
-    background-color: $selected_bg_color;
+    background-color: $entry_color;
     color: $selected_fg_color;
 
     &:hover,&:focus {
-      background-color:lighten($selected_bg_color, 3%);
+      background-color:lighten($entry_color, 3%);
       color: $selected_fg_color;
     }
 
     &:active,&:selected {
-      background-color: $selected_bg_color;
+      background-color: $entry_color;
       color: $selected_fg_color;
 
       &:hover,&:focus {
-        background-color:lighten($selected_bg_color, 3%);
+        background-color:lighten($entry_color, 3%);
         color: $selected_fg_color;
       }
     }

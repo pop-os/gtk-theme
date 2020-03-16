@@ -37,8 +37,9 @@ $popover_arrow_height: 12px;
   &:ltr { padding-right:1.75em; padding-left: 0; }
   &:rtl { padding-right: 0; padding-left:1.75em; }
 
-  &:checked {
-    background-color: lighten($bg_color, 2%);
+  &:checked,
+  &:checked:hover {
+    background-color: $entry_color;;
     box-shadow: none;
   }
 
@@ -48,7 +49,7 @@ $popover_arrow_height: 12px;
   }
 
   &:active { 
-    background-color: $selected_bg_color;
+    background-color: $entry_color;
     color: $selected_fg_color;
   }
 
