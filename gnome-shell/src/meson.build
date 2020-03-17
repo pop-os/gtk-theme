@@ -87,6 +87,16 @@ foreach variant: variants
       depend_files: theme_sources,
     )
   endforeach
+  
+  if not gnomeshell_use_gresource
+    meson.add_install_script(
+      'install-switcher-themes.sh',
+      meson.project_name(),
+      meson.project_name().to_lower(),
+      gnomeshell_default_theme_dir,
+      variant_sufix
+    )
+  endif
 
   theme_css += style_css
 
