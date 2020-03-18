@@ -39,7 +39,8 @@ $popover_arrow_height: 12px;
 
   &:checked,
   &:checked:hover {
-    background-color: $entry_color;;
+    background-color: $entry_color;
+    color: $selected_fg_color;
     box-shadow: none;
   }
 
