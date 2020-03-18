@@ -1,3 +1,9 @@
+pop-gtk-theme (5.1.0) eoan; urgency=medium
+
+  * GNOME 3.36 support
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 17 Mar 2020 13:04:58 -0600
+
 pop-gtk-theme (5.0.0) disco; urgency=medium
 
   * This is the result of making sure Pop does not break upstream GNOME apps. It's very

@@ -1,108 +1,160 @@
-# destination directory
-install_dir = join_paths(gnomeshell_theme_dir, meson.project_name())
-theme_dir = join_paths(get_option('datadir'), 'themes')
-light_install_dir = join_paths(theme_dir, meson.project_name(), 'gnome-shell')
-dark_install_dir = join_paths(theme_dir, meson.project_name()+'-dark', 'gnome-shell')
+sassc = find_program('sassc')
 
-# generate .css files
-theme_sources = files([
-  'gnome-shell-high-contrast.scss',
-  'gnome-shell.scss',
-  'gnome-shell-sass/_colors.scss',
-  'gnome-shell-sass/_common.scss',
-  'gnome-shell-sass/_dock.scss',
-  'gnome-shell-sass/_drawing.scss',
-  'gnome-shell-sass/_high-contrast-colors.scss',
-  'gnome-shell-sass/_ubuntu-colors.scss',
-])
+gnomeshell_theme_dir = join_paths(gnomeshell_default_theme_dir,
+  meson.project_name())
 
 styles = [
+  'gnome-shell',
   'gnome-shell-high-contrast',
-  'gnome-shell'
+]
+variants = [
+  'light',
+  'dark',
 ]
 
-theme_deps = []
+theme_css = []
+theme_sources = files(
+  run_command(
+    'find', meson.current_source_dir(), '-name', '*.scss'
+  ).stdout().strip().split('\n')
+)
+assert(theme_sources.length() > 0, 'No theme sources found')
 
-sassc = find_program('sassc')
-foreach style: styles
-  theme_deps += custom_target('style-' + style,
-                              input: '@0@.scss'.format(style),
-                              output: '@0@.css'.format(style),
-                              command: [
-                                sassc, '-a', '@INPUT@', '@OUTPUT@'
-                              ],
-                              install: true,
-                              install_dir: install_dir,
-                              depend_files: theme_sources)
+source_deps = []
+css_sources_path = meson.current_source_dir()
+if not gnomeshell_use_gresource
+  css_sources_path = meson.current_build_dir()
+  foreach src: theme_sources
+    out_name = '___'.join('@0@'.format(src).split('/'))
+    source_deps += custom_target(out_name,
+      input: src,
+      output: out_name,
+      command: [
+        'bash', '-c',
+        ';'.join([
+          'output="$1/$(realpath --relative-to="'+ meson.current_source_dir() + '" $0)"',
+          'mkdir -p $(dirname "$output")',
+          'sed "s,resource:///org/gnome/shell/theme/,,g" "$0" > "$output"',
+        ]),
+        '@INPUT@',
+        '@OUTDIR@',
+      ],
+      install: false,
+    )
+  endforeach
+endif
+
+foreach variant: variants
+  is_variant = variant != 'light'
+  variant_sufix = is_variant ? '-@0@'.format(variant)  : ''
+
+  if gnomeshell_use_gresource
+    install_dir = join_paths(
+      gnomeshell_alt_themes_dir,
+      meson.project_name() + variant_sufix,
+      'gnome-shell')
+  else
+    install_dir = gnomeshell_theme_dir + variant_sufix
+  endif
+
+  conf_data = configuration_data()
+  conf_data.set('ThemeVariant', variant)
+  theme_main_file = configure_file(
+    input: 'gnome-shell.scss.in',
+    output: 'gnome-shell@0@.scss'.format(variant_sufix),
+    configuration: conf_data,
+  )
+
+  # generate .css files
+  style_css = []
+  output_styles = []
+
+  foreach style: styles
+    stylename = style + variant_sufix
+    output_styles += '@0@.css'.format(style)
+
+    style_css += custom_target(
+      'style-@0@'.format(stylename),
+      input: style == 'gnome-shell' ? theme_main_file : '@0@.scss'.format(style),
+      output: '@0@.css'.format(stylename),
+      command: [
+        sassc, '-a', '@INPUT@', '@OUTPUT@',
+        '-I', css_sources_path,
+      ],
+      install: not is_variant and not gnomeshell_use_gresource,
+      install_dir: install_dir,
+      depends: source_deps,
+      depend_files: theme_sources,
+    )
+  endforeach
+  
+  if not gnomeshell_use_gresource
+    meson.add_install_script(
+      'install-switcher-themes.sh',
+      meson.project_name(),
+      meson.project_name().to_lower(),
+      gnomeshell_default_theme_dir,
+      variant_sufix
+    )
+  endif
+
+  theme_css += style_css
+
+  # This is an hack we need to remove once meson fixes this issue:
+  #  https://github.com/mesonbuild/meson/issues/2320
+  # by just making the style_css to have an output in the 'variant' subdir
+  if is_variant
+    subdir(variant)
+  endif
+
+  ignore_variants = []
+  if not is_variant
+    foreach v: variants
+      if v != variant
+        ignore_variants += ['--filter', '*.@0@.svg'.format(v) ]
+      endif
+    endforeach
+  endif
+
+  gresource_xml = files('data/gnome-shell-theme.gresource.xml')[0]
+  data_sources = run_command(
+    gresources_xml_parser, [
+      join_paths(meson.source_root(), '@0@'.format(gresource_xml)),
+      '--filter', '*.css',
+    ] + ignore_variants,
+  ).stdout().strip().split('\n')
+
+  assert(data_sources.length() > 0 and data_sources[0] != '', 'No data sources found')
+
+  # static files to copy
+  data_sources += files([
+    'lockscreen-gradient.svg',
+    'logged-in-indicator.svg',
+    'noise-texture.png',
+    'pad-osd.css',
+    'running-indicator.svg',
+    'source-button-border.svg',
+    'summary-counter.svg',
+    'toggle-off-intl.svg',
+    'toggle-on-intl.svg',
+    'ws-switch-arrow-down.svg',
+    'ws-switch-arrow-up.svg',
+  ])
+
+  # install static data files
+  install_data(data_sources, install_dir: install_dir)
 endforeach
 
-theme_deps += custom_target('pop-session-theme',
-                            input: 'gnome-shell.scss',
-                            output: 'pop.css',
-                            command: [
-                              sassc, '-a', '@INPUT@', '@OUTPUT@'
-                            ],
-                            install: true,
-                            install_dir: gnomeshell_theme_dir,
-                            depend_files: theme_sources)
-
-# static files to copy
-data_sources = [
-  'calendar-today.svg',
-  'calendar-today-dark.svg',
-  'checkbox-focused.svg',
-  'checkbox-off-focused.svg',
-  'checkbox-off.svg',
-  'checkbox.svg',
-  'checkbox-focused-dark.svg',
-  'checkbox-off-focused-dark.svg',
-  'checkbox-off-dark.svg',
-  'checkbox-dark.svg',
-  'dash-placeholder.svg',
-  'key-enter.svg',
-  'key-hide.svg',
-  'key-layout.svg',
-  'key-shift-latched-uppercase.svg',
-  'key-shift.svg',
-  'key-shift-uppercase.svg',
-  'lockscreen-gradient.svg',
-  'logged-in-indicator.svg',
-  'meson.build',
-  'message-indicator-symbolic.svg',
-  'no-events.svg',
-  'noise-texture.png',
-  'no-notifications.svg',
-  'pad-osd.css',
-  'pointer-double-click-symbolic.svg',
-  'pointer-drag-symbolic.svg',
-  'pointer-primary-click-symbolic.svg',
-  'pointer-secondary-click-symbolic.svg',
-  'process-working.svg',
-  'running-indicator.svg',
-  'source-button-border.svg',
-  'summary-counter.svg',
-  'toggle-off-dark.svg',
-  'toggle-off-hc.svg',
-  'toggle-off-intl.svg',
-  'toggle-off.svg',
-  'toggle-on-dark.svg',
-  'toggle-on-hc.svg',
-  'toggle-on-intl.svg',
-  'toggle-on.svg',
-  'ws-switch-arrow-down.svg',
-  'ws-switch-arrow-up.svg',
-]
-
-subdir('light')
-subdir('dark')
-
-# install static data files
-install_data(data_sources, install_dir: join_paths(gnomeshell_theme_dir, meson.project_name()))
-install_data(data_sources, install_dir: light_install_dir)
-install_data(data_sources, install_dir: dark_install_dir)
-
-run_command(
-  'cp',
-  '/usr/share/gnome-shell/theme/Pop/gnome-shell.css',
-  '/usr/share/gnome-shell/theme/pop.css'
+if gnomeshell_use_gresource
+  gnome.compile_resources(
+    'gnome-shell-theme',
+    gresource_xml,
+    dependencies: theme_css,
+    gresource_bundle: true,
+    install: true,
+    install_dir: gnomeshell_theme_dir,
 )
+else
+  # Symlink default variant
+  meson.add_install_script('install-shell.sh', meson.project_name())
+endif

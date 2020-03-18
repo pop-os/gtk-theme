@@ -1,0 +1,34 @@
+/* Check Boxes */
+
+// these are equal to the size of the SVG assets
+$check_height: 22px;
+$check_width: 24px;
+
+
+.check-box {
+  StBoxLayout { spacing: .8em; }
+  StBin {
+    width: $check_width;
+    height: $check_height;
+    background-image: if($variant == 'light', 
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-off.svg"),
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-off-dark.svg"));
+  }
+  &:focus StBin {
+    background-image: if($variant == 'light', 
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-off-focused.svg"),
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-off-focused-dark.svg"));
+  }
+
+  &:checked StBin {
+    background-image: if($variant == 'light', 
+      url("/usr/share/gnome-shell/theme/Pop/checkbox.svg"),
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-dark.svg"));
+  }
+
+  &:focus:checked StBin {
+    background-image: if($variant == 'light', 
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-focused.svg"),
+      url("/usr/share/gnome-shell/theme/Pop/checkbox-focused-dark.svg"));
+  }
+}
