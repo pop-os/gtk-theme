@@ -6,11 +6,11 @@
 }
 
 .login-dialog {
-  $_gdm_bg: $gdm_grey;
   //reset
   border: none;
-  background-color: $_gdm_bg;
-
+  background-color: transparent;
+  
+  $_gdm_bg: $gdm_grey;
 
   StEntry {
     @if $variant=='dark' {
