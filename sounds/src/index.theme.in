@@ -1,6 +1,6 @@
 [Sound Theme]
 Name=@ThemeName@
-Comment=The @ThemName@ Sound Theme
+Comment=The @ThemeName@ Sound Theme
 Directories=stereo/alert stereo/action stereo/notification
 
 [stereo/alert]
