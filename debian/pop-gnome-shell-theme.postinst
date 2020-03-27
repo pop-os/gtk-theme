@@ -3,9 +3,11 @@
 set -e
 
 if [ "$1" = configure ]; then
-  update-alternatives --install /usr/share/gnome-shell/theme/gdm3.css \
-    gdm3.css /usr/share/gnome-shell/theme/pop-dark.css 15
+  update-alternatives --install \
+    /usr/share/gnome-shell/gdm3-theme.gresource \
+    gdm3-theme.gresource \
+    /usr/share/gnome-shell/theme/Pop/gnome-shell-theme.gresource \
+    20
 fi
 
 #DEBHELPER#
-

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "upgrade" ]; then
+  # Remove older deprecated themes. Can be removed post 20.04
+  if dpkg --compare-versions "$2" lt-nl 5.1.1; then
+    update-alternatives --remove gdm3.css \
+      /usr/share/gnome-shell/theme/pop-dark.css || true
+  fi
+fi
+
+#DEBHELPER#
