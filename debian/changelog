@@ -1,3 +1,9 @@
+pop-gtk-theme (5.1.1) focal; urgency=medium
+
+  * Support gdm3-theme.gresource alternative
+
+ -- Jeremy Soller <jeremy@system76.com>  Fri, 27 Mar 2020 13:04:20 -0600
+
 pop-gtk-theme (5.1.0) eoan; urgency=medium
 
   * GNOME 3.36 support
