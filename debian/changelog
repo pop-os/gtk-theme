@@ -1,3 +1,9 @@
+pop-gtk-theme (5.1.2) focal; urgency=medium
+
+  * Update asset links for gresource theme
+
+ -- Jeremy Soller <jeremy@system76.com>  Mon, 30 Mar 2020 09:33:28 -0600
+
 pop-gtk-theme (5.1.1) focal; urgency=medium
 
   * Support gdm3-theme.gresource alternative

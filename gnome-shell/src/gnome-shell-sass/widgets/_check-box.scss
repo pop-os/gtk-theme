@@ -11,24 +11,24 @@ $check_width: 24px;
     width: $check_width;
     height: $check_height;
     background-image: if($variant == 'light', 
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-off.svg"),
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-off-dark.svg"));
+      url("resource:///org/gnome/shell/theme/checkbox-off.svg"),
+      url("resource:///org/gnome/shell/theme/checkbox-off-dark.svg"));
   }
   &:focus StBin {
     background-image: if($variant == 'light', 
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-off-focused.svg"),
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-off-focused-dark.svg"));
+      url("resource:///org/gnome/shell/theme/checkbox-off-focused.svg"),
+      url("resource:///org/gnome/shell/theme/checkbox-off-focused-dark.svg"));
   }
 
   &:checked StBin {
     background-image: if($variant == 'light', 
-      url("/usr/share/gnome-shell/theme/Pop/checkbox.svg"),
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-dark.svg"));
+      url("resource:///org/gnome/shell/theme/checkbox.svg"),
+      url("resource:///org/gnome/shell/theme/checkbox-dark.svg"));
   }
 
   &:focus:checked StBin {
     background-image: if($variant == 'light', 
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-focused.svg"),
-      url("/usr/share/gnome-shell/theme/Pop/checkbox-focused-dark.svg"));
+      url("resource:///org/gnome/shell/theme/checkbox-focused.svg"),
+      url("resource:///org/gnome/shell/theme/checkbox-focused-dark.svg"));
   }
 }
