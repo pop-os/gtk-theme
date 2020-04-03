@@ -1,0 +1,48 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _pop-shop.scss - App overrides for Pop_Shop
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+// Appcenter uses textviews for displaying App info/changelogs
+window.csd > stack > stack.view {
+  > grid.horizontal > overlay viewport.frame > grid.horizontal {
+    > grid.vertical {
+      textview.view text,
+      grid.horizontal > list {
+        background-color: $bg_color;
+      }
+    }
+  }
+  
+  box.vertical > scrolledwindow > viewport.frame > list > row.activatable {
+    &:hover {
+      background-color: $bg_color;
+
+      button.text-button {
+        background-color: darken($bg_color, 10%);
+
+        &:hover {
+          background-color: darken($bg_color, 20%);
+        }
+      }
+    }
+
+    > grid.horizontal > stack {
+      padding: 6px;
+      
+      button.text-button {
+        @include button(undecorated);
+        background-color: darken($bg_color, 10%);
+      }
+    }
+  }
+}
+
+window.csd > headerbar.titlebar > stack > revealer > overlay {
+  > box.horizontal.linked.raised {
+    margin: 0;
+  }
+}

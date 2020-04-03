@@ -1,0 +1,12 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _avatar.scss - Circular Avatar Images
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.avatar {
+  border-radius: $circular_radius;
+  box-shadow: none;
+}

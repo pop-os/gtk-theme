@@ -1,0 +1,232 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _storage-bar.scss - Storage Bar widget for dividing storage space
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.storage-bar {
+
+  .trough {
+    padding: $small_padding $tiny_padding;
+    border: none;
+    border-radius: $corner_radius $corner_radius 0 0;
+    background-image: none;
+    box-shadow: $shadow_2;
+  }
+  
+  .fill-block {
+    padding: $small_padding $tiny_padding;
+    border: $border_size solid rgba(black, 0.35);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: $border_size;
+    border-left-width: 0;
+    border-radius: 0;
+    border-bottom-color: darken($borders_color, 35%);
+    background-color: darken($base_color, 15%);
+    
+    &:first-child {
+      border-radius: $corner_radius 0 0;
+    }
+    
+    &:last-child {
+      border-radius: 0 $corner_radius 0 0;
+    }
+    
+    &:only-child {
+      border-radius: $corner_radius $corner_radius 0 0;
+    }
+    
+    image {
+      -gtk-icon-style: symbolic;
+    }
+  }
+
+  .empty-block {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken($borders_color, 40%);
+    background-color: darken($base_color, 5%);
+    
+    image {
+      color: black;
+    }
+  }
+
+  .app {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken(#CF7DFF, 30%);
+    background-color: #CF7DFF;
+    
+    image {
+      color: white;
+    }
+  }
+
+  .audio {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken(#FFAD00, 20%);
+    background-color: #FFAD00;
+    
+    image {
+      color: black;
+    }
+  }
+
+  .files {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken(#63B1BC, 20%);
+    background-color: #63B1BC;
+    
+    image {
+      color: black;
+    }
+  }
+
+  .photo {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken(#82BF8C, 30%);
+    background-color: #82BF8C;
+    
+    image {
+      color: black;
+    }
+  }
+
+  .video {
+    border-bottom-width: $border_size;
+    border-bottom-color: darken(#E56A54, 20%);
+    background-color: #E56A54;
+    
+    image {
+      color: white;
+    }
+  }
+
+  .legend {
+    padding: $small_padding;
+    border-radius: 50%;
+    
+    image {
+      color: black;
+    }
+  }
+  
+  .disk-bar {
+    padding: 0;
+    border-radius: $corner_radius;   
+    background-color: #ADA29E; 
+  } 
+
+  .ext2, .ext3, .ext4, .fat16, .fat32, .btrfs, 
+  .xfs,  .ntfs, .luks, .lvm,   .none,  .swap , .unused {
+    // sass-lint:disable-block indentation
+    border: none;
+    box-shadow: 
+      inset 0 -2px rgba(#574F4A, 0.5),
+      inset 1px 0 rgba(#574F4A, 0.5),
+      inset -1px 0 rgba(#574F4A, 0.5);
+  }
+
+  .swap { 
+    background-color: #A0252B; 
+    
+    image {
+      color: white;
+    }
+  }
+
+  .ext4 { 
+    background-color: #82BF8C; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .ext3 { 
+    background-color: #3B6E43; 
+    
+    image {
+      color: white;
+    }
+  }
+
+  .ext2 { 
+    background-color: #90CFB0; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .fat16, 
+  .fat32 { 
+    background-color: #FEDB40; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .btrfs { 
+    background-color: #00496D; 
+    
+    image {
+      color: white;
+    }
+  }
+
+  .xfs { 
+    background-color: #95C4FC; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .ntfs { 
+    background-color: #FFAD00; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .luks { 
+    background-color: #E5B3FF; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .lvm { 
+    background-color: #CF7DFF; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .none { 
+    background-color: #63B1BC; 
+    
+    image {
+      color: black;
+    }
+  }
+
+  .unused { 
+    background-color: #ADA29E; 
+    
+    image {
+      color: black;
+    }
+  }
+  
+  .legend { 
+    box-shadow: none; 
+  }
+}
