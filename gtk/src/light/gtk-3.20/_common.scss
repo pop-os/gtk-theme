@@ -168,7 +168,7 @@ flowbox {
   background-color: if($variant=='light', transparent, black);
   border-radius: 0;
   padding: 0;
-  
+
   &:backdrop { background-color: if($variant=='light', transparent, darken($backdrop_base_color,5%)); }
   &:active, &:selected { background-color: if($variant=='light', transparent, $selected_bg_color); }
   &:disabled { background-color: if($variant=='light', transparent, $insensitive_bg_color); }
@@ -196,15 +196,19 @@ label {
   &:disabled {
     color: $insensitive_fg_color;
 
-    selection { @extend %selected_items:disabled; }
+    button & { color: inherit; }
 
-    &:backdrop { color: $backdrop_insensitive_color; }
+    &:backdrop {
+      color: $backdrop_insensitive_color;
+
+      button & { color: inherit; }
+    }
+
+    selection { @extend %selected_items_disabled; }
   }
 
   &:backdrop {
-    color: $backdrop_fg_color;
-
-    selection { @extend %selected_items:backdrop; }
+    selection { @extend %selected_items_backdrop; }
   }
 }
 
@@ -268,6 +272,47 @@ spinner {
   }
 }
 
+/**********************
+ * General Typography *
+ **********************/
+
+.large-title {
+   font-weight: 300;
+   font-size: 24pt;
+   letter-spacing: 0.2rem;
+}
+.title-1 {
+   font-weight: 800;
+   font-size: 20pt;
+}
+.title-2 {
+   font-weight: 800;
+   font-size: 15pt;
+}
+.title-3 {
+   font-weight: 700;
+   font-size: 15pt;
+}
+.title-4 {
+   font-weight: 700;
+   font-size: 13pt;
+}
+.heading {
+   font-weight: 700;
+   font-size: 11pt;
+}
+.body {
+   font-weight: 400;
+   font-size: 11pt;
+}
+.caption-heading {
+   font-weight: 700;
+   font-size: 9pt;
+}
+.caption {
+   font-weight: 400;
+   font-size: 9pt;
+}
 
 /****************
  * Text Entries *
@@ -543,6 +588,7 @@ button {
 
     @include button(normal);
 
+    @at-root %button_basic_flat,
     &.flat {
       @include button(undecorated);
       // to avoid adiacent buttons borders clashing when transitioning, the transition on the normal state is set
@@ -590,6 +636,7 @@ button {
       }
     }
 
+    @at-root %button_basic_flat,
     &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
 
     &:disabled {
@@ -620,6 +667,7 @@ button {
       }
     }
 
+    @at-root %button_basic_drop_active,
     &:drop(active) {
       color: $drop_target_color;
       border-color: $drop_target_color;
@@ -630,12 +678,16 @@ button {
   @at-root %button_selected, & {
     row:selected & {
       @if $variant == 'light' { border-color: $selected_borders_color; }
+    }
 
-      &.flat:not(:active):not(:checked):not(:hover):not(disabled) {
-        color: $selected_fg_color;
-        border-color: transparent;
+    @at-root %button_selected_flat, &.flat {
+      row:selected & {
+        &:not(:active):not(:checked):not(:hover):not(disabled) {
+          color: $selected_fg_color;
+          border-color: transparent;
 
-        &:backdrop { color: if($variant=='light', $backdrop_base_color, $backdrop_fg_color); }
+          &:backdrop { color: if($variant=='light', $backdrop_base_color, $backdrop_fg_color); }
+        }
       }
     }
   }
@@ -873,14 +925,14 @@ button {
 
     $_border_bg: linear-gradient(to top, $alt-borders-color 25%, $borders-color 50%);
 
-    &:not(.flat):not(:checked):not(:active):not(:disabled):not(:backdrop) {
+    &:not(.flat):not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) {
       @include button(normal);
 
       background-image: $button_fill, $_border_bg;
       border-color: transparent;
     }
 
-    &:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
+    &:hover:not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) {
       @include button(hover);
 
       background-image: $button_fill, $_border_bg;
@@ -961,16 +1013,17 @@ toolbar.inline-toolbar toolbutton,
 toolbar.inline-toolbar toolbutton:backdrop {
   > button.flat { @extend %linked_middle; }
 
-  &:first-child > button.flat { @extend %linked:first-child; }
+  &:first-child > button.flat { @extend %linked_left; }
 
-  &:last-child > button.flat { @extend %linked:last-child; }
+  &:last-child > button.flat { @extend %linked_right; }
 
-  &:only-child > button.flat { @extend %linked:only-child; }
+  &:only-child > button.flat { @extend %linked_only_child; }
 }
 
 %linked_middle {
   border-radius: 0;
   border-right-style: none;
+  -gtk-outline-radius: 0;
 }
 
 %linked_left {
@@ -979,6 +1032,10 @@ toolbar.inline-toolbar toolbutton:backdrop {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right-style: none;
+    -gtk-outline-bottom-left-radius: $button_radius;
+    -gtk-outline-top-left-radius: $button_radius;
+    -gtk-outline-top-right-radius: 0;
+    -gtk-outline-bottom-right-radius: 0;
 }
 
 %linked_right {
@@ -987,6 +1044,16 @@ toolbar.inline-toolbar toolbutton:backdrop {
     border-top-right-radius: $button_radius;
     border-bottom-right-radius: $button_radius;
     border-right-style: solid;
+    -gtk-outline-bottom-right-radius: $button_radius;
+    -gtk-outline-top-right-radius: $button_radius;
+    -gtk-outline-bottom-left-radius: 0;
+    -gtk-outline-top-left-radius: 0;
+}
+
+%linked_only_child {
+    border-radius: $button_radius;
+    border-style: solid;
+    -gtk-outline-radius: $button_radius;
 }
 
 // .linked assumes Box, which reverses nodes in RTL, so 1st child is always left
@@ -996,10 +1063,7 @@ toolbar.inline-toolbar toolbutton:backdrop {
   &:first-child { @extend %linked_left; }
   &:last-child { @extend %linked_right; }
 
-  &:only-child {
-    border-radius: $button_radius;
-    border-style: solid;
-  }
+  &:only-child { @extend %linked_only_child; }
 }
 
 // Other widgets use widget child order, so 1st/last child are at text start/end
@@ -1016,10 +1080,7 @@ toolbar.inline-toolbar toolbutton:backdrop {
     &:last-child { @extend %linked_left; }
   }
 
-  &:only-child {
-    border-radius: $button_radius;
-    border-style: solid;
-  }
+  &:only-child { @extend %linked_only_child; }
 }
 
 %linked_vertical_middle {
@@ -1027,24 +1088,30 @@ toolbar.inline-toolbar toolbutton:backdrop {
   border-radius: 0;
 }
 
+%linked_vertical_top {
+  border-top-left-radius: $button_radius;
+  border-top-right-radius: $button_radius;
+}
+
+%linked_vertical_bottom {
+  border-bottom-left-radius: $button_radius;
+  border-bottom-right-radius: $button_radius;
+  border-style: solid;
+}
+
+%linked_vertical_only_child {
+  border-radius: $button_radius;
+  border-style: solid;
+}
+
 %linked_vertical{
   @extend %linked_vertical_middle;
 
-  &:first-child {
-    border-top-left-radius: $button_radius;
-    border-top-right-radius: $button_radius;
-  }
+  &:first-child { @extend %linked_vertical_top; }
 
-  &:last-child {
-    border-bottom-left-radius: $button_radius;
-    border-bottom-right-radius: $button_radius;
-    border-style: solid;
-  }
+  &:last-child { @extend %linked_vertical_bottom; }
 
-  &:only-child {
-    border-radius: $button_radius;
-    border-style: solid;
-  }
+  &:only-child { @extend %linked_vertical_only_child; }
 }
 
 %undecorated_button {
@@ -1158,7 +1225,7 @@ button:link,
 button:visited {
   @extend %undecorated_button;
 
-  @extend *:link;
+  @extend %link;
 
   text-shadow: none;
 
@@ -1395,15 +1462,15 @@ combobox {
 
   &.linked {
     button:nth-child(2) {
-      &:dir(ltr) { @extend %linked:last-child; }
-      &:dir(rtl) { @extend %linked:first-child; }
+      &:dir(ltr) { @extend %linked_right; }
+      &:dir(rtl) { @extend %linked_left; }
     }
   }
 
   &:drop(active) { // FIXME: untested
     box-shadow: none;
 
-    button.combo { @extend %button_basic:drop(active); }
+    button.combo { @extend %button_basic_drop_active; }
   }
 }
 
@@ -1416,14 +1483,14 @@ combobox {
   &:dir(rtl) { @extend %linked_middle; } // specificity bump
 }
 
-.linked:not(.vertical) > combobox:first-child > box > button.combo { @extend %linked:first-child; }
-.linked:not(.vertical) > combobox:last-child > box > button.combo { @extend %linked:last-child; }
-.linked:not(.vertical) > combobox:only-child > box > button.combo { @extend %linked:only-child; }
+.linked:not(.vertical) > combobox:first-child > box > button.combo { @extend %linked_left; }
+.linked:not(.vertical) > combobox:last-child > box > button.combo { @extend %linked_right; }
+.linked:not(.vertical) > combobox:only-child > box > button.combo { @extend %linked_only_child; }
 
 .linked.vertical > combobox > box > button.combo { @extend %linked_vertical_middle; }
-.linked.vertical > combobox:first-child > box > button.combo { @extend %linked_vertical:first-child;}
-.linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
-.linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
+.linked.vertical > combobox:first-child > box > button.combo { @extend %linked_vertical_top;}
+.linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical_bottom; }
+.linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical_only_child; }
 
 
 /************
@@ -1576,18 +1643,19 @@ headerbar {
       background-color: $suggested_bg_color;
       background-image: none;
       box-shadow: inset 0 1px mix($top_hilight, $suggested_bg_color, 60%);
-      
-      label { 
+
+      label {
         text-shadow: none;
-        color: $selected_fg_color; 
+        color: $selected_fg_color;
       }
     }
 
-    .subtitle:link { @extend *:link:selected;  }
+    .subtitle:link { @extend %link_selected; }
 
     button {
       @include button(normal, $suggested_bg_color, $selected_fg_color);
 
+      @at-root %selection_mode_button_flat,
       &.flat { @include button(undecorated); }
 
       &:hover { @include button(hover, $suggested_bg_color, $selected_fg_color); }
@@ -1625,6 +1693,7 @@ headerbar {
         }
       }
 
+      @at-root %selection_mode_button_flat,
       &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
 
       &:disabled {
@@ -1715,9 +1784,9 @@ headerbar {
       padding: 0;
     }
   }
-  
 
-  
+
+
   separator.titlebutton { opacity: 0; } /* hide the close button separator */
 
   .solid-csd & {
@@ -2077,7 +2146,7 @@ menubar,
 
     // remove padding and rounding from menubar submenus
     menu {
-      .csd &, & {
+      &:dir(rtl), &:dir(ltr) { // specificity bump
         border-radius: 0;
         padding: 0;
       }
@@ -2223,6 +2292,13 @@ popover.background {
   .csd &, & {
     border: 1px solid $borders_color;
     border-radius: $popover_radius;
+  }
+
+  .csd & {
+    $_popover_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
+
+    background-clip: padding-box;
+    border-color: $_popover_border;
   }
 
   box-shadow: 0 1px 2px transparentize(black, 0.7);
@@ -2379,7 +2455,7 @@ notebook {
     > tabs > arrow {
       @extend %button_basic;
 
-      @extend %button_basic.flat;
+      @extend %button_basic_flat;
 
       min-height: 16px;
       min-width: 16px;
@@ -2765,12 +2841,12 @@ switch {
 
     @if $variant == 'light' {
       @include button(normal-alt, $edge: $shadow_color);
-    } 
+    }
     @else {
       @include button(normal-alt, $c: lighten($bg_color,6%), $edge: $shadow_color);
     }
   }
-  
+
   image { color: transparent; } /* only show i / o for the accessible theme */
 
   &:hover slider {
@@ -3739,6 +3815,7 @@ list {
   border-color: $borders_color;
 
   &:backdrop {
+    color: $backdrop_text_color;
     background-color: $backdrop_base_color;
     border-color: $backdrop_borders_color;
   }
@@ -3893,15 +3970,31 @@ messagedialog { // Message Dialog styling
       border-right-style: none;
       border-bottom-style: none;
 
-      &:first-child{
+      &:first-child:not(:only-child) {
         border-left-style: none;
-        border-bottom-left-radius: 7px;
-        -gtk-outline-bottom-left-radius: 5px;
+        border-bottom-left-radius: $button_radius + 2;
+        -gtk-outline-bottom-left-radius: $button_radius + 2;
+        -gtk-outline-top-left-radius: 0px;
+        -gtk-outline-top-right-radius: 0px;
+        -gtk-outline-bottom-right-radius: 0px;
       }
 
-      &:last-child {
-        border-bottom-right-radius: 7px;
-        -gtk-outline-bottom-right-radius: 5px;
+      &:last-child:not(:only-child) {
+        border-bottom-right-radius: $button_radius + 2;
+        -gtk-outline-bottom-right-radius: $button_radius + 2;
+        -gtk-outline-top-right-radius: 0px;
+        -gtk-outline-bottom-left-radius: 0px;
+        -gtk-outline-top-left-radius: 0px;
+      }
+      &:only-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: $button_radius + 2;
+        border-bottom-right-radius: $button_radius + 2;
+        -gtk-outline-top-right-radius: 0px;
+        -gtk-outline-top-left-radius: 0px;
+        -gtk-outline-bottom-left-radius: $button_radius + 2;
+        -gtk-outline-bottom-right-radius: $button_radius + 2;
       }
     }
   }
@@ -4004,7 +4097,7 @@ separator.sidebar {
 $_placesidebar_icons_opacity: 0.7;
 
 row image.sidebar-icon { opacity: $_placesidebar_icons_opacity; } // dim the sidebar icons
-                                                                  // see bug #786613 for details 
+                                                                  // see bug #786613 for details
                                                                   // on this oddity
 
 placessidebar {
@@ -4042,9 +4135,9 @@ placessidebar {
     }
 
     @at-root button.sidebar-button {
-      @extend %button_basic.flat;
+      @extend %button_basic_flat;
 
-      @extend %button_selected.flat;
+      @extend %button_selected_flat;
 
       min-height: 26px;
       min-width: 26px;
@@ -4181,13 +4274,19 @@ paned {
 infobar {
   border-style: none;
 
+  &.action:hover > revealer > box {
+      background-color: if($variant == 'light', desaturate(lighten(invert($selected_bg_color), 47%), 30%),
+                        desaturate(darken(invert($selected_bg_color),42%), 70%));
+      border-bottom: 1px solid lighten($borders_color, 5%);
+  }
+
   &.info,
   &.question,
   &.warning,
   &.error {
     &:backdrop > revealer > box, & > revealer > box {
       label, & { color: $fg_color; }
-      background-color: if($variant == 'light', desaturate(lighten(invert($selected_bg_color), 45%), 30%), 
+      background-color: if($variant == 'light', desaturate(lighten(invert($selected_bg_color), 45%), 30%),
                         desaturate(darken(invert($selected_bg_color),40%), 70%));
       border-bottom: 1px solid lighten($borders_color, 5%);
     }
@@ -4519,7 +4618,7 @@ decoration {
 button.titlebutton {
   @extend %button_basic;
 
-  @extend %button_basic.flat;
+  @extend %button_basic_flat;
 
   @include _button_text_shadow;
 
@@ -4532,7 +4631,7 @@ button.titlebutton {
   }
 
   .selection-mode & {
-    @extend %button.flat.suggested-action;
+    @extend %selection_mode_button_flat;
 
     @extend %nobg_selected_items;
   }
@@ -4549,7 +4648,6 @@ headerbar.selection-mode button.titlebutton,
   &:backdrop { -gtk-icon-shadow: none; }
 }
 
-
 // catch all extend :)
 
 %selected_items {
@@ -4558,8 +4656,10 @@ headerbar.selection-mode button.titlebutton,
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
 
+    @at-root %selected_items_disabled,
     &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }
 
+    @at-root %selected_items_backdrop,
     &:backdrop {
       color: $backdrop_selected_fg_color;
 
@@ -4672,7 +4772,12 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
  * Emoji *
  ********/
 
-popover.emoji-picker { padding-left: 0; padding-right: 0; }
+popover.emoji-picker {
+  padding-left: 0;
+  padding-right: 0;
+
+  entry.search { margin: 3px 5px 5px 5px; }
+}
 
 button.emoji-section {
   border-color: transparent;
@@ -4692,8 +4797,11 @@ button.emoji-section {
 
   outline-offset: -5px;
 
+  &:first-child { margin-left: 7px; }
+  &:last-child { margin-right: 7px; }
+
   &:backdrop:not(:checked) { border-color: transparent; }
-  &:hover { border-color: $borders_color; }
+  &:hover { border-color: if($variant == 'light', $borders_color, transparentize($fg_color, .9)); }
   &:checked { border-color: $selected_bg_color; }
 
   label {
