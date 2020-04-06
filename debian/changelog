@@ -1,3 +1,11 @@
+pop-gtk-theme (5.2.0) focal; urgency=medium
+
+  * Sync Theme with Upstream Theme
+    - Adds support for text classes
+    - Fixes builds due to libsass changes
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 03 Apr 2020 11:28:49 -0600
+
 pop-gtk-theme (5.1.2) focal; urgency=medium
 
   * Update asset links for gresource theme

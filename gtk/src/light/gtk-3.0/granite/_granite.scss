@@ -1,0 +1,78 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _granite.scss - Master File for Granite Widgets.
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+ 
+// Radii
+$corner_radius: 4px;
+$circular_radius: 999px;
+
+// Sizes
+$mini_size: 4px;
+$tiny_size: 12px;
+$small_size: 16px;
+$medium_size: 24px;
+$large_size: 32px;
+
+$line_size: 2px;
+$border_size: 1px;
+$progress_size: 4px;
+$marks_size: 6px;
+$check_size: 18px;
+$switch_size: 20px;
+$toolbar_size: 42px;
+$arrow_size: 19px;
+$scrollbar_size: 10px;
+$icon_size: 16px;
+
+// Padding
+$no_padding: 1px;
+$mini_padding: 2px;
+$tinier_padding: 4px;
+$tiny_padding: 6px;
+$small_padding: 8px;
+$standard_padding: 12px;
+$large_padding: 16px;
+
+$no_padding_em: 0.1em;
+$mini_padding_em: 0.15em;
+$tinier_padding_em: 0.3em;
+$tiny_padding_em: 0.5em;
+$small_padding_em: 0.6em;
+$standard_padding_em: 1em;
+$large_padding_em: 1.4em;
+
+// Shadows:
+$shadow_0: 0 1px 2px rgba(0,  0,  0,  0.08);
+$shadow_1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow_2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow_3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow_4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow_5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+$shadow_hover: $shadow_4;
+$shadow_window: 0 6px 12px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
+$shadow_window_bd: 0 6px 12px transparent, 0 4px 4px transparent;
+
+// Durations
+$transition_duration: 300ms;
+
+// Transitions
+$standard_transition: all $transition_duration cubic-bezier(0.25, 0.8, 0.25, 1);
+$fast_transition: all $transition_duration / 3 cubic-bezier(0.25, 0.8, 0.25, 1);
+
+@import 'avatar';
+@import 'back-button';
+@import 'cards';
+@import 'storage-bar';
+@import 'welcome';
+@import 'rounded-window';
+@import 'text-styles';
+@import 'nice-scales';
+@import 'terminal';
+@import 'mode-switch';
+@import 'accent';
+@import 'palette';
+@import 'pop-shop'

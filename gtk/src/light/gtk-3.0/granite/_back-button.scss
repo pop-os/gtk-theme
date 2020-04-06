@@ -1,0 +1,55 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _back-button.scss - Back Buttons with Arrows
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+button.back-button,
+button.back-button.text-button {
+  padding-right: $small_padding;
+  padding-left: $standard_padding * 3;
+  transition: $standard_transition;
+  background-image: -gtk-icontheme('go-previous-symbolic');
+  background-repeat: no-repeat no-repeat;
+  background-position: 5px 50%;
+  background-size: 21px;
+  
+  .titlebar & {
+    @include button(normal, $_headerbar_button_bg, $headerbar_fg_color);
+    background-color: $_headerbar_button_bg;
+    background-image: -gtk-icontheme('go-previous-symbolic');
+    background-repeat: no-repeat no-repeat;
+    background-position: 5px 50%;
+    background-size: 21px;
+    padding-left: $standard_padding * 3;
+    
+    &:hover {
+      @include button(hover, lighten($headerbar_bg_color, 8%), $headerbar_fg_color);
+      background-image: -gtk-icontheme('go-previous-symbolic');
+      background-repeat: no-repeat no-repeat;
+      background-position: 5px 50%;
+      background-size: 21px;
+    }
+    
+    &:active {
+      $_bg: lighten($headerbar_bg_color, if($variant==light, 0%, 1%));
+      @include button(active, $_bg, $headerbar_fg_color);
+      border-color: rgb(20, 19, 19);
+      background-image: -gtk-icontheme('go-previous-symbolic');
+      background-repeat: no-repeat no-repeat;
+      background-position: 5px 50%;
+      background-size: 21px;
+    }
+  }
+  
+  &:dir(rtl) {
+    padding: $tiny_padding_em $small_padding_em;
+    padding-right: $standard_padding * 3;
+    padding-left: $small_padding;
+    background-image: -gtk-icontheme('go-next-symbolic');
+    background-repeat: no-repeat no-repeat;
+    background-position: 90% 50%;
+  }
+}
