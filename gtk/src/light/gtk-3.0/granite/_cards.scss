@@ -1,0 +1,28 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _cards.scss - Cards that float above their parent surface
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.deck {
+  background-color: $base_color;
+}
+
+.card {
+  transition: $standard_transition;
+  border: none;
+  border-radius: $corner_radius;
+  background-color: $base_color;  
+  box-shadow: $shadow_2;
+  
+  &:checked {
+    box-shadow: $shadow_3;
+  }
+  
+  &.collapsed {
+    background-color: $bg_color;
+    box-shadow: $shadow_1;
+  }
+}

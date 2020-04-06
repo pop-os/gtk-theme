@@ -1,0 +1,20 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _rounded-window.scss - Rounded Windows
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+window.rounded,
+window.rounded actionbar {
+  border-radius: 0 0 $corner_radius $corner_radius;
+  
+  decoration {
+    border-radius: $corner_radius;
+  }
+}
+
+window.flat headerbar {
+  box-shadow: none;
+}

@@ -493,9 +493,9 @@
 // $hc: top highlight color
 // $ov: a background layer for background shorthand (hence no commas!)
 //
-  $gradient: linear-gradient(to top, darken($c, 2%), lighten($c, 1%));
+  $gradient: linear-gradient(to top, darken($c, 0%), lighten($c, 0%));
 
-  @if $variant == 'dark' { $gradient: linear-gradient(to top, lighten($c, 4%), lighten($c, 6%)); }
+  @if $variant == 'dark' { $gradient: linear-gradient(to top, lighten($c, 3%), lighten($c, 3%)); }
 
   @if $ov != none { background: $c $ov, $gradient; }
   @else { background: $c $gradient; }
