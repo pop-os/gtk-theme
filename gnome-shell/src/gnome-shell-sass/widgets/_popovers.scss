@@ -45,7 +45,7 @@ $popover_arrow_height: 12px;
   }
 
   &.selected {
-    background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+    background-color: rgba($fg_color, 0.1);
     color: $fg_color;
   }
 

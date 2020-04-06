@@ -1,0 +1,13 @@
+// This file is part of the Pop!_GTK Theme.
+// See gtk.scss for full license and copyright information
+/* 
+ * _mode-switch.scss - Switches that pick between two different things
+ *
+ * File credits: Ian Santopietro <isantop@gmail.com>
+ */
+
+.mode-switch,
+.mode-switch:checked {
+  background-color: $checkradio_bg_color;
+  background-image: none;
+}
