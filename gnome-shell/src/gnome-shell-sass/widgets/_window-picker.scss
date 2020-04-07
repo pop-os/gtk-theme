@@ -3,7 +3,7 @@
 $window_picker_spacing: $base_spacing * 2; // 16px
 $window_picker_padding: $base_padding * 2; // 16px
 
-$window_thumbnail_border_color:transparentize($selected_fg_color, 0.65);
+$window_thumbnail_border_color: $entry_color;
 
 $window_close_button_size: 24px;
 $window_close_button_padding: 3px;
@@ -45,8 +45,8 @@ $window_close_button_padding: 3px;
 
 // Close button
 .window-close {
-  background-color: $entry_color;
-  color: $selected_fg_color;
+  background-color: $close_button_color;
+  color: white;
   border: none;
   border-radius: $window_close_button_size * 0.5 + $window_close_button_padding * 2;
   padding: $window_close_button_padding;
