@@ -63,5 +63,6 @@
 
 // Window cycler highlight
 .cycler-highlight {
-  border: 5px solid $selected_bg_color;
+  border: 4px solid $entry_color;
+  border-radius: $base_border_radius;
 }
