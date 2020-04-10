@@ -1,7 +1,7 @@
 gnome = import('gnome')
 sassc = find_program('sassc')
 
-gtk3_dir = join_paths(theme_dir, 'gtk-3.20')
+gtk3_dir = join_paths(theme_dir, 'gtk-3.0')
 
 # theme sources .scss files
 gtk3_scss_sources = [
