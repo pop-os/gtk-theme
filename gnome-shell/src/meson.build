@@ -107,6 +107,10 @@ foreach variant: variants
     subdir(variant)
   endif
 
+  if not is_variant
+    subdir('light')
+  endif
+
   ignore_variants = []
   if not is_variant
     foreach v: variants
