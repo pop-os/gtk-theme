@@ -610,7 +610,9 @@ radio {
   }
 }
 
-// treeview.view Progressbar improvements
+/******************************************
+ * treeview.view Progressbar improvements *
+ ******************************************/
 treeview.view.trough,
 treeview.view.progressbar {
   background: none;
@@ -643,9 +645,8 @@ treeview.view.trough:selected {
 }
 
 treeview.view {
-  background: none;
   color: $fg_color;
-  background-color: transparent;
+  background-color: $bg_color;
 }
 
 treeview.view:selected {
