@@ -2981,7 +2981,7 @@ radio {
   @if $variant == 'light' {
     // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
     // color, hence we need special casing.
-    row:selected & { border-color: $checkradio_borders_color; }
+    row:selected & { border-color: $checkradio_bg_color; }
   }
 
   .osd & {
