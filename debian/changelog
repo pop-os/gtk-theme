@@ -1,3 +1,9 @@
+pop-gtk-theme (5.3.0) groovy; urgency=medium
+
+  * Sync sources with Adwaita 3.38 for 20.10
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 19 Oct 2020 14:25:04 -0600
+
 pop-gtk-theme (5.2.0) focal; urgency=medium
 
   * Sync Theme with Upstream Theme
