@@ -53,6 +53,7 @@ $app_grid_fg_color: #fff;
 
     & .folder-name-label,
     & .folder-name-entry {
+      color: $osd_fg_color;
       font-size: 18pt;
       font-weight: bold;
     }
