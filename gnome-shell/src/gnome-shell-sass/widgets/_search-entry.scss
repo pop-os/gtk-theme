@@ -13,7 +13,7 @@ $search_entry_height: 36px;
   border-color: $borders_color;
 
   &:hover {
-    background-color: $bg_color;
+    background-color: $hover_bg_color;
     border-color: $hover_borders_color;
     color: $hover_fg_color;
   }
