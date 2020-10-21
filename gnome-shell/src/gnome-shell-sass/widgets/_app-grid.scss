@@ -53,7 +53,6 @@ $app_grid_fg_color: #fff;
 
     & .folder-name-label,
     & .folder-name-entry {
-      color: $osd_fg_color;
       font-size: 18pt;
       font-weight: bold;
     }
@@ -61,7 +60,10 @@ $app_grid_fg_color: #fff;
     & .folder-name-entry { width: 300px }
 
     /* FIXME: this is to keep the label in sync with the entry */
-    & .folder-name-label { padding: 5px 7px }
+    & .folder-name-label { 
+      color: $osd_fg_color;
+      padding: 5px 7px
+    }
 
     & .edit-folder-button {
       @extend %button;
