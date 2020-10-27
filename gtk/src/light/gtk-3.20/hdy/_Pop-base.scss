@@ -131,24 +131,24 @@ viewswitcher {
       &:hover:not(:backdrop) {
         // Reimplementation of $button_fill from Pop. The colors are made
         // only 70% visible to avoid the highlight to be too strong.
-        $c: hdyalpha($bg_color, 0.7);
+        $c: lighten($headerbar_bg_color, 4%);
         $button_fill: if($variant == 'light', linear-gradient(to top, shade($c, 0.96) 2px, $c),
                                               linear-gradient(to top, shade($c, 0.99) 2px, $c)) !global;
-        background-image: $button_fill;
+        background-image: image(lighten($headerbar_bg_color, 4%));
+      }
+
+      &:hover:backdrop {
+        background-image: image(lighten($headerbar_bg_color, 4%));
       }
 
       &:not(only-child):first-child:hover,
       &:hover + button:not(:checked):not(:hover),
       &:not(:hover) + button:not(:checked):hover {
-        border-left-color: $borders_color;
+        border-left-color: rgba($borders_edge, 0.2);
       }
 
       &:not(only-child):last-child:hover {
-        border-right-color: $borders_color;
-      }
-
-      &:hover:backdrop {
-        background-image: image($bg_color);
+        border-right-color: rgba($borders_edge, 0.2);
       }
     }
 
@@ -312,7 +312,8 @@ button.list-button:not(:active):not(:checked):not(:hover) {
 window.csd.unified:not(.solid-csd):not(.fullscreen) {
   // Remove the sheen on headerbar...
   headerbar {
-    box-shadow: inset 0 1px rgba(255, 255, 255, if($variant == 'light', 0.7, 0));
+    // box-shadow: inset 0 1px rgba(red, if($variant == 'light', 0.7, 0));
+    box-shadow: none;
 
     &.selection-mode {
       box-shadow: none;
@@ -333,4 +334,9 @@ window.csd.unified:not(.solid-csd):not(.fullscreen) {
       border-radius: 8px;
     }
   }
+}
+
+// Fix for white separators on Pop
+separator.sidebar {
+  min-width: 0;
 }
