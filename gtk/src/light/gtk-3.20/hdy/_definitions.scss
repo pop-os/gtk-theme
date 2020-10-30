@@ -48,8 +48,8 @@ $leaflet_outline: rgba(255, 255, 255, if($variant == 'light', 0.2, 0.05));
   // Loop through the floors and walls of the corners of $border.
   @each $floor in nth(map-get($corners, $border), 1) {
     @each $wall in nth(map-get($corners, $border), 2) {
-      border-#{$floor}-#{$wall}-radius: 8px;
-      -gtk-outline-#{$floor}-#{$wall}-radius: 7px;
+      border-#{$floor}-#{$wall}-radius: $menu-radius;
+      -gtk-outline-#{$floor}-#{$wall}-radius: $menu-radius - 1px;
     }
   }
 }

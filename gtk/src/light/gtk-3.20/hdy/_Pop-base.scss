@@ -331,7 +331,7 @@ window.csd.unified:not(.solid-csd):not(.fullscreen) {
     &,
     > decoration,
     > decoration-overlay {
-      border-radius: 8px;
+      border-radius: $window_radius;
     }
   }
 }
