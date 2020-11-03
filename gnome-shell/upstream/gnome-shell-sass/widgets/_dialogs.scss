@@ -38,7 +38,7 @@
     font-size: 18pt;
     font-weight: 800;
 
-    &.leightweight {
+    &.lightweight {
       font-size: 13pt;
       font-weight: 800;
     }
@@ -135,10 +135,6 @@
   spacing: 8px;
   margin-bottom: 6px;
 
-  .polkit-dialog-user-icon {
-    border-radius: 99px;
-    background-size: contain;
-  }
   .polkit-dialog-user-root-label { color: $warning_color; }
 }
 
