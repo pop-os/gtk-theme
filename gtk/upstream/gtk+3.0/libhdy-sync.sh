@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # -*- coding: UTF-8 -*-
-## Helper script to sync Adwaita from upstream to a destination folder
+## Helper script to sync theme files from upstream to a destination folder
 ## usage:
 ##
-##      adwaita-sync.sh --destination <path> [--assets]
+##      libhdy-sync.sh --destination <path> [--assets]
 ##
 ## options:
 ##    -d, --destination <path>    Destination folder - mandatory
