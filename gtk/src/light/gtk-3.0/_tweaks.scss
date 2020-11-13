@@ -646,7 +646,7 @@ treeview.view.trough:selected {
 
 treeview.view {
   color: $fg_color;
-  background-color: $bg_color;
+  background-color: $base_color;
 }
 
 treeview.view:selected {
@@ -654,49 +654,6 @@ treeview.view:selected {
   color: $selected_fg_color;
   background-color: $selected_bg_color;
 }
-
-// treeview.view.trough,
-// treeview.view.progressbar {
-//   background: none;
-//   border-radius: 4px;
-//   border: 3px solid transparent;
-// }
-
-// treeview.view.progressbar {
-//   background: none;
-//   background-color: transparent;
-//   border-bottom-color: @theme_selected_bg_color;
-// }
-
-// treeview.view.progressbar:selected {
-//   background: none;
-//   background-color: transparent;
-//   border-bottom-color: @theme_selected_fg_color;
-// }
-
-// treeview.view.trough {
-//   background: none;
-//   background-color: transparent;
-//   border-bottom-color: rgba(@theme_fg_color, 0.2);
-// }
-
-// treeview.view.trough:selected {
-//   background: none;
-//   background-color: transparent;
-//   border-bottom-color: rgba(@theme_selected_fg_color, 0.2);
-// }
-
-// treeview.view {
-//   background: none;
-//   color: @theme_fg_color;
-//   background-color: transparent;
-// }
-
-// treeview.view:selected {
-//   background: none;
-//   color: @theme_selected_fg_color;
-//   background-color: @theme_selected_bg_color;
-// }
 
 // TODO: REMOVE the diff when we fixed this upstream (upstream has blue suggested border color)
 switch {
