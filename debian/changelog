@@ -1,3 +1,9 @@
+pop-gtk-theme (5.3.1) UNRELEASED; urgency=medium
+
+  * Add styling for Nautilus Path Bars
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 12 Nov 2020 17:14:27 -0700
+
 pop-gtk-theme (5.3.0) groovy; urgency=medium
 
   * Sync sources with Adwaita 3.38 for 20.10
