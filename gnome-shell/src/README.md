@@ -26,7 +26,7 @@ You can read about SASS on its [web page][sass-web]. Once you make your
 changes to the [_common.scss][common] file, you can run ninja to generate the
 final CSS files.
 
-[common]: data/theme/gnome-shell-sass/_common.scss
-[colors]: data/theme/gnome-shell-sass/_colors.scss
-[drawing]: data/theme/gnome-shell-sass/_drawing.scss
+[common]: gnome-shell-sass/_common.scss
+[colors]: gnome-shell-sass/_colors.scss
+[drawing]: gnome-shell-sass/_drawing.scss
 [sass-web]: http://sass-lang.com/documentation/
