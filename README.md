@@ -39,6 +39,19 @@ sudo add-apt-repository ppa:system76/pop
 sudo apt update
 sudo apt install pop-theme
 ```
+You will likely see the following warning after adding the PPA:
+```
+WARNING: This PPA is for Pop!_OS, and it may cause breakage on other Ubuntu-based OS's.
+Use of this repository on non-Pop_OS installations is at your own risk!
+```
+To avoid installing/upgrading other packages from this PPA, you can pin it with lower priority:
+```
+sudo tee <<EOF /etc/apt/preferences.d/system76-pop-pin >/dev/null
+Package:  *
+Pin: release o=LP-PPA-system76-pop
+Pin-Priority: 400
+EOF
+```
 It's recommended to use the `pop-theme` metapackage, as this will pull in all components of the look. However, individual components can be installed separately, e.g:
 ```
 sudo apt install pop-gtk-theme
