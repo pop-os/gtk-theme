@@ -1,4 +1,10 @@
-pop-gtk-theme (5.3.1) UNRELEASED; urgency=medium
+pop-gtk-theme (5.3.2) groovy; urgency=medium
+
+  * Make calendar labels more legible, especially in the dark mode
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 18 Nov 2020 14:36:36 -0700
+
+pop-gtk-theme (5.3.1) groovy; urgency=medium
 
   * Add styling for Nautilus Path Bars
 
