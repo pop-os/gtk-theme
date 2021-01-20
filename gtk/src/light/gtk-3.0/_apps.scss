@@ -14,9 +14,13 @@ list.tweak-categories separator {
 /******************
  * GNOME Calendar *
  ******************/
-.color-light.horizontal > stack > grid > label,
+
+.color-light.horizontal > stack > grid > label {
+  color: black;
+}
+
 .color-dark.horizontal > stack > grid > label {
-  color: if($variant=='light', $fg_color, white);
+  color: white;
 }
 
 /***********
