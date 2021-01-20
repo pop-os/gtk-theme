@@ -15,12 +15,19 @@ list.tweak-categories separator {
  * GNOME Calendar *
  ******************/
 
+// Event labels with a light background.
 .color-light.horizontal > stack > grid > label {
   color: black;
 }
 
+// Event labels with a dark background.
 .color-dark.horizontal > stack > grid > label {
   color: white;
+}
+
+// Event labels with no background.
+.color-light.horizontal.timed > stack > grid > label {
+  color: $fg_color;
 }
 
 /***********
