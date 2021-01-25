@@ -10,7 +10,36 @@ list.tweak-categories separator {
   // make the sidebar look like a normal sidebar
   background: transparent;
 }
-  
+
+/******************
+ * GNOME Calendar *
+ ******************/
+ 
+// Week view event labels with a light background.
+.color-light.vertical > stack > grid > label {
+  color: black;
+}
+
+// Week view event labels with a dark background.
+.color-dark.vertical > stack > grid > label {
+  color: white;
+}
+
+// Month/year view event labels with a light background.
+.color-light.horizontal > stack > grid > label {
+  color: black;
+}
+
+// Month/year view event labels with a dark background.
+.color-dark.horizontal > stack > grid > label {
+  color: white;
+}
+
+// Month/year view event labels with no background.
+.color-light.horizontal.timed > stack > grid > label {
+  color: $fg_color;
+}
+
 /***********
 * Nautilus *
 ***********/
