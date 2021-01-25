@@ -1,3 +1,9 @@
+pop-gtk-theme (5.3.3) groovy; urgency=medium
+
+  * Ensure overview search entry doesn't become transparent in hover.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 25 Jan 2021 13:34:41 -0700
+
 pop-gtk-theme (5.3.2) groovy; urgency=medium
 
   * Make calendar labels more legible, especially in the dark mode
