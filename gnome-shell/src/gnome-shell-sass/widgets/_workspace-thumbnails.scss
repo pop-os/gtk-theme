@@ -5,8 +5,8 @@
   @extend %overview_panel;
   visible-width: 32px; //amount visible before hover
   margin: 0px 12px 100px 12px;
-  spacing: $base_spacing;
-  padding: $base_padding;
+  spacing: 24px;
+  padding: 24px;
   border-radius: $modal_radius;
 
   &:rtl {
