@@ -4,4 +4,4 @@ $variant: '@ThemeVariant@';
 @import "gnome-shell-sass/_drawing";
 @import "gnome-shell-sass/_common";
 @import "gnome-shell-sass/_widgets";
-@import "gnome-shell-sass/_dock";
+@import "gnome-shell-sass/_cosmic";

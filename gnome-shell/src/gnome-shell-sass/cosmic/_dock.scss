@@ -1,0 +1,59 @@
+/* Pop_OS COSMIC Dock styling, append !important to any changed rules */
+
+// Root styling
+.cosmic-dock {
+    #dock {
+        border-radius: 12px 12px 12px 12px !important;
+        border: 1px solid $osd_outer_borders_color;
+        background-color: $dark_ui_700;
+        margin: 3px !important;
+    }
+
+    &.extended {
+        #dock {
+            border-radius: 0px !important;
+            margin: 0 !important
+        }
+
+        &.side {
+            #dock {
+                border-top-width: 0 !important;
+                border-bottom-width: 0 !important;
+            }
+
+            &.left #dock {
+                border-left-width: 0 !important;
+            }
+
+            &.right #dock {
+                border-right-width: 0 !important;
+            }
+        }
+        &.bottom #dock {
+            border-bottom-width: 0 !important;
+            border-left-width: 0 !important;
+            border-right-width: 0 !important;
+        }
+    }
+    .app-well-app {
+        // regular app icons
+        &, & .overview-icon {
+        // normal
+        }
+
+        &:active .overview-icon,
+        &:checked .overview-icon {
+        // when clicking on an app
+        }
+
+        &.focused .overview-icon {
+        // when an app is focused
+        }
+
+        &:hover .overview-icon,
+        &:focus .overview-icon,
+        &:selected .overview-icon {
+            border-radius: 11px;
+        }
+    }
+}
