@@ -34,7 +34,7 @@ $base_spacing: 6px;
 $base_border_radius: 4px;
 
 $button_radius: $base_border_radius;
-$modal_radius:$base_border_radius * 2;
+$modal_radius: $base_border_radius * 3;
 
 // non-standard colors
 $bubble_borders_color: lighten($borders_color, if($variant=='light', 0%, 5%));
