@@ -447,14 +447,31 @@ headerbar button image ~ window decoration ~ menu separator {
 .documents-scrolledwin.frame.frame widget flowboxchild.tile { background-color: transparent; }
 
 /***********
-  * Firefox *
-  ***********/
+* Firefox *
+***********/
 #MozillaGtkWidget.background  {
-  // Removes rounded menus because the border bleeds in firefox
   // REMOVE THIS when firefox supports rounded menus
   menu, .menu,.context-menu { border-radius: 0; }
 
-  menubar, .menubar { background-color: $headerbar_bg_color; color:$headerbar_fg_color; }
+  @if ($variant == 'light') {
+    menubar,
+    .menubar,
+    menubar > menuitem:hover {
+      background-color: $headerbar_bg_color;
+      color:$headerbar_fg_color;
+    }
+  }
+
+  // Set a darker text-selection background
+  // Ideally we don't need this, but https://bugzilla.mozilla.org/show_bug.cgi?id=1703679
+  // tells Firefox to use the FG color instead of the BG color. Thus we need to 
+  // Tell Firefox that we're using a different color than we normally are.
+  // We then set the selection foreground color to be white to force Firefox
+  // to use the correct one
+  *:selected {
+    color: $white;
+    background-color: darken($selected_bg_color, 10%);
+  }
 
   // Adapt scrollbars a bit more to the GTK Scrollbar styling
   scrollbar {
@@ -474,6 +491,17 @@ headerbar button image ~ window decoration ~ menu separator {
     }
   }
 }
+
+  normal-button {
+    @include button(normal);
+
+    &:hover {
+      @include button(hover);
+    }
+    &:active { @include button(active)}
+
+    &:disabled {@include button(insensitive);}
+  }
 
 /*********************	
   * Chrome / Chromium *	
