@@ -10,4 +10,3 @@ configure_file(input : '../index.theme.in',
 
 subdir('gtk-2.0')
 subdir('gtk-3.0')
-subdir('gtk-3.20')

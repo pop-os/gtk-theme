@@ -10,7 +10,36 @@ list.tweak-categories separator {
   // make the sidebar look like a normal sidebar
   background: transparent;
 }
-  
+
+/******************
+ * GNOME Calendar *
+ ******************/
+ 
+// Week view event labels with a light background.
+.color-light.vertical > stack > grid > label {
+  color: black;
+}
+
+// Week view event labels with a dark background.
+.color-dark.vertical > stack > grid > label {
+  color: white;
+}
+
+// Month/year view event labels with a light background.
+.color-light.horizontal > stack > grid > label {
+  color: black;
+}
+
+// Month/year view event labels with a dark background.
+.color-dark.horizontal > stack > grid > label {
+  color: white;
+}
+
+// Month/year view event labels with no background.
+.color-light.horizontal.timed > stack > grid > label {
+  color: $fg_color;
+}
+
 /***********
 * Nautilus *
 ***********/
@@ -62,6 +91,38 @@ list.tweak-categories separator {
   background-image: none;
   background-color: if($variant=='light', white, $base_color);
   &:backdrop { background-color: $backdrop_base_color }
+
+  .path-bar-box {
+    $_headerbar_button_bg: darken($headerbar_bg_color, 2%);
+    $_btn_backdrop_border: darken($headerbar_border_color, 3%);
+    border: 1px solid;
+    border-radius: $button_radius;
+    transition: all 200ms $ease-out-quad;
+    @include button(normal, $_headerbar_button_bg, $headerbar_fg_color);
+    
+    &:backdrop {
+      @include button(backdrop, $backdrop_headerbar_bg_color, $backdrop_headerbar_fg_color);
+      border-color: $_btn_backdrop_border;
+    }
+  }
+  
+  .path-bar-box button {
+    margin: 0px;
+
+    &:first-child {
+      border-width: 0px 1px 0px 0px;
+      border-radius: $button_radius 0px 0px $button_radius;
+    }
+
+    &:not(:first-child) {
+      border-width: 0px 1px 0px 1px;
+      border-radius: 0px;
+    }
+    
+    &:not(:checked) image {
+      opacity: 0.8; /* dim the icon when not checked */
+    }
+  }
 
   // Make sure tags fit inside the search entry
   entry.search > * {

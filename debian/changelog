@@ -1,3 +1,27 @@
+pop-gtk-theme (5.3.3) groovy; urgency=medium
+
+  * Ensure overview search entry doesn't become transparent in hover.
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 25 Jan 2021 13:34:41 -0700
+
+pop-gtk-theme (5.3.2) groovy; urgency=medium
+
+  * Make calendar labels more legible, especially in the dark mode
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 18 Nov 2020 14:36:36 -0700
+
+pop-gtk-theme (5.3.1) groovy; urgency=medium
+
+  * Add styling for Nautilus Path Bars
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 12 Nov 2020 17:14:27 -0700
+
+pop-gtk-theme (5.3.0) groovy; urgency=medium
+
+  * Sync sources with Adwaita 3.38 for 20.10
+
+ -- Ian Santopietro <ian@system76.com>  Mon, 19 Oct 2020 14:25:04 -0600
+
 pop-gtk-theme (5.2.0) focal; urgency=medium
 
   * Sync Theme with Upstream Theme
