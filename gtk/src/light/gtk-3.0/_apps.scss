@@ -531,7 +531,7 @@ headerbar button image ~ window decoration ~ menu separator {
   // to use the correct one
   *:selected {
     color: $white;
-    background-color: darken($selected_bg_color, 10%);
+    background-color: #48b9c7;
   }
 
   // Adapt scrollbars a bit more to the GTK Scrollbar styling
