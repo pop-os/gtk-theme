@@ -64,14 +64,6 @@ $panel_icon_padding: 3px;
       padding: $base_padding - $panel_icon_padding;
     }
 
-    // // app menu icon
-    // .app-menu-icon {
-    //   margin-left: $base_margin;
-    //   margin-right: $base_margin;
-    //   -st-icon-style: symbolic;
-    //   // dimensions of the icon are hardcoded
-    // }
-
     // lock & login screen styles
     .unlock-screen &,
     .login-screen & {
