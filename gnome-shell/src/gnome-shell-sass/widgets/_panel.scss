@@ -24,6 +24,18 @@ $panel_icon_padding: 3px;
       -panel-corner-background-color: transparent;
       -panel-corner-border-color: transparent;
     }
+
+    .panel-button {
+      color: $panel_fg_color;
+      border-color: transparent;
+      border-width: 0;
+
+      &:focus, &:hover, &:active { 
+        color: white; 
+        border-color: transparent;
+        border-width: 0;
+      }
+    }
   }
 
   // spacing between activities, app menu and such
@@ -41,7 +53,7 @@ $panel_icon_padding: 3px;
 
   // panel menus
   .panel-button {
-    border: $panel_button_margin solid $panel_bg_color;
+    border: $panel_button_margin solid transparent;
     border-radius: 9999px;
     font-weight: bold;
     color: $panel_fg_color;
@@ -53,6 +65,7 @@ $panel_icon_padding: 3px;
     }
 
     &:active, &:overview, &:focus, &:checked {
+      border-color: $panel_bg_color;
       color: lighten($panel_fg_color, 20%);
       background-color: rgba($panel_fg_color, 0.3);
     }
@@ -61,19 +74,6 @@ $panel_icon_padding: 3px;
     .system-status-icon {
       icon-size: $base_icon_size;
       padding: $base_padding - $panel_icon_padding;
-    }
-
-    // lock & login screen styles
-    .unlock-screen &,
-    .login-screen & {
-      color: lighten($fg_color, 10%);
-      &:focus, &:hover, &:active { color: lighten($fg_color, 10%); }
-    }
-  }
-
-  .panel-button {
-    &:active, &:overview, &:focus, &:checked {
-      
     }
   }
 
