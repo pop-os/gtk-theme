@@ -63,22 +63,44 @@ $lock_panel_shadow: 0px 0px 10px 1px black;
 
   // panel menus
   .panel-button {
-    border: $panel_button_margin solid transparent; //"crops" the "background"
+    border: $panel_button_margin solid transparent; // "crops" the "background"
     border-radius: 99px;
     font-weight: bold;
     color: $panel_fg_color;
     -natural-hpadding: $base_padding * 2;
     -minimum-hpadding: $base_padding;
 
+    &.clock-display {
+      .clock {
+        padding: 0 10px;
+        border: $panel_button_margin solid transparent;
+        border-radius: 99px;
+      }
+    }
+
     &:hover {
       color: lighten($panel_fg_color, 20%);
     }
 
     &:active, &:overview, &:focus, &:checked {
+      // Trick due to St limitations. It needs a background to draw a box-shadow
       background-color: rgba($panel_fg_color, 0.01);
       color: lighten($panel_fg_color, 20%);
       box-shadow: inset 0 0 0 100px rgba($panel_fg_color, 0.3);
+
+      &.clock-display {
+        background: none;
+        box-shadow: none;
+
+        .clock {
+          background-color: rgba($panel_fg_color, 0.01);
+          color: lighten($panel_fg_color, 20%);
+          box-shadow: inset 0 0 0 100px rgba($panel_fg_color, 0.3);
+        }
+      }
     }
+
+
 
     // status area icons
     .system-status-icon {
