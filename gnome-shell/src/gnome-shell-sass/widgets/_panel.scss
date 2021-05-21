@@ -4,6 +4,9 @@
 $panel_corner_radius: $base_border_radius+1;
 $panel_fg_color: #ccc;
 $panel_height: 1.86em;
+$panel_button_margin: 3px;
+$panel_icon_padding: 3px;
+$lock_panel_shadow: 0px 0px 10px 1px black;
 
 
 #panel {
@@ -35,66 +38,53 @@ $panel_height: 1.86em;
     -panel-corner-background-color: $panel_bg_color;
     -panel-corner-border-width: 2px;
     -panel-corner-border-color: transparent;
-
-    &:active, &:overview, &:focus {
-      -panel-corner-border-color: lighten($entry_color,5%);
-    }
   }
 
   // panel menus
   .panel-button {
+    border: $panel_button_margin solid transparent; // "crops" the "background"
+    border-radius: 99px;
     font-weight: bold;
     color: $panel_fg_color;
     -natural-hpadding: $base_padding * 2;
     -minimum-hpadding: $base_padding;
+
+    &.clock-display {
+      .clock {
+        padding: 0 10px;
+        border: $panel_button_margin solid transparent;
+        border-radius: 99px;
+      }
+    }
 
     &:hover {
       color: lighten($panel_fg_color, 20%);
     }
 
     &:active, &:overview, &:focus, &:checked {
+      // Trick due to St limitations. It needs a background to draw a box-shadow
+      background-color: rgba($panel_fg_color, 0.01);
       color: lighten($panel_fg_color, 20%);
+      box-shadow: inset 0 0 0 100px rgba($panel_fg_color, 0.3);
+
+      &.clock-display {
+        background: none;
+        box-shadow: none;
+
+        .clock {
+          background-color: rgba($panel_fg_color, 0.01);
+          color: lighten($panel_fg_color, 20%);
+          box-shadow: inset 0 0 0 100px rgba($panel_fg_color, 0.3);
+        }
+      }
     }
+
+
 
     // status area icons
     .system-status-icon {
       icon-size: $base_icon_size;
-      padding: $base_padding - 1px;
-    }
-
-    // app menu icon
-    .app-menu-icon {
-      margin-left: $base_margin;
-      margin-right: $base_margin;
-      -st-icon-style: symbolic;
-      // dimensions of the icon are hardcoded
-    }
-
-    // lock & login screen styles
-    .unlock-screen &,
-    .login-screen & {
-      color: lighten($fg_color, 10%);
-      &:focus, &:hover, &:active { color: lighten($fg_color, 10%); }
-    }
-  }
-
-  .panel-button {
-    &:active, &:overview, &:focus, &:checked {
-      // Trick due to St limitations. It needs a background to draw a box-shadow
-      background-color: rgba(0, 0, 0, 0.01);
-      box-shadow: inset 0 -2px 0 0 lighten($entry_color,5%);
-    }
-  }
-
-  .panel-button.clock-display {
-    // Move highlight from .panel-button to .clock
-    &:active, &:overview, &:focus, &:checked {
-      box-shadow: none;
-
-      .clock {
-        background-color: rgba(0, 0, 0, 0.01);
-        box-shadow: inset 0 -2px 0 0 lighten($entry_color,5%);
-      }
+      padding: $base_padding - $panel_icon_padding;
     }
   }
 
