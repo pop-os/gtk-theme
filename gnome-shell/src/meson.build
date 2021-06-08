@@ -149,16 +149,14 @@ foreach variant: variants
   install_data(data_sources, install_dir: install_dir)
 endforeach
 
-if gnomeshell_use_gresource
-  gnome.compile_resources(
-    'gnome-shell-theme',
-    gresource_xml,
-    dependencies: theme_css,
-    gresource_bundle: true,
-    install: true,
-    install_dir: gnomeshell_theme_dir,
+gnome.compile_resources(
+  'gnome-shell-theme',
+  gresource_xml,
+  dependencies: theme_css,
+  gresource_bundle: true,
+  install: true,
+  install_dir: gnomeshell_theme_dir,
 )
-else
-  # Symlink default variant
-  meson.add_install_script('install-shell.sh', meson.project_name())
-endif
+
+# Symlink default variant
+meson.add_install_script('install-shell.sh', meson.project_name())

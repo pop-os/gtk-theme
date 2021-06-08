@@ -66,8 +66,14 @@
 }
 
 #lockDialogGroup {
-  background-color: $gdm_grey;
+  background-color: $gdm_grey; 
+  background-image: url('file:///etc/gdm3/gdm-background');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
+
 
 #unlockDialogNotifications {
   StButton#vhandle, StButton#hhandle {
@@ -76,3 +82,6 @@
     &:active { background-color: transparentize($selected_bg_color,0.5); }
   }
 }
+
+
+
