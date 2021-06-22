@@ -87,6 +87,8 @@ sudo apt install inkscape optipng
 2. Generate the theme files.
 
 ```
+git clone https://github.com/pop-os/gtk-theme.git
+cd gtk-theme
 meson build && cd build
 ninja
 ```
