@@ -85,6 +85,7 @@ sudo apt install inkscape optipng
  ```
 
 2. Clone the repository.
+
 ```
 git clone https://github.com/pop-os/gtk-theme.git
 cd gtk-theme
