@@ -76,6 +76,12 @@ For making modifications to assets, you will additionally need these two:
 sudo apt install inkscape optipng
 ```
 
+For Fedora install:
+
+```sh
+sudo dnf install sassc meson glib2-devel inkscape optipng
+```
+
 1. If previous versions were installed/existed, remove them first.
 
  ```sh
