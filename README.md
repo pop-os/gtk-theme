@@ -4,14 +4,13 @@
 
 -------------------
 
-A GTK+ theme for Pop!_OS 
-
+A GTK+ theme for Pop!_OS.
 
 ### Required Components
 -------------------
 Pop supports Gtk+ 3.22.x
 
- ```
+ ```sh
  * Gtk+-3.0             >= 3.22
  * Gtk+-2.0             >= 2.24.30
  * gtk2-engines-pixbuf  >= 2.24.30
@@ -30,32 +29,35 @@ Pop supports Gtk+ 3.22.x
 
  > Monospace: Fira Mono Regular 11
 
-
 ### Installation
 
 Pop is intended to be installed through the package manager. Packages for Pop are available in PPA:
-```
+
+```sh
 sudo add-apt-repository ppa:system76/pop
 sudo apt update
 sudo apt install pop-theme
 ```
+
 It's recommended to use the `pop-theme` metapackage, as this will pull in all components of the look. However, individual components can be installed separately, e.g:
-```
+
+```sh
 sudo apt install pop-gtk-theme
 ```
+
 It's also recommended to restart the GNOME Shell after applying the theme of your choice.
 
 Enter the Shell's command launcher
-```
+
+```sh
 Alt + F2
 ```
 
 This will restart the Shell after you hit Enter
-```
+
+```sh
 r
 ```
-
-
 
 ### Installation from Git Source
 ----------------------------
@@ -64,20 +66,19 @@ This is the recommended method for users who aren't on Pop.
 
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can all build-dependencies using:
 
-```
+```sh
 sudo apt install sassc meson libglib2.0-dev 
 ```
 
 For making modifications to assets, you will additionally need these two:
 
-```
+```sh
 sudo apt install inkscape optipng
 ```
 
-
 1. If previous versions were installed/existed, remove them first.
 
- ```
+ ```sh
  sudo apt remove pop-gtk-theme
  sudo rm -rf /usr/share/themes/Pop*
  rm -rf ~/.local/share/themes/Pop*
@@ -86,22 +87,31 @@ sudo apt install inkscape optipng
 
 2. Clone the repository.
 
-```
+```sh
 git clone https://github.com/pop-os/gtk-theme.git
 cd gtk-theme
 ```
 
 3. Generate the theme files.
 
-```
+```sh
 meson build && cd build
 ninja
 ```
 
 4. Install the theme.
 
-```
+```sh
 ninja install
+```
+
+Or if you prefer to install it locally:
+
+```sh
+git clone git@github.com:pop-os/gtk-theme.git
+cd gtk-theme
+meson -Dprefix=$HOME/.local build
+ninja -C "build" install
 ```
 
 #### Rebuilding after modifications:
