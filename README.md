@@ -10,7 +10,7 @@ A GTK+ theme for Pop!_OS.
 -------------------
 Pop supports Gtk+ 3.22.x
 
- ```sh
+ ```
  * Gtk+-3.0             >= 3.22
  * Gtk+-2.0             >= 2.24.30
  * gtk2-engines-pixbuf  >= 2.24.30
@@ -49,13 +49,13 @@ It's also recommended to restart the GNOME Shell after applying the theme of you
 
 Enter the Shell's command launcher
 
-```sh
+```
 Alt + F2
 ```
 
 This will restart the Shell after you hit Enter
 
-```sh
+```
 r
 ```
 
@@ -67,7 +67,7 @@ This is the recommended method for users who aren't on Pop.
 ###### Note: You must have sassc installed in order to build Pop. Users of 17.04 or later can all build-dependencies using:
 
 ```sh
-sudo apt install sassc meson libglib2.0-dev 
+sudo apt install sassc meson libglib2.0-dev
 ```
 
 For making modifications to assets, you will additionally need these two:
@@ -76,7 +76,7 @@ For making modifications to assets, you will additionally need these two:
 sudo apt install inkscape optipng
 ```
 
-For Fedora install:
+**NB:** We do not guarantee that we will keep the set of commands below up to date nor support it. That said, to install dependencies on Fedora:
 
 ```sh
 sudo dnf install sassc meson glib2-devel inkscape optipng
@@ -124,8 +124,8 @@ ninja -C "build" install
 
 You shouldn't need to rebuild the entire theme after modifications. If you make
 changes to any GTK3 or GTK2 assets, delete the old rendered copies and use the
-`render-assets.sh` script to regenerate those with new ones with your 
-modifications. 
+`render-assets.sh` script to regenerate those with new ones with your
+modifications.
 
 TODO
 ----
