@@ -3,18 +3,20 @@
 // thumbnails in overview
 .workspace-thumbnails,
 .workspace-thumbnails-left {
-  @extend %overview_panel;
-  // visible-width: 32px; //amount visible before hover
-  margin: 0px 12px 24px;
-  spacing: 24px;
-  padding: 24px;
-  border-radius: $modal_radius !important;
+  visible-width: 32px; //amount visible before hover
+  spacing: $base_spacing;
+  padding: $base_padding;
+
+  .workspace-thumbnail {
+    @extend %overview_panel;
+    border-radius: 3px;
+  }
 
   // drag and drop indicator
   .placeholder {
-    background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    background-image: url("resource:///org/gnome/shell/theme/workspace-placeholder.svg");
     background-size: contain;
-    height: 24px;
+    width: 18px;
   }
 }
 

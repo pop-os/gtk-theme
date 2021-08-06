@@ -131,18 +131,22 @@ foreach variant: variants
   assert(data_sources.length() > 0 and data_sources[0] != '', 'No data sources found')
 
   # static files to copy
+  # data_sources += files([
+  #   'lockscreen-gradient.svg',
+  #   'logged-in-indicator.svg',
+  #   'noise-texture.png',
+  #   'pad-osd.css',
+  #   'running-indicator.svg',
+  #   'source-button-border.svg',
+  #   'summary-counter.svg',
+  #   'toggle-off-intl.svg',
+  #   'toggle-on-intl.svg',
+  #   'ws-switch-arrow-down.svg',
+  #   'ws-switch-arrow-up.svg',
+  # ])
+
   data_sources += files([
-    'lockscreen-gradient.svg',
-    'logged-in-indicator.svg',
-    'noise-texture.png',
-    'pad-osd.css',
-    'running-indicator.svg',
-    'source-button-border.svg',
-    'summary-counter.svg',
-    'toggle-off-intl.svg',
-    'toggle-on-intl.svg',
-    'ws-switch-arrow-down.svg',
-    'ws-switch-arrow-up.svg',
+    'pad-osd.css'
   ])
 
   # install static data files

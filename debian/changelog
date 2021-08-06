@@ -1,3 +1,9 @@
+pop-gtk-theme (5.4.0) hirsute; urgency=medium
+
+  * Updated for GNOME 40 compatibility
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 06 Aug 2021 13:23:34 -0600
+
 pop-gtk-theme (5.3.3) groovy; urgency=medium
 
   * Ensure overview search entry doesn't become transparent in hover.

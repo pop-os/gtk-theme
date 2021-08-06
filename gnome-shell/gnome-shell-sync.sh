@@ -47,13 +47,13 @@ wget_check=`which wget | wc -l`
 [ $wget_check == 0 ] && echo "install wget" && exit 1
 
 
-_branch=${_branch:=master}
-data=https://gitlab.gnome.org/GNOME/gnome-shell/raw/${_branch}/data
+_branch=${_branch:=main}
+data=https://gitlab.gnome.org/GNOME/gnome-shell/-/raw/${_branch}/data
 root=${data}/theme
 
 [ ! -d ${_destination} ] && echo ${_destination} folder does not exists && exit 1
 [ ! -d ${_destination}/gnome-shell-sass ] && mkdir ${_destination}/gnome-shell-sass
-[ ! -d ${_destination}/gnome-shell-sass/widgets] && mkdir ${_destination}/gnome-shell-sass/widgets
+[ ! -d ${_destination}/gnome-shell-sass/widgets ] && mkdir ${_destination}/gnome-shell-sass/widgets
 [ ! -d ${_destination}/data ] && mkdir ${_destination}/data
 
 files=(
