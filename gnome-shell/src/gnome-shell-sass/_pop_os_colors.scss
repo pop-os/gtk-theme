@@ -80,3 +80,17 @@ $mid_grey: #888;
 
 $gdm_grey: #36322f;
 $close_button_color: mix($orange, $red, 50%);
+
+//Colors for certain widgets
+$entry_color: if($variant=='light', #FFAD00, #FBB86C);
+$close_button_color: mix($red, $orange, 50%);
+
+$panel_bg_color: darken(#2B2928, 3%);;
+$dash_bg_color: $panel_bg_color;
+$panel-alpha-value: 0.0;
+$panel_opaque_value: 0.0;
+
+$dash-alpha-value: 0.0;
+$dash-opaque-alpha-value: 0.0;
+
+$system_bg_color: #36322f; //previously "gdm_grey"

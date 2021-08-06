@@ -1,6 +1,6 @@
 /* Dash */
 
-$dash_background_color: #3b3b3b;
+$dash_bg_color: #3b3b3b;
 $dash_placeholder_size: 32px;
 $dash_padding: $base_padding + 4px; // 10px
 $dash_spacing: $base_padding / 4;
@@ -32,7 +32,7 @@ $dash_border_radius: $modal_radius * 1.5;
 }
 
 .dash-background {
-  background-color: $dash_background_color;
+  background-color: $dash_bg_color;
   margin-bottom: $dash_bottom_margin;
   padding: $dash_padding;
   border-radius: $dash_border_radius;
