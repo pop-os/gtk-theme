@@ -1,3 +1,9 @@
+pop-gtk-theme (5.4.1) hirsute; urgency=medium
+
+  * FIX: Ensure that the dark theme is packaged in the GResource file.
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 10 Aug 2021 09:05:45 -0600
+
 pop-gtk-theme (5.4.0) hirsute; urgency=medium
 
   * Updated for GNOME 40 compatibility
