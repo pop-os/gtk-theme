@@ -3,7 +3,7 @@
 set -e
 
 if [ "$1" = "remove" ]; then
-  update-alternatives --remove gdm3-theme.gresource \
+  update-alternatives --remove gdm-theme.gresource \
     /usr/share/gnome-shell/theme/Pop/gnome-shell-theme.gresource
 fi
 

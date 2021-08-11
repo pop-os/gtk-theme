@@ -4,8 +4,8 @@ set -e
 
 if [ "$1" = configure ]; then
   update-alternatives --install \
-    /usr/share/gnome-shell/gdm3-theme.gresource \
-    gdm3-theme.gresource \
+    /usr/share/gnome-shell/gdm-theme.gresource \
+    gdm-theme.gresource \
     /usr/share/gnome-shell/theme/Pop/gnome-shell-theme.gresource \
     20
 fi

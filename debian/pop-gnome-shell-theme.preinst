@@ -3,8 +3,14 @@
 set -e
 
 if [ "$1" = "upgrade" ]; then
+  # Remove older deprecated themes. Can be removed post 21.04
+  if dpkg --compare-versions "$2" lt-nl "5.4.2~"; then
+    update-alternatives --remove gdm3-theme.gresource \
+      /usr/share/gnome-shell/theme/Pop/gnome-shell-theme.gresource || true
+  fi
+
   # Remove older deprecated themes. Can be removed post 20.04
-  if dpkg --compare-versions "$2" lt-nl 5.1.1; then
+  if dpkg --compare-versions "$2" lt-nl "5.1.1~"; then
     update-alternatives --remove gdm3.css \
       /usr/share/gnome-shell/theme/pop-dark.css || true
   fi

@@ -1,3 +1,9 @@
+pop-gtk-theme (5.4.2) impish; urgency=medium
+
+  * Support gdm-theme.gresource alternative
+
+ -- Jeremy Soller <jeremy@system76.com>  Wed, 11 Aug 2021 09:26:46 -0600
+
 pop-gtk-theme (5.4.1) hirsute; urgency=medium
 
   * FIX: Ensure that the dark theme is packaged in the GResource file.
