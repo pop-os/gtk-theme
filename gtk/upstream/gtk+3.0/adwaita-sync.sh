@@ -72,13 +72,10 @@ for i in ${files[@]}; do
 done
 
 assets=(
-    bullet@2-symbolic.symbolic.png
     bullet-symbolic.svg
     bullet-symbolic.symbolic.png
-    check@2-symbolic.symbolic.png
     check-symbolic.svg
     check-symbolic.symbolic.png
-    dash@2-symbolic.symbolic.png
     dash-symbolic.svg
     dash-symbolic.symbolic.png
     slider-horz-scale-has-marks-above@2.png
