@@ -1,11 +1,3 @@
-bullet-symbolic
-check-symbolic
-close-button
-close-button-active
-close-button-backdrop
-close-button-hover
-close-button-selection-mode
-dash-symbolic
 slider-horz-scale-has-marks-above
 slider-horz-scale-has-marks-above-active
 slider-horz-scale-has-marks-above-active-dark
@@ -66,7 +58,3 @@ text-select-start-active-dark
 text-select-start-dark
 text-select-start-hover
 text-select-start-hover-dark
-titlebutton-active
-titlebutton-hover
-titlebutton-selection-mode-active
-titlebutton-selection-mode-hover
