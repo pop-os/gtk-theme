@@ -1,0 +1,80 @@
+
+// Orange
+$orange: if($variant=='light', #FFAD00, #FBB86C);
+$highlights_orange: if($variant=='light', #FBB86C, #FFAD00);
+$text_orange: if($variant=='light', #AF5C02, #FFD7A1);
+
+// blue
+$blue: if($variant=='light', #63B1BC, #6ACAD8);
+$highlights_blue: if($variant=='light', #6ACAD8, #63B1BC);
+//$text_blue: if($variant=='light', #00496D, #94EBEB);
+$text_blue: if($variant=='light', #00496D, #6ACAD8);
+
+// green
+$green: if($variant=='light', #82BF8C, #90CFB0);
+$highlights_green: if($variant=='light', #90CFB0, #82BF8C);
+$text_green: if($variant=='light', #3B6E43, #ACF7D2);
+
+// red
+$red: if($variant=='light', #E56A54, #EA9090);
+$highlights_red: if($variant=='light', #EA9090, #E56A54);
+$text_red: if($variant=='light', #A0252B, #FFB5B5);
+
+// yellow
+$yellow: if($variant=='light', #FEDB40, #F9D87A);
+$highlights_yellow: if($variant=='light', #FFF19E, #FEDB40);
+$text_yellow: if($variant=='light', #966800, #FFF19E);
+
+// purple
+$purple: if($variant=='light', #CF7DFF, #D58CFF);
+$highlights_purple: if($variant=='light', #D58CFF, #CF7DFF);
+$text_purple: if($variant=='light', #813B96, #E5B3FF);
+
+// pink
+$pink: if($variant=='light', #F93A83, #FF9CDD);
+$highlights_pink: if($variant=='light', #FF9CDD, #EE4E88);
+$text_pink: if($variant=='light', #AD154F, #FFC1EE);
+
+// indigo
+$indigo: if($variant=='light', #3E88FF, #95C4FC);
+$highlights_indigo: if($variant=='light', #95C4FC, #5689E7);
+$text_indigo: if($variant=='light', #102A4C, #BDDBFF);
+
+// warm_grey
+$warm_grey: #ADA29E;
+$light_warm_grey: #9B8E8A;
+$dark_warm_grey: #574F4A;
+
+// ui
+
+// Light Neutral Grey 
+$light_neutral_grey_100: #EEE;
+$light_neutral_grey_300: #CCC;
+$light_neutral_grey_500: #AAA;
+$light_neutral_grey_700: #888;
+$light_neutral_grey_900: #666;
+
+// Dark Neutral Grey 
+$dark_neutral_grey_100: #888;
+$dark_neutral_grey_300: #666;
+$dark_neutral_grey_500: #444;
+$dark_neutral_grey_700: #222;
+$dark_neutral_grey_900: #111;
+
+// Light UI
+$light_ui_100: #FCFCFC;
+$light_ui_300: #F6F6F6;
+$light_ui_500: #EDEDED;
+$light_ui_700: #E6E6E6;
+$light_ui_900: #DEDEDE;
+
+// Dark UI
+$dark_ui_100: #474341;
+$dark_ui_300: #403C3A;
+$dark_ui_500: #393634;
+$dark_ui_700: #33302F;
+$dark_ui_900: #2B2928;
+
+$white: #FFF;
+$black: #000;
+$mid_grey: #888;
