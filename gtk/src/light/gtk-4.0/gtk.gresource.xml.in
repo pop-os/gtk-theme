@@ -1,0 +1,7 @@
+<gresources>
+  <gresource prefix="/org/pop-os/themes/Pop/4.0">
+    <file alias="gtk.css">gtk-generated.css</file>
+    <file alias="gtk-dark.css">gtk-dark-generated.css</file>
+    @ASSETS@
+  </gresource>
+</gresources>
