@@ -1,0 +1,546 @@
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$asset_suffix: if($variant=='dark', '-dark', '');
+$backdrop_transition: 200ms ease-out;
+$button_transition: all 200ms $ease-out-quad;
+$focus_transition: outline-width 200ms $ease-out-quad, outline-offset 200ms $ease-out-quad;
+$button_radius: 4px;
+$menu_radius: 4px;
+$menu_margin: $menu_radius; //margin around menuitems & sidebar items
+$window_radius: $button_radius;
+$popover_radius: $button_radius;
+$small_radius: 4px;
+
+/*******************
+ * Pop Header bars *
+ *******************/
+
+$_backdrop_headerbar_bg_color: desaturate($color: $headerbar_bg_color, $amount: 3%);
+$_backdrop_headerbar_fg_color: transparentize($headerbar_fg_color, 0.2);
+$_headerbar_button_bg_color: lighten($headerbar_bg_color, 4%);
+$_headerbar_button_backdrop_bg_color: darken($headerbar_bg_color, 4%);
+
+%titlebar,
+headerbar {
+  padding: 0 6px;
+  min-height: 46px;
+  border-width: 1px 0px 0px;
+  border-style: solid;
+  border-color: lighten($color: $headerbar_bg_color, $amount: 10%);
+  border-radius: 0;
+  color: $headerbar_fg_color;
+  
+  @include headerbar_fill();
+
+  label .title {
+    color:$headerbar_fg_color;
+  }
+
+  &:backdrop {
+    background-color: $_backdrop_headerbar_bg_color;
+    border-color: lighten($color: $_backdrop_headerbar_bg_color, $amount: 10%);
+  }
+
+  .maximized &,
+  .fullscreen & {
+    border-width: 0px;
+  }
+
+  button,
+  button.image-button,
+  button.image-button.toggle,
+  button.text-button,
+  button.toggle,
+  box button.toggle,
+  buttonbox.toggle,
+  stackswitcher button,
+  filechooser .path-bar.linked>button,
+  .path-bar button {
+    $_button_border_color: darken($_headerbar_button_bg_color, 8%);
+    @include button(normal, $_headerbar_button_bg_color, $headerbar_fg_color);
+    border-color: $_button_border_color;
+    border-bottom-color: darken($color: $_button_border_color, $amount: 8%);
+    
+
+    &.flat {
+      @include button(undecorated);
+      border: none;
+    }
+
+    &:hover {
+      @include button(hover, lighten($headerbar_bg_color, 4%), $headerbar_fg_color);
+    }
+
+    &:active,
+    &:checked,
+    &.toggle:checked,
+    &.toggle:active {
+      $_bg: lighten($headerbar_bg_color, 1%);
+      @include button(active, $_bg, $headerbar_fg_color);
+      border-color: $dark_neutral_grey_700;
+      background-image: image(darken($_bg, 9%));
+    }
+
+    &:backdrop {
+      &.flat,
+      & {
+        @include button(backdrop, $_backdrop_headerbar_bg_color, $_backdrop_headerbar_fg_color);
+
+        -gtk-icon-effect: none;
+        border-color: $_headerbar_button_backdrop_bg_color;
+
+        &:active,
+        &:checked {
+          $_bg: if($variant=='light', darken($_backdrop_headerbar_bg_color, 9%), lighten($_backdrop_headerbar_bg_color, 2%));
+          @include button(backdrop-active, $_bg, $_backdrop_headerbar_fg_color);
+          border-color: $_headerbar_button_backdrop_bg_color;
+        }
+
+        &:disabled {
+          @include button(backdrop-insensitive, $_backdrop_headerbar_bg_color, $_backdrop_headerbar_fg_color);
+
+          border-color: lighten($color: $_button_border_color, $amount: 15%);
+
+          &:active,
+          &:checked {
+            @include button(backdrop-insensitive-active, $_backdrop_headerbar_bg_color, $_backdrop_headerbar_fg_color);
+
+            border-color: lighten($color: $_button_border_color, $amount: 15%);
+          }
+        }
+      }
+    }
+
+    &:disabled {
+      @include button(insensitive, $headerbar_bg_color, $headerbar_fg_color);
+      border-color: lighten($color: $_button_border_color, $amount: 15%);
+
+      &:active,
+      &:checked {
+        @include button(insensitive-active, $headerbar_bg_color, $headerbar_fg_color);
+      }
+    }
+
+    // Suggested and Destructive Action buttons, need to overwrite them again here
+    // copied from common, disabled buttons bg color changed to match the headerbar
+    @each $b_type,
+    $b_color in (suggested-action, $suggested_bg_color),
+    (destructive-action, $destructive_color) {
+      &.#{$b_type} {
+        @include button(normal, $b_color, $selected_fg_color);
+
+        &.flat {
+          @include button(undecorated);
+
+          color: $b_color;
+        }
+
+        &:hover {
+          @include button(hover, $b_color, $selected_fg_color);
+        }
+
+        &:active,
+        &:checked {
+          @include button(active, $b_color, $selected_fg_color);
+        }
+
+        &:backdrop,
+        &.flat:backdrop {
+          @include button(backdrop, $b_color, $selected_fg_color);
+
+          &:active,
+          &:checked {
+            @include button(backdrop-active, $b_color, $selected_fg_color);
+          }
+
+          &:disabled {
+            @include button(backdrop-insensitive, if($variant=='light', darken($headerbar_bg_color, 15%), $headerbar_bg_color), $_backdrop_headerbar_fg_color);
+
+            &:active,
+            &:checked {
+              @include button(backdrop-insensitive-active, $b_color, $selected_fg_color);
+            }
+          }
+        }
+
+        &.flat {
+
+          &:backdrop,
+          &:disabled,
+          &:backdrop:disabled {
+            @include button(undecorated);
+
+            color: transparentize($b_color, 0.2);
+          }
+        }
+
+        &:disabled {
+          @include button(insensitive, if($variant== "light", darken($headerbar_bg_color, 15%), $headerbar_bg_color), $headerbar_fg_color);
+
+          &:active,
+          &:checked {
+            @include button(insensitive-active, $b_color, $selected_fg_color);
+          }
+        }
+
+        .osd & {
+          @include button(osd, $b_color);
+
+          &:hover {
+            @include button(osd-hover, $b_color);
+          }
+
+          &:active,
+          &:checked {
+
+            &:backdrop,
+            & {
+              @include button(osd-active, $b_color);
+            }
+          }
+
+          &:disabled {
+
+            &:backdrop,
+            & {
+              @include button(osd-insensitive, $b_color);
+            }
+          }
+
+          &:backdrop {
+            @include button(osd-backdrop, $b_color);
+          }
+        }
+      }
+    }
+  }
+  entry:disabled {
+    color: rgba($fg_color, 0.8);
+  }
+
+  // Also include backdrop styling, because they turn white in :backdrop
+  separator {
+    background: image(darken($headerbar_bg_color, 5%));
+
+    &:backdrop {
+      background: image(darken($headerbar_bg_color, 3%));
+    }
+  }
+
+  @if $variant=='light' {
+    switch {
+      $_switch_border_color: darken($_headerbar_button_bg_color, 8%);
+      border-color: $borders_color;
+      color: $headerbar_fg_color;
+      background-color: $_headerbar_button_bg_color;
+      &:hover { background-color: lighten($_headerbar_button_bg_color, 2%); }
+      &:backdrop {
+        background-color: lighten($headerbar_bg_color,1%);
+        box-shadow: none;
+      }
+      &:disabled {
+        background-color: $headerbar_bg_color;
+        border-color: $borders_color;
+      }
+      &:backdrop {
+        border-color: $_switch_border_color;
+      }
+  
+      &:checked {
+        color: $selected_fg_color;
+        border-color: transparentize($checkradio_bg_color, 0.6);
+        background-color: $checkradio_bg_color;
+      }
+  
+      slider {
+        border-color: $_headerbar_button_bg_color;
+        
+        &:checked {
+          border-color: $checkradio_bg_color;
+        }
+        &:disabled {
+          background-color: $headerbar_bg_color;
+          border-color: $borders_color;
+          @include button(insensitive, $headerbar_bg_color);
+        }
+      }      
+    }
+  }
+
+  // re-insert the full selection mode section from common ...
+  .selection-mode &,
+  &.selection-mode {
+    $_hc: mix($top_hilight, $suggested_bg_color, 50%); // hilight color
+
+    color: $selected_fg_color;
+    border-color: $suggested_border_color;
+
+    @include headerbar_fill($suggested_bg_color, $_hc);
+
+    separator {
+      background: image(lighten($suggested_bg_color, 5%));
+    }
+
+    &:backdrop {
+      background-color: $suggested_bg_color;
+      background-image: none;
+      box-shadow: inset 0 1px mix($top_hilight, $suggested_bg_color, 60%);
+
+      label {
+        text-shadow: none;
+        color: $selected_fg_color;
+      }
+    }
+
+    button,
+    button.image-button,
+    button.image-button.toggle,
+    button.text.button,
+    button.toggle,
+    box button.toggle,
+    buttonbox.toggle,
+    stackswitcher button,
+    filechooser .path-bar.linked>button,
+    .path-bar button {
+      @include button(normal, $suggested_bg_color, $selected_fg_color);
+
+      &.flat {
+        @include button(undecorated);
+      }
+
+      &:hover {
+        @include button(hover, $suggested_bg_color, $selected_fg_color);
+      }
+
+      &:active,
+      &:checked,
+      &.toggle:checked,
+      &.toggle:active {
+        @include button(active, $suggested_bg_color, $selected_fg_color);
+      }
+
+      &:backdrop {
+
+        &.flat,
+        & {
+          @include button(backdrop, $suggested_bg_color, $selected_fg_color);
+
+          -gtk-icon-effect: none;
+          border-color: lighten($suggested_bg_color, 5%);
+
+          &:active,
+          &:checked {
+            @include button(backdrop-active, $suggested_bg_color, $selected_fg_color);
+
+            border-color: $suggested_border_color;
+          }
+
+          &:disabled {
+            @include button(backdrop-insensitive, $suggested_bg_color, $selected_fg_color);
+
+            border-color: $suggested_border_color;
+
+            &:active,
+            &:checked {
+              @include button(backdrop-insensitive-active, $suggested_bg_color, $selected_fg_color);
+
+              border-color: $suggested_border_color;
+            }
+          }
+        }
+      }
+
+      &.flat {
+
+        &:backdrop,
+        &:disabled,
+        &:backdrop:disabled {
+          @include button(undecorated);
+        }
+      }
+
+      &:disabled {
+        @include button(insensitive, $suggested_bg_color, $selected_fg_color);
+
+        &:active,
+        &:checked {
+          @include button(insensitive-active, $suggested_bg_color, $selected_fg_color);
+        }
+      }
+
+      &.suggested-action {
+        @include button(normal);
+
+        border-color: $suggested_border_color;
+
+        &:hover {
+          @include button(hover);
+
+          border-color: $suggested_border_color;
+        }
+
+        &:active {
+          @include button(active);
+
+          border-color: $suggested_border_color;
+        }
+
+        &:disabled {
+          @include button(insensitive);
+
+          border-color: $suggested_border_color;
+        }
+
+        &:backdrop {
+          @include button(backdrop);
+
+          border-color: $suggested_border_color;
+        }
+
+        &:backdrop:disabled {
+          @include button(backdrop-insensitive);
+
+          border-color: $suggested_border_color;
+        }
+      }
+    }
+
+    .selection-menu {
+
+      &:backdrop,
+      & {
+        border-color: transparentize($suggested_bg_color, 1);
+        background-color: transparentize($suggested_bg_color, 1);
+        background-image: none;
+        box-shadow: none;
+        min-height: 20px;
+        padding: 5px;
+
+        arrow {
+          -GtkArrow-arrow-scaling: 1;
+        }
+
+        .arrow {
+          -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+          color: transparentize($selected_fg_color, 0.5);
+          -gtk-icon-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+paned.titlebar > separator {
+  color: darken($headerbar_bg_color, 5%);
+  background: image(darken($headerbar_bg_color, 5%));
+  background-color: darken($headerbar_bg_color, 5%);
+
+  &:backdrop {
+  color: darken($headerbar_bg_color, 3%);
+  background: image(darken($headerbar_bg_color, 3%));
+  background-color: darken($headerbar_bg_color, 3%);
+  }
+}
+
+/*****************
+ * Title buttons *
+ *****************/
+
+ windowcontrols {
+  border-spacing: 6px;
+
+  &:not(.empty) {
+    &.start:dir(ltr),
+    &.end:dir(rtl) {
+      margin-right: 7px;
+    }
+
+    &.start:dir(rtl),
+    &.end:dir(ltr) {
+      margin-left: 7px;
+    }
+  }
+
+  button {
+
+    background-image: none;
+
+    border-radius: 9999px;
+    padding: 2px;
+    margin: 0 2px;
+    min-width: 0;
+    min-height: 0;
+    border: none;
+    box-shadow: none;
+    transition-duration: 100ms;
+
+    &:hover {
+      background-image: none;
+      background-color: transparentize($color: $headerbar_fg_color, $amount: 0.5);
+      transition-duration: 100ms;
+    }
+
+    &:active,
+    &:checked {
+      background-image: none;
+      background-color: transparentize($color: $headerbar_fg_color, $amount: 0.7);
+      transition-duration: 100ms;
+    }
+    
+    &:backdrop {
+      background-image: none;
+      background-color: transparent;
+      transition-duration: 100ms;
+    }
+
+    &.close {
+      background-color: $close_button_color;
+      transition-duration: 100ms;
+
+      &:hover {
+        background-color: transparentize($color: $headerbar_fg_color, $amount: 0.6);
+        transition-duration: 100ms;
+      }
+
+      &:active,
+      &:checked {
+        background-color: transparentize($color: $headerbar_fg_color, $amount: 0.8);
+        transition-duration: 100ms;
+      }
+
+      &:backdrop {
+        background-color: transparent;
+        transition-duration: 100ms;
+      }
+    }
+    
+  }
+}
+
+headerbar button.appmenu.popup.toggle {
+
+  &,
+  &:backdrop {
+    @include button(undecorated);
+  }
+
+  &:hover {
+    @include button(hover, lighten($headerbar_bg_color, 8%), $headerbar_fg_color);
+  }
+
+  &:active, &:checked {
+    $_bg: lighten($headerbar_bg_color, if($variant==light, 0%, 1%));
+    @include button(active, $_bg, $headerbar_fg_color);
+    border-color: $borders_color;
+    background-image: image(darken($_bg, 9%));
+  }
+}
+
+// with a flatter headerbar and buttons, we dont need that heavy shadows in the headerbar
+headerbar * {
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+// same for the rest of the theme, but not axe the icon shadows, otherwise things don't work
+* {
+  text-shadow: none;
+}
