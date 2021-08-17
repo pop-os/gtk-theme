@@ -544,3 +544,129 @@ headerbar * {
 * {
   text-shadow: none;
 }
+
+/**********
+ * Switch *
+ **********/
+ switch {
+
+  // similar to the .scale
+  border: 0px solid transparent;
+  border-radius: 999px;
+  color: $fg_color;
+  background-color: rgba($fg_color, 0.4);
+  box-shadow: 0 1px 3px 0 rgba(black, 0.5) inset;
+  text-shadow: 0 1px transparentize(black, 0.9);
+
+  &:checked {
+    color: $selected_fg_color;
+    border-color: transparent;
+    background-color: $checkradio_bg_color;
+    text-shadow: 0 1px transparentize($checkradio_bg_color, 0.5),
+                 0 0 2px transparentize(white, 0.4);
+  }
+
+  &:disabled {
+    color: $insensitive_fg_color;
+    border-color: transparent;
+    background-color: rgba($fg_color, 0.2);
+    box-shadow: none;
+    text-shadow: none;
+
+    &:checked {
+      background-color: rgba($checkradio_bg_color, 0.5);
+    }
+  }
+
+  &:backdrop {
+    color: $backdrop_fg_color;
+    border-color: transparent;
+    background-color: rgba($fg_color, 0.2);
+    text-shadow: none;
+    transition: $backdrop_transition;
+    box-shadow: 0 1px 2px 0 rgba(black, 0.3) inset;
+
+    &:checked {
+      @if $variant == 'light' { color: $backdrop_bg_color; }
+      border-color: transparent;
+      background-color: rgba($checkradio_bg_color, 0.7);
+    }
+
+    &:disabled {
+      color: $backdrop_insensitive_color;
+      border-color: $backdrop_borders_color;
+      background-color: rgba($fg_color, 0.1);
+      box-shadow: none;
+
+      &:checked {
+        background-color: rgba($checkradio_bg_color, 0.5);
+      }
+    }
+  }
+
+  slider {
+    margin: 3px;
+    min-width: 20px;
+    min-height: 20px;
+    border: 0px solid transparent;
+    border-radius: 999px;
+    transition: $button_transition;
+    box-shadow: none;
+
+    @if $variant == 'light' {
+      @include button(normal);
+      border-width: 0px;
+    } 
+    @else {
+      @include button(normal, $c: lighten($bg_color, 6%));
+      border-width: 0px;
+    }
+  }
+  
+  image { color: transparent; } /* only show i / o for the accessible theme */
+
+  &:hover slider {
+    @if $variant == 'light' {
+      @include button(hover);
+      border-width: 0px;
+      border-color: $bg_color;
+      box-shadow: none;
+    }
+    @else {
+      @include button(hover, $c: lighten($bg_color,6%));
+      border-width: 0px;
+      border-color: $bg_color;
+      box-shadow: none;
+    }
+  }
+
+  &:checked slider { border: 0px solid $bg_color; }
+
+  &:disabled slider { @include button(insensitive); }
+
+  &:backdrop {
+    slider {
+      transition: $backdrop_transition;
+
+      @include button(backdrop);
+    }
+
+    &:checked slider { border-color: transparent; }
+
+    &:disabled slider { @include button(backdrop-insensitive);
+      border-color: $bg_color;
+    border-width: 0px; }
+  }
+
+  row:selected & {
+    @if $variant == 'light' {
+      box-shadow: none;
+      border-color: $selected_borders_color;
+
+      &:backdrop { border-color: $selected_borders_color; }
+
+      slider { &:checked, & { border-color: $selected_borders_color; } }
+    }
+  }
+
+}
