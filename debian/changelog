@@ -1,3 +1,9 @@
+pop-gtk-theme (5.4.3) imipsh; urgency=medium
+
+  * GTK4 support
+
+ -- Ian Santopietro <ian@system76.com>  Wed, 18 Aug 2021 12:09:14 -0600
+
 pop-gtk-theme (5.4.2) impish; urgency=medium
 
   * Support gdm-theme.gresource alternative
