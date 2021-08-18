@@ -748,3 +748,46 @@ headerbar * {
     }
   }
 }
+
+/*************************
+ * Check and Radio items *
+ *************************/
+
+checkbutton label {
+  margin: 0 0 0 2px;
+}
+
+check,
+radio {
+  min-height: 12px;
+  min-width: 12px;
+  border: 0px solid transparent;
+  transition: all 100ms $ease-out-quad;
+  & {
+    // for unchecked
+    @each $state, $t in ("", "normal"),
+                        (":hover", "hover"),
+                        (":active", "active"),
+                        (":disabled", "insensitive") {
+      &#{$state} {
+        @include check($t, $bg_color);
+      }
+    }
+  }
+
+  & {
+    // for checked
+    @each $t in (':checked'), (':indeterminate') {
+      &#{$t} {
+        @each $state, $t in ("", "normal"),
+                            (":hover", "hover"),
+                            (":active", "active"),
+                            (":disabled", "insensitive") {
+          &#{$state} {
+            @include check($t, $checkradio_bg_color, $checkradio_fg_color, $checked: true);
+          }
+        }
+      }
+    }
+  }
+}
