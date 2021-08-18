@@ -809,18 +809,9 @@ radio {
   }
 }
 
-:checked,
-:selected {
-  check,
-  radio {
-    background-image: image($selected_bg_color);
-    &:checked {
-      background-image: image($selected_fg_color);
-      box-shadow: 0 0 0 2px $selected_fg_color;
-      color: $white;
-    }
-  }
-}
+/************
+ * Infobars *
+ ************/
 
 infobar {
   &.question {
