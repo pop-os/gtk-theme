@@ -821,3 +821,56 @@ radio {
     }
   }
 }
+
+infobar {
+  &.question {
+    & > revealer > box,
+    &.action:hover > revealer > box {
+      border-bottom: 1px solid darken($color: $selected_bg_color, $amount: 10%);
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+  }
+  &.warning {
+    & > revealer > box,
+    &.action:hover > revealer > box {
+      border-bottom: 1px solid darken($color: $warning_color, $amount: 10%);
+      background-color: $warning_color;
+      color: $selected_fg_color;
+    }
+  }
+  &.error {
+    & > revealer > box,
+    &.action:hover > revealer > box {
+      border-bottom: 1px solid darken($color: $error_color, $amount: 10%);
+      background-color: $error_color;
+      color: $selected_fg_color;
+    }
+  }
+
+  button {
+    @include button(normal);
+    color: $selected_fg_color;
+    background-image: image(transparent);
+    border-color: transparentize($selected_fg_color, 0.8);
+
+    &:backdrop {
+      @include button(backdrop);
+      background-image: image(transparent);
+      border-color: transparentize($color: $selected_fg_color, $amount: 0.9);
+    }
+
+    &:hover {
+      @include button(hover);
+    }
+  }
+}
+
+infobar .close,
+searchbar .close {
+  color: $selected_fg_color;
+
+  &:hover {
+    color: $fg_color;
+  }
+}
