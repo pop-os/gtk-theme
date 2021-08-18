@@ -1,0 +1,11 @@
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$asset_suffix: if($variant=='dark', '-dark', '');
+$backdrop_transition: 200ms ease-out;
+$button_transition: all 200ms $ease-out-quad;
+$focus_transition: outline-width 200ms $ease-out-quad, outline-offset 200ms $ease-out-quad;
+$button_radius: 4px;
+$menu_radius: 4px;
+$menu_margin: $menu_radius; //margin around menuitems & sidebar items
+$window_radius: $button_radius;
+$popover_radius: $button_radius;
+$small_radius: 4px;

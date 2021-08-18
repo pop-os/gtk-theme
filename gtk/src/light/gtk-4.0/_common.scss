@@ -13,6 +13,8 @@ $menu_margin: $menu_radius; //margin around menuitems & sidebar items
 $window_radius: $button_radius + 3;
 $popover_radius: $button_radius + 4;
 
+@import 'variables-pop';
+
 /***************
  * Base States *
  ***************/
