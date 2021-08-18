@@ -12,6 +12,9 @@ $selected_fg_color: $black;
 $selected_bg_color: $blue;
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
 $borders_edge: if($variant == 'light', transparentize($white, 0.2), transparentize($fg_color, 0.93));
+$link_color: $text_blue;
+$link_visited_color: $text_purple;
+$top_hilight: $borders_edge;
 $headerbar_bg_color: if($variant == 'light', $dark_warm_grey, desaturate($dark_ui_300, 100%));
 $headerbar_fg_color: transparentize($white, 0.2);
 
