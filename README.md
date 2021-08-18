@@ -82,40 +82,32 @@ sudo apt install inkscape optipng
 sudo dnf install sassc meson glib2-devel inkscape optipng
 ```
 
-1. If previous versions were installed/existed, remove them first.
+1. If previous versions were installed/existed, remove them first:
 
  ```sh
  sudo apt remove pop-gtk-theme
  sudo rm -rf /usr/share/themes/Pop*
  rm -rf ~/.local/share/themes/Pop*
  rm -rf ~/.themes/Pop*
- ```
+```
 
-2. Clone the repository.
+2. Clone the repository:
 
 ```sh
 git clone https://github.com/pop-os/gtk-theme.git
 cd gtk-theme
 ```
 
-3. Generate the theme files.
+3. Generate the theme files and install the theme:
 
 ```sh
-meson build && cd build
-ninja
+meson build
+ninja -C "build" install
 ```
 
-4. Install the theme.
+Or, if you prefer to install it locally:
 
 ```sh
-ninja install
-```
-
-Or if you prefer to install it locally:
-
-```sh
-git clone git@github.com:pop-os/gtk-theme.git
-cd gtk-theme
 meson -Dprefix=$HOME/.local build
 ninja -C "build" install
 ```
