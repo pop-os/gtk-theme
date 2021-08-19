@@ -865,3 +865,51 @@ searchbar .close {
     color: $fg_color;
   }
 }
+
+/*************************
+ * Treeview Progressbars *
+ *************************/
+
+// Implemented to make progress bars in treeviews look nicer. 
+// The the bars in the System Monitor for reference
+treeview.view.trough,
+treeview.view.progressbar {
+  background: none;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+}
+
+treeview.view.progressbar {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: $selected_bg_color;
+}
+
+treeview.view.progressbar:selected {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: $selected_fg_color;
+}
+
+treeview.view.trough {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: rgba($fg_color, 0.2);
+}
+
+treeview.view.trough:selected {
+  background: none;
+  background-color: transparent;
+  border-bottom-color: rgba($selected_fg_color, 0.2);
+}
+
+treeview.view {
+  color: $fg_color;
+  background-color: $base_color;
+}
+
+treeview.view:selected {
+  background: none;
+  color: $selected_fg_color;
+  background-color: $selected_bg_color;
+}
