@@ -4,6 +4,14 @@ project('Pop',
         license : ['GPL3', 'CC BY-SA 4.0'],
         default_options: ['prefix=/usr'])
 
-subdir('gnome-shell')
-subdir('gtk')
-subdir('sounds')
+if get_option('gnome-shell')
+        subdir('gnome-shell')
+endif
+
+if get_option('gtk')
+        subdir('gtk')
+endif
+
+if get_option('sounds')
+        subdir('sounds')
+endif

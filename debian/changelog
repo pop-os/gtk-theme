@@ -1,3 +1,10 @@
+pop-gtk-theme (5.4.4) impish; urgency=medium
+
+  * Fixes for progressbars in treeview widgets
+  * Build system fixes
+
+ -- Ian Santopietro <ian@system76.com>  Thu, 19 Aug 2021 12:20:15 -0600
+
 pop-gtk-theme (5.4.3) imipsh; urgency=medium
 
   * GTK4 support

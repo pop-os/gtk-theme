@@ -10,3 +10,4 @@ configure_file(input : 'src/index.theme.in',
 
 if get_option('sounds')
     install_subdir('src/stereo', install_dir: theme_dir)
+endif
