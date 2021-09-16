@@ -6,6 +6,8 @@
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 
+@define-color accent_color #{"" + $text_blue};
+
 .accent {
   color: $text_blue;
 }
