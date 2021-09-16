@@ -81,4 +81,6 @@
  
 /* Basic UI define */
 
+@define-color bg_color #{"" + $bg_color};
 @define-color fg_color #{"" + $fg_color};
+@define-color text_color #{"" + $fg_color};
