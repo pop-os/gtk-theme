@@ -315,7 +315,7 @@ button.list-button:not(:active):not(:checked):not(:hover) {
 window.csd.unified:not(.solid-csd):not(.fullscreen) {
   // Remove the sheen on headerbar...
   headerbar {
-    box-shadow: inset 0 1px rgba(255, 255, 255, if($variant == 'light', 0.7, 0));
+    box-shadow: inset 0 1px rgba(255, 255, 255, if($variant == 'light', 0, 0));
 
     &.selection-mode {
       box-shadow: none;
@@ -326,15 +326,26 @@ window.csd.unified:not(.solid-csd):not(.fullscreen) {
   > decoration-overlay {
     // Use a white sheen instead of @borders, as it has to be neutral enough
     // for any content and not just headerbar background
-    box-shadow: inset 0 1px rgba(255, 255, 255, if($variant == 'light', 0.34, 0.065));
+    box-shadow: inset 0 1px rgba(255, 255, 255, if($variant == 'light', 0.1, 0.065));
   }
 
   &:not(.tiled):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right):not(.maximized) {
     &,
     > decoration,
     > decoration-overlay {
-      border-radius: 8px;
+      border-radius: 4px;
     }
+  }
+
+  // Fix for bright-separator in headerbars
+  leaflet headerbar {
+    box-shadow: 1px 0 0 0 if($variant == 'light', rgba(87, 79, 74, 1.0), rgba(40, 40, 40, 1));
+    border-right: 1px solid transparent;
+  }
+  
+  leaflet > separator {
+    min-width: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
   }
 }
 
