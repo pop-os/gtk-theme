@@ -19,9 +19,9 @@ $slider_size: 15px;
   // slider handler
   -slider-handle-radius: $slider_size * 0.5; // half the size of the size
   -slider-handle-border-width: 1px;
-  -slider-handle-border-color: if($variant == 'light', $borders_color, $fg_color);
+  -slider-handle-border-color: $selected_bg_color;
 
-  color: if($variant == 'light', lighten($bg_color, 10%), $fg_color);
-  &:hover { color: $hover_bg_color; }
-  &:active { color: $active_bg_color; }
+  color: $selected_bg_color;
+  &:hover { color: $selected_bg_color; }
+  &:active { color: $selected_bg_color; }
 }
