@@ -913,3 +913,36 @@ treeview.view:selected {
   color: $selected_fg_color;
   background-color: $selected_bg_color;
 }
+
+/*************************
+ * Scale trough contrast *
+ *************************/
+
+%scale_trough {
+  border: 1px solid $dark_fill;
+  border-radius: 3px;
+  background-color: transparentize($fg_color, if($variant == "light", 0.9, 0.7));
+
+  headerbar & { background-color: darken($dark_fill,8%); } //3504
+
+  &:disabled {
+   background-color: $insensitive_bg_color;
+   border-color: $insensitive_borders_color;
+  }
+
+  // ...on selected list rows
+  row:selected & {
+    &:disabled, & {
+      outline-color: $alt_focus_border_color;
+      border-color: $selected_borders_color;
+    }
+  }
+
+  // OSD
+  .osd & {
+    border-color: $osd_borders_color;
+    background-color: transparentize($osd_borders_color, 0.2);
+
+    &:disabled { background-color: $osd_insensitive_bg_color; }
+  }
+}
