@@ -1,3 +1,15 @@
+pop-gtk-theme (5.4.5) impish; urgency=medium
+
+  * Fixes for impish
+  * GtkScale Contrast Improvements
+  * Slider handle color in St
+  * Fix for white HdyWindow Highlights
+  * Fix for blue selected-user in login screen
+  * Broken GNOME Shell switch dark asset
+  * Fixes for minor Granite color issues
+
+ -- Ian Santopietro <ian@system76.com>  Fri, 08 Oct 2021 15:56:34 -0600
+
 pop-gtk-theme (5.4.4) impish; urgency=medium
 
   * Fixes for progressbars in treeview widgets
