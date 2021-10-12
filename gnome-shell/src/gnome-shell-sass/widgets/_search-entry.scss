@@ -1,23 +1,30 @@
 // Search entry
 
+// FIXME: due to pop-os/gnome-shell#78 we want to enforce the light theme
+// for this entry. Once the above bug is fixed, we should revert to using
+// $fg_color and $bg_color instead.
+
 $search_entry_width: 320px;
 $search_entry_height: 36px;
+$search_entry_bg: #F6F6F6;
+$search_entry_fg: #2B2928;
+$search_entry_selection: #63B1BC;
 
 %search_entry,
 .search-entry {
   width: $search_entry_width;
   padding: $base_padding+1 $base_padding+3;
   border-radius: $search_entry_height * 0.5; // half the height
-  color: transparentize($fg_color,0.3);
-  background-color: $bg_color;
+  color: transparentize($search_entry_fg,0.3);
+  background-color: $search_entry_bg;
   border-color: $borders_color;
   margin-top: $base_spacing * 2;
   margin-bottom: $base_spacing;
 
   &:hover {
-    background-color: $hover_bg_color;
+    background-color: $search_entry_bg;
     border-color: $hover_borders_color;
-    color: $hover_fg_color;
+    color: $search_entry_fg;
   }
 
   &:focus {
