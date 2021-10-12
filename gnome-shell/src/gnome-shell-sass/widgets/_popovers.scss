@@ -38,13 +38,20 @@ $popover_arrow_height: 12px;
   &:rtl { padding-right: 0; padding-left:1.75em; }
 
   &:checked {
-    background-color: lighten($bg_color, 2%);
+    background-color: $entry_color;
+    color: $selected_fg_color;
     box-shadow: none;
   }
 
   &.selected {
-    background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+    background-color: transparentize($fg_color, 0.9);
     color: $fg_color;
+
+    &:checked {
+      background-color: $entry_color;
+      color: $selected_fg_color;
+      box-shadow: none;
+    }
   }
 
   &:active { 
