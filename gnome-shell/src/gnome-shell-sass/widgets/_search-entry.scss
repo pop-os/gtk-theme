@@ -17,6 +17,8 @@ $search_entry_selection: #63B1BC;
   border-radius: $search_entry_height * 0.5; // half the height
   color: transparentize($search_entry_fg,0.3);
   background-color: $search_entry_bg;
+  selection-background-color: $search_entry_selection;
+  selected-color: $selected_fg_color;
   border-color: $borders_color;
   margin-top: $base_spacing * 2;
   margin-bottom: $base_spacing;
@@ -32,8 +34,13 @@ $search_entry_selection: #63B1BC;
     border-width: 2px;
     border-style: solid;
     border-color: $entry_color;
-    color: $fg_color;
+    color: $search_entry_fg;
     box-shadow: inset 0 1px 2px 1px rgba(0,0,0,0.2);
+  }
+
+  StLabel.hint-text {
+    margin-left: 2px;
+    color: transparentize($search_entry_fg, 0.3);
   }
 
   .search-entry-icon { 
