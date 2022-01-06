@@ -74,7 +74,6 @@ headerbar {
       & {
         @include button(backdrop, $_backdrop_headerbar_bg_color, $_backdrop_headerbar_fg_color);
 
-        -gtk-icon-effect: none;
         border-color: $_headerbar_button_backdrop_bg_color;
 
         &:active,
@@ -268,7 +267,7 @@ headerbar {
     color: $selected_fg_color;
     border-color: $suggested_border_color;
 
-    @include headerbar_fill($suggested_bg_color, $_hc);
+    @include headerbar_fill($suggested_bg_color);
 
     separator {
       background: image(lighten($suggested_bg_color, 5%));
@@ -318,7 +317,6 @@ headerbar {
         & {
           @include button(backdrop, $suggested_bg_color, $selected_fg_color);
 
-          -gtk-icon-effect: none;
           border-color: lighten($suggested_bg_color, 5%);
 
           &:active,
@@ -408,10 +406,12 @@ headerbar {
         box-shadow: none;
         min-height: 20px;
         padding: 5px;
-
-        arrow {
-          -GtkArrow-arrow-scaling: 1;
-        }
+        
+        // FIXME: This causes errors, so we're removing it, but I want to keep
+        // it in case there's something bad that happens if we remove it.
+        // arrow {
+        //   -GtkArrow-arrow-scaling: 1;
+        // }
 
         .arrow {
           -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
