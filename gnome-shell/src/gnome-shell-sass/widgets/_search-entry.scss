@@ -1,51 +1,26 @@
 // Search entry
 
-// FIXME: due to pop-os/gnome-shell#78 we want to enforce the light theme
-// for this entry. Once the above bug is fixed, we should revert to using
-// $fg_color and $bg_color instead.
-
 $search_entry_width: 320px;
 $search_entry_height: 36px;
-$search_entry_bg: #F6F6F6;
-$search_entry_fg: #2B2928;
-$search_entry_selection: #63B1BC;
 
 %search_entry,
 .search-entry {
-  width: $search_entry_width;
-  padding: $base_padding+1 $base_padding+3;
   border-radius: $search_entry_height * 0.5; // half the height
-  color: transparentize($search_entry_fg,0.3);
-  background-color: $search_entry_bg;
-  selection-background-color: $search_entry_selection;
-  selected-color: $selected_fg_color;
-  border-color: $borders_color;
-  margin-top: $base_spacing * 2;
-  margin-bottom: $base_spacing;
 
-  &:hover {
-    background-color: $search_entry_bg;
-    border-color: $hover_borders_color;
-    color: $search_entry_fg;
-  }
+  margin-top: $base_padding * 2;
+  margin-bottom: $base_padding;
+  padding: $base_padding+1 $base_padding+3;
+  width: $search_entry_width;
 
-  &:focus {
-    padding: $base_padding $base_padding+2; // 1px less to account for wider border
-    border-width: 2px;
-    border-style: solid;
-    border-color: $entry_color;
-    color: $search_entry_fg;
-    box-shadow: inset 0 1px 2px 1px rgba(0,0,0,0.2);
-  }
+  @include entry(normal);
+  &:hover { @include entry(hover);}
+  &:focus { @include entry(focus);}
+  &:insensitive { @include entry(insensitive);}
 
-  StLabel.hint-text {
-    margin-left: 2px;
-    color: transparentize($search_entry_fg, 0.3);
-  }
-
-  .search-entry-icon { 
-    icon-size: $base_icon_size;
-    padding: 0 4px;
+  .search-entry-icon {
     color: inherit;
+    icon-size: $base_icon_size;
+    margin-top: 2px; // center vertically
+    padding: 0 4px;
   }
 }

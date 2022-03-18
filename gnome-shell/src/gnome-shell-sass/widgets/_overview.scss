@@ -1,13 +1,10 @@
 /* OVERVIEW */
 
 .controls-manager, .secondary-monitor-workspaces {
-  spacing: $base_spacing * 2;
-}
-#overviewGroup {
-  background-color: $system_bg_color;
+  spacing: $base_padding * 2;
 }
 
-#overview.cosmic-solid-bg {
+#overviewGroup {
   background-color: $system_bg_color;
 }
 

@@ -1,7 +1,5 @@
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
-@import "pop_os_colors";
-
 
 $base_color: #222;
 $bg_color: #000;
@@ -14,7 +12,6 @@ $borders_color: darken($bg_color,12%);
 $borders_edge: transparentize($fg_color, 0.9);
 $link_color: lighten($selected_bg_color,20%);
 $link_visited_color: lighten($selected_bg_color,10%);
-$top_hilight: $borders_edge;
 
 $warning_color: #f57900;
 $error_color: #cc0000;
@@ -25,6 +22,8 @@ $osd_fg_color: #eeeeec;
 $osd_bg_color: #2e3436;
 $osd_borders_color: rgba(0,0,0, 0.7);
 $osd_outer_borders_color: rgba(255,255,255, 0.1);
+$osd_insensitive_bg_color: mix($osd_fg_color, $osd_bg_color, 10%);
+$osd_insensitive_fg_color: if($variant == 'light', mix($osd_fg_color, $osd_bg_color, 80%),  mix($osd_fg_color, $osd_bg_color, 70%));
 
 $shadow_color: rgba(0,0,0, 0.1);
 $system_bg_color: desaturate(#241f31,100%); //neutralize the HIG color
@@ -41,17 +40,3 @@ $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
 $backdrop_insensitive_color: lighten($backdrop_bg_color,15%);
 $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 $backdrop_dark_fill: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
-
-//Colors for certain widgets
-$entry_color: if($variant=='light', $dark_ui_900, $light_ui_100);
-$close_button_color: mix($red, $orange, 50%);
-
-$panel_bg_color: darken(#2B2928, 3%);;
-$dash_bg_color: $panel_bg_color;
-$panel-alpha-value: 0.0;
-$panel_opaque_value: 0.0;
-
-$dash-alpha-value: 0.0;
-$dash-opaque-alpha-value: 0.0;
-
-$system_bg_color: #36322f; //previously "gdm_grey"

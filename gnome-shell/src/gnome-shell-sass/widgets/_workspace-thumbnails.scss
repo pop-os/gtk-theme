@@ -1,10 +1,9 @@
 /* Workspace pager */
 
 // thumbnails in overview
-.workspace-thumbnails,
-.workspace-thumbnails-left {
+.workspace-thumbnails {
   visible-width: 32px; //amount visible before hover
-  spacing: $base_spacing;
+  spacing: $base_padding;
   padding: $base_padding;
 
   .workspace-thumbnail {
@@ -22,8 +21,8 @@
 
 // selected indicator
 .workspace-thumbnail-indicator {
-  border: 3px solid $entry_color;
+  border: 3px solid $selected_bg_color;
   border-radius: 3px;
   padding: 0px;
-  // background-color: transparentize($entry_color, 0.9);
+  // background-color: transparentize($selected_bg_color, 0.9);
 }
