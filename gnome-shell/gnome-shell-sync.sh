@@ -57,6 +57,42 @@ root=${data}/theme
 [ ! -d ${_destination}/data ] && mkdir ${_destination}/data
 
 files=(
+  calendar-today-light.svg
+  calendar-today.svg
+  checkbox-focused.svg
+  checkbox-off-focused-light.svg
+  checkbox-off-focused.svg
+  checkbox-off-light.svg
+  checkbox-off.svg
+  checkbox.svg
+  dash-placeholder.svg
+  gnome-shell-high-contrast.scss
+  gnome-shell.scss
+  gnome-shell-start.svg
+  meson.build
+  pad-osd.css
+  process-working.svg
+  README.md
+  running-indicator.svg
+  toggle-off-hc.svg
+  toggle-off-light.svg
+  toggle-off.svg
+  toggle-on-hc.svg
+  toggle-on-light.svg
+  toggle-on.svg
+  workspace-placeholder.svg
+)
+
+sass_files=(
+  gnome-shell-sass/_colors.scss
+  gnome-shell-sass/_common.scss
+  gnome-shell-sass/COPYING
+  gnome-shell-sass/_drawing.scss
+  gnome-shell-sass/gnome-shell-sass.doap
+  gnome-shell-sass/_high-contrast-colors.scss
+  gnome-shell-sass/NEWS
+  gnome-shell-sass/README.md
+  gnome-shell-sass/_widgets.scss
   gnome-shell-sass/widgets/_a11y.scss
   gnome-shell-sass/widgets/_app-grid.scss
   gnome-shell-sass/widgets/_base.scss
@@ -81,29 +117,16 @@ files=(
   gnome-shell-sass/widgets/_panel.scss
   gnome-shell-sass/widgets/_popovers.scss
   gnome-shell-sass/widgets/_screen-shield.scss
+  gnome-shell-sass/widgets/_screenshot.scss
   gnome-shell-sass/widgets/_scrollbars.scss
   gnome-shell-sass/widgets/_search-entry.scss
   gnome-shell-sass/widgets/_search-results.scss
   gnome-shell-sass/widgets/_slider.scss
   gnome-shell-sass/widgets/_switcher-popup.scss
   gnome-shell-sass/widgets/_switches.scss
-  gnome-shell-sass/widgets/_tiled-previews.scss
   gnome-shell-sass/widgets/_window-picker.scss
   gnome-shell-sass/widgets/_workspace-switcher.scss
   gnome-shell-sass/widgets/_workspace-thumbnails.scss
-  gnome-shell-sass/_colors.scss
-  gnome-shell-sass/_common.scss
-  gnome-shell-sass/COPYING
-  gnome-shell-sass/_drawing.scss
-  gnome-shell-sass/gnome-shell-sass.doap
-  gnome-shell-sass/_high-contrast-colors.scss
-  gnome-shell-sass/NEWS
-  gnome-shell-sass/README.md
-  gnome-shell-high-contrast.scss
-  gnome-shell.scss
-  meson.build
-  pad-osd.css
-  README.md
 )
 
 gresource_files=(
@@ -112,6 +135,10 @@ gresource_files=(
 
 set -e
 for i in ${files[@]}; do
+    wget ${root}/${i} -O ${_destination}/${i}
+done
+
+for i in ${sass_files[@]}; do
     wget ${root}/${i} -O ${_destination}/${i}
 done
 
