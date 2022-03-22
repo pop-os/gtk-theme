@@ -1,0 +1,133 @@
+$button_radius: 4px;
+$menu_radius: 4px;
+$window_radius: $button_radius;
+$popover_radius: $button_radius;
+
+label {
+  row:selected &,
+  &:selected { @extend %nobg_selected_items; }
+}
+
+.dim-label {
+  opacity: 0.7;
+}
+
+/***********
+ * Buttons *
+ ***********/
+
+%button,
+button {
+  // big standalone buttons like in Documents pager
+  &.osd {
+    border-radius: $window_radius;
+
+    // Suggested and Destructive Action buttons
+    @each $b_type, $b_color in (suggested-action, $suggested_bg_color),
+                              (destructive-action, $destructive_color) {
+      &.#{$b_type} {
+        @include button(normal, $b_color, black);
+
+        &:hover { @include button(hover, $b_color, black); }
+
+        &:active,
+        &:checked { @include button(active, $b_color, black); }
+
+        &:backdrop,
+        &.flat:backdrop {
+          @include button(backdrop, $b_color, black);
+
+          &:active,
+          &:checked { @include button(backdrop-active, $b_color, black); }
+
+          &:disabled {
+            &:active,
+            &:checked { @include button(backdrop-insensitive-active, $b_color, black); }
+          }
+        }
+
+        &:disabled {
+          &:active,
+          &:checked { @include button(insensitive-active, $b_color, black); }
+        }
+      }
+    }
+  }
+}
+
+/************
+ * Toolbars *
+ ************/
+toolbar {
+  &.osd {
+    border-radius: $window_radius;
+  }
+}
+
+.inline-toolbar {
+  border-radius: 0  0 $window_radius $window_radius;
+}
+
+/***************
+ * Header bars *
+ ***************/
+headerbar { // headerbar border rounding
+
+  window separator:first-child + &,
+  window &:first-child { &:backdrop, & { border-top-left-radius: $window_radius; }}
+  window &:last-child { &:backdrop, & { border-top-right-radius: $window_radius; }}
+
+  window stack & { // tackles the stacked headerbars case
+    &:first-child, &:last-child {
+      &:backdrop, & {
+        border-top-left-radius: $window_radius;
+        border-top-right-radius: $window_radius;
+      }
+    }
+  }
+}
+
+/**************
+ * Tree Views *
+ **************/
+treeview.view {
+  &.expander {
+    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+
+    &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
+
+    color: mix($text_color, $base_color, 70%);
+
+    &:hover { color: $text_color; }
+
+    &:selected {
+      color: mix($selected_fg_color, $selected_bg_color, 70%);
+
+      &:hover { color: $selected_fg_color; }
+
+      &:backdrop { color: mix($backdrop_selected_fg_color, $selected_bg_color, 70%); }
+    }
+
+    &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+
+    &:backdrop { color: mix($backdrop_fg_color, $backdrop_base_color, 70%); }
+  }
+}
+
+/************
+ * GtkScale *
+ ************/
+%scale_trough {
+  background-color: transparentize($fg_color, if($variant == "light", 0.9, 0.7));
+}
+
+/*****************
+ * Progress bars *
+ *****************/
+progressbar {
+  text {
+    padding: 3px;
+    background-color: transparent;
+    color: $fg_color;
+  }
+}

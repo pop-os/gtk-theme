@@ -1,0 +1,37 @@
+// When color definition differs for dark and light variant
+// it gets @if ed depending on $variant
+
+@import 'pop_os-palette';
+
+$base_color: if($variant == 'light', #ffffff, #272727); 
+$text_color: if($variant == 'light', #272727, #cccccc);
+$bg_color: if($variant == 'light', #F6F6F6, #303030);
+$fg_color: if($variant == 'light', #292929, #cccccc);
+
+$selected_fg_color: #000;
+$selected_bg_color: if($variant=='light', #48b9c7, #94EBEB);
+
+$borders_color: if($variant == 'light', rgba(darken($bg_color, 18%), 0.5), rgba(darken($bg_color, 10%), 0.5));
+$alt_borders_color: if($variant == 'light', rgba(darken($bg_color, 24%), 0.5), rgba(darken($bg_color, 18%), 0.5));
+
+$link_color: $text_blue;
+$link_visited_color: $text_orange;
+$headerbar_color: if($variant == 'light', #574F4A, #363636);
+$warning_color: if($variant=='light', #FEDB40, #FFF19E);
+$error_color: if($variant=='light', #E56A54, #EA9090);
+$success_color: if($variant=='light', #82BF8C, #90CFB0);
+$destructive_color: if($variant=='light', #E56A54, #EA9090);
+
+$osd_bg_color: transparentize(darken(desaturate(#3d3846, 100%), 4%),0.3);
+
+$backdrop_selected_fg_color: rgba($selected_fg_color, 0.6);
+
+//special cased widget colors
+$suggested_bg_color: if($variant=='light', #82BF8C, #90CFB0);
+$suggested_border_color: if($variant=='light', darken($suggested_bg_color, 15%), $suggested_bg_color);
+$progress_bg_color: if($variant=='light', #63B1BC, #6ACAD8);
+$progress_border_color: if($variant=='light', darken($progress_bg_color, 15%), darken($progress_bg_color, 30%));
+$checkradio_bg_color: if($variant=='light', #FFAD00, #FBB86C);
+$checkradio_fg_color: #000;
+$checkradio_borders_color: $checkradio_bg_color;
+$spinner_fg_color: $fg_color;

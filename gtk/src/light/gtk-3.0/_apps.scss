@@ -96,9 +96,10 @@ list.tweak-categories separator {
   background-color: if($variant=='light', white, $base_color);
   &:backdrop { background-color: $backdrop_base_color }
 
-  .path-bar-box {
-    $_headerbar_button_bg: darken($headerbar_bg_color, 2%);
-    $_btn_backdrop_border: darken($headerbar_border_color, 3%);
+  $_headerbar_button_bg: darken($headerbar_bg_color, 2%);
+  $_btn_backdrop_border: darken($headerbar_border_color, 3%);
+  
+  .path-buttons-box {
     border: 1px solid;
     border-radius: $button_radius;
     transition: all 200ms $ease-out-quad;
@@ -108,23 +109,61 @@ list.tweak-categories separator {
       @include button(backdrop, $backdrop_headerbar_bg_color, $backdrop_headerbar_fg_color);
       border-color: $_btn_backdrop_border;
     }
-  }
-  
-  .path-bar-box button {
-    margin: 0px;
 
-    &:first-child {
-      border-width: 0px 1px 0px 0px;
-      border-radius: $button_radius 0px 0px $button_radius;
+    button {
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
+  }
 
-    &:not(:first-child) {
-      border-width: 0px 1px 0px 1px;
-      border-radius: 0px;
+  .nautilus-path-bar .popup {
+    margin: 6px 0;
+  }
+
+  /* Path bar */
+
+  .nautilus-path-bar {
+    > scrolledwindow {
+      margin: 6px 0px 6px 0px;
+      border-radius: 6px 0px 0px 6px;
+      border-right-width: 0px;
+      background-color: $_headerbar_button_bg;
+
+      undershoot.left {
+        border-radius: 6px 0px 0px 6px;
+        background: linear-gradient(to right, $_headerbar_button_bg 6px, $_headerbar_button_bg 24px);
+      }
+      undershoot.right {
+        background: linear-gradient(to left, $_headerbar_button_bg 6px, $_headerbar_button_bg 24px);
+      }
     }
     
-    &:not(:checked) image {
-      opacity: 0.8; /* dim the icon when not checked */
+    > button {
+      margin: 0;
+    }
+
+    .path-buttons-box {
+      button {
+        margin: 0px;
+        box-shadow: none;
+        border-radius: $button_radius;
+        border-width: 0px;
+        -gtk-icon-shadow: none;
+    
+        &:hover {
+          box-shadow: none;
+        }
+
+        &:not(:hover),
+        &.current-dir {
+          background: none;
+        }
+
+        &:not(.current-dir):not(:backdrop):hover label {
+          opacity: 1;
+        }
+      }
     }
   }
 

@@ -1,9 +1,11 @@
 $variant: 'dark';
 
 @import 'colors';
+@import 'colors-pop';
 @import 'drawing';
-@import 'pop_os-drawing';
+@import 'drawing-pop';
 @import 'common';
+@import 'common-pop';
 @import "apps";
 @import "tweaks";
 @import 'granite/granite';
