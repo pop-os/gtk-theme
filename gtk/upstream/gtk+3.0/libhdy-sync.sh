@@ -46,7 +46,7 @@ done
 wget_check=`which wget | wc -l`
 [ $wget_check == 0 ] && echo "install wget" && exit 1
 
-root=https://gitlab.gnome.org/GNOME/libhandy/-/raw/master/src/themes/
+root=https://gitlab.gnome.org/GNOME/libhandy/-/raw/main/src/themes/
 
 [ ! -d ${_destination} ] && echo ${_destination} folder does not exists && exit 1
 
