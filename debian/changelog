@@ -1,11 +1,11 @@
-pop-gtk-theme (5.5.0) UNRELEASED; urgency=medium
+pop-gtk-theme (5.5.0) jammy; urgency=medium
 
   * Updates for GNOME 42
   * Revised styling of notifications panel widgets
   * Revised styling of popovers and submenus
   * Revised styling of OSD popups
 
- -- Ian Santopietro <ian@system76.com>  Fri, 18 Mar 2022 19:02:34 +0000
+ -- Ian Santopietro <ian@system76.com>  Mon, 21 Mar 2022 22:45:41 -0600
 
 pop-gtk-theme (5.4.5) impish; urgency=medium
 
