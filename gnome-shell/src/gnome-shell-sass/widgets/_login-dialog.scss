@@ -187,7 +187,7 @@
   StEntry {
     border:none !important;
     &:focus { 
-      background-color: transparentize($fg_color, 0.9);
+      background-color: lighten($bg_color, 5%);
     }
     &:insensitive { 
       color: transparentize($fg_color, 0.5);
