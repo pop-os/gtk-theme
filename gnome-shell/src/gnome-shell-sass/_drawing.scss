@@ -229,7 +229,7 @@ $button_bg_color: mix($tc, $c, 5%);
     &:insensitive {
       @include button(insensitive);
       background-color: transparent;
-      color: transparentize($selected_fg_color, .5);
+      color: transparentize($fg_color, .5);
     }
   }
 }
