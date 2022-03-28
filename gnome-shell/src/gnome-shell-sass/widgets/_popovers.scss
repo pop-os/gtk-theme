@@ -41,14 +41,23 @@
    &:active { background-color: $active_bg_color !important;}
  }
 
-  &:checked {background-color: $checked_header_bg_color !important;}
+  &:checked {
+    background-color: $checked_header_bg_color !important;
+    color: $selected_fg_color !important;
+  }
 
   &:checked {
     margin-bottom: 0;
     box-shadow: inset 0 -1px 0 0 darken($checked_header_bg_color, 5%);
     border-radius: $base_border_radius $base_border_radius 0 0;
-    &:focus,&:hover { background-color: lighten($checked_header_bg_color, 3%) !important;}
-    &:active { background-color: lighten($checked_header_bg_color, 5%) !important;}
+    &:focus,&:hover {
+      background-color: lighten($checked_header_bg_color, 3%) !important;
+      color: $selected_fg_color !important;
+    }
+    &:active {
+      background-color: lighten($checked_header_bg_color, 5%) !important;
+      color: $selected_fg_color !important;
+    }
   }
 
   &:active {
@@ -103,6 +112,7 @@
     &:focus,&:hover { background-color: lighten($hover_bg_color, 10%) !important;}
     &:checked {
       background-color: lighten($checked_bg_color, 10%) !important;
+      color: $selected_bg_color !important;
       &:focus,&:hover { background-color: lighten($checked_bg_color, 8%) !important;}
     }
     &:active { background-color: lighten($active_bg_color, 10%) !important;}
