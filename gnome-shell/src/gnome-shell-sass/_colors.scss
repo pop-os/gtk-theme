@@ -3,7 +3,7 @@
 @import "ubuntu-colors";
 @import "pop_os_colors";
 
-$base_color: if($variant == 'light', #ffffff, #2B2928); 
+$base_color: if($variant == 'light', #ffffff, #36322F); 
 $text_color: if($variant == 'light', black, white);
 $bg_color: if($variant == 'light', #F6F6F6, #33302F);
 $fg_color: if($variant == 'light', #2B2928, #E6E6E6);
