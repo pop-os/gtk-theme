@@ -46,7 +46,7 @@ $active_bg_color: if($variant=='light', darken($bg_color, 5%), lighten($bg_color
 $active_fg_color: if($variant=='light', darken($fg_color, 5%), lighten($fg_color, 6%));
 
 // derived checked colors
-$checked_bg_color: if($variant=='light', darken($bg_color, 7%), lighten($bg_color, 9%));
+$checked_bg_color: if($variant=='light', darken($bg_color, 5%), lighten($bg_color, 9%));
 $checked_header_bg_color: $orange;
 $checked_fg_color: if($variant=='light', darken($fg_color, 7%), lighten($fg_color, 9%));
 

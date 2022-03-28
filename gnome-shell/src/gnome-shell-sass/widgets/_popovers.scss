@@ -109,7 +109,7 @@
       border-radius: 0 0 $base_border_radius $base_border_radius;
     }
 
-    &:focus,&:hover { background-color: lighten($hover_bg_color, 10%) !important;}
+    &:focus,&:hover { background-color: transparentize($color: $fg_color, $amount: 0.9) !important;}
     &:checked {
       background-color: lighten($checked_bg_color, 10%) !important;
       color: $selected_bg_color !important;
