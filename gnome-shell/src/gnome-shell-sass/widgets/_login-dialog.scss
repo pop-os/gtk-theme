@@ -186,12 +186,12 @@
 .unlock-dialog {
   StEntry {
     border:none !important;
+    background-color: lighten($bg_color, 5%);
     &:focus { 
-      background-color: lighten($bg_color, 5%);
     }
     &:insensitive { 
       color: transparentize($fg_color, 0.5);
-      background-color: transparentize($fg_color, 0.95);
+      background-color: lighten($bg_color, 5%);
     }
   }
 
