@@ -1,3 +1,16 @@
+pop-gtk-theme (5.5.1) jammy; urgency=medium
+
+  * Fixes for screenshot UI
+  * Unlock dialog entry improvements
+  * Tweaks to GDM color to ensure matches with Plymouth
+  * Login screen user selection background
+  * Shell popover submenu fixes
+  * Sync GTK Theme base with upstream
+  * Fixes for  Nautilus styling
+  * Text color improvements for Calendar
+
+ -- Ian Santopietro <ian@system76.com>  Tue, 05 Apr 2022 10:38:00 -0600
+
 pop-gtk-theme (5.5.0) jammy; urgency=medium
 
   * Updates for GNOME 42
