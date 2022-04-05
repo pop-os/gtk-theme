@@ -11,7 +11,7 @@ $screenshot_ui_shot_cast_margin: 21px;
 $screenshot_ui_panel_border_radius: $modal_radius + $screenshot_ui_shot_cast_margin;
 $screenshot_ui_shot_cast_spacing: 3px;
 
-$screenshot_ui_button_red: $error_color;
+$screenshot_ui_button_red: #E56A54;
 
 .screenshot-ui-panel {
   @extend %osd_panel;
@@ -93,7 +93,7 @@ $screenshot_ui_button_red: $error_color;
 }
 
 .screenshot-ui-shot-cast-container {
-  background-color: transparentize($color: $hover_bg_color, $amount: 0.5);
+  background-color: lighten($osd_bg_color, 35%);
   border-radius: $modal_radius;
   padding: $screenshot_ui_shot_cast_spacing;
   spacing: $screenshot_ui_shot_cast_spacing;
@@ -104,11 +104,19 @@ $screenshot_ui_button_red: $error_color;
 }
 
 .screenshot-ui-shot-cast-button {
+  color: white !important;
   padding: $base_padding $base_padding*2;
   background-color: transparent;
-  &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
-  &:active { background-color: lighten($active_bg_color,5%); }
-  &:checked { background-color: white; color: black; }
+  &:hover, &:focus {
+    background-color: lighten($osd_bg_color, 50%);
+  }
+  &:active {
+    background-color: lighten($osd_bg_color, 40%);
+  }
+  &:checked {
+    background-color: white; 
+    color: black !important;
+  }
 
   border-radius: $modal_radius - $screenshot_ui_shot_cast_spacing;
 
