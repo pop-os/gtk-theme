@@ -34,6 +34,17 @@ $screenshot_ui_button_red: $error_color;
   @extend %osd_button;
   padding: $base_padding * 2 $base_padding * 3 !important;
   border-radius: $screenshot_ui_panel_border_radius - $screenshot_ui_panel_padding;
+  color: $dark_fg_color !important;
+
+  &:hover, &:focus, &:checked {
+    background-color: transparentize($color: $dark_fg_color, $amount: 0.85) !important;
+  }
+  &:checked:hover {
+    background-color: transparentize($dark_fg_color, 0.5) !important;
+  }
+  &:active {
+    background-color: transparentize($color: $dark_fg_color, $amount: 0.7) !important;
+  }
 }
 
 .screenshot-ui-capture-button {
@@ -52,13 +63,13 @@ $screenshot_ui_button_red: $error_color;
 
   &:hover, &:focus {
     .screenshot-ui-capture-button-circle {
-      background-color: darken($osd_fg_color, 15%);
+      background-color: lighten($osd_fg_color, 15%);
     }
   }
 
   &:active {
     .screenshot-ui-capture-button-circle {
-      background-color: darken($osd_fg_color, 50%);
+      background-color: lighten($osd_fg_color, 50%);
     }
   }
 
@@ -82,10 +93,11 @@ $screenshot_ui_button_red: $error_color;
 }
 
 .screenshot-ui-shot-cast-container {
-  background-color: $hover_bg_color;
+  background-color: transparentize($color: $hover_bg_color, $amount: 0.5);
   border-radius: $modal_radius;
   padding: $screenshot_ui_shot_cast_spacing;
   spacing: $screenshot_ui_shot_cast_spacing;
+  color: $light_fg_color;
 
   &:ltr { margin-left: $screenshot_ui_shot_cast_margin - $screenshot_ui_panel_padding; }
   &:rtl { margin-right: $screenshot_ui_shot_cast_margin - $screenshot_ui_panel_padding; }
@@ -108,6 +120,17 @@ $screenshot_ui_button_red: $error_color;
   border-radius: 99px;
   padding: $base_padding * 2 !important;
   StIcon { icon-size: $base_icon_size; }
+  color: $dark_fg_color !important;
+
+  &:hover, &:focus, &:checked {
+    background-color: transparentize($color: $dark_fg_color, $amount: 0.85) !important;
+  }
+  &:checked:hover {
+    background-color: transparentize($dark_fg_color, 0.5) !important;
+  }
+  &:active {
+    background-color: transparentize($color: $dark_fg_color, $amount: 0.7) !important;
+  }
 }
 
 .screenshot-ui-area-indicator-shade {

@@ -1,7 +1,7 @@
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
 @import "ubuntu-colors";
-@import "pop_os_colors";
+@import "pop-os-colors";
 
 $base_color: if($variant == 'light', #ffffff, #36322F); 
 $text_color: if($variant == 'light', black, white);
@@ -37,7 +37,9 @@ $tooltip_borders_color: $osd_outer_borders_color;
 $shadow_color: if($variant == 'light', rgba(0,0,0,0.1), rgba(0,0,0,0.2));
 
 // overview background color
-$system_bg_color: $base_color;
+// $system_bg_color: $base_color;
+
+$system_bg_color: #36322f; //previously "gdm_grey"
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
