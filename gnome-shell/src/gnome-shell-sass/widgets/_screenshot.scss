@@ -45,6 +45,9 @@ $screenshot_ui_button_red: #E56A54;
   &:active {
     background-color: transparentize($color: $dark_fg_color, $amount: 0.7) !important;
   }
+  &:insensitive {
+    color: transparentize($color: $osd_fg_color, $amount: 0.8) !important;
+  }
 }
 
 .screenshot-ui-capture-button {
