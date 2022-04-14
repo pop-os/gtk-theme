@@ -162,15 +162,15 @@ $button_bg_color: mix($tc, $c, 5%);
   // focused button
   @if $t==focus {
     color: $tc;
-    background-color: mix($button_bg_color, $selected_bg_color, 90%);
-    box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, 0.4);
+    background-color: mix($button_bg_color, $orange, 90%);
+    box-shadow: inset 0 0 0 2px transparentize($orange, 0.4);
     &:hover {
-      background-color: mix(lighten($button_bg_color, 3%), $selected_bg_color, 90%);
-      box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, 0.3);
+      background-color: mix(lighten($button_bg_color, 3%), $orange, 90%);
+      box-shadow: inset 0 0 0 2px transparentize($orange, 0.3);
     }
     &:active {
-      background-color: mix(lighten($button_bg_color, 6%), $selected_bg_color, 90%);
-      box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, 0.3);
+      background-color: mix(lighten($button_bg_color, 6%), $orange, 90%);
+      box-shadow: inset 0 0 0 2px transparentize($orange, 0.3);
     }
   }
 
