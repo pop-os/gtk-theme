@@ -93,7 +93,7 @@
 
 // popover submenus
 .popup-sub-menu {
-  background-color: $checked_bg_color;
+  background-color: darken($bg_color, 5%);
   border-radius: 0 0 $base_border_radius $base_border_radius;
 
   .popup-menu-ornament {
