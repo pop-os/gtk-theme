@@ -83,7 +83,7 @@ $close_button_color: mix($orange, $red, 50%);
 
 //Colors for certain widgets
 $entry_color: if($variant=='light', #FFAD00, #FBB86C);
-$close_button_color: mix($red, $orange, 50%);
+$close_button_color: mix(#E56A54, #FFAD00, 50%);
 
 $panel_bg_color: darken(#2B2928, 3%);;
 $dash_bg_color: $panel_bg_color;
