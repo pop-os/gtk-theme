@@ -35,3 +35,4 @@ $checkradio_bg_color: if($variant=='light', #FFAD00, #FBB86C);
 $checkradio_fg_color: #000;
 $checkradio_borders_color: $checkradio_bg_color;
 $spinner_fg_color: $fg_color;
+$scrollbar_slider_active_color: darken($selected_bg_color, 5%);
