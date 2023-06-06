@@ -125,18 +125,28 @@ list.tweak-categories separator {
 
   .nautilus-path-bar {
     > scrolledwindow {
+      @include button(normal, $_headerbar_button_bg, $headerbar_fg_color);
       margin: 6px 0px 6px 0px;
-      border-radius: 6px 0px 0px 6px;
-      border-right-width: 0px;
-      background-color: $_headerbar_button_bg;
+      border-radius: 4px 0px 0px 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-right-width: 0;
+
+      &.backdrop {
+        @include button(backdrop, $backdrop_headerbar_bg_color, $backdrop_headerbar_fg_color);
+      }
+
+      viewport, viewport box {
+        border: none;
+        box-shadow: none;
+        background: none;
+      }
 
       undershoot.left {
         border-radius: 5px;
-        margin-left: 1px;
         background: linear-gradient(to right, rgba($_headerbar_button_bg, 0.9) 4px, rgba($_headerbar_button_bg, 0.0) 24px);
       }
       undershoot.right {
-        margin-right: 1px;
         background: linear-gradient(to left, rgba($_headerbar_button_bg, 0.9) 4px, rgba($_headerbar_button_bg, 0.0) 24px);
       }
     
