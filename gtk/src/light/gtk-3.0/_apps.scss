@@ -130,7 +130,6 @@ list.tweak-categories separator {
       border-radius: 4px 0px 0px 4px;
       border-width: 1px;
       border-style: solid;
-      border-right-width: 0;
       transition: 200ms ease-out;
 
       &:backdrop {
@@ -156,6 +155,10 @@ list.tweak-categories separator {
     
     > button {
       margin: 0;
+
+      &.toggle {
+        border-left-width: 0;
+      }
     }
 
     .path-buttons-box {
