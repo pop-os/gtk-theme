@@ -131,12 +131,15 @@ list.tweak-categories separator {
       background-color: $_headerbar_button_bg;
 
       undershoot.left {
-        border-radius: 6px 0px 0px 6px;
-        background: linear-gradient(to right, $_headerbar_button_bg 6px, $_headerbar_button_bg 24px);
+        border-radius: 5px;
+        margin-left: 1px;
+        background: linear-gradient(to right, rgba($_headerbar_button_bg, 0.9) 4px, rgba($_headerbar_button_bg, 0.0) 24px);
       }
       undershoot.right {
-        background: linear-gradient(to left, $_headerbar_button_bg 6px, $_headerbar_button_bg 24px);
+        margin-right: 1px;
+        background: linear-gradient(to left, rgba($_headerbar_button_bg, 0.9) 4px, rgba($_headerbar_button_bg, 0.0) 24px);
       }
+    
     }
     
     > button {
