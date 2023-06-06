@@ -131,9 +131,11 @@ list.tweak-categories separator {
       border-width: 1px;
       border-style: solid;
       border-right-width: 0;
+      transition: 200ms ease-out;
 
-      &.backdrop {
+      &:backdrop {
         @include button(backdrop, $backdrop_headerbar_bg_color, $backdrop_headerbar_fg_color);
+        border-color: $_btn_backdrop_border;
       }
 
       viewport, viewport box {
