@@ -575,15 +575,6 @@ headerbar button image ~ window decoration ~ menu separator {
   // REMOVE THIS when firefox supports rounded menus
   menu, .menu,.context-menu { border-radius: 0; }
 
-  @if ($variant == 'light') {
-    menubar,
-    .menubar,
-    menubar > menuitem:hover {
-      background-color: $headerbar_bg_color;
-      color:$headerbar_fg_color;
-    }
-  }
-
   // Set a darker text-selection background
   // Ideally we don't need this, but https://bugzilla.mozilla.org/show_bug.cgi?id=1703679
   // tells Firefox to use the FG color instead of the BG color. Thus we need to 
