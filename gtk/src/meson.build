@@ -1,2 +1,0 @@
-subdir('light')
-subdir('dark')

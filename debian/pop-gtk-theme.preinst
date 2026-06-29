@@ -1,8 +1,0 @@
-#!/bin/sh
-
-set -e
-unlink /usr/share/themes/Pop/gtk-3.0 || true
-unlink /usr/share/themes/Pop-dark/gtk-3.0 || true
-
-#DEBHELPER#
-

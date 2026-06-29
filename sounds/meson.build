@@ -8,6 +8,4 @@ configure_file(input : 'src/index.theme.in',
               configuration : conf_data,
               install_dir: theme_dir)
 
-if get_option('sounds')
-    install_subdir('src/stereo', install_dir: theme_dir)
-endif
+install_subdir('src/stereo', install_dir: theme_dir, follow_symlinks: false,)

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-set -e
-rm -rf /usr/share/themes/Pop/gtk-3.22 || true
-rm -rf /usr/share/themes/Pop-dark/gtk-3.22 || true
-
-#DEBHELPER#
-
