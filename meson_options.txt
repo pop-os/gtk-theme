@@ -9,3 +9,4 @@ option('communitheme_compat', type: 'boolean', value: false, description:'build 
 option('default', type: 'boolean', value: true, description:'build Pop gtk default variant')
 option('dark', type: 'boolean', value: true, description:'build Pop gtk dark variant')
 option('light', type: 'boolean', value: true, description:'build Pop gtk light variant')
+option('gtk2', type: 'boolean', value: true, description:'build the GTK2 theme')

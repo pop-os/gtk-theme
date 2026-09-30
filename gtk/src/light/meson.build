@@ -8,6 +8,8 @@ configure_file(input : '../index.theme.in',
                configuration : conf_data,
                install_dir: theme_dir)
 
-subdir('gtk-2.0')
+if get_option('gtk2')
+        subdir('gtk-2.0')
+endif
 subdir('gtk-3.0')
 subdir('gtk-4.0')
